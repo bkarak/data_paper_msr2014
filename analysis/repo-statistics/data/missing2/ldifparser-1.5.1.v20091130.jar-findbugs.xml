@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1259599154000" analysisTimestamp="1360871175742" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/directory/studio/ldifparser/1.5.1.v20091130/ldifparser-1.5.1.v20091130.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.directory.studio.ldifparser.LdifUtils">
+      <SourceLine classname="org.apache.directory.studio.ldifparser.LdifUtils" start="37" end="203" sourcefile="LdifUtils.java" sourcepath="org/apache/directory/studio/ldifparser/LdifUtils.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.ldifparser.LdifUtils" name="utf8decode" signature="([B)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.directory.studio.ldifparser.LdifUtils" start="134" end="138" startBytecode="0" endBytecode="88" sourcefile="LdifUtils.java" sourcepath="org/apache/directory/studio/ldifparser/LdifUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.ldifparser.LdifUtils" start="138" end="138" startBytecode="17" endBytecode="17" sourcefile="LdifUtils.java" sourcepath="org/apache/directory/studio/ldifparser/LdifUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.directory.studio.ldifparser.LdifUtils">
+      <SourceLine classname="org.apache.directory.studio.ldifparser.LdifUtils" start="37" end="203" sourcefile="LdifUtils.java" sourcepath="org/apache/directory/studio/ldifparser/LdifUtils.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.ldifparser.LdifUtils" name="utf8encode" signature="(Ljava/lang/String;)[B" isStatic="true">
+      <SourceLine classname="org.apache.directory.studio.ldifparser.LdifUtils" start="51" end="55" startBytecode="0" endBytecode="80" sourcefile="LdifUtils.java" sourcepath="org/apache/directory/studio/ldifparser/LdifUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.ldifparser.LdifUtils" start="55" end="55" startBytecode="9" endBytecode="9" sourcefile="LdifUtils.java" sourcepath="org/apache/directory/studio/ldifparser/LdifUtils.java"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.studio.ldifparser.model.lines.LdifValueLineBase">
+      <SourceLine classname="org.apache.directory.studio.ldifparser.model.lines.LdifValueLineBase" start="43" end="252" sourcefile="LdifValueLineBase.java" sourcepath="org/apache/directory/studio/ldifparser/model/lines/LdifValueLineBase.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.ldifparser.model.lines.LdifValueLineBase" name="getValueAsObject" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.ldifparser.model.lines.LdifValueLineBase" start="208" end="233" startBytecode="0" endBytecode="42" sourcefile="LdifValueLineBase.java" sourcepath="org/apache/directory/studio/ldifparser/model/lines/LdifValueLineBase.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.apache.directory.studio.ldifparser.model.lines.LdifValueLineBase" start="222" end="222" startBytecode="54" endBytecode="54" sourcefile="LdifValueLineBase.java" sourcepath="org/apache/directory/studio/ldifparser/model/lines/LdifValueLineBase.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.studio.ldifparser.parser.LdifToken">
+      <SourceLine classname="org.apache.directory.studio.ldifparser.parser.LdifToken" start="99" end="156" sourcefile="LdifToken.java" sourcepath="org/apache/directory/studio/ldifparser/parser/LdifToken.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.ldifparser.parser.LdifToken" name="compareTo" signature="(Ljava/lang/Object;)I" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.ldifparser.parser.LdifToken" start="149" end="156" startBytecode="0" endBytecode="128" sourcefile="LdifToken.java" sourcepath="org/apache/directory/studio/ldifparser/parser/LdifToken.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Hex</MissingClass>
+    <MissingClass>org.apache.directory.shared.ldap.name.LdapDN</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 30 Nov 2009 18:39:14 +0200" total_classes="42" referenced_classes="73" total_bugs="4" total_size="2231" num_packages="5" vm_version="20.4-b02-402" cpu_seconds="24.91" clock_seconds="21.72" peak_mbytes="76.33" alloc_mbytes="763.88" gc_seconds="0.30" priority_2="2" priority_1="2">
+    <PackageStats package="org.apache.directory.studio.ldifparser" total_bugs="2" total_types="3" total_size="77" priority_1="2">
+      <ClassStats class="org.apache.directory.studio.ldifparser.LdifFormatParameters" sourceFile="LdifFormatParameters.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.LdifParserConstants" sourceFile="LdifParserConstants.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.LdifUtils" sourceFile="LdifUtils.java" interface="false" size="38" bugs="2" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.ldifparser.model" total_bugs="0" total_types="5" total_size="230">
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.LdifEOFPart" sourceFile="LdifEOFPart.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.LdifEnumeration" sourceFile="LdifEnumeration.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.LdifFile" sourceFile="LdifFile.java" interface="false" size="157" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.LdifInvalidPart" sourceFile="LdifInvalidPart.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.LdifPart" sourceFile="LdifPart.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.ldifparser.model.container" total_bugs="0" total_types="14" total_size="473">
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifChangeAddRecord" sourceFile="LdifChangeAddRecord.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifChangeDeleteRecord" sourceFile="LdifChangeDeleteRecord.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifChangeModDnRecord" sourceFile="LdifChangeModDnRecord.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifChangeModifyRecord" sourceFile="LdifChangeModifyRecord.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifChangeRecord" sourceFile="LdifChangeRecord.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifCommentContainer" sourceFile="LdifCommentContainer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifContainer" sourceFile="LdifContainer.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifContentRecord" sourceFile="LdifContentRecord.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifEOFContainer" sourceFile="LdifEOFContainer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifInvalidContainer" sourceFile="LdifInvalidContainer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifModSpec" sourceFile="LdifModSpec.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifRecord" sourceFile="LdifRecord.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifSepContainer" sourceFile="LdifSepContainer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.container.LdifVersionContainer" sourceFile="LdifVersionContainer.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.ldifparser.model.lines" total_bugs="1" total_types="15" total_size="566" priority_2="1">
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifAttrValLine" sourceFile="LdifAttrValLine.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifChangeTypeLine" sourceFile="LdifChangeTypeLine.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifCommentLine" sourceFile="LdifCommentLine.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifControlLine" sourceFile="LdifControlLine.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifDeloldrdnLine" sourceFile="LdifDeloldrdnLine.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifDnLine" sourceFile="LdifDnLine.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifLineBase" sourceFile="LdifLineBase.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifModSpecSepLine" sourceFile="LdifModSpecSepLine.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifModSpecTypeLine" sourceFile="LdifModSpecTypeLine.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifNewrdnLine" sourceFile="LdifNewrdnLine.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifNewsuperiorLine" sourceFile="LdifNewsuperiorLine.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifNonEmptyLineBase" sourceFile="LdifNonEmptyLineBase.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifSepLine" sourceFile="LdifSepLine.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifValueLineBase" sourceFile="LdifValueLineBase.java" interface="false" size="82" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.model.lines.LdifVersionLine" sourceFile="LdifVersionLine.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.ldifparser.parser" total_bugs="1" total_types="5" total_size="885" priority_2="1">
+      <ClassStats class="org.apache.directory.studio.ldifparser.parser.DummyLdifContainer" sourceFile="DummyLdifContainer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.parser.LdifParser" sourceFile="LdifParser.java" interface="false" size="382" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.parser.LdifParser$1" sourceFile="LdifParser.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.parser.LdifScanner" sourceFile="LdifScanner.java" interface="false" size="395" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.ldifparser.parser.LdifToken" sourceFile="LdifToken.java" interface="false" size="57" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1525" invocations="431" avgMicrosecondsPerInvocation="3540" maxMicrosecondsPerInvocation="151058" standardDeviationMircosecondsPerInvocation="13143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1198" invocations="425" avgMicrosecondsPerInvocation="2820" maxMicrosecondsPerInvocation="68310" standardDeviationMircosecondsPerInvocation="7796"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1186" invocations="402" avgMicrosecondsPerInvocation="2951" maxMicrosecondsPerInvocation="64001" standardDeviationMircosecondsPerInvocation="7772"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1139" invocations="402" avgMicrosecondsPerInvocation="2834" maxMicrosecondsPerInvocation="89630" standardDeviationMircosecondsPerInvocation="7297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1107" invocations="416" avgMicrosecondsPerInvocation="2662" maxMicrosecondsPerInvocation="64261" standardDeviationMircosecondsPerInvocation="7325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="834" invocations="73" avgMicrosecondsPerInvocation="11425" maxMicrosecondsPerInvocation="217765" standardDeviationMircosecondsPerInvocation="29599"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="791" invocations="402" avgMicrosecondsPerInvocation="1967" maxMicrosecondsPerInvocation="24340" standardDeviationMircosecondsPerInvocation="4260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="665" invocations="402" avgMicrosecondsPerInvocation="1655" maxMicrosecondsPerInvocation="51406" standardDeviationMircosecondsPerInvocation="4758"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="662" invocations="73" avgMicrosecondsPerInvocation="9082" maxMicrosecondsPerInvocation="123396" standardDeviationMircosecondsPerInvocation="20409"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="545" invocations="73" avgMicrosecondsPerInvocation="7473" maxMicrosecondsPerInvocation="59393" standardDeviationMircosecondsPerInvocation="14363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="527" invocations="373" avgMicrosecondsPerInvocation="1414" maxMicrosecondsPerInvocation="37138" standardDeviationMircosecondsPerInvocation="4603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="448" invocations="412" avgMicrosecondsPerInvocation="1088" maxMicrosecondsPerInvocation="280640" standardDeviationMircosecondsPerInvocation="14031"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="334" invocations="588" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="53105" standardDeviationMircosecondsPerInvocation="2933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="271" invocations="398" avgMicrosecondsPerInvocation="682" maxMicrosecondsPerInvocation="57936" standardDeviationMircosecondsPerInvocation="4401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="257" invocations="42" avgMicrosecondsPerInvocation="6126" maxMicrosecondsPerInvocation="74324" standardDeviationMircosecondsPerInvocation="16139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="252" invocations="381" avgMicrosecondsPerInvocation="661" maxMicrosecondsPerInvocation="37800" standardDeviationMircosecondsPerInvocation="3041"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="251" invocations="402" avgMicrosecondsPerInvocation="625" maxMicrosecondsPerInvocation="20095" standardDeviationMircosecondsPerInvocation="2071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="251" invocations="73" avgMicrosecondsPerInvocation="3442" maxMicrosecondsPerInvocation="33196" standardDeviationMircosecondsPerInvocation="7420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="249" invocations="73" avgMicrosecondsPerInvocation="3422" maxMicrosecondsPerInvocation="101967" standardDeviationMircosecondsPerInvocation="13093"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="233" invocations="42" avgMicrosecondsPerInvocation="5548" maxMicrosecondsPerInvocation="51738" standardDeviationMircosecondsPerInvocation="11337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="223" invocations="434" avgMicrosecondsPerInvocation="514" maxMicrosecondsPerInvocation="44908" standardDeviationMircosecondsPerInvocation="3326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="189" invocations="4238" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="95976" standardDeviationMircosecondsPerInvocation="1530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="185" invocations="42" avgMicrosecondsPerInvocation="4408" maxMicrosecondsPerInvocation="76837" standardDeviationMircosecondsPerInvocation="12162"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="182" invocations="42" avgMicrosecondsPerInvocation="4355" maxMicrosecondsPerInvocation="125574" standardDeviationMircosecondsPerInvocation="19243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison2" totalMilliseconds="159" invocations="42" avgMicrosecondsPerInvocation="3786" maxMicrosecondsPerInvocation="140008" standardDeviationMircosecondsPerInvocation="21295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="151" invocations="402" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="38710" standardDeviationMircosecondsPerInvocation="2500"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1248697487000" analysisTimestamp="1360867106263" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/jvnet/hudson/plugins/ConfigurationSlicing/1.9/ConfigurationSlicing-1.9.jar</Jar>
+  </Project>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="configurationslicing.ConfigurationSlicing$SliceExecutor">
+      <SourceLine classname="configurationslicing.ConfigurationSlicing$SliceExecutor" start="66" end="115" sourcefile="ConfigurationSlicing.java" sourcepath="configurationslicing/ConfigurationSlicing.java"/>
+    </Class>
+    <Field classname="configurationslicing.ConfigurationSlicing$SliceExecutor" name="changed" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="configurationslicing.ConfigurationSlicing$SliceExecutor" sourcefile="ConfigurationSlicing.java" sourcepath="configurationslicing/ConfigurationSlicing.java"/>
+    </Field>
+    <SourceLine classname="configurationslicing.ConfigurationSlicing$SliceExecutor" start="99" end="99" startBytecode="1" endBytecode="1" sourcefile="ConfigurationSlicing.java" sourcepath="configurationslicing/ConfigurationSlicing.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="12">
+    <MissingClass>hudson.ExtensionList</MissingClass>
+    <MissingClass>hudson.model.AbstractProject</MissingClass>
+    <MissingClass>hudson.model.Descriptor$FormException</MissingClass>
+    <MissingClass>hudson.model.Hudson</MissingClass>
+    <MissingClass>hudson.model.Label</MissingClass>
+    <MissingClass>hudson.model.ManagementLink</MissingClass>
+    <MissingClass>hudson.tasks.LogRotator</MissingClass>
+    <MissingClass>hudson.triggers.SCMTrigger</MissingClass>
+    <MissingClass>hudson.triggers.TimerTrigger</MissingClass>
+    <MissingClass>net.sf.json.JSONObject</MissingClass>
+    <MissingClass>org.kohsuke.stapler.StaplerRequest</MissingClass>
+    <MissingClass>org.kohsuke.stapler.StaplerResponse</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 27 Jul 2009 15:24:47 +0300" total_classes="24" referenced_classes="49" total_bugs="1" total_size="479" num_packages="5" vm_version="20.4-b02-402" cpu_seconds="13.18" clock_seconds="8.46" peak_mbytes="58.68" alloc_mbytes="763.88" gc_seconds="0.11" priority_2="1">
+    <PackageStats package="configurationslicing" total_bugs="1" total_types="11" total_size="217" priority_2="1">
+      <ClassStats class="configurationslicing.BooleanSlice" sourceFile="BooleanSlice.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="configurationslicing.BooleanSlice$ItemState" sourceFile="BooleanSlice.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="configurationslicing.BooleanSlicer" sourceFile="BooleanSlicer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="configurationslicing.BooleanSlicer$BooleanSlicerSpec" sourceFile="BooleanSlicer.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="configurationslicing.ConfigurationSlicing" sourceFile="ConfigurationSlicing.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="configurationslicing.ConfigurationSlicing$SliceExecutor" sourceFile="ConfigurationSlicing.java" interface="false" size="42" bugs="1" priority_2="1"/>
+      <ClassStats class="configurationslicing.Slice" sourceFile="Slice.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="configurationslicing.Slicer" sourceFile="Slicer.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="configurationslicing.UnorderedStringSlice" sourceFile="UnorderedStringSlice.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="configurationslicing.UnorderedStringSlicer" sourceFile="UnorderedStringSlicer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="configurationslicing.UnorderedStringSlicer$UnorderedStringSlicerSpec" sourceFile="UnorderedStringSlicer.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="configurationslicing.jobdisabled" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="configurationslicing.jobdisabled.JobDisabledBoolSlicer" sourceFile="JobDisabledBoolSlicer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="configurationslicing.jobdisabled.JobDisabledBoolSlicer$JobDisabledSpec" sourceFile="JobDisabledBoolSlicer.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="configurationslicing.label" total_bugs="0" total_types="2" total_size="35">
+      <ClassStats class="configurationslicing.label.LabelSlicer" sourceFile="LabelSlicer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="configurationslicing.label.LabelSlicer$LabelSliceSpec" sourceFile="LabelSlicer.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="configurationslicing.logrotator" total_bugs="0" total_types="5" total_size="104">
+      <ClassStats class="configurationslicing.logrotator.LogRotationSlicer" sourceFile="LogRotationSlicer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="configurationslicing.logrotator.LogRotationSlicer$Count" sourceFile="LogRotationSlicer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="configurationslicing.logrotator.LogRotationSlicer$Days" sourceFile="LogRotationSlicer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="configurationslicing.logrotator.LogRotationSlicer$LogRotationBuildsSliceSpec" sourceFile="LogRotationSlicer.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="configurationslicing.logrotator.LogRotationSlicer$LogRotationDaysSliceSpec" sourceFile="LogRotationSlicer.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="configurationslicing.timer" total_bugs="0" total_types="4" total_size="96">
+      <ClassStats class="configurationslicing.timer.SCMTimerSliceStringSlicer" sourceFile="SCMTimerSliceStringSlicer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="configurationslicing.timer.SCMTimerSliceStringSlicer$SCMTimerSliceSpec" sourceFile="SCMTimerSliceStringSlicer.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="configurationslicing.timer.TimerSliceStringSlicer" sourceFile="TimerSliceStringSlicer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="configurationslicing.timer.TimerSliceStringSlicer$TimerSliceSpec" sourceFile="TimerSliceStringSlicer.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="874" invocations="422" avgMicrosecondsPerInvocation="2071" maxMicrosecondsPerInvocation="83426" standardDeviationMircosecondsPerInvocation="8302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="438" invocations="49" avgMicrosecondsPerInvocation="8942" maxMicrosecondsPerInvocation="94961" standardDeviationMircosecondsPerInvocation="18786"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="434" invocations="96" avgMicrosecondsPerInvocation="4524" maxMicrosecondsPerInvocation="93969" standardDeviationMircosecondsPerInvocation="12695"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="420" invocations="122" avgMicrosecondsPerInvocation="3448" maxMicrosecondsPerInvocation="88915" standardDeviationMircosecondsPerInvocation="10164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="364" invocations="123" avgMicrosecondsPerInvocation="2966" maxMicrosecondsPerInvocation="44271" standardDeviationMircosecondsPerInvocation="7594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="359" invocations="120" avgMicrosecondsPerInvocation="2998" maxMicrosecondsPerInvocation="63694" standardDeviationMircosecondsPerInvocation="7430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="354" invocations="118" avgMicrosecondsPerInvocation="3004" maxMicrosecondsPerInvocation="65103" standardDeviationMircosecondsPerInvocation="8838"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="309" invocations="49" avgMicrosecondsPerInvocation="6307" maxMicrosecondsPerInvocation="72447" standardDeviationMircosecondsPerInvocation="15234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="296" invocations="96" avgMicrosecondsPerInvocation="3086" maxMicrosecondsPerInvocation="36292" standardDeviationMircosecondsPerInvocation="5858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="284" invocations="295" avgMicrosecondsPerInvocation="963" maxMicrosecondsPerInvocation="34447" standardDeviationMircosecondsPerInvocation="3500"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="193" invocations="120" avgMicrosecondsPerInvocation="1609" maxMicrosecondsPerInvocation="14112" standardDeviationMircosecondsPerInvocation="2996"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSqlInjection" totalMilliseconds="160" invocations="24" avgMicrosecondsPerInvocation="6670" maxMicrosecondsPerInvocation="151447" standardDeviationMircosecondsPerInvocation="30191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="148" invocations="49" avgMicrosecondsPerInvocation="3037" maxMicrosecondsPerInvocation="26582" standardDeviationMircosecondsPerInvocation="5825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="122" invocations="49" avgMicrosecondsPerInvocation="2498" maxMicrosecondsPerInvocation="38924" standardDeviationMircosecondsPerInvocation="7036"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="114" invocations="49" avgMicrosecondsPerInvocation="2328" maxMicrosecondsPerInvocation="20516" standardDeviationMircosecondsPerInvocation="4434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="112" invocations="49" avgMicrosecondsPerInvocation="2302" maxMicrosecondsPerInvocation="58826" standardDeviationMircosecondsPerInvocation="8548"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="112" invocations="120" avgMicrosecondsPerInvocation="935" maxMicrosecondsPerInvocation="20779" standardDeviationMircosecondsPerInvocation="2648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="104" invocations="24" avgMicrosecondsPerInvocation="4343" maxMicrosecondsPerInvocation="49626" standardDeviationMircosecondsPerInvocation="11240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="103" invocations="362" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="11624" standardDeviationMircosecondsPerInvocation="1005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="92" invocations="139" avgMicrosecondsPerInvocation="667" maxMicrosecondsPerInvocation="66247" standardDeviationMircosecondsPerInvocation="5657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="88" invocations="24" avgMicrosecondsPerInvocation="3691" maxMicrosecondsPerInvocation="69852" standardDeviationMircosecondsPerInvocation="13853"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

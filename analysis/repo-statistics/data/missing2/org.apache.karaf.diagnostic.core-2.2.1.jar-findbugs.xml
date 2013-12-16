@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1305166029000" analysisTimestamp="1360877481902" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/karaf/diagnostic/org.apache.karaf.diagnostic.core/2.2.1/org.apache.karaf.diagnostic.core-2.2.1.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination">
+      <SourceLine classname="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination" start="36" end="55" sourcefile="DirectoryDumpDestination.java" sourcepath="org/apache/karaf/diagnostic/core/common/DirectoryDumpDestination.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination" start="36" end="42" startBytecode="0" endBytecode="89" sourcefile="DirectoryDumpDestination.java" sourcepath="org/apache/karaf/diagnostic/core/common/DirectoryDumpDestination.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination" start="40" end="40" startBytecode="17" endBytecode="17" sourcefile="DirectoryDumpDestination.java" sourcepath="org/apache/karaf/diagnostic/core/common/DirectoryDumpDestination.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination">
+      <SourceLine classname="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination" start="36" end="55" sourcefile="DirectoryDumpDestination.java" sourcepath="org/apache/karaf/diagnostic/core/common/DirectoryDumpDestination.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination" name="add" signature="(Ljava/lang/String;)Ljava/io/OutputStream;" isStatic="false">
+      <SourceLine classname="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination" start="45" end="50" startBytecode="0" endBytecode="121" sourcefile="DirectoryDumpDestination.java" sourcepath="org/apache/karaf/diagnostic/core/common/DirectoryDumpDestination.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination" start="48" end="48" startBytecode="35" endBytecode="35" sourcefile="DirectoryDumpDestination.java" sourcepath="org/apache/karaf/diagnostic/core/common/DirectoryDumpDestination.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.karaf.diagnostic.core.common.TextDumpProvider">
+      <SourceLine classname="org.apache.karaf.diagnostic.core.common.TextDumpProvider" start="41" end="52" sourcefile="TextDumpProvider.java" sourcepath="org/apache/karaf/diagnostic/core/common/TextDumpProvider.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.diagnostic.core.common.TextDumpProvider" name="createDump" signature="(Lorg/apache/karaf/diagnostic/core/DumpDestination;)V" isStatic="false">
+      <SourceLine classname="org.apache.karaf.diagnostic.core.common.TextDumpProvider" start="49" end="52" startBytecode="0" endBytecode="101" sourcefile="TextDumpProvider.java" sourcepath="org/apache/karaf/diagnostic/core/common/TextDumpProvider.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.diagnostic.core.common.TextDumpProvider" start="50" end="50" startBytecode="17" endBytecode="17" sourcefile="TextDumpProvider.java" sourcepath="org/apache/karaf/diagnostic/core/common/TextDumpProvider.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 12 May 2011 05:07:09 +0300" total_classes="6" referenced_classes="30" total_bugs="3" total_size="69" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="6.10" clock_seconds="6.91" peak_mbytes="51.21" alloc_mbytes="763.88" gc_seconds="0.06" priority_2="2" priority_1="1">
+    <PackageStats package="org.apache.karaf.diagnostic.core" total_bugs="0" total_types="2" total_size="5">
+      <ClassStats class="org.apache.karaf.diagnostic.core.DumpDestination" sourceFile="DumpDestination.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.karaf.diagnostic.core.DumpProvider" sourceFile="DumpProvider.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.karaf.diagnostic.core.common" total_bugs="3" total_types="4" total_size="64" priority_2="2" priority_1="1">
+      <ClassStats class="org.apache.karaf.diagnostic.core.common.ClosingEntryOutputStreamWrapper" sourceFile="ClosingEntryOutputStreamWrapper.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.karaf.diagnostic.core.common.DirectoryDumpDestination" sourceFile="DirectoryDumpDestination.java" interface="false" size="15" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.karaf.diagnostic.core.common.TextDumpProvider" sourceFile="TextDumpProvider.java" interface="false" size="12" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.karaf.diagnostic.core.common.ZipDumpDestination" sourceFile="ZipDumpDestination.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1521" invocations="347" avgMicrosecondsPerInvocation="4383" maxMicrosecondsPerInvocation="174753" standardDeviationMircosecondsPerInvocation="15929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="487" invocations="30" avgMicrosecondsPerInvocation="16254" maxMicrosecondsPerInvocation="163862" standardDeviationMircosecondsPerInvocation="35120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="449" invocations="30" avgMicrosecondsPerInvocation="14981" maxMicrosecondsPerInvocation="128981" standardDeviationMircosecondsPerInvocation="31655"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="374" invocations="30" avgMicrosecondsPerInvocation="12478" maxMicrosecondsPerInvocation="103322" standardDeviationMircosecondsPerInvocation="25482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="193" invocations="307" avgMicrosecondsPerInvocation="628" maxMicrosecondsPerInvocation="35484" standardDeviationMircosecondsPerInvocation="3397"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="158" invocations="14" avgMicrosecondsPerInvocation="11355" maxMicrosecondsPerInvocation="131657" standardDeviationMircosecondsPerInvocation="33728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="137" invocations="72" avgMicrosecondsPerInvocation="1908" maxMicrosecondsPerInvocation="43077" standardDeviationMircosecondsPerInvocation="6238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="107" invocations="18" avgMicrosecondsPerInvocation="5993" maxMicrosecondsPerInvocation="105173" standardDeviationMircosecondsPerInvocation="24055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="104" invocations="30" avgMicrosecondsPerInvocation="3479" maxMicrosecondsPerInvocation="65492" standardDeviationMircosecondsPerInvocation="12177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="103" invocations="30" avgMicrosecondsPerInvocation="3440" maxMicrosecondsPerInvocation="41710" standardDeviationMircosecondsPerInvocation="9397"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="96" invocations="38" avgMicrosecondsPerInvocation="2534" maxMicrosecondsPerInvocation="69399" standardDeviationMircosecondsPerInvocation="11252"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1292590940000" analysisTimestamp="1360517734929" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/servicemix/servicemix-cxf-se/2010.02/servicemix-cxf-se-2010.02.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.servicemix.cxfse.CxfSeComponent">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" start="35" end="119" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.cxfse.CxfSeComponent" name="getEndpoints" signature="()[Lorg/apache/servicemix/cxfse/CxfSeEndpoint;" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" start="55" end="55" startBytecode="0" endBytecode="46" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+    </Method>
+    <Field classname="org.apache.servicemix.cxfse.CxfSeComponent" name="endpoints" signature="[Lorg/apache/servicemix/cxfse/CxfSeEndpoint;" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+    </Field>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" start="55" end="55" startBytecode="4" endBytecode="4" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.servicemix.cxfse.CxfSeComponent">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" start="35" end="119" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.cxfse.CxfSeComponent" name="setEndpoints" signature="([Lorg/apache/servicemix/cxfse/CxfSeEndpoint;)V" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" start="63" end="64" startBytecode="0" endBytecode="61" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+    </Method>
+    <Field classname="org.apache.servicemix.cxfse.CxfSeComponent" name="endpoints" signature="[Lorg/apache/servicemix/cxfse/CxfSeEndpoint;" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+    </Field>
+    <LocalVariable name="endpoints" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" start="63" end="63" startBytecode="2" endBytecode="2" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.servicemix.cxfse.CxfSeComponent">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" start="35" end="119" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.cxfse.CxfSeComponent" name="setComponentRegistry" signature="(Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" start="115" end="116" startBytecode="0" endBytecode="62" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+    </Method>
+    <Field classname="org.apache.servicemix.cxfse.CxfSeComponent" name="componentRegistry" signature="Ljava/lang/Object;" isStatic="true">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+    </Field>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeComponent" start="115" end="115" startBytecode="3" endBytecode="3" sourcefile="CxfSeComponent.java" sourcepath="org/apache/servicemix/cxfse/CxfSeComponent.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.servicemix.cxfse.CxfSeConfiguration">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeConfiguration" start="25" end="103" sourcefile="CxfSeConfiguration.java" sourcepath="org/apache/servicemix/cxfse/CxfSeConfiguration.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.cxfse.CxfSeConfiguration" name="load" signature="()Z" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeConfiguration" start="35" end="65" startBytecode="0" endBytecode="320" sourcefile="CxfSeConfiguration.java" sourcepath="org/apache/servicemix/cxfse/CxfSeConfiguration.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeConfiguration" start="54" end="54" startBytecode="70" endBytecode="70" sourcefile="CxfSeConfiguration.java" sourcepath="org/apache/servicemix/cxfse/CxfSeConfiguration.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeConfiguration" start="60" end="60" startBytecode="87" endBytecode="87" sourcefile="CxfSeConfiguration.java" sourcepath="org/apache/servicemix/cxfse/CxfSeConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeConfiguration" start="61" end="61" startBytecode="102" endBytecode="102" sourcefile="CxfSeConfiguration.java" sourcepath="org/apache/servicemix/cxfse/CxfSeConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeConfiguration" start="65" end="65" startBytecode="167" endBytecode="167" sourcefile="CxfSeConfiguration.java" sourcepath="org/apache/servicemix/cxfse/CxfSeConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.servicemix.cxfse.CxfSeConfiguration">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeConfiguration" start="25" end="103" sourcefile="CxfSeConfiguration.java" sourcepath="org/apache/servicemix/cxfse/CxfSeConfiguration.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.cxfse.CxfSeConfiguration" name="load" signature="()Z" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeConfiguration" start="35" end="65" startBytecode="0" endBytecode="81" sourcefile="CxfSeConfiguration.java" sourcepath="org/apache/servicemix/cxfse/CxfSeConfiguration.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeConfiguration" start="54" end="54" startBytecode="65" endBytecode="65" sourcefile="CxfSeConfiguration.java" sourcepath="org/apache/servicemix/cxfse/CxfSeConfiguration.java"/>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" abbrev="DE" category="BAD_PRACTICE">
+    <Class classname="org.apache.servicemix.cxfse.CxfSeEndpoint">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="85" end="703" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.cxfse.CxfSeEndpoint" name="injectPojo" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="584" end="593" startBytecode="0" endBytecode="157" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java"/>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="29" end="78" sourcefile="Exception.java" sourcepath="java/lang/Exception.java"/>
+    </Class>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="589" end="589" startBytecode="52" endBytecode="52" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java"/>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="589" end="589" startBytecode="52" endBytecode="52" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.servicemix.cxfse.CxfSeEndpoint">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="85" end="703" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.cxfse.CxfSeEndpoint" name="findOperation" signature="(Ljavax/jbi/messaging/NormalizedMessage;Lorg/apache/cxf/message/Message;Ljavax/jbi/messaging/MessageExchange;)Ljavax/xml/namespace/QName;" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="544" end="577" startBytecode="0" endBytecode="524" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java"/>
+    </Method>
+    <LocalVariable name="element" register="4" pc="34" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="561" end="561" startBytecode="110" endBytecode="110" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="548" end="548" startBytecode="36" endBytecode="36" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.apache.servicemix.cxfse.CxfSeEndpoint">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="85" end="703" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.cxfse.CxfSeEndpoint" name="injectPojo" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="584" end="593" startBytecode="0" endBytecode="157" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java"/>
+    </Method>
+    <SourceLine classname="org.apache.servicemix.cxfse.CxfSeEndpoint" start="589" end="589" startBytecode="52" endBytecode="52" sourcefile="CxfSeEndpoint.java" sourcepath="org/apache/servicemix/cxfse/CxfSeEndpoint.java"/>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" priority="1" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.apache.servicemix.cxfse.support.ReflectionUtils">
+      <SourceLine classname="org.apache.servicemix.cxfse.support.ReflectionUtils" start="25" end="64" sourcefile="ReflectionUtils.java" sourcepath="org/apache/servicemix/cxfse/support/ReflectionUtils.java"/>
+    </Class>
+    <Class classname="org.springframework.util.ReflectionUtils">
+      <SourceLine classname="org.springframework.util.ReflectionUtils"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="61">
+    <MissingClass>javax.jbi.JBIException</MissingClass>
+    <MissingClass>javax.jbi.component.ComponentContext</MissingClass>
+    <MissingClass>javax.jbi.component.InstallationContext</MissingClass>
+    <MissingClass>javax.jbi.management.DeploymentException</MissingClass>
+    <MissingClass>javax.jbi.management.MBeanNames</MissingClass>
+    <MissingClass>javax.jbi.messaging.DeliveryChannel</MissingClass>
+    <MissingClass>javax.jbi.messaging.ExchangeStatus</MissingClass>
+    <MissingClass>javax.jbi.messaging.MessageExchange</MissingClass>
+    <MissingClass>javax.jbi.messaging.NormalizedMessage</MissingClass>
+    <MissingClass>javax.wsdl.factory.WSDLFactory</MissingClass>
+    <MissingClass>javax.wsdl.xml.WSDLWriter</MissingClass>
+    <MissingClass>org.apache.cxf.Bus</MissingClass>
+    <MissingClass>org.apache.cxf.BusFactory</MissingClass>
+    <MissingClass>org.apache.cxf.aegis.databinding.AegisDatabinding</MissingClass>
+    <MissingClass>org.apache.cxf.attachment.AttachmentImpl</MissingClass>
+    <MissingClass>org.apache.cxf.binding.Binding</MissingClass>
+    <MissingClass>org.apache.cxf.binding.soap.SoapMessage</MissingClass>
+    <MissingClass>org.apache.cxf.binding.soap.SoapVersion</MissingClass>
+    <MissingClass>org.apache.cxf.binding.soap.model.SoapBindingInfo</MissingClass>
+    <MissingClass>org.apache.cxf.bus.spring.SpringBusFactory</MissingClass>
+    <MissingClass>org.apache.cxf.endpoint.Client</MissingClass>
+    <MissingClass>org.apache.cxf.endpoint.Endpoint</MissingClass>
+    <MissingClass>org.apache.cxf.endpoint.Server</MissingClass>
+    <MissingClass>org.apache.cxf.frontend.ClientProxy</MissingClass>
+    <MissingClass>org.apache.cxf.frontend.ServerFactoryBean</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.AbstractOutDatabindingInterceptor</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.Fault</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.Interceptor</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.OneWayProcessorInterceptor</MissingClass>
+    <MissingClass>org.apache.cxf.jaxws.EndpointImpl</MissingClass>
+    <MissingClass>org.apache.cxf.jaxws.JaxWsProxyFactoryBean</MissingClass>
+    <MissingClass>org.apache.cxf.jaxws.JaxWsServerFactoryBean</MissingClass>
+    <MissingClass>org.apache.cxf.jaxws.ServiceImpl</MissingClass>
+    <MissingClass>org.apache.cxf.jaxws.support.JaxWsImplementorInfo</MissingClass>
+    <MissingClass>org.apache.cxf.jaxws.support.JaxWsServiceFactoryBean</MissingClass>
+    <MissingClass>org.apache.cxf.message.Message</MissingClass>
+    <MissingClass>org.apache.cxf.phase.AbstractPhaseInterceptor</MissingClass>
+    <MissingClass>org.apache.cxf.service.Service</MissingClass>
+    <MissingClass>org.apache.cxf.service.factory.ReflectionServiceFactoryBean</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.BindingInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.BindingOperationInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.EndpointInfo</MissingClass>
+    <MissingClass>org.apache.cxf.transport.ConduitInitiatorManager</MissingClass>
+    <MissingClass>org.apache.cxf.transport.jbi.JBIDestination</MissingClass>
+    <MissingClass>org.apache.cxf.transport.jbi.JBIDispatcherUtil</MissingClass>
+    <MissingClass>org.apache.cxf.transport.jbi.JBITransportFactory</MissingClass>
+    <MissingClass>org.apache.cxf.wsdl11.ServiceWSDLBuilder</MissingClass>
+    <MissingClass>org.apache.cxf.xmlbeans.XmlBeansDataBinding</MissingClass>
+    <MissingClass>org.apache.servicemix.common.DefaultComponent</MissingClass>
+    <MissingClass>org.apache.servicemix.common.ServiceMixComponent</MissingClass>
+    <MissingClass>org.apache.servicemix.common.ServiceUnit</MissingClass>
+    <MissingClass>org.apache.servicemix.common.endpoints.ProviderEndpoint</MissingClass>
+    <MissingClass>org.apache.servicemix.id.IdGenerator</MissingClass>
+    <MissingClass>org.apache.servicemix.jbi.api.ClientFactory</MissingClass>
+    <MissingClass>org.apache.servicemix.jbi.api.Container</MissingClass>
+    <MissingClass>org.apache.servicemix.jbi.api.ServiceMixClient</MissingClass>
+    <MissingClass>org.apache.servicemix.jbi.jaxp.SourceTransformer</MissingClass>
+    <MissingClass>org.apache.servicemix.soap.util.DomUtil</MissingClass>
+    <MissingClass>org.springframework.util.ReflectionUtils</MissingClass>
+    <MissingClass>org.springframework.util.ReflectionUtils$FieldCallback</MissingClass>
+    <MissingClass>org.springframework.util.ReflectionUtils$MethodCallback</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 17 Dec 2010 15:02:20 +0200" total_classes="11" referenced_classes="65" total_bugs="9" total_size="711" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="17.79" clock_seconds="9.24" peak_mbytes="65.89" alloc_mbytes="763.88" gc_seconds="0.17" priority_2="7" priority_1="2">
+    <PackageStats package="org.apache.servicemix.common" total_bugs="0" total_types="1" total_size="68">
+      <ClassStats class="org.apache.servicemix.common.DefaultBootstrap" sourceFile="DefaultBootstrap.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.servicemix.cxfse" total_bugs="8" total_types="6" total_size="573" priority_2="7" priority_1="1">
+      <ClassStats class="org.apache.servicemix.cxfse.CxfSeComponent" sourceFile="CxfSeComponent.java" interface="false" size="48" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.apache.servicemix.cxfse.CxfSeConfiguration" sourceFile="CxfSeConfiguration.java" interface="false" size="45" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.servicemix.cxfse.CxfSeEndpoint" sourceFile="CxfSeEndpoint.java" interface="false" size="298" bugs="3" priority_2="3"/>
+      <ClassStats class="org.apache.servicemix.cxfse.CxfSeEndpoint$1" sourceFile="CxfSeEndpoint.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.cxfse.CxfSeProxyFactoryBean" sourceFile="CxfSeProxyFactoryBean.java" interface="false" size="158" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.cxfse.JBIContext" sourceFile="JBIContext.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.servicemix.cxfse.interceptors" total_bugs="0" total_types="2" total_size="34">
+      <ClassStats class="org.apache.servicemix.cxfse.interceptors.AttachmentInInterceptor" sourceFile="AttachmentInInterceptor.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.cxfse.interceptors.AttachmentOutInterceptor" sourceFile="AttachmentOutInterceptor.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.servicemix.cxfse.support" total_bugs="1" total_types="2" total_size="36" priority_1="1">
+      <ClassStats class="org.apache.servicemix.cxfse.support.ReflectionUtils" sourceFile="ReflectionUtils.java" interface="false" size="20" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.servicemix.cxfse.support.ReflectionUtils$1" sourceFile="ReflectionUtils.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="875" invocations="569" avgMicrosecondsPerInvocation="1538" maxMicrosecondsPerInvocation="51555" standardDeviationMircosecondsPerInvocation="4784"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="567" invocations="65" avgMicrosecondsPerInvocation="8724" maxMicrosecondsPerInvocation="86758" standardDeviationMircosecondsPerInvocation="16871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="520" invocations="65" avgMicrosecondsPerInvocation="8000" maxMicrosecondsPerInvocation="100878" standardDeviationMircosecondsPerInvocation="16938"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="499" invocations="129" avgMicrosecondsPerInvocation="3875" maxMicrosecondsPerInvocation="168639" standardDeviationMircosecondsPerInvocation="16135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="471" invocations="124" avgMicrosecondsPerInvocation="3806" maxMicrosecondsPerInvocation="107835" standardDeviationMircosecondsPerInvocation="12171"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="425" invocations="124" avgMicrosecondsPerInvocation="3428" maxMicrosecondsPerInvocation="141410" standardDeviationMircosecondsPerInvocation="13645"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="402" invocations="124" avgMicrosecondsPerInvocation="3248" maxMicrosecondsPerInvocation="104488" standardDeviationMircosecondsPerInvocation="10697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="401" invocations="127" avgMicrosecondsPerInvocation="3161" maxMicrosecondsPerInvocation="106368" standardDeviationMircosecondsPerInvocation="10336"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="330" invocations="11" avgMicrosecondsPerInvocation="30003" maxMicrosecondsPerInvocation="265714" standardDeviationMircosecondsPerInvocation="76744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="291" invocations="52" avgMicrosecondsPerInvocation="5613" maxMicrosecondsPerInvocation="83730" standardDeviationMircosecondsPerInvocation="14605"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="247" invocations="65" avgMicrosecondsPerInvocation="3808" maxMicrosecondsPerInvocation="29309" standardDeviationMircosecondsPerInvocation="6591"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="238" invocations="244" avgMicrosecondsPerInvocation="979" maxMicrosecondsPerInvocation="21334" standardDeviationMircosecondsPerInvocation="2452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="210" invocations="124" avgMicrosecondsPerInvocation="1701" maxMicrosecondsPerInvocation="34870" standardDeviationMircosecondsPerInvocation="4198"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="175" invocations="65" avgMicrosecondsPerInvocation="2701" maxMicrosecondsPerInvocation="30456" standardDeviationMircosecondsPerInvocation="4685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="158" invocations="124" avgMicrosecondsPerInvocation="1275" maxMicrosecondsPerInvocation="33045" standardDeviationMircosecondsPerInvocation="3927"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="148" invocations="65" avgMicrosecondsPerInvocation="2285" maxMicrosecondsPerInvocation="54155" standardDeviationMircosecondsPerInvocation="7395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="100" invocations="451" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="8433" standardDeviationMircosecondsPerInvocation="630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="95" invocations="65" avgMicrosecondsPerInvocation="1465" maxMicrosecondsPerInvocation="18559" standardDeviationMircosecondsPerInvocation="3234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="94" invocations="65" avgMicrosecondsPerInvocation="1457" maxMicrosecondsPerInvocation="22354" standardDeviationMircosecondsPerInvocation="3656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="87" invocations="141" avgMicrosecondsPerInvocation="618" maxMicrosecondsPerInvocation="14937" standardDeviationMircosecondsPerInvocation="1670"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

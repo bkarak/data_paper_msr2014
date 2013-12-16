@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1290199064000" analysisTimestamp="1360876742656" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/mortbay/jetty/jetty-maven-plugin/8.0.0.M2/jetty-maven-plugin-8.0.0.M2.jar</Jar>
+  </Project>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.mortbay.jetty.plugin.AbstractJettyMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="48" end="618" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.AbstractJettyMojo" name="setSystemPropertiesFile" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="296" end="317" startBytecode="0" endBytecode="314" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="297" end="297" startBytecode="13" endBytecode="13" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="298" end="298" startBytecode="17" endBytecode="17" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="299" end="299" startBytecode="25" endBytecode="25" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="301" end="301" startBytecode="30" endBytecode="30" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="304" end="304" startBytecode="48" endBytecode="48" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="317" end="317" startBytecode="127" endBytecode="127" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.mortbay.jetty.plugin.AbstractJettyMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="48" end="618" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.AbstractJettyMojo" name="setSystemPropertiesFile" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="296" end="317" startBytecode="0" endBytecode="56" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="297" end="297" startBytecode="5" endBytecode="5" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.mortbay.jetty.plugin.AbstractJettyMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="48" end="618" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.AbstractJettyMojo" name="configureWebApplication" signature="()V" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="496" end="531" startBytecode="0" endBytecode="691" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.mortbay.jetty.plugin.AbstractJettyMojo" start="522" end="522" startBytecode="184" endBytecode="184" sourcefile="AbstractJettyMojo.java" sourcepath="org/mortbay/jetty/plugin/AbstractJettyMojo.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.mortbay.jetty.plugin.HelpMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.HelpMojo" start="18" end="589" sourcefile="HelpMojo.java" sourcepath="org/mortbay/jetty/plugin/HelpMojo.java"/>
+    </Class>
+    <Field classname="org.mortbay.jetty.plugin.HelpMojo" name="goal" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.HelpMojo" sourcefile="HelpMojo.java" sourcepath="org/mortbay/jetty/plugin/HelpMojo.java"/>
+    </Field>
+    <SourceLine classname="org.mortbay.jetty.plugin.HelpMojo" start="74" end="74" startBytecode="96" endBytecode="96" sourcefile="HelpMojo.java" sourcepath="org/mortbay/jetty/plugin/HelpMojo.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="org.mortbay.jetty.plugin.JettyRunMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunMojo" start="66" end="556" sourcefile="JettyRunMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunMojo.java"/>
+    </Class>
+    <Field classname="org.mortbay.jetty.plugin.JettyRunMojo" name="pluginArtifacts" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunMojo" sourcefile="JettyRunMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunMojo.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="NP_UNWRITTEN_FIELD" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" start="48" end="184" sourcefile="JettyRunWarExplodedMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarExplodedMojo.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" name="configureWebApplication" signature="()V" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" start="164" end="166" startBytecode="0" endBytecode="68" sourcefile="JettyRunWarExplodedMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarExplodedMojo.java"/>
+    </Method>
+    <Field classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" name="webApp" signature="Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" sourcefile="JettyRunWarExplodedMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarExplodedMojo.java"/>
+    </Field>
+    <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" start="165" end="165" startBytecode="12" endBytecode="12" sourcefile="JettyRunWarExplodedMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarExplodedMojo.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" start="48" end="184" sourcefile="JettyRunWarExplodedMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarExplodedMojo.java"/>
+    </Class>
+    <Field classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" name="webApp" signature="Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" sourcefile="JettyRunWarExplodedMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarExplodedMojo.java"/>
+    </Field>
+    <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" start="81" end="81" startBytecode="25" endBytecode="25" sourcefile="JettyRunWarExplodedMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarExplodedMojo.java"/>
+  </BugInstance>
+  <BugInstance type="NP_UNWRITTEN_FIELD" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.mortbay.jetty.plugin.JettyRunWarMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarMojo" start="51" end="173" sourcefile="JettyRunWarMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarMojo.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.JettyRunWarMojo" name="configureWebApplication" signature="()V" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarMojo" start="75" end="78" startBytecode="0" endBytecode="68" sourcefile="JettyRunWarMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarMojo.java"/>
+    </Method>
+    <Field classname="org.mortbay.jetty.plugin.JettyRunWarMojo" name="webApp" signature="Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarMojo" sourcefile="JettyRunWarMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarMojo.java"/>
+    </Field>
+    <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarMojo" start="77" end="77" startBytecode="12" endBytecode="12" sourcefile="JettyRunWarMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarMojo.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.mortbay.jetty.plugin.JettyRunWarMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarMojo" start="51" end="173" sourcefile="JettyRunWarMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarMojo.java"/>
+    </Class>
+    <Field classname="org.mortbay.jetty.plugin.JettyRunWarMojo" name="webApp" signature="Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarMojo" sourcefile="JettyRunWarMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarMojo.java"/>
+    </Field>
+    <SourceLine classname="org.mortbay.jetty.plugin.JettyRunWarMojo" start="77" end="77" startBytecode="9" endBytecode="9" sourcefile="JettyRunWarMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyRunWarMojo.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.mortbay.jetty.plugin.JettyServer">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyServer" start="39" end="123" sourcefile="JettyServer.java" sourcepath="org/mortbay/jetty/plugin/JettyServer.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.JettyServer" name="createDefaultConnector" signature="(Ljava/lang/String;)Lorg/eclipse/jetty/server/Connector;" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyServer" start="117" end="123" startBytecode="0" endBytecode="27" sourcefile="JettyServer.java" sourcepath="org/mortbay/jetty/plugin/JettyServer.java"/>
+    </Method>
+    <LocalVariable name="connector" register="2" pc="8" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.mortbay.jetty.plugin.JettyServer" start="117" end="117" startBytecode="7" endBytecode="7" sourcefile="JettyServer.java" sourcepath="org/mortbay/jetty/plugin/JettyServer.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="connector"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.mortbay.jetty.plugin.JettyServer">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyServer" start="39" end="123" sourcefile="JettyServer.java" sourcepath="org/mortbay/jetty/plugin/JettyServer.java"/>
+    </Class>
+    <Field classname="org.mortbay.jetty.plugin.JettyServer" name="DEFAULT_MAX_IDLE_TIME" signature="I" isStatic="true">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyServer" sourcefile="JettyServer.java" sourcepath="org/mortbay/jetty/plugin/JettyServer.java"/>
+    </Field>
+    <SourceLine classname="org.mortbay.jetty.plugin.JettyServer" start="40" end="40" startBytecode="9" endBytecode="9" sourcefile="JettyServer.java" sourcepath="org/mortbay/jetty/plugin/JettyServer.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.mortbay.jetty.plugin.JettyServer">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyServer" start="39" end="123" sourcefile="JettyServer.java" sourcepath="org/mortbay/jetty/plugin/JettyServer.java"/>
+    </Class>
+    <Field classname="org.mortbay.jetty.plugin.JettyServer" name="DEFAULT_PORT" signature="I" isStatic="true">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyServer" sourcefile="JettyServer.java" sourcepath="org/mortbay/jetty/plugin/JettyServer.java"/>
+    </Field>
+    <SourceLine classname="org.mortbay.jetty.plugin.JettyServer" start="39" end="39" startBytecode="3" endBytecode="3" sourcefile="JettyServer.java" sourcepath="org/mortbay/jetty/plugin/JettyServer.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.mortbay.jetty.plugin.JettyStopMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyStopMojo" start="37" end="80" sourcefile="JettyStopMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyStopMojo.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.JettyStopMojo" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyStopMojo" start="57" end="80" startBytecode="0" endBytecode="311" sourcefile="JettyStopMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyStopMojo.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.mortbay.jetty.plugin.JettyStopMojo" start="68" end="68" startBytecode="85" endBytecode="85" sourcefile="JettyStopMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyStopMojo.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.mortbay.jetty.plugin.JettyStopMojo">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyStopMojo" start="37" end="80" sourcefile="JettyStopMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyStopMojo.java"/>
+    </Class>
+    <Field classname="org.mortbay.jetty.plugin.JettyStopMojo" name="stopKey" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.JettyStopMojo" sourcefile="JettyStopMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyStopMojo.java"/>
+    </Field>
+    <SourceLine classname="org.mortbay.jetty.plugin.JettyStopMojo" start="59" end="59" startBytecode="18" endBytecode="18" sourcefile="JettyStopMojo.java" sourcepath="org/mortbay/jetty/plugin/JettyStopMojo.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.mortbay.jetty.plugin.MavenWebInfConfiguration">
+      <SourceLine classname="org.mortbay.jetty.plugin.MavenWebInfConfiguration" start="34" end="242" sourcefile="MavenWebInfConfiguration.java" sourcepath="org/mortbay/jetty/plugin/MavenWebInfConfiguration.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.MavenWebInfConfiguration" name="configure" signature="(Lorg/eclipse/jetty/webapp/WebAppContext;)V" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.MavenWebInfConfiguration" start="42" end="70" startBytecode="0" endBytecode="455" sourcefile="MavenWebInfConfiguration.java" sourcepath="org/mortbay/jetty/plugin/MavenWebInfConfiguration.java"/>
+    </Method>
+    <LocalVariable name="existingServerClasses" register="3" pc="151" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.mortbay.jetty.plugin.MavenWebInfConfiguration" start="62" end="62" startBytecode="152" endBytecode="152" sourcefile="MavenWebInfConfiguration.java" sourcepath="org/mortbay/jetty/plugin/MavenWebInfConfiguration.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.mortbay.jetty.plugin.MavenWebInfConfiguration" start="59" end="59" startBytecode="122" endBytecode="122" sourcefile="MavenWebInfConfiguration.java" sourcepath="org/mortbay/jetty/plugin/MavenWebInfConfiguration.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.mortbay.jetty.plugin.Monitor">
+      <SourceLine classname="org.mortbay.jetty.plugin.Monitor" start="53" end="134" sourcefile="Monitor.java" sourcepath="org/mortbay/jetty/plugin/Monitor.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.Monitor" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.Monitor" start="70" end="134" startBytecode="0" endBytecode="1024" sourcefile="Monitor.java" sourcepath="org/mortbay/jetty/plugin/Monitor.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.mortbay.jetty.plugin.Monitor" start="77" end="77" startBytecode="35" endBytecode="35" sourcefile="Monitor.java" sourcepath="org/mortbay/jetty/plugin/Monitor.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.mortbay.jetty.plugin.Monitor">
+      <SourceLine classname="org.mortbay.jetty.plugin.Monitor" start="53" end="134" sourcefile="Monitor.java" sourcepath="org/mortbay/jetty/plugin/Monitor.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.Monitor" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.Monitor" start="70" end="134" startBytecode="0" endBytecode="1024" sourcefile="Monitor.java" sourcepath="org/mortbay/jetty/plugin/Monitor.java"/>
+    </Method>
+    <SourceLine classname="org.mortbay.jetty.plugin.Monitor" start="93" end="93" startBytecode="185" endBytecode="185" sourcefile="Monitor.java" sourcepath="org/mortbay/jetty/plugin/Monitor.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.mortbay.jetty.plugin.Monitor">
+      <SourceLine classname="org.mortbay.jetty.plugin.Monitor" start="53" end="134" sourcefile="Monitor.java" sourcepath="org/mortbay/jetty/plugin/Monitor.java"/>
+    </Class>
+    <Method classname="org.mortbay.jetty.plugin.Monitor" name="&lt;init&gt;" signature="(ILjava/lang/String;[Lorg/eclipse/jetty/server/Server;Z)V" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.Monitor" start="53" end="66" startBytecode="0" endBytecode="242" sourcefile="Monitor.java" sourcepath="org/mortbay/jetty/plugin/Monitor.java"/>
+    </Method>
+    <Field classname="org.mortbay.jetty.plugin.Monitor" name="_servers" signature="[Lorg/eclipse/jetty/server/Server;" isStatic="false">
+      <SourceLine classname="org.mortbay.jetty.plugin.Monitor" sourcefile="Monitor.java" sourcepath="org/mortbay/jetty/plugin/Monitor.java"/>
+    </Field>
+    <LocalVariable name="servers" register="3" pc="39" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.mortbay.jetty.plugin.Monitor" start="60" end="60" startBytecode="39" endBytecode="39" sourcefile="Monitor.java" sourcepath="org/mortbay/jetty/plugin/Monitor.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.mortbay.jetty.plugin.RuntimeDependencyResolver$RuntimeResolutionListener">
+      <SourceLine classname="org.mortbay.jetty.plugin.RuntimeDependencyResolver$RuntimeResolutionListener" start="66" end="78" sourcefile="RuntimeDependencyResolver.java" sourcepath="org/mortbay/jetty/plugin/RuntimeDependencyResolver.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="41">
+    <MissingClass>org.apache.maven.artifact.Artifact</MissingClass>
+    <MissingClass>org.apache.maven.artifact.factory.ArtifactFactory</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.ArtifactResolutionResult</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.ArtifactResolver</MissingClass>
+    <MissingClass>org.apache.maven.plugin.AbstractMojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProjectBuilder</MissingClass>
+    <MissingClass>org.apache.maven.project.artifact.MavenMetadataSource</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.FileUtils</MissingClass>
+    <MissingClass>org.eclipse.jetty.annotations.AnnotationConfiguration</MissingClass>
+    <MissingClass>org.eclipse.jetty.annotations.AnnotationParser</MissingClass>
+    <MissingClass>org.eclipse.jetty.annotations.ClassNameResolver</MissingClass>
+    <MissingClass>org.eclipse.jetty.annotations.ContainerInitializerConfiguration</MissingClass>
+    <MissingClass>org.eclipse.jetty.plus.webapp.EnvConfiguration</MissingClass>
+    <MissingClass>org.eclipse.jetty.plus.webapp.PlusConfiguration</MissingClass>
+    <MissingClass>org.eclipse.jetty.security.LoginService</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.Server</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.handler.ContextHandlerCollection</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.handler.DefaultHandler</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.handler.HandlerCollection</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.handler.RequestLogHandler</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.nio.SelectChannelConnector</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.IO</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.LazyList</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.Scanner</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.Scanner$BulkListener</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.URIUtil</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.log.Log</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.resource.Resource</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.resource.ResourceCollection</MissingClass>
+    <MissingClass>org.eclipse.jetty.webapp.FragmentConfiguration</MissingClass>
+    <MissingClass>org.eclipse.jetty.webapp.JettyWebXmlConfiguration</MissingClass>
+    <MissingClass>org.eclipse.jetty.webapp.MetaData</MissingClass>
+    <MissingClass>org.eclipse.jetty.webapp.MetaInfConfiguration</MissingClass>
+    <MissingClass>org.eclipse.jetty.webapp.WebAppClassLoader</MissingClass>
+    <MissingClass>org.eclipse.jetty.webapp.WebAppContext</MissingClass>
+    <MissingClass>org.eclipse.jetty.webapp.WebInfConfiguration</MissingClass>
+    <MissingClass>org.eclipse.jetty.webapp.WebXmlConfiguration</MissingClass>
+    <MissingClass>org.eclipse.jetty.xml.XmlConfiguration</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 19 Nov 2010 22:37:44 +0200" total_classes="23" referenced_classes="92" total_bugs="19" total_size="1506" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="29.57" clock_seconds="32.12" peak_mbytes="76.95" alloc_mbytes="763.88" gc_seconds="0.31" priority_2="14" priority_1="5">
+    <PackageStats package="org.mortbay.jetty.plugin" total_bugs="19" total_types="23" total_size="1506" priority_2="14" priority_1="5">
+      <ClassStats class="org.mortbay.jetty.plugin.AbstractJettyMojo" sourceFile="AbstractJettyMojo.java" interface="false" size="197" bugs="3" priority_2="3"/>
+      <ClassStats class="org.mortbay.jetty.plugin.ConsoleScanner" sourceFile="ConsoleScanner.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.HelpMojo" sourceFile="HelpMojo.java" interface="false" size="339" bugs="1" priority_2="1"/>
+      <ClassStats class="org.mortbay.jetty.plugin.JettyDeployWar" sourceFile="JettyDeployWar.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.JettyRunMojo" sourceFile="JettyRunMojo.java" interface="false" size="205" bugs="1" priority_2="1"/>
+      <ClassStats class="org.mortbay.jetty.plugin.JettyRunMojo$1" sourceFile="JettyRunMojo.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo" sourceFile="JettyRunWarExplodedMojo.java" interface="false" size="67" bugs="2" priority_2="2"/>
+      <ClassStats class="org.mortbay.jetty.plugin.JettyRunWarExplodedMojo$1" sourceFile="JettyRunWarExplodedMojo.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.JettyRunWarMojo" sourceFile="JettyRunWarMojo.java" interface="false" size="49" bugs="2" priority_2="2"/>
+      <ClassStats class="org.mortbay.jetty.plugin.JettyRunWarMojo$1" sourceFile="JettyRunWarMojo.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.JettyServer" sourceFile="JettyServer.java" interface="false" size="45" bugs="3" priority_2="1" priority_1="2"/>
+      <ClassStats class="org.mortbay.jetty.plugin.JettyStopMojo" sourceFile="JettyStopMojo.java" interface="false" size="22" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.mortbay.jetty.plugin.JettyWebAppContext" sourceFile="JettyWebAppContext.java" interface="false" size="140" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.MavenAnnotationConfiguration" sourceFile="MavenAnnotationConfiguration.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.MavenAnnotationConfiguration$1" sourceFile="MavenAnnotationConfiguration.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.MavenWebInfConfiguration" sourceFile="MavenWebInfConfiguration.java" interface="false" size="111" bugs="1" priority_1="1"/>
+      <ClassStats class="org.mortbay.jetty.plugin.Monitor" sourceFile="Monitor.java" interface="false" size="54" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.mortbay.jetty.plugin.PluginLog" sourceFile="PluginLog.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.RuntimeDependencyResolver" sourceFile="RuntimeDependencyResolver.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.RuntimeDependencyResolver$RuntimeResolutionListener" sourceFile="RuntimeDependencyResolver.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="org.mortbay.jetty.plugin.ScanTargetPattern" sourceFile="ScanTargetPattern.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.SystemProperties" sourceFile="SystemProperties.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.mortbay.jetty.plugin.SystemProperty" sourceFile="SystemProperty.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2953" invocations="646" avgMicrosecondsPerInvocation="4571" maxMicrosecondsPerInvocation="141041" standardDeviationMircosecondsPerInvocation="15501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="2092" invocations="92" avgMicrosecondsPerInvocation="22746" maxMicrosecondsPerInvocation="381911" standardDeviationMircosecondsPerInvocation="53244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1981" invocations="92" avgMicrosecondsPerInvocation="21532" maxMicrosecondsPerInvocation="199180" standardDeviationMircosecondsPerInvocation="42458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1745" invocations="163" avgMicrosecondsPerInvocation="10708" maxMicrosecondsPerInvocation="269223" standardDeviationMircosecondsPerInvocation="35134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1664" invocations="163" avgMicrosecondsPerInvocation="10212" maxMicrosecondsPerInvocation="315045" standardDeviationMircosecondsPerInvocation="32988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1564" invocations="171" avgMicrosecondsPerInvocation="9148" maxMicrosecondsPerInvocation="369121" standardDeviationMircosecondsPerInvocation="33487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1447" invocations="163" avgMicrosecondsPerInvocation="8879" maxMicrosecondsPerInvocation="557568" standardDeviationMircosecondsPerInvocation="45162"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1446" invocations="167" avgMicrosecondsPerInvocation="8661" maxMicrosecondsPerInvocation="162836" standardDeviationMircosecondsPerInvocation="22797"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="997" invocations="112" avgMicrosecondsPerInvocation="8905" maxMicrosecondsPerInvocation="154245" standardDeviationMircosecondsPerInvocation="22570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="824" invocations="376" avgMicrosecondsPerInvocation="2192" maxMicrosecondsPerInvocation="89438" standardDeviationMircosecondsPerInvocation="8067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="802" invocations="92" avgMicrosecondsPerInvocation="8726" maxMicrosecondsPerInvocation="159171" standardDeviationMircosecondsPerInvocation="23270"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="787" invocations="163" avgMicrosecondsPerInvocation="4830" maxMicrosecondsPerInvocation="156363" standardDeviationMircosecondsPerInvocation="16913"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="651" invocations="92" avgMicrosecondsPerInvocation="7078" maxMicrosecondsPerInvocation="126824" standardDeviationMircosecondsPerInvocation="18681"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="614" invocations="163" avgMicrosecondsPerInvocation="3773" maxMicrosecondsPerInvocation="82437" standardDeviationMircosecondsPerInvocation="11839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="463" invocations="92" avgMicrosecondsPerInvocation="5039" maxMicrosecondsPerInvocation="81620" standardDeviationMircosecondsPerInvocation="14402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="430" invocations="23" avgMicrosecondsPerInvocation="18730" maxMicrosecondsPerInvocation="138767" standardDeviationMircosecondsPerInvocation="34003"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="416" invocations="92" avgMicrosecondsPerInvocation="4531" maxMicrosecondsPerInvocation="105486" standardDeviationMircosecondsPerInvocation="15431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="296" invocations="544" avgMicrosecondsPerInvocation="545" maxMicrosecondsPerInvocation="45587" standardDeviationMircosecondsPerInvocation="3026"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

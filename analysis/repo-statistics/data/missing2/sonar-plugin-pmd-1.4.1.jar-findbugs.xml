@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1219418548000" analysisTimestamp="1360901812971" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/sonar/plugins/sonar-plugin-pmd/1.4.1/sonar-plugin-pmd-1.4.1.jar</Jar>
+  </Project>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.sonar.plugins.pmd.xml.Rule">
+      <SourceLine classname="org.sonar.plugins.pmd.xml.Rule" start="30" end="90" sourcefile="Rule.java" sourcepath="org/sonar/plugins/pmd/xml/Rule.java"/>
+    </Class>
+    <Method classname="org.sonar.plugins.pmd.xml.Rule" name="compareTo" signature="(Ljava/lang/Object;)I" isStatic="false">
+      <SourceLine classname="org.sonar.plugins.pmd.xml.Rule" start="30" end="30" startBytecode="0" endBytecode="60" sourcefile="Rule.java" sourcepath="org/sonar/plugins/pmd/xml/Rule.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="26">
+    <MissingClass>ch.hortis.sonar.model.ActiveRule</MissingClass>
+    <MissingClass>ch.hortis.sonar.model.Rule</MissingClass>
+    <MissingClass>ch.hortis.sonar.model.RuleFailureLevel</MissingClass>
+    <MissingClass>ch.hortis.sonar.model.RuleFailureParam</MissingClass>
+    <MissingClass>ch.hortis.sonar.model.RulesProfile</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.XStream</MissingClass>
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.maven.model.Build</MissingClass>
+    <MissingClass>org.apache.maven.model.Plugin</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.Xpp3Dom</MissingClass>
+    <MissingClass>org.sonar.commons.rules.ActiveRuleParam</MissingClass>
+    <MissingClass>org.sonar.commons.rules.RuleParam</MissingClass>
+    <MissingClass>org.sonar.plugins.api.Languages</MissingClass>
+    <MissingClass>org.sonar.plugins.api.PluginContext</MissingClass>
+    <MissingClass>org.sonar.plugins.java.AbstractJavaMavenCollector</MissingClass>
+    <MissingClass>org.sonar.plugins.java.JavaLanguage</MissingClass>
+    <MissingClass>org.sonar.plugins.java.JavaMeasuresRecorder</MissingClass>
+    <MissingClass>org.sonar.plugins.maven.AbstractMavenPluginHandler</MissingClass>
+    <MissingClass>org.sonar.plugins.maven.MavenUtils</MissingClass>
+    <MissingClass>org.sonar.plugins.rules.RulesPluginContext</MissingClass>
+    <MissingClass>org.sonar.plugins.rules.StandardRulesXmlParser</MissingClass>
+    <MissingClass>org.sonar.plugins.utils.CollectorUtils</MissingClass>
+    <MissingClass>org.sonar.plugins.utils.XmlParserException</MissingClass>
+    <MissingClass>org.sonar.plugins.utils.XmlReportParser</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 22 Aug 2008 18:22:28 +0300" total_classes="7" referenced_classes="31" total_bugs="1" total_size="311" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="12.70" clock_seconds="6.60" peak_mbytes="56.28" alloc_mbytes="763.88" gc_seconds="0.09" priority_2="1">
+    <PackageStats package="org.sonar.plugins.pmd" total_bugs="0" total_types="4" total_size="236">
+      <ClassStats class="org.sonar.plugins.pmd.PmdMavenCollector" sourceFile="PmdMavenCollector.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.pmd.PmdMavenPluginHandler" sourceFile="PmdMavenPluginHandler.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.pmd.PmdPlugin" sourceFile="PmdPlugin.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.pmd.PmdRulesRepository" sourceFile="PmdRulesRepository.java" interface="false" size="100" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.pmd.xml" total_bugs="1" total_types="3" total_size="75" priority_2="1">
+      <ClassStats class="org.sonar.plugins.pmd.xml.Property" sourceFile="Property.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.pmd.xml.Rule" sourceFile="Rule.java" interface="false" size="37" bugs="1" priority_2="1"/>
+      <ClassStats class="org.sonar.plugins.pmd.xml.Ruleset" sourceFile="Ruleset.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="823" invocations="402" avgMicrosecondsPerInvocation="2047" maxMicrosecondsPerInvocation="193355" standardDeviationMircosecondsPerInvocation="10416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="340" invocations="31" avgMicrosecondsPerInvocation="10985" maxMicrosecondsPerInvocation="101398" standardDeviationMircosecondsPerInvocation="20688"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="336" invocations="31" avgMicrosecondsPerInvocation="10862" maxMicrosecondsPerInvocation="90777" standardDeviationMircosecondsPerInvocation="22575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="251" invocations="63" avgMicrosecondsPerInvocation="3986" maxMicrosecondsPerInvocation="60855" standardDeviationMircosecondsPerInvocation="10347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="242" invocations="63" avgMicrosecondsPerInvocation="3848" maxMicrosecondsPerInvocation="108595" standardDeviationMircosecondsPerInvocation="14134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="174" invocations="64" avgMicrosecondsPerInvocation="2724" maxMicrosecondsPerInvocation="64657" standardDeviationMircosecondsPerInvocation="8455"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="172" invocations="31" avgMicrosecondsPerInvocation="5559" maxMicrosecondsPerInvocation="50239" standardDeviationMircosecondsPerInvocation="10601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="171" invocations="64" avgMicrosecondsPerInvocation="2678" maxMicrosecondsPerInvocation="46862" standardDeviationMircosecondsPerInvocation="7028"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="153" invocations="62" avgMicrosecondsPerInvocation="2477" maxMicrosecondsPerInvocation="34208" standardDeviationMircosecondsPerInvocation="5538"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="153" invocations="218" avgMicrosecondsPerInvocation="704" maxMicrosecondsPerInvocation="9803" standardDeviationMircosecondsPerInvocation="1021"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="136" invocations="36" avgMicrosecondsPerInvocation="3794" maxMicrosecondsPerInvocation="64133" standardDeviationMircosecondsPerInvocation="10689"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="123" invocations="406" avgMicrosecondsPerInvocation="304" maxMicrosecondsPerInvocation="42620" standardDeviationMircosecondsPerInvocation="2655"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="116" invocations="63" avgMicrosecondsPerInvocation="1848" maxMicrosecondsPerInvocation="21147" standardDeviationMircosecondsPerInvocation="3841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="116" invocations="31" avgMicrosecondsPerInvocation="3748" maxMicrosecondsPerInvocation="41707" standardDeviationMircosecondsPerInvocation="8862"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="91" invocations="31" avgMicrosecondsPerInvocation="2939" maxMicrosecondsPerInvocation="39968" standardDeviationMircosecondsPerInvocation="7481"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="90" invocations="31" avgMicrosecondsPerInvocation="2906" maxMicrosecondsPerInvocation="15313" standardDeviationMircosecondsPerInvocation="3895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="74" invocations="62" avgMicrosecondsPerInvocation="1206" maxMicrosecondsPerInvocation="27726" standardDeviationMircosecondsPerInvocation="3975"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="71" invocations="327" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="4470" standardDeviationMircosecondsPerInvocation="467"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

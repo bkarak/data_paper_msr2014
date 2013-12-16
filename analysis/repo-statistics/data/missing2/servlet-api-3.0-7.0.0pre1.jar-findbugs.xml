@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1209905249000" analysisTimestamp="1360931168936" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/mortbay/jetty/servlet-api-3.0/7.0.0pre1/servlet-api-3.0-7.0.0pre1.jar</Jar>
+  </Project>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="javax.servlet.ServletOutputStream">
+      <SourceLine classname="javax.servlet.ServletOutputStream" start="56" end="373" sourcefile="ServletOutputStream.java" sourcepath="javax/servlet/ServletOutputStream.java"/>
+    </Class>
+    <Method classname="javax.servlet.ServletOutputStream" name="print" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="javax.servlet.ServletOutputStream" start="83" end="103" startBytecode="0" endBytecode="244" sourcefile="ServletOutputStream.java" sourcepath="javax/servlet/ServletOutputStream.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="&lt;init&gt;" signature="(C)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Character" start="2056" end="2058" startBytecode="0" endBytecode="41" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="valueOf" signature="(C)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Character" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <SourceLine classname="javax.servlet.ServletOutputStream" start="97" end="97" startBytecode="59" endBytecode="59" sourcefile="ServletOutputStream.java" sourcepath="javax/servlet/ServletOutputStream.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="javax.servlet.http.HttpServlet">
+      <SourceLine classname="javax.servlet.http.HttpServlet" start="108" end="821" sourcefile="HttpServlet.java" sourcepath="javax/servlet/http/HttpServlet.java"/>
+    </Class>
+    <Method classname="javax.servlet.http.HttpServlet" name="doTrace" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="javax.servlet.http.HttpServlet" start="637" end="658" startBytecode="0" endBytecode="361" sourcefile="HttpServlet.java" sourcepath="javax/servlet/http/HttpServlet.java"/>
+    </Method>
+    <SourceLine classname="javax.servlet.http.HttpServlet" start="645" end="645" startBytecode="74" endBytecode="74" sourcefile="HttpServlet.java" sourcepath="javax/servlet/http/HttpServlet.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="javax.servlet.http.NoBodyOutputStream">
+      <SourceLine classname="javax.servlet.http.NoBodyOutputStream" start="1024" end="1053" sourcefile="HttpServlet.java" sourcepath="javax/servlet/http/HttpServlet.java"/>
+    </Class>
+    <Method classname="javax.servlet.http.NoBodyOutputStream" name="write" signature="([BII)V" isStatic="false">
+      <SourceLine classname="javax.servlet.http.NoBodyOutputStream" start="1044" end="1053" startBytecode="0" endBytecode="18" sourcefile="HttpServlet.java" sourcepath="javax/servlet/http/HttpServlet.java"/>
+    </Method>
+    <LocalVariable name="msg" register="4" pc="27" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="javax.servlet.http.NoBodyOutputStream" start="1050" end="1050" startBytecode="25" endBytecode="25" sourcefile="HttpServlet.java" sourcepath="javax/servlet/http/HttpServlet.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="msg"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 4 May 2008 15:47:29 +0300" total_classes="43" referenced_classes="97" total_bugs="3" total_size="1229" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="17.60" clock_seconds="10.04" peak_mbytes="65.47" alloc_mbytes="763.88" gc_seconds="0.19" priority_2="3">
+    <PackageStats package="javax.servlet" total_bugs="1" total_types="26" total_size="532" priority_2="1">
+      <ClassStats class="javax.servlet.DispatcherType" sourceFile="DispatcherType.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="javax.servlet.Filter" sourceFile="Filter.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.servlet.FilterChain" sourceFile="FilterChain.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.servlet.FilterConfig" sourceFile="FilterConfig.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.servlet.GenericServlet" sourceFile="GenericServlet.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="javax.servlet.RequestDispatcher" sourceFile="RequestDispatcher.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.servlet.Servlet" sourceFile="Servlet.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletConfig" sourceFile="ServletConfig.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletContext" sourceFile="ServletContext.java" interface="true" size="30" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletContextAttributeEvent" sourceFile="ServletContextAttributeEvent.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletContextAttributeListener" sourceFile="ServletContextAttributeListener.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletContextEvent" sourceFile="ServletContextEvent.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletContextListener" sourceFile="ServletContextListener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletException" sourceFile="ServletException.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletInputStream" sourceFile="ServletInputStream.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletOutputStream" sourceFile="ServletOutputStream.java" interface="false" size="72" bugs="1" priority_2="1"/>
+      <ClassStats class="javax.servlet.ServletRequest" sourceFile="ServletRequest.java" interface="true" size="40" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletRequestAttributeEvent" sourceFile="ServletRequestAttributeEvent.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletRequestAttributeListener" sourceFile="ServletRequestAttributeListener.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletRequestEvent" sourceFile="ServletRequestEvent.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletRequestListener" sourceFile="ServletRequestListener.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletRequestWrapper" sourceFile="ServletRequestWrapper.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletResponse" sourceFile="ServletResponse.java" interface="true" size="19" bugs="0"/>
+      <ClassStats class="javax.servlet.ServletResponseWrapper" sourceFile="ServletResponseWrapper.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="javax.servlet.SingleThreadModel" sourceFile="SingleThreadModel.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.servlet.UnavailableException" sourceFile="UnavailableException.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.servlet.http" total_bugs="2" total_types="17" total_size="697" priority_2="2">
+      <ClassStats class="javax.servlet.http.Cookie" sourceFile="Cookie.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpServlet" sourceFile="HttpServlet.java" interface="false" size="166" bugs="1" priority_2="1"/>
+      <ClassStats class="javax.servlet.http.HttpServletRequest" sourceFile="HttpServletRequest.java" interface="true" size="30" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpServletRequestWrapper" sourceFile="HttpServletRequestWrapper.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpServletResponse" sourceFile="HttpServletResponse.java" interface="true" size="59" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpServletResponseWrapper" sourceFile="HttpServletResponseWrapper.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpSession" sourceFile="HttpSession.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpSessionActivationListener" sourceFile="HttpSessionActivationListener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpSessionAttributeListener" sourceFile="HttpSessionAttributeListener.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpSessionBindingEvent" sourceFile="HttpSessionBindingEvent.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpSessionBindingListener" sourceFile="HttpSessionBindingListener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpSessionContext" sourceFile="HttpSessionContext.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpSessionEvent" sourceFile="HttpSessionEvent.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpSessionListener" sourceFile="HttpSessionListener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.servlet.http.HttpUtils" sourceFile="HttpUtils.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="javax.servlet.http.NoBodyOutputStream" sourceFile="HttpServlet.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="javax.servlet.http.NoBodyResponse" sourceFile="HttpServlet.java" interface="false" size="89" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="935" invocations="470" avgMicrosecondsPerInvocation="1990" maxMicrosecondsPerInvocation="87265" standardDeviationMircosecondsPerInvocation="6095"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="802" invocations="97" avgMicrosecondsPerInvocation="8274" maxMicrosecondsPerInvocation="129667" standardDeviationMircosecondsPerInvocation="20138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="561" invocations="258" avgMicrosecondsPerInvocation="2175" maxMicrosecondsPerInvocation="84824" standardDeviationMircosecondsPerInvocation="6803"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="475" invocations="97" avgMicrosecondsPerInvocation="4903" maxMicrosecondsPerInvocation="97681" standardDeviationMircosecondsPerInvocation="13101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="418" invocations="260" avgMicrosecondsPerInvocation="1610" maxMicrosecondsPerInvocation="60653" standardDeviationMircosecondsPerInvocation="6031"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="402" invocations="258" avgMicrosecondsPerInvocation="1559" maxMicrosecondsPerInvocation="36593" standardDeviationMircosecondsPerInvocation="4112"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="363" invocations="260" avgMicrosecondsPerInvocation="1399" maxMicrosecondsPerInvocation="41772" standardDeviationMircosecondsPerInvocation="3580"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="361" invocations="258" avgMicrosecondsPerInvocation="1399" maxMicrosecondsPerInvocation="66441" standardDeviationMircosecondsPerInvocation="4638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="298" invocations="97" avgMicrosecondsPerInvocation="3072" maxMicrosecondsPerInvocation="60782" standardDeviationMircosecondsPerInvocation="8286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="240" invocations="258" avgMicrosecondsPerInvocation="930" maxMicrosecondsPerInvocation="16197" standardDeviationMircosecondsPerInvocation="2133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="234" invocations="383" avgMicrosecondsPerInvocation="611" maxMicrosecondsPerInvocation="32287" standardDeviationMircosecondsPerInvocation="2088"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="223" invocations="218" avgMicrosecondsPerInvocation="1024" maxMicrosecondsPerInvocation="17879" standardDeviationMircosecondsPerInvocation="2249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="145" invocations="97" avgMicrosecondsPerInvocation="1497" maxMicrosecondsPerInvocation="10693" standardDeviationMircosecondsPerInvocation="2360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="144" invocations="97" avgMicrosecondsPerInvocation="1486" maxMicrosecondsPerInvocation="36838" standardDeviationMircosecondsPerInvocation="4582"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="136" invocations="258" avgMicrosecondsPerInvocation="528" maxMicrosecondsPerInvocation="12035" standardDeviationMircosecondsPerInvocation="1227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="132" invocations="447" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="71185" standardDeviationMircosecondsPerInvocation="3473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="124" invocations="426" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="15069" standardDeviationMircosecondsPerInvocation="1218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="96" invocations="258" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="13236" standardDeviationMircosecondsPerInvocation="1076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="89" invocations="43" avgMicrosecondsPerInvocation="2080" maxMicrosecondsPerInvocation="58365" standardDeviationMircosecondsPerInvocation="8925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="82" invocations="110" avgMicrosecondsPerInvocation="754" maxMicrosecondsPerInvocation="14681" standardDeviationMircosecondsPerInvocation="2028"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="81" invocations="43" avgMicrosecondsPerInvocation="1892" maxMicrosecondsPerInvocation="21724" standardDeviationMircosecondsPerInvocation="4002"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="76" invocations="97" avgMicrosecondsPerInvocation="786" maxMicrosecondsPerInvocation="9732" standardDeviationMircosecondsPerInvocation="1617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="70" invocations="97" avgMicrosecondsPerInvocation="723" maxMicrosecondsPerInvocation="22973" standardDeviationMircosecondsPerInvocation="2425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="67" invocations="43" avgMicrosecondsPerInvocation="1580" maxMicrosecondsPerInvocation="16681" standardDeviationMircosecondsPerInvocation="3367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="65" invocations="472" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="8787" standardDeviationMircosecondsPerInvocation="449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="63" invocations="97" avgMicrosecondsPerInvocation="659" maxMicrosecondsPerInvocation="17285" standardDeviationMircosecondsPerInvocation="2031"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

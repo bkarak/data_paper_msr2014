@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1213972152000" analysisTimestamp="1360909101399" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/cxf/cxf-rt-bindings-coloc/2.0.7/cxf-rt-bindings-coloc-2.0.7.jar</Jar>
+  </Project>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.cxf.binding.coloc.ColocMessageObserver">
+      <SourceLine classname="org.apache.cxf.binding.coloc.ColocMessageObserver" start="51" end="135" sourcefile="ColocMessageObserver.java" sourcepath="org/apache/cxf/binding/coloc/ColocMessageObserver.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.binding.coloc.ColocMessageObserver" name="setExchangeProperties" signature="(Lorg/apache/cxf/message/Exchange;Lorg/apache/cxf/message/Message;)V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.binding.coloc.ColocMessageObserver" start="114" end="130" startBytecode="0" endBytecode="292" sourcefile="ColocMessageObserver.java" sourcepath="org/apache/cxf/binding/coloc/ColocMessageObserver.java"/>
+    </Method>
+    <LocalVariable name="boi" register="5" pc="96" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.cxf.binding.coloc.ColocMessageObserver" start="129" end="129" startBytecode="144" endBytecode="144" sourcefile="ColocMessageObserver.java" sourcepath="org/apache/cxf/binding/coloc/ColocMessageObserver.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.cxf.binding.coloc.ColocMessageObserver" start="123" end="123" startBytecode="98" endBytecode="98" sourcefile="ColocMessageObserver.java" sourcepath="org/apache/cxf/binding/coloc/ColocMessageObserver.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="40">
+    <MissingClass>org.apache.cxf.Bus</MissingClass>
+    <MissingClass>org.apache.cxf.BusFactory</MissingClass>
+    <MissingClass>org.apache.cxf.binding.Binding</MissingClass>
+    <MissingClass>org.apache.cxf.common.i18n.BundleUtils</MissingClass>
+    <MissingClass>org.apache.cxf.common.i18n.Message</MissingClass>
+    <MissingClass>org.apache.cxf.common.logging.LogUtils</MissingClass>
+    <MissingClass>org.apache.cxf.endpoint.Client</MissingClass>
+    <MissingClass>org.apache.cxf.endpoint.ConduitSelector</MissingClass>
+    <MissingClass>org.apache.cxf.endpoint.DeferredConduitSelector</MissingClass>
+    <MissingClass>org.apache.cxf.endpoint.Endpoint</MissingClass>
+    <MissingClass>org.apache.cxf.endpoint.Server</MissingClass>
+    <MissingClass>org.apache.cxf.endpoint.ServerRegistry</MissingClass>
+    <MissingClass>org.apache.cxf.feature.AbstractFeature</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.Fault</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.InFaultChainInitiatorObserver</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.InterceptorChain</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.InterceptorProvider</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.OutFaultChainInitiatorObserver</MissingClass>
+    <MissingClass>org.apache.cxf.message.Exchange</MissingClass>
+    <MissingClass>org.apache.cxf.message.ExchangeImpl</MissingClass>
+    <MissingClass>org.apache.cxf.message.Message</MissingClass>
+    <MissingClass>org.apache.cxf.message.MessageImpl</MissingClass>
+    <MissingClass>org.apache.cxf.phase.AbstractPhaseInterceptor</MissingClass>
+    <MissingClass>org.apache.cxf.phase.Phase</MissingClass>
+    <MissingClass>org.apache.cxf.phase.PhaseInterceptorChain</MissingClass>
+    <MissingClass>org.apache.cxf.phase.PhaseManager</MissingClass>
+    <MissingClass>org.apache.cxf.service.Service</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.BindingInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.BindingOperationInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.EndpointInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.FaultInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.InterfaceInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.MessageInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.MessagePartInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.OperationInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.UnwrappedOperationInfo</MissingClass>
+    <MissingClass>org.apache.cxf.transport.ChainInitiationObserver</MissingClass>
+    <MissingClass>org.apache.cxf.transport.MessageObserver</MissingClass>
+    <MissingClass>org.springframework.beans.factory.xml.AbstractSimpleBeanDefinitionParser</MissingClass>
+    <MissingClass>org.springframework.beans.factory.xml.NamespaceHandlerSupport</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 20 Jun 2008 17:29:12 +0300" total_classes="10" referenced_classes="34" total_bugs="1" total_size="384" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="9.21" clock_seconds="4.84" peak_mbytes="56.55" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="1">
+    <PackageStats package="org.apache.cxf.binding.coloc" total_bugs="1" total_types="7" total_size="354" priority_2="1">
+      <ClassStats class="org.apache.cxf.binding.coloc.ColocInFaultObserver" sourceFile="ColocInFaultObserver.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.cxf.binding.coloc.ColocInInterceptor" sourceFile="ColocInInterceptor.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.cxf.binding.coloc.ColocMessageObserver" sourceFile="ColocMessageObserver.java" interface="false" size="62" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.cxf.binding.coloc.ColocOutFaultObserver" sourceFile="ColocOutFaultObserver.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.cxf.binding.coloc.ColocOutInterceptor" sourceFile="ColocOutInterceptor.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="org.apache.cxf.binding.coloc.ColocUtil" sourceFile="ColocUtil.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="org.apache.cxf.binding.coloc.WebFaultInInterceptor" sourceFile="WebFaultInInterceptor.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.cxf.binding.coloc.feature" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="org.apache.cxf.binding.coloc.feature.ColocFeature" sourceFile="ColocFeature.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.cxf.binding.coloc.spring" total_bugs="0" total_types="2" total_size="11">
+      <ClassStats class="org.apache.cxf.binding.coloc.spring.ColocBeanDefinitionParser" sourceFile="ColocBeanDefinitionParser.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.cxf.binding.coloc.spring.NamespaceHandler" sourceFile="NamespaceHandler.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="514" invocations="382" avgMicrosecondsPerInvocation="1347" maxMicrosecondsPerInvocation="41939" standardDeviationMircosecondsPerInvocation="3753"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="263" invocations="34" avgMicrosecondsPerInvocation="7752" maxMicrosecondsPerInvocation="97519" standardDeviationMircosecondsPerInvocation="17556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="239" invocations="34" avgMicrosecondsPerInvocation="7039" maxMicrosecondsPerInvocation="49610" standardDeviationMircosecondsPerInvocation="11246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="237" invocations="10" avgMicrosecondsPerInvocation="23702" maxMicrosecondsPerInvocation="228331" standardDeviationMircosecondsPerInvocation="68220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="235" invocations="45" avgMicrosecondsPerInvocation="5241" maxMicrosecondsPerInvocation="60253" standardDeviationMircosecondsPerInvocation="11534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="157" invocations="45" avgMicrosecondsPerInvocation="3497" maxMicrosecondsPerInvocation="24628" standardDeviationMircosecondsPerInvocation="4785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="141" invocations="76" avgMicrosecondsPerInvocation="1859" maxMicrosecondsPerInvocation="86720" standardDeviationMircosecondsPerInvocation="10011"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="141" invocations="45" avgMicrosecondsPerInvocation="3134" maxMicrosecondsPerInvocation="17883" standardDeviationMircosecondsPerInvocation="4293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="125" invocations="34" avgMicrosecondsPerInvocation="3701" maxMicrosecondsPerInvocation="25087" standardDeviationMircosecondsPerInvocation="5504"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="115" invocations="45" avgMicrosecondsPerInvocation="2575" maxMicrosecondsPerInvocation="12373" standardDeviationMircosecondsPerInvocation="3357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="115" invocations="45" avgMicrosecondsPerInvocation="2570" maxMicrosecondsPerInvocation="105800" standardDeviationMircosecondsPerInvocation="15564"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="112" invocations="40" avgMicrosecondsPerInvocation="2805" maxMicrosecondsPerInvocation="24154" standardDeviationMircosecondsPerInvocation="4848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="107" invocations="45" avgMicrosecondsPerInvocation="2383" maxMicrosecondsPerInvocation="13297" standardDeviationMircosecondsPerInvocation="3103"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="92" invocations="124" avgMicrosecondsPerInvocation="748" maxMicrosecondsPerInvocation="15599" standardDeviationMircosecondsPerInvocation="1444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="81" invocations="45" avgMicrosecondsPerInvocation="1806" maxMicrosecondsPerInvocation="12555" standardDeviationMircosecondsPerInvocation="2529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="75" invocations="299" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="3273" standardDeviationMircosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="68" invocations="34" avgMicrosecondsPerInvocation="2018" maxMicrosecondsPerInvocation="21172" standardDeviationMircosecondsPerInvocation="4174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="65" invocations="34" avgMicrosecondsPerInvocation="1940" maxMicrosecondsPerInvocation="13672" standardDeviationMircosecondsPerInvocation="2851"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="57" invocations="386" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="14221" standardDeviationMircosecondsPerInvocation="836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="57" invocations="34" avgMicrosecondsPerInvocation="1698" maxMicrosecondsPerInvocation="10233" standardDeviationMircosecondsPerInvocation="2328"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

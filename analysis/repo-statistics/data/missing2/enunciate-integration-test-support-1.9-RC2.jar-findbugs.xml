@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1231879591000" analysisTimestamp="1360917062857" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/enunciate/enunciate-integration-test-support/1.9-RC2/enunciate-integration-test-support-1.9-RC2.jar</Jar>
+  </Project>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.EnunciateTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.EnunciateTestCase" start="39" end="149" sourcefile="EnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/EnunciateTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.EnunciateTestCase" name="contextProperties" signature="Lorg/codehaus/enunciate/test/integration/ContextProperties;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.EnunciateTestCase" sourcefile="EnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/EnunciateTestCase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DMI_INVOKING_TOSTRING_ON_ARRAY" priority="2" abbrev="USELESS_STRING" category="CORRECTNESS">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" start="312" end="668" sourcefile="GenericEnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericEnunciateTestCase.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" name="addDefaultNamespaces" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" start="661" end="668" startBytecode="0" endBytecode="169" sourcefile="GenericEnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericEnunciateTestCase.java"/>
+    </Method>
+    <LocalVariable name="strings" register="0" pc="24" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" start="662" end="662" startBytecode="24" endBytecode="24" sourcefile="GenericEnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericEnunciateTestCase.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" start="312" end="668" sourcefile="GenericEnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericEnunciateTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" name="documentBuilder" signature="Lorg/jdom/input/SAXBuilder;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" sourcefile="GenericEnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericEnunciateTestCase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" start="312" end="668" sourcefile="GenericEnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericEnunciateTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" name="defaultNamespaceContext" signature="Ljava/util/Map;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" sourcefile="GenericEnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericEnunciateTestCase.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" start="318" end="318" startBytecode="7" endBytecode="7" sourcefile="GenericEnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericEnunciateTestCase.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" start="312" end="668" sourcefile="GenericEnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericEnunciateTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" name="xPath" signature="Lorg/jdom/xpath/XPath;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" sourcefile="GenericEnunciateTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericEnunciateTestCase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_UPDATE_STATIC" priority="2" abbrev="LI" category="MT_CORRECTNESS">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="loadAndVerifyJettyProperties" signature="()Ljava/util/Properties;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="285" end="302" startBytecode="0" endBytecode="85" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Method>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="webappHome" signature="Ljava/io/File;" isStatic="true" role="FIELD_ON">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="290" end="295" startBytecode="64" endBytecode="125" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="actualPort" signature="I" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="baseContext" signature="Ljava/net/URL;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="baseContextString" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="host" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="154" end="154" startBytecode="24" endBytecode="24" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="httpClient" signature="Lorg/apache/commons/httpclient/HttpClient;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="172" end="172" startBytecode="38" endBytecode="38" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="jettyPropertiesPath" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="166" end="166" startBytecode="30" endBytecode="30" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="jettyServer" signature="Lorg/mortbay/jetty/Server;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="170" end="170" startBytecode="34" endBytecode="34" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="properties" signature="Ljava/util/Properties;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="protocol" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="152" end="152" startBytecode="19" endBytecode="19" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="relativeContext" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="specifiedPort" signature="I" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="150" end="150" startBytecode="14" endBytecode="14" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="webappHome" signature="Ljava/io/File;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="138" end="460" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" name="DEFAULT_JETTY_PROPERTIES_PATH" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" start="142" end="142" startBytecode="10" endBytecode="10" sourcefile="GenericWebServerTestCase.java" sourcepath="org/codehaus/enunciate/test/integration/GenericWebServerTestCase.java"/>
+  </BugInstance>
+  <BugInstance type="DMI_INVOKING_TOSTRING_ON_ARRAY" priority="2" abbrev="USELESS_STRING" category="CORRECTNESS">
+    <Class classname="org.codehaus.enunciate.test.integration.XPathUtil">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.XPathUtil" start="37" end="245" sourcefile="XPathUtil.java" sourcepath="org/codehaus/enunciate/test/integration/XPathUtil.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.test.integration.XPathUtil" name="addDefaultNamespaces" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.XPathUtil" start="238" end="245" startBytecode="0" endBytecode="182" sourcefile="XPathUtil.java" sourcepath="org/codehaus/enunciate/test/integration/XPathUtil.java"/>
+    </Method>
+    <LocalVariable name="strings" register="1" pc="24" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.XPathUtil" start="239" end="239" startBytecode="24" endBytecode="24" sourcefile="XPathUtil.java" sourcepath="org/codehaus/enunciate/test/integration/XPathUtil.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.codehaus.enunciate.test.integration.XPathUtil">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.XPathUtil" start="37" end="245" sourcefile="XPathUtil.java" sourcepath="org/codehaus/enunciate/test/integration/XPathUtil.java"/>
+    </Class>
+    <Field classname="org.codehaus.enunciate.test.integration.XPathUtil" name="xPath" signature="Lorg/jdom/xpath/XPath;" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.XPathUtil" sourcefile="XPathUtil.java" sourcepath="org/codehaus/enunciate/test/integration/XPathUtil.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.codehaus.enunciate.test.integration.util.FileUtil">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="30" end="57" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.test.integration.util.FileUtil" name="fileToString" signature="(Ljava/io/File;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="52" end="57" startBytecode="0" endBytecode="128" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="56" end="56" startBytecode="31" endBytecode="31" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.codehaus.enunciate.test.integration.util.FileUtil">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="30" end="57" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.test.integration.util.FileUtil" name="loadAndVerifyJettyPropertiesFile" signature="(Ljava/lang/String;Z)Ljava/util/Properties;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="33" end="48" startBytecode="0" endBytecode="268" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="46" end="46" startBytecode="129" endBytecode="129" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="48" end="48" startBytecode="135" endBytecode="135" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.codehaus.enunciate.test.integration.util.FileUtil">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="30" end="57" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.test.integration.util.FileUtil" name="fileToString" signature="(Ljava/io/File;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="52" end="57" startBytecode="0" endBytecode="128" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="52" end="52" startBytecode="5" endBytecode="5" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="53" end="53" startBytecode="9" endBytecode="9" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.enunciate.test.integration.util.FileUtil">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="30" end="57" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.test.integration.util.FileUtil" name="loadAndVerifyJettyPropertiesFile" signature="(Ljava/lang/String;Z)Ljava/util/Properties;" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="33" end="48" startBytecode="0" endBytecode="61" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.codehaus.enunciate.test.integration.util.FileUtil" start="46" end="46" startBytecode="123" endBytecode="123" sourcefile="FileUtil.java" sourcepath="org/codehaus/enunciate/test/integration/util/FileUtil.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="21">
+    <MissingClass>com.meterware.httpunit.WebConversation</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpClient</MissingClass>
+    <MissingClass>org.apache.commons.jxpath.JXPathContext</MissingClass>
+    <MissingClass>org.apache.commons.jxpath.JXPathIntrospector</MissingClass>
+    <MissingClass>org.jdom.Attribute</MissingClass>
+    <MissingClass>org.jdom.Document</MissingClass>
+    <MissingClass>org.jdom.Element</MissingClass>
+    <MissingClass>org.jdom.JDOMException</MissingClass>
+    <MissingClass>org.jdom.Parent</MissingClass>
+    <MissingClass>org.jdom.Text</MissingClass>
+    <MissingClass>org.jdom.input.SAXBuilder</MissingClass>
+    <MissingClass>org.jdom.xpath.XPath</MissingClass>
+    <MissingClass>org.json.JSONObject</MissingClass>
+    <MissingClass>org.mortbay.jetty.Connector</MissingClass>
+    <MissingClass>org.mortbay.jetty.Handler</MissingClass>
+    <MissingClass>org.mortbay.jetty.Server</MissingClass>
+    <MissingClass>org.mortbay.jetty.servlet.ServletHandler</MissingClass>
+    <MissingClass>org.mortbay.jetty.webapp.WebAppContext</MissingClass>
+    <MissingClass>org.springframework.web.context.WebApplicationContext</MissingClass>
+    <MissingClass>org.springframework.web.context.support.WebApplicationContextUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 13 Jan 2009 22:46:31 +0200" total_classes="14" referenced_classes="42" total_bugs="25" total_size="644" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="12.97" clock_seconds="7.79" peak_mbytes="61.51" alloc_mbytes="763.88" gc_seconds="0.14" priority_2="22" priority_1="3">
+    <PackageStats package="org.codehaus.enunciate.test.integration" total_bugs="21" total_types="12" total_size="599" priority_2="19" priority_1="2">
+      <ClassStats class="org.codehaus.enunciate.test.integration.ContextProperties" sourceFile="ContextProperties.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.EnunciateTestCase" sourceFile="EnunciateTestCase.java" interface="false" size="42" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.GenericEnunciateTestCase" sourceFile="GenericEnunciateTestCase.java" interface="false" size="123" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.GenericWebServerTestCase" sourceFile="GenericWebServerTestCase.java" interface="false" size="140" bugs="14" priority_2="13" priority_1="1"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.GenericWebServerTestCase$1" sourceFile="GenericWebServerTestCase.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.GenericWebServerTestCase$Initializer" sourceFile="GenericWebServerTestCase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.JXPathUtil" sourceFile="JXPathUtil.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.JettyTestContainer" sourceFile="JettyTestContainer.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.JettyTestContainer$Initializer" sourceFile="JettyTestContainer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.WsContextProperties" sourceFile="WsContextProperties.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.WsTestContainer" sourceFile="WsTestContainer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.XPathUtil" sourceFile="XPathUtil.java" interface="false" size="69" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.codehaus.enunciate.test.integration.util" total_bugs="4" total_types="2" total_size="45" priority_2="3" priority_1="1">
+      <ClassStats class="org.codehaus.enunciate.test.integration.util.FileUtil" sourceFile="FileUtil.java" interface="false" size="22" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="org.codehaus.enunciate.test.integration.util.JSONObjectJXPathHandler" sourceFile="JSONObjectJXPathHandler.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="802" invocations="417" avgMicrosecondsPerInvocation="1923" maxMicrosecondsPerInvocation="111835" standardDeviationMircosecondsPerInvocation="7682"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="310" invocations="42" avgMicrosecondsPerInvocation="7388" maxMicrosecondsPerInvocation="59960" standardDeviationMircosecondsPerInvocation="13084"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="294" invocations="42" avgMicrosecondsPerInvocation="7005" maxMicrosecondsPerInvocation="47279" standardDeviationMircosecondsPerInvocation="11764"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="214" invocations="154" avgMicrosecondsPerInvocation="1390" maxMicrosecondsPerInvocation="23269" standardDeviationMircosecondsPerInvocation="3609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="212" invocations="154" avgMicrosecondsPerInvocation="1379" maxMicrosecondsPerInvocation="35443" standardDeviationMircosecondsPerInvocation="3814"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="210" invocations="154" avgMicrosecondsPerInvocation="1368" maxMicrosecondsPerInvocation="25954" standardDeviationMircosecondsPerInvocation="3208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="200" invocations="154" avgMicrosecondsPerInvocation="1304" maxMicrosecondsPerInvocation="14749" standardDeviationMircosecondsPerInvocation="2433"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="167" invocations="154" avgMicrosecondsPerInvocation="1087" maxMicrosecondsPerInvocation="42664" standardDeviationMircosecondsPerInvocation="4037"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="160" invocations="244" avgMicrosecondsPerInvocation="657" maxMicrosecondsPerInvocation="14689" standardDeviationMircosecondsPerInvocation="1931"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="154" invocations="154" avgMicrosecondsPerInvocation="1001" maxMicrosecondsPerInvocation="10411" standardDeviationMircosecondsPerInvocation="1924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="144" invocations="42" avgMicrosecondsPerInvocation="3430" maxMicrosecondsPerInvocation="53144" standardDeviationMircosecondsPerInvocation="9292"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="137" invocations="42" avgMicrosecondsPerInvocation="3263" maxMicrosecondsPerInvocation="29113" standardDeviationMircosecondsPerInvocation="5473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="129" invocations="352" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="18133" standardDeviationMircosecondsPerInvocation="1426"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="116" invocations="154" avgMicrosecondsPerInvocation="758" maxMicrosecondsPerInvocation="102283" standardDeviationMircosecondsPerInvocation="8208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="109" invocations="95" avgMicrosecondsPerInvocation="1153" maxMicrosecondsPerInvocation="22685" standardDeviationMircosecondsPerInvocation="2720"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="107" invocations="14" avgMicrosecondsPerInvocation="7644" maxMicrosecondsPerInvocation="72584" standardDeviationMircosecondsPerInvocation="18645"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="89" invocations="42" avgMicrosecondsPerInvocation="2124" maxMicrosecondsPerInvocation="15128" standardDeviationMircosecondsPerInvocation="3237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="88" invocations="66" avgMicrosecondsPerInvocation="1339" maxMicrosecondsPerInvocation="24543" standardDeviationMircosecondsPerInvocation="4120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="74" invocations="14" avgMicrosecondsPerInvocation="5296" maxMicrosecondsPerInvocation="52454" standardDeviationMircosecondsPerInvocation="13403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="73" invocations="420" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="10098" standardDeviationMircosecondsPerInvocation="775"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="71" invocations="14" avgMicrosecondsPerInvocation="5083" maxMicrosecondsPerInvocation="42828" standardDeviationMircosecondsPerInvocation="11242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="69" invocations="42" avgMicrosecondsPerInvocation="1662" maxMicrosecondsPerInvocation="16071" standardDeviationMircosecondsPerInvocation="3747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.WaitInLoop" totalMilliseconds="66" invocations="14" avgMicrosecondsPerInvocation="4761" maxMicrosecondsPerInvocation="38613" standardDeviationMircosecondsPerInvocation="11709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="61" invocations="42" avgMicrosecondsPerInvocation="1463" maxMicrosecondsPerInvocation="10466" standardDeviationMircosecondsPerInvocation="2494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDerefsInvolvingNonShortCircuitEvaluation" totalMilliseconds="54" invocations="14" avgMicrosecondsPerInvocation="3863" maxMicrosecondsPerInvocation="24262" standardDeviationMircosecondsPerInvocation="8071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="53" invocations="154" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="16744" standardDeviationMircosecondsPerInvocation="1395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="50" invocations="42" avgMicrosecondsPerInvocation="1205" maxMicrosecondsPerInvocation="10636" standardDeviationMircosecondsPerInvocation="2008"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

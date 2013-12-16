@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1209651726000" analysisTimestamp="1360870496673" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/axis2/axis2-java2wsdl/1.4/axis2-java2wsdl-1.4.jar</Jar>
+  </Project>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.apache.ws.java2wsdl.Java2WSDLBuilder">
+      <SourceLine classname="org.apache.ws.java2wsdl.Java2WSDLBuilder" start="55" end="430" sourcefile="Java2WSDLBuilder.java" sourcepath="org/apache/ws/java2wsdl/Java2WSDLBuilder.java"/>
+    </Class>
+    <Method classname="org.apache.ws.java2wsdl.Java2WSDLBuilder" name="resolveSchemaGen" signature="(Ljava/lang/ClassLoader;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/apache/axis2/description/java2wsdl/SchemaGenerator;" isStatic="false">
+      <SourceLine classname="org.apache.ws.java2wsdl.Java2WSDLBuilder" start="354" end="388" startBytecode="0" endBytecode="452" sourcefile="Java2WSDLBuilder.java" sourcepath="org/apache/ws/java2wsdl/Java2WSDLBuilder.java"/>
+    </Method>
+    <SourceLine classname="org.apache.ws.java2wsdl.Java2WSDLBuilder" start="375" end="375" startBytecode="200" endBytecode="200" sourcefile="Java2WSDLBuilder.java" sourcepath="org/apache/ws/java2wsdl/Java2WSDLBuilder.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine">
+      <SourceLine classname="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine" start="41" end="286" sourcefile="Java2WSDLCodegenEngine.java" sourcepath="org/apache/ws/java2wsdl/Java2WSDLCodegenEngine.java"/>
+    </Class>
+    <Method classname="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine" name="resolveOutputStream" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/io/FileOutputStream;" isStatic="false">
+      <SourceLine classname="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine" start="68" end="100" startBytecode="0" endBytecode="417" sourcefile="Java2WSDLCodegenEngine.java" sourcepath="org/apache/ws/java2wsdl/Java2WSDLCodegenEngine.java"/>
+    </Method>
+    <Method classname="java.io.File" name="createNewFile" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="881" end="883" startBytecode="0" endBytecode="58" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine" start="93" end="93" startBytecode="173" endBytecode="173" sourcefile="Java2WSDLCodegenEngine.java" sourcepath="org/apache/ws/java2wsdl/Java2WSDLCodegenEngine.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine">
+      <SourceLine classname="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine" start="41" end="286" sourcefile="Java2WSDLCodegenEngine.java" sourcepath="org/apache/ws/java2wsdl/Java2WSDLCodegenEngine.java"/>
+    </Class>
+    <Method classname="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine" name="resolveOutputStream" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/io/FileOutputStream;" isStatic="false">
+      <SourceLine classname="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine" start="68" end="100" startBytecode="0" endBytecode="417" sourcefile="Java2WSDLCodegenEngine.java" sourcepath="org/apache/ws/java2wsdl/Java2WSDLCodegenEngine.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine" start="75" end="75" startBytecode="49" endBytecode="49" sourcefile="Java2WSDLCodegenEngine.java" sourcepath="org/apache/ws/java2wsdl/Java2WSDLCodegenEngine.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="17">
+    <MissingClass>org.apache.axiom.om.OMElement</MissingClass>
+    <MissingClass>org.apache.axiom.om.util.StAXUtils</MissingClass>
+    <MissingClass>org.apache.axis2.context.ConfigurationContext</MissingClass>
+    <MissingClass>org.apache.axis2.context.ConfigurationContextFactory</MissingClass>
+    <MissingClass>org.apache.axis2.deployment.util.Utils</MissingClass>
+    <MissingClass>org.apache.axis2.description.AxisService</MissingClass>
+    <MissingClass>org.apache.axis2.description.AxisService2WSDL11</MissingClass>
+    <MissingClass>org.apache.axis2.description.AxisService2WSDL20</MissingClass>
+    <MissingClass>org.apache.axis2.description.java2wsdl.DefaultNamespaceGenerator</MissingClass>
+    <MissingClass>org.apache.axis2.description.java2wsdl.DefaultSchemaGenerator</MissingClass>
+    <MissingClass>org.apache.axis2.description.java2wsdl.DocLitBareSchemaGenerator</MissingClass>
+    <MissingClass>org.apache.axis2.description.java2wsdl.Java2WSDLUtils</MissingClass>
+    <MissingClass>org.apache.axis2.description.java2wsdl.SchemaGenerator</MissingClass>
+    <MissingClass>org.apache.axis2.engine.AxisConfiguration</MissingClass>
+    <MissingClass>org.apache.axis2.util.Loader</MissingClass>
+    <MissingClass>org.apache.axis2.util.XMLPrettyPrinter</MissingClass>
+    <MissingClass>org.apache.tools.ant.BuildException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 1 May 2008 17:22:06 +0300" total_classes="9" referenced_classes="47" total_bugs="3" total_size="658" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="19.53" clock_seconds="19.31" peak_mbytes="63.57" alloc_mbytes="763.88" gc_seconds="0.16" priority_2="3">
+    <PackageStats package="org.apache.ws.java2wsdl" total_bugs="3" total_types="6" total_size="552" priority_2="3">
+      <ClassStats class="org.apache.ws.java2wsdl.Java2WSDL" sourceFile="Java2WSDL.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.ws.java2wsdl.Java2WSDLBuilder" sourceFile="Java2WSDLBuilder.java" interface="false" size="253" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.ws.java2wsdl.Java2WSDLCodegenEngine" sourceFile="Java2WSDLCodegenEngine.java" interface="false" size="127" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.ws.java2wsdl.Mapper" sourceFile="Mapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.ws.java2wsdl.MappingSet" sourceFile="MappingSet.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.ws.java2wsdl.NamespaceMapping" sourceFile="NamespaceMapping.java" interface="false" size="109" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.ws.java2wsdl.utils" total_bugs="0" total_types="3" total_size="106">
+      <ClassStats class="org.apache.ws.java2wsdl.utils.Java2WSDLCommandLineOption" sourceFile="Java2WSDLCommandLineOption.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.ws.java2wsdl.utils.Java2WSDLCommandLineOptionParser" sourceFile="Java2WSDLCommandLineOptionParser.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.apache.ws.java2wsdl.utils.Java2WSDLOptionsValidator" sourceFile="Java2WSDLOptionsValidator.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2174" invocations="482" avgMicrosecondsPerInvocation="4510" maxMicrosecondsPerInvocation="129785" standardDeviationMircosecondsPerInvocation="15835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1257" invocations="47" avgMicrosecondsPerInvocation="26749" maxMicrosecondsPerInvocation="141748" standardDeviationMircosecondsPerInvocation="36207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="901" invocations="47" avgMicrosecondsPerInvocation="19186" maxMicrosecondsPerInvocation="165967" standardDeviationMircosecondsPerInvocation="33432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="892" invocations="96" avgMicrosecondsPerInvocation="9301" maxMicrosecondsPerInvocation="160236" standardDeviationMircosecondsPerInvocation="24423"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="774" invocations="100" avgMicrosecondsPerInvocation="7747" maxMicrosecondsPerInvocation="127882" standardDeviationMircosecondsPerInvocation="20439"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="750" invocations="96" avgMicrosecondsPerInvocation="7814" maxMicrosecondsPerInvocation="195587" standardDeviationMircosecondsPerInvocation="23242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="545" invocations="47" avgMicrosecondsPerInvocation="11611" maxMicrosecondsPerInvocation="140089" standardDeviationMircosecondsPerInvocation="23302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="527" invocations="96" avgMicrosecondsPerInvocation="5494" maxMicrosecondsPerInvocation="72536" standardDeviationMircosecondsPerInvocation="13797"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="470" invocations="99" avgMicrosecondsPerInvocation="4752" maxMicrosecondsPerInvocation="77565" standardDeviationMircosecondsPerInvocation="12422"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="388" invocations="229" avgMicrosecondsPerInvocation="1697" maxMicrosecondsPerInvocation="51465" standardDeviationMircosecondsPerInvocation="5207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="382" invocations="96" avgMicrosecondsPerInvocation="3979" maxMicrosecondsPerInvocation="78389" standardDeviationMircosecondsPerInvocation="11755"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="374" invocations="47" avgMicrosecondsPerInvocation="7975" maxMicrosecondsPerInvocation="140077" standardDeviationMircosecondsPerInvocation="25979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="358" invocations="9" avgMicrosecondsPerInvocation="39853" maxMicrosecondsPerInvocation="116764" standardDeviationMircosecondsPerInvocation="50410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="323" invocations="47" avgMicrosecondsPerInvocation="6873" maxMicrosecondsPerInvocation="61519" standardDeviationMircosecondsPerInvocation="13118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="304" invocations="421" avgMicrosecondsPerInvocation="722" maxMicrosecondsPerInvocation="130931" standardDeviationMircosecondsPerInvocation="6710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="283" invocations="37" avgMicrosecondsPerInvocation="7673" maxMicrosecondsPerInvocation="85017" standardDeviationMircosecondsPerInvocation="17860"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="244" invocations="44" avgMicrosecondsPerInvocation="5546" maxMicrosecondsPerInvocation="59854" standardDeviationMircosecondsPerInvocation="11672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="241" invocations="47" avgMicrosecondsPerInvocation="5147" maxMicrosecondsPerInvocation="130931" standardDeviationMircosecondsPerInvocation="19309"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ReverseDepthFirstSearchFactory" totalMilliseconds="233" invocations="96" avgMicrosecondsPerInvocation="2427" maxMicrosecondsPerInvocation="144311" standardDeviationMircosecondsPerInvocation="16520"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="222" invocations="97" avgMicrosecondsPerInvocation="2291" maxMicrosecondsPerInvocation="189936" standardDeviationMircosecondsPerInvocation="19180"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="210" invocations="96" avgMicrosecondsPerInvocation="2196" maxMicrosecondsPerInvocation="63393" standardDeviationMircosecondsPerInvocation="7604"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

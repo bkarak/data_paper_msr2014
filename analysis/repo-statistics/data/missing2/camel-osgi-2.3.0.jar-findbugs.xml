@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1274558983000" analysisTimestamp="1360868166773" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-osgi/2.3.0/camel-osgi-2.3.0.jar</Jar>
+  </Project>
+  <BugInstance type="DMI_COLLECTION_OF_URLS" priority="1" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.apache.camel.osgi.Activator">
+      <SourceLine classname="org.apache.camel.osgi.Activator" start="48" end="305" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Class>
+    <Field classname="org.apache.camel.osgi.Activator" name="TYPE_CONVERTERS" signature="Ljava/util/Map;" isStatic="true">
+      <SourceLine classname="org.apache.camel.osgi.Activator" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.camel.osgi.Activator">
+      <SourceLine classname="org.apache.camel.osgi.Activator" start="48" end="305" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Class>
+    <Method classname="org.apache.camel.osgi.Activator" name="getConverterPackages" signature="(Ljava/net/URL;)Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.apache.camel.osgi.Activator" start="213" end="237" startBytecode="0" endBytecode="353" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.osgi.Activator" start="217" end="217" startBytecode="26" endBytecode="26" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+  </BugInstance>
+  <BugInstance type="GC_UNRELATED_TYPES" priority="1" abbrev="GC" category="CORRECTNESS">
+    <Class classname="org.apache.camel.osgi.Activator">
+      <SourceLine classname="org.apache.camel.osgi.Activator" start="48" end="305" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Class>
+    <Method classname="org.apache.camel.osgi.Activator" name="mayBeRemoveTypeConverterFor" signature="(Lorg/osgi/framework/Bundle;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.osgi.Activator" start="178" end="187" startBytecode="0" endBytecode="51" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Method>
+    <Type descriptor="Ljava/net/URL;" role="TYPE_FOUND">
+      <SourceLine classname="java.net.URL" start="150" end="1255" sourcefile="URL.java" sourcepath="java/net/URL.java"/>
+    </Type>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Method classname="java.util.Map" name="remove" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Map" sourcefile="Map.java" sourcepath="java/util/Map.java"/>
+    </Method>
+    <Field classname="org.apache.camel.osgi.Activator" name="COMPONENTS" signature="Ljava/util/Map;" sourceSignature="Ljava/util/Map&lt;Ljava/lang/String;Lorg/apache/camel/osgi/Activator$ComponentEntry;&gt;;" isStatic="true" role="FIELD_INVOKED_ON">
+      <SourceLine classname="org.apache.camel.osgi.Activator" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Field>
+    <Field classname="org.apache.camel.osgi.Activator$TypeConverterEntry" name="resource" signature="Ljava/net/URL;" isStatic="false" role="FIELD_ARGUMENT">
+      <SourceLine classname="org.apache.camel.osgi.Activator$TypeConverterEntry" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Field>
+    <Method classname="java.net.URL" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_EQUALS_USED">
+      <SourceLine classname="java.net.URL" start="838" end="842" startBytecode="0" endBytecode="59" sourcefile="URL.java" sourcepath="java/net/URL.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.osgi.Activator" start="184" end="184" startBytecode="116" endBytecode="116" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.camel.osgi.Activator">
+      <SourceLine classname="org.apache.camel.osgi.Activator" start="48" end="305" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Class>
+    <Method classname="org.apache.camel.osgi.Activator" name="start" signature="(Lorg/osgi/framework/BundleContext;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.osgi.Activator" start="190" end="200" startBytecode="0" endBytecode="171" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Method>
+    <Field classname="org.apache.camel.osgi.Activator" name="bundle" signature="Lorg/osgi/framework/Bundle;" isStatic="true">
+      <SourceLine classname="org.apache.camel.osgi.Activator" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Field>
+    <SourceLine classname="org.apache.camel.osgi.Activator" start="192" end="192" startBytecode="16" endBytecode="16" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.camel.osgi.Activator$ComponentEntry">
+      <SourceLine classname="org.apache.camel.osgi.Activator$ComponentEntry" start="63" end="63" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.camel.osgi.Activator$TypeConverterEntry">
+      <SourceLine classname="org.apache.camel.osgi.Activator$TypeConverterEntry" start="70" end="70" sourcefile="Activator.java" sourcepath="org/apache/camel/osgi/Activator.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" priority="1" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.apache.camel.osgi.CamelContextFactoryBean">
+      <SourceLine classname="org.apache.camel.osgi.CamelContextFactoryBean" start="39" end="57" sourcefile="CamelContextFactoryBean.java" sourcepath="org/apache/camel/osgi/CamelContextFactoryBean.java"/>
+    </Class>
+    <Class classname="org.apache.camel.spring.CamelContextFactoryBean">
+      <SourceLine classname="org.apache.camel.spring.CamelContextFactoryBean"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" priority="1" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.apache.camel.osgi.CamelNamespaceHandler">
+      <SourceLine classname="org.apache.camel.osgi.CamelNamespaceHandler" start="22" end="40" sourcefile="CamelNamespaceHandler.java" sourcepath="org/apache/camel/osgi/CamelNamespaceHandler.java"/>
+    </Class>
+    <Class classname="org.apache.camel.spring.handler.CamelNamespaceHandler">
+      <SourceLine classname="org.apache.camel.spring.handler.CamelNamespaceHandler"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" abbrev="AT" category="MT_CORRECTNESS">
+    <Class classname="org.apache.camel.osgi.OsgiFactoryFinder">
+      <SourceLine classname="org.apache.camel.osgi.OsgiFactoryFinder" start="35" end="103" sourcefile="OsgiFactoryFinder.java" sourcepath="org/apache/camel/osgi/OsgiFactoryFinder.java"/>
+    </Class>
+    <Method classname="org.apache.camel.osgi.OsgiFactoryFinder" name="findClass" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Class;" isStatic="false">
+      <SourceLine classname="org.apache.camel.osgi.OsgiFactoryFinder" start="45" end="76" startBytecode="0" endBytecode="509" sourcefile="OsgiFactoryFinder.java" sourcepath="org/apache/camel/osgi/OsgiFactoryFinder.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="159" end="1280" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="880" end="883" startBytecode="0" endBytecode="68" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.osgi.OsgiFactoryFinder" start="66" end="66" startBytecode="195" endBytecode="195" sourcefile="OsgiFactoryFinder.java" sourcepath="org/apache/camel/osgi/OsgiFactoryFinder.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.camel.osgi.OsgiFactoryFinder$BundleEntry">
+      <SourceLine classname="org.apache.camel.osgi.OsgiFactoryFinder$BundleEntry" start="38" end="38" sourcefile="OsgiFactoryFinder.java" sourcepath="org/apache/camel/osgi/OsgiFactoryFinder.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="30">
+    <MissingClass>org.apache.camel.CamelContext</MissingClass>
+    <MissingClass>org.apache.camel.Component</MissingClass>
+    <MissingClass>org.apache.camel.NoFactoryAvailableException</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultCamelContext</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultClassResolver</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultFactoryFinder</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultLanguageResolver</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultPackageScanClassResolver</MissingClass>
+    <MissingClass>org.apache.camel.impl.converter.AnnotationTypeConverterLoader</MissingClass>
+    <MissingClass>org.apache.camel.impl.converter.DefaultTypeConverter</MissingClass>
+    <MissingClass>org.apache.camel.impl.converter.TypeConverterLoader</MissingClass>
+    <MissingClass>org.apache.camel.spi.Injector</MissingClass>
+    <MissingClass>org.apache.camel.spi.PackageScanFilter</MissingClass>
+    <MissingClass>org.apache.camel.spi.Registry</MissingClass>
+    <MissingClass>org.apache.camel.spring.CamelContextFactoryBean</MissingClass>
+    <MissingClass>org.apache.camel.spring.SpringCamelContext</MissingClass>
+    <MissingClass>org.apache.camel.spring.handler.CamelNamespaceHandler</MissingClass>
+    <MissingClass>org.apache.camel.spring.handler.CamelNamespaceHandler$CamelContextBeanDefinitionParser</MissingClass>
+    <MissingClass>org.apache.camel.util.CastUtils</MissingClass>
+    <MissingClass>org.apache.camel.util.ObjectHelper</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleActivator</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.BundleEvent</MissingClass>
+    <MissingClass>org.osgi.framework.SynchronousBundleListener</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextAware</MissingClass>
+    <MissingClass>org.springframework.osgi.util.BundleDelegatingClassLoader</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 22 May 2010 23:09:43 +0300" total_classes="28" referenced_classes="72" total_bugs="10" total_size="884" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="13.72" clock_seconds="10.96" peak_mbytes="66.69" alloc_mbytes="763.88" gc_seconds="0.20" priority_2="5" priority_1="5">
+    <PackageStats package="org.apache.camel.osgi" total_bugs="10" total_types="24" total_size="665" priority_2="5" priority_1="5">
+      <ClassStats class="org.apache.camel.osgi.Activator" sourceFile="Activator.java" interface="false" size="182" bugs="4" priority_2="1" priority_1="3"/>
+      <ClassStats class="org.apache.camel.osgi.Activator$1" sourceFile="Activator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.Activator$ComponentEntry" sourceFile="Activator.java" interface="false" size="9" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.osgi.Activator$TypeConverterEntry" sourceFile="Activator.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.osgi.CamelContextFactory" sourceFile="CamelContextFactory.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.CamelContextFactoryBean" sourceFile="CamelContextFactoryBean.java" interface="false" size="16" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.camel.osgi.CamelNamespaceHandler" sourceFile="CamelNamespaceHandler.java" interface="false" size="18" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.camel.osgi.CompositeRegistry" sourceFile="CompositeRegistry.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiAnnotationTypeConverterLoader" sourceFile="OsgiAnnotationTypeConverterLoader.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiCamelContextHelper" sourceFile="OsgiCamelContextHelper.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiClassResolver" sourceFile="OsgiClassResolver.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiComponentResolver" sourceFile="OsgiComponentResolver.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiDefaultCamelContext" sourceFile="OsgiDefaultCamelContext.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiFactoryFinder" sourceFile="OsgiFactoryFinder.java" interface="false" size="43" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiFactoryFinder$1" sourceFile="OsgiFactoryFinder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiFactoryFinder$BundleEntry" sourceFile="OsgiFactoryFinder.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiFactoryFinderResolver" sourceFile="OsgiFactoryFinderResolver.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiLanguageResolver" sourceFile="OsgiLanguageResolver.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiPackageScanClassResolver" sourceFile="OsgiPackageScanClassResolver.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiPackageScanClassResolver$OsgiUtil" sourceFile="OsgiPackageScanClassResolver.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiServiceRegistry" sourceFile="OsgiServiceRegistry.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.OsgiSpringCamelContext" sourceFile="OsgiSpringCamelContext.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.SpringCamelContextFactory" sourceFile="SpringCamelContextFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.camel.osgi.tracker" total_bugs="0" total_types="4" total_size="219">
+      <ClassStats class="org.apache.camel.osgi.tracker.AbstractTracked" sourceFile="AbstractTracked.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.tracker.BundleTracker" sourceFile="BundleTracker.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.tracker.BundleTracker$Tracked" sourceFile="BundleTracker.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.camel.osgi.tracker.BundleTrackerCustomizer" sourceFile="BundleTrackerCustomizer.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="728" invocations="520" avgMicrosecondsPerInvocation="1401" maxMicrosecondsPerInvocation="41353" standardDeviationMircosecondsPerInvocation="4665"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="624" invocations="72" avgMicrosecondsPerInvocation="8677" maxMicrosecondsPerInvocation="92174" standardDeviationMircosecondsPerInvocation="17490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="562" invocations="332" avgMicrosecondsPerInvocation="1694" maxMicrosecondsPerInvocation="191052" standardDeviationMircosecondsPerInvocation="11766"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="504" invocations="72" avgMicrosecondsPerInvocation="7003" maxMicrosecondsPerInvocation="102974" standardDeviationMircosecondsPerInvocation="16258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="485" invocations="140" avgMicrosecondsPerInvocation="3466" maxMicrosecondsPerInvocation="84961" standardDeviationMircosecondsPerInvocation="8563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="471" invocations="140" avgMicrosecondsPerInvocation="3368" maxMicrosecondsPerInvocation="68162" standardDeviationMircosecondsPerInvocation="9422"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="442" invocations="140" avgMicrosecondsPerInvocation="3161" maxMicrosecondsPerInvocation="69981" standardDeviationMircosecondsPerInvocation="8661"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="433" invocations="144" avgMicrosecondsPerInvocation="3012" maxMicrosecondsPerInvocation="58269" standardDeviationMircosecondsPerInvocation="7783"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="392" invocations="140" avgMicrosecondsPerInvocation="2801" maxMicrosecondsPerInvocation="64142" standardDeviationMircosecondsPerInvocation="8264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="352" invocations="144" avgMicrosecondsPerInvocation="2445" maxMicrosecondsPerInvocation="45630" standardDeviationMircosecondsPerInvocation="6311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="332" invocations="417" avgMicrosecondsPerInvocation="796" maxMicrosecondsPerInvocation="81239" standardDeviationMircosecondsPerInvocation="5231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="328" invocations="72" avgMicrosecondsPerInvocation="4567" maxMicrosecondsPerInvocation="74607" standardDeviationMircosecondsPerInvocation="12870"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="231" invocations="115" avgMicrosecondsPerInvocation="2012" maxMicrosecondsPerInvocation="37171" standardDeviationMircosecondsPerInvocation="5525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="221" invocations="28" avgMicrosecondsPerInvocation="7915" maxMicrosecondsPerInvocation="185725" standardDeviationMircosecondsPerInvocation="34294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="211" invocations="146" avgMicrosecondsPerInvocation="1446" maxMicrosecondsPerInvocation="166543" standardDeviationMircosecondsPerInvocation="13775"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="169" invocations="524" avgMicrosecondsPerInvocation="324" maxMicrosecondsPerInvocation="37685" standardDeviationMircosecondsPerInvocation="2077"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="138" invocations="72" avgMicrosecondsPerInvocation="1917" maxMicrosecondsPerInvocation="20058" standardDeviationMircosecondsPerInvocation="3660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="134" invocations="28" avgMicrosecondsPerInvocation="4794" maxMicrosecondsPerInvocation="64893" standardDeviationMircosecondsPerInvocation="12268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="132" invocations="72" avgMicrosecondsPerInvocation="1838" maxMicrosecondsPerInvocation="40425" standardDeviationMircosecondsPerInvocation="5440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="119" invocations="2275" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="30124" standardDeviationMircosecondsPerInvocation="931"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

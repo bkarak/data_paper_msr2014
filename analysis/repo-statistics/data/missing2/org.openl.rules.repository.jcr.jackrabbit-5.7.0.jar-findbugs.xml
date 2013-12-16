@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1276843782000" analysisTimestamp="1360909248220" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/openl/rules/org.openl.rules.repository.jcr.jackrabbit/5.7.0/org.openl.rules.repository.jcr.jackrabbit-5.7.0.jar</Jar>
+  </Project>
+  <BugInstance type="FI_MISSING_SUPER_CALL" priority="2" abbrev="FI" category="BAD_PRACTICE">
+    <Class classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory">
+      <SourceLine classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory" start="30" end="148" sourcefile="LocalJackrabbitRepositoryFactory.java" sourcepath="org/openl/rules/repository/factories/LocalJackrabbitRepositoryFactory.java"/>
+    </Class>
+    <Method classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory" name="finalize" signature="()V" isStatic="false">
+      <SourceLine classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory" start="49" end="57" startBytecode="0" endBytecode="121" sourcefile="LocalJackrabbitRepositoryFactory.java" sourcepath="org/openl/rules/repository/factories/LocalJackrabbitRepositoryFactory.java"/>
+    </Method>
+    <Class classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory">
+      <SourceLine classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory" start="30" end="148" sourcefile="LocalJackrabbitRepositoryFactory.java" sourcepath="org/openl/rules/repository/factories/LocalJackrabbitRepositoryFactory.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="UI_INHERITANCE_UNSAFE_GETRESOURCE" priority="2" abbrev="UI" category="BAD_PRACTICE">
+    <Class classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory">
+      <SourceLine classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory" start="30" end="148" sourcefile="LocalJackrabbitRepositoryFactory.java" sourcepath="org/openl/rules/repository/factories/LocalJackrabbitRepositoryFactory.java"/>
+    </Class>
+    <Method classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory" name="init" signature="()V" isStatic="false">
+      <SourceLine classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory" start="69" end="92" startBytecode="0" endBytecode="301" sourcefile="LocalJackrabbitRepositoryFactory.java" sourcepath="org/openl/rules/repository/factories/LocalJackrabbitRepositoryFactory.java"/>
+    </Method>
+    <SourceLine classname="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory" start="72" end="72" startBytecode="8" endBytecode="8" sourcefile="LocalJackrabbitRepositoryFactory.java" sourcepath="org/openl/rules/repository/factories/LocalJackrabbitRepositoryFactory.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>javax.jcr.RepositoryException</MissingClass>
+    <MissingClass>javax.jcr.nodetype.NodeTypeManager</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.jackrabbit.core.TransientRepository</MissingClass>
+    <MissingClass>org.apache.jackrabbit.core.nodetype.NodeTypeManagerImpl</MissingClass>
+    <MissingClass>org.apache.jackrabbit.rmi.client.ClientRepositoryFactory</MissingClass>
+    <MissingClass>org.openl.config.ConfigPropertyString</MissingClass>
+    <MissingClass>org.openl.config.ConfigSet</MissingClass>
+    <MissingClass>org.openl.rules.repository.exceptions.RRepositoryException</MissingClass>
+    <MissingClass>org.openl.rules.repository.factories.AbstractJcrRepositoryFactory</MissingClass>
+    <MissingClass>org.openl.rules.repository.jcr.JcrProductionRepository</MissingClass>
+    <MissingClass>org.springframework.util.FileCopyUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 18 Jun 2010 09:49:42 +0300" total_classes="5" referenced_classes="49" total_bugs="2" total_size="130" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="8.52" clock_seconds="4.52" peak_mbytes="53.82" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="2">
+    <PackageStats package="org.openl.rules.repository.factories" total_bugs="2" total_types="5" total_size="130" priority_2="2">
+      <ClassStats class="org.openl.rules.repository.factories.LocalJackrabbitProductionRepositoryFactory" sourceFile="LocalJackrabbitProductionRepositoryFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.rules.repository.factories.LocalJackrabbitRepositoryFactory" sourceFile="LocalJackrabbitRepositoryFactory.java" interface="false" size="74" bugs="2" priority_2="2"/>
+      <ClassStats class="org.openl.rules.repository.factories.RmiJackrabbitProductionRepositoryFactory" sourceFile="RmiJackrabbitProductionRepositoryFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.rules.repository.factories.RmiJackrabbitRepositoryFactory" sourceFile="RmiJackrabbitRepositoryFactory.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.openl.rules.repository.factories.ShutDownHook" sourceFile="ShutDownHook.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="626" invocations="451" avgMicrosecondsPerInvocation="1388" maxMicrosecondsPerInvocation="53101" standardDeviationMircosecondsPerInvocation="4200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="543" invocations="49" avgMicrosecondsPerInvocation="11087" maxMicrosecondsPerInvocation="97311" standardDeviationMircosecondsPerInvocation="21527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="365" invocations="49" avgMicrosecondsPerInvocation="7463" maxMicrosecondsPerInvocation="40825" standardDeviationMircosecondsPerInvocation="10976"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="186" invocations="49" avgMicrosecondsPerInvocation="3810" maxMicrosecondsPerInvocation="20754" standardDeviationMircosecondsPerInvocation="5659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="131" invocations="137" avgMicrosecondsPerInvocation="956" maxMicrosecondsPerInvocation="18606" standardDeviationMircosecondsPerInvocation="1683"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="107" invocations="19" avgMicrosecondsPerInvocation="5661" maxMicrosecondsPerInvocation="43765" standardDeviationMircosecondsPerInvocation="9899"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="96" invocations="49" avgMicrosecondsPerInvocation="1970" maxMicrosecondsPerInvocation="16037" standardDeviationMircosecondsPerInvocation="2937"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="89" invocations="393" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="15501" standardDeviationMircosecondsPerInvocation="857"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteJCIPAnnotation" totalMilliseconds="82" invocations="49" avgMicrosecondsPerInvocation="1685" maxMicrosecondsPerInvocation="73974" standardDeviationMircosecondsPerInvocation="10436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="75" invocations="72" avgMicrosecondsPerInvocation="1053" maxMicrosecondsPerInvocation="17949" standardDeviationMircosecondsPerInvocation="2866"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="75" invocations="19" avgMicrosecondsPerInvocation="3975" maxMicrosecondsPerInvocation="71675" standardDeviationMircosecondsPerInvocation="15958"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="72" invocations="49" avgMicrosecondsPerInvocation="1479" maxMicrosecondsPerInvocation="18010" standardDeviationMircosecondsPerInvocation="2975"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="71" invocations="49" avgMicrosecondsPerInvocation="1468" maxMicrosecondsPerInvocation="11617" standardDeviationMircosecondsPerInvocation="2521"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="64" invocations="49" avgMicrosecondsPerInvocation="1313" maxMicrosecondsPerInvocation="8653" standardDeviationMircosecondsPerInvocation="1888"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="57" invocations="19" avgMicrosecondsPerInvocation="3021" maxMicrosecondsPerInvocation="11196" standardDeviationMircosecondsPerInvocation="3292"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="57" invocations="17" avgMicrosecondsPerInvocation="3353" maxMicrosecondsPerInvocation="16364" standardDeviationMircosecondsPerInvocation="4163"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

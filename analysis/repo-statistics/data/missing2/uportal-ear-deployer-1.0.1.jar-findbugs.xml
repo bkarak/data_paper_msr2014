@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1268918545000" analysisTimestamp="1360870789377" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/jasig/portal/uportal-ear-deployer/1.0.1/uportal-ear-deployer-1.0.1.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.jasig.portal.tools.deployer.AbstractEarDeployer">
+      <SourceLine classname="org.jasig.portal.tools.deployer.AbstractEarDeployer" start="45" end="358" sourcefile="AbstractEarDeployer.java" sourcepath="org/jasig/portal/tools/deployer/AbstractEarDeployer.java"/>
+    </Class>
+    <Method classname="org.jasig.portal.tools.deployer.AbstractEarDeployer" name="createSafeFile" signature="(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.jasig.portal.tools.deployer.AbstractEarDeployer" start="253" end="261" startBytecode="0" endBytecode="136" sourcefile="AbstractEarDeployer.java" sourcepath="org/jasig/portal/tools/deployer/AbstractEarDeployer.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.jasig.portal.tools.deployer.AbstractEarDeployer" start="255" end="255" startBytecode="18" endBytecode="18" sourcefile="AbstractEarDeployer.java" sourcepath="org/jasig/portal/tools/deployer/AbstractEarDeployer.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.jasig.portal.tools.sax.ClasspathEntityResolver">
+      <SourceLine classname="org.jasig.portal.tools.sax.ClasspathEntityResolver" start="24" end="57" sourcefile="ClasspathEntityResolver.java" sourcepath="org/jasig/portal/tools/sax/ClasspathEntityResolver.java"/>
+    </Class>
+    <Method classname="org.jasig.portal.tools.sax.ClasspathEntityResolver" name="resolveEntity" signature="(Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;" isStatic="false">
+      <SourceLine classname="org.jasig.portal.tools.sax.ClasspathEntityResolver" start="31" end="42" startBytecode="0" endBytecode="207" sourcefile="ClasspathEntityResolver.java" sourcepath="org/jasig/portal/tools/sax/ClasspathEntityResolver.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.jasig.portal.tools.sax.ClasspathEntityResolver" start="32" end="32" startBytecode="11" endBytecode="11" sourcefile="ClasspathEntityResolver.java" sourcepath="org/jasig/portal/tools/sax/ClasspathEntityResolver.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.jasig.portal.tools.sax.ClasspathEntityResolver" start="34" end="34" startBytecode="16" endBytecode="16" sourcefile="ClasspathEntityResolver.java" sourcepath="org/jasig/portal/tools/sax/ClasspathEntityResolver.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="9">
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.EqualsBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.HashCodeBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.ToStringBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.ToStringStyle</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 18 Mar 2010 15:22:25 +0200" total_classes="6" referenced_classes="42" total_bugs="2" total_size="263" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="9.53" clock_seconds="9.84" peak_mbytes="56.94" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="2">
+    <PackageStats package="org.jasig.portal.tools.deployer" total_bugs="1" total_types="3" total_size="184" priority_2="1">
+      <ClassStats class="org.jasig.portal.tools.deployer.AbstractEarDeployer" sourceFile="AbstractEarDeployer.java" interface="false" size="124" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jasig.portal.tools.deployer.DeployerConfig" sourceFile="DeployerConfig.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.jasig.portal.tools.deployer.WebModule" sourceFile="WebModule.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jasig.portal.tools.deployer.tomcat" total_bugs="0" total_types="2" total_size="60">
+      <ClassStats class="org.jasig.portal.tools.deployer.tomcat.TomcatDeployerConfig" sourceFile="TomcatDeployerConfig.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.jasig.portal.tools.deployer.tomcat.TomcatEarDeployer" sourceFile="TomcatEarDeployer.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jasig.portal.tools.sax" total_bugs="1" total_types="1" total_size="19" priority_2="1">
+      <ClassStats class="org.jasig.portal.tools.sax.ClasspathEntityResolver" sourceFile="ClasspathEntityResolver.java" interface="false" size="19" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1060" invocations="418" avgMicrosecondsPerInvocation="2537" maxMicrosecondsPerInvocation="118738" standardDeviationMircosecondsPerInvocation="9362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="639" invocations="42" avgMicrosecondsPerInvocation="15216" maxMicrosecondsPerInvocation="301199" standardDeviationMircosecondsPerInvocation="48002"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="550" invocations="42" avgMicrosecondsPerInvocation="13095" maxMicrosecondsPerInvocation="124775" standardDeviationMircosecondsPerInvocation="28174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="386" invocations="422" avgMicrosecondsPerInvocation="916" maxMicrosecondsPerInvocation="184157" standardDeviationMircosecondsPerInvocation="9507"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="344" invocations="44" avgMicrosecondsPerInvocation="7828" maxMicrosecondsPerInvocation="115511" standardDeviationMircosecondsPerInvocation="18671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="338" invocations="45" avgMicrosecondsPerInvocation="7514" maxMicrosecondsPerInvocation="73804" standardDeviationMircosecondsPerInvocation="16396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="311" invocations="44" avgMicrosecondsPerInvocation="7068" maxMicrosecondsPerInvocation="114472" standardDeviationMircosecondsPerInvocation="20793"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="303" invocations="45" avgMicrosecondsPerInvocation="6738" maxMicrosecondsPerInvocation="90937" standardDeviationMircosecondsPerInvocation="17386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="301" invocations="111" avgMicrosecondsPerInvocation="2716" maxMicrosecondsPerInvocation="111543" standardDeviationMircosecondsPerInvocation="12387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="277" invocations="367" avgMicrosecondsPerInvocation="755" maxMicrosecondsPerInvocation="73085" standardDeviationMircosecondsPerInvocation="4758"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="248" invocations="42" avgMicrosecondsPerInvocation="5917" maxMicrosecondsPerInvocation="72412" standardDeviationMircosecondsPerInvocation="14013"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="245" invocations="42" avgMicrosecondsPerInvocation="5835" maxMicrosecondsPerInvocation="203262" standardDeviationMircosecondsPerInvocation="31132"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="220" invocations="6" avgMicrosecondsPerInvocation="36729" maxMicrosecondsPerInvocation="190258" standardDeviationMircosecondsPerInvocation="69114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="220" invocations="42" avgMicrosecondsPerInvocation="5242" maxMicrosecondsPerInvocation="36537" standardDeviationMircosecondsPerInvocation="9993"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="189" invocations="44" avgMicrosecondsPerInvocation="4298" maxMicrosecondsPerInvocation="35275" standardDeviationMircosecondsPerInvocation="7398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="128" invocations="42" avgMicrosecondsPerInvocation="3056" maxMicrosecondsPerInvocation="37644" standardDeviationMircosecondsPerInvocation="6493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="124" invocations="6" avgMicrosecondsPerInvocation="20818" maxMicrosecondsPerInvocation="80037" standardDeviationMircosecondsPerInvocation="27571"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

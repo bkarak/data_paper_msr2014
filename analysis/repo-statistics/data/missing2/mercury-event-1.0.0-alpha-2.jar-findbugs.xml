@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1229059141000" analysisTimestamp="1360885127489" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/maven/mercury/mercury-event/1.0.0-alpha-2/mercury-event-1.0.0-alpha-2.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.maven.mercury.event.DumbListener">
+      <SourceLine classname="org.apache.maven.mercury.event.DumbListener" start="43" end="66" sourcefile="DumbListener.java" sourcepath="org/apache/maven/mercury/event/DumbListener.java"/>
+    </Class>
+    <Method classname="org.apache.maven.mercury.event.DumbListener" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false">
+      <SourceLine classname="org.apache.maven.mercury.event.DumbListener" start="47" end="49" startBytecode="0" endBytecode="76" sourcefile="DumbListener.java" sourcepath="org/apache/maven/mercury/event/DumbListener.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.mercury.event.DumbListener" start="48" end="48" startBytecode="10" endBytecode="10" sourcefile="DumbListener.java" sourcepath="org/apache/maven/mercury/event/DumbListener.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.maven.mercury.event.EventManager$Runner">
+      <SourceLine classname="org.apache.maven.mercury.event.EventManager$Runner" start="185" end="202" sourcefile="EventManager.java" sourcepath="org/apache/maven/mercury/event/EventManager.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="4">
+    <MissingClass>org.apache.maven.mercury.logging.IMercuryLogger</MissingClass>
+    <MissingClass>org.apache.maven.mercury.logging.MercuryLoggerManager</MissingClass>
+    <MissingClass>org.codehaus.plexus.lang.DefaultLanguage</MissingClass>
+    <MissingClass>org.codehaus.plexus.lang.Language</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 12 Dec 2008 07:19:01 +0200" total_classes="11" referenced_classes="59" total_bugs="2" total_size="259" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="12.58" clock_seconds="7.03" peak_mbytes="55.30" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="1" priority_1="1">
+    <PackageStats package="org.apache.maven.mercury.event" total_bugs="2" total_types="11" total_size="259" priority_2="1" priority_1="1">
+      <ClassStats class="org.apache.maven.mercury.event.AbstractMercuryEvent" sourceFile="AbstractMercuryEvent.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.maven.mercury.event.DumbListener" sourceFile="DumbListener.java" interface="false" size="18" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.maven.mercury.event.EventGenerator" sourceFile="EventGenerator.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.maven.mercury.event.EventManager" sourceFile="EventManager.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.mercury.event.EventManager$Runner" sourceFile="EventManager.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.maven.mercury.event.EventManager$UnitOfWork" sourceFile="EventManager.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.mercury.event.EventTypeEnum" sourceFile="EventTypeEnum.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.maven.mercury.event.GenericEvent" sourceFile="GenericEvent.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.mercury.event.MercuryEvent" sourceFile="MercuryEvent.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.mercury.event.MercuryEvent$EventMask" sourceFile="MercuryEvent.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.mercury.event.MercuryEventListener" sourceFile="MercuryEventListener.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="822" invocations="434" avgMicrosecondsPerInvocation="1895" maxMicrosecondsPerInvocation="101113" standardDeviationMircosecondsPerInvocation="7532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="483" invocations="59" avgMicrosecondsPerInvocation="8199" maxMicrosecondsPerInvocation="153300" standardDeviationMircosecondsPerInvocation="21625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="469" invocations="59" avgMicrosecondsPerInvocation="7961" maxMicrosecondsPerInvocation="70698" standardDeviationMircosecondsPerInvocation="16078"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="304" invocations="59" avgMicrosecondsPerInvocation="5164" maxMicrosecondsPerInvocation="91707" standardDeviationMircosecondsPerInvocation="13839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="200" invocations="52" avgMicrosecondsPerInvocation="3857" maxMicrosecondsPerInvocation="72564" standardDeviationMircosecondsPerInvocation="11819"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="193" invocations="50" avgMicrosecondsPerInvocation="3876" maxMicrosecondsPerInvocation="31667" standardDeviationMircosecondsPerInvocation="6545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="163" invocations="50" avgMicrosecondsPerInvocation="3262" maxMicrosecondsPerInvocation="35767" standardDeviationMircosecondsPerInvocation="6275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="155" invocations="247" avgMicrosecondsPerInvocation="629" maxMicrosecondsPerInvocation="11843" standardDeviationMircosecondsPerInvocation="1181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="154" invocations="384" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="54996" standardDeviationMircosecondsPerInvocation="2928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="148" invocations="59" avgMicrosecondsPerInvocation="2522" maxMicrosecondsPerInvocation="26577" standardDeviationMircosecondsPerInvocation="5739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="116" invocations="50" avgMicrosecondsPerInvocation="2339" maxMicrosecondsPerInvocation="17648" standardDeviationMircosecondsPerInvocation="3472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="114" invocations="52" avgMicrosecondsPerInvocation="2193" maxMicrosecondsPerInvocation="13317" standardDeviationMircosecondsPerInvocation="3391"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="103" invocations="70" avgMicrosecondsPerInvocation="1475" maxMicrosecondsPerInvocation="29537" standardDeviationMircosecondsPerInvocation="4884"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="93" invocations="59" avgMicrosecondsPerInvocation="1581" maxMicrosecondsPerInvocation="17759" standardDeviationMircosecondsPerInvocation="3717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="92" invocations="72" avgMicrosecondsPerInvocation="1279" maxMicrosecondsPerInvocation="82510" standardDeviationMircosecondsPerInvocation="9642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="85" invocations="50" avgMicrosecondsPerInvocation="1705" maxMicrosecondsPerInvocation="19332" standardDeviationMircosecondsPerInvocation="3358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="82" invocations="59" avgMicrosecondsPerInvocation="1404" maxMicrosecondsPerInvocation="14189" standardDeviationMircosecondsPerInvocation="2868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="76" invocations="32" avgMicrosecondsPerInvocation="2399" maxMicrosecondsPerInvocation="17595" standardDeviationMircosecondsPerInvocation="3741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="66" invocations="437" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="9468" standardDeviationMircosecondsPerInvocation="618"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

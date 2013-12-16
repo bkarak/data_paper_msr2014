@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1288209943000" analysisTimestamp="1360502953359" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/enunciate/enunciate-spring-app/1.21-RC1/enunciate-spring-app-1.21-RC1.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="222" end="726" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" name="createSecurityUI" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="436" end="505" startBytecode="0" endBytecode="578" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="438" end="438" startBytecode="20" endBytecode="20" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="12">
+    <MissingClass>freemarker.template.TemplateModelException</MissingClass>
+    <MissingClass>freemarker.template.TemplateScalarModel</MissingClass>
+    <MissingClass>org.apache.commons.digester.Digester</MissingClass>
+    <MissingClass>org.apache.commons.digester.RuleSetBase</MissingClass>
+    <MissingClass>org.codehaus.enunciate.EnunciateException</MissingClass>
+    <MissingClass>org.codehaus.enunciate.apt.EnunciateFreemarkerModel</MissingClass>
+    <MissingClass>org.codehaus.enunciate.config.EnunciateConfiguration</MissingClass>
+    <MissingClass>org.codehaus.enunciate.config.war.WebAppConfig</MissingClass>
+    <MissingClass>org.codehaus.enunciate.main.Enunciate</MissingClass>
+    <MissingClass>org.codehaus.enunciate.main.webapp.BaseWebAppFragment</MissingClass>
+    <MissingClass>org.codehaus.enunciate.main.webapp.WebAppComponent</MissingClass>
+    <MissingClass>org.codehaus.enunciate.modules.FreemarkerDeploymentModule</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 27 Oct 2010 23:05:43 +0300" total_classes="16" referenced_classes="38" total_bugs="1" total_size="810" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="14.51" clock_seconds="8.27" peak_mbytes="62.06" alloc_mbytes="763.88" gc_seconds="0.17" priority_2="1">
+    <PackageStats package="org.codehaus.enunciate.modules.spring_app" total_bugs="1" total_types="2" total_size="262" priority_2="1">
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.ServletPatternToAntPattern" sourceFile="ServletPatternToAntPattern.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" sourceFile="SpringAppDeploymentModule.java" interface="false" size="251" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.codehaus.enunciate.modules.spring_app.config" total_bugs="0" total_types="4" total_size="119">
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.GlobalServiceInterceptor" sourceFile="GlobalServiceInterceptor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.HandlerInterceptor" sourceFile="HandlerInterceptor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.SpringAppRuleSet" sourceFile="SpringAppRuleSet.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.SpringImport" sourceFile="SpringImport.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.codehaus.enunciate.modules.spring_app.config.security" total_bugs="0" total_types="10" total_size="429">
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.AnonymousConfig" sourceFile="AnonymousConfig.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.BasicAuthConfig" sourceFile="BasicAuthConfig.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.BeanReference" sourceFile="BeanReference.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.DigestAuthConfig" sourceFile="DigestAuthConfig.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.EntryPointConfig" sourceFile="EntryPointConfig.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.FormBasedLoginConfig" sourceFile="FormBasedLoginConfig.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.FormBasedLogoutConfig" sourceFile="FormBasedLogoutConfig.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.OAuthConfig" sourceFile="OAuthConfig.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.RememberMeConfig" sourceFile="RememberMeConfig.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="178" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="834" invocations="395" avgMicrosecondsPerInvocation="2113" maxMicrosecondsPerInvocation="42320" standardDeviationMircosecondsPerInvocation="5339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="502" invocations="38" avgMicrosecondsPerInvocation="13213" maxMicrosecondsPerInvocation="94135" standardDeviationMircosecondsPerInvocation="23592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="439" invocations="38" avgMicrosecondsPerInvocation="11560" maxMicrosecondsPerInvocation="120405" standardDeviationMircosecondsPerInvocation="22900"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="415" invocations="180" avgMicrosecondsPerInvocation="2311" maxMicrosecondsPerInvocation="109493" standardDeviationMircosecondsPerInvocation="9961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="322" invocations="180" avgMicrosecondsPerInvocation="1791" maxMicrosecondsPerInvocation="92186" standardDeviationMircosecondsPerInvocation="7440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="310" invocations="38" avgMicrosecondsPerInvocation="8169" maxMicrosecondsPerInvocation="81080" standardDeviationMircosecondsPerInvocation="16162"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="303" invocations="180" avgMicrosecondsPerInvocation="1683" maxMicrosecondsPerInvocation="79998" standardDeviationMircosecondsPerInvocation="6690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="214" invocations="180" avgMicrosecondsPerInvocation="1189" maxMicrosecondsPerInvocation="57428" standardDeviationMircosecondsPerInvocation="4996"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="192" invocations="180" avgMicrosecondsPerInvocation="1071" maxMicrosecondsPerInvocation="46165" standardDeviationMircosecondsPerInvocation="4416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="192" invocations="37" avgMicrosecondsPerInvocation="5194" maxMicrosecondsPerInvocation="116038" standardDeviationMircosecondsPerInvocation="19022"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="191" invocations="180" avgMicrosecondsPerInvocation="1065" maxMicrosecondsPerInvocation="42499" standardDeviationMircosecondsPerInvocation="4575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="188" invocations="38" avgMicrosecondsPerInvocation="4951" maxMicrosecondsPerInvocation="40471" standardDeviationMircosecondsPerInvocation="9838"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="148" invocations="265" avgMicrosecondsPerInvocation="558" maxMicrosecondsPerInvocation="12967" standardDeviationMircosecondsPerInvocation="1486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="131" invocations="340" avgMicrosecondsPerInvocation="387" maxMicrosecondsPerInvocation="17950" standardDeviationMircosecondsPerInvocation="1614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="129" invocations="38" avgMicrosecondsPerInvocation="3402" maxMicrosecondsPerInvocation="39148" standardDeviationMircosecondsPerInvocation="7833"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="123" invocations="180" avgMicrosecondsPerInvocation="686" maxMicrosecondsPerInvocation="22650" standardDeviationMircosecondsPerInvocation="2920"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="122" invocations="180" avgMicrosecondsPerInvocation="680" maxMicrosecondsPerInvocation="102899" standardDeviationMircosecondsPerInvocation="7642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="110" invocations="180" avgMicrosecondsPerInvocation="614" maxMicrosecondsPerInvocation="23059" standardDeviationMircosecondsPerInvocation="2741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="106" invocations="38" avgMicrosecondsPerInvocation="2792" maxMicrosecondsPerInvocation="24015" standardDeviationMircosecondsPerInvocation="5142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="95" invocations="16" avgMicrosecondsPerInvocation="5960" maxMicrosecondsPerInvocation="43155" standardDeviationMircosecondsPerInvocation="11902"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="92" invocations="38" avgMicrosecondsPerInvocation="2422" maxMicrosecondsPerInvocation="24535" standardDeviationMircosecondsPerInvocation="5024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="82" invocations="16" avgMicrosecondsPerInvocation="5150" maxMicrosecondsPerInvocation="73201" standardDeviationMircosecondsPerInvocation="17589"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="73" invocations="59" avgMicrosecondsPerInvocation="1254" maxMicrosecondsPerInvocation="27566" standardDeviationMircosecondsPerInvocation="3731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="73" invocations="16" avgMicrosecondsPerInvocation="4593" maxMicrosecondsPerInvocation="40510" standardDeviationMircosecondsPerInvocation="10312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="72" invocations="398" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="10607" standardDeviationMircosecondsPerInvocation="721"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

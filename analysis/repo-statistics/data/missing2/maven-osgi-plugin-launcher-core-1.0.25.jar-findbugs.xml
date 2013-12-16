@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1288886722000" analysisTimestamp="1360905836056" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/util/maven/maven-osgi-plugin-launcher-core/1.0.25/maven-osgi-plugin-launcher-core-1.0.25.jar</Jar>
+  </Project>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.AbsMojo">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.AbsMojo" start="70" end="691" sourcefile="AbsMojo.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/AbsMojo.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.AbsMojo" name="resolveBootstrapArtifacts" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.AbsMojo" start="404" end="438" startBytecode="0" endBytecode="91" sourcefile="AbsMojo.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/AbsMojo.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.AbsMojo" start="411" end="411" startBytecode="17" endBytecode="17" sourcefile="AbsMojo.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/AbsMojo.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap" start="44" end="370" sourcefile="Bootstrap.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Bootstrap.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap" name="shutdown" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap" start="317" end="334" startBytecode="0" endBytecode="249" sourcefile="Bootstrap.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Bootstrap.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap" start="333" end="333" startBytecode="116" endBytecode="116" sourcefile="Bootstrap.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Bootstrap.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap$1">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap$1" start="202" end="215" sourcefile="Bootstrap.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Bootstrap.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap$1" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap$1" start="207" end="215" startBytecode="0" endBytecode="120" sourcefile="Bootstrap.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Bootstrap.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap$1" start="214" end="214" startBytecode="33" endBytecode="33" sourcefile="Bootstrap.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Bootstrap.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap$2">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap$2" start="262" end="301" sourcefile="Bootstrap.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Bootstrap.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap$2" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap$2" start="266" end="301" startBytecode="0" endBytecode="459" sourcefile="Bootstrap.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Bootstrap.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Bootstrap$2" start="273" end="273" startBytecode="29" endBytecode="29" sourcefile="Bootstrap.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Bootstrap.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.Configuration">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Configuration" start="40" end="310" sourcefile="Configuration.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Configuration.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.Configuration" name="getConfigurationElements" signature="()[Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Configuration" start="310" end="310" startBytecode="0" endBytecode="46" sourcefile="Configuration.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Configuration.java"/>
+    </Method>
+    <Field classname="org.ow2.util.maven.osgi.launcher.core.Configuration" name="configurationElements" signature="[Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Configuration" sourcefile="Configuration.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Configuration.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Configuration" start="310" end="310" startBytecode="4" endBytecode="4" sourcefile="Configuration.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Configuration.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.Configuration">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Configuration" start="40" end="310" sourcefile="Configuration.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Configuration.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.Configuration" name="setConfigurationElements" signature="([Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Configuration" start="306" end="307" startBytecode="0" endBytecode="61" sourcefile="Configuration.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Configuration.java"/>
+    </Method>
+    <Field classname="org.ow2.util.maven.osgi.launcher.core.Configuration" name="configurationElements" signature="[Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Configuration" sourcefile="Configuration.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Configuration.java"/>
+    </Field>
+    <LocalVariable name="configurationElements" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.Configuration" start="306" end="306" startBytecode="2" endBytecode="2" sourcefile="Configuration.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/Configuration.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper" start="56" end="163" sourcefile="FrameworkManagerHelper.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/FrameworkManagerHelper.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper" name="getFrameworkFactoryClassname" signature="()Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper" start="113" end="163" startBytecode="0" endBytecode="632" sourcefile="FrameworkManagerHelper.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/FrameworkManagerHelper.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper" start="141" end="141" startBytecode="93" endBytecode="93" sourcefile="FrameworkManagerHelper.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/FrameworkManagerHelper.java"/>
+  </BugInstance>
+  <BugInstance type="NP_IMMEDIATE_DEREFERENCE_OF_READLINE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper" start="56" end="163" sourcefile="FrameworkManagerHelper.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/FrameworkManagerHelper.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper" name="getFrameworkFactoryClassname" signature="()Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper" start="113" end="163" startBytecode="0" endBytecode="632" sourcefile="FrameworkManagerHelper.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/FrameworkManagerHelper.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper" start="143" end="143" startBytecode="112" endBytecode="112" sourcefile="FrameworkManagerHelper.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/FrameworkManagerHelper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.ProcessLog">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.ProcessLog" start="43" end="100" sourcefile="ProcessLog.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/ProcessLog.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.ProcessLog" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.ProcessLog" start="70" end="84" startBytecode="0" endBytecode="235" sourcefile="ProcessLog.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/ProcessLog.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.ProcessLog" start="70" end="70" startBytecode="12" endBytecode="12" sourcefile="ProcessLog.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/ProcessLog.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher" start="51" end="283" sourcefile="RemoteLauncher.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/RemoteLauncher.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher" name="writeInstruction" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher" start="257" end="283" startBytecode="0" endBytecode="456" sourcefile="RemoteLauncher.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/RemoteLauncher.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher" start="269" end="269" startBytecode="82" endBytecode="82" sourcefile="RemoteLauncher.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/RemoteLauncher.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher" start="51" end="283" sourcefile="RemoteLauncher.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/RemoteLauncher.java"/>
+    </Class>
+    <Method classname="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher" name="writeInstruction" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher" start="257" end="283" startBytecode="0" endBytecode="456" sourcefile="RemoteLauncher.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/RemoteLauncher.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher" start="265" end="265" startBytecode="48" endBytecode="48" sourcefile="RemoteLauncher.java" sourcepath="org/ow2/util/maven/osgi/launcher/core/RemoteLauncher.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="24">
+    <MissingClass>org.apache.maven.artifact.Artifact</MissingClass>
+    <MissingClass>org.apache.maven.artifact.factory.ArtifactFactory</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.ArtifactResolver</MissingClass>
+    <MissingClass>org.apache.maven.model.Dependency</MissingClass>
+    <MissingClass>org.apache.maven.model.DependencyManagement</MissingClass>
+    <MissingClass>org.apache.maven.plugin.AbstractMojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.Commandline</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.Commandline$Argument</MissingClass>
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.launch.Framework</MissingClass>
+    <MissingClass>org.osgi.framework.launch.FrameworkFactory</MissingClass>
+    <MissingClass>org.ow2.util.log.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+    <MissingClass>org.ow2.util.maven.osgi.launcher.api.FrameworkException</MissingClass>
+    <MissingClass>org.ow2.util.maven.osgi.launcher.api.ILauncher</MissingClass>
+    <MissingClass>org.ow2.util.maven.osgi.launcher.api.LauncherException</MissingClass>
+    <MissingClass>org.ow2.util.url.URLUtils</MissingClass>
+    <MissingClass>org.ow2.util.xmlconfig.properties.ChainedPropertyResolver</MissingClass>
+    <MissingClass>org.ow2.util.xmlconfig.properties.PropertiesBasedResolver</MissingClass>
+    <MissingClass>org.ow2.util.xmlconfig.properties.PropertyResolverHelper</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 4 Nov 2010 18:05:22 +0200" total_classes="18" referenced_classes="98" total_bugs="11" total_size="1108" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="27.31" clock_seconds="13.99" peak_mbytes="74.67" alloc_mbytes="763.88" gc_seconds="0.24" priority_2="7" priority_1="4">
+    <PackageStats package="org.ow2.util.maven.osgi.launcher.core" total_bugs="11" total_types="18" total_size="1108" priority_2="7" priority_1="4">
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.AbsLauncher" sourceFile="AbsLauncher.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.AbsMojo" sourceFile="AbsMojo.java" interface="false" size="245" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.Bootstrap" sourceFile="Bootstrap.java" interface="false" size="127" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.Bootstrap$1" sourceFile="Bootstrap.java" interface="false" size="12" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.Bootstrap$2" sourceFile="Bootstrap.java" interface="false" size="31" bugs="1" priority_1="1"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.Configuration" sourceFile="Configuration.java" interface="false" size="102" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.Debug" sourceFile="Debug.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.DelayedBundlePattern" sourceFile="DelayedBundlePattern.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.Dependency" sourceFile="Dependency.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.FrameworkManager" sourceFile="FrameworkManager.java" interface="false" size="194" bugs="0"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerException" sourceFile="FrameworkManagerException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.FrameworkManagerHelper" sourceFile="FrameworkManagerHelper.java" interface="false" size="57" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.LocalLauncher" sourceFile="LocalLauncher.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.Module" sourceFile="Module.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.ProcessLog" sourceFile="ProcessLog.java" interface="false" size="30" bugs="1" priority_1="1"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.RemoteLauncher" sourceFile="RemoteLauncher.java" interface="false" size="127" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.StartMojo" sourceFile="StartMojo.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.ow2.util.maven.osgi.launcher.core.StopMojo" sourceFile="StopMojo.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="985" invocations="98" avgMicrosecondsPerInvocation="10051" maxMicrosecondsPerInvocation="123700" standardDeviationMircosecondsPerInvocation="19934"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="972" invocations="137" avgMicrosecondsPerInvocation="7096" maxMicrosecondsPerInvocation="188709" standardDeviationMircosecondsPerInvocation="23423"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="961" invocations="130" avgMicrosecondsPerInvocation="7397" maxMicrosecondsPerInvocation="214357" standardDeviationMircosecondsPerInvocation="24649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="919" invocations="136" avgMicrosecondsPerInvocation="6764" maxMicrosecondsPerInvocation="141708" standardDeviationMircosecondsPerInvocation="19687"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="894" invocations="130" avgMicrosecondsPerInvocation="6877" maxMicrosecondsPerInvocation="261665" standardDeviationMircosecondsPerInvocation="26563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="694" invocations="130" avgMicrosecondsPerInvocation="5343" maxMicrosecondsPerInvocation="103789" standardDeviationMircosecondsPerInvocation="14520"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="693" invocations="573" avgMicrosecondsPerInvocation="1211" maxMicrosecondsPerInvocation="31309" standardDeviationMircosecondsPerInvocation="2964"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="672" invocations="98" avgMicrosecondsPerInvocation="6858" maxMicrosecondsPerInvocation="82298" standardDeviationMircosecondsPerInvocation="12855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="524" invocations="73" avgMicrosecondsPerInvocation="7181" maxMicrosecondsPerInvocation="98467" standardDeviationMircosecondsPerInvocation="16365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="354" invocations="130" avgMicrosecondsPerInvocation="2723" maxMicrosecondsPerInvocation="69039" standardDeviationMircosecondsPerInvocation="9591"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="349" invocations="98" avgMicrosecondsPerInvocation="3571" maxMicrosecondsPerInvocation="59333" standardDeviationMircosecondsPerInvocation="7224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="314" invocations="390" avgMicrosecondsPerInvocation="805" maxMicrosecondsPerInvocation="35761" standardDeviationMircosecondsPerInvocation="2002"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="302" invocations="130" avgMicrosecondsPerInvocation="2326" maxMicrosecondsPerInvocation="31676" standardDeviationMircosecondsPerInvocation="5271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="275" invocations="18" avgMicrosecondsPerInvocation="15320" maxMicrosecondsPerInvocation="188514" standardDeviationMircosecondsPerInvocation="42699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="228" invocations="127" avgMicrosecondsPerInvocation="1799" maxMicrosecondsPerInvocation="55470" standardDeviationMircosecondsPerInvocation="6939"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="215" invocations="60" avgMicrosecondsPerInvocation="3599" maxMicrosecondsPerInvocation="48785" standardDeviationMircosecondsPerInvocation="8244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="197" invocations="98" avgMicrosecondsPerInvocation="2014" maxMicrosecondsPerInvocation="31330" standardDeviationMircosecondsPerInvocation="4860"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="191" invocations="98" avgMicrosecondsPerInvocation="1952" maxMicrosecondsPerInvocation="17560" standardDeviationMircosecondsPerInvocation="2839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="186" invocations="18" avgMicrosecondsPerInvocation="10382" maxMicrosecondsPerInvocation="79116" standardDeviationMircosecondsPerInvocation="18968"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

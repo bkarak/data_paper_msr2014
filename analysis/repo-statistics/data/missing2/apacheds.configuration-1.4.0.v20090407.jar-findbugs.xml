@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1239116944000" analysisTimestamp="1360882273212" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/directory/studio/apacheds.configuration/1.4.0.v20090407/apacheds.configuration-1.4.0.v20090407.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationContentDescriber">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationContentDescriber" start="39" end="168" sourcefile="ApacheDSConfigurationContentDescriber.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationContentDescriber.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationContentDescriber" name="getSupportedOptions" signature="()[Lorg/eclipse/core/runtime/QualifiedName;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationContentDescriber" start="83" end="83" startBytecode="0" endBytecode="45" sourcefile="ApacheDSConfigurationContentDescriber.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationContentDescriber.java"/>
+    </Method>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationContentDescriber" name="SUPPORTED_OPTIONS" signature="[Lorg/eclipse/core/runtime/QualifiedName;" isStatic="true">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationContentDescriber" sourcefile="ApacheDSConfigurationContentDescriber.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationContentDescriber.java"/>
+    </Field>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationContentDescriber" start="83" end="83" startBytecode="3" endBytecode="3" sourcefile="ApacheDSConfigurationContentDescriber.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationContentDescriber.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" start="63" end="218" sourcefile="ApacheDSConfigurationPlugin.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationPlugin.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" name="getServerXmlIOs" signature="()[Lorg/apache/directory/studio/apacheds/configuration/model/ServerXmlIO;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" start="118" end="118" startBytecode="0" endBytecode="46" sourcefile="ApacheDSConfigurationPlugin.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationPlugin.java"/>
+    </Method>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" name="serverXmlIOs" signature="[Lorg/apache/directory/studio/apacheds/configuration/model/ServerXmlIO;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" sourcefile="ApacheDSConfigurationPlugin.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationPlugin.java"/>
+    </Field>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" start="118" end="118" startBytecode="4" endBytecode="4" sourcefile="ApacheDSConfigurationPlugin.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationPlugin.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" start="63" end="218" sourcefile="ApacheDSConfigurationPlugin.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationPlugin.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" start="72" end="74" startBytecode="0" endBytecode="120" sourcefile="ApacheDSConfigurationPlugin.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationPlugin.java"/>
+    </Method>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" name="plugin" signature="Lorg/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationPlugin;" isStatic="true">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" sourcefile="ApacheDSConfigurationPlugin.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationPlugin.java"/>
+    </Field>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" start="73" end="73" startBytecode="63" endBytecode="63" sourcefile="ApacheDSConfigurationPlugin.java" sourcepath="org/apache/directory/studio/apacheds/configuration/ApacheDSConfigurationPlugin.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.editor.NonExistingServerConfigurationInput">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.NonExistingServerConfigurationInput" start="48" end="170" sourcefile="NonExistingServerConfigurationInput.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/NonExistingServerConfigurationInput.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.editor.NonExistingServerConfigurationInput" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.NonExistingServerConfigurationInput" start="151" end="170" startBytecode="0" endBytecode="162" sourcefile="NonExistingServerConfigurationInput.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/NonExistingServerConfigurationInput.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" start="79" end="697" sourcefile="ServerConfigurationEditor.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/ServerConfigurationEditor.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" name="doSaveAs" signature="(Lorg/eclipse/core/runtime/IProgressMonitor;)Z" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" start="550" end="642" startBytecode="0" endBytecode="730" sourcefile="ServerConfigurationEditor.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/ServerConfigurationEditor.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" start="572" end="572" startBytecode="114" endBytecode="114" sourcefile="ServerConfigurationEditor.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/ServerConfigurationEditor.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" start="79" end="697" sourcefile="ServerConfigurationEditor.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/ServerConfigurationEditor.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" name="saveConfiguration" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" start="471" end="475" startBytecode="0" endBytecode="127" sourcefile="ServerConfigurationEditor.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/ServerConfigurationEditor.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="46" end="47" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" start="471" end="471" startBytecode="9" endBytecode="9" sourcefile="ServerConfigurationEditor.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/ServerConfigurationEditor.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" start="79" end="697" sourcefile="ServerConfigurationEditor.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/ServerConfigurationEditor.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" name="saveConfiguration" signature="(Lorg/eclipse/ui/part/FileEditorInput;Lorg/eclipse/core/runtime/IProgressMonitor;)V" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" start="488" end="490" startBytecode="0" endBytecode="117" sourcefile="ServerConfigurationEditor.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/ServerConfigurationEditor.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" start="489" end="489" startBytecode="23" endBytecode="23" sourcefile="ServerConfigurationEditor.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/ServerConfigurationEditor.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorDetailsPage">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorDetailsPage" start="58" end="223" sourcefile="InterceptorDetailsPage.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/v152/InterceptorDetailsPage.java"/>
+    </Class>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorDetailsPage" name="masterDetailsBlock" signature="Lorg/apache/directory/studio/apacheds/configuration/editor/v152/InterceptorsMasterDetailsBlock;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorDetailsPage" sourcefile="InterceptorDetailsPage.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/v152/InterceptorDetailsPage.java"/>
+    </Field>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorDetailsPage" start="73" end="73" startBytecode="11" endBytecode="11" sourcefile="InterceptorDetailsPage.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/v152/InterceptorDetailsPage.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorDetailsPage">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorDetailsPage" start="58" end="223" sourcefile="InterceptorDetailsPage.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/v153/InterceptorDetailsPage.java"/>
+    </Class>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorDetailsPage" name="masterDetailsBlock" signature="Lorg/apache/directory/studio/apacheds/configuration/editor/v153/InterceptorsMasterDetailsBlock;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorDetailsPage" sourcefile="InterceptorDetailsPage.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/v153/InterceptorDetailsPage.java"/>
+    </Field>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorDetailsPage" start="73" end="73" startBytecode="11" endBytecode="11" sourcefile="InterceptorDetailsPage.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/v153/InterceptorDetailsPage.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorDetailsPage">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorDetailsPage" start="58" end="223" sourcefile="InterceptorDetailsPage.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/v154/InterceptorDetailsPage.java"/>
+    </Class>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorDetailsPage" name="masterDetailsBlock" signature="Lorg/apache/directory/studio/apacheds/configuration/editor/v154/InterceptorsMasterDetailsBlock;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorDetailsPage" sourcefile="InterceptorDetailsPage.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/v154/InterceptorDetailsPage.java"/>
+    </Field>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorDetailsPage" start="73" end="73" startBytecode="11" endBytecode="11" sourcefile="InterceptorDetailsPage.java" sourcepath="org/apache/directory/studio/apacheds/configuration/editor/v154/InterceptorDetailsPage.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.AbstractServerXmlIO$BooleanFormatException">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.AbstractServerXmlIO$BooleanFormatException" start="190" end="192" sourcefile="AbstractServerXmlIO.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/AbstractServerXmlIO.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v150.ServerXmlIOV150">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v150.ServerXmlIOV150" start="53" end="1040" sourcefile="ServerXmlIOV150.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v150/ServerXmlIOV150.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v150.ServerXmlIOV150" name="toXml" signature="(Lorg/apache/directory/studio/apacheds/configuration/model/ServerConfiguration;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v150.ServerXmlIOV150" start="655" end="686" startBytecode="0" endBytecode="237" sourcefile="ServerXmlIOV150.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v150/ServerXmlIOV150.java"/>
+    </Method>
+    <LocalVariable name="stylizedDocument" register="4" pc="63" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v150.ServerXmlIOV150" start="683" end="683" startBytecode="76" endBytecode="76" sourcefile="ServerXmlIOV150.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v150/ServerXmlIOV150.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v150.ServerXmlIOV150" start="673" end="673" startBytecode="54" endBytecode="54" sourcefile="ServerXmlIOV150.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v150/ServerXmlIOV150.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v150.ServerXmlIOV150" start="678" end="678" startBytecode="66" endBytecode="66" sourcefile="ServerXmlIOV150.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v150/ServerXmlIOV150.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v151.ServerXmlIOV151">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v151.ServerXmlIOV151" start="53" end="1511" sourcefile="ServerXmlIOV151.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v151/ServerXmlIOV151.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v151.ServerXmlIOV151" name="toXml" signature="(Lorg/apache/directory/studio/apacheds/configuration/model/ServerConfiguration;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v151.ServerXmlIOV151" start="893" end="942" startBytecode="0" endBytecode="304" sourcefile="ServerXmlIOV151.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v151/ServerXmlIOV151.java"/>
+    </Method>
+    <LocalVariable name="stylizedDocument" register="4" pc="106" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v151.ServerXmlIOV151" start="939" end="939" startBytecode="119" endBytecode="119" sourcefile="ServerXmlIOV151.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v151/ServerXmlIOV151.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v151.ServerXmlIOV151" start="929" end="929" startBytecode="97" endBytecode="97" sourcefile="ServerXmlIOV151.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v151/ServerXmlIOV151.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v151.ServerXmlIOV151" start="934" end="934" startBytecode="109" endBytecode="109" sourcefile="ServerXmlIOV151.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v151/ServerXmlIOV151.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="GC_UNRELATED_TYPES" priority="1" abbrev="GC" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" start="141" end="1014" sourcefile="ServerConfigurationV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerConfigurationV152.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" name="removeExtendedOperation" signature="(Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" start="622" end="622" startBytecode="0" endBytecode="4" sourcefile="ServerConfigurationV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerConfigurationV152.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Type descriptor="Lorg/apache/directory/studio/apacheds/configuration/model/v152/SupportedMechanismEnum;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.SupportedMechanismEnum" start="29" end="85" sourcefile="SupportedMechanismEnum.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/SupportedMechanismEnum.java"/>
+    </Type>
+    <Method classname="java.util.List" name="remove" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.List" sourcefile="List.java" sourcepath="java/util/List.java"/>
+    </Method>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" name="supportedMechanisms" signature="Ljava/util/List;" sourceSignature="Ljava/util/List&lt;Lorg/apache/directory/studio/apacheds/configuration/model/v152/SupportedMechanismEnum;&gt;;" isStatic="false" role="FIELD_INVOKED_ON">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" sourcefile="ServerConfigurationV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerConfigurationV152.java"/>
+    </Field>
+    <LocalVariable name="supportedMechanism" register="1" pc="4" role="LOCAL_VARIABLE_ARGUMENT"/>
+    <Method classname="java.lang.String" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_EQUALS_USED">
+      <SourceLine classname="java.lang.String" start="1005" end="1023" startBytecode="0" endBytecode="167" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" start="622" end="622" startBytecode="5" endBytecode="5" sourcefile="ServerConfigurationV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerConfigurationV152.java"/>
+  </BugInstance>
+  <BugInstance type="GC_UNRELATED_TYPES" priority="1" abbrev="GC" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" start="141" end="1014" sourcefile="ServerConfigurationV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerConfigurationV152.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" name="removeSaslQop" signature="(Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" start="664" end="664" startBytecode="0" endBytecode="4" sourcefile="ServerConfigurationV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerConfigurationV152.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Type descriptor="Lorg/apache/directory/studio/apacheds/configuration/model/v152/SaslQualityOfProtectionEnum;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.SaslQualityOfProtectionEnum" start="29" end="82" sourcefile="SaslQualityOfProtectionEnum.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/SaslQualityOfProtectionEnum.java"/>
+    </Type>
+    <Method classname="java.util.List" name="remove" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.List" sourcefile="List.java" sourcepath="java/util/List.java"/>
+    </Method>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" name="saslQops" signature="Ljava/util/List;" sourceSignature="Ljava/util/List&lt;Lorg/apache/directory/studio/apacheds/configuration/model/v152/SaslQualityOfProtectionEnum;&gt;;" isStatic="false" role="FIELD_INVOKED_ON">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" sourcefile="ServerConfigurationV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerConfigurationV152.java"/>
+    </Field>
+    <LocalVariable name="saslQop" register="1" pc="4" role="LOCAL_VARIABLE_ARGUMENT"/>
+    <Method classname="java.lang.String" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_EQUALS_USED">
+      <SourceLine classname="java.lang.String" start="1005" end="1023" startBytecode="0" endBytecode="167" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" start="664" end="664" startBytecode="5" endBytecode="5" sourcefile="ServerConfigurationV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerConfigurationV152.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerXmlIOV152">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerXmlIOV152" start="55" end="2128" sourcefile="ServerXmlIOV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerXmlIOV152.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerXmlIOV152" name="toXml" signature="(Lorg/apache/directory/studio/apacheds/configuration/model/ServerConfiguration;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerXmlIOV152" start="1359" end="1420" startBytecode="0" endBytecode="498" sourcefile="ServerXmlIOV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerXmlIOV152.java"/>
+    </Method>
+    <LocalVariable name="stylizedDocument" register="7" pc="252" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerXmlIOV152" start="1420" end="1420" startBytecode="259" endBytecode="259" sourcefile="ServerXmlIOV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerXmlIOV152.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerXmlIOV152" start="1410" end="1410" startBytecode="243" endBytecode="243" sourcefile="ServerXmlIOV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerXmlIOV152.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v152.ServerXmlIOV152" start="1415" end="1415" startBytecode="255" endBytecode="255" sourcefile="ServerXmlIOV152.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v152/ServerXmlIOV152.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="GC_UNRELATED_TYPES" priority="1" abbrev="GC" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" start="141" end="1014" sourcefile="ServerConfigurationV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerConfigurationV153.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" name="removeExtendedOperation" signature="(Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" start="622" end="622" startBytecode="0" endBytecode="4" sourcefile="ServerConfigurationV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerConfigurationV153.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Type descriptor="Lorg/apache/directory/studio/apacheds/configuration/model/v153/SupportedMechanismEnum;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.SupportedMechanismEnum" start="29" end="121" sourcefile="SupportedMechanismEnum.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/SupportedMechanismEnum.java"/>
+    </Type>
+    <Method classname="java.util.List" name="remove" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.List" sourcefile="List.java" sourcepath="java/util/List.java"/>
+    </Method>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" name="supportedMechanisms" signature="Ljava/util/List;" sourceSignature="Ljava/util/List&lt;Lorg/apache/directory/studio/apacheds/configuration/model/v153/SupportedMechanismEnum;&gt;;" isStatic="false" role="FIELD_INVOKED_ON">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" sourcefile="ServerConfigurationV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerConfigurationV153.java"/>
+    </Field>
+    <LocalVariable name="supportedMechanism" register="1" pc="4" role="LOCAL_VARIABLE_ARGUMENT"/>
+    <Method classname="java.lang.String" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_EQUALS_USED">
+      <SourceLine classname="java.lang.String" start="1005" end="1023" startBytecode="0" endBytecode="167" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" start="622" end="622" startBytecode="5" endBytecode="5" sourcefile="ServerConfigurationV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerConfigurationV153.java"/>
+  </BugInstance>
+  <BugInstance type="GC_UNRELATED_TYPES" priority="1" abbrev="GC" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" start="141" end="1014" sourcefile="ServerConfigurationV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerConfigurationV153.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" name="removeSaslQop" signature="(Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" start="664" end="664" startBytecode="0" endBytecode="4" sourcefile="ServerConfigurationV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerConfigurationV153.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Type descriptor="Lorg/apache/directory/studio/apacheds/configuration/model/v153/SaslQualityOfProtectionEnum;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.SaslQualityOfProtectionEnum" start="29" end="82" sourcefile="SaslQualityOfProtectionEnum.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/SaslQualityOfProtectionEnum.java"/>
+    </Type>
+    <Method classname="java.util.List" name="remove" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.List" sourcefile="List.java" sourcepath="java/util/List.java"/>
+    </Method>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" name="saslQops" signature="Ljava/util/List;" sourceSignature="Ljava/util/List&lt;Lorg/apache/directory/studio/apacheds/configuration/model/v153/SaslQualityOfProtectionEnum;&gt;;" isStatic="false" role="FIELD_INVOKED_ON">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" sourcefile="ServerConfigurationV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerConfigurationV153.java"/>
+    </Field>
+    <LocalVariable name="saslQop" register="1" pc="4" role="LOCAL_VARIABLE_ARGUMENT"/>
+    <Method classname="java.lang.String" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_EQUALS_USED">
+      <SourceLine classname="java.lang.String" start="1005" end="1023" startBytecode="0" endBytecode="167" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" start="664" end="664" startBytecode="5" endBytecode="5" sourcefile="ServerConfigurationV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerConfigurationV153.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerXmlIOV153">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerXmlIOV153" start="55" end="2210" sourcefile="ServerXmlIOV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerXmlIOV153.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerXmlIOV153" name="toXml" signature="(Lorg/apache/directory/studio/apacheds/configuration/model/ServerConfiguration;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerXmlIOV153" start="1416" end="1477" startBytecode="0" endBytecode="498" sourcefile="ServerXmlIOV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerXmlIOV153.java"/>
+    </Method>
+    <LocalVariable name="stylizedDocument" register="7" pc="252" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerXmlIOV153" start="1477" end="1477" startBytecode="259" endBytecode="259" sourcefile="ServerXmlIOV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerXmlIOV153.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerXmlIOV153" start="1467" end="1467" startBytecode="243" endBytecode="243" sourcefile="ServerXmlIOV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerXmlIOV153.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v153.ServerXmlIOV153" start="1472" end="1472" startBytecode="255" endBytecode="255" sourcefile="ServerXmlIOV153.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v153/ServerXmlIOV153.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="GC_UNRELATED_TYPES" priority="1" abbrev="GC" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" start="141" end="1014" sourcefile="ServerConfigurationV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerConfigurationV154.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" name="removeExtendedOperation" signature="(Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" start="622" end="622" startBytecode="0" endBytecode="4" sourcefile="ServerConfigurationV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerConfigurationV154.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Type descriptor="Lorg/apache/directory/studio/apacheds/configuration/model/v154/SupportedMechanismEnum;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.SupportedMechanismEnum" start="29" end="121" sourcefile="SupportedMechanismEnum.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/SupportedMechanismEnum.java"/>
+    </Type>
+    <Method classname="java.util.List" name="remove" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.List" sourcefile="List.java" sourcepath="java/util/List.java"/>
+    </Method>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" name="supportedMechanisms" signature="Ljava/util/List;" sourceSignature="Ljava/util/List&lt;Lorg/apache/directory/studio/apacheds/configuration/model/v154/SupportedMechanismEnum;&gt;;" isStatic="false" role="FIELD_INVOKED_ON">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" sourcefile="ServerConfigurationV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerConfigurationV154.java"/>
+    </Field>
+    <LocalVariable name="supportedMechanism" register="1" pc="4" role="LOCAL_VARIABLE_ARGUMENT"/>
+    <Method classname="java.lang.String" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_EQUALS_USED">
+      <SourceLine classname="java.lang.String" start="1005" end="1023" startBytecode="0" endBytecode="167" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" start="622" end="622" startBytecode="5" endBytecode="5" sourcefile="ServerConfigurationV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerConfigurationV154.java"/>
+  </BugInstance>
+  <BugInstance type="GC_UNRELATED_TYPES" priority="1" abbrev="GC" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" start="141" end="1014" sourcefile="ServerConfigurationV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerConfigurationV154.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" name="removeSaslQop" signature="(Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" start="664" end="664" startBytecode="0" endBytecode="4" sourcefile="ServerConfigurationV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerConfigurationV154.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Type descriptor="Lorg/apache/directory/studio/apacheds/configuration/model/v154/SaslQualityOfProtectionEnum;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.SaslQualityOfProtectionEnum" start="29" end="82" sourcefile="SaslQualityOfProtectionEnum.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/SaslQualityOfProtectionEnum.java"/>
+    </Type>
+    <Method classname="java.util.List" name="remove" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.List" sourcefile="List.java" sourcepath="java/util/List.java"/>
+    </Method>
+    <Field classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" name="saslQops" signature="Ljava/util/List;" sourceSignature="Ljava/util/List&lt;Lorg/apache/directory/studio/apacheds/configuration/model/v154/SaslQualityOfProtectionEnum;&gt;;" isStatic="false" role="FIELD_INVOKED_ON">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" sourcefile="ServerConfigurationV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerConfigurationV154.java"/>
+    </Field>
+    <LocalVariable name="saslQop" register="1" pc="4" role="LOCAL_VARIABLE_ARGUMENT"/>
+    <Method classname="java.lang.String" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_EQUALS_USED">
+      <SourceLine classname="java.lang.String" start="1005" end="1023" startBytecode="0" endBytecode="167" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" start="664" end="664" startBytecode="5" endBytecode="5" sourcefile="ServerConfigurationV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerConfigurationV154.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerXmlIOV154">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerXmlIOV154" start="50" end="1974" sourcefile="ServerXmlIOV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerXmlIOV154.java"/>
+    </Class>
+    <Method classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerXmlIOV154" name="toXml" signature="(Lorg/apache/directory/studio/apacheds/configuration/model/ServerConfiguration;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerXmlIOV154" start="1279" end="1340" startBytecode="0" endBytecode="498" sourcefile="ServerXmlIOV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerXmlIOV154.java"/>
+    </Method>
+    <LocalVariable name="stylizedDocument" register="7" pc="252" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerXmlIOV154" start="1340" end="1340" startBytecode="259" endBytecode="259" sourcefile="ServerXmlIOV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerXmlIOV154.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerXmlIOV154" start="1330" end="1330" startBytecode="243" endBytecode="243" sourcefile="ServerXmlIOV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerXmlIOV154.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.apache.directory.studio.apacheds.configuration.model.v154.ServerXmlIOV154" start="1335" end="1335" startBytecode="255" endBytecode="255" sourcefile="ServerXmlIOV154.java" sourcepath="org/apache/directory/studio/apacheds/configuration/model/v154/ServerXmlIOV154.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="99">
+    <MissingClass>org.apache.directory.shared.ldap.ldif.LdifReader</MissingClass>
+    <MissingClass>org.apache.directory.shared.ldap.util.StringTools</MissingClass>
+    <MissingClass>org.dom4j.Attribute</MissingClass>
+    <MissingClass>org.dom4j.Document</MissingClass>
+    <MissingClass>org.dom4j.DocumentHelper</MissingClass>
+    <MissingClass>org.dom4j.Element</MissingClass>
+    <MissingClass>org.dom4j.Namespace</MissingClass>
+    <MissingClass>org.dom4j.QName</MissingClass>
+    <MissingClass>org.dom4j.io.DocumentResult</MissingClass>
+    <MissingClass>org.dom4j.io.DocumentSource</MissingClass>
+    <MissingClass>org.dom4j.io.SAXReader</MissingClass>
+    <MissingClass>org.eclipse.core.resources.IFile</MissingClass>
+    <MissingClass>org.eclipse.core.resources.IWorkspace</MissingClass>
+    <MissingClass>org.eclipse.core.resources.IWorkspaceRoot</MissingClass>
+    <MissingClass>org.eclipse.core.resources.ResourcesPlugin</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.CoreException</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.FileLocator</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.IAdapterManager</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.IConfigurationElement</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.IExtension</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.IExtensionPoint</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.IExtensionRegistry</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.ILog</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.IPath</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.IProgressMonitor</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.Path</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.Platform</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.Status</MissingClass>
+    <MissingClass>org.eclipse.core.runtime.content.IContentDescription</MissingClass>
+    <MissingClass>org.eclipse.jface.action.Action</MissingClass>
+    <MissingClass>org.eclipse.jface.action.IToolBarManager</MissingClass>
+    <MissingClass>org.eclipse.jface.dialogs.Dialog</MissingClass>
+    <MissingClass>org.eclipse.jface.dialogs.IDialogConstants</MissingClass>
+    <MissingClass>org.eclipse.jface.dialogs.MessageDialog</MissingClass>
+    <MissingClass>org.eclipse.jface.operation.IRunnableWithProgress</MissingClass>
+    <MissingClass>org.eclipse.jface.resource.ImageDescriptor</MissingClass>
+    <MissingClass>org.eclipse.jface.resource.ImageRegistry</MissingClass>
+    <MissingClass>org.eclipse.jface.resource.JFaceResources</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.ArrayContentProvider</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.CheckboxTableViewer</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.ICheckStateListener</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.IDoubleClickListener</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.ISelection</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.ISelectionChangedListener</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.IStructuredContentProvider</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.IStructuredSelection</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.ITableLabelProvider</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.LabelProvider</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.SelectionChangedEvent</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.StructuredSelection</MissingClass>
+    <MissingClass>org.eclipse.jface.viewers.TableViewer</MissingClass>
+    <MissingClass>org.eclipse.jface.wizard.Wizard</MissingClass>
+    <MissingClass>org.eclipse.jface.wizard.WizardPage</MissingClass>
+    <MissingClass>org.eclipse.osgi.util.NLS</MissingClass>
+    <MissingClass>org.eclipse.swt.custom.SashForm</MissingClass>
+    <MissingClass>org.eclipse.swt.events.ModifyListener</MissingClass>
+    <MissingClass>org.eclipse.swt.events.MouseAdapter</MissingClass>
+    <MissingClass>org.eclipse.swt.events.SelectionAdapter</MissingClass>
+    <MissingClass>org.eclipse.swt.events.VerifyEvent</MissingClass>
+    <MissingClass>org.eclipse.swt.events.VerifyListener</MissingClass>
+    <MissingClass>org.eclipse.swt.graphics.GC</MissingClass>
+    <MissingClass>org.eclipse.swt.layout.GridData</MissingClass>
+    <MissingClass>org.eclipse.swt.layout.GridLayout</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.Button</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.Combo</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.Composite</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.Display</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.FileDialog</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.Group</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.Label</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.MessageBox</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.Shell</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.Table</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.TableColumn</MissingClass>
+    <MissingClass>org.eclipse.swt.widgets.Text</MissingClass>
+    <MissingClass>org.eclipse.ui.IEditorInput</MissingClass>
+    <MissingClass>org.eclipse.ui.IEditorRegistry</MissingClass>
+    <MissingClass>org.eclipse.ui.IPathEditorInput</MissingClass>
+    <MissingClass>org.eclipse.ui.IWorkbench</MissingClass>
+    <MissingClass>org.eclipse.ui.IWorkbenchPage</MissingClass>
+    <MissingClass>org.eclipse.ui.IWorkbenchPartSite</MissingClass>
+    <MissingClass>org.eclipse.ui.IWorkbenchWindow</MissingClass>
+    <MissingClass>org.eclipse.ui.PartInitException</MissingClass>
+    <MissingClass>org.eclipse.ui.PlatformUI</MissingClass>
+    <MissingClass>org.eclipse.ui.dialogs.SaveAsDialog</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.DetailsPart</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.IManagedForm</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.MasterDetailsBlock</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.SectionPart</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.editor.FormEditor</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.editor.FormPage</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.widgets.FormToolkit</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.widgets.ScrolledForm</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.widgets.Section</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.widgets.TableWrapData</MissingClass>
+    <MissingClass>org.eclipse.ui.forms.widgets.TableWrapLayout</MissingClass>
+    <MissingClass>org.eclipse.ui.help.IWorkbenchHelpSystem</MissingClass>
+    <MissingClass>org.eclipse.ui.part.FileEditorInput</MissingClass>
+    <MissingClass>org.eclipse.ui.plugin.AbstractUIPlugin</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 7 Apr 2009 18:09:04 +0300" total_classes="520" referenced_classes="585" total_bugs="22" total_size="16699" num_packages="19" vm_version="20.4-b02-402" cpu_seconds="58.89" clock_seconds="46.49" peak_mbytes="108.29" alloc_mbytes="763.88" gc_seconds="2.22" priority_2="11" priority_1="11">
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration" total_bugs="3" total_types="6" total_size="143" priority_2="2" priority_1="1">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationContentDescriber" sourceFile="ApacheDSConfigurationContentDescriber.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPlugin" sourceFile="ApacheDSConfigurationPlugin.java" interface="false" size="48" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPluginConstants" sourceFile="ApacheDSConfigurationPluginConstants.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.ApacheDSConfigurationPluginUtils" sourceFile="ApacheDSConfigurationPluginUtils.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.StudioEntityResolver" sourceFile="StudioEntityResolver.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor" total_bugs="4" total_types="9" total_size="393" priority_1="4">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.ErrorPage" sourceFile="ErrorPage.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.NonExistingServerConfigurationInput" sourceFile="NonExistingServerConfigurationInput.java" interface="false" size="38" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.NonExistingServerConfigurationInput$1" sourceFile="NonExistingServerConfigurationInput.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.PathEditorInput" sourceFile="ServerConfigurationEditor.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.SaveableFormPage" sourceFile="SaveableFormPage.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor" sourceFile="ServerConfigurationEditor.java" interface="false" size="253" bugs="3" priority_1="3"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor$1" sourceFile="ServerConfigurationEditor.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.ServerConfigurationEditor$2" sourceFile="ServerConfigurationEditor.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor.v150" total_bugs="0" total_types="63" total_size="1620">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationDetailsPage" sourceFile="ExtendedOperationDetailsPage.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationDetailsPage$1" sourceFile="ExtendedOperationDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationsMasterDetailsBlock" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationsMasterDetailsBlock$1" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationsMasterDetailsBlock$2" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationsMasterDetailsBlock$3" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationsMasterDetailsBlock$4" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationsMasterDetailsBlock$5" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationsMasterDetailsBlock$6" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationsMasterDetailsBlock$7" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.ExtendedOperationsPage" sourceFile="ExtendedOperationsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage" sourceFile="GeneralPage.java" interface="false" size="260" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$1" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$10" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$11" sourceFile="GeneralPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$12" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$13" sourceFile="GeneralPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$2" sourceFile="GeneralPage.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$3" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$4" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$5" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$6" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$7" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$8" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.GeneralPage$9" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorDetailsPage" sourceFile="InterceptorDetailsPage.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorDetailsPage$1" sourceFile="InterceptorDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsMasterDetailsBlock" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="121" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsMasterDetailsBlock$1" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsMasterDetailsBlock$2" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsMasterDetailsBlock$3" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsMasterDetailsBlock$4" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsMasterDetailsBlock$5" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsMasterDetailsBlock$6" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsMasterDetailsBlock$7" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsMasterDetailsBlock$8" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsMasterDetailsBlock$9" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.InterceptorsPage" sourceFile="InterceptorsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage" sourceFile="PartitionDetailsPage.java" interface="false" size="282" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$1" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$10" sourceFile="PartitionDetailsPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$11" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$12" sourceFile="PartitionDetailsPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$13" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$14" sourceFile="PartitionDetailsPage.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$15" sourceFile="PartitionDetailsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$2" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$3" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$4" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$5" sourceFile="PartitionDetailsPage.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$6" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$7" sourceFile="PartitionDetailsPage.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$8" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionDetailsPage$9" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionsMasterDetailsBlock" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionsMasterDetailsBlock$1" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionsMasterDetailsBlock$2" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionsMasterDetailsBlock$3" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionsMasterDetailsBlock$4" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionsMasterDetailsBlock$5" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionsMasterDetailsBlock$6" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionsMasterDetailsBlock$7" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.PartitionsPage" sourceFile="PartitionsPage.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs" total_bugs="0" total_types="10" total_size="209">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs.AttributeValueDialog" sourceFile="AttributeValueDialog.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs.AttributeValueDialog$1" sourceFile="AttributeValueDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs.AttributeValueDialog$2" sourceFile="AttributeValueDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs.AttributeValueObject" sourceFile="AttributeValueObject.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs.BinaryAttributeDialog" sourceFile="BinaryAttributeDialog.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs.BinaryAttributeDialog$1" sourceFile="BinaryAttributeDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs.IndexedAttributeDialog" sourceFile="IndexedAttributeDialog.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs.IndexedAttributeDialog$1" sourceFile="IndexedAttributeDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs.IndexedAttributeDialog$2" sourceFile="IndexedAttributeDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v150.dialogs.IndexedAttributeDialog$3" sourceFile="IndexedAttributeDialog.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor.v151" total_bugs="0" total_types="72" total_size="1821">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationDetailsPage" sourceFile="ExtendedOperationDetailsPage.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationDetailsPage$1" sourceFile="ExtendedOperationDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationsMasterDetailsBlock" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationsMasterDetailsBlock$1" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationsMasterDetailsBlock$2" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationsMasterDetailsBlock$3" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationsMasterDetailsBlock$4" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationsMasterDetailsBlock$5" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationsMasterDetailsBlock$6" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationsMasterDetailsBlock$7" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.ExtendedOperationsPage" sourceFile="ExtendedOperationsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage" sourceFile="GeneralPage.java" interface="false" size="398" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$1" sourceFile="GeneralPage.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$10" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$11" sourceFile="GeneralPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$12" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$13" sourceFile="GeneralPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$14" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$15" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$16" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$17" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$18" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$19" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$2" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$20" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$21" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$22" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$3" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$4" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$5" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$6" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$7" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$8" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.GeneralPage$9" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorDetailsPage" sourceFile="InterceptorDetailsPage.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorDetailsPage$1" sourceFile="InterceptorDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsMasterDetailsBlock" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="121" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsMasterDetailsBlock$1" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsMasterDetailsBlock$2" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsMasterDetailsBlock$3" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsMasterDetailsBlock$4" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsMasterDetailsBlock$5" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsMasterDetailsBlock$6" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsMasterDetailsBlock$7" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsMasterDetailsBlock$8" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsMasterDetailsBlock$9" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.InterceptorsPage" sourceFile="InterceptorsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage" sourceFile="PartitionDetailsPage.java" interface="false" size="282" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$1" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$10" sourceFile="PartitionDetailsPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$11" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$12" sourceFile="PartitionDetailsPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$13" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$14" sourceFile="PartitionDetailsPage.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$15" sourceFile="PartitionDetailsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$2" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$3" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$4" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$5" sourceFile="PartitionDetailsPage.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$6" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$7" sourceFile="PartitionDetailsPage.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$8" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionDetailsPage$9" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionsMasterDetailsBlock" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionsMasterDetailsBlock$1" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionsMasterDetailsBlock$2" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionsMasterDetailsBlock$3" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionsMasterDetailsBlock$4" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionsMasterDetailsBlock$5" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionsMasterDetailsBlock$6" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionsMasterDetailsBlock$7" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.PartitionsPage" sourceFile="PartitionsPage.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs" total_bugs="0" total_types="10" total_size="209">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs.AttributeValueDialog" sourceFile="AttributeValueDialog.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs.AttributeValueDialog$1" sourceFile="AttributeValueDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs.AttributeValueDialog$2" sourceFile="AttributeValueDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs.AttributeValueObject" sourceFile="AttributeValueObject.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs.BinaryAttributeDialog" sourceFile="BinaryAttributeDialog.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs.BinaryAttributeDialog$1" sourceFile="BinaryAttributeDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs.IndexedAttributeDialog" sourceFile="IndexedAttributeDialog.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs.IndexedAttributeDialog$1" sourceFile="IndexedAttributeDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs.IndexedAttributeDialog$2" sourceFile="IndexedAttributeDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v151.dialogs.IndexedAttributeDialog$3" sourceFile="IndexedAttributeDialog.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor.v152" total_bugs="1" total_types="74" total_size="1846" priority_2="1">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage" sourceFile="AuthenticationPage.java" interface="false" size="200" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$1" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$10" sourceFile="AuthenticationPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$11" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$12" sourceFile="AuthenticationPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$2" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$3" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$4" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$5" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$6" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$7" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$8" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.AuthenticationPage$9" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.ExtendedOperationDetailsPage" sourceFile="ExtendedOperationDetailsPage.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.ExtendedOperationsMasterDetailsBlock" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.ExtendedOperationsMasterDetailsBlock$1" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.ExtendedOperationsMasterDetailsBlock$2" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.ExtendedOperationsMasterDetailsBlock$3" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.ExtendedOperationsMasterDetailsBlock$4" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.ExtendedOperationsMasterDetailsBlock$5" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.ExtendedOperationsMasterDetailsBlock$6" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.ExtendedOperationsMasterDetailsBlock$7" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.ExtendedOperationsPage" sourceFile="ExtendedOperationsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage" sourceFile="GeneralPage.java" interface="false" size="254" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$1" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$10" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$11" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$12" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$13" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$2" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$3" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$4" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$5" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$6" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$7" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$8" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.GeneralPage$9" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorDetailsPage" sourceFile="InterceptorDetailsPage.java" interface="false" size="75" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsMasterDetailsBlock" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsMasterDetailsBlock$1" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsMasterDetailsBlock$2" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsMasterDetailsBlock$3" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsMasterDetailsBlock$4" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsMasterDetailsBlock$5" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsMasterDetailsBlock$6" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsMasterDetailsBlock$7" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsMasterDetailsBlock$8" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsMasterDetailsBlock$9" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.InterceptorsPage" sourceFile="InterceptorsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage" sourceFile="PartitionDetailsPage.java" interface="false" size="282" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$1" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$10" sourceFile="PartitionDetailsPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$11" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$12" sourceFile="PartitionDetailsPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$13" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$14" sourceFile="PartitionDetailsPage.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$15" sourceFile="PartitionDetailsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$2" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$3" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$4" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$5" sourceFile="PartitionDetailsPage.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$6" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$7" sourceFile="PartitionDetailsPage.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$8" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionDetailsPage$9" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionsMasterDetailsBlock" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionsMasterDetailsBlock$1" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionsMasterDetailsBlock$2" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionsMasterDetailsBlock$3" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionsMasterDetailsBlock$4" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionsMasterDetailsBlock$5" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionsMasterDetailsBlock$6" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionsMasterDetailsBlock$7" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.PartitionsPage" sourceFile="PartitionsPage.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs" total_bugs="0" total_types="18" total_size="415">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.AttributeValueDialog" sourceFile="AttributeValueDialog.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.AttributeValueDialog$1" sourceFile="AttributeValueDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.AttributeValueDialog$2" sourceFile="AttributeValueDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.AttributeValueObject" sourceFile="AttributeValueObject.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.ExtendedOperationDialog" sourceFile="ExtendedOperationDialog.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.ExtendedOperationDialog$1" sourceFile="ExtendedOperationDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.ExtendedOperationDialog$2" sourceFile="ExtendedOperationDialog.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.ExtendedOperationDialog$3" sourceFile="ExtendedOperationDialog.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.IndexedAttributeDialog" sourceFile="IndexedAttributeDialog.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.IndexedAttributeDialog$1" sourceFile="IndexedAttributeDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.IndexedAttributeDialog$2" sourceFile="IndexedAttributeDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.IndexedAttributeDialog$3" sourceFile="IndexedAttributeDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.InterceptorDialog" sourceFile="InterceptorDialog.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.InterceptorDialog$1" sourceFile="InterceptorDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.InterceptorDialog$2" sourceFile="InterceptorDialog.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.InterceptorDialog$3" sourceFile="InterceptorDialog.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.SaslRealmDialog" sourceFile="SaslRealmDialog.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v152.dialogs.SaslRealmDialog$1" sourceFile="SaslRealmDialog.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor.v153" total_bugs="1" total_types="77" total_size="1893" priority_2="1">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage" sourceFile="AuthenticationPage.java" interface="false" size="221" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$1" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$10" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$11" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$12" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$13" sourceFile="AuthenticationPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$14" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$15" sourceFile="AuthenticationPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$2" sourceFile="AuthenticationPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$3" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$4" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$5" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$6" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$7" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$8" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.AuthenticationPage$9" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.ExtendedOperationDetailsPage" sourceFile="ExtendedOperationDetailsPage.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.ExtendedOperationsMasterDetailsBlock" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.ExtendedOperationsMasterDetailsBlock$1" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.ExtendedOperationsMasterDetailsBlock$2" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.ExtendedOperationsMasterDetailsBlock$3" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.ExtendedOperationsMasterDetailsBlock$4" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.ExtendedOperationsMasterDetailsBlock$5" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.ExtendedOperationsMasterDetailsBlock$6" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.ExtendedOperationsMasterDetailsBlock$7" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.ExtendedOperationsPage" sourceFile="ExtendedOperationsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage" sourceFile="GeneralPage.java" interface="false" size="254" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$1" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$10" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$11" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$12" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$13" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$2" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$3" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$4" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$5" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$6" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$7" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$8" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.GeneralPage$9" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorDetailsPage" sourceFile="InterceptorDetailsPage.java" interface="false" size="75" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsMasterDetailsBlock" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsMasterDetailsBlock$1" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsMasterDetailsBlock$2" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsMasterDetailsBlock$3" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsMasterDetailsBlock$4" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsMasterDetailsBlock$5" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsMasterDetailsBlock$6" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsMasterDetailsBlock$7" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsMasterDetailsBlock$8" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsMasterDetailsBlock$9" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.InterceptorsPage" sourceFile="InterceptorsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage" sourceFile="PartitionDetailsPage.java" interface="false" size="282" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$1" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$10" sourceFile="PartitionDetailsPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$11" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$12" sourceFile="PartitionDetailsPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$13" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$14" sourceFile="PartitionDetailsPage.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$15" sourceFile="PartitionDetailsPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$2" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$3" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$4" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$5" sourceFile="PartitionDetailsPage.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$6" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$7" sourceFile="PartitionDetailsPage.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$8" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionDetailsPage$9" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionsMasterDetailsBlock" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionsMasterDetailsBlock$1" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionsMasterDetailsBlock$2" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionsMasterDetailsBlock$3" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionsMasterDetailsBlock$4" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionsMasterDetailsBlock$5" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionsMasterDetailsBlock$6" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionsMasterDetailsBlock$7" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.PartitionsPage" sourceFile="PartitionsPage.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs" total_bugs="0" total_types="20" total_size="464">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.AttributeValueDialog" sourceFile="AttributeValueDialog.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.AttributeValueDialog$1" sourceFile="AttributeValueDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.AttributeValueDialog$2" sourceFile="AttributeValueDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.AttributeValueObject" sourceFile="AttributeValueObject.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.ExtendedOperationDialog" sourceFile="ExtendedOperationDialog.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.ExtendedOperationDialog$1" sourceFile="ExtendedOperationDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.ExtendedOperationDialog$2" sourceFile="ExtendedOperationDialog.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.ExtendedOperationDialog$3" sourceFile="ExtendedOperationDialog.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.IndexedAttributeDialog" sourceFile="IndexedAttributeDialog.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.IndexedAttributeDialog$1" sourceFile="IndexedAttributeDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.IndexedAttributeDialog$2" sourceFile="IndexedAttributeDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.IndexedAttributeDialog$3" sourceFile="IndexedAttributeDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.InterceptorDialog" sourceFile="InterceptorDialog.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.InterceptorDialog$1" sourceFile="InterceptorDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.InterceptorDialog$2" sourceFile="InterceptorDialog.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.InterceptorDialog$3" sourceFile="InterceptorDialog.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.NtlmProviderDialog" sourceFile="NtlmProviderDialog.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.NtlmProviderDialog$1" sourceFile="NtlmProviderDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.SaslRealmDialog" sourceFile="SaslRealmDialog.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v153.dialogs.SaslRealmDialog$1" sourceFile="SaslRealmDialog.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor.v154" total_bugs="1" total_types="71" total_size="1719" priority_2="1">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage" sourceFile="AuthenticationPage.java" interface="false" size="222" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$1" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$10" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$11" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$12" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$13" sourceFile="AuthenticationPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$14" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$15" sourceFile="AuthenticationPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$2" sourceFile="AuthenticationPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$3" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$4" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$5" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$6" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$7" sourceFile="AuthenticationPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$8" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.AuthenticationPage$9" sourceFile="AuthenticationPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.ExtendedOperationDetailsPage" sourceFile="ExtendedOperationDetailsPage.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.ExtendedOperationsMasterDetailsBlock" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.ExtendedOperationsMasterDetailsBlock$1" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.ExtendedOperationsMasterDetailsBlock$2" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.ExtendedOperationsMasterDetailsBlock$3" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.ExtendedOperationsMasterDetailsBlock$4" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.ExtendedOperationsMasterDetailsBlock$5" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.ExtendedOperationsMasterDetailsBlock$6" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.ExtendedOperationsMasterDetailsBlock$7" sourceFile="ExtendedOperationsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.ExtendedOperationsPage" sourceFile="ExtendedOperationsPage.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage" sourceFile="GeneralPage.java" interface="false" size="255" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$1" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$10" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$11" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$12" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$13" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$2" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$3" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$4" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$5" sourceFile="GeneralPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$6" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$7" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$8" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.GeneralPage$9" sourceFile="GeneralPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorDetailsPage" sourceFile="InterceptorDetailsPage.java" interface="false" size="75" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsMasterDetailsBlock" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsMasterDetailsBlock$1" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsMasterDetailsBlock$2" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsMasterDetailsBlock$3" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsMasterDetailsBlock$4" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsMasterDetailsBlock$5" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsMasterDetailsBlock$6" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsMasterDetailsBlock$7" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsMasterDetailsBlock$8" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsMasterDetailsBlock$9" sourceFile="InterceptorsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.InterceptorsPage" sourceFile="InterceptorsPage.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionDetailsPage" sourceFile="PartitionDetailsPage.java" interface="false" size="185" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionDetailsPage$1" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionDetailsPage$2" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionDetailsPage$3" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionDetailsPage$4" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionDetailsPage$5" sourceFile="PartitionDetailsPage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionDetailsPage$6" sourceFile="PartitionDetailsPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionDetailsPage$7" sourceFile="PartitionDetailsPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionDetailsPage$8" sourceFile="PartitionDetailsPage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionsMasterDetailsBlock" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionsMasterDetailsBlock$1" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionsMasterDetailsBlock$2" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionsMasterDetailsBlock$3" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionsMasterDetailsBlock$4" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionsMasterDetailsBlock$5" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionsMasterDetailsBlock$6" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionsMasterDetailsBlock$7" sourceFile="PartitionsMasterDetailsBlock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.PartitionsPage" sourceFile="PartitionsPage.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs" total_bugs="0" total_types="21" total_size="474">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.AttributeValueDialog" sourceFile="AttributeValueDialog.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.AttributeValueDialog$1" sourceFile="AttributeValueDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.AttributeValueDialog$2" sourceFile="AttributeValueDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.AttributeValueObject" sourceFile="AttributeValueObject.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.ExtendedOperationDialog" sourceFile="ExtendedOperationDialog.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.ExtendedOperationDialog$1" sourceFile="ExtendedOperationDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.ExtendedOperationDialog$2" sourceFile="ExtendedOperationDialog.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.ExtendedOperationDialog$3" sourceFile="ExtendedOperationDialog.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.IndexedAttributeDialog" sourceFile="IndexedAttributeDialog.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.IndexedAttributeDialog$1" sourceFile="IndexedAttributeDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.IndexedAttributeDialog$2" sourceFile="IndexedAttributeDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.IndexedAttributeDialog$3" sourceFile="IndexedAttributeDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.InterceptorDialog" sourceFile="InterceptorDialog.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.InterceptorDialog$1" sourceFile="InterceptorDialog.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.InterceptorDialog$2" sourceFile="InterceptorDialog.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.InterceptorDialog$3" sourceFile="InterceptorDialog.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.NtlmProviderDialog" sourceFile="NtlmProviderDialog.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.NtlmProviderDialog$1" sourceFile="NtlmProviderDialog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.SaslRealmDialog" sourceFile="SaslRealmDialog.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.editor.v154.dialogs.SaslRealmDialog$1" sourceFile="SaslRealmDialog.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.model" total_bugs="1" total_types="15" total_size="314" priority_2="1">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.AbstractServerConfiguration" sourceFile="AbstractServerConfiguration.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.AbstractServerXmlIO" sourceFile="AbstractServerXmlIO.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.AbstractServerXmlIO$BooleanFormatException" sourceFile="AbstractServerXmlIO.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerConfiguration" sourceFile="ServerConfiguration.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerConfigurationMigrator" sourceFile="ServerConfigurationMigrator.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerConfigurationMigrator$1" sourceFile="ServerConfigurationMigrator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerConfigurationVersionEnum" sourceFile="ServerConfigurationVersionEnum.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerConfigurationVersionEnum$1" sourceFile="ServerConfigurationVersionEnum.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerConfigurationVersionEnum$2" sourceFile="ServerConfigurationVersionEnum.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerConfigurationVersionEnum$3" sourceFile="ServerConfigurationVersionEnum.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerConfigurationVersionEnum$4" sourceFile="ServerConfigurationVersionEnum.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerConfigurationVersionEnum$5" sourceFile="ServerConfigurationVersionEnum.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerXmlIO" sourceFile="ServerXmlIO.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.ServerXmlIOException" sourceFile="ServerXmlIOException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.model.v150" total_bugs="1" total_types="7" total_size="671" priority_2="1">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v150.ExtendedOperation" sourceFile="ExtendedOperation.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v150.IndexedAttribute" sourceFile="IndexedAttribute.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v150.Interceptor" sourceFile="Interceptor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v150.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v150.Partition" sourceFile="Partition.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v150.ServerConfigurationV150" sourceFile="ServerConfigurationV150.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v150.ServerXmlIOV150" sourceFile="ServerXmlIOV150.java" interface="false" size="402" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.model.v151" total_bugs="1" total_types="7" total_size="919" priority_2="1">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v151.ExtendedOperation" sourceFile="ExtendedOperation.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v151.IndexedAttribute" sourceFile="IndexedAttribute.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v151.Interceptor" sourceFile="Interceptor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v151.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v151.Partition" sourceFile="Partition.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v151.ServerConfigurationV151" sourceFile="ServerConfigurationV151.java" interface="false" size="237" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v151.ServerXmlIOV151" sourceFile="ServerXmlIOV151.java" interface="false" size="551" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.model.v152" total_bugs="3" total_types="12" total_size="1157" priority_2="1" priority_1="2">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.ExtendedOperationEnum" sourceFile="ExtendedOperationEnum.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.IndexedAttribute" sourceFile="IndexedAttribute.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.InterceptorConfiguration" sourceFile="InterceptorConfiguration.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.InterceptorEnum" sourceFile="InterceptorEnum.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.Partition" sourceFile="Partition.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.ReplicationInterceptorConfiguration" sourceFile="ReplicationInterceptorConfiguration.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.SaslQualityOfProtectionEnum" sourceFile="SaslQualityOfProtectionEnum.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.ServerConfigurationV152" sourceFile="ServerConfigurationV152.java" interface="false" size="211" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.ServerXmlIOV152" sourceFile="ServerXmlIOV152.java" interface="false" size="697" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.ServerXmlIOV152$1" sourceFile="ServerXmlIOV152.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v152.SupportedMechanismEnum" sourceFile="SupportedMechanismEnum.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.model.v153" total_bugs="3" total_types="12" total_size="1211" priority_2="1" priority_1="2">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.ExtendedOperationEnum" sourceFile="ExtendedOperationEnum.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.IndexedAttribute" sourceFile="IndexedAttribute.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.InterceptorConfiguration" sourceFile="InterceptorConfiguration.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.InterceptorEnum" sourceFile="InterceptorEnum.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.Partition" sourceFile="Partition.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.ReplicationInterceptorConfiguration" sourceFile="ReplicationInterceptorConfiguration.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.SaslQualityOfProtectionEnum" sourceFile="SaslQualityOfProtectionEnum.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.ServerConfigurationV153" sourceFile="ServerConfigurationV153.java" interface="false" size="211" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.ServerXmlIOV153" sourceFile="ServerXmlIOV153.java" interface="false" size="741" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.ServerXmlIOV153$1" sourceFile="ServerXmlIOV153.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v153.SupportedMechanismEnum" sourceFile="SupportedMechanismEnum.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.model.v154" total_bugs="3" total_types="12" total_size="1119" priority_2="1" priority_1="2">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.ExtendedOperationEnum" sourceFile="ExtendedOperationEnum.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.IndexedAttribute" sourceFile="IndexedAttribute.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.InterceptorConfiguration" sourceFile="InterceptorConfiguration.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.InterceptorEnum" sourceFile="InterceptorEnum.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.Partition" sourceFile="Partition.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.ReplicationInterceptorConfiguration" sourceFile="ReplicationInterceptorConfiguration.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.SaslQualityOfProtectionEnum" sourceFile="SaslQualityOfProtectionEnum.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.ServerConfigurationV154" sourceFile="ServerConfigurationV154.java" interface="false" size="211" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.ServerXmlIOV154" sourceFile="ServerXmlIOV154.java" interface="false" size="659" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.ServerXmlIOV154$1" sourceFile="ServerXmlIOV154.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.model.v154.SupportedMechanismEnum" sourceFile="SupportedMechanismEnum.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.directory.studio.apacheds.configuration.wizards" total_bugs="0" total_types="4" total_size="102">
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.wizards.Messages" sourceFile="Messages.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.wizards.NewApacheDSConfigurationFileWizard" sourceFile="NewApacheDSConfigurationFileWizard.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.wizards.NewApacheDSConfigurationFileWizard$1" sourceFile="NewApacheDSConfigurationFileWizard.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.directory.studio.apacheds.configuration.wizards.NewApacheDSConfigurationFileWizardPage" sourceFile="NewApacheDSConfigurationFileWizardPage.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="3704" invocations="2679" avgMicrosecondsPerInvocation="1382" maxMicrosecondsPerInvocation="164405" standardDeviationMircosecondsPerInvocation="6838"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="2608" invocations="2679" avgMicrosecondsPerInvocation="973" maxMicrosecondsPerInvocation="87155" standardDeviationMircosecondsPerInvocation="3956"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="2352" invocations="2746" avgMicrosecondsPerInvocation="856" maxMicrosecondsPerInvocation="87973" standardDeviationMircosecondsPerInvocation="4344"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="2223" invocations="2679" avgMicrosecondsPerInvocation="829" maxMicrosecondsPerInvocation="105034" standardDeviationMircosecondsPerInvocation="4094"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="2218" invocations="2695" avgMicrosecondsPerInvocation="823" maxMicrosecondsPerInvocation="157839" standardDeviationMircosecondsPerInvocation="4685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1717" invocations="1110" avgMicrosecondsPerInvocation="1546" maxMicrosecondsPerInvocation="121970" standardDeviationMircosecondsPerInvocation="6496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1437" invocations="585" avgMicrosecondsPerInvocation="2457" maxMicrosecondsPerInvocation="96878" standardDeviationMircosecondsPerInvocation="8194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1416" invocations="585" avgMicrosecondsPerInvocation="2422" maxMicrosecondsPerInvocation="118792" standardDeviationMircosecondsPerInvocation="9535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1383" invocations="1813" avgMicrosecondsPerInvocation="762" maxMicrosecondsPerInvocation="87905" standardDeviationMircosecondsPerInvocation="3408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="1329" invocations="2679" avgMicrosecondsPerInvocation="496" maxMicrosecondsPerInvocation="60770" standardDeviationMircosecondsPerInvocation="2525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="920" invocations="585" avgMicrosecondsPerInvocation="1574" maxMicrosecondsPerInvocation="77551" standardDeviationMircosecondsPerInvocation="7087"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="831" invocations="520" avgMicrosecondsPerInvocation="1599" maxMicrosecondsPerInvocation="122483" standardDeviationMircosecondsPerInvocation="8484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="624" invocations="2876" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="61491" standardDeviationMircosecondsPerInvocation="1684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="614" invocations="585" avgMicrosecondsPerInvocation="1050" maxMicrosecondsPerInvocation="97526" standardDeviationMircosecondsPerInvocation="5573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="573" invocations="519" avgMicrosecondsPerInvocation="1105" maxMicrosecondsPerInvocation="240916" standardDeviationMircosecondsPerInvocation="12484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="567" invocations="519" avgMicrosecondsPerInvocation="1092" maxMicrosecondsPerInvocation="67607" standardDeviationMircosecondsPerInvocation="4159"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="557" invocations="520" avgMicrosecondsPerInvocation="1072" maxMicrosecondsPerInvocation="129250" standardDeviationMircosecondsPerInvocation="6961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="525" invocations="519" avgMicrosecondsPerInvocation="1012" maxMicrosecondsPerInvocation="42182" standardDeviationMircosecondsPerInvocation="3697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="519" invocations="520" avgMicrosecondsPerInvocation="998" maxMicrosecondsPerInvocation="52046" standardDeviationMircosecondsPerInvocation="4009"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="479" invocations="2679" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="24184" standardDeviationMircosecondsPerInvocation="1018"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="453" invocations="585" avgMicrosecondsPerInvocation="774" maxMicrosecondsPerInvocation="77846" standardDeviationMircosecondsPerInvocation="4159"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="434" invocations="2679" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="96544" standardDeviationMircosecondsPerInvocation="2067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="433" invocations="29445" avgMicrosecondsPerInvocation="14" maxMicrosecondsPerInvocation="63967" standardDeviationMircosecondsPerInvocation="572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="425" invocations="520" avgMicrosecondsPerInvocation="818" maxMicrosecondsPerInvocation="68098" standardDeviationMircosecondsPerInvocation="4040"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="416" invocations="2686" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="69430" standardDeviationMircosecondsPerInvocation="1685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="415" invocations="520" avgMicrosecondsPerInvocation="798" maxMicrosecondsPerInvocation="68119" standardDeviationMircosecondsPerInvocation="4420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="389" invocations="520" avgMicrosecondsPerInvocation="748" maxMicrosecondsPerInvocation="50556" standardDeviationMircosecondsPerInvocation="3807"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="345" invocations="520" avgMicrosecondsPerInvocation="663" maxMicrosecondsPerInvocation="36095" standardDeviationMircosecondsPerInvocation="2799"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="341" invocations="520" avgMicrosecondsPerInvocation="657" maxMicrosecondsPerInvocation="92730" standardDeviationMircosecondsPerInvocation="4744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="334" invocations="520" avgMicrosecondsPerInvocation="643" maxMicrosecondsPerInvocation="59015" standardDeviationMircosecondsPerInvocation="3740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="315" invocations="710" avgMicrosecondsPerInvocation="444" maxMicrosecondsPerInvocation="57721" standardDeviationMircosecondsPerInvocation="2756"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSqlInjection" totalMilliseconds="308" invocations="519" avgMicrosecondsPerInvocation="594" maxMicrosecondsPerInvocation="55314" standardDeviationMircosecondsPerInvocation="3477"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="297" invocations="2389" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="27143" standardDeviationMircosecondsPerInvocation="1122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="284" invocations="520" avgMicrosecondsPerInvocation="547" maxMicrosecondsPerInvocation="69057" standardDeviationMircosecondsPerInvocation="3773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="265" invocations="520" avgMicrosecondsPerInvocation="511" maxMicrosecondsPerInvocation="25202" standardDeviationMircosecondsPerInvocation="2282"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindFieldSelfAssignment" totalMilliseconds="262" invocations="520" avgMicrosecondsPerInvocation="504" maxMicrosecondsPerInvocation="100703" standardDeviationMircosecondsPerInvocation="4745"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="252" invocations="585" avgMicrosecondsPerInvocation="431" maxMicrosecondsPerInvocation="49260" standardDeviationMircosecondsPerInvocation="2727"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="252" invocations="51711" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="26424" standardDeviationMircosecondsPerInvocation="231"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

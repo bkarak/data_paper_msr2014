@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1255541310000" analysisTimestamp="1360878380085" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jasmine/monitoring/jasmine-eos-quickvisu-server/1.2.1-M8/jasmine-eos-quickvisu-server-1.2.1-M8.jar</Jar>
+  </Project>
+  <BugInstance type="SE_BAD_FIELD" priority="1" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jasmine.monitoring.eos.quickvisu.service.QuickVisuService">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.quickvisu.service.QuickVisuService" start="50" end="132" sourcefile="QuickVisuService.java" sourcepath="org/ow2/jasmine/monitoring/eos/quickvisu/service/QuickVisuService.java"/>
+    </Class>
+    <Field classname="org.ow2.jasmine.monitoring.eos.quickvisu.service.QuickVisuService" name="timer" signature="Ljava/util/Timer;" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.quickvisu.service.QuickVisuService" sourcefile="QuickVisuService.java" sourcepath="org/ow2/jasmine/monitoring/eos/quickvisu/service/QuickVisuService.java"/>
+    </Field>
+    <Type descriptor="Ljava/util/Timer;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Timer" start="59" end="428" sourcefile="Timer.java" sourcepath="java/util/Timer.java"/>
+    </Type>
+  </BugInstance>
+  <Errors errors="0" missingClasses="4">
+    <MissingClass>org.ow2.jasmine.monitoring.eos.common.JasmineEventManager</MissingClass>
+    <MissingClass>org.ow2.jasmine.monitoring.eos.common.jms.JMSConnection</MissingClass>
+    <MissingClass>org.ow2.util.log.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 14 Oct 2009 20:28:30 +0300" total_classes="2" referenced_classes="17" total_bugs="1" total_size="47" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="7.03" clock_seconds="9.22" peak_mbytes="49.37" alloc_mbytes="763.88" gc_seconds="0.06" priority_1="1">
+    <PackageStats package="org.ow2.jasmine.monitoring.eos.quickvisu.service" total_bugs="1" total_types="2" total_size="47" priority_1="1">
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.quickvisu.service.QuickVisuService" sourceFile="QuickVisuService.java" interface="false" size="40" bugs="1" priority_1="1"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.quickvisu.service.QuickVisuService$DisconnectTask" sourceFile="QuickVisuService.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1898" invocations="294" avgMicrosecondsPerInvocation="6456" maxMicrosecondsPerInvocation="195626" standardDeviationMircosecondsPerInvocation="21140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="549" invocations="17" avgMicrosecondsPerInvocation="32299" maxMicrosecondsPerInvocation="199276" standardDeviationMircosecondsPerInvocation="58386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="539" invocations="17" avgMicrosecondsPerInvocation="31739" maxMicrosecondsPerInvocation="336889" standardDeviationMircosecondsPerInvocation="78489"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="397" invocations="8" avgMicrosecondsPerInvocation="49731" maxMicrosecondsPerInvocation="395319" standardDeviationMircosecondsPerInvocation="130620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="348" invocations="46" avgMicrosecondsPerInvocation="7578" maxMicrosecondsPerInvocation="72156" standardDeviationMircosecondsPerInvocation="16353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="289" invocations="250" avgMicrosecondsPerInvocation="1159" maxMicrosecondsPerInvocation="42118" standardDeviationMircosecondsPerInvocation="4917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="285" invocations="17" avgMicrosecondsPerInvocation="16803" maxMicrosecondsPerInvocation="136080" standardDeviationMircosecondsPerInvocation="37417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="278" invocations="8" avgMicrosecondsPerInvocation="34824" maxMicrosecondsPerInvocation="186082" standardDeviationMircosecondsPerInvocation="63173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="224" invocations="17" avgMicrosecondsPerInvocation="13183" maxMicrosecondsPerInvocation="74619" standardDeviationMircosecondsPerInvocation="20928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="205" invocations="17" avgMicrosecondsPerInvocation="12060" maxMicrosecondsPerInvocation="66748" standardDeviationMircosecondsPerInvocation="21977"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="179" invocations="27" avgMicrosecondsPerInvocation="6653" maxMicrosecondsPerInvocation="154614" standardDeviationMircosecondsPerInvocation="29067"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

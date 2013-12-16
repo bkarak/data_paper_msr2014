@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1291323911000" analysisTimestamp="1360905235847" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/com/google/appengine/appengine-jsr107cache/1.4.0/appengine-jsr107cache-1.4.0.jar</Jar>
+  </Project>
+  <BugInstance type="BC_VACUOUS_INSTANCEOF" priority="2" abbrev="BC" category="STYLE">
+    <Class classname="com.google.appengine.api.memcache.jsr107cache.GCache">
+      <SourceLine classname="com.google.appengine.api.memcache.jsr107cache.GCache" start="40" end="222" sourcefile="GCache.java" sourcepath="com/google/appengine/api/memcache/jsr107cache/GCache.java"/>
+    </Class>
+    <Method classname="com.google.appengine.api.memcache.jsr107cache.GCache" name="&lt;init&gt;" signature="(Ljava/util/Map;)V" isStatic="false">
+      <SourceLine classname="com.google.appengine.api.memcache.jsr107cache.GCache" start="40" end="95" startBytecode="0" endBytecode="129" sourcefile="GCache.java" sourcepath="com/google/appengine/api/memcache/jsr107cache/GCache.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/Boolean;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Boolean" start="26" end="245" sourcefile="Boolean.java" sourcepath="java/lang/Boolean.java"/>
+    </Type>
+    <Type descriptor="Ljava/lang/Boolean;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.lang.Boolean" start="26" end="245" sourcefile="Boolean.java" sourcepath="java/lang/Boolean.java"/>
+    </Type>
+    <SourceLine classname="com.google.appengine.api.memcache.jsr107cache.GCache" start="84" end="84" startBytecode="238" endBytecode="238" sourcefile="GCache.java" sourcepath="com/google/appengine/api/memcache/jsr107cache/GCache.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="9">
+    <MissingClass>com.google.appengine.api.memcache.Expiration</MissingClass>
+    <MissingClass>com.google.appengine.api.memcache.MemcacheService</MissingClass>
+    <MissingClass>com.google.appengine.api.memcache.MemcacheService$SetPolicy</MissingClass>
+    <MissingClass>com.google.appengine.api.memcache.MemcacheServiceFactory</MissingClass>
+    <MissingClass>com.google.appengine.api.memcache.Stats</MissingClass>
+    <MissingClass>net.sf.jsr107cache.Cache</MissingClass>
+    <MissingClass>net.sf.jsr107cache.CacheEntry</MissingClass>
+    <MissingClass>net.sf.jsr107cache.CacheListener</MissingClass>
+    <MissingClass>net.sf.jsr107cache.CacheStatistics</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 2 Dec 2010 23:05:11 +0200" total_classes="6" referenced_classes="35" total_bugs="1" total_size="189" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="11.07" clock_seconds="5.79" peak_mbytes="54.02" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="1">
+    <PackageStats package="com.google.appengine.api.memcache.jsr107cache" total_bugs="1" total_types="6" total_size="189" priority_2="1">
+      <ClassStats class="com.google.appengine.api.memcache.jsr107cache.GCache" sourceFile="GCache.java" interface="false" size="106" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.appengine.api.memcache.jsr107cache.GCache$1" sourceFile="GCache.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.google.appengine.api.memcache.jsr107cache.GCache$GCacheStats" sourceFile="GCache.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.google.appengine.api.memcache.jsr107cache.GCacheEntry" sourceFile="GCacheEntry.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.google.appengine.api.memcache.jsr107cache.GCacheException" sourceFile="GCacheException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.google.appengine.api.memcache.jsr107cache.GCacheFactory" sourceFile="GCacheFactory.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="937" invocations="376" avgMicrosecondsPerInvocation="2492" maxMicrosecondsPerInvocation="133875" standardDeviationMircosecondsPerInvocation="9251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="434" invocations="35" avgMicrosecondsPerInvocation="12417" maxMicrosecondsPerInvocation="96977" standardDeviationMircosecondsPerInvocation="20425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="264" invocations="35" avgMicrosecondsPerInvocation="7560" maxMicrosecondsPerInvocation="43126" standardDeviationMircosecondsPerInvocation="11545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="179" invocations="35" avgMicrosecondsPerInvocation="5133" maxMicrosecondsPerInvocation="22217" standardDeviationMircosecondsPerInvocation="7158"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="148" invocations="6" avgMicrosecondsPerInvocation="24807" maxMicrosecondsPerInvocation="142278" standardDeviationMircosecondsPerInvocation="52552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="147" invocations="327" avgMicrosecondsPerInvocation="449" maxMicrosecondsPerInvocation="18745" standardDeviationMircosecondsPerInvocation="1749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="126" invocations="35" avgMicrosecondsPerInvocation="3613" maxMicrosecondsPerInvocation="54793" standardDeviationMircosecondsPerInvocation="9590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="108" invocations="48" avgMicrosecondsPerInvocation="2255" maxMicrosecondsPerInvocation="54076" standardDeviationMircosecondsPerInvocation="7768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="106" invocations="118" avgMicrosecondsPerInvocation="903" maxMicrosecondsPerInvocation="13676" standardDeviationMircosecondsPerInvocation="1423"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="94" invocations="49" avgMicrosecondsPerInvocation="1934" maxMicrosecondsPerInvocation="25384" standardDeviationMircosecondsPerInvocation="4226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="91" invocations="45" avgMicrosecondsPerInvocation="2034" maxMicrosecondsPerInvocation="30289" standardDeviationMircosecondsPerInvocation="5329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="90" invocations="48" avgMicrosecondsPerInvocation="1884" maxMicrosecondsPerInvocation="22379" standardDeviationMircosecondsPerInvocation="3910"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="82" invocations="35" avgMicrosecondsPerInvocation="2367" maxMicrosecondsPerInvocation="11197" standardDeviationMircosecondsPerInvocation="2652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="78" invocations="48" avgMicrosecondsPerInvocation="1641" maxMicrosecondsPerInvocation="72256" standardDeviationMircosecondsPerInvocation="10302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="76" invocations="48" avgMicrosecondsPerInvocation="1595" maxMicrosecondsPerInvocation="12577" standardDeviationMircosecondsPerInvocation="2636"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="66" invocations="35" avgMicrosecondsPerInvocation="1900" maxMicrosecondsPerInvocation="9115" standardDeviationMircosecondsPerInvocation="2604"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="64" invocations="48" avgMicrosecondsPerInvocation="1346" maxMicrosecondsPerInvocation="16378" standardDeviationMircosecondsPerInvocation="2503"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

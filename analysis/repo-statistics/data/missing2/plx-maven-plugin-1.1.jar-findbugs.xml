@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1214494331000" analysisTimestamp="1360878906980" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/sonatype/plugins/plx-maven-plugin/1.1/plx-maven-plugin-1.1.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter">
+      <SourceLine classname="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter" start="35" end="208" sourcefile="ClassworldsConfWriter.java" sourcepath="org/sonatype/plexus/classworlds/io/ClassworldsConfWriter.java"/>
+    </Class>
+    <Method classname="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter" name="_write" signature="(Ljava/io/File;Lorg/sonatype/plexus/classworlds/model/ClassworldsAppConfiguration;Ljava/util/Map;Lorg/apache/velocity/app/VelocityEngine;)V" isStatic="false">
+      <SourceLine classname="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter" start="169" end="208" startBytecode="0" endBytecode="525" sourcefile="ClassworldsConfWriter.java" sourcepath="org/sonatype/plexus/classworlds/io/ClassworldsConfWriter.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter" start="194" end="194" startBytecode="168" endBytecode="168" sourcefile="ClassworldsConfWriter.java" sourcepath="org/sonatype/plexus/classworlds/io/ClassworldsConfWriter.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter">
+      <SourceLine classname="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter" start="35" end="208" sourcefile="ClassworldsConfWriter.java" sourcepath="org/sonatype/plexus/classworlds/io/ClassworldsConfWriter.java"/>
+    </Class>
+    <Method classname="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter" name="_write" signature="(Ljava/io/File;Lorg/sonatype/plexus/classworlds/model/ClassworldsAppConfiguration;Ljava/util/Map;Lorg/apache/velocity/app/VelocityEngine;)V" isStatic="false">
+      <SourceLine classname="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter" start="169" end="208" startBytecode="0" endBytecode="525" sourcefile="ClassworldsConfWriter.java" sourcepath="org/sonatype/plexus/classworlds/io/ClassworldsConfWriter.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter" start="193" end="193" startBytecode="159" endBytecode="159" sourcefile="ClassworldsConfWriter.java" sourcepath="org/sonatype/plexus/classworlds/io/ClassworldsConfWriter.java"/>
+  </BugInstance>
+  <BugInstance type="UW_UNCOND_WAIT" priority="2" abbrev="UW" category="MT_CORRECTNESS">
+    <Class classname="org.sonatype.plexus.maven.plugin.PlexusRunMojo">
+      <SourceLine classname="org.sonatype.plexus.maven.plugin.PlexusRunMojo" start="64" end="595" sourcefile="PlexusRunMojo.java" sourcepath="org/sonatype/plexus/maven/plugin/PlexusRunMojo.java"/>
+    </Class>
+    <Method classname="org.sonatype.plexus.maven.plugin.PlexusRunMojo" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.sonatype.plexus.maven.plugin.PlexusRunMojo" start="243" end="327" startBytecode="0" endBytecode="609" sourcefile="PlexusRunMojo.java" sourcepath="org/sonatype/plexus/maven/plugin/PlexusRunMojo.java"/>
+    </Method>
+    <SourceLine classname="org.sonatype.plexus.maven.plugin.PlexusRunMojo" start="313" end="313" startBytecode="216" endBytecode="216" sourcefile="PlexusRunMojo.java" sourcepath="org/sonatype/plexus/maven/plugin/PlexusRunMojo.java"/>
+  </BugInstance>
+  <BugInstance type="WA_NOT_IN_LOOP" priority="2" abbrev="Wa" category="MT_CORRECTNESS">
+    <Class classname="org.sonatype.plexus.maven.plugin.PlexusRunMojo">
+      <SourceLine classname="org.sonatype.plexus.maven.plugin.PlexusRunMojo" start="64" end="595" sourcefile="PlexusRunMojo.java" sourcepath="org/sonatype/plexus/maven/plugin/PlexusRunMojo.java"/>
+    </Class>
+    <Method classname="org.sonatype.plexus.maven.plugin.PlexusRunMojo" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.sonatype.plexus.maven.plugin.PlexusRunMojo" start="243" end="327" startBytecode="0" endBytecode="609" sourcefile="PlexusRunMojo.java" sourcepath="org/sonatype/plexus/maven/plugin/PlexusRunMojo.java"/>
+    </Method>
+    <SourceLine classname="org.sonatype.plexus.maven.plugin.PlexusRunMojo" start="313" end="313" startBytecode="216" endBytecode="216" sourcefile="PlexusRunMojo.java" sourcepath="org/sonatype/plexus/maven/plugin/PlexusRunMojo.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>org.apache.maven.artifact.Artifact</MissingClass>
+    <MissingClass>org.apache.maven.artifact.factory.ArtifactFactory</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.ArtifactResolver</MissingClass>
+    <MissingClass>org.apache.maven.model.Dependency</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoFailureException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.apache.velocity.Template</MissingClass>
+    <MissingClass>org.apache.velocity.VelocityContext</MissingClass>
+    <MissingClass>org.apache.velocity.app.Velocity</MissingClass>
+    <MissingClass>org.apache.velocity.app.VelocityEngine</MissingClass>
+    <MissingClass>org.apache.velocity.context.Context</MissingClass>
+    <MissingClass>org.apache.velocity.exception.ParseErrorException</MissingClass>
+    <MissingClass>org.apache.velocity.exception.ResourceNotFoundException</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.IOUtil</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.StringUtils</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.Arg</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.CommandLineException</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.Commandline</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.StreamConsumer</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.StreamPumper</MissingClass>
+    <MissingClass>org.sonatype.appbooter.ctl.ControllerClient</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 26 Jun 2008 18:32:11 +0300" total_classes="11" referenced_classes="52" total_bugs="4" total_size="460" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="15.78" clock_seconds="16.29" peak_mbytes="60.92" alloc_mbytes="763.88" gc_seconds="0.18" priority_2="3" priority_1="1">
+    <PackageStats package="org.sonatype.plexus.classworlds.io" total_bugs="2" total_types="2" total_size="84" priority_2="1" priority_1="1">
+      <ClassStats class="org.sonatype.plexus.classworlds.io.ClassworldsConfWriter" sourceFile="ClassworldsConfWriter.java" interface="false" size="77" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.sonatype.plexus.classworlds.io.ClassworldsIOException" sourceFile="ClassworldsIOException.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonatype.plexus.classworlds.model" total_bugs="0" total_types="2" total_size="82">
+      <ClassStats class="org.sonatype.plexus.classworlds.model.ClassworldsAppConfiguration" sourceFile="ClassworldsAppConfiguration.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.sonatype.plexus.classworlds.model.ClassworldsRealmConfiguration" sourceFile="ClassworldsRealmConfiguration.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonatype.plexus.classworlds.validator" total_bugs="0" total_types="2" total_size="50">
+      <ClassStats class="org.sonatype.plexus.classworlds.validator.ClassworldsModelValidator" sourceFile="ClassworldsModelValidator.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.sonatype.plexus.classworlds.validator.ClassworldsValidationResult" sourceFile="ClassworldsValidationResult.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonatype.plexus.maven.plugin" total_bugs="2" total_types="5" total_size="244" priority_2="2">
+      <ClassStats class="org.sonatype.plexus.maven.plugin.PlatformArtifact" sourceFile="PlatformArtifact.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.sonatype.plexus.maven.plugin.PlexusRunMojo" sourceFile="PlexusRunMojo.java" interface="false" size="180" bugs="2" priority_2="2"/>
+      <ClassStats class="org.sonatype.plexus.maven.plugin.PlexusRunMojo$1" sourceFile="PlexusRunMojo.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonatype.plexus.maven.plugin.PlexusRunMojo$ShutdownHook" sourceFile="PlexusRunMojo.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.sonatype.plexus.maven.plugin.PlexusStopMojo" sourceFile="PlexusStopMojo.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1308" invocations="429" avgMicrosecondsPerInvocation="3049" maxMicrosecondsPerInvocation="119295" standardDeviationMircosecondsPerInvocation="10843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="803" invocations="52" avgMicrosecondsPerInvocation="15458" maxMicrosecondsPerInvocation="123402" standardDeviationMircosecondsPerInvocation="29298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="764" invocations="74" avgMicrosecondsPerInvocation="10337" maxMicrosecondsPerInvocation="113772" standardDeviationMircosecondsPerInvocation="20508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="737" invocations="73" avgMicrosecondsPerInvocation="10096" maxMicrosecondsPerInvocation="123762" standardDeviationMircosecondsPerInvocation="21004"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="689" invocations="52" avgMicrosecondsPerInvocation="13259" maxMicrosecondsPerInvocation="90571" standardDeviationMircosecondsPerInvocation="24055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="682" invocations="73" avgMicrosecondsPerInvocation="9347" maxMicrosecondsPerInvocation="116211" standardDeviationMircosecondsPerInvocation="19850"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="650" invocations="73" avgMicrosecondsPerInvocation="8907" maxMicrosecondsPerInvocation="107650" standardDeviationMircosecondsPerInvocation="17965"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="608" invocations="74" avgMicrosecondsPerInvocation="8226" maxMicrosecondsPerInvocation="148014" standardDeviationMircosecondsPerInvocation="21942"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="382" invocations="73" avgMicrosecondsPerInvocation="5244" maxMicrosecondsPerInvocation="110208" standardDeviationMircosecondsPerInvocation="14974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="361" invocations="51" avgMicrosecondsPerInvocation="7086" maxMicrosecondsPerInvocation="73441" standardDeviationMircosecondsPerInvocation="13732"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="302" invocations="52" avgMicrosecondsPerInvocation="5824" maxMicrosecondsPerInvocation="60983" standardDeviationMircosecondsPerInvocation="13067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="281" invocations="52" avgMicrosecondsPerInvocation="5422" maxMicrosecondsPerInvocation="63667" standardDeviationMircosecondsPerInvocation="13047"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="269" invocations="361" avgMicrosecondsPerInvocation="747" maxMicrosecondsPerInvocation="31647" standardDeviationMircosecondsPerInvocation="3052"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="256" invocations="52" avgMicrosecondsPerInvocation="4936" maxMicrosecondsPerInvocation="88158" standardDeviationMircosecondsPerInvocation="17234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="251" invocations="176" avgMicrosecondsPerInvocation="1430" maxMicrosecondsPerInvocation="31747" standardDeviationMircosecondsPerInvocation="3783"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="213" invocations="432" avgMicrosecondsPerInvocation="494" maxMicrosecondsPerInvocation="119285" standardDeviationMircosecondsPerInvocation="5861"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="196" invocations="73" avgMicrosecondsPerInvocation="2695" maxMicrosecondsPerInvocation="145069" standardDeviationMircosecondsPerInvocation="17015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="185" invocations="52" avgMicrosecondsPerInvocation="3574" maxMicrosecondsPerInvocation="36914" standardDeviationMircosecondsPerInvocation="7016"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="162" invocations="73" avgMicrosecondsPerInvocation="2225" maxMicrosecondsPerInvocation="25975" standardDeviationMircosecondsPerInvocation="5377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="148" invocations="11" avgMicrosecondsPerInvocation="13529" maxMicrosecondsPerInvocation="99125" standardDeviationMircosecondsPerInvocation="28746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="148" invocations="82" avgMicrosecondsPerInvocation="1806" maxMicrosecondsPerInvocation="52682" standardDeviationMircosecondsPerInvocation="6949"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

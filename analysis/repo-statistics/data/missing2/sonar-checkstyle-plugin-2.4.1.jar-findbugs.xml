@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1290088241000" analysisTimestamp="1360878292578" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/sonar/plugins/sonar-checkstyle-plugin/2.4.1/sonar-checkstyle-plugin-2.4.1.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.puppycrawl.tools.checkstyle.DefaultLogger">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.DefaultLogger" start="64" end="166" sourcefile="DefaultLogger.java" sourcepath="com/puppycrawl/tools/checkstyle/DefaultLogger.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.DefaultLogger" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;ZLjava/io/OutputStream;Z)V" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.DefaultLogger" start="79" end="86" startBytecode="0" endBytecode="153" sourcefile="DefaultLogger.java" sourcepath="com/puppycrawl/tools/checkstyle/DefaultLogger.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.DefaultLogger" start="82" end="82" startBytecode="21" endBytecode="21" sourcefile="DefaultLogger.java" sourcepath="com/puppycrawl/tools/checkstyle/DefaultLogger.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.puppycrawl.tools.checkstyle.DefaultLogger">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.DefaultLogger" start="64" end="166" sourcefile="DefaultLogger.java" sourcepath="com/puppycrawl/tools/checkstyle/DefaultLogger.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.DefaultLogger" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;ZLjava/io/OutputStream;Z)V" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.DefaultLogger" start="79" end="86" startBytecode="0" endBytecode="153" sourcefile="DefaultLogger.java" sourcepath="com/puppycrawl/tools/checkstyle/DefaultLogger.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.DefaultLogger" start="83" end="83" startBytecode="45" endBytecode="45" sourcefile="DefaultLogger.java" sourcepath="com/puppycrawl/tools/checkstyle/DefaultLogger.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="com.puppycrawl.tools.checkstyle.Main">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.Main" start="46" end="288" sourcefile="Main.java" sourcepath="com/puppycrawl/tools/checkstyle/Main.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.Main" name="loadProperties" signature="(Ljava/io/File;)Ljava/util/Properties;" isStatic="true">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.Main" start="272" end="288" startBytecode="0" endBytecode="244" sourcefile="Main.java" sourcepath="com/puppycrawl/tools/checkstyle/Main.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.Main" start="275" end="275" startBytecode="15" endBytecode="15" sourcefile="Main.java" sourcepath="com/puppycrawl/tools/checkstyle/Main.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.Main" start="276" end="276" startBytecode="19" endBytecode="19" sourcefile="Main.java" sourcepath="com/puppycrawl/tools/checkstyle/Main.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.Main" start="278" end="278" startBytecode="31" endBytecode="31" sourcefile="Main.java" sourcepath="com/puppycrawl/tools/checkstyle/Main.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.Main" start="279" end="279" startBytecode="32" endBytecode="32" sourcefile="Main.java" sourcepath="com/puppycrawl/tools/checkstyle/Main.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.Main" start="281" end="281" startBytecode="60" endBytecode="60" sourcefile="Main.java" sourcepath="com/puppycrawl/tools/checkstyle/Main.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.Main" start="282" end="282" startBytecode="67" endBytecode="67" sourcefile="Main.java" sourcepath="com/puppycrawl/tools/checkstyle/Main.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="SE_TRANSIENT_FIELD_NOT_RESTORED" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="com.puppycrawl.tools.checkstyle.api.AuditEvent">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.api.AuditEvent" start="55" end="142" sourcefile="AuditEvent.java" sourcepath="com/puppycrawl/tools/checkstyle/api/AuditEvent.java"/>
+    </Class>
+    <Field classname="com.puppycrawl.tools.checkstyle.api.AuditEvent" name="mMessage" signature="Lcom/puppycrawl/tools/checkstyle/api/LocalizedMessage;" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.api.AuditEvent" sourcefile="AuditEvent.java" sourcepath="com/puppycrawl/tools/checkstyle/api/AuditEvent.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.puppycrawl.tools.checkstyle.checks.LineSeparatorOption">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.checks.LineSeparatorOption" start="27" end="70" sourcefile="LineSeparatorOption.java" sourcepath="com/puppycrawl/tools/checkstyle/checks/LineSeparatorOption.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.checks.LineSeparatorOption" name="matches" signature="([B)Z" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.checks.LineSeparatorOption" start="60" end="61" startBytecode="0" endBytecode="83" sourcefile="LineSeparatorOption.java" sourcepath="com/puppycrawl/tools/checkstyle/checks/LineSeparatorOption.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.checks.LineSeparatorOption" start="60" end="60" startBytecode="5" endBytecode="5" sourcefile="LineSeparatorOption.java" sourcepath="com/puppycrawl/tools/checkstyle/checks/LineSeparatorOption.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_FALLTHROUGH" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck" start="90" end="381" sourcefile="ImportOrderCheck.java" sourcepath="com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck" name="visitToken" signature="(Lcom/puppycrawl/tools/checkstyle/api/DetailAST;)V" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck" start="210" end="257" startBytecode="0" endBytecode="385" sourcefile="ImportOrderCheck.java" sourcepath="com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java"/>
+    </Method>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck" start="224" end="230" startBytecode="100" endBytecode="103" sourcefile="ImportOrderCheck.java" sourcepath="com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck" start="241" end="247" startBytecode="158" endBytecode="161" sourcefile="ImportOrderCheck.java" sourcepath="com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.puppycrawl.tools.checkstyle.doclets.CheckDocsDoclet">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.doclets.CheckDocsDoclet" start="39" end="247" sourcefile="CheckDocsDoclet.java" sourcepath="com/puppycrawl/tools/checkstyle/doclets/CheckDocsDoclet.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.doclets.CheckDocsDoclet" name="start" signature="(Lcom/sun/javadoc/RootDoc;)Z" isStatic="true">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.doclets.CheckDocsDoclet" start="153" end="202" startBytecode="0" endBytecode="519" sourcefile="CheckDocsDoclet.java" sourcepath="com/puppycrawl/tools/checkstyle/doclets/CheckDocsDoclet.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.doclets.CheckDocsDoclet" start="158" end="158" startBytecode="44" endBytecode="44" sourcefile="CheckDocsDoclet.java" sourcepath="com/puppycrawl/tools/checkstyle/doclets/CheckDocsDoclet.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.puppycrawl.tools.checkstyle.doclets.TokenTypesDoclet">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.doclets.TokenTypesDoclet" start="36" end="140" sourcefile="TokenTypesDoclet.java" sourcepath="com/puppycrawl/tools/checkstyle/doclets/TokenTypesDoclet.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.doclets.TokenTypesDoclet" name="start" signature="(Lcom/sun/javadoc/RootDoc;)Z" isStatic="true">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.doclets.TokenTypesDoclet" start="50" end="84" startBytecode="0" endBytecode="514" sourcefile="TokenTypesDoclet.java" sourcepath="com/puppycrawl/tools/checkstyle/doclets/TokenTypesDoclet.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="62" end="63" startBytecode="0" endBytecode="34" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.doclets.TokenTypesDoclet" start="54" end="54" startBytecode="26" endBytecode="26" sourcefile="TokenTypesDoclet.java" sourcepath="com/puppycrawl/tools/checkstyle/doclets/TokenTypesDoclet.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter" start="75" end="518" sourcefile="SuppressWithNearbyCommentFilter.java" sourcepath="com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter" start="310" end="323" startBytecode="0" endBytecode="173" sourcefile="SuppressWithNearbyCommentFilter.java" sourcepath="com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java"/>
+    </Method>
+    <Field classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter" name="DEFAULT_MESSAGE_FORMAT" signature="Ljava/lang/String;" isStatic="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter" sourcefile="SuppressWithNearbyCommentFilter.java" sourcepath="com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java"/>
+    </Field>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter" start="317" end="317" startBytecode="58" endBytecode="58" sourcefile="SuppressWithNearbyCommentFilter.java" sourcepath="com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter$Tag">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter$Tag" start="82" end="250" sourcefile="SuppressWithNearbyCommentFilter.java" sourcepath="com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter$Tag" name="compareTo" signature="(Lcom/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter$Tag;)I" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter$Tag" start="184" end="188" startBytecode="0" endBytecode="90" sourcefile="SuppressWithNearbyCommentFilter.java" sourcepath="com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="com.puppycrawl.tools.checkstyle.filters.SuppressionCommentFilter$Tag">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.filters.SuppressionCommentFilter$Tag" start="70" end="246" sourcefile="SuppressionCommentFilter.java" sourcepath="com/puppycrawl/tools/checkstyle/filters/SuppressionCommentFilter.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.filters.SuppressionCommentFilter$Tag" name="compareTo" signature="(Lcom/puppycrawl/tools/checkstyle/filters/SuppressionCommentFilter$Tag;)I" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.filters.SuppressionCommentFilter$Tag" start="188" end="192" startBytecode="0" endBytecode="90" sourcefile="SuppressionCommentFilter.java" sourcepath="com/puppycrawl/tools/checkstyle/filters/SuppressionCommentFilter.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="41" end="2986" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" name="&lt;init&gt;" signature="(Lantlr/LexerSharedInputState;)V" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="77" end="130" startBytecode="0" endBytecode="1644" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="81" end="81" startBytecode="61" endBytecode="61" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="82" end="82" startBytecode="88" endBytecode="88" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="83" end="83" startBytecode="115" endBytecode="115" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="84" end="84" startBytecode="142" endBytecode="142" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="85" end="85" startBytecode="169" endBytecode="169" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="86" end="86" startBytecode="196" endBytecode="196" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="88" end="88" startBytecode="251" endBytecode="251" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="89" end="89" startBytecode="278" endBytecode="278" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="90" end="90" startBytecode="305" endBytecode="305" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="91" end="91" startBytecode="332" endBytecode="332" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="92" end="92" startBytecode="359" endBytecode="359" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="93" end="93" startBytecode="386" endBytecode="386" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="94" end="94" startBytecode="413" endBytecode="413" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="96" end="96" startBytecode="468" endBytecode="468" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="97" end="97" startBytecode="495" endBytecode="495" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="98" end="98" startBytecode="522" endBytecode="522" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="99" end="99" startBytecode="549" endBytecode="549" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="100" end="100" startBytecode="576" endBytecode="576" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="101" end="101" startBytecode="603" endBytecode="603" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="102" end="102" startBytecode="630" endBytecode="630" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="103" end="103" startBytecode="657" endBytecode="657" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="104" end="104" startBytecode="684" endBytecode="684" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="105" end="105" startBytecode="711" endBytecode="711" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="106" end="106" startBytecode="738" endBytecode="738" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="107" end="107" startBytecode="765" endBytecode="765" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="108" end="108" startBytecode="792" endBytecode="792" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="109" end="109" startBytecode="819" endBytecode="819" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="110" end="110" startBytecode="846" endBytecode="846" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="111" end="111" startBytecode="873" endBytecode="873" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="112" end="112" startBytecode="900" endBytecode="900" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="113" end="113" startBytecode="927" endBytecode="927" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="114" end="114" startBytecode="954" endBytecode="954" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="115" end="115" startBytecode="981" endBytecode="981" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="116" end="116" startBytecode="1008" endBytecode="1008" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="117" end="117" startBytecode="1035" endBytecode="1035" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="119" end="119" startBytecode="1090" endBytecode="1090" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="120" end="120" startBytecode="1117" endBytecode="1117" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="121" end="121" startBytecode="1144" endBytecode="1144" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="122" end="122" startBytecode="1171" endBytecode="1171" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="123" end="123" startBytecode="1198" endBytecode="1198" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="124" end="124" startBytecode="1225" endBytecode="1225" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="125" end="125" startBytecode="1252" endBytecode="1252" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="126" end="126" startBytecode="1279" endBytecode="1279" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="127" end="127" startBytecode="1306" endBytecode="1306" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" start="129" end="129" startBytecode="1361" endBytecode="1361" sourcefile="GeneratedJavaLexer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaLexer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="41" end="7789" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" name="typeArgumentsOrParametersEnd" signature="()V" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="1368" end="1415" startBytecode="0" endBytecode="100" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Method>
+    <LocalVariable name="currentAST" register="1" pc="13" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="1369" end="1369" startBytecode="12" endBytecode="12" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="currentAST"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="41" end="7789" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Class>
+    <Field classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" name="_tokenNames" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Field>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="7367" end="7367" startBytecode="1329" endBytecode="1329" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="41" end="7789" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" name="annotationField" signature="()V" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="2870" end="2996" startBytecode="0" endBytecode="1265" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Method>
+    <LocalVariable name="annotationField_AST" register="2" pc="703" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Field classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" name="returnAST" signature="Lantlr/collections/AST;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Field>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="2974" end="2974" startBytecode="692" endBytecode="692" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="2977" end="2977" startBytecode="704" endBytecode="704" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="41" end="7789" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" name="enumConstantField" signature="()V" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="3521" end="3746" startBytecode="0" endBytecode="1993" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Method>
+    <LocalVariable name="enumConstantField_AST" register="2" pc="1181" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Field classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" name="returnAST" signature="Lantlr/collections/AST;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Field>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="3703" end="3703" startBytecode="1170" endBytecode="1170" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="3706" end="3706" startBytecode="1182" endBytecode="1182" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="41" end="7789" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Class>
+    <Method classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" name="field" signature="()V" isStatic="false">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="3138" end="3376" startBytecode="0" endBytecode="2342" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Method>
+    <LocalVariable name="field_AST" register="2" pc="1169" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Field classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" name="returnAST" signature="Lantlr/collections/AST;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    </Field>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="3314" end="3314" startBytecode="1158" endBytecode="1158" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java"/>
+    <SourceLine classname="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" start="3317" end="3317" startBytecode="1170" endBytecode="1170" sourcefile="GeneratedJavaRecognizer.java" sourcepath="com/puppycrawl/tools/checkstyle/grammars/GeneratedJavaRecognizer.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.sonar.plugins.checkstyle.CheckstyleRuleRepository">
+      <SourceLine classname="org.sonar.plugins.checkstyle.CheckstyleRuleRepository" start="39" end="52" sourcefile="CheckstyleRuleRepository.java" sourcepath="org/sonar/plugins/checkstyle/CheckstyleRuleRepository.java"/>
+    </Class>
+    <Method classname="org.sonar.plugins.checkstyle.CheckstyleRuleRepository" name="createRules" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.sonar.plugins.checkstyle.CheckstyleRuleRepository" start="47" end="52" startBytecode="0" endBytecode="201" sourcefile="CheckstyleRuleRepository.java" sourcepath="org/sonar/plugins/checkstyle/CheckstyleRuleRepository.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.sonar.plugins.checkstyle.CheckstyleRuleRepository" start="48" end="48" startBytecode="19" endBytecode="19" sourcefile="CheckstyleRuleRepository.java" sourcepath="org/sonar/plugins/checkstyle/CheckstyleRuleRepository.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.sonar.plugins.checkstyle.CheckstyleRuleRepository" start="49" end="49" startBytecode="31" endBytecode="31" sourcefile="CheckstyleRuleRepository.java" sourcepath="org/sonar/plugins/checkstyle/CheckstyleRuleRepository.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sonar.plugins.checkstyle.CheckstyleRuleRepository" start="52" end="52" startBytecode="94" endBytecode="94" sourcefile="CheckstyleRuleRepository.java" sourcepath="org/sonar/plugins/checkstyle/CheckstyleRuleRepository.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="114">
+    <MissingClass>antlr.ANTLRException</MissingClass>
+    <MissingClass>antlr.ANTLRHashString</MissingClass>
+    <MissingClass>antlr.ANTLRStringBuffer</MissingClass>
+    <MissingClass>antlr.ASTFactory</MissingClass>
+    <MissingClass>antlr.ASTPair</MissingClass>
+    <MissingClass>antlr.ByteBuffer</MissingClass>
+    <MissingClass>antlr.CharBuffer</MissingClass>
+    <MissingClass>antlr.CharScanner</MissingClass>
+    <MissingClass>antlr.CharStreamException</MissingClass>
+    <MissingClass>antlr.CharStreamIOException</MissingClass>
+    <MissingClass>antlr.CommonAST</MissingClass>
+    <MissingClass>antlr.CommonToken</MissingClass>
+    <MissingClass>antlr.LLkParser</MissingClass>
+    <MissingClass>antlr.LexerSharedInputState</MissingClass>
+    <MissingClass>antlr.NoViableAltException</MissingClass>
+    <MissingClass>antlr.NoViableAltForCharException</MissingClass>
+    <MissingClass>antlr.ParserSharedInputState</MissingClass>
+    <MissingClass>antlr.RecognitionException</MissingClass>
+    <MissingClass>antlr.SemanticException</MissingClass>
+    <MissingClass>antlr.Token</MissingClass>
+    <MissingClass>antlr.TokenStreamException</MissingClass>
+    <MissingClass>antlr.TokenStreamIOException</MissingClass>
+    <MissingClass>antlr.TokenStreamRecognitionException</MissingClass>
+    <MissingClass>antlr.collections.AST</MissingClass>
+    <MissingClass>antlr.collections.impl.ASTArray</MissingClass>
+    <MissingClass>antlr.collections.impl.BitSet</MissingClass>
+    <MissingClass>com.google.common.collect.ArrayListMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.HashMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableList</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMap$Builder</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableSortedSet</MissingClass>
+    <MissingClass>com.google.common.collect.ListMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.google.common.collect.MapMaker</MissingClass>
+    <MissingClass>com.google.common.collect.Maps</MissingClass>
+    <MissingClass>com.google.common.collect.Multimap</MissingClass>
+    <MissingClass>com.google.common.collect.Sets</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.BeanUtilsBean</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.ConversionException</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.ConvertUtilsBean</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.PropertyUtils</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.PropertyUtilsBean</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.AbstractArrayConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.BooleanArrayConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.BooleanConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.ByteArrayConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.ByteConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.CharacterArrayConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.CharacterConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.DoubleArrayConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.DoubleConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.FloatArrayConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.FloatConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.IntegerArrayConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.IntegerConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.LongArrayConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.LongConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.ShortArrayConverter</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.converters.ShortConverter</MissingClass>
+    <MissingClass>org.apache.commons.cli.CommandLine</MissingClass>
+    <MissingClass>org.apache.commons.cli.CommandLineParser</MissingClass>
+    <MissingClass>org.apache.commons.cli.HelpFormatter</MissingClass>
+    <MissingClass>org.apache.commons.cli.Options</MissingClass>
+    <MissingClass>org.apache.commons.cli.ParseException</MissingClass>
+    <MissingClass>org.apache.commons.cli.PosixParser</MissingClass>
+    <MissingClass>org.apache.commons.configuration.BaseConfiguration</MissingClass>
+    <MissingClass>org.apache.commons.configuration.Configuration</MissingClass>
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringEscapeUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.tools.ant.AntClassLoader</MissingClass>
+    <MissingClass>org.apache.tools.ant.BuildException</MissingClass>
+    <MissingClass>org.apache.tools.ant.DirectoryScanner</MissingClass>
+    <MissingClass>org.apache.tools.ant.Project</MissingClass>
+    <MissingClass>org.apache.tools.ant.Task</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.LogOutputStream</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.EnumeratedAttribute</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.FileSet</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.Path</MissingClass>
+    <MissingClass>org.codehaus.stax2.XMLInputFactory2</MissingClass>
+    <MissingClass>org.codehaus.staxmate.SMInputFactory</MissingClass>
+    <MissingClass>org.codehaus.staxmate.in.SMHierarchicCursor</MissingClass>
+    <MissingClass>org.codehaus.staxmate.in.SMInputCursor</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.sonar.api.batch.ProjectClasspath</MissingClass>
+    <MissingClass>org.sonar.api.batch.SensorContext</MissingClass>
+    <MissingClass>org.sonar.api.batch.maven.MavenPlugin</MissingClass>
+    <MissingClass>org.sonar.api.platform.ServerFileSystem</MissingClass>
+    <MissingClass>org.sonar.api.profiles.ProfileDefinition</MissingClass>
+    <MissingClass>org.sonar.api.profiles.ProfileExporter</MissingClass>
+    <MissingClass>org.sonar.api.profiles.ProfileImporter</MissingClass>
+    <MissingClass>org.sonar.api.profiles.RulesProfile</MissingClass>
+    <MissingClass>org.sonar.api.profiles.XMLProfileParser</MissingClass>
+    <MissingClass>org.sonar.api.resources.Java</MissingClass>
+    <MissingClass>org.sonar.api.resources.JavaFile</MissingClass>
+    <MissingClass>org.sonar.api.resources.Project</MissingClass>
+    <MissingClass>org.sonar.api.resources.ProjectFileSystem</MissingClass>
+    <MissingClass>org.sonar.api.rules.ActiveRule</MissingClass>
+    <MissingClass>org.sonar.api.rules.Rule</MissingClass>
+    <MissingClass>org.sonar.api.rules.RuleFinder</MissingClass>
+    <MissingClass>org.sonar.api.rules.RuleParam</MissingClass>
+    <MissingClass>org.sonar.api.rules.RulePriority</MissingClass>
+    <MissingClass>org.sonar.api.rules.RuleQuery</MissingClass>
+    <MissingClass>org.sonar.api.rules.RuleRepository</MissingClass>
+    <MissingClass>org.sonar.api.rules.Violation</MissingClass>
+    <MissingClass>org.sonar.api.rules.XMLRuleParser</MissingClass>
+    <MissingClass>org.sonar.api.utils.SonarException</MissingClass>
+    <MissingClass>org.sonar.api.utils.TimeProfiler</MissingClass>
+    <MissingClass>org.sonar.api.utils.ValidationMessages</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 18 Nov 2010 15:50:41 +0200" total_classes="366" referenced_classes="842" total_bugs="18" total_size="18845" num_packages="23" vm_version="20.4-b02-402" cpu_seconds="74.90" clock_seconds="81.32" peak_mbytes="183.53" alloc_mbytes="763.88" gc_seconds="2.84" priority_2="12" priority_1="6">
+    <PackageStats package="com.puppycrawl.tools.checkstyle" total_bugs="3" total_types="23" total_size="1423" priority_2="1" priority_1="2">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.CheckStyleTask" sourceFile="CheckStyleTask.java" interface="false" size="186" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.CheckStyleTask$Formatter" sourceFile="CheckStyleTask.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.CheckStyleTask$FormatterType" sourceFile="CheckStyleTask.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.CheckStyleTask$Listener" sourceFile="CheckStyleTask.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.CheckStyleTask$Property" sourceFile="CheckStyleTask.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.Checker" sourceFile="Checker.java" interface="false" size="238" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.ConfigurationLoader" sourceFile="ConfigurationLoader.java" interface="false" size="121" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.ConfigurationLoader$1" sourceFile="ConfigurationLoader.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.ConfigurationLoader$InternalLoader" sourceFile="ConfigurationLoader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.DefaultConfiguration" sourceFile="DefaultConfiguration.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.DefaultContext" sourceFile="DefaultContext.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.DefaultLogger" sourceFile="DefaultLogger.java" interface="false" size="57" bugs="2" priority_1="2"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.Defn" sourceFile="Defn.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.Main" sourceFile="Main.java" interface="false" size="117" bugs="1" priority_2="1"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.ModuleFactory" sourceFile="ModuleFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.PackageNamesLoader" sourceFile="PackageNamesLoader.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.PackageObjectFactory" sourceFile="PackageObjectFactory.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.PropertiesExpander" sourceFile="PropertiesExpander.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.PropertyCacheFile" sourceFile="PropertyCacheFile.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.PropertyResolver" sourceFile="PropertyResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.StringArrayReader" sourceFile="StringArrayReader.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.TreeWalker" sourceFile="TreeWalker.java" interface="false" size="183" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.XMLLogger" sourceFile="XMLLogger.java" interface="false" size="96" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.api" total_bugs="1" total_types="53" total_size="1620" priority_2="1">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck" sourceFile="AbstractFileSetCheck.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.AbstractLoader" sourceFile="AbstractLoader.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.AbstractViolationReporter" sourceFile="AbstractViolationReporter.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.AnnotationUtility" sourceFile="AnnotationUtility.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.AuditEvent" sourceFile="AuditEvent.java" interface="false" size="31" bugs="1" priority_2="1"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.AuditListener" sourceFile="AuditListener.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.AutomaticBean" sourceFile="AutomaticBean.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.AutomaticBean$StrArrayConverter" sourceFile="AutomaticBean.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.Check" sourceFile="Check.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.CheckstyleException" sourceFile="CheckstyleException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.Comment" sourceFile="Comment.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.Configurable" sourceFile="Configurable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.Configuration" sourceFile="Configuration.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.Context" sourceFile="Context.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.Contextualizable" sourceFile="Contextualizable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.DetailAST" sourceFile="DetailAST.java" interface="false" size="123" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.FastStack" sourceFile="FastStack.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.FileContents" sourceFile="FileContents.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.FileSetCheck" sourceFile="FileSetCheck.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.Filter" sourceFile="Filter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.FilterSet" sourceFile="FilterSet.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.FullIdent" sourceFile="FullIdent.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo" sourceFile="JavadocTagInfo.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$1" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$10" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$11" sourceFile="JavadocTagInfo.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$12" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$13" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$14" sourceFile="JavadocTagInfo.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$15" sourceFile="JavadocTagInfo.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$16" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$17" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$18" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$19" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$2" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$3" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$4" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$5" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$6" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$7" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$8" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$9" sourceFile="JavadocTagInfo.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.JavadocTagInfo$Type" sourceFile="JavadocTagInfo.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.LocalizedMessage" sourceFile="LocalizedMessage.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.LocalizedMessages" sourceFile="LocalizedMessages.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.MessageDispatcher" sourceFile="MessageDispatcher.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.Scope" sourceFile="Scope.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.ScopeUtils" sourceFile="ScopeUtils.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.SeverityLevel" sourceFile="SeverityLevel.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.SeverityLevelCounter" sourceFile="SeverityLevelCounter.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.TextBlock" sourceFile="TextBlock.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.TokenTypes" sourceFile="TokenTypes.java" interface="false" size="208" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.api.Utils" sourceFile="Utils.java" interface="false" size="81" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks" total_bugs="1" total_types="30" total_size="1060" priority_1="1">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.AbstractFormatCheck" sourceFile="AbstractFormatCheck.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.AbstractOptionCheck" sourceFile="AbstractOptionCheck.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.AbstractTypeAwareCheck" sourceFile="AbstractTypeAwareCheck.java" interface="false" size="130" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.AbstractTypeAwareCheck$1" sourceFile="AbstractTypeAwareCheck.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.AbstractTypeAwareCheck$ClassAlias" sourceFile="AbstractTypeAwareCheck.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.AbstractTypeAwareCheck$ClassInfo" sourceFile="AbstractTypeAwareCheck.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.AbstractTypeAwareCheck$RegularClass" sourceFile="AbstractTypeAwareCheck.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.AbstractTypeAwareCheck$Token" sourceFile="AbstractTypeAwareCheck.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.ArrayTypeStyleCheck" sourceFile="ArrayTypeStyleCheck.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.CheckUtils" sourceFile="CheckUtils.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.ClassResolver" sourceFile="ClassResolver.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.DeclarationCollector" sourceFile="DeclarationCollector.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.DeclarationCollector$1" sourceFile="DeclarationCollector.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.DeclarationCollector$BlockFrame" sourceFile="DeclarationCollector.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.DeclarationCollector$ClassFrame" sourceFile="DeclarationCollector.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.DeclarationCollector$FrameStack" sourceFile="DeclarationCollector.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.DeclarationCollector$GlobalFrame" sourceFile="DeclarationCollector.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.DeclarationCollector$LexicalFrame" sourceFile="DeclarationCollector.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.DeclarationCollector$MethodFrame" sourceFile="DeclarationCollector.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.DescendantTokenCheck" sourceFile="DescendantTokenCheck.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.FileContentsHolder" sourceFile="FileContentsHolder.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck" sourceFile="FinalParametersCheck.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.LineSeparatorOption" sourceFile="LineSeparatorOption.java" interface="false" size="24" bugs="1" priority_1="1"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck" sourceFile="NewlineAtEndOfFileCheck.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.RegexpCheck" sourceFile="RegexpCheck.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck" sourceFile="TodoCommentCheck.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck" sourceFile="TrailingCommentCheck.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.TranslationCheck" sourceFile="TranslationCheck.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.UncommentedMainCheck" sourceFile="UncommentedMainCheck.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.UpperEllCheck" sourceFile="UpperEllCheck.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.annotation" total_bugs="0" total_types="8" total_size="321">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationUseStyleCheck" sourceFile="AnnotationUseStyleCheck.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationUseStyleCheck$ClosingParens" sourceFile="AnnotationUseStyleCheck.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationUseStyleCheck$ElementStyle" sourceFile="AnnotationUseStyleCheck.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationUseStyleCheck$TrailingArrayComma" sourceFile="AnnotationUseStyleCheck.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.annotation.MissingDeprecatedCheck" sourceFile="MissingDeprecatedCheck.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.annotation.MissingOverrideCheck" sourceFile="MissingOverrideCheck.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.annotation.PackageAnnotationCheck" sourceFile="PackageAnnotationCheck.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.annotation.SuppressWarningsCheck" sourceFile="SuppressWarningsCheck.java" interface="false" size="69" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.blocks" total_bugs="0" total_types="8" total_size="242">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.blocks.AvoidNestedBlocksCheck" sourceFile="AvoidNestedBlocksCheck.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.blocks.BlockOption" sourceFile="BlockOption.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.blocks.EmptyBlockCheck" sourceFile="EmptyBlockCheck.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck" sourceFile="LeftCurlyCheck.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyOption" sourceFile="LeftCurlyOption.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck" sourceFile="NeedBracesCheck.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck" sourceFile="RightCurlyCheck.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyOption" sourceFile="RightCurlyOption.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.coding" total_bugs="0" total_types="53" total_size="1863">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.AbstractIllegalCheck" sourceFile="AbstractIllegalCheck.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.AbstractIllegalMethodCheck" sourceFile="AbstractIllegalMethodCheck.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.AbstractNestedDepthCheck" sourceFile="AbstractNestedDepthCheck.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.AbstractSuperCheck" sourceFile="AbstractSuperCheck.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.AbstractSuperCheck$MethodNode" sourceFile="AbstractSuperCheck.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.ArrayTrailingCommaCheck" sourceFile="ArrayTrailingCommaCheck.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.AvoidInlineConditionalsCheck" sourceFile="AvoidInlineConditionalsCheck.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.CovariantEqualsCheck" sourceFile="CovariantEqualsCheck.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.DeclarationOrderCheck" sourceFile="DeclarationOrderCheck.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.DeclarationOrderCheck$1" sourceFile="DeclarationOrderCheck.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.DeclarationOrderCheck$ScopeState" sourceFile="DeclarationOrderCheck.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.DefaultComesLastCheck" sourceFile="DefaultComesLastCheck.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.DoubleCheckedLockingCheck" sourceFile="DoubleCheckedLockingCheck.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.EmptyStatementCheck" sourceFile="EmptyStatementCheck.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.EqualsAvoidNullCheck" sourceFile="EqualsAvoidNullCheck.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.EqualsHashCodeCheck" sourceFile="EqualsHashCodeCheck.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck" sourceFile="ExplicitInitializationCheck.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.FallThroughCheck" sourceFile="FallThroughCheck.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck" sourceFile="FinalLocalVariableCheck.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck" sourceFile="HiddenFieldCheck.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck$FieldFrame" sourceFile="HiddenFieldCheck.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.IllegalCatchCheck" sourceFile="IllegalCatchCheck.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.IllegalInstantiationCheck" sourceFile="IllegalInstantiationCheck.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.IllegalThrowsCheck" sourceFile="IllegalThrowsCheck.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.IllegalTokenCheck" sourceFile="IllegalTokenCheck.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.IllegalTokenTextCheck" sourceFile="IllegalTokenTextCheck.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.IllegalTypeCheck" sourceFile="IllegalTypeCheck.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.InnerAssignmentCheck" sourceFile="InnerAssignmentCheck.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.JUnitTestCaseCheck" sourceFile="JUnitTestCaseCheck.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck" sourceFile="MagicNumberCheck.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.MissingCtorCheck" sourceFile="MissingCtorCheck.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.MissingSwitchDefaultCheck" sourceFile="MissingSwitchDefaultCheck.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.ModifiedControlVariableCheck" sourceFile="ModifiedControlVariableCheck.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.MultipleStringLiteralsCheck" sourceFile="MultipleStringLiteralsCheck.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.MultipleStringLiteralsCheck$1" sourceFile="MultipleStringLiteralsCheck.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.MultipleStringLiteralsCheck$StringInfo" sourceFile="MultipleStringLiteralsCheck.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.MultipleVariableDeclarationsCheck" sourceFile="MultipleVariableDeclarationsCheck.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.NestedIfDepthCheck" sourceFile="NestedIfDepthCheck.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.NestedTryDepthCheck" sourceFile="NestedTryDepthCheck.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.NoCloneCheck" sourceFile="NoCloneCheck.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.NoFinalizerCheck" sourceFile="NoFinalizerCheck.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.PackageDeclarationCheck" sourceFile="PackageDeclarationCheck.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.ParameterAssignmentCheck" sourceFile="ParameterAssignmentCheck.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.RedundantThrowsCheck" sourceFile="RedundantThrowsCheck.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck" sourceFile="RequireThisCheck.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck" sourceFile="ReturnCountCheck.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck$Context" sourceFile="ReturnCountCheck.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.SimplifyBooleanExpressionCheck" sourceFile="SimplifyBooleanExpressionCheck.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.SimplifyBooleanReturnCheck" sourceFile="SimplifyBooleanReturnCheck.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.StringLiteralEqualityCheck" sourceFile="StringLiteralEqualityCheck.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.SuperCloneCheck" sourceFile="SuperCloneCheck.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.SuperFinalizeCheck" sourceFile="SuperFinalizeCheck.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.coding.UnnecessaryParenthesesCheck" sourceFile="UnnecessaryParenthesesCheck.java" interface="false" size="75" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.design" total_bugs="0" total_types="8" total_size="285">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck" sourceFile="DesignForExtensionCheck.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck" sourceFile="FinalClassCheck.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck$ClassDesc" sourceFile="FinalClassCheck.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck" sourceFile="HideUtilityClassConstructorCheck.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.design.InterfaceIsTypeCheck" sourceFile="InterfaceIsTypeCheck.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.design.MutableExceptionCheck" sourceFile="MutableExceptionCheck.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.design.ThrowsCountCheck" sourceFile="ThrowsCountCheck.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck" sourceFile="VisibilityModifierCheck.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.duplicates" total_bugs="0" total_types="6" total_size="273">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.duplicates.ChecksumInfo" sourceFile="ChecksumInfo.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.duplicates.StrictDuplicateCodeCheck" sourceFile="StrictDuplicateCodeCheck.java" interface="false" size="163" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.duplicates.StrictDuplicateCodeCheck$1" sourceFile="StrictDuplicateCodeCheck.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.duplicates.StrictDuplicateCodeCheck$ChecksumGenerator" sourceFile="StrictDuplicateCodeCheck.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.duplicates.StrictDuplicateCodeCheck$JavaChecksumGenerator" sourceFile="StrictDuplicateCodeCheck.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.duplicates.StrictDuplicateCodeCheck$TextfileChecksumGenerator" sourceFile="StrictDuplicateCodeCheck.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.header" total_bugs="0" total_types="3" total_size="147">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.header.AbstractHeaderCheck" sourceFile="AbstractHeaderCheck.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck" sourceFile="HeaderCheck.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck" sourceFile="RegexpHeaderCheck.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.imports" total_bugs="1" total_types="13" total_size="569" priority_2="1">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.AccessResult" sourceFile="AccessResult.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck" sourceFile="AvoidStarImportCheck.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStaticImportCheck" sourceFile="AvoidStaticImportCheck.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.Guard" sourceFile="Guard.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.IllegalImportCheck" sourceFile="IllegalImportCheck.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck" sourceFile="ImportControlCheck.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.ImportControlLoader" sourceFile="ImportControlLoader.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck" sourceFile="ImportOrderCheck.java" interface="false" size="105" bugs="1" priority_2="1"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck$1" sourceFile="ImportOrderCheck.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderOption" sourceFile="ImportOrderOption.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.PkgControl" sourceFile="PkgControl.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.RedundantImportCheck" sourceFile="RedundantImportCheck.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck" sourceFile="UnusedImportsCheck.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.indentation" total_bugs="0" total_types="30" total_size="971">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.ArrayInitHandler" sourceFile="ArrayInitHandler.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.AssignHandler" sourceFile="AssignHandler.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.BlockParentHandler" sourceFile="BlockParentHandler.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.CaseHandler" sourceFile="CaseHandler.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.CatchHandler" sourceFile="CatchHandler.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.ClassDefHandler" sourceFile="ClassDefHandler.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.DoWhileHandler" sourceFile="DoWhileHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.ElseHandler" sourceFile="ElseHandler.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.ExpressionHandler" sourceFile="ExpressionHandler.java" interface="false" size="166" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.FinallyHandler" sourceFile="FinallyHandler.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.ForHandler" sourceFile="ForHandler.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.HandlerFactory" sourceFile="HandlerFactory.java" interface="false" size="104" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.IfHandler" sourceFile="IfHandler.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.ImportHandler" sourceFile="ImportHandler.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.IndentLevel" sourceFile="IndentLevel.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck" sourceFile="IndentationCheck.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.LabelHandler" sourceFile="LabelHandler.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.LineSet" sourceFile="LineSet.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.MemberDefHandler" sourceFile="MemberDefHandler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.MethodCallHandler" sourceFile="MethodCallHandler.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.MethodDefHandler" sourceFile="MethodDefHandler.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler" sourceFile="NewHandler.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.ObjectBlockHandler" sourceFile="ObjectBlockHandler.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.PackageDefHandler" sourceFile="PackageDefHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.PrimordialHandler" sourceFile="PrimordialHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.SlistHandler" sourceFile="SlistHandler.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.StaticInitHandler" sourceFile="StaticInitHandler.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.SwitchHandler" sourceFile="SwitchHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.TryHandler" sourceFile="TryHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.indentation.WhileHandler" sourceFile="WhileHandler.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.javadoc" total_bugs="0" total_types="11" total_size="925">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.HtmlTag" sourceFile="HtmlTag.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck" sourceFile="JavadocMethodCheck.java" interface="false" size="335" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck$ExceptionInfo" sourceFile="JavadocMethodCheck.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck" sourceFile="JavadocPackageCheck.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck" sourceFile="JavadocStyleCheck.java" interface="false" size="173" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTag" sourceFile="JavadocTag.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck" sourceFile="JavadocTypeCheck.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck" sourceFile="JavadocVariableCheck.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.TagParser" sourceFile="TagParser.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.TagParser$Point" sourceFile="TagParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck" sourceFile="WriteTagCheck.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.metrics" total_bugs="0" total_types="12" total_size="427">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.AbstractClassCouplingCheck" sourceFile="AbstractClassCouplingCheck.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.AbstractClassCouplingCheck$Context" sourceFile="AbstractClassCouplingCheck.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.AbstractComplexityCheck" sourceFile="AbstractComplexityCheck.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.BooleanExpressionComplexityCheck" sourceFile="BooleanExpressionComplexityCheck.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.BooleanExpressionComplexityCheck$Context" sourceFile="BooleanExpressionComplexityCheck.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.ClassDataAbstractionCouplingCheck" sourceFile="ClassDataAbstractionCouplingCheck.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.ClassFanOutComplexityCheck" sourceFile="ClassFanOutComplexityCheck.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck" sourceFile="CyclomaticComplexityCheck.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.JavaNCSSCheck" sourceFile="JavaNCSSCheck.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.JavaNCSSCheck$1" sourceFile="JavaNCSSCheck.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.JavaNCSSCheck$Counter" sourceFile="JavaNCSSCheck.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.metrics.NPathComplexityCheck" sourceFile="NPathComplexityCheck.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.modifier" total_bugs="0" total_types="2" total_size="80">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck" sourceFile="ModifierOrderCheck.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck" sourceFile="RedundantModifierCheck.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.naming" total_bugs="0" total_types="15" total_size="214">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.AbstractAccessControlNameCheck" sourceFile="AbstractAccessControlNameCheck.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.AbstractClassNameCheck" sourceFile="AbstractClassNameCheck.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.AbstractNameCheck" sourceFile="AbstractNameCheck.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.AbstractTypeParameterNameCheck" sourceFile="AbstractTypeParameterNameCheck.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.ClassTypeParameterNameCheck" sourceFile="ClassTypeParameterNameCheck.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck" sourceFile="ConstantNameCheck.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.LocalFinalVariableNameCheck" sourceFile="LocalFinalVariableNameCheck.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck" sourceFile="LocalVariableNameCheck.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck" sourceFile="MemberNameCheck.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck" sourceFile="MethodNameCheck.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.MethodTypeParameterNameCheck" sourceFile="MethodTypeParameterNameCheck.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck" sourceFile="PackageNameCheck.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck" sourceFile="ParameterNameCheck.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck" sourceFile="StaticVariableNameCheck.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.naming.TypeNameCheck" sourceFile="TypeNameCheck.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.regexp" total_bugs="0" total_types="9" total_size="255">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.regexp.CommentSuppressor" sourceFile="CommentSuppressor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.regexp.DetectorOptions" sourceFile="DetectorOptions.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.regexp.MatchSuppressor" sourceFile="MatchSuppressor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.regexp.MultilineDetector" sourceFile="MultilineDetector.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.regexp.NeverSuppress" sourceFile="NeverSuppress.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck" sourceFile="RegexpMultilineCheck.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck" sourceFile="RegexpSinglelineCheck.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck" sourceFile="RegexpSinglelineJavaCheck.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.regexp.SinglelineDetector" sourceFile="SinglelineDetector.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.sizes" total_bugs="0" total_types="8" total_size="211">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.sizes.AnonInnerLengthCheck" sourceFile="AnonInnerLengthCheck.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.sizes.ExecutableStatementCountCheck" sourceFile="ExecutableStatementCountCheck.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.sizes.ExecutableStatementCountCheck$Context" sourceFile="ExecutableStatementCountCheck.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.sizes.FileLengthCheck" sourceFile="FileLengthCheck.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck" sourceFile="LineLengthCheck.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck" sourceFile="MethodLengthCheck.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.sizes.OuterTypeNumberCheck" sourceFile="OuterTypeNumberCheck.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.sizes.ParameterNumberCheck" sourceFile="ParameterNumberCheck.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.checks.whitespace" total_bugs="0" total_types="15" total_size="365">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.AbstractParenPadCheck" sourceFile="AbstractParenPadCheck.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyForInitializerPadCheck" sourceFile="EmptyForInitializerPadCheck.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyForIteratorPadCheck" sourceFile="EmptyForIteratorPadCheck.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck" sourceFile="FileTabCharacterCheck.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck" sourceFile="GenericWhitespaceCheck.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck" sourceFile="MethodParamPadCheck.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck" sourceFile="NoWhitespaceAfterCheck.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck" sourceFile="NoWhitespaceBeforeCheck.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck" sourceFile="OperatorWrapCheck.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapOption" sourceFile="OperatorWrapOption.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.PadOption" sourceFile="PadOption.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck" sourceFile="ParenPadCheck.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.TypecastParenPadCheck" sourceFile="TypecastParenPadCheck.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck" sourceFile="WhitespaceAfterCheck.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck" sourceFile="WhitespaceAroundCheck.java" interface="false" size="48" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.doclets" total_bugs="2" total_types="4" total_size="132" priority_1="2">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.doclets.CheckDocsDoclet" sourceFile="CheckDocsDoclet.java" interface="false" size="77" bugs="1" priority_1="1"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.doclets.CheckDocsDoclet$1" sourceFile="CheckDocsDoclet.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.doclets.CheckDocsDoclet$ClassDocByCheckNameComparator" sourceFile="CheckDocsDoclet.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.doclets.TokenTypesDoclet" sourceFile="TokenTypesDoclet.java" interface="false" size="45" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.filters" total_bugs="3" total_types="12" total_size="634" priority_2="3">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.CSVFilter" sourceFile="CSVFilter.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.IntFilter" sourceFile="IntFilter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.IntMatchFilter" sourceFile="IntMatchFilter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.IntRangeFilter" sourceFile="IntRangeFilter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.SeverityMatchFilter" sourceFile="SeverityMatchFilter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.SuppressElement" sourceFile="SuppressElement.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter" sourceFile="SuppressWithNearbyCommentFilter.java" interface="false" size="119" bugs="1" priority_2="1"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.SuppressWithNearbyCommentFilter$Tag" sourceFile="SuppressWithNearbyCommentFilter.java" interface="false" size="70" bugs="1" priority_2="1"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.SuppressionCommentFilter" sourceFile="SuppressionCommentFilter.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.SuppressionCommentFilter$Tag" sourceFile="SuppressionCommentFilter.java" interface="false" size="63" bugs="1" priority_2="1"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.SuppressionFilter" sourceFile="SuppressionFilter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.filters.SuppressionsLoader" sourceFile="SuppressionsLoader.java" interface="false" size="63" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.grammars" total_bugs="6" total_types="4" total_size="5754" priority_2="5" priority_1="1">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.grammars.CommentListener" sourceFile="CommentListener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaLexer" sourceFile="GeneratedJavaLexer.java" interface="false" size="1584" bugs="1" priority_2="1"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer" sourceFile="GeneratedJavaRecognizer.java" interface="false" size="3982" bugs="5" priority_2="4" priority_1="1"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaTokenTypes" sourceFile="GeneratedJavaTokenTypes.java" interface="true" size="185" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.puppycrawl.tools.checkstyle.gui" total_bugs="0" total_types="25" total_size="616">
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.AbstractCellEditor" sourceFile="AbstractCellEditor.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.AbstractTreeTableModel" sourceFile="AbstractTreeTableModel.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.FileDrop" sourceFile="FileDrop.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.FileDrop$1" sourceFile="FileDrop.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.FileDrop$FileDropTargetListener" sourceFile="FileDrop.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.FileDrop$Listener" sourceFile="FileDrop.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.JTreeTable" sourceFile="JTreeTable.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.JTreeTable$1" sourceFile="JTreeTable.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.JTreeTable$ListToTreeSelectionModelWrapper" sourceFile="JTreeTable.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.JTreeTable$ListToTreeSelectionModelWrapper$ListSelectionHandler" sourceFile="JTreeTable.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.JTreeTable$TreeTableCellEditor" sourceFile="JTreeTable.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.JTreeTable$TreeTableCellRenderer" sourceFile="JTreeTable.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.Main" sourceFile="Main.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.ParseTreeInfoPanel" sourceFile="ParseTreeInfoPanel.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.ParseTreeInfoPanel$1" sourceFile="ParseTreeInfoPanel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.ParseTreeInfoPanel$FileDropListener" sourceFile="ParseTreeInfoPanel.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.ParseTreeInfoPanel$FileSelectionAction" sourceFile="ParseTreeInfoPanel.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.ParseTreeInfoPanel$JavaFileFilter" sourceFile="ParseTreeInfoPanel.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.ParseTreeInfoPanel$ReloadAction" sourceFile="ParseTreeInfoPanel.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.ParseTreeModel" sourceFile="ParseTreeModel.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.TreeTableModel" sourceFile="TreeTableModel.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.TreeTableModelAdapter" sourceFile="TreeTableModelAdapter.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.TreeTableModelAdapter$1" sourceFile="TreeTableModelAdapter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.TreeTableModelAdapter$2" sourceFile="TreeTableModelAdapter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.puppycrawl.tools.checkstyle.gui.TreeTableModelAdapter$3" sourceFile="TreeTableModelAdapter.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.checkstyle" total_bugs="1" total_types="14" total_size="458" priority_2="1">
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstyleAuditListener" sourceFile="CheckstyleAuditListener.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstyleConfiguration" sourceFile="CheckstyleConfiguration.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstyleConstants" sourceFile="CheckstyleConstants.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstyleExecutor" sourceFile="CheckstyleExecutor.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstylePlugin" sourceFile="CheckstylePlugin.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstyleProfileExporter" sourceFile="CheckstyleProfileExporter.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstyleProfileImporter" sourceFile="CheckstyleProfileImporter.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstyleRuleRepository" sourceFile="CheckstyleRuleRepository.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstyleSensor" sourceFile="CheckstyleSensor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstyleSeverityUtils" sourceFile="CheckstyleSeverityUtils.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.CheckstyleVersion" sourceFile="CheckstyleVersion.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.SonarWayProfile" sourceFile="SonarWayProfile.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.SonarWayWithFindbugsProfile" sourceFile="SonarWayWithFindbugsProfile.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.checkstyle.SunConventionsProfile" sourceFile="SunConventionsProfile.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="5744" invocations="842" avgMicrosecondsPerInvocation="6822" maxMicrosecondsPerInvocation="383444" standardDeviationMircosecondsPerInvocation="23633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="4602" invocations="2386" avgMicrosecondsPerInvocation="1928" maxMicrosecondsPerInvocation="335060" standardDeviationMircosecondsPerInvocation="10174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="4428" invocations="2533" avgMicrosecondsPerInvocation="1748" maxMicrosecondsPerInvocation="671808" standardDeviationMircosecondsPerInvocation="15623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="4337" invocations="842" avgMicrosecondsPerInvocation="5151" maxMicrosecondsPerInvocation="205009" standardDeviationMircosecondsPerInvocation="17761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="3967" invocations="2480" avgMicrosecondsPerInvocation="1599" maxMicrosecondsPerInvocation="216042" standardDeviationMircosecondsPerInvocation="8399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="3902" invocations="2486" avgMicrosecondsPerInvocation="1569" maxMicrosecondsPerInvocation="95830" standardDeviationMircosecondsPerInvocation="6687"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="3894" invocations="2484" avgMicrosecondsPerInvocation="1567" maxMicrosecondsPerInvocation="114735" standardDeviationMircosecondsPerInvocation="7455"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="3530" invocations="2555" avgMicrosecondsPerInvocation="1381" maxMicrosecondsPerInvocation="159685" standardDeviationMircosecondsPerInvocation="8223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="2683" invocations="1870" avgMicrosecondsPerInvocation="1435" maxMicrosecondsPerInvocation="331165" standardDeviationMircosecondsPerInvocation="9595"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="2459" invocations="2487" avgMicrosecondsPerInvocation="988" maxMicrosecondsPerInvocation="144160" standardDeviationMircosecondsPerInvocation="5680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="2287" invocations="3809" avgMicrosecondsPerInvocation="600" maxMicrosecondsPerInvocation="150477" standardDeviationMircosecondsPerInvocation="4605"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="1977" invocations="842" avgMicrosecondsPerInvocation="2348" maxMicrosecondsPerInvocation="160209" standardDeviationMircosecondsPerInvocation="10612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="1296" invocations="842" avgMicrosecondsPerInvocation="1540" maxMicrosecondsPerInvocation="258008" standardDeviationMircosecondsPerInvocation="10827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="1087" invocations="2486" avgMicrosecondsPerInvocation="437" maxMicrosecondsPerInvocation="110896" standardDeviationMircosecondsPerInvocation="3627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="1086" invocations="2389" avgMicrosecondsPerInvocation="454" maxMicrosecondsPerInvocation="120584" standardDeviationMircosecondsPerInvocation="3706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="908" invocations="842" avgMicrosecondsPerInvocation="1078" maxMicrosecondsPerInvocation="98231" standardDeviationMircosecondsPerInvocation="5576"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="835" invocations="1046" avgMicrosecondsPerInvocation="798" maxMicrosecondsPerInvocation="84046" standardDeviationMircosecondsPerInvocation="5650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="827" invocations="366" avgMicrosecondsPerInvocation="2262" maxMicrosecondsPerInvocation="271065" standardDeviationMircosecondsPerInvocation="16744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="803" invocations="2480" avgMicrosecondsPerInvocation="323" maxMicrosecondsPerInvocation="74263" standardDeviationMircosecondsPerInvocation="3027"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="789" invocations="842" avgMicrosecondsPerInvocation="937" maxMicrosecondsPerInvocation="107972" standardDeviationMircosecondsPerInvocation="6000"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="764" invocations="366" avgMicrosecondsPerInvocation="2090" maxMicrosecondsPerInvocation="200834" standardDeviationMircosecondsPerInvocation="14152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="730" invocations="364" avgMicrosecondsPerInvocation="2006" maxMicrosecondsPerInvocation="128810" standardDeviationMircosecondsPerInvocation="10788"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="695" invocations="842" avgMicrosecondsPerInvocation="826" maxMicrosecondsPerInvocation="67269" standardDeviationMircosecondsPerInvocation="4551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="694" invocations="366" avgMicrosecondsPerInvocation="1898" maxMicrosecondsPerInvocation="139273" standardDeviationMircosecondsPerInvocation="11585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="645" invocations="2542" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="237198" standardDeviationMircosecondsPerInvocation="4882"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="636" invocations="842" avgMicrosecondsPerInvocation="756" maxMicrosecondsPerInvocation="72734" standardDeviationMircosecondsPerInvocation="5100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="625" invocations="366" avgMicrosecondsPerInvocation="1710" maxMicrosecondsPerInvocation="186251" standardDeviationMircosecondsPerInvocation="11025"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="594" invocations="842" avgMicrosecondsPerInvocation="706" maxMicrosecondsPerInvocation="89193" standardDeviationMircosecondsPerInvocation="5382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="592" invocations="366" avgMicrosecondsPerInvocation="1618" maxMicrosecondsPerInvocation="181682" standardDeviationMircosecondsPerInvocation="10977"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="570" invocations="366" avgMicrosecondsPerInvocation="1559" maxMicrosecondsPerInvocation="172254" standardDeviationMircosecondsPerInvocation="10865"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1223971318000" analysisTimestamp="1360510030813" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/xerial/sqlite-jdbc/3.6.3/sqlite-jdbc-3.6.3.jar</Jar>
+  </Project>
+  <BugInstance type="FI_PUBLIC_SHOULD_BE_PROTECTED" priority="2" abbrev="FI" category="MALICIOUS_CODE">
+    <Class classname="org.sqlite.Conn">
+      <SourceLine classname="org.sqlite.Conn" start="26" end="252" sourcefile="Conn.java" sourcepath="org/sqlite/Conn.java"/>
+    </Class>
+    <Method classname="org.sqlite.Conn" name="finalize" signature="()V" isStatic="false">
+      <SourceLine classname="org.sqlite.Conn" start="107" end="107" startBytecode="0" endBytecode="46" sourcefile="Conn.java" sourcepath="org/sqlite/Conn.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.sqlite.Conn">
+      <SourceLine classname="org.sqlite.Conn" start="26" end="252" sourcefile="Conn.java" sourcepath="org/sqlite/Conn.java"/>
+    </Class>
+    <Method classname="org.sqlite.Conn" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.sqlite.Conn" start="36" end="83" startBytecode="0" endBytecode="589" sourcefile="Conn.java" sourcepath="org/sqlite/Conn.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.Conn" start="69" end="69" startBytecode="241" endBytecode="241" sourcefile="Conn.java" sourcepath="org/sqlite/Conn.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.sqlite.DB">
+      <SourceLine classname="org.sqlite.DB" start="36" end="343" sourcefile="DB.java" sourcepath="org/sqlite/DB.java"/>
+    </Class>
+    <Method classname="org.sqlite.DB" name="finalize" signature="(Lorg/sqlite/Stmt;)I" isStatic="false">
+      <SourceLine classname="org.sqlite.DB" start="119" end="127" startBytecode="0" endBytecode="187" sourcefile="DB.java" sourcepath="org/sqlite/DB.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="&lt;init&gt;" signature="(J)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Long" start="660" end="662" startBytecode="0" endBytecode="41" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="valueOf" signature="(J)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Long" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.DB" start="124" end="124" startBytecode="38" endBytecode="38" sourcefile="DB.java" sourcepath="org/sqlite/DB.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.sqlite.DB">
+      <SourceLine classname="org.sqlite.DB" start="36" end="343" sourcefile="DB.java" sourcepath="org/sqlite/DB.java"/>
+    </Class>
+    <Method classname="org.sqlite.DB" name="prepare" signature="(Lorg/sqlite/Stmt;)V" isStatic="false">
+      <SourceLine classname="org.sqlite.DB" start="112" end="116" startBytecode="0" endBytecode="117" sourcefile="DB.java" sourcepath="org/sqlite/DB.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="&lt;init&gt;" signature="(J)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Long" start="660" end="662" startBytecode="0" endBytecode="41" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="valueOf" signature="(J)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Long" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.DB" start="115" end="115" startBytecode="39" endBytecode="39" sourcefile="DB.java" sourcepath="org/sqlite/DB.java"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.sqlite.Function">
+      <SourceLine classname="org.sqlite.Function" start="52" end="167" sourcefile="Function.java" sourcepath="org/sqlite/Function.java"/>
+    </Class>
+    <Field classname="org.sqlite.Function" name="context" signature="J" isStatic="false">
+      <SourceLine classname="org.sqlite.Function" sourcefile="Function.java" sourcepath="org/sqlite/Function.java"/>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.sqlite.NestedDB" start="349" end="349" startBytecode="215" endBytecode="215" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.NestedDB" start="328" end="328" startBytecode="42" endBytecode="42" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.NestedDB" start="349" end="349" startBytecode="187" endBytecode="187" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.NestedDB" start="349" end="349" startBytecode="241" endBytecode="241" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="122" end="122" startBytecode="9" endBytecode="9" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="110" end="110" startBytecode="9" endBytecode="9" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="126" end="126" startBytecode="9" endBytecode="9" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="114" end="114" startBytecode="9" endBytecode="9" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="102" end="102" startBytecode="9" endBytecode="9" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="106" end="106" startBytecode="9" endBytecode="9" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="118" end="118" startBytecode="9" endBytecode="9" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="158" end="158" startBytecode="18" endBytecode="18" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.sqlite.Function">
+      <SourceLine classname="org.sqlite.Function" start="52" end="167" sourcefile="Function.java" sourcepath="org/sqlite/Function.java"/>
+    </Class>
+    <Field classname="org.sqlite.Function" name="db" signature="Lorg/sqlite/DB;" isStatic="false">
+      <SourceLine classname="org.sqlite.Function" sourcefile="Function.java" sourcepath="org/sqlite/Function.java"/>
+    </Field>
+    <Int value="87" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.sqlite.Function" start="71" end="71" startBytecode="56" endBytecode="56" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="76" end="76" startBytecode="103" endBytecode="103" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="122" end="122" startBytecode="5" endBytecode="5" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="142" end="142" startBytecode="6" endBytecode="6" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="110" end="110" startBytecode="5" endBytecode="5" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="126" end="126" startBytecode="5" endBytecode="5" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="114" end="114" startBytecode="5" endBytecode="5" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="146" end="146" startBytecode="6" endBytecode="6" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="138" end="138" startBytecode="6" endBytecode="6" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="130" end="130" startBytecode="6" endBytecode="6" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="154" end="154" startBytecode="6" endBytecode="6" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="134" end="134" startBytecode="6" endBytecode="6" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="102" end="102" startBytecode="5" endBytecode="5" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="150" end="150" startBytecode="6" endBytecode="6" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="106" end="106" startBytecode="5" endBytecode="5" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.sqlite.Function" start="118" end="118" startBytecode="5" endBytecode="5" sourcefile="Function.java" sourcepath="org/sqlite/Function.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="NP_NONNULL_RETURN_VIOLATION" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getSearchStringEscape" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="144" end="144" startBytecode="0" endBytecode="43" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.MetaData" start="144" end="144" startBytecode="1" endBytecode="1" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NONNULL_RETURN_VIOLATION" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getUserName" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="153" end="153" startBytecode="0" endBytecode="43" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.MetaData" start="153" end="153" startBytecode="1" endBytecode="1" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getColumns" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="322" end="407" startBytecode="0" endBytecode="1089" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.sqlite.MetaData" start="334" end="334" startBytecode="49" endBytecode="49" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.sqlite.MetaData" start="335" end="335" startBytecode="56" endBytecode="56" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getColumns" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="322" end="407" startBytecode="0" endBytecode="1089" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.sqlite.MetaData" start="322" end="322" startBytecode="4" endBytecode="4" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.sqlite.MetaData" start="326" end="326" startBytecode="9" endBytecode="9" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="328" end="328" startBytecode="13" endBytecode="13" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="333" end="333" startBytecode="34" endBytecode="34" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="334" end="334" startBytecode="45" endBytecode="45" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="335" end="335" startBytecode="56" endBytecode="56" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getPrimaryKeys" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="454" end="478" startBytecode="0" endBytecode="441" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.sqlite.MetaData" start="456" end="456" startBytecode="38" endBytecode="38" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.sqlite.MetaData" start="458" end="458" startBytecode="45" endBytecode="45" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="461" end="461" startBytecode="55" endBytecode="55" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="462" end="462" startBytecode="69" endBytecode="69" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="463" end="463" startBytecode="75" endBytecode="75" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="464" end="464" startBytecode="81" endBytecode="81" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="458" end="458" startBytecode="87" endBytecode="87" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="467" end="467" startBytecode="92" endBytecode="92" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getPrimaryKeys" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="454" end="478" startBytecode="0" endBytecode="441" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.sqlite.MetaData" start="454" end="454" startBytecode="4" endBytecode="4" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.sqlite.MetaData" start="456" end="456" startBytecode="9" endBytecode="9" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="458" end="458" startBytecode="45" endBytecode="45" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="461" end="461" startBytecode="55" endBytecode="55" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="462" end="462" startBytecode="69" endBytecode="69" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="463" end="463" startBytecode="75" endBytecode="75" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="464" end="464" startBytecode="81" endBytecode="81" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="458" end="458" startBytecode="87" endBytecode="87" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.sqlite.MetaData" start="467" end="467" startBytecode="92" endBytecode="92" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getTables" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="585" end="615" startBytecode="0" endBytecode="384" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.sqlite.MetaData" start="615" end="615" startBytecode="220" endBytecode="220" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="ODR_OPEN_DATABASE_RESOURCE" priority="2" abbrev="ODR" category="BAD_PRACTICE">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getColumns" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="322" end="407" startBytecode="0" endBytecode="247" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <Type descriptor="Ljava/sql/Statement;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Type>
+    <SourceLine classname="org.sqlite.MetaData" start="322" end="322" startBytecode="4" endBytecode="4" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+  </BugInstance>
+  <BugInstance type="ODR_OPEN_DATABASE_RESOURCE" priority="2" abbrev="ODR" category="BAD_PRACTICE">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getPrimaryKeys" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="454" end="478" startBytecode="0" endBytecode="97" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <Type descriptor="Ljava/sql/Statement;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Type>
+    <SourceLine classname="org.sqlite.MetaData" start="454" end="454" startBytecode="4" endBytecode="4" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+  </BugInstance>
+  <BugInstance type="ODR_OPEN_DATABASE_RESOURCE" priority="2" abbrev="ODR" category="BAD_PRACTICE">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getTables" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="585" end="615" startBytecode="0" endBytecode="94" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <Type descriptor="Ljava/sql/Statement;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Type>
+    <SourceLine classname="org.sqlite.MetaData" start="615" end="615" startBytecode="220" endBytecode="220" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getPrimaryKeys" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="454" end="478" startBytecode="0" endBytecode="441" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.MetaData" start="473" end="473" startBytecode="154" endBytecode="154" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getTables" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="585" end="615" startBytecode="0" endBytecode="384" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.MetaData" start="608" end="608" startBytecode="119" endBytecode="119" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+  </BugInstance>
+  <BugInstance type="SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE" priority="1" abbrev="SQL" category="SECURITY">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getColumns" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="322" end="407" startBytecode="0" endBytecode="247" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.MetaData" start="368" end="368" startBytecode="263" endBytecode="263" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    <SourceLine classname="org.sqlite.MetaData" start="407" end="407" startBytecode="630" endBytecode="630" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE" priority="1" abbrev="SQL" category="SECURITY">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getPrimaryKeys" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="454" end="478" startBytecode="0" endBytecode="97" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.MetaData" start="456" end="456" startBytecode="38" endBytecode="38" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    <SourceLine classname="org.sqlite.MetaData" start="478" end="478" startBytecode="250" endBytecode="250" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE" priority="1" abbrev="SQL" category="SECURITY">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Method classname="org.sqlite.MetaData" name="getTables" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/sql/ResultSet;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" start="585" end="615" startBytecode="0" endBytecode="94" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.MetaData" start="615" end="615" startBytecode="225" endBytecode="225" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_NULL_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.sqlite.MetaData">
+      <SourceLine classname="org.sqlite.MetaData" start="25" end="717" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Class>
+    <Field classname="org.sqlite.MetaData" name="getTables" signature="Ljava/sql/PreparedStatement;" isStatic="false">
+      <SourceLine classname="org.sqlite.MetaData" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+    </Field>
+    <SourceLine classname="org.sqlite.MetaData" start="76" end="76" startBytecode="314" endBytecode="314" sourcefile="MetaData.java" sourcepath="org/sqlite/MetaData.java"/>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="2" abbrev="LI" category="MT_CORRECTNESS">
+    <Class classname="org.sqlite.NativeDB">
+      <SourceLine classname="org.sqlite.NativeDB" start="24" end="202" sourcefile="NativeDB.java" sourcepath="org/sqlite/NativeDB.java"/>
+    </Class>
+    <Method classname="org.sqlite.NativeDB" name="load" signature="()Z" isStatic="true">
+      <SourceLine classname="org.sqlite.NativeDB" start="33" end="36" startBytecode="0" endBytecode="14" sourcefile="NativeDB.java" sourcepath="org/sqlite/NativeDB.java"/>
+    </Method>
+    <Field classname="org.sqlite.NativeDB" name="loaded" signature="Ljava/lang/Boolean;" isStatic="true" role="FIELD_ON">
+      <SourceLine classname="org.sqlite.NativeDB" sourcefile="NativeDB.java" sourcepath="org/sqlite/NativeDB.java"/>
+    </Field>
+    <SourceLine classname="org.sqlite.NativeDB" start="33" end="36" startBytecode="0" endBytecode="26" sourcefile="NativeDB.java" sourcepath="org/sqlite/NativeDB.java"/>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE_BOOLEAN" priority="2" abbrev="RC" category="BAD_PRACTICE">
+    <Class classname="org.sqlite.NativeDB">
+      <SourceLine classname="org.sqlite.NativeDB" start="24" end="202" sourcefile="NativeDB.java" sourcepath="org/sqlite/NativeDB.java"/>
+    </Class>
+    <Method classname="org.sqlite.NativeDB" name="load" signature="()Z" isStatic="true">
+      <SourceLine classname="org.sqlite.NativeDB" start="33" end="36" startBytecode="0" endBytecode="14" sourcefile="NativeDB.java" sourcepath="org/sqlite/NativeDB.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/Boolean;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Boolean" start="26" end="245" sourcefile="Boolean.java" sourcepath="java/lang/Boolean.java"/>
+    </Type>
+    <Field classname="java.lang.Boolean" name="TRUE" signature="Ljava/lang/Boolean;" isStatic="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="java.lang.Boolean" sourcefile="Boolean.java" sourcepath="java/lang/Boolean.java"/>
+    </Field>
+    <SourceLine classname="org.sqlite.NativeDB" start="34" end="34" startBytecode="12" endBytecode="12" sourcefile="NativeDB.java" sourcepath="org/sqlite/NativeDB.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.sqlite.NestedDB">
+      <SourceLine classname="org.sqlite.NestedDB" start="27" end="430" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+    </Class>
+    <Method classname="org.sqlite.NestedDB" name="xUDF" signature="(IIII)V" isStatic="false">
+      <SourceLine classname="org.sqlite.NestedDB" start="320" end="354" startBytecode="0" endBytecode="562" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+    </Method>
+    <LocalVariable name="err" register="7" pc="127" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="java.lang.Throwable" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.Throwable" start="342" end="344" startBytecode="0" endBytecode="76" sourcefile="Throwable.java" sourcepath="java/lang/Throwable.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.NestedDB" start="340" end="340" startBytecode="129" endBytecode="129" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="UR_UNINIT_READ_CALLED_FROM_SUPER_CONSTRUCTOR" priority="1" abbrev="UR" category="CORRECTNESS">
+    <Class classname="org.sqlite.NestedDB$CausedSQLException">
+      <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" start="435" end="445" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+    </Class>
+    <Method classname="org.sqlite.NestedDB$CausedSQLException" name="fillInStackTrace" signature="()Ljava/lang/Throwable;" isStatic="false">
+      <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" start="442" end="442" startBytecode="0" endBytecode="49" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+    </Method>
+    <Field classname="org.sqlite.NestedDB$CausedSQLException" name="cause" signature="Ljava/lang/Exception;" isStatic="false">
+      <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+    </Field>
+    <Method classname="java.lang.Throwable" name="&lt;init&gt;" signature="()V" isStatic="false" role="METHOD_SUPERCLASS_CONSTRUCTOR">
+      <SourceLine classname="java.lang.Throwable" start="180" end="182" startBytecode="0" endBytecode="50" sourcefile="Throwable.java" sourcepath="java/lang/Throwable.java"/>
+    </Method>
+    <SourceLine classname="java.lang.Throwable" start="181" end="181" startBytecode="10" endBytecode="10" sourcefile="Throwable.java" sourcepath="java/lang/Throwable.java" role="SOURCE_LINE_CALLED_FROM_SUPERCLASS_AT"/>
+    <Method classname="org.sqlite.NestedDB$CausedSQLException" name="&lt;init&gt;" signature="(Ljava/lang/Exception;)V" isStatic="false" role="METHOD_CONSTRUCTOR">
+      <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" start="435" end="438" startBytecode="0" endBytecode="87" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" start="437" end="437" startBytecode="20" endBytecode="20" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java" role="SOURCE_LINE_FIELD_SET_TOO_LATE_AT"/>
+    <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" start="442" end="442" startBytecode="1" endBytecode="1" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+  </BugInstance>
+  <BugInstance type="UR_UNINIT_READ_CALLED_FROM_SUPER_CONSTRUCTOR" priority="1" abbrev="UR" category="CORRECTNESS">
+    <Class classname="org.sqlite.NestedDB$CausedSQLException">
+      <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" start="435" end="445" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+    </Class>
+    <Method classname="org.sqlite.NestedDB$CausedSQLException" name="printStackTrace" signature="(Ljava/io/PrintWriter;)V" isStatic="false">
+      <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" start="441" end="441" startBytecode="0" endBytecode="60" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+    </Method>
+    <Field classname="org.sqlite.NestedDB$CausedSQLException" name="cause" signature="Ljava/lang/Exception;" isStatic="false">
+      <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+    </Field>
+    <Method classname="java.sql.SQLException" name="&lt;init&gt;" signature="()V" isStatic="false" role="METHOD_SUPERCLASS_CONSTRUCTOR">
+      <SourceLine classname="java.sql.SQLException" start="122" end="130" startBytecode="0" endBytecode="82" sourcefile="SQLException.java" sourcepath="java/sql/SQLException.java"/>
+    </Method>
+    <SourceLine classname="java.sql.SQLException" start="127" end="127" startBytecode="31" endBytecode="31" sourcefile="SQLException.java" sourcepath="java/sql/SQLException.java" role="SOURCE_LINE_CALLED_FROM_SUPERCLASS_AT"/>
+    <Method classname="org.sqlite.NestedDB$CausedSQLException" name="&lt;init&gt;" signature="(Ljava/lang/Exception;)V" isStatic="false" role="METHOD_CONSTRUCTOR">
+      <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" start="435" end="438" startBytecode="0" endBytecode="87" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" start="437" end="437" startBytecode="20" endBytecode="20" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java" role="SOURCE_LINE_FIELD_SET_TOO_LATE_AT"/>
+    <SourceLine classname="org.sqlite.NestedDB$CausedSQLException" start="441" end="441" startBytecode="1" endBytecode="1" sourcefile="NestedDB.java" sourcepath="org/sqlite/NestedDB.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.sqlite.PrepStmt">
+      <SourceLine classname="org.sqlite.PrepStmt" start="34" end="215" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+    </Class>
+    <Method classname="org.sqlite.PrepStmt" name="setInt" signature="(II)V" isStatic="false">
+      <SourceLine classname="org.sqlite.PrepStmt" start="146" end="147" startBytecode="0" endBytecode="79" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.PrepStmt" start="146" end="146" startBytecode="7" endBytecode="7" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.sqlite.PrepStmt">
+      <SourceLine classname="org.sqlite.PrepStmt" start="34" end="215" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+    </Class>
+    <Method classname="org.sqlite.PrepStmt" name="setLong" signature="(IJ)V" isStatic="false">
+      <SourceLine classname="org.sqlite.PrepStmt" start="149" end="150" startBytecode="0" endBytecode="79" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="&lt;init&gt;" signature="(J)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Long" start="660" end="662" startBytecode="0" endBytecode="41" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="valueOf" signature="(J)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Long" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.PrepStmt" start="149" end="149" startBytecode="7" endBytecode="7" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.sqlite.PrepStmt">
+      <SourceLine classname="org.sqlite.PrepStmt" start="34" end="215" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+    </Class>
+    <Method classname="org.sqlite.PrepStmt" name="setObject" signature="(ILjava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.sqlite.PrepStmt" start="158" end="174" startBytecode="0" endBytecode="324" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="&lt;init&gt;" signature="(J)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Long" start="660" end="662" startBytecode="0" endBytecode="41" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="valueOf" signature="(J)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Long" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.PrepStmt" start="161" end="161" startBytecode="33" endBytecode="33" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+    <SourceLine classname="org.sqlite.PrepStmt" start="163" end="163" startBytecode="62" endBytecode="62" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.sqlite.PrepStmt" start="165" end="165" startBytecode="91" endBytecode="91" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.sqlite.PrepStmt" start="167" end="167" startBytecode="120" endBytecode="120" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="FI_MISSING_SUPER_CALL" priority="2" abbrev="FI" category="BAD_PRACTICE">
+    <Class classname="org.sqlite.PrepStmt">
+      <SourceLine classname="org.sqlite.PrepStmt" start="34" end="215" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+    </Class>
+    <Method classname="org.sqlite.PrepStmt" name="finalize" signature="()V" isStatic="false">
+      <SourceLine classname="org.sqlite.PrepStmt" start="51" end="51" startBytecode="0" endBytecode="46" sourcefile="PrepStmt.java" sourcepath="org/sqlite/PrepStmt.java"/>
+    </Method>
+    <Class classname="org.sqlite.Stmt">
+      <SourceLine classname="org.sqlite.Stmt" start="28" end="245" sourcefile="Stmt.java" sourcepath="org/sqlite/Stmt.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.sqlite.RS">
+      <SourceLine classname="org.sqlite.RS" start="35" end="368" sourcefile="RS.java" sourcepath="org/sqlite/RS.java"/>
+    </Class>
+    <Method classname="org.sqlite.RS" name="getObject" signature="(I)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.sqlite.RS" start="278" end="291" startBytecode="0" endBytecode="217" sourcefile="RS.java" sourcepath="org/sqlite/RS.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.RS" start="285" end="285" startBytecode="89" endBytecode="89" sourcefile="RS.java" sourcepath="org/sqlite/RS.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.sqlite.RS">
+      <SourceLine classname="org.sqlite.RS" start="35" end="368" sourcefile="RS.java" sourcepath="org/sqlite/RS.java"/>
+    </Class>
+    <Method classname="org.sqlite.RS" name="getObject" signature="(I)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.sqlite.RS" start="278" end="291" startBytecode="0" endBytecode="217" sourcefile="RS.java" sourcepath="org/sqlite/RS.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="&lt;init&gt;" signature="(J)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Long" start="660" end="662" startBytecode="0" endBytecode="41" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="valueOf" signature="(J)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Long" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <SourceLine classname="org.sqlite.RS" start="283" end="283" startBytecode="79" endBytecode="79" sourcefile="RS.java" sourcepath="org/sqlite/RS.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.sqlite.RS">
+      <SourceLine classname="org.sqlite.RS" start="35" end="368" sourcefile="RS.java" sourcepath="org/sqlite/RS.java"/>
+    </Class>
+    <Method classname="org.sqlite.RS" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="org.sqlite.RS" start="83" end="95" startBytecode="0" endBytecode="163" sourcefile="RS.java" sourcepath="org/sqlite/RS.java"/>
+    </Method>
+    <Field classname="org.sqlite.RS" name="stmt" signature="Lorg/sqlite/Stmt;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.sqlite.RS" sourcefile="RS.java" sourcepath="org/sqlite/RS.java"/>
+    </Field>
+    <SourceLine classname="org.sqlite.RS" start="93" end="93" startBytecode="47" endBytecode="47" sourcefile="RS.java" sourcepath="org/sqlite/RS.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="SKIPPED_CLASS_TOO_BIG" priority="2" abbrev="SKIPPED" category="EXPERIMENTAL">
+    <Class classname="org.sqlite.SQLite">
+      <SourceLine classname="org.sqlite.SQLite" sourcefile="build/SQLite.mips" sourcepath="org/sqlite/build/SQLite.mips"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader">
+      <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="51" end="258" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    </Class>
+    <Method classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" name="getNativeLibraryFolderForTheCurrentOS" signature="()V" isStatic="true">
+      <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="255" end="258" startBytecode="0" endBytecode="4" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    </Method>
+    <LocalVariable name="archName" register="1" pc="8" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="256" end="256" startBytecode="7" endBytecode="7" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="archName"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader">
+      <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="51" end="258" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    </Class>
+    <Method classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" name="getNativeLibraryFolderForTheCurrentOS" signature="()V" isStatic="true">
+      <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="255" end="258" startBytecode="0" endBytecode="4" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    </Method>
+    <LocalVariable name="osName" register="0" pc="4" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="255" end="255" startBytecode="3" endBytecode="3" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="osName"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader">
+      <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="51" end="258" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    </Class>
+    <Method classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" name="md5sum" signature="(Ljava/io/InputStream;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="79" end="96" startBytecode="0" endBytecode="206" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    </Method>
+    <Method classname="java.io.ByteArrayOutputStream" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.ByteArrayOutputStream" start="163" end="163" startBytecode="0" endBytecode="40" sourcefile="ByteArrayOutputStream.java" sourcepath="java/io/ByteArrayOutputStream.java"/>
+    </Method>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="91" end="91" startBytecode="52" endBytecode="52" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader">
+      <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="51" end="258" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    </Class>
+    <Method classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" name="extractAndLoadLibraryFile" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="110" end="174" startBytecode="0" endBytecode="664" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="141" end="141" startBytecode="151" endBytecode="151" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="142" end="142" startBytecode="156" endBytecode="156" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="143" end="143" startBytecode="167" endBytecode="167" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="144" end="144" startBytecode="174" endBytecode="174" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="145" end="145" startBytecode="177" endBytecode="177" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="166" end="166" startBytecode="271" endBytecode="271" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="168" end="168" startBytecode="273" endBytecode="273" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="169" end="169" startBytecode="284" endBytecode="284" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1,OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader">
+      <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="51" end="258" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    </Class>
+    <Method classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" name="extractAndLoadLibraryFile" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="110" end="174" startBytecode="0" endBytecode="664" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="142" end="142" startBytecode="162" endBytecode="162" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="143" end="143" startBytecode="167" endBytecode="167" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="144" end="144" startBytecode="174" endBytecode="174" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="145" end="145" startBytecode="177" endBytecode="177" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="166" end="166" startBytecode="271" endBytecode="271" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="168" end="168" startBytecode="273" endBytecode="273" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" start="169" end="169" startBytecode="284" endBytecode="284" sourcefile="SQLiteJDBCLoader.java" sourcepath="org/xerial/db/sql/sqlite/SQLiteJDBCLoader.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1,OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="6">
+    <MissingClass>org.ibex.nestedvm.Runtime</MissingClass>
+    <MissingClass>org.ibex.nestedvm.Runtime$CPUState</MissingClass>
+    <MissingClass>org.ibex.nestedvm.Runtime$CallJavaCB</MissingClass>
+    <MissingClass>org.ibex.nestedvm.Runtime$ExecutionException</MissingClass>
+    <MissingClass>org.ibex.nestedvm.Runtime$FaultException</MissingClass>
+    <MissingClass>org.ibex.nestedvm.UnixRuntime</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 14 Oct 2008 11:01:58 +0300" total_classes="17" referenced_classes="91" total_bugs="41" total_size="359046" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="36.90" clock_seconds="21.76" peak_mbytes="100.27" alloc_mbytes="763.88" gc_seconds="0.72" priority_2="33" priority_1="8">
+    <PackageStats package="org.sqlite" total_bugs="36" total_types="15" total_size="358931" priority_2="29" priority_1="7">
+      <ClassStats class="org.sqlite.Codes" sourceFile="Codes.java" interface="true" size="32" bugs="0"/>
+      <ClassStats class="org.sqlite.Conn" sourceFile="Conn.java" interface="false" size="181" bugs="2" priority_2="2"/>
+      <ClassStats class="org.sqlite.DB" sourceFile="DB.java" interface="false" size="191" bugs="2" priority_2="2"/>
+      <ClassStats class="org.sqlite.Function" sourceFile="Function.java" interface="false" size="69" bugs="1" priority_2="1"/>
+      <ClassStats class="org.sqlite.Function$Aggregate" sourceFile="Function.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.sqlite.JDBC" sourceFile="JDBC.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.sqlite.MetaData" sourceFile="MetaData.java" interface="false" size="564" bugs="16" priority_2="11" priority_1="5"/>
+      <ClassStats class="org.sqlite.NativeDB" sourceFile="NativeDB.java" interface="false" size="64" bugs="2" priority_2="2"/>
+      <ClassStats class="org.sqlite.NestedDB" sourceFile="NestedDB.java" interface="false" size="287" bugs="2" priority_2="2"/>
+      <ClassStats class="org.sqlite.NestedDB$CausedSQLException" sourceFile="NestedDB.java" interface="false" size="19" bugs="2" priority_1="2"/>
+      <ClassStats class="org.sqlite.PrepStmt" sourceFile="PrepStmt.java" interface="false" size="163" bugs="4" priority_2="4"/>
+      <ClassStats class="org.sqlite.RS" sourceFile="RS.java" interface="false" size="273" bugs="3" priority_2="3"/>
+      <ClassStats class="org.sqlite.SQLite" sourceFile="build/SQLite.mips" interface="false" size="356668" bugs="2" priority_2="2"/>
+      <ClassStats class="org.sqlite.Stmt" sourceFile="Stmt.java" interface="false" size="171" bugs="0"/>
+      <ClassStats class="org.sqlite.Unused" sourceFile="Unused.java" interface="false" size="207" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xerial.db.sql.sqlite" total_bugs="5" total_types="2" total_size="115" priority_2="4" priority_1="1">
+      <ClassStats class="org.xerial.db.sql.sqlite.OSInfo" sourceFile="OSInfo.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.xerial.db.sql.sqlite.SQLiteJDBCLoader" sourceFile="SQLiteJDBCLoader.java" interface="false" size="93" bugs="5" priority_2="4" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="3425" invocations="91" avgMicrosecondsPerInvocation="37645" maxMicrosecondsPerInvocation="2830598" standardDeviationMircosecondsPerInvocation="294845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="3404" invocations="512" avgMicrosecondsPerInvocation="6650" maxMicrosecondsPerInvocation="2707254" standardDeviationMircosecondsPerInvocation="119676"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="1770" invocations="2476" avgMicrosecondsPerInvocation="714" maxMicrosecondsPerInvocation="33000" standardDeviationMircosecondsPerInvocation="2027"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1565" invocations="91" avgMicrosecondsPerInvocation="17208" maxMicrosecondsPerInvocation="1066143" standardDeviationMircosecondsPerInvocation="111680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="701" invocations="626" avgMicrosecondsPerInvocation="1120" maxMicrosecondsPerInvocation="61788" standardDeviationMircosecondsPerInvocation="4560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="700" invocations="640" avgMicrosecondsPerInvocation="1094" maxMicrosecondsPerInvocation="39677" standardDeviationMircosecondsPerInvocation="4030"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="673" invocations="622" avgMicrosecondsPerInvocation="1082" maxMicrosecondsPerInvocation="104964" standardDeviationMircosecondsPerInvocation="5742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="641" invocations="626" avgMicrosecondsPerInvocation="1024" maxMicrosecondsPerInvocation="59372" standardDeviationMircosecondsPerInvocation="4451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="498" invocations="91" avgMicrosecondsPerInvocation="5473" maxMicrosecondsPerInvocation="419049" standardDeviationMircosecondsPerInvocation="43640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="485" invocations="639" avgMicrosecondsPerInvocation="760" maxMicrosecondsPerInvocation="43446" standardDeviationMircosecondsPerInvocation="2837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="458" invocations="419" avgMicrosecondsPerInvocation="1095" maxMicrosecondsPerInvocation="51044" standardDeviationMircosecondsPerInvocation="4654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="438" invocations="16" avgMicrosecondsPerInvocation="27381" maxMicrosecondsPerInvocation="219630" standardDeviationMircosecondsPerInvocation="57113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="408" invocations="626" avgMicrosecondsPerInvocation="651" maxMicrosecondsPerInvocation="31329" standardDeviationMircosecondsPerInvocation="2436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="340" invocations="91" avgMicrosecondsPerInvocation="3743" maxMicrosecondsPerInvocation="37609" standardDeviationMircosecondsPerInvocation="7550"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

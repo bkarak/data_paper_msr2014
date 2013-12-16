@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1253896594000" analysisTimestamp="1360868731492" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/jonas-management-javaee/5.1.0-cxf-2.2/jonas-management-javaee-5.1.0-cxf-2.2.jar</Jar>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.commons.modeler.BaseModelMBean">
+      <SourceLine classname="org.apache.commons.modeler.BaseModelMBean" start="99" end="1380" sourcefile="BaseModelMBean.java" sourcepath="org/apache/commons/modeler/BaseModelMBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.BaseModelMBean" name="setAttributes" signature="(Ljavax/management/AttributeList;)Ljavax/management/AttributeList;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.BaseModelMBean" start="671" end="691" startBytecode="0" endBytecode="46" sourcefile="BaseModelMBean.java" sourcepath="org/apache/commons/modeler/BaseModelMBean.java"/>
+    </Method>
+    <LocalVariable name="response" register="2" pc="31" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.commons.modeler.BaseModelMBean" start="677" end="677" startBytecode="30" endBytecode="30" sourcefile="BaseModelMBean.java" sourcepath="org/apache/commons/modeler/BaseModelMBean.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="response"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.commons.modeler.BaseModelMBean">
+      <SourceLine classname="org.apache.commons.modeler.BaseModelMBean" start="99" end="1380" sourcefile="BaseModelMBean.java" sourcepath="org/apache/commons/modeler/BaseModelMBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.BaseModelMBean" name="getAttribute" signature="(Ljava/lang/String;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.BaseModelMBean" start="243" end="322" startBytecode="0" endBytecode="929" sourcefile="BaseModelMBean.java" sourcepath="org/apache/commons/modeler/BaseModelMBean.java"/>
+    </Method>
+    <LocalVariable name="attrDesc" register="4" pc="121" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="javax.management.modelmbean.ModelMBeanAttributeInfo" name="getDescriptor" signature="()Ljavax/management/Descriptor;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="javax.management.modelmbean.ModelMBeanAttributeInfo" start="350" end="358" startBytecode="0" endBytecode="82" sourcefile="ModelMBeanAttributeInfo.java" sourcepath="javax/management/modelmbean/ModelMBeanAttributeInfo.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.BaseModelMBean" start="262" end="262" startBytecode="123" endBytecode="123" sourcefile="BaseModelMBean.java" sourcepath="org/apache/commons/modeler/BaseModelMBean.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.commons.modeler.BaseModelMBean">
+      <SourceLine classname="org.apache.commons.modeler.BaseModelMBean" start="99" end="1380" sourcefile="BaseModelMBean.java" sourcepath="org/apache/commons/modeler/BaseModelMBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.BaseModelMBean" name="setAttribute" signature="(Ljavax/management/Attribute;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.BaseModelMBean" start="538" end="653" startBytecode="0" endBytecode="1408" sourcefile="BaseModelMBean.java" sourcepath="org/apache/commons/modeler/BaseModelMBean.java"/>
+    </Method>
+    <LocalVariable name="attrDesc" register="5" pc="201" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="javax.management.modelmbean.ModelMBeanAttributeInfo" name="getDescriptor" signature="()Ljavax/management/Descriptor;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="javax.management.modelmbean.ModelMBeanAttributeInfo" start="350" end="358" startBytecode="0" endBytecode="82" sourcefile="ModelMBeanAttributeInfo.java" sourcepath="javax/management/modelmbean/ModelMBeanAttributeInfo.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.BaseModelMBean" start="570" end="570" startBytecode="203" endBytecode="203" sourcefile="BaseModelMBean.java" sourcepath="org/apache/commons/modeler/BaseModelMBean.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.BaseNotificationBroadcaster">
+      <SourceLine classname="org.apache.commons.modeler.BaseNotificationBroadcaster" start="43" end="240" sourcefile="BaseNotificationBroadcaster.java" sourcepath="org/apache/commons/modeler/BaseNotificationBroadcaster.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.BaseNotificationBroadcaster" name="hookCount" signature="[I" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.BaseNotificationBroadcaster" sourcefile="BaseNotificationBroadcaster.java" sourcepath="org/apache/commons/modeler/BaseNotificationBroadcaster.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.BaseNotificationBroadcaster" start="222" end="222" startBytecode="29" endBytecode="29" sourcefile="BaseNotificationBroadcaster.java" sourcepath="org/apache/commons/modeler/BaseNotificationBroadcaster.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.ConstructorInfo">
+      <SourceLine classname="org.apache.commons.modeler.ConstructorInfo" start="37" end="160" sourcefile="ConstructorInfo.java" sourcepath="org/apache/commons/modeler/ConstructorInfo.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.ConstructorInfo" name="getSignature" signature="()[Lorg/apache/commons/modeler/ParameterInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ConstructorInfo" start="93" end="93" startBytecode="0" endBytecode="46" sourcefile="ConstructorInfo.java" sourcepath="org/apache/commons/modeler/ConstructorInfo.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.ConstructorInfo" name="parameters" signature="[Lorg/apache/commons/modeler/ParameterInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ConstructorInfo" sourcefile="ConstructorInfo.java" sourcepath="org/apache/commons/modeler/ConstructorInfo.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ConstructorInfo" start="93" end="93" startBytecode="4" endBytecode="4" sourcefile="ConstructorInfo.java" sourcepath="org/apache/commons/modeler/ConstructorInfo.java"/>
+  </BugInstance>
+  <BugInstance type="NP_UNWRITTEN_FIELD" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.JndiJmx">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="73" end="226" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.JndiJmx" name="handleNotification" signature="(Ljavax/management/Notification;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="124" end="178" startBytecode="0" endBytecode="668" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.JndiJmx" name="mserver" signature="Ljavax/management/MBeanServer;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="131" end="131" startBytecode="36" endBytecode="36" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.commons.modeler.JndiJmx">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="73" end="226" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.JndiJmx" name="componentContext" signature="Ljavax/naming/Context;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="98" end="98" startBytecode="2" endBytecode="2" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.commons.modeler.JndiJmx">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="73" end="226" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.JndiJmx" name="configContext" signature="Ljavax/naming/Context;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="113" end="113" startBytecode="2" endBytecode="2" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.commons.modeler.JndiJmx">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="73" end="226" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.JndiJmx" name="descriptorContext" signature="Ljavax/naming/Context;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="106" end="106" startBytecode="2" endBytecode="2" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.JndiJmx">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="73" end="226" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.JndiJmx" name="mserver" signature="Ljavax/management/MBeanServer;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.JndiJmx" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.JndiJmx" start="131" end="131" startBytecode="31" endBytecode="31" sourcefile="JndiJmx.java" sourcepath="org/apache/commons/modeler/JndiJmx.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.ManagedBean">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="76" end="543" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.ManagedBean" name="getAttributes" signature="()[Lorg/apache/commons/modeler/AttributeInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="110" end="110" startBytecode="0" endBytecode="46" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.ManagedBean" name="attributes" signature="[Lorg/apache/commons/modeler/AttributeInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="110" end="110" startBytecode="4" endBytecode="4" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.ManagedBean">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="76" end="543" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.ManagedBean" name="getConstructors" signature="()[Lorg/apache/commons/modeler/ConstructorInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="134" end="134" startBytecode="0" endBytecode="46" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.ManagedBean" name="constructors" signature="[Lorg/apache/commons/modeler/ConstructorInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="134" end="134" startBytecode="4" endBytecode="4" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.ManagedBean">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="76" end="543" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.ManagedBean" name="getNotifications" signature="()[Lorg/apache/commons/modeler/NotificationInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="204" end="204" startBytecode="0" endBytecode="46" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.ManagedBean" name="notifications" signature="[Lorg/apache/commons/modeler/NotificationInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="204" end="204" startBytecode="4" endBytecode="4" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.ManagedBean">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="76" end="543" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.ManagedBean" name="getOperations" signature="()[Lorg/apache/commons/modeler/OperationInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="212" end="212" startBytecode="0" endBytecode="46" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.ManagedBean" name="operations" signature="[Lorg/apache/commons/modeler/OperationInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="212" end="212" startBytecode="4" endBytecode="4" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+  </BugInstance>
+  <BugInstance type="ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD" priority="1" abbrev="ML" category="MT_CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.ManagedBean">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="76" end="543" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.ManagedBean" name="addAttribute" signature="(Lorg/apache/commons/modeler/AttributeInfo;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="241" end="250" startBytecode="0" endBytecode="169" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.ManagedBean" name="attributes" signature="[Lorg/apache/commons/modeler/AttributeInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="246" end="246" startBytecode="43" endBytecode="43" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+  </BugInstance>
+  <BugInstance type="ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD" priority="1" abbrev="ML" category="MT_CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.ManagedBean">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="76" end="543" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.ManagedBean" name="addConstructor" signature="(Lorg/apache/commons/modeler/ConstructorInfo;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="260" end="269" startBytecode="0" endBytecode="169" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.ManagedBean" name="constructors" signature="[Lorg/apache/commons/modeler/ConstructorInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="265" end="265" startBytecode="43" endBytecode="43" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+  </BugInstance>
+  <BugInstance type="ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD" priority="1" abbrev="ML" category="MT_CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.ManagedBean">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="76" end="543" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.ManagedBean" name="addNotification" signature="(Lorg/apache/commons/modeler/NotificationInfo;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="290" end="300" startBytecode="0" endBytecode="169" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.ManagedBean" name="notifications" signature="[Lorg/apache/commons/modeler/NotificationInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="296" end="296" startBytecode="43" endBytecode="43" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+  </BugInstance>
+  <BugInstance type="ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD" priority="1" abbrev="ML" category="MT_CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.ManagedBean">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="76" end="543" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.ManagedBean" name="addOperation" signature="(Lorg/apache/commons/modeler/OperationInfo;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="309" end="318" startBytecode="0" endBytecode="169" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.ManagedBean" name="operations" signature="[Lorg/apache/commons/modeler/OperationInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="314" end="314" startBytecode="43" endBytecode="43" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="2" abbrev="SnVI" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.modeler.ManagedBean">
+      <SourceLine classname="org.apache.commons.modeler.ManagedBean" start="76" end="543" sourcefile="ManagedBean.java" sourcepath="org/apache/commons/modeler/ManagedBean.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.NotificationInfo">
+      <SourceLine classname="org.apache.commons.modeler.NotificationInfo" start="36" end="137" sourcefile="NotificationInfo.java" sourcepath="org/apache/commons/modeler/NotificationInfo.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.NotificationInfo" name="getNotifTypes" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.NotificationInfo" start="78" end="78" startBytecode="0" endBytecode="46" sourcefile="NotificationInfo.java" sourcepath="org/apache/commons/modeler/NotificationInfo.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.NotificationInfo" name="notifTypes" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.NotificationInfo" sourcefile="NotificationInfo.java" sourcepath="org/apache/commons/modeler/NotificationInfo.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.NotificationInfo" start="78" end="78" startBytecode="4" endBytecode="4" sourcefile="NotificationInfo.java" sourcepath="org/apache/commons/modeler/NotificationInfo.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.OperationInfo">
+      <SourceLine classname="org.apache.commons.modeler.OperationInfo" start="47" end="242" sourcefile="OperationInfo.java" sourcepath="org/apache/commons/modeler/OperationInfo.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.OperationInfo" name="getSignature" signature="()[Lorg/apache/commons/modeler/ParameterInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.OperationInfo" start="166" end="166" startBytecode="0" endBytecode="46" sourcefile="OperationInfo.java" sourcepath="org/apache/commons/modeler/OperationInfo.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.OperationInfo" name="parameters" signature="[Lorg/apache/commons/modeler/ParameterInfo;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.OperationInfo" sourcefile="OperationInfo.java" sourcepath="org/apache/commons/modeler/OperationInfo.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.OperationInfo" start="166" end="166" startBytecode="4" endBytecode="4" sourcefile="OperationInfo.java" sourcepath="org/apache/commons/modeler/OperationInfo.java"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.Registry">
+      <SourceLine classname="org.apache.commons.modeler.Registry" start="78" end="1093" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.Registry" name="server" signature="Ljavax/management/MBeanServer;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.Registry" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java"/>
+    </Field>
+    <Int value="50" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="1025" end="1025" startBytecode="2" endBytecode="2" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="564" end="564" startBytecode="3" endBytecode="3" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="591" end="591" startBytecode="3" endBytecode="3" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="984" end="984" startBytecode="2" endBytecode="2" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="628" end="628" startBytecode="5" endBytecode="5" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="641" end="641" startBytecode="131" endBytecode="131" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="635" end="635" startBytecode="85" endBytecode="85" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="630" end="630" startBytecode="33" endBytecode="33" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.Registry">
+      <SourceLine classname="org.apache.commons.modeler.Registry" start="78" end="1093" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.Registry" name="MODELER_MANIFEST" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.Registry" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="81" end="81" startBytecode="2" endBytecode="2" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.commons.modeler.Registry">
+      <SourceLine classname="org.apache.commons.modeler.Registry" start="78" end="1093" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.Registry" name="load" signature="(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.Registry" start="751" end="794" startBytecode="0" endBytecode="496" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="771" end="771" startBytecode="131" endBytecode="131" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="772" end="772" startBytecode="136" endBytecode="136" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="773" end="773" startBytecode="139" endBytecode="139" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="788" end="788" startBytecode="198" endBytecode="198" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="791" end="791" startBytecode="205" endBytecode="205" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="792" end="792" startBytecode="212" endBytecode="212" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.commons.modeler.Registry" start="794" end="794" startBytecode="226" endBytecode="226" sourcefile="Registry.java" sourcepath="org/apache/commons/modeler/Registry.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.ant.JmxInvoke">
+      <SourceLine classname="org.apache.commons.modeler.ant.JmxInvoke" start="38" end="85" sourcefile="JmxInvoke.java" sourcepath="org/apache/commons/modeler/ant/JmxInvoke.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.ant.JmxInvoke" name="args" signature="Ljava/util/Vector;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ant.JmxInvoke" sourcefile="JmxInvoke.java" sourcepath="org/apache/commons/modeler/ant/JmxInvoke.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ant.JmxInvoke" start="66" end="66" startBytecode="77" endBytecode="77" sourcefile="JmxInvoke.java" sourcepath="org/apache/commons/modeler/ant/JmxInvoke.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.ant.MLETTask">
+      <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" start="46" end="185" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.ant.MLETTask" name="getMBeanServer" signature="()Ljavax/management/MBeanServer;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" start="91" end="122" startBytecode="0" endBytecode="386" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+    </Method>
+    <Class classname="javax.management.loading.MLet">
+      <SourceLine classname="javax.management.loading.MLet" start="171" end="1337" sourcefile="MLet.java" sourcepath="javax/management/loading/MLet.java"/>
+    </Class>
+    <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" start="106" end="106" startBytecode="89" endBytecode="89" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.ant.MLETTask">
+      <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" start="46" end="185" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.ant.MLETTask" name="archive" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" start="77" end="77" startBytecode="2" endBytecode="2" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.ant.MLETTask">
+      <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" start="46" end="185" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.ant.MLETTask" name="codebase" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" start="81" end="81" startBytecode="2" endBytecode="2" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.ant.MLETTask">
+      <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" start="46" end="185" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.ant.MLETTask" name="loaderRef" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.ant.MLETTask" sourcefile="MLETTask.java" sourcepath="org/apache/commons/modeler/ant/MLETTask.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="NP_UNWRITTEN_FIELD" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="56" end="353" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" name="refreshAttributes" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="214" end="280" startBytecode="0" endBytecode="1054" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" name="mserver" signature="Ljavax/management/MBeanServer;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="270" end="270" startBytecode="497" endBytecode="497" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="56" end="353" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" name="prefix" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="82" end="82" startBytecode="38" endBytecode="38" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="56" end="353" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" name="localDomain" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="56" end="353" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" name="mserver" signature="Ljavax/management/MBeanServer;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="270" end="270" startBytecode="492" endBytecode="492" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="56" end="353" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" name="refreshAttributes" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="214" end="280" startBytecode="0" endBytecode="1054" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" start="230" end="230" startBytecode="124" endBytecode="124" sourcefile="SimpleRemoteConnector.java" sourcepath="org/apache/commons/modeler/mbeans/SimpleRemoteConnector.java"/>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="2" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" start="40" end="302" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" name="location" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+    </Field>
+    <Field classname="org.apache.commons.modeler.modules.ModelerSource" name="location" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.commons.modeler.modules.ModelerSource" sourcefile="ModelerSource.java" sourcepath="org/apache/commons/modeler/modules/ModelerSource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="2" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" start="40" end="302" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" name="source" signature="Ljava/lang/Object;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+    </Field>
+    <Field classname="org.apache.commons.modeler.modules.ModelerSource" name="source" signature="Ljava/lang/Object;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.commons.modeler.modules.ModelerSource" sourcefile="ModelerSource.java" sourcepath="org/apache/commons/modeler/modules/ModelerSource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" start="40" end="302" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" start="83" end="302" startBytecode="0" endBytecode="2089" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" start="300" end="300" startBytecode="1059" endBytecode="1059" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" start="40" end="302" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" name="location" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" start="55" end="55" startBytecode="2" endBytecode="2" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" start="40" end="302" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" name="type" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" start="63" end="63" startBytecode="2" endBytecode="2" sourcefile="MbeansDescriptorsDOMSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDOMSource.java"/>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="2" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" start="31" end="228" sourcefile="MbeansDescriptorsDigesterSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDigesterSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" name="location" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" sourcefile="MbeansDescriptorsDigesterSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDigesterSource.java"/>
+    </Field>
+    <Field classname="org.apache.commons.modeler.modules.ModelerSource" name="location" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.commons.modeler.modules.ModelerSource" sourcefile="ModelerSource.java" sourcepath="org/apache/commons/modeler/modules/ModelerSource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="2" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" start="31" end="228" sourcefile="MbeansDescriptorsDigesterSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDigesterSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" name="source" signature="Ljava/lang/Object;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" sourcefile="MbeansDescriptorsDigesterSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDigesterSource.java"/>
+    </Field>
+    <Field classname="org.apache.commons.modeler.modules.ModelerSource" name="source" signature="Ljava/lang/Object;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.commons.modeler.modules.ModelerSource" sourcefile="ModelerSource.java" sourcepath="org/apache/commons/modeler/modules/ModelerSource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" start="31" end="228" sourcefile="MbeansDescriptorsDigesterSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDigesterSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" name="location" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" sourcefile="MbeansDescriptorsDigesterSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDigesterSource.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" start="47" end="47" startBytecode="2" endBytecode="2" sourcefile="MbeansDescriptorsDigesterSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDigesterSource.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" start="31" end="228" sourcefile="MbeansDescriptorsDigesterSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDigesterSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" name="type" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" sourcefile="MbeansDescriptorsDigesterSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDigesterSource.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" start="55" end="55" startBytecode="2" endBytecode="2" sourcefile="MbeansDescriptorsDigesterSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDigesterSource.java"/>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="2" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" start="46" end="169" sourcefile="MbeansDescriptorsDynamicMBeanSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDynamicMBeanSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" name="location" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" sourcefile="MbeansDescriptorsDynamicMBeanSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDynamicMBeanSource.java"/>
+    </Field>
+    <Field classname="org.apache.commons.modeler.modules.ModelerSource" name="location" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.commons.modeler.modules.ModelerSource" sourcefile="ModelerSource.java" sourcepath="org/apache/commons/modeler/modules/ModelerSource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="2" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" start="46" end="169" sourcefile="MbeansDescriptorsDynamicMBeanSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDynamicMBeanSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" name="source" signature="Ljava/lang/Object;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" sourcefile="MbeansDescriptorsDynamicMBeanSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDynamicMBeanSource.java"/>
+    </Field>
+    <Field classname="org.apache.commons.modeler.modules.ModelerSource" name="source" signature="Ljava/lang/Object;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.commons.modeler.modules.ModelerSource" sourcefile="ModelerSource.java" sourcepath="org/apache/commons/modeler/modules/ModelerSource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" start="46" end="169" sourcefile="MbeansDescriptorsDynamicMBeanSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDynamicMBeanSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" name="location" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" sourcefile="MbeansDescriptorsDynamicMBeanSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDynamicMBeanSource.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" start="61" end="61" startBytecode="2" endBytecode="2" sourcefile="MbeansDescriptorsDynamicMBeanSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsDynamicMBeanSource.java"/>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="2" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" start="41" end="414" sourcefile="MbeansDescriptorsIntrospectionSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsIntrospectionSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" name="location" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" sourcefile="MbeansDescriptorsIntrospectionSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsIntrospectionSource.java"/>
+    </Field>
+    <Field classname="org.apache.commons.modeler.modules.ModelerSource" name="location" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.commons.modeler.modules.ModelerSource" sourcefile="ModelerSource.java" sourcepath="org/apache/commons/modeler/modules/ModelerSource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="2" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" start="41" end="414" sourcefile="MbeansDescriptorsIntrospectionSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsIntrospectionSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" name="source" signature="Ljava/lang/Object;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" sourcefile="MbeansDescriptorsIntrospectionSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsIntrospectionSource.java"/>
+    </Field>
+    <Field classname="org.apache.commons.modeler.modules.ModelerSource" name="source" signature="Ljava/lang/Object;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.commons.modeler.modules.ModelerSource" sourcefile="ModelerSource.java" sourcepath="org/apache/commons/modeler/modules/ModelerSource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" start="41" end="414" sourcefile="MbeansDescriptorsIntrospectionSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsIntrospectionSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" name="location" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" sourcefile="MbeansDescriptorsIntrospectionSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsIntrospectionSource.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" start="56" end="56" startBytecode="2" endBytecode="2" sourcefile="MbeansDescriptorsIntrospectionSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsIntrospectionSource.java"/>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="2" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" start="31" end="103" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" name="location" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+    </Field>
+    <Field classname="org.apache.commons.modeler.modules.ModelerSource" name="location" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.commons.modeler.modules.ModelerSource" sourcefile="ModelerSource.java" sourcepath="org/apache/commons/modeler/modules/ModelerSource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="2" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" start="31" end="103" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" name="source" signature="Ljava/lang/Object;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+    </Field>
+    <Field classname="org.apache.commons.modeler.modules.ModelerSource" name="source" signature="Ljava/lang/Object;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.commons.modeler.modules.ModelerSource" sourcefile="ModelerSource.java" sourcepath="org/apache/commons/modeler/modules/ModelerSource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" start="31" end="103" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" start="73" end="103" startBytecode="0" endBytecode="114" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" start="86" end="86" startBytecode="93" endBytecode="93" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" start="31" end="103" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" name="location" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" start="31" end="103" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" name="type" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" start="53" end="53" startBytecode="2" endBytecode="2" sourcefile="MbeansDescriptorsSerSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansDescriptorsSerSource.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="54" end="389" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.modules.MbeansSource" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="141" end="287" startBytecode="0" endBytecode="1705" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+    </Method>
+    <Class classname="javax.management.loading.MLet">
+      <SourceLine classname="javax.management.loading.MLet" start="171" end="1337" sourcefile="MLet.java" sourcepath="javax/management/loading/MLet.java"/>
+    </Class>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="171" end="171" startBytecode="140" endBytecode="140" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="54" end="389" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.modules.MbeansSource" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="141" end="287" startBytecode="0" endBytecode="1705" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="232" end="232" startBytecode="639" endBytecode="639" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="261" end="261" startBytecode="869" endBytecode="869" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="285" end="285" startBytecode="1033" endBytecode="1033" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="54" end="389" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.modules.MbeansSource" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="141" end="287" startBytecode="0" endBytecode="1705" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+    </Method>
+    <Field classname="org.apache.commons.modeler.modules.MbeansSource" name="loaderLoaded" signature="Z" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="173" end="173" startBytecode="173" endBytecode="173" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.commons.modeler.modules.MbeansSource">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="54" end="389" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.modules.MbeansSource" name="type" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.modules.MbeansSource" start="83" end="83" startBytecode="2" endBytecode="2" sourcefile="MbeansSource.java" sourcepath="org/apache/commons/modeler/modules/MbeansSource.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.modeler.util.IntrospectionUtils">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="42" end="967" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Class>
+    <Field classname="org.apache.commons.modeler.util.IntrospectionUtils" name="PATH_SEPARATOR" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="236" end="236" startBytecode="98" endBytecode="98" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.apache.commons.modeler.util.IntrospectionUtils">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="42" end="967" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="callMethod0" signature="(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="903" end="915" startBytecode="0" endBytecode="44" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="904" end="904" startBytecode="16" endBytecode="16" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.commons.modeler.util.IntrospectionUtils">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="42" end="967" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="callMethod1" signature="(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/ClassLoader;)Ljava/lang/Object;" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="880" end="896" startBytecode="0" endBytecode="276" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <LocalVariable name="target" register="0" pc="70" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="892" end="892" startBytecode="71" endBytecode="71" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="880" end="880" startBytecode="1" endBytecode="1" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.apache.commons.modeler.util.IntrospectionUtils">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="42" end="967" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="findMethod" signature="(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="809" end="832" startBytecode="0" endBytecode="344" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <LocalVariable name="params" register="2" pc="79" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="820" end="820" startBytecode="80" endBytecode="80" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="817" end="817" startBytecode="60" endBytecode="60" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="818" end="818" startBytecode="71" endBytecode="71" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.commons.modeler.util.IntrospectionUtils">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="42" end="967" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="findBooleanSetters" signature="(Ljava/lang/Class;)[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="775" end="790" startBytecode="0" endBytecode="290" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <LocalVariable name="m" register="1" pc="5" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="findMethods" signature="(Ljava/lang/Class;)[Ljava/lang/reflect/Method;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="800" end="805" startBytecode="0" endBytecode="100" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="776" end="776" startBytecode="6" endBytecode="6" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.commons.modeler.util.IntrospectionUtils">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="42" end="967" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="findMethod" signature="(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="809" end="832" startBytecode="0" endBytecode="344" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <LocalVariable name="methodParams" register="5" pc="40" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="java.lang.reflect.Method" name="getParameterTypes" signature="()[Ljava/lang/Class;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.reflect.Method" start="251" end="251" startBytecode="0" endBytecode="37" sourcefile="Method.java" sourcepath="java/lang/reflect/Method.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="814" end="814" startBytecode="42" endBytecode="42" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="818" end="818" startBytecode="65" endBytecode="65" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.commons.modeler.util.IntrospectionUtils">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="42" end="967" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="findMethod" signature="(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="809" end="832" startBytecode="0" endBytecode="344" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <LocalVariable name="methods" register="3" pc="5" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="findMethods" signature="(Ljava/lang/Class;)[Ljava/lang/reflect/Method;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="800" end="805" startBytecode="0" endBytecode="100" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="810" end="810" startBytecode="6" endBytecode="6" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.commons.modeler.util.IntrospectionUtils">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="42" end="967" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="findVoidSetters" signature="(Ljava/lang/Class;)[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="757" end="771" startBytecode="0" endBytecode="270" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <LocalVariable name="m" register="1" pc="5" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="findMethods" signature="(Ljava/lang/Class;)[Ljava/lang/reflect/Method;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="800" end="805" startBytecode="0" endBytecode="100" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="758" end="758" startBytecode="6" endBytecode="6" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.apache.commons.modeler.util.IntrospectionUtils">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="42" end="967" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.modeler.util.IntrospectionUtils" name="setProperty" signature="(Ljava/lang/Object;Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="423" end="441" startBytecode="0" endBytecode="261" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.modeler.util.IntrospectionUtils" start="437" end="437" startBytecode="96" endBytecode="96" sourcefile="IntrospectionUtils.java" sourcepath="org/apache/commons/modeler/util/IntrospectionUtils.java"/>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.lib.management.javaee.J2eeObjectName">
+      <SourceLine classname="org.ow2.jonas.lib.management.javaee.J2eeObjectName" start="43" end="1520" sourcefile="J2eeObjectName.java" sourcepath="org/ow2/jonas/lib/management/javaee/J2eeObjectName.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.javaee.J2eeObjectName" name="JavaMailResource" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljavax/management/ObjectName;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.javaee.J2eeObjectName" start="969" end="980" startBytecode="0" endBytecode="219" sourcefile="J2eeObjectName.java" sourcepath="org/ow2/jonas/lib/management/javaee/J2eeObjectName.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.lib.management.javaee.J2eeObjectName">
+      <SourceLine classname="org.ow2.jonas.lib.management.javaee.J2eeObjectName" start="43" end="1520" sourcefile="J2eeObjectName.java" sourcepath="org/ow2/jonas/lib/management/javaee/J2eeObjectName.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.javaee.J2eeObjectName" name="JavaMailResources" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljavax/management/ObjectName;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.javaee.J2eeObjectName" start="986" end="1001" startBytecode="0" endBytecode="222" sourcefile="J2eeObjectName.java" sourcepath="org/ow2/jonas/lib/management/javaee/J2eeObjectName.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.lib.management.javaee.JSR77ManagementIdentifier">
+      <SourceLine classname="org.ow2.jonas.lib.management.javaee.JSR77ManagementIdentifier" start="53" end="178" sourcefile="JSR77ManagementIdentifier.java" sourcepath="org/ow2/jonas/lib/management/javaee/JSR77ManagementIdentifier.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.javaee.JSR77ManagementIdentifier" name="getInheritedPropertiesAsString" signature="(Ljavax/management/ObjectName;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.javaee.JSR77ManagementIdentifier" start="78" end="94" startBytecode="0" endBytecode="303" sourcefile="JSR77ManagementIdentifier.java" sourcepath="org/ow2/jonas/lib/management/javaee/JSR77ManagementIdentifier.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.lib.management.javaee.JSR77ManagementIdentifier" start="88" end="88" startBytecode="98" endBytecode="98" sourcefile="JSR77ManagementIdentifier.java" sourcepath="org/ow2/jonas/lib/management/javaee/JSR77ManagementIdentifier.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.javaee.ManagedObject">
+      <SourceLine classname="org.ow2.jonas.lib.management.javaee.ManagedObject" start="41" end="101" sourcefile="ManagedObject.java" sourcepath="org/ow2/jonas/lib/management/javaee/ManagedObject.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.javaee.ManagedObject" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.javaee.ManagedObject" sourcefile="ManagedObject.java" sourcepath="org/ow2/jonas/lib/management/javaee/ManagedObject.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.javaee.ManagedObject" start="47" end="47" startBytecode="5" endBytecode="5" sourcefile="ManagedObject.java" sourcepath="org/ow2/jonas/lib/management/javaee/ManagedObject.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="11">
+    <MissingClass>org.apache.commons.digester.Digester</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.tools.ant.BuildException</MissingClass>
+    <MissingClass>org.apache.tools.ant.Project</MissingClass>
+    <MissingClass>org.apache.tools.ant.Task</MissingClass>
+    <MissingClass>org.objectweb.util.monolog.api.BasicLevel</MissingClass>
+    <MissingClass>org.objectweb.util.monolog.api.Logger</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 25 Sep 2009 19:36:34 +0300" total_classes="55" referenced_classes="201" total_bugs="71" total_size="4981" num_packages="6" vm_version="20.4-b02-402" cpu_seconds="46.49" clock_seconds="42.17" peak_mbytes="107.35" alloc_mbytes="763.88" gc_seconds="0.65" priority_2="63" priority_1="8">
+    <PackageStats package="org.apache.commons.modeler" total_bugs="24" total_types="19" total_size="1845" priority_2="18" priority_1="6">
+      <ClassStats class="org.apache.commons.modeler.AttributeInfo" sourceFile="AttributeInfo.java" interface="false" size="143" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.BaseAttributeFilter" sourceFile="BaseAttributeFilter.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.BaseModelMBean" sourceFile="BaseModelMBean.java" interface="false" size="470" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.apache.commons.modeler.BaseModelMBean$MethodKey" sourceFile="BaseModelMBean.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.BaseNotification" sourceFile="BaseNotification.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.BaseNotificationBroadcaster" sourceFile="BaseNotificationBroadcaster.java" interface="false" size="66" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.modeler.BaseNotificationBroadcasterEntry" sourceFile="BaseNotificationBroadcaster.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.ConstructorInfo" sourceFile="ConstructorInfo.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.modeler.FeatureInfo" sourceFile="FeatureInfo.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.FieldInfo" sourceFile="FieldInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.FixedNotificationFilter" sourceFile="FixedNotificationFilter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.JndiJmx" sourceFile="JndiJmx.java" interface="false" size="86" bugs="5" priority_2="5"/>
+      <ClassStats class="org.apache.commons.modeler.Main" sourceFile="Main.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.ManagedBean" sourceFile="ManagedBean.java" interface="false" size="204" bugs="9" priority_2="5" priority_1="4"/>
+      <ClassStats class="org.apache.commons.modeler.NotificationInfo" sourceFile="NotificationInfo.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.modeler.OperationInfo" sourceFile="OperationInfo.java" interface="false" size="98" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.modeler.ParameterInfo" sourceFile="ParameterInfo.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.Registry" sourceFile="Registry.java" interface="false" size="418" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.apache.commons.modeler.RegistryMBean" sourceFile="RegistryMBean.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.modeler.ant" total_bugs="5" total_types="7" total_size="325" priority_2="5">
+      <ClassStats class="org.apache.commons.modeler.ant.Arg" sourceFile="Arg.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.ant.JmxInvoke" sourceFile="JmxInvoke.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.modeler.ant.JmxSet" sourceFile="JmxSet.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.ant.MLETTask" sourceFile="MLETTask.java" interface="false" size="96" bugs="4" priority_2="4"/>
+      <ClassStats class="org.apache.commons.modeler.ant.ModelerTask" sourceFile="ModelerTask.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.ant.RegistryTask" sourceFile="RegistryTask.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.ant.ServiceTask" sourceFile="ServiceTask.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.modeler.mbeans" total_bugs="5" total_types="2" total_size="215" priority_2="5">
+      <ClassStats class="org.apache.commons.modeler.mbeans.MBeanProxy" sourceFile="MBeanProxy.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.mbeans.SimpleRemoteConnector" sourceFile="SimpleRemoteConnector.java" interface="false" size="182" bugs="5" priority_2="5"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.modeler.modules" total_bugs="24" total_types="9" total_size="834" priority_2="24">
+      <ClassStats class="org.apache.commons.modeler.modules.MbeansDescriptorsDOMSource" sourceFile="MbeansDescriptorsDOMSource.java" interface="false" size="149" bugs="5" priority_2="5"/>
+      <ClassStats class="org.apache.commons.modeler.modules.MbeansDescriptorsDigesterSource" sourceFile="MbeansDescriptorsDigesterSource.java" interface="false" size="87" bugs="4" priority_2="4"/>
+      <ClassStats class="org.apache.commons.modeler.modules.MbeansDescriptorsDynamicMBeanSource" sourceFile="MbeansDescriptorsDynamicMBeanSource.java" interface="false" size="77" bugs="3" priority_2="3"/>
+      <ClassStats class="org.apache.commons.modeler.modules.MbeansDescriptorsIntrospectionSource" sourceFile="MbeansDescriptorsIntrospectionSource.java" interface="false" size="215" bugs="3" priority_2="3"/>
+      <ClassStats class="org.apache.commons.modeler.modules.MbeansDescriptorsSerSource" sourceFile="MbeansDescriptorsSerSource.java" interface="false" size="56" bugs="5" priority_2="5"/>
+      <ClassStats class="org.apache.commons.modeler.modules.MbeansSource" sourceFile="MbeansSource.java" interface="false" size="202" bugs="4" priority_2="4"/>
+      <ClassStats class="org.apache.commons.modeler.modules.MbeansSource$ArgsInfo" sourceFile="MbeansSource.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.modules.MbeansSourceMBean" sourceFile="MbeansSourceMBean.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.modules.ModelerSource" sourceFile="ModelerSource.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.modeler.util" total_bugs="9" total_types="6" total_size="611" priority_2="8" priority_1="1">
+      <ClassStats class="org.apache.commons.modeler.util.DomUtil" sourceFile="DomUtil.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.util.DomUtil$NullResolver" sourceFile="DomUtil.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.util.IntrospectionUtils" sourceFile="IntrospectionUtils.java" interface="false" size="473" bugs="9" priority_2="8" priority_1="1"/>
+      <ClassStats class="org.apache.commons.modeler.util.IntrospectionUtils$1" sourceFile="IntrospectionUtils.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.util.IntrospectionUtils$AttributeHolder" sourceFile="IntrospectionUtils.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.modeler.util.IntrospectionUtils$PropertySource" sourceFile="IntrospectionUtils.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.javaee" total_bugs="4" total_types="12" total_size="1151" priority_2="3" priority_1="1">
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.J2EEDeployedObject" sourceFile="J2EEDeployedObject.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.J2EEDeployedObjectMBean" sourceFile="J2EEDeployedObjectMBean.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.J2EEManagedObject" sourceFile="J2EEManagedObject.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.J2EEManagedObjectMBean" sourceFile="J2EEManagedObjectMBean.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.J2EEModule" sourceFile="J2EEModule.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.J2EEModuleMBean" sourceFile="J2EEModuleMBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.J2EEResource" sourceFile="J2EEResource.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.J2EEServerState" sourceFile="J2EEServerState.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.J2EEServiceState" sourceFile="J2EEServiceState.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.J2eeObjectName" sourceFile="J2eeObjectName.java" interface="false" size="842" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.JSR77ManagementIdentifier" sourceFile="JSR77ManagementIdentifier.java" interface="false" size="60" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jonas.lib.management.javaee.ManagedObject" sourceFile="ManagedObject.java" interface="false" size="30" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="2757" invocations="716" avgMicrosecondsPerInvocation="3851" maxMicrosecondsPerInvocation="151263" standardDeviationMircosecondsPerInvocation="12403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="2711" invocations="709" avgMicrosecondsPerInvocation="3824" maxMicrosecondsPerInvocation="358683" standardDeviationMircosecondsPerInvocation="17014"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="2487" invocations="625" avgMicrosecondsPerInvocation="3980" maxMicrosecondsPerInvocation="130051" standardDeviationMircosecondsPerInvocation="10673"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="2374" invocations="625" avgMicrosecondsPerInvocation="3799" maxMicrosecondsPerInvocation="206325" standardDeviationMircosecondsPerInvocation="13464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="2361" invocations="201" avgMicrosecondsPerInvocation="11746" maxMicrosecondsPerInvocation="192803" standardDeviationMircosecondsPerInvocation="26405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2175" invocations="779" avgMicrosecondsPerInvocation="2792" maxMicrosecondsPerInvocation="186499" standardDeviationMircosecondsPerInvocation="11044"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="2031" invocations="201" avgMicrosecondsPerInvocation="10109" maxMicrosecondsPerInvocation="304842" standardDeviationMircosecondsPerInvocation="28044"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="2001" invocations="625" avgMicrosecondsPerInvocation="3201" maxMicrosecondsPerInvocation="251736" standardDeviationMircosecondsPerInvocation="13345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1952" invocations="625" avgMicrosecondsPerInvocation="3123" maxMicrosecondsPerInvocation="147847" standardDeviationMircosecondsPerInvocation="11032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="1007" invocations="201" avgMicrosecondsPerInvocation="5012" maxMicrosecondsPerInvocation="139416" standardDeviationMircosecondsPerInvocation="15094"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="968" invocations="436" avgMicrosecondsPerInvocation="2220" maxMicrosecondsPerInvocation="131326" standardDeviationMircosecondsPerInvocation="7835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="950" invocations="928" avgMicrosecondsPerInvocation="1023" maxMicrosecondsPerInvocation="97239" standardDeviationMircosecondsPerInvocation="4765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="656" invocations="201" avgMicrosecondsPerInvocation="3268" maxMicrosecondsPerInvocation="53868" standardDeviationMircosecondsPerInvocation="7637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="537" invocations="12994" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="194608" standardDeviationMircosecondsPerInvocation="1847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="514" invocations="201" avgMicrosecondsPerInvocation="2557" maxMicrosecondsPerInvocation="68727" standardDeviationMircosecondsPerInvocation="8425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="500" invocations="640" avgMicrosecondsPerInvocation="782" maxMicrosecondsPerInvocation="225456" standardDeviationMircosecondsPerInvocation="9598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="490" invocations="55" avgMicrosecondsPerInvocation="8925" maxMicrosecondsPerInvocation="172696" standardDeviationMircosecondsPerInvocation="28101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="487" invocations="625" avgMicrosecondsPerInvocation="780" maxMicrosecondsPerInvocation="32872" standardDeviationMircosecondsPerInvocation="3148"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="438" invocations="201" avgMicrosecondsPerInvocation="2180" maxMicrosecondsPerInvocation="73637" standardDeviationMircosecondsPerInvocation="7701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LazyInit" totalMilliseconds="433" invocations="55" avgMicrosecondsPerInvocation="7877" maxMicrosecondsPerInvocation="260478" standardDeviationMircosecondsPerInvocation="37594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="405" invocations="201" avgMicrosecondsPerInvocation="2016" maxMicrosecondsPerInvocation="153708" standardDeviationMircosecondsPerInvocation="11398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="391" invocations="625" avgMicrosecondsPerInvocation="627" maxMicrosecondsPerInvocation="66375" standardDeviationMircosecondsPerInvocation="3904"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="391" invocations="55" avgMicrosecondsPerInvocation="7112" maxMicrosecondsPerInvocation="71492" standardDeviationMircosecondsPerInvocation="16957"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="388" invocations="625" avgMicrosecondsPerInvocation="621" maxMicrosecondsPerInvocation="64784" standardDeviationMircosecondsPerInvocation="3617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="388" invocations="201" avgMicrosecondsPerInvocation="1930" maxMicrosecondsPerInvocation="64408" standardDeviationMircosecondsPerInvocation="6224"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

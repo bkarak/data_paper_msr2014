@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1308671006000" analysisTimestamp="1360931321299" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/jonas-management-extensions/5.3.0-M3/jonas-management-extensions-5.3.0-M3.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" start="42" end="571" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" name="getClusterdGraphAttributes" signature="()Ljava/util/Hashtable;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" start="361" end="361" startBytecode="0" endBytecode="46" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" name="clusterdGraphAttributes" signature="Ljava/util/Hashtable;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" start="361" end="361" startBytecode="4" endBytecode="4" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" start="42" end="571" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" name="setClusterdGraphAttributes" signature="(Ljava/util/Hashtable;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" start="365" end="366" startBytecode="0" endBytecode="79" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" name="clusterdGraphAttributes" signature="Ljava/util/Hashtable;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+    </Field>
+    <LocalVariable name="clusterdGraphAttribute" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" start="365" end="365" startBytecode="2" endBytecode="2" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" start="42" end="571" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" name="newCmiMbeanServerConnection" signature="Ljavax/management/MBeanServerConnection;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminHelper" start="180" end="180" startBytecode="111" endBytecode="111" sourcefile="AdminHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminHelper.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="58" end="1476" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" name="getFirstMBeanName" signature="(Ljavax/management/ObjectName;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="291" end="298" startBytecode="0" endBytecode="30" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    </Method>
+    <LocalVariable name="al" register="3" pc="14" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="292" end="292" startBytecode="13" endBytecode="13" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="al"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="58" end="1476" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" name="hasMBeanName" signature="(Ljavax/management/ObjectName;Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="272" end="279" startBytecode="0" endBytecode="28" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    </Method>
+    <LocalVariable name="al" register="3" pc="14" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="273" end="273" startBytecode="13" endBytecode="13" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="al"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="58" end="1476" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" name="convertDeployed" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="863" end="875" startBytecode="0" endBytecode="150" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="868" end="868" startBytecode="29" endBytecode="29" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="58" end="1476" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" name="replace" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="119" end="136" startBytecode="0" endBytecode="234" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="125" end="125" startBytecode="21" endBytecode="21" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="58" end="1476" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" name="s_Synchro" signature="Ljava/lang/Object;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" start="58" end="58" startBytecode="7" endBytecode="7" sourcefile="AdminJmxHelper.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/AdminJmxHelper.java"/>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="2" abbrev="LI" category="MT_CORRECTNESS">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" start="54" end="454" sourcefile="BaseManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/BaseManagement.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" name="getInstance" signature="()Lorg/ow2/jonas/management/extensions/base/api/IBaseManagement;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" start="89" end="92" startBytecode="0" endBytecode="7" sourcefile="BaseManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/BaseManagement.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" name="unique" signature="Lorg/ow2/jonas/lib/management/extensions/base/BaseManagement;" isStatic="true" role="FIELD_ON">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" sourcefile="BaseManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/BaseManagement.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" start="89" end="90" startBytecode="0" endBytecode="13" sourcefile="BaseManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/BaseManagement.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" start="54" end="454" sourcefile="BaseManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/BaseManagement.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" name="logger" signature="Lorg/ow2/util/log/Log;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" sourcefile="BaseManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/BaseManagement.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" start="54" end="54" startBytecode="6" endBytecode="6" sourcefile="BaseManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/BaseManagement.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" start="54" end="454" sourcefile="BaseManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/BaseManagement.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" name="s_Synchro" signature="Ljava/lang/Object;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" sourcefile="BaseManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/BaseManagement.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.BaseManagement" start="59" end="59" startBytecode="16" endBytecode="16" sourcefile="BaseManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/BaseManagement.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" priority="1" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator" start="31" end="45" sourcefile="RealmItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/RealmItemByNameComparator.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator" start="42" end="45" startBytecode="0" endBytecode="70" sourcefile="RealmItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/RealmItemByNameComparator.java"/>
+    </Method>
+    <Type descriptor="Lorg/ow2/jonas/lib/management/extensions/base/RealmItem;" role="TYPE_FOUND">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.RealmItem" start="36" end="108" sourcefile="RealmItem.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/RealmItem.java"/>
+    </Type>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator" start="42" end="42" startBytecode="1" endBytecode="1" sourcefile="RealmItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/RealmItemByNameComparator.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator" start="31" end="45" sourcefile="RealmItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/RealmItemByNameComparator.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator" start="42" end="45" startBytecode="0" endBytecode="70" sourcefile="RealmItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/RealmItemByNameComparator.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator" start="31" end="45" sourcefile="RealmItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/RealmItemByNameComparator.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.base.mbean.MbeanItem">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.mbean.MbeanItem" start="45" end="136" sourcefile="MbeanItem.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/mbean/MbeanItem.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.extensions.base.mbean.MbeanItem" name="ALL_FAMILY_TEXT" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.mbean.MbeanItem" sourcefile="MbeanItem.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/mbean/MbeanItem.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.mbean.MbeanItem" start="45" end="45" startBytecode="19" endBytecode="19" sourcefile="MbeanItem.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/mbean/MbeanItem.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement" start="54" end="222" sourcefile="ClusterManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/cluster/ClusterManagement.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement" name="logger" signature="Lorg/ow2/util/log/Log;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement" sourcefile="ClusterManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/cluster/ClusterManagement.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement" start="54" end="54" startBytecode="6" endBytecode="6" sourcefile="ClusterManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/cluster/ClusterManagement.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_PARAM_DEREF_NONVIRTUAL" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement" start="54" end="222" sourcefile="ClusterManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/cluster/ClusterManagement.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement" name="addServerToCluster" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement" start="89" end="111" startBytecode="0" endBytecode="382" sourcefile="ClusterManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/cluster/ClusterManagement.java"/>
+    </Method>
+    <Method classname="org.ow2.jonas.lib.management.extensions.base.JonasManagementRepr" name="invoke" signature="(Ljavax/management/ObjectName;Ljava/lang/String;[Ljava/lang/Object;[Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.base.JonasManagementRepr" start="466" end="474" startBytecode="0" endBytecode="196" sourcefile="JonasManagementRepr.java" sourcepath="org/ow2/jonas/lib/management/extensions/base/JonasManagementRepr.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement" start="105" end="105" startBytecode="111" endBytecode="111" sourcefile="ClusterManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/cluster/ClusterManagement.java"/>
+    <LocalVariable name="currentServerName" register="10" pc="109" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Int value="5" role="INT_NULL_ARG"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullArgumentWarningProperty.ARG_DEFINITELY_NULL" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullArgumentWarningProperty.MONOMORPHIC_CALL_SITE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullArgumentWarningProperty.ACTUAL_PARAMETER_GUARANTEED_NULL" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullArgumentWarningProperty.ALL_DANGEROUS_TARGETS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="75" end="519" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" name="getControlledServersNames" signature="(Ljava/lang/String;)[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="343" end="359" startBytecode="0" endBytecode="60" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+    </Method>
+    <LocalVariable name="servers" register="3" pc="14" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="344" end="344" startBytecode="13" endBytecode="13" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="servers"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="75" end="519" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" name="AddServer" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="450" end="482" startBytecode="0" endBytecode="487" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="75" end="519" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" name="AddServer" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="450" end="482" startBytecode="0" endBytecode="487" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+    </Method>
+    <LocalVariable name="jonasRoot" register="4" pc="25" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="452" end="452" startBytecode="27" endBytecode="27" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RpC_REPEATED_CONDITIONAL_TEST" priority="1" abbrev="RpC" category="CORRECTNESS">
+    <Class classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="75" end="519" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" name="AddServer" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="450" end="482" startBytecode="0" endBytecode="487" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="452" end="452" startBytecode="20" endBytecode="21" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" start="452" end="452" startBytecode="25" endBytecode="26" sourcefile="ClusterdaemonManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/clusterdaemon/ClusterdaemonManagement.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.container.ContainerManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ContainerManagement" start="52" end="284" sourcefile="ContainerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ContainerManagement.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.extensions.container.ContainerManagement" name="logger" signature="Lorg/ow2/util/log/Log;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ContainerManagement" sourcefile="ContainerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ContainerManagement.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ContainerManagement" start="52" end="52" startBytecode="6" endBytecode="6" sourcefile="ContainerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ContainerManagement.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.container.ContainerManagement$ONameAttrib">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ContainerManagement$ONameAttrib" start="197" end="240" sourcefile="ContainerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ContainerManagement.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" priority="1" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator" start="31" end="51" sourcefile="EjbItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ejb/EjbItemByNameComparator.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator" start="48" end="51" startBytecode="0" endBytecode="70" sourcefile="EjbItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ejb/EjbItemByNameComparator.java"/>
+    </Method>
+    <Type descriptor="Lorg/ow2/jonas/lib/management/extensions/container/ejb/EjbItem;" role="TYPE_FOUND">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItem" start="51" end="135" sourcefile="EjbItem.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ejb/EjbItem.java"/>
+    </Type>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator" start="48" end="48" startBytecode="1" endBytecode="1" sourcefile="EjbItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ejb/EjbItemByNameComparator.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator" start="31" end="51" sourcefile="EjbItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ejb/EjbItemByNameComparator.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator" start="48" end="51" startBytecode="0" endBytecode="70" sourcefile="EjbItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ejb/EjbItemByNameComparator.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator" start="31" end="51" sourcefile="EjbItemByNameComparator.java" sourcepath="org/ow2/jonas/lib/management/extensions/container/ejb/EjbItemByNameComparator.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.domain.DomainManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.domain.DomainManagement" start="81" end="513" sourcefile="DomainManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/domain/DomainManagement.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.extensions.domain.DomainManagement" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.domain.DomainManagement" sourcefile="DomainManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/domain/DomainManagement.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.domain.DomainManagement" start="96" end="96" startBytecode="9" endBytecode="9" sourcefile="DomainManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/domain/DomainManagement.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="62" end="1138" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="103" end="109" startBytecode="0" endBytecode="120" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" name="clusterManagement" signature="Lorg/ow2/jonas/management/extensions/cluster/api/ICluster;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="108" end="108" startBytecode="51" endBytecode="51" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="62" end="1138" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="103" end="109" startBytecode="0" endBytecode="120" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" name="clusterdaemonManagement" signature="Lorg/ow2/jonas/management/extensions/clusterdaemon/api/IClusterdaemon;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="107" end="107" startBytecode="41" endBytecode="41" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="62" end="1138" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="103" end="109" startBytecode="0" endBytecode="120" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" name="domainManagement" signature="Lorg/ow2/jonas/management/extensions/domain/api/IDomain;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="104" end="104" startBytecode="11" endBytecode="11" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="62" end="1138" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="103" end="109" startBytecode="0" endBytecode="120" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" name="serverManagement" signature="Lorg/ow2/jonas/management/extensions/server/api/IServerManagement;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="106" end="106" startBytecode="31" endBytecode="31" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="62" end="1138" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="103" end="109" startBytecode="0" endBytecode="120" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" name="serverMonitor" signature="Lorg/ow2/jonas/management/extensions/server/api/IServer;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" start="105" end="105" startBytecode="21" endBytecode="21" sourcefile="ManagementEntryPoint.java" sourcepath="org/ow2/jonas/lib/management/extensions/manager/ManagementEntryPoint.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement" start="53" end="254" sourcefile="ServerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/server/ServerManagement.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement" sourcefile="ServerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/server/ServerManagement.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement" start="53" end="53" startBytecode="5" endBytecode="5" sourcefile="ServerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/server/ServerManagement.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement" start="53" end="254" sourcefile="ServerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/server/ServerManagement.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement" name="getServerThreadsInformation" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement" start="113" end="145" startBytecode="0" endBytecode="619" sourcefile="ServerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/server/ServerManagement.java"/>
+    </Method>
+    <LocalVariable name="on" register="4" pc="17" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement" start="141" end="141" startBytecode="281" endBytecode="281" sourcefile="ServerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/server/ServerManagement.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement" start="113" end="113" startBytecode="0" endBytecode="0" sourcefile="ServerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/server/ServerManagement.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.server.ServerManagement" start="117" end="117" startBytecode="18" endBytecode="18" sourcefile="ServerManagement.java" sourcepath="org/ow2/jonas/lib/management/extensions/server/ServerManagement.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.lib.management.extensions.util.FileManagementUtils">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.util.FileManagementUtils" start="36" end="109" sourcefile="FileManagementUtils.java" sourcepath="org/ow2/jonas/lib/management/extensions/util/FileManagementUtils.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.extensions.util.FileManagementUtils" name="extractFilename" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.extensions.util.FileManagementUtils" start="71" end="109" startBytecode="0" endBytecode="429" sourcefile="FileManagementUtils.java" sourcepath="org/ow2/jonas/lib/management/extensions/util/FileManagementUtils.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.lib.management.extensions.util.FileManagementUtils" start="82" end="82" startBytecode="53" endBytecode="53" sourcefile="FileManagementUtils.java" sourcepath="org/ow2/jonas/lib/management/extensions/util/FileManagementUtils.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="25">
+    <MissingClass>org.objectweb.util.monolog.api.BasicLevel</MissingClass>
+    <MissingClass>org.objectweb.util.monolog.api.Logger</MissingClass>
+    <MissingClass>org.ow2.carol.util.configuration.ConfigurationRepository</MissingClass>
+    <MissingClass>org.ow2.carol.util.configuration.Protocol</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.management.domain.DomainMonitor</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.management.domain.J2EEDomain</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.management.domain.proxy.clusterd.ClusterDaemonProxy</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.management.domain.proxy.server.ServerProxy</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.management.javaee.J2eeObjectName</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.JonasObjectName</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.Log</MissingClass>
+    <MissingClass>org.ow2.jonas.management.extensions.base.api.IBaseManagement</MissingClass>
+    <MissingClass>org.ow2.jonas.management.extensions.base.api.J2EEMBeanAttributeInfo</MissingClass>
+    <MissingClass>org.ow2.jonas.management.extensions.base.api.ManagementException</MissingClass>
+    <MissingClass>org.ow2.jonas.management.extensions.cluster.api.ICluster</MissingClass>
+    <MissingClass>org.ow2.jonas.management.extensions.clusterdaemon.api.IClusterdaemon</MissingClass>
+    <MissingClass>org.ow2.jonas.management.extensions.container.api.IContainerManagement</MissingClass>
+    <MissingClass>org.ow2.jonas.management.extensions.domain.api.IDomain</MissingClass>
+    <MissingClass>org.ow2.jonas.management.extensions.server.api.IServer</MissingClass>
+    <MissingClass>org.ow2.jonas.management.extensions.server.api.IServerManagement</MissingClass>
+    <MissingClass>org.ow2.jonas.service.ServiceException</MissingClass>
+    <MissingClass>org.ow2.util.execution.ExecutionResult</MissingClass>
+    <MissingClass>org.ow2.util.execution.helper.RunnableHelper</MissingClass>
+    <MissingClass>org.ow2.util.log.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 21 Jun 2011 18:43:26 +0300" total_classes="31" referenced_classes="86" total_bugs="35" total_size="3272" num_packages="10" vm_version="20.4-b02-402" cpu_seconds="30.44" clock_seconds="17.99" peak_mbytes="82.49" alloc_mbytes="763.88" gc_seconds="0.41" priority_2="20" priority_1="15">
+    <PackageStats package="org.ow2.jonas.lib.management.extensions.base" total_bugs="14" total_types="11" total_size="1419" priority_2="7" priority_1="7">
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.AdminException" sourceFile="AdminException.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.AdminHelper" sourceFile="AdminHelper.java" interface="false" size="230" bugs="3" priority_2="3"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.AdminJmxHelper" sourceFile="AdminJmxHelper.java" interface="false" size="629" bugs="5" priority_2="2" priority_1="3"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.BaseManagement" sourceFile="BaseManagement.java" interface="false" size="153" bugs="3" priority_2="1" priority_1="2"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.BaseObjectName" sourceFile="BaseObjectName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.ConnectorItem" sourceFile="ConnectorItem.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.JonasManagementRepr" sourceFile="JonasManagementRepr.java" interface="false" size="235" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.LocalManagementContext" sourceFile="LocalManagementContext.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.NameItem" sourceFile="NameItem.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.RealmItem" sourceFile="RealmItem.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.RealmItemByNameComparator" sourceFile="RealmItemByNameComparator.java" interface="false" size="11" bugs="3" priority_2="1" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.extensions.base.mbean" total_bugs="1" total_types="6" total_size="198" priority_2="1">
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.mbean.CatalinaObjectName" sourceFile="CatalinaObjectName.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.mbean.J2EEObjectNames" sourceFile="J2EEObjectNames.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.mbean.J2eeMbeanItem" sourceFile="J2eeMbeanItem.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.mbean.MbeanItem" sourceFile="MbeanItem.java" interface="false" size="63" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.mbean.ObjectNameItem" sourceFile="ObjectNameItem.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.base.mbean.OwnerMbeanItem" sourceFile="OwnerMbeanItem.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.extensions.cluster" total_bugs="2" total_types="1" total_size="103" priority_1="2">
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.cluster.ClusterManagement" sourceFile="ClusterManagement.java" interface="false" size="103" bugs="2" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.extensions.clusterdaemon" total_bugs="4" total_types="1" total_size="192" priority_2="3" priority_1="1">
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.clusterdaemon.ClusterdaemonManagement" sourceFile="ClusterdaemonManagement.java" interface="false" size="192" bugs="4" priority_2="3" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.extensions.container" total_bugs="2" total_types="2" total_size="100" priority_2="1" priority_1="1">
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.container.ContainerManagement" sourceFile="ContainerManagement.java" interface="false" size="76" bugs="1" priority_1="1"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.container.ContainerManagement$ONameAttrib" sourceFile="ContainerManagement.java" interface="false" size="24" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.extensions.container.ejb" total_bugs="3" total_types="2" total_size="86" priority_2="1" priority_1="2">
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItem" sourceFile="EjbItem.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.container.ejb.EjbItemByNameComparator" sourceFile="EjbItemByNameComparator.java" interface="false" size="14" bugs="3" priority_2="1" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.extensions.domain" total_bugs="1" total_types="1" total_size="219" priority_1="1">
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.domain.DomainManagement" sourceFile="DomainManagement.java" interface="false" size="219" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.extensions.manager" total_bugs="5" total_types="1" total_size="268" priority_2="5">
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.manager.ManagementEntryPoint" sourceFile="ManagementEntryPoint.java" interface="false" size="268" bugs="5" priority_2="5"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.extensions.server" total_bugs="2" total_types="3" total_size="570" priority_2="1" priority_1="1">
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.server.ServerItem" sourceFile="ServerItem.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.server.ServerManagement" sourceFile="ServerManagement.java" interface="false" size="126" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.server.ServerMonitoring" sourceFile="ServerMonitoring.java" interface="false" size="344" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.extensions.util" total_bugs="1" total_types="3" total_size="117" priority_2="1">
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.util.ConnectorUtils" sourceFile="ConnectorUtils.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.util.ConnectorUtils$1" sourceFile="ConnectorUtils.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.extensions.util.FileManagementUtils" sourceFile="FileManagementUtils.java" interface="false" size="40" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1110" invocations="586" avgMicrosecondsPerInvocation="1895" maxMicrosecondsPerInvocation="56930" standardDeviationMircosecondsPerInvocation="4760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1001" invocations="580" avgMicrosecondsPerInvocation="1727" maxMicrosecondsPerInvocation="35003" standardDeviationMircosecondsPerInvocation="3375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="952" invocations="579" avgMicrosecondsPerInvocation="1644" maxMicrosecondsPerInvocation="98895" standardDeviationMircosecondsPerInvocation="6260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="926" invocations="584" avgMicrosecondsPerInvocation="1585" maxMicrosecondsPerInvocation="80698" standardDeviationMircosecondsPerInvocation="4921"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="920" invocations="579" avgMicrosecondsPerInvocation="1590" maxMicrosecondsPerInvocation="29766" standardDeviationMircosecondsPerInvocation="3050"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="888" invocations="558" avgMicrosecondsPerInvocation="1593" maxMicrosecondsPerInvocation="63941" standardDeviationMircosecondsPerInvocation="5356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="812" invocations="86" avgMicrosecondsPerInvocation="9452" maxMicrosecondsPerInvocation="73044" standardDeviationMircosecondsPerInvocation="15412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="775" invocations="86" avgMicrosecondsPerInvocation="9013" maxMicrosecondsPerInvocation="191245" standardDeviationMircosecondsPerInvocation="22689"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="650" invocations="580" avgMicrosecondsPerInvocation="1121" maxMicrosecondsPerInvocation="50661" standardDeviationMircosecondsPerInvocation="3443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="557" invocations="463" avgMicrosecondsPerInvocation="1204" maxMicrosecondsPerInvocation="27442" standardDeviationMircosecondsPerInvocation="3127"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="493" invocations="580" avgMicrosecondsPerInvocation="850" maxMicrosecondsPerInvocation="57180" standardDeviationMircosecondsPerInvocation="4051"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="435" invocations="86" avgMicrosecondsPerInvocation="5059" maxMicrosecondsPerInvocation="99255" standardDeviationMircosecondsPerInvocation="12976"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="326" invocations="790" avgMicrosecondsPerInvocation="413" maxMicrosecondsPerInvocation="43826" standardDeviationMircosecondsPerInvocation="2018"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="294" invocations="86" avgMicrosecondsPerInvocation="3428" maxMicrosecondsPerInvocation="39787" standardDeviationMircosecondsPerInvocation="6697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="285" invocations="31" avgMicrosecondsPerInvocation="9224" maxMicrosecondsPerInvocation="148357" standardDeviationMircosecondsPerInvocation="26375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="278" invocations="86" avgMicrosecondsPerInvocation="3235" maxMicrosecondsPerInvocation="92296" standardDeviationMircosecondsPerInvocation="11045"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="243" invocations="581" avgMicrosecondsPerInvocation="418" maxMicrosecondsPerInvocation="112715" standardDeviationMircosecondsPerInvocation="4760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="179" invocations="561" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="67034" standardDeviationMircosecondsPerInvocation="3032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="175" invocations="579" avgMicrosecondsPerInvocation="303" maxMicrosecondsPerInvocation="14448" standardDeviationMircosecondsPerInvocation="975"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="173" invocations="86" avgMicrosecondsPerInvocation="2013" maxMicrosecondsPerInvocation="104063" standardDeviationMircosecondsPerInvocation="11135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="168" invocations="31" avgMicrosecondsPerInvocation="5451" maxMicrosecondsPerInvocation="42836" standardDeviationMircosecondsPerInvocation="9954"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="163" invocations="579" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="26204" standardDeviationMircosecondsPerInvocation="1551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="143" invocations="31" avgMicrosecondsPerInvocation="4623" maxMicrosecondsPerInvocation="22398" standardDeviationMircosecondsPerInvocation="6573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="141" invocations="31" avgMicrosecondsPerInvocation="4556" maxMicrosecondsPerInvocation="44887" standardDeviationMircosecondsPerInvocation="8316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="141" invocations="86" avgMicrosecondsPerInvocation="1642" maxMicrosecondsPerInvocation="32930" standardDeviationMircosecondsPerInvocation="4571"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="137" invocations="9469" avgMicrosecondsPerInvocation="14" maxMicrosecondsPerInvocation="10116" standardDeviationMircosecondsPerInvocation="189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="135" invocations="86" avgMicrosecondsPerInvocation="1573" maxMicrosecondsPerInvocation="35963" standardDeviationMircosecondsPerInvocation="4215"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1277734458000" analysisTimestamp="1360930468173" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/pdfbox/jempbox/1.2.0/jempbox-1.2.0.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.jempbox.impl.XMLUtil">
+      <SourceLine classname="org.apache.jempbox.impl.XMLUtil" start="58" end="425" sourcefile="XMLUtil.java" sourcepath="org/apache/jempbox/impl/XMLUtil.java"/>
+    </Class>
+    <Method classname="org.apache.jempbox.impl.XMLUtil" name="asByteArray" signature="(Lorg/w3c/dom/Document;Ljava/lang/String;)[B" isStatic="true">
+      <SourceLine classname="org.apache.jempbox.impl.XMLUtil" start="416" end="425" startBytecode="0" endBytecode="200" sourcefile="XMLUtil.java" sourcepath="org/apache/jempbox/impl/XMLUtil.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.jempbox.impl.XMLUtil" start="425" end="425" startBytecode="73" endBytecode="73" sourcefile="XMLUtil.java" sourcepath="org/apache/jempbox/impl/XMLUtil.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.jempbox.xmp.XMPMetadata">
+      <SourceLine classname="org.apache.jempbox.xmp.XMPMetadata" start="73" end="775" sourcefile="XMPMetadata.java" sourcepath="org/apache/jempbox/xmp/XMPMetadata.java"/>
+    </Class>
+    <Method classname="org.apache.jempbox.xmp.XMPMetadata" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.jempbox.xmp.XMPMetadata" start="567" end="592" startBytecode="0" endBytecode="375" sourcefile="XMPMetadata.java" sourcepath="org/apache/jempbox/xmp/XMPMetadata.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.jempbox.xmp.XMPMetadata" start="583" end="583" startBytecode="98" endBytecode="98" sourcefile="XMPMetadata.java" sourcepath="org/apache/jempbox/xmp/XMPMetadata.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.jempbox.xmp.XMPSchema">
+      <SourceLine classname="org.apache.jempbox.xmp.XMPSchema" start="56" end="1079" sourcefile="XMPSchema.java" sourcepath="org/apache/jempbox/xmp/XMPSchema.java"/>
+    </Class>
+    <Method classname="org.apache.jempbox.xmp.XMPSchema" name="addBagValue" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.jempbox.xmp.XMPSchema" start="371" end="393" startBytecode="0" endBytecode="343" sourcefile="XMPSchema.java" sourcepath="org/apache/jempbox/xmp/XMPSchema.java"/>
+    </Method>
+    <LocalVariable name="bagElement" register="3" pc="50" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.jempbox.xmp.XMPSchema" start="392" end="392" startBytecode="155" endBytecode="155" sourcefile="XMPSchema.java" sourcepath="org/apache/jempbox/xmp/XMPSchema.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.jempbox.xmp.XMPSchema" start="371" end="371" startBytecode="0" endBytecode="0" sourcefile="XMPSchema.java" sourcepath="org/apache/jempbox/xmp/XMPSchema.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.apache.jempbox.xmp.XMPSchema" start="377" end="377" startBytecode="55" endBytecode="55" sourcefile="XMPSchema.java" sourcepath="org/apache/jempbox/xmp/XMPSchema.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.jempbox.xmp.XMPSchema">
+      <SourceLine classname="org.apache.jempbox.xmp.XMPSchema" start="56" end="1079" sourcefile="XMPSchema.java" sourcepath="org/apache/jempbox/xmp/XMPSchema.java"/>
+    </Class>
+    <Method classname="org.apache.jempbox.xmp.XMPSchema" name="addSequenceValue" signature="(Ljava/lang/String;Lorg/apache/jempbox/xmp/Elementable;)V" isStatic="false">
+      <SourceLine classname="org.apache.jempbox.xmp.XMPSchema" start="550" end="570" startBytecode="0" endBytecode="305" sourcefile="XMPSchema.java" sourcepath="org/apache/jempbox/xmp/XMPSchema.java"/>
+    </Method>
+    <LocalVariable name="bagElement" register="3" pc="50" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.jempbox.xmp.XMPSchema" start="569" end="569" startBytecode="135" endBytecode="135" sourcefile="XMPSchema.java" sourcepath="org/apache/jempbox/xmp/XMPSchema.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.jempbox.xmp.XMPSchema" start="550" end="550" startBytecode="0" endBytecode="0" sourcefile="XMPSchema.java" sourcepath="org/apache/jempbox/xmp/XMPSchema.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.apache.jempbox.xmp.XMPSchema" start="556" end="556" startBytecode="55" endBytecode="55" sourcefile="XMPSchema.java" sourcepath="org/apache/jempbox/xmp/XMPSchema.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 28 Jun 2010 17:14:18 +0300" total_classes="24" referenced_classes="80" total_bugs="4" total_size="1663" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="38.05" clock_seconds="23.53" peak_mbytes="75.97" alloc_mbytes="763.88" gc_seconds="0.32" priority_2="3" priority_1="1">
+    <PackageStats package="org.apache.jempbox.impl" total_bugs="1" total_types="2" total_size="228" priority_1="1">
+      <ClassStats class="org.apache.jempbox.impl.DateConverter" sourceFile="DateConverter.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.impl.XMLUtil" sourceFile="XMLUtil.java" interface="false" size="128" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.jempbox.xmp" total_bugs="3" total_types="16" total_size="1327" priority_2="3">
+      <ClassStats class="org.apache.jempbox.xmp.Elementable" sourceFile="Elementable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.ResourceEvent" sourceFile="ResourceEvent.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.ResourceRef" sourceFile="ResourceRef.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.Thumbnail" sourceFile="Thumbnail.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPMetadata" sourceFile="XMPMetadata.java" interface="false" size="220" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchema" sourceFile="XMPSchema.java" interface="false" size="402" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchemaBasic" sourceFile="XMPSchemaBasic.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchemaBasicJobTicket" sourceFile="XMPSchemaBasicJobTicket.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchemaDublinCore" sourceFile="XMPSchemaDublinCore.java" interface="false" size="125" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchemaDynamicMedia" sourceFile="XMPSchemaDynamicMedia.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchemaIptc4xmpCore" sourceFile="XMPSchemaIptc4xmpCore.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchemaMediaManagement" sourceFile="XMPSchemaMediaManagement.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchemaPDF" sourceFile="XMPSchemaPDF.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchemaPagedText" sourceFile="XMPSchemaPagedText.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchemaPhotoshop" sourceFile="XMPSchemaPhotoshop.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.XMPSchemaRightsManagement" sourceFile="XMPSchemaRightsManagement.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.jempbox.xmp.pdfa" total_bugs="0" total_types="6" total_size="108">
+      <ClassStats class="org.apache.jempbox.xmp.pdfa.XMPMetadataPDFA" sourceFile="XMPMetadataPDFA.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.pdfa.XMPSchemaPDFAField" sourceFile="XMPSchemaPDFAField.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.pdfa.XMPSchemaPDFAId" sourceFile="XMPSchemaPDFAId.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.pdfa.XMPSchemaPDFAProperty" sourceFile="XMPSchemaPDFAProperty.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.pdfa.XMPSchemaPDFASchema" sourceFile="XMPSchemaPDFASchema.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.jempbox.xmp.pdfa.XMPSchemaPDFAType" sourceFile="XMPSchemaPDFAType.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1735" invocations="369" avgMicrosecondsPerInvocation="4704" maxMicrosecondsPerInvocation="147911" standardDeviationMircosecondsPerInvocation="14866"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1657" invocations="369" avgMicrosecondsPerInvocation="4491" maxMicrosecondsPerInvocation="116534" standardDeviationMircosecondsPerInvocation="10184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1570" invocations="369" avgMicrosecondsPerInvocation="4255" maxMicrosecondsPerInvocation="116202" standardDeviationMircosecondsPerInvocation="11555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1311" invocations="517" avgMicrosecondsPerInvocation="2537" maxMicrosecondsPerInvocation="60891" standardDeviationMircosecondsPerInvocation="6229"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1308" invocations="371" avgMicrosecondsPerInvocation="3526" maxMicrosecondsPerInvocation="197679" standardDeviationMircosecondsPerInvocation="13177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1232" invocations="372" avgMicrosecondsPerInvocation="3312" maxMicrosecondsPerInvocation="94784" standardDeviationMircosecondsPerInvocation="10236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="975" invocations="80" avgMicrosecondsPerInvocation="12195" maxMicrosecondsPerInvocation="125101" standardDeviationMircosecondsPerInvocation="21834"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="905" invocations="369" avgMicrosecondsPerInvocation="2454" maxMicrosecondsPerInvocation="94812" standardDeviationMircosecondsPerInvocation="7263"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="853" invocations="362" avgMicrosecondsPerInvocation="2356" maxMicrosecondsPerInvocation="106914" standardDeviationMircosecondsPerInvocation="7425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="743" invocations="80" avgMicrosecondsPerInvocation="9296" maxMicrosecondsPerInvocation="108823" standardDeviationMircosecondsPerInvocation="17703"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="519" invocations="80" avgMicrosecondsPerInvocation="6489" maxMicrosecondsPerInvocation="119406" standardDeviationMircosecondsPerInvocation="15653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="496" invocations="369" avgMicrosecondsPerInvocation="1345" maxMicrosecondsPerInvocation="50146" standardDeviationMircosecondsPerInvocation="4456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="426" invocations="539" avgMicrosecondsPerInvocation="790" maxMicrosecondsPerInvocation="45324" standardDeviationMircosecondsPerInvocation="3181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="288" invocations="369" avgMicrosecondsPerInvocation="781" maxMicrosecondsPerInvocation="50782" standardDeviationMircosecondsPerInvocation="3370"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="262" invocations="80" avgMicrosecondsPerInvocation="3286" maxMicrosecondsPerInvocation="49230" standardDeviationMircosecondsPerInvocation="7420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="254" invocations="369" avgMicrosecondsPerInvocation="689" maxMicrosecondsPerInvocation="27942" standardDeviationMircosecondsPerInvocation="2662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="244" invocations="80" avgMicrosecondsPerInvocation="3053" maxMicrosecondsPerInvocation="34482" standardDeviationMircosecondsPerInvocation="5169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="225" invocations="24" avgMicrosecondsPerInvocation="9384" maxMicrosecondsPerInvocation="91970" standardDeviationMircosecondsPerInvocation="18429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="217" invocations="370" avgMicrosecondsPerInvocation="587" maxMicrosecondsPerInvocation="142559" standardDeviationMircosecondsPerInvocation="7414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="213" invocations="24" avgMicrosecondsPerInvocation="8896" maxMicrosecondsPerInvocation="56041" standardDeviationMircosecondsPerInvocation="12654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="193" invocations="476" avgMicrosecondsPerInvocation="406" maxMicrosecondsPerInvocation="13600" standardDeviationMircosecondsPerInvocation="1400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="191" invocations="80" avgMicrosecondsPerInvocation="2393" maxMicrosecondsPerInvocation="26987" standardDeviationMircosecondsPerInvocation="4860"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="184" invocations="80" avgMicrosecondsPerInvocation="2302" maxMicrosecondsPerInvocation="30657" standardDeviationMircosecondsPerInvocation="5038"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="175" invocations="520" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="39821" standardDeviationMircosecondsPerInvocation="2308"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1234453997000" analysisTimestamp="1360930778690" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/jonas-timer/5.1.0-M3/jonas-timer-5.1.0-M3.jar</Jar>
+  </Project>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="2" abbrev="LI" category="MT_CORRECTNESS">
+    <Class classname="org.ow2.jonas.lib.timer.TimerManager">
+      <SourceLine classname="org.ow2.jonas.lib.timer.TimerManager" start="92" end="290" sourcefile="TimerManager.java" sourcepath="org/ow2/jonas/lib/timer/TimerManager.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.timer.TimerManager" name="getInstance" signature="()Lorg/ow2/jonas/lib/timer/TimerManager;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.timer.TimerManager" start="116" end="119" startBytecode="0" endBytecode="7" sourcefile="TimerManager.java" sourcepath="org/ow2/jonas/lib/timer/TimerManager.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.timer.TimerManager" name="unique" signature="Lorg/ow2/jonas/lib/timer/TimerManager;" isStatic="true" role="FIELD_ON">
+      <SourceLine classname="org.ow2.jonas.lib.timer.TimerManager" sourcefile="TimerManager.java" sourcepath="org/ow2/jonas/lib/timer/TimerManager.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.timer.TimerManager" start="116" end="117" startBytecode="0" endBytecode="13" sourcefile="TimerManager.java" sourcepath="org/ow2/jonas/lib/timer/TimerManager.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.timer.TimerManager">
+      <SourceLine classname="org.ow2.jonas.lib.timer.TimerManager" start="92" end="290" sourcefile="TimerManager.java" sourcepath="org/ow2/jonas/lib/timer/TimerManager.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.timer.TimerManager" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.timer.TimerManager" start="104" end="110" startBytecode="0" endBytecode="141" sourcefile="TimerManager.java" sourcepath="org/ow2/jonas/lib/timer/TimerManager.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.timer.TimerManager" name="batchThread" signature="Lorg/ow2/jonas/lib/timer/Batch;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.timer.TimerManager" sourcefile="TimerManager.java" sourcepath="org/ow2/jonas/lib/timer/TimerManager.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.timer.TimerManager" start="106" end="106" startBytecode="41" endBytecode="41" sourcefile="TimerManager.java" sourcepath="org/ow2/jonas/lib/timer/TimerManager.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.timer.TraceTimer">
+      <SourceLine classname="org.ow2.jonas.lib.timer.TraceTimer" start="41" end="60" sourcefile="TraceTimer.java" sourcepath="org/ow2/jonas/lib/timer/TraceTimer.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.timer.TraceTimer" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.timer.TraceTimer" sourcefile="TraceTimer.java" sourcepath="org/ow2/jonas/lib/timer/TraceTimer.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.timer.TraceTimer" start="46" end="46" startBytecode="1" endBytecode="1" sourcefile="TraceTimer.java" sourcepath="org/ow2/jonas/lib/timer/TraceTimer.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>org.objectweb.util.monolog.api.BasicLevel</MissingClass>
+    <MissingClass>org.objectweb.util.monolog.api.Logger</MissingClass>
+    <MissingClass>org.objectweb.util.monolog.api.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 12 Feb 2009 17:53:17 +0200" total_classes="6" referenced_classes="44" total_bugs="3" total_size="229" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="13.34" clock_seconds="8.28" peak_mbytes="54.34" alloc_mbytes="763.88" gc_seconds="0.13" priority_2="3">
+    <PackageStats package="org.ow2.jonas.lib.timer" total_bugs="3" total_types="6" total_size="229" priority_2="3">
+      <ClassStats class="org.ow2.jonas.lib.timer.Batch" sourceFile="TimerManager.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.timer.Clock" sourceFile="TimerManager.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.timer.TimerEvent" sourceFile="TimerEvent.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.timer.TimerEventListener" sourceFile="TimerEventListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.timer.TimerManager" sourceFile="TimerManager.java" interface="false" size="122" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.jonas.lib.timer.TraceTimer" sourceFile="TraceTimer.java" interface="false" size="11" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="878" invocations="401" avgMicrosecondsPerInvocation="2190" maxMicrosecondsPerInvocation="110212" standardDeviationMircosecondsPerInvocation="7791"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="539" invocations="44" avgMicrosecondsPerInvocation="12271" maxMicrosecondsPerInvocation="101384" standardDeviationMircosecondsPerInvocation="21169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="470" invocations="44" avgMicrosecondsPerInvocation="10692" maxMicrosecondsPerInvocation="118253" standardDeviationMircosecondsPerInvocation="21198"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="369" invocations="44" avgMicrosecondsPerInvocation="8403" maxMicrosecondsPerInvocation="104999" standardDeviationMircosecondsPerInvocation="20396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="308" invocations="31" avgMicrosecondsPerInvocation="9948" maxMicrosecondsPerInvocation="110564" standardDeviationMircosecondsPerInvocation="22773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="235" invocations="29" avgMicrosecondsPerInvocation="8132" maxMicrosecondsPerInvocation="70048" standardDeviationMircosecondsPerInvocation="13853"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="230" invocations="30" avgMicrosecondsPerInvocation="7686" maxMicrosecondsPerInvocation="55670" standardDeviationMircosecondsPerInvocation="14587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="210" invocations="358" avgMicrosecondsPerInvocation="587" maxMicrosecondsPerInvocation="44696" standardDeviationMircosecondsPerInvocation="2860"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="208" invocations="145" avgMicrosecondsPerInvocation="1436" maxMicrosecondsPerInvocation="28746" standardDeviationMircosecondsPerInvocation="2768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="159" invocations="30" avgMicrosecondsPerInvocation="5318" maxMicrosecondsPerInvocation="153003" standardDeviationMircosecondsPerInvocation="27425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="153" invocations="44" avgMicrosecondsPerInvocation="3495" maxMicrosecondsPerInvocation="59857" standardDeviationMircosecondsPerInvocation="9746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="144" invocations="29" avgMicrosecondsPerInvocation="4988" maxMicrosecondsPerInvocation="30397" standardDeviationMircosecondsPerInvocation="7191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="137" invocations="29" avgMicrosecondsPerInvocation="4743" maxMicrosecondsPerInvocation="38161" standardDeviationMircosecondsPerInvocation="7767"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="137" invocations="29" avgMicrosecondsPerInvocation="4726" maxMicrosecondsPerInvocation="59430" standardDeviationMircosecondsPerInvocation="11329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="127" invocations="44" avgMicrosecondsPerInvocation="2888" maxMicrosecondsPerInvocation="17306" standardDeviationMircosecondsPerInvocation="4201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="93" invocations="44" avgMicrosecondsPerInvocation="2121" maxMicrosecondsPerInvocation="12496" standardDeviationMircosecondsPerInvocation="3263"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="91" invocations="23" avgMicrosecondsPerInvocation="3973" maxMicrosecondsPerInvocation="21176" standardDeviationMircosecondsPerInvocation="5823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="84" invocations="44" avgMicrosecondsPerInvocation="1923" maxMicrosecondsPerInvocation="21718" standardDeviationMircosecondsPerInvocation="4114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="82" invocations="29" avgMicrosecondsPerInvocation="2835" maxMicrosecondsPerInvocation="20135" standardDeviationMircosecondsPerInvocation="4357"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

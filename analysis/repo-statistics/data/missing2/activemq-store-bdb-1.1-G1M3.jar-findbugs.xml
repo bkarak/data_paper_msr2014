@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1135095530000" analysisTimestamp="1360919098607" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/activemq/activemq-store-bdb/1.1-G1M3/activemq-store-bdb-1.1-G1M3.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.activemq.store.bdb.BDbHelper">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbHelper" start="36" end="120" sourcefile="BDbHelper.java" sourcepath="org/codehaus/activemq/store/bdb/BDbHelper.java"/>
+    </Class>
+    <Method classname="org.codehaus.activemq.store.bdb.BDbHelper" name="createEnvironment" signature="(Ljava/io/File;)Lcom/sleepycat/je/Environment;" isStatic="true">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbHelper" start="41" end="45" startBytecode="0" endBytecode="100" sourcefile="BDbHelper.java" sourcepath="org/codehaus/activemq/store/bdb/BDbHelper.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.activemq.store.bdb.BDbHelper" start="41" end="41" startBytecode="1" endBytecode="1" sourcefile="BDbHelper.java" sourcepath="org/codehaus/activemq/store/bdb/BDbHelper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.codehaus.activemq.store.bdb.BDbMessageStore">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" start="40" end="281" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+    </Class>
+    <Method classname="org.codehaus.activemq.store.bdb.BDbMessageStore" name="asBytes" signature="(Ljava/lang/String;)[B" isStatic="false">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" start="281" end="281" startBytecode="0" endBytecode="56" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" start="281" end="281" startBytecode="1" endBytecode="1" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.codehaus.activemq.store.bdb.BDbMessageStore">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" start="40" end="281" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+    </Class>
+    <Method classname="org.codehaus.activemq.store.bdb.BDbMessageStore" name="extractString" signature="(Lcom/sleepycat/je/DatabaseEntry;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" start="263" end="263" startBytecode="0" endBytecode="71" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([BII)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="568" end="574" startBytecode="0" endBytecode="84" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" start="263" end="263" startBytecode="16" endBytecode="16" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.codehaus.activemq.store.bdb.BDbMessageStore">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" start="40" end="281" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+    </Class>
+    <Field classname="org.codehaus.activemq.store.bdb.BDbMessageStore" name="secondaryConfig" signature="Lcom/sleepycat/je/SecondaryConfig;" isStatic="false">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" start="54" end="54" startBytecode="16" endBytecode="16" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.codehaus.activemq.store.bdb.BDbMessageStore">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" start="40" end="281" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+    </Class>
+    <Field classname="org.codehaus.activemq.store.bdb.BDbMessageStore" name="cursorConfig" signature="Lcom/sleepycat/je/CursorConfig;" isStatic="false">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.activemq.store.bdb.BDbMessageStore" start="131" end="131" startBytecode="14" endBytecode="14" sourcefile="BDbMessageStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbMessageStore.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.activemq.store.bdb.BDbPersistenceAdapter">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbPersistenceAdapter" start="51" end="320" sourcefile="BDbPersistenceAdapter.java" sourcepath="org/codehaus/activemq/store/bdb/BDbPersistenceAdapter.java"/>
+    </Class>
+    <Method classname="org.codehaus.activemq.store.bdb.BDbPersistenceAdapter" name="start" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbPersistenceAdapter" start="199" end="212" startBytecode="0" endBytecode="187" sourcefile="BDbPersistenceAdapter.java" sourcepath="org/codehaus/activemq/store/bdb/BDbPersistenceAdapter.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.activemq.store.bdb.BDbPersistenceAdapter" start="200" end="200" startBytecode="11" endBytecode="11" sourcefile="BDbPersistenceAdapter.java" sourcepath="org/codehaus/activemq/store/bdb/BDbPersistenceAdapter.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.codehaus.activemq.store.bdb.BDbPreparedTransactionStore">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbPreparedTransactionStore" start="45" end="199" sourcefile="BDbPreparedTransactionStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbPreparedTransactionStore.java"/>
+    </Class>
+    <Field classname="org.codehaus.activemq.store.bdb.BDbPreparedTransactionStore" name="cursorConfig" signature="Lcom/sleepycat/je/CursorConfig;" isStatic="false">
+      <SourceLine classname="org.codehaus.activemq.store.bdb.BDbPreparedTransactionStore" sourcefile="BDbPreparedTransactionStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbPreparedTransactionStore.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.activemq.store.bdb.BDbPreparedTransactionStore" start="58" end="58" startBytecode="14" endBytecode="14" sourcefile="BDbPreparedTransactionStore.java" sourcepath="org/codehaus/activemq/store/bdb/BDbPreparedTransactionStore.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="31">
+    <MissingClass>com.sleepycat.je.Cursor</MissingClass>
+    <MissingClass>com.sleepycat.je.Database</MissingClass>
+    <MissingClass>com.sleepycat.je.DatabaseConfig</MissingClass>
+    <MissingClass>com.sleepycat.je.DatabaseEntry</MissingClass>
+    <MissingClass>com.sleepycat.je.DatabaseException</MissingClass>
+    <MissingClass>com.sleepycat.je.Environment</MissingClass>
+    <MissingClass>com.sleepycat.je.EnvironmentConfig</MissingClass>
+    <MissingClass>com.sleepycat.je.LockMode</MissingClass>
+    <MissingClass>com.sleepycat.je.OperationStatus</MissingClass>
+    <MissingClass>com.sleepycat.je.SecondaryConfig</MissingClass>
+    <MissingClass>com.sleepycat.je.SecondaryCursor</MissingClass>
+    <MissingClass>com.sleepycat.je.SecondaryDatabase</MissingClass>
+    <MissingClass>com.sleepycat.je.Transaction</MissingClass>
+    <MissingClass>com.sleepycat.je.TransactionConfig</MissingClass>
+    <MissingClass>javax.jms.JMSException</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.codehaus.activemq.AlreadyClosedException</MissingClass>
+    <MissingClass>org.codehaus.activemq.io.WireFormat</MissingClass>
+    <MissingClass>org.codehaus.activemq.io.impl.DefaultWireFormat</MissingClass>
+    <MissingClass>org.codehaus.activemq.message.ActiveMQMessage</MissingClass>
+    <MissingClass>org.codehaus.activemq.message.ActiveMQXid</MissingClass>
+    <MissingClass>org.codehaus.activemq.service.MessageIdentity</MissingClass>
+    <MissingClass>org.codehaus.activemq.service.QueueMessageContainer</MissingClass>
+    <MissingClass>org.codehaus.activemq.service.Subscription</MissingClass>
+    <MissingClass>org.codehaus.activemq.service.Transaction</MissingClass>
+    <MissingClass>org.codehaus.activemq.service.TransactionManager</MissingClass>
+    <MissingClass>org.codehaus.activemq.service.impl.PersistenceAdapterSupport</MissingClass>
+    <MissingClass>org.codehaus.activemq.service.impl.XATransactionCommand</MissingClass>
+    <MissingClass>org.codehaus.activemq.store.TopicMessageStore</MissingClass>
+    <MissingClass>org.codehaus.activemq.util.JMSExceptionHelper</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 20 Dec 2005 18:18:50 +0200" total_classes="7" referenced_classes="30" total_bugs="7" total_size="642" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="15.44" clock_seconds="8.99" peak_mbytes="63.11" alloc_mbytes="763.88" gc_seconds="0.16" priority_2="5" priority_1="2">
+    <PackageStats package="org.codehaus.activemq.store.bdb" total_bugs="7" total_types="7" total_size="642" priority_2="5" priority_1="2">
+      <ClassStats class="org.codehaus.activemq.store.bdb.BDbHelper" sourceFile="BDbHelper.java" interface="false" size="60" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.activemq.store.bdb.BDbMessageStore" sourceFile="BDbMessageStore.java" interface="false" size="151" bugs="4" priority_2="2" priority_1="2"/>
+      <ClassStats class="org.codehaus.activemq.store.bdb.BDbPersistenceAdapter" sourceFile="BDbPersistenceAdapter.java" interface="false" size="159" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.activemq.store.bdb.BDbPreparedTransactionStore" sourceFile="BDbPreparedTransactionStore.java" interface="false" size="108" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.activemq.store.bdb.BDbTopicMessageStore" sourceFile="BDbTopicMessageStore.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="org.codehaus.activemq.store.bdb.SequenceNumberCreator" sourceFile="SequenceNumberCreator.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.codehaus.activemq.store.bdb.StubSecondaryKeyGenerator" sourceFile="StubSecondaryKeyGenerator.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="755" invocations="402" avgMicrosecondsPerInvocation="1880" maxMicrosecondsPerInvocation="73314" standardDeviationMircosecondsPerInvocation="6681"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="519" invocations="102" avgMicrosecondsPerInvocation="5092" maxMicrosecondsPerInvocation="68241" standardDeviationMircosecondsPerInvocation="10448"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="457" invocations="102" avgMicrosecondsPerInvocation="4486" maxMicrosecondsPerInvocation="40201" standardDeviationMircosecondsPerInvocation="7864"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="429" invocations="104" avgMicrosecondsPerInvocation="4127" maxMicrosecondsPerInvocation="47207" standardDeviationMircosecondsPerInvocation="9424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="414" invocations="105" avgMicrosecondsPerInvocation="3949" maxMicrosecondsPerInvocation="76155" standardDeviationMircosecondsPerInvocation="9907"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="389" invocations="30" avgMicrosecondsPerInvocation="12984" maxMicrosecondsPerInvocation="59320" standardDeviationMircosecondsPerInvocation="16396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="378" invocations="102" avgMicrosecondsPerInvocation="3710" maxMicrosecondsPerInvocation="31491" standardDeviationMircosecondsPerInvocation="6969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="335" invocations="30" avgMicrosecondsPerInvocation="11167" maxMicrosecondsPerInvocation="53478" standardDeviationMircosecondsPerInvocation="14689"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="263" invocations="102" avgMicrosecondsPerInvocation="2587" maxMicrosecondsPerInvocation="33288" standardDeviationMircosecondsPerInvocation="5258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="252" invocations="30" avgMicrosecondsPerInvocation="8423" maxMicrosecondsPerInvocation="55662" standardDeviationMircosecondsPerInvocation="14408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="236" invocations="78" avgMicrosecondsPerInvocation="3028" maxMicrosecondsPerInvocation="35074" standardDeviationMircosecondsPerInvocation="6807"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="159" invocations="323" avgMicrosecondsPerInvocation="494" maxMicrosecondsPerInvocation="55113" standardDeviationMircosecondsPerInvocation="3247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="127" invocations="102" avgMicrosecondsPerInvocation="1246" maxMicrosecondsPerInvocation="76295" standardDeviationMircosecondsPerInvocation="8068"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="124" invocations="185" avgMicrosecondsPerInvocation="671" maxMicrosecondsPerInvocation="28273" standardDeviationMircosecondsPerInvocation="2535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="117" invocations="30" avgMicrosecondsPerInvocation="3916" maxMicrosecondsPerInvocation="79781" standardDeviationMircosecondsPerInvocation="14243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="115" invocations="30" avgMicrosecondsPerInvocation="3842" maxMicrosecondsPerInvocation="33979" standardDeviationMircosecondsPerInvocation="8176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="111" invocations="405" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="35085" standardDeviationMircosecondsPerInvocation="2096"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="108" invocations="7" avgMicrosecondsPerInvocation="15454" maxMicrosecondsPerInvocation="78548" standardDeviationMircosecondsPerInvocation="26796"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

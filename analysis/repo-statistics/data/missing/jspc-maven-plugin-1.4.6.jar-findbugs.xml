@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1160768548000" analysisTimestamp="1360509999111" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/mojo/jspc-maven-plugin/1.4.6/jspc-maven-plugin-1.4.6.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.codehaus.mojo.jspc.AbstractJspcMojo">
+      <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="39" end="376" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+    </Class>
+    <Method classname="org.codehaus.mojo.jspc.AbstractJspcMojo" name="getFile" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="329" end="344" startBytecode="0" endBytecode="235" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="331" end="331" startBytecode="14" endBytecode="14" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.codehaus.mojo.jspc.AbstractJspcMojo">
+      <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="39" end="376" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+    </Class>
+    <Method classname="org.codehaus.mojo.jspc.AbstractJspcMojo" name="writeWebXml" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="303" end="326" startBytecode="0" endBytecode="322" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="46" end="47" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="323" end="323" startBytecode="155" endBytecode="155" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.mojo.jspc.AbstractJspcMojo">
+      <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="39" end="376" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+    </Class>
+    <Method classname="org.codehaus.mojo.jspc.AbstractJspcMojo" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="185" end="267" startBytecode="0" endBytecode="962" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+    </Method>
+    <Class classname="org.codehaus.mojo.jspc.JspcMojoClassLoader">
+      <SourceLine classname="org.codehaus.mojo.jspc.JspcMojoClassLoader" start="25" end="68" sourcefile="JspcMojoClassLoader.java" sourcepath="org/codehaus/mojo/jspc/JspcMojoClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="224" end="224" startBytecode="383" endBytecode="383" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.mojo.jspc.AbstractJspcMojo">
+      <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="39" end="376" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+    </Class>
+    <Method classname="org.codehaus.mojo.jspc.AbstractJspcMojo" name="moveClassFiles" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="358" end="376" startBytecode="0" endBytecode="273" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="373" end="373" startBytecode="101" endBytecode="101" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.mojo.jspc.AbstractJspcMojo">
+      <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="39" end="376" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+    </Class>
+    <Method classname="org.codehaus.mojo.jspc.AbstractJspcMojo" name="moveClassFiles" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="358" end="376" startBytecode="0" endBytecode="273" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+    </Method>
+    <Method classname="java.io.File" name="renameTo" signature="(Ljava/io/File;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1223" end="1228" startBytecode="0" endBytecode="72" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.mojo.jspc.AbstractJspcMojo" start="374" end="374" startBytecode="109" endBytecode="109" sourcefile="AbstractJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/AbstractJspcMojo.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.codehaus.mojo.jspc.JspcMojo">
+      <SourceLine classname="org.codehaus.mojo.jspc.JspcMojo" start="31" end="45" sourcefile="JspcMojo.java" sourcepath="org/codehaus/mojo/jspc/JspcMojo.java"/>
+    </Class>
+    <Field classname="org.codehaus.mojo.jspc.JspcMojo" name="classpathElements" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.codehaus.mojo.jspc.JspcMojo" sourcefile="JspcMojo.java" sourcepath="org/codehaus/mojo/jspc/JspcMojo.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.mojo.jspc.JspcMojo" start="45" end="45" startBytecode="1" endBytecode="1" sourcefile="JspcMojo.java" sourcepath="org/codehaus/mojo/jspc/JspcMojo.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.codehaus.mojo.jspc.TestJspcMojo">
+      <SourceLine classname="org.codehaus.mojo.jspc.TestJspcMojo" start="32" end="47" sourcefile="TestJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/TestJspcMojo.java"/>
+    </Class>
+    <Field classname="org.codehaus.mojo.jspc.TestJspcMojo" name="classpathElements" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.codehaus.mojo.jspc.TestJspcMojo" sourcefile="TestJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/TestJspcMojo.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.mojo.jspc.TestJspcMojo" start="47" end="47" startBytecode="1" endBytecode="1" sourcefile="TestJspcMojo.java" sourcepath="org/codehaus/mojo/jspc/TestJspcMojo.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="9">
+    <MissingClass>org.apache.jasper.JspC</MissingClass>
+    <MissingClass>org.apache.maven.model.Build</MissingClass>
+    <MissingClass>org.apache.maven.model.BuildBase</MissingClass>
+    <MissingClass>org.apache.maven.plugin.AbstractMojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.apache.tools.ant.DirectoryScanner</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.FileUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 13 Oct 2006 22:42:28 +0300" total_classes="4" referenced_classes="102" total_bugs="7" total_size="190" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="12.17" clock_seconds="6.90" peak_mbytes="58.70" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="5" priority_1="2">
+    <PackageStats package="org.codehaus.mojo.jspc" total_bugs="7" total_types="4" total_size="190" priority_2="5" priority_1="2">
+      <ClassStats class="org.codehaus.mojo.jspc.AbstractJspcMojo" sourceFile="AbstractJspcMojo.java" interface="false" size="148" bugs="5" priority_2="3" priority_1="2"/>
+      <ClassStats class="org.codehaus.mojo.jspc.JspcMojo" sourceFile="JspcMojo.java" interface="false" size="6" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.mojo.jspc.JspcMojoClassLoader" sourceFile="JspcMojoClassLoader.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.codehaus.mojo.jspc.TestJspcMojo" sourceFile="TestJspcMojo.java" interface="false" size="6" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="746" invocations="584" avgMicrosecondsPerInvocation="1278" maxMicrosecondsPerInvocation="30838" standardDeviationMircosecondsPerInvocation="3487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="696" invocations="102" avgMicrosecondsPerInvocation="6832" maxMicrosecondsPerInvocation="72729" standardDeviationMircosecondsPerInvocation="11633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="633" invocations="102" avgMicrosecondsPerInvocation="6209" maxMicrosecondsPerInvocation="94188" standardDeviationMircosecondsPerInvocation="12567"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="226" invocations="102" avgMicrosecondsPerInvocation="2223" maxMicrosecondsPerInvocation="28182" standardDeviationMircosecondsPerInvocation="3877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="217" invocations="17" avgMicrosecondsPerInvocation="12789" maxMicrosecondsPerInvocation="49506" standardDeviationMircosecondsPerInvocation="16548"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="214" invocations="17" avgMicrosecondsPerInvocation="12627" maxMicrosecondsPerInvocation="108670" standardDeviationMircosecondsPerInvocation="25585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="211" invocations="17" avgMicrosecondsPerInvocation="12458" maxMicrosecondsPerInvocation="90267" standardDeviationMircosecondsPerInvocation="24789"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="210" invocations="17" avgMicrosecondsPerInvocation="12390" maxMicrosecondsPerInvocation="105796" standardDeviationMircosecondsPerInvocation="25235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="203" invocations="232" avgMicrosecondsPerInvocation="876" maxMicrosecondsPerInvocation="17616" standardDeviationMircosecondsPerInvocation="1850"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="197" invocations="17" avgMicrosecondsPerInvocation="11643" maxMicrosecondsPerInvocation="60040" standardDeviationMircosecondsPerInvocation="17565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="168" invocations="17" avgMicrosecondsPerInvocation="9922" maxMicrosecondsPerInvocation="85697" standardDeviationMircosecondsPerInvocation="21265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="147" invocations="102" avgMicrosecondsPerInvocation="1442" maxMicrosecondsPerInvocation="11766" standardDeviationMircosecondsPerInvocation="2364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="133" invocations="530" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="38795" standardDeviationMircosecondsPerInvocation="1839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="132" invocations="587" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="20198" standardDeviationMircosecondsPerInvocation="1105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="116" invocations="18" avgMicrosecondsPerInvocation="6453" maxMicrosecondsPerInvocation="109838" standardDeviationMircosecondsPerInvocation="25078"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="107" invocations="14" avgMicrosecondsPerInvocation="7658" maxMicrosecondsPerInvocation="69078" standardDeviationMircosecondsPerInvocation="17362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="96" invocations="102" avgMicrosecondsPerInvocation="949" maxMicrosecondsPerInvocation="18024" standardDeviationMircosecondsPerInvocation="2265"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

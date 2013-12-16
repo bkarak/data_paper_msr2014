@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1305499041000" analysisTimestamp="1360931378505" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/fabric3/fabric3-contribution-war/1.8/fabric3-contribution-war-1.8.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.fabric3.contribution.war.WarClasspathProcessor">
+      <SourceLine classname="org.fabric3.contribution.war.WarClasspathProcessor" start="70" end="173" sourcefile="WarClasspathProcessor.java" sourcepath="org/fabric3/contribution/war/WarClasspathProcessor.java"/>
+    </Class>
+    <Method classname="org.fabric3.contribution.war.WarClasspathProcessor" name="addLibraries" signature="(Ljava/util/List;Ljava/net/URL;)V" isStatic="false">
+      <SourceLine classname="org.fabric3.contribution.war.WarClasspathProcessor" start="107" end="163" startBytecode="0" endBytecode="819" sourcefile="WarClasspathProcessor.java" sourcepath="org/fabric3/contribution/war/WarClasspathProcessor.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdir" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1153" end="1157" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.fabric3.contribution.war.WarClasspathProcessor" start="134" end="134" startBytecode="203" endBytecode="203" sourcefile="WarClasspathProcessor.java" sourcepath="org/fabric3/contribution/war/WarClasspathProcessor.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.fabric3.contribution.war.WarClasspathProcessor">
+      <SourceLine classname="org.fabric3.contribution.war.WarClasspathProcessor" start="70" end="173" sourcefile="WarClasspathProcessor.java" sourcepath="org/fabric3/contribution/war/WarClasspathProcessor.java"/>
+    </Class>
+    <Method classname="org.fabric3.contribution.war.WarClasspathProcessor" name="addLibraries" signature="(Ljava/util/List;Ljava/net/URL;)V" isStatic="false">
+      <SourceLine classname="org.fabric3.contribution.war.WarClasspathProcessor" start="107" end="163" startBytecode="0" endBytecode="819" sourcefile="WarClasspathProcessor.java" sourcepath="org/fabric3/contribution/war/WarClasspathProcessor.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.fabric3.contribution.war.WarClasspathProcessor" start="146" end="146" startBytecode="266" endBytecode="266" sourcefile="WarClasspathProcessor.java" sourcepath="org/fabric3/contribution/war/WarClasspathProcessor.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="16">
+    <MissingClass>org.fabric3.host.contribution.InstallException</MissingClass>
+    <MissingClass>org.fabric3.host.runtime.HostInfo</MissingClass>
+    <MissingClass>org.fabric3.host.stream.UrlSource</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.ContentTypeResolver</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.Contribution</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.ContributionManifest</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.Resource</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.ResourceElement</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.archive.Action</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.archive.ClasspathProcessorRegistry</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.manifest.QNameSymbol</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.xml.XmlIndexerRegistry</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.DefaultIntrospectionContext</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.IntrospectionContext</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.xml.Loader</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.xml.LoaderException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 16 May 2011 01:37:21 +0300" total_classes="4" referenced_classes="37" total_bugs="2" total_size="178" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="12.22" clock_seconds="8.21" peak_mbytes="55.73" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="2">
+    <PackageStats package="org.fabric3.contribution.war" total_bugs="2" total_types="4" total_size="178" priority_2="2">
+      <ClassStats class="org.fabric3.contribution.war.WarClasspathProcessor" sourceFile="WarClasspathProcessor.java" interface="false" size="74" bugs="2" priority_2="2"/>
+      <ClassStats class="org.fabric3.contribution.war.WarContributionHandler" sourceFile="WarContributionHandler.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.fabric3.contribution.war.WebXml" sourceFile="WebXml.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.fabric3.contribution.war.WebXmlIndexer" sourceFile="WebXmlIndexer.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="829" invocations="519" avgMicrosecondsPerInvocation="1598" maxMicrosecondsPerInvocation="122133" standardDeviationMircosecondsPerInvocation="8281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="528" invocations="37" avgMicrosecondsPerInvocation="14272" maxMicrosecondsPerInvocation="132583" standardDeviationMircosecondsPerInvocation="24714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="330" invocations="19" avgMicrosecondsPerInvocation="17386" maxMicrosecondsPerInvocation="114278" standardDeviationMircosecondsPerInvocation="31507"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="328" invocations="37" avgMicrosecondsPerInvocation="8885" maxMicrosecondsPerInvocation="51920" standardDeviationMircosecondsPerInvocation="12862"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="314" invocations="19" avgMicrosecondsPerInvocation="16575" maxMicrosecondsPerInvocation="125127" standardDeviationMircosecondsPerInvocation="34974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="268" invocations="19" avgMicrosecondsPerInvocation="14119" maxMicrosecondsPerInvocation="132092" standardDeviationMircosecondsPerInvocation="31187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="267" invocations="6" avgMicrosecondsPerInvocation="44532" maxMicrosecondsPerInvocation="101708" standardDeviationMircosecondsPerInvocation="34716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="258" invocations="18" avgMicrosecondsPerInvocation="14334" maxMicrosecondsPerInvocation="95782" standardDeviationMircosecondsPerInvocation="26568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="255" invocations="19" avgMicrosecondsPerInvocation="13458" maxMicrosecondsPerInvocation="121374" standardDeviationMircosecondsPerInvocation="28248"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="244" invocations="37" avgMicrosecondsPerInvocation="6620" maxMicrosecondsPerInvocation="47510" standardDeviationMircosecondsPerInvocation="11114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="240" invocations="19" avgMicrosecondsPerInvocation="12680" maxMicrosecondsPerInvocation="102488" standardDeviationMircosecondsPerInvocation="24496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="208" invocations="162" avgMicrosecondsPerInvocation="1287" maxMicrosecondsPerInvocation="72592" standardDeviationMircosecondsPerInvocation="6103"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="202" invocations="521" avgMicrosecondsPerInvocation="388" maxMicrosecondsPerInvocation="94374" standardDeviationMircosecondsPerInvocation="4262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="157" invocations="19" avgMicrosecondsPerInvocation="8280" maxMicrosecondsPerInvocation="49799" standardDeviationMircosecondsPerInvocation="15860"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="138" invocations="4" avgMicrosecondsPerInvocation="34588" maxMicrosecondsPerInvocation="132505" standardDeviationMircosecondsPerInvocation="56537"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

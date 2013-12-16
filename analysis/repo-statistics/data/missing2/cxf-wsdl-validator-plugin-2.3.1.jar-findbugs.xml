@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1291259443000" analysisTimestamp="1360916321033" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/cxf/cxf-wsdl-validator-plugin/2.3.1/cxf-wsdl-validator-plugin-2.3.1.jar</Jar>
+  </Project>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo">
+      <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="39" end="191" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" name="getIncludeExcludeString" signature="([Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="82" end="95" startBytecode="0" endBytecode="210" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+    </Method>
+    <LocalVariable name="arr" register="1" pc="15" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="87" end="87" startBytecode="16" endBytecode="16" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo">
+      <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="39" end="191" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="170" end="191" startBytecode="0" endBytecode="264" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="176" end="176" startBytecode="24" endBytecode="24" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo">
+      <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="39" end="191" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" name="processWsdl" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="121" end="167" startBytecode="0" endBytecode="633" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+    </Method>
+    <Method classname="java.io.File" name="createNewFile" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="881" end="883" startBytecode="0" endBytecode="58" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="161" end="161" startBytecode="304" endBytecode="304" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo">
+      <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="39" end="191" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" name="processWsdl" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="121" end="167" startBytecode="0" endBytecode="633" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.cxf.maven_plugin.WSDLValidatorMojo" start="131" end="131" startBytecode="86" endBytecode="86" sourcefile="WSDLValidatorMojo.java" sourcepath="org/apache/cxf/maven_plugin/WSDLValidatorMojo.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="7">
+    <MissingClass>org.apache.cxf.helpers.CastUtils</MissingClass>
+    <MissingClass>org.apache.cxf.tools.common.toolspec.ToolSpec</MissingClass>
+    <MissingClass>org.apache.cxf.tools.validator.WSDLValidator</MissingClass>
+    <MissingClass>org.apache.maven.plugin.AbstractMojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.FileUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 2 Dec 2010 05:10:43 +0200" total_classes="1" referenced_classes="17" total_bugs="4" total_size="73" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="10.19" clock_seconds="8.21" peak_mbytes="52.85" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="4">
+    <PackageStats package="org.apache.cxf.maven_plugin" total_bugs="4" total_types="1" total_size="73" priority_2="4">
+      <ClassStats class="org.apache.cxf.maven_plugin.WSDLValidatorMojo" sourceFile="WSDLValidatorMojo.java" interface="false" size="73" bugs="4" priority_2="4"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="959" invocations="318" avgMicrosecondsPerInvocation="3017" maxMicrosecondsPerInvocation="49233" standardDeviationMircosecondsPerInvocation="7200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="739" invocations="17" avgMicrosecondsPerInvocation="43520" maxMicrosecondsPerInvocation="166493" standardDeviationMircosecondsPerInvocation="55179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="523" invocations="17" avgMicrosecondsPerInvocation="30780" maxMicrosecondsPerInvocation="270078" standardDeviationMircosecondsPerInvocation="63446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="472" invocations="17" avgMicrosecondsPerInvocation="27773" maxMicrosecondsPerInvocation="263950" standardDeviationMircosecondsPerInvocation="62230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="240" invocations="5" avgMicrosecondsPerInvocation="48071" maxMicrosecondsPerInvocation="139777" standardDeviationMircosecondsPerInvocation="50115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="240" invocations="130" avgMicrosecondsPerInvocation="1846" maxMicrosecondsPerInvocation="22758" standardDeviationMircosecondsPerInvocation="3297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="232" invocations="5" avgMicrosecondsPerInvocation="46458" maxMicrosecondsPerInvocation="195300" standardDeviationMircosecondsPerInvocation="75169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="214" invocations="5" avgMicrosecondsPerInvocation="42950" maxMicrosecondsPerInvocation="99178" standardDeviationMircosecondsPerInvocation="31924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="194" invocations="17" avgMicrosecondsPerInvocation="11447" maxMicrosecondsPerInvocation="90342" standardDeviationMircosecondsPerInvocation="24222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="194" invocations="1" avgMicrosecondsPerInvocation="194242" maxMicrosecondsPerInvocation="194242" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="163" invocations="17" avgMicrosecondsPerInvocation="9616" maxMicrosecondsPerInvocation="62429" standardDeviationMircosecondsPerInvocation="16345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="154" invocations="17" avgMicrosecondsPerInvocation="9102" maxMicrosecondsPerInvocation="66892" standardDeviationMircosecondsPerInvocation="17620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="154" invocations="5" avgMicrosecondsPerInvocation="30924" maxMicrosecondsPerInvocation="64157" standardDeviationMircosecondsPerInvocation="23443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="153" invocations="271" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="18582" standardDeviationMircosecondsPerInvocation="1749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="111" invocations="17" avgMicrosecondsPerInvocation="6529" maxMicrosecondsPerInvocation="65447" standardDeviationMircosecondsPerInvocation="15361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="99" invocations="322" avgMicrosecondsPerInvocation="309" maxMicrosecondsPerInvocation="33405" standardDeviationMircosecondsPerInvocation="1996"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

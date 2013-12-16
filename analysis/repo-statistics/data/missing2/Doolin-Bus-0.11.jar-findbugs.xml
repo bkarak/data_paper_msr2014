@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1309698390000" analysisTimestamp="1360895405935" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/net/sf/doolin/Doolin-Bus/0.11/Doolin-Bus-0.11.jar</Jar>
+  </Project>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="net.sf.doolin.bus.Subscription">
+      <SourceLine classname="net.sf.doolin.bus.Subscription" start="12" end="136" sourcefile="Subscription.java" sourcepath="net/sf/doolin/bus/Subscription.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.bus.Subscription" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.Subscription" start="89" end="94" startBytecode="0" endBytecode="215" sourcefile="Subscription.java" sourcepath="net/sf/doolin/bus/Subscription.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.bus.Subscription" start="89" end="89" startBytecode="1" endBytecode="1" sourcefile="Subscription.java" sourcepath="net/sf/doolin/bus/Subscription.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="2" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="net.sf.doolin.bus.Subscription">
+      <SourceLine classname="net.sf.doolin.bus.Subscription" start="12" end="136" sourcefile="Subscription.java" sourcepath="net/sf/doolin/bus/Subscription.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.bus.Subscription" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.Subscription" start="89" end="94" startBytecode="0" endBytecode="215" sourcefile="Subscription.java" sourcepath="net/sf/doolin/bus/Subscription.java"/>
+    </Method>
+    <LocalVariable name="o" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="UG_SYNC_SET_UNSYNC_GET" priority="2" abbrev="UG" category="MT_CORRECTNESS">
+    <Class classname="net.sf.doolin.bus.bean.Bean">
+      <SourceLine classname="net.sf.doolin.bus.bean.Bean" start="63" end="177" sourcefile="Bean.java" sourcepath="net/sf/doolin/bus/bean/Bean.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.bus.bean.Bean" name="getNotificationMode" signature="()Lnet/sf/doolin/bus/bean/NotificationMode;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.bean.Bean" start="108" end="108" startBytecode="0" endBytecode="49" sourcefile="Bean.java" sourcepath="net/sf/doolin/bus/bean/Bean.java"/>
+    </Method>
+    <Method classname="net.sf.doolin.bus.bean.Bean" name="setNotificationMode" signature="(Lnet/sf/doolin/bus/bean/NotificationMode;)Lnet/sf/doolin/bus/bean/NotificationMode;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.bean.Bean" start="158" end="158" startBytecode="0" endBytecode="60" sourcefile="Bean.java" sourcepath="net/sf/doolin/bus/bean/Bean.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="net.sf.doolin.bus.bean.BeanNotificationSupport">
+      <SourceLine classname="net.sf.doolin.bus.bean.BeanNotificationSupport" start="69" end="257" sourcefile="BeanNotificationSupport.java" sourcepath="net/sf/doolin/bus/bean/BeanNotificationSupport.java"/>
+    </Class>
+    <Field classname="net.sf.doolin.bus.bean.BeanNotificationSupport" name="cancelling" signature="Z" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.bean.BeanNotificationSupport" sourcefile="BeanNotificationSupport.java" sourcepath="net/sf/doolin/bus/bean/BeanNotificationSupport.java"/>
+    </Field>
+    <Int value="60" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="net.sf.doolin.bus.bean.BeanNotificationSupport" start="141" end="141" startBytecode="1" endBytecode="1" sourcefile="BeanNotificationSupport.java" sourcepath="net/sf/doolin/bus/bean/BeanNotificationSupport.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="net.sf.doolin.bus.bean.BeanNotificationSupport" start="165" end="165" startBytecode="1" endBytecode="1" sourcefile="BeanNotificationSupport.java" sourcepath="net/sf/doolin/bus/bean/BeanNotificationSupport.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="net.sf.doolin.bus.bean.BeanNotificationSupport" start="232" end="232" startBytecode="77" endBytecode="77" sourcefile="BeanNotificationSupport.java" sourcepath="net/sf/doolin/bus/bean/BeanNotificationSupport.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="net.sf.doolin.bus.bean.BeanNotificationSupport" start="236" end="236" startBytecode="97" endBytecode="97" sourcefile="BeanNotificationSupport.java" sourcepath="net/sf/doolin/bus/bean/BeanNotificationSupport.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="net.sf.doolin.bus.bean.BeanNotificationSupport" start="236" end="236" startBytecode="87" endBytecode="87" sourcefile="BeanNotificationSupport.java" sourcepath="net/sf/doolin/bus/bean/BeanNotificationSupport.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="UG_SYNC_SET_UNSYNC_GET" priority="2" abbrev="UG" category="MT_CORRECTNESS">
+    <Class classname="net.sf.doolin.bus.bean.BeanNotificationSupport">
+      <SourceLine classname="net.sf.doolin.bus.bean.BeanNotificationSupport" start="69" end="257" sourcefile="BeanNotificationSupport.java" sourcepath="net/sf/doolin/bus/bean/BeanNotificationSupport.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.bus.bean.BeanNotificationSupport" name="getNotificationMode" signature="()Lnet/sf/doolin/bus/bean/NotificationMode;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.bean.BeanNotificationSupport" start="136" end="136" startBytecode="0" endBytecode="46" sourcefile="BeanNotificationSupport.java" sourcepath="net/sf/doolin/bus/bean/BeanNotificationSupport.java"/>
+    </Method>
+    <Method classname="net.sf.doolin.bus.bean.BeanNotificationSupport" name="setNotificationMode" signature="(Lnet/sf/doolin/bus/bean/NotificationMode;)Lnet/sf/doolin/bus/bean/NotificationMode;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.bean.BeanNotificationSupport" start="222" end="248" startBytecode="0" endBytecode="345" sourcefile="BeanNotificationSupport.java" sourcepath="net/sf/doolin/bus/bean/BeanNotificationSupport.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="net.sf.doolin.bus.jmx.BusSubscription">
+      <SourceLine classname="net.sf.doolin.bus.jmx.BusSubscription" start="11" end="28" sourcefile="BusSubscription.java" sourcepath="net/sf/doolin/bus/jmx/BusSubscription.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.bus.jmx.BusSubscription" name="getRegistrationTime" signature="()Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.jmx.BusSubscription" start="23" end="23" startBytecode="0" endBytecode="46" sourcefile="BusSubscription.java" sourcepath="net/sf/doolin/bus/jmx/BusSubscription.java"/>
+    </Method>
+    <Field classname="net.sf.doolin.bus.jmx.BusSubscription" name="registrationTime" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.jmx.BusSubscription" sourcefile="BusSubscription.java" sourcepath="net/sf/doolin/bus/jmx/BusSubscription.java"/>
+    </Field>
+    <SourceLine classname="net.sf.doolin.bus.jmx.BusSubscription" start="23" end="23" startBytecode="4" endBytecode="4" sourcefile="BusSubscription.java" sourcepath="net/sf/doolin/bus/jmx/BusSubscription.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="net.sf.doolin.bus.jmx.BusSubscription">
+      <SourceLine classname="net.sf.doolin.bus.jmx.BusSubscription" start="11" end="28" sourcefile="BusSubscription.java" sourcepath="net/sf/doolin/bus/jmx/BusSubscription.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.bus.jmx.BusSubscription" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)V" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.jmx.BusSubscription" start="11" end="15" startBytecode="0" endBytecode="107" sourcefile="BusSubscription.java" sourcepath="net/sf/doolin/bus/jmx/BusSubscription.java"/>
+    </Method>
+    <Field classname="net.sf.doolin.bus.jmx.BusSubscription" name="registrationTime" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.bus.jmx.BusSubscription" sourcefile="BusSubscription.java" sourcepath="net/sf/doolin/bus/jmx/BusSubscription.java"/>
+    </Field>
+    <LocalVariable name="registrationTime" register="3" pc="16" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="net.sf.doolin.bus.jmx.BusSubscription" start="14" end="14" startBytecode="16" endBytecode="16" sourcefile="BusSubscription.java" sourcepath="net/sf/doolin/bus/jmx/BusSubscription.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="15">
+    <MissingClass>net.sf.cglib.proxy.Enhancer</MissingClass>
+    <MissingClass>net.sf.doolin.util.Adapter</MissingClass>
+    <MissingClass>net.sf.doolin.util.BasicPropertySet</MissingClass>
+    <MissingClass>net.sf.doolin.util.Utils</MissingClass>
+    <MissingClass>net.sf.doolin.util.expression.Expression</MissingClass>
+    <MissingClass>net.sf.doolin.util.expression.TokenVisitor</MissingClass>
+    <MissingClass>net.sf.doolin.util.expression.ValueToken</MissingClass>
+    <MissingClass>net.sf.doolin.util.factory.DataFactory</MissingClass>
+    <MissingClass>net.sf.doolin.util.factory.IdentityDataFactory</MissingClass>
+    <MissingClass>net.sf.jstring.LocalizableException</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.LazyDynaBean</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.Validate</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 3 Jul 2011 16:06:30 +0300" total_classes="50" referenced_classes="101" total_bugs="7" total_size="1090" num_packages="8" vm_version="20.4-b02-402" cpu_seconds="22.84" clock_seconds="11.71" peak_mbytes="65.85" alloc_mbytes="763.88" gc_seconds="0.18" priority_2="7">
+    <PackageStats package="net.sf.doolin.bus" total_bugs="2" total_types="10" total_size="254" priority_2="2">
+      <ClassStats class="net.sf.doolin.bus.Bus" sourceFile="Bus.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.BusLog" sourceFile="BusLog.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.DefaultBus" sourceFile="DefaultBus.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.Priority" sourceFile="Priority.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.SimpleMessage" sourceFile="SimpleMessage.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.Subscriber" sourceFile="Subscriber.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.SubscriberExecution" sourceFile="SubscriberExecution.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.SubscriberInfo" sourceFile="SubscriberInfo.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.SubscriberTrigger" sourceFile="SubscriberTrigger.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.Subscription" sourceFile="Subscription.java" interface="false" size="40" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.bus.annotation" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="net.sf.doolin.bus.annotation.Property" sourceFile="Property.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.bus.bean" total_bugs="3" total_types="9" total_size="230" priority_2="3">
+      <ClassStats class="net.sf.doolin.bus.bean.Bean" sourceFile="Bean.java" interface="false" size="43" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.bus.bean.BeanNotificationSupport" sourceFile="BeanNotificationSupport.java" interface="false" size="80" bugs="2" priority_2="2"/>
+      <ClassStats class="net.sf.doolin.bus.bean.BeanSet" sourceFile="BeanSet.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.bean.BufferedBeanFactory" sourceFile="BufferedBeanFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.bean.BusDynaBean" sourceFile="BusDynaBean.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.bean.IBean" sourceFile="IBean.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.bean.IParentBean" sourceFile="IParentBean.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.bean.NotificationMode" sourceFile="NotificationMode.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.bean.ParentBean" sourceFile="ParentBean.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.bus.cglib" total_bugs="0" total_types="3" total_size="111">
+      <ClassStats class="net.sf.doolin.bus.cglib.BeanMethodInterceptor" sourceFile="BeanMethodInterceptor.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.cglib.BeanProxyFactory" sourceFile="BeanProxyFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.cglib.ProxyLink" sourceFile="ProxyLink.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.bus.expression" total_bugs="0" total_types="3" total_size="56">
+      <ClassStats class="net.sf.doolin.bus.expression.BusExpression" sourceFile="BusExpression.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.expression.BusExpression$1" sourceFile="BusExpression.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.expression.BusExpression$2" sourceFile="BusExpression.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.bus.jmx" total_bugs="2" total_types="4" total_size="52" priority_2="2">
+      <ClassStats class="net.sf.doolin.bus.jmx.BusSubscription" sourceFile="BusSubscription.java" interface="false" size="16" bugs="2" priority_2="2"/>
+      <ClassStats class="net.sf.doolin.bus.jmx.IBusSubscription" sourceFile="IBusSubscription.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.jmx.IJmxBusBean" sourceFile="IJmxBusBean.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.jmx.JmxBusBean" sourceFile="JmxBusBean.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.bus.subscriber" total_bugs="0" total_types="1" total_size="26">
+      <ClassStats class="net.sf.doolin.bus.subscriber.LogSubscriber" sourceFile="LogSubscriber.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.bus.support" total_bugs="0" total_types="19" total_size="359">
+      <ClassStats class="net.sf.doolin.bus.support.AbstractClassSubscriber" sourceFile="AbstractClassSubscriber.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.AbstractSubscriber" sourceFile="AbstractSubscriber.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.AbstractTextBusLog" sourceFile="AbstractTextBusLog.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.AndSubscriberValidator" sourceFile="AndSubscriberValidator.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.BothWayPropertyChangeSubscriber" sourceFile="BothWayPropertyChangeSubscriber.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.DefaultBusLog" sourceFile="DefaultBusLog.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.DefaultSubscriberValidator" sourceFile="DefaultSubscriberValidator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.PropertyChangeMessage" sourceFile="PropertyChangeMessage.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.PropertyChangeSubscriber" sourceFile="PropertyChangeSubscriber.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.PropertyChangeSupport" sourceFile="PropertyChangeSupport.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.PropertyChangeSupport$1" sourceFile="PropertyChangeSupport.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.PropertyChangeSupport$2" sourceFile="PropertyChangeSupport.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.SubscriberAdapter" sourceFile="SubscriberAdapter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.SubscriberValidator" sourceFile="SubscriberValidator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.SubscriptionCountBusLog" sourceFile="SubscriptionCountBusLog.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.SysErrBusLog" sourceFile="SysErrBusLog.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.SysOutBusLog" sourceFile="SysOutBusLog.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.TriggeredSubscriberValidator" sourceFile="TriggeredSubscriberValidator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.bus.support.Value" sourceFile="Value.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1248" invocations="536" avgMicrosecondsPerInvocation="2329" maxMicrosecondsPerInvocation="159282" standardDeviationMircosecondsPerInvocation="9588"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="686" invocations="101" avgMicrosecondsPerInvocation="6792" maxMicrosecondsPerInvocation="144179" standardDeviationMircosecondsPerInvocation="18220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="478" invocations="243" avgMicrosecondsPerInvocation="1968" maxMicrosecondsPerInvocation="20631" standardDeviationMircosecondsPerInvocation="2787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="469" invocations="101" avgMicrosecondsPerInvocation="4651" maxMicrosecondsPerInvocation="57945" standardDeviationMircosecondsPerInvocation="10478"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="464" invocations="248" avgMicrosecondsPerInvocation="1871" maxMicrosecondsPerInvocation="21283" standardDeviationMircosecondsPerInvocation="2882"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="438" invocations="248" avgMicrosecondsPerInvocation="1767" maxMicrosecondsPerInvocation="20805" standardDeviationMircosecondsPerInvocation="2992"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="404" invocations="250" avgMicrosecondsPerInvocation="1616" maxMicrosecondsPerInvocation="33217" standardDeviationMircosecondsPerInvocation="3070"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="380" invocations="248" avgMicrosecondsPerInvocation="1532" maxMicrosecondsPerInvocation="43859" standardDeviationMircosecondsPerInvocation="3392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="354" invocations="191" avgMicrosecondsPerInvocation="1854" maxMicrosecondsPerInvocation="64803" standardDeviationMircosecondsPerInvocation="5286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="312" invocations="101" avgMicrosecondsPerInvocation="3092" maxMicrosecondsPerInvocation="152866" standardDeviationMircosecondsPerInvocation="15170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="286" invocations="101" avgMicrosecondsPerInvocation="2837" maxMicrosecondsPerInvocation="49478" standardDeviationMircosecondsPerInvocation="6747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="283" invocations="449" avgMicrosecondsPerInvocation="631" maxMicrosecondsPerInvocation="20387" standardDeviationMircosecondsPerInvocation="1692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="280" invocations="248" avgMicrosecondsPerInvocation="1132" maxMicrosecondsPerInvocation="12806" standardDeviationMircosecondsPerInvocation="1398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="199" invocations="50" avgMicrosecondsPerInvocation="3992" maxMicrosecondsPerInvocation="107088" standardDeviationMircosecondsPerInvocation="15586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="180" invocations="248" avgMicrosecondsPerInvocation="725" maxMicrosecondsPerInvocation="20199" standardDeviationMircosecondsPerInvocation="1492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="167" invocations="464" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="25895" standardDeviationMircosecondsPerInvocation="1402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="116" invocations="242" avgMicrosecondsPerInvocation="482" maxMicrosecondsPerInvocation="5637" standardDeviationMircosecondsPerInvocation="652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="116" invocations="101" avgMicrosecondsPerInvocation="1150" maxMicrosecondsPerInvocation="20501" standardDeviationMircosecondsPerInvocation="2613"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="115" invocations="101" avgMicrosecondsPerInvocation="1143" maxMicrosecondsPerInvocation="16223" standardDeviationMircosecondsPerInvocation="2848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="112" invocations="101" avgMicrosecondsPerInvocation="1115" maxMicrosecondsPerInvocation="19502" standardDeviationMircosecondsPerInvocation="2664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="110" invocations="50" avgMicrosecondsPerInvocation="2206" maxMicrosecondsPerInvocation="78369" standardDeviationMircosecondsPerInvocation="10911"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="103" invocations="285" avgMicrosecondsPerInvocation="363" maxMicrosecondsPerInvocation="65787" standardDeviationMircosecondsPerInvocation="3883"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="88" invocations="133" avgMicrosecondsPerInvocation="669" maxMicrosecondsPerInvocation="15725" standardDeviationMircosecondsPerInvocation="1579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="87" invocations="50" avgMicrosecondsPerInvocation="1753" maxMicrosecondsPerInvocation="12766" standardDeviationMircosecondsPerInvocation="2659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="85" invocations="50" avgMicrosecondsPerInvocation="1707" maxMicrosecondsPerInvocation="32884" standardDeviationMircosecondsPerInvocation="4598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="85" invocations="243" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="14233" standardDeviationMircosecondsPerInvocation="940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="78" invocations="5802" avgMicrosecondsPerInvocation="13" maxMicrosecondsPerInvocation="116" standardDeviationMircosecondsPerInvocation="6"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1281472235000" analysisTimestamp="1360868648939" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/wicket/wicket-guice/1.4.10/wicket-guice-1.4.10.jar</Jar>
+  </Project>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.wicket.guice.GuiceInjectorHolder">
+      <SourceLine classname="org.apache.wicket.guice.GuiceInjectorHolder" start="38" end="62" sourcefile="GuiceInjectorHolder.java" sourcepath="org/apache/wicket/guice/GuiceInjectorHolder.java"/>
+    </Class>
+    <Field classname="org.apache.wicket.guice.GuiceInjectorHolder" name="INJECTOR_KEY" signature="Lorg/apache/wicket/MetaDataKey;" isStatic="true">
+      <SourceLine classname="org.apache.wicket.guice.GuiceInjectorHolder" sourcefile="GuiceInjectorHolder.java" sourcepath="org/apache/wicket/guice/GuiceInjectorHolder.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.guice.GuiceInjectorHolder" start="38" end="38" startBytecode="7" endBytecode="7" sourcefile="GuiceInjectorHolder.java" sourcepath="org/apache/wicket/guice/GuiceInjectorHolder.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOOLEAN_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.apache.wicket.guice.InjectionFlagCachingGuiceComponentInjector">
+      <SourceLine classname="org.apache.wicket.guice.InjectionFlagCachingGuiceComponentInjector" start="49" end="185" sourcefile="InjectionFlagCachingGuiceComponentInjector.java" sourcepath="org/apache/wicket/guice/InjectionFlagCachingGuiceComponentInjector.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.guice.InjectionFlagCachingGuiceComponentInjector" name="inject" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.guice.InjectionFlagCachingGuiceComponentInjector" start="68" end="174" startBytecode="0" endBytecode="1212" sourcefile="InjectionFlagCachingGuiceComponentInjector.java" sourcepath="org/apache/wicket/guice/InjectionFlagCachingGuiceComponentInjector.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.guice.InjectionFlagCachingGuiceComponentInjector" start="171" end="171" startBytecode="574" endBytecode="574" sourcefile="InjectionFlagCachingGuiceComponentInjector.java" sourcepath="org/apache/wicket/guice/InjectionFlagCachingGuiceComponentInjector.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="17">
+    <MissingClass>com.google.inject.Guice</MissingClass>
+    <MissingClass>com.google.inject.Inject</MissingClass>
+    <MissingClass>com.google.inject.Injector</MissingClass>
+    <MissingClass>com.google.inject.Key</MissingClass>
+    <MissingClass>com.google.inject.Stage</MissingClass>
+    <MissingClass>com.google.inject.TypeLiteral</MissingClass>
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>org.apache.wicket.Application</MissingClass>
+    <MissingClass>org.apache.wicket.MetaDataKey</MissingClass>
+    <MissingClass>org.apache.wicket.WicketRuntimeException</MissingClass>
+    <MissingClass>org.apache.wicket.injection.ConfigurableInjector</MissingClass>
+    <MissingClass>org.apache.wicket.injection.web.InjectorHolder</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.WebApplication</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.WicketFilter</MissingClass>
+    <MissingClass>org.apache.wicket.proxy.LazyInitProxyFactory</MissingClass>
+    <MissingClass>org.apache.wicket.util.lang.Classes</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 10 Aug 2010 23:30:35 +0300" total_classes="7" referenced_classes="40" total_bugs="2" total_size="244" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="12.62" clock_seconds="11.27" peak_mbytes="56.73" alloc_mbytes="763.88" gc_seconds="0.11" priority_2="1" priority_1="1">
+    <PackageStats package="org.apache.wicket.guice" total_bugs="2" total_types="7" total_size="244" priority_2="1" priority_1="1">
+      <ClassStats class="org.apache.wicket.guice.GuiceComponentInjector" sourceFile="GuiceComponentInjector.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.apache.wicket.guice.GuiceComponentInjector$MoreThanOneBindingException" sourceFile="GuiceComponentInjector.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.guice.GuiceInjectorHolder" sourceFile="GuiceInjectorHolder.java" interface="false" size="12" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.guice.GuiceInjectorHolder$1" sourceFile="GuiceInjectorHolder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.guice.GuiceProxyTargetLocator" sourceFile="GuiceProxyTargetLocator.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.wicket.guice.GuiceWebApplicationFactory" sourceFile="GuiceWebApplicationFactory.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.wicket.guice.InjectionFlagCachingGuiceComponentInjector" sourceFile="InjectionFlagCachingGuiceComponentInjector.java" interface="false" size="60" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1127" invocations="399" avgMicrosecondsPerInvocation="2826" maxMicrosecondsPerInvocation="119004" standardDeviationMircosecondsPerInvocation="11048"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="746" invocations="21" avgMicrosecondsPerInvocation="35570" maxMicrosecondsPerInvocation="380458" standardDeviationMircosecondsPerInvocation="83307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="638" invocations="20" avgMicrosecondsPerInvocation="31902" maxMicrosecondsPerInvocation="248299" standardDeviationMircosecondsPerInvocation="60718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="522" invocations="40" avgMicrosecondsPerInvocation="13059" maxMicrosecondsPerInvocation="132833" standardDeviationMircosecondsPerInvocation="25123"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="443" invocations="20" avgMicrosecondsPerInvocation="22158" maxMicrosecondsPerInvocation="241941" standardDeviationMircosecondsPerInvocation="52509"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="426" invocations="20" avgMicrosecondsPerInvocation="21331" maxMicrosecondsPerInvocation="156698" standardDeviationMircosecondsPerInvocation="41857"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="395" invocations="21" avgMicrosecondsPerInvocation="18818" maxMicrosecondsPerInvocation="167647" standardDeviationMircosecondsPerInvocation="36817"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="378" invocations="40" avgMicrosecondsPerInvocation="9473" maxMicrosecondsPerInvocation="70214" standardDeviationMircosecondsPerInvocation="17881"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="350" invocations="40" avgMicrosecondsPerInvocation="8761" maxMicrosecondsPerInvocation="111925" standardDeviationMircosecondsPerInvocation="21049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="314" invocations="18" avgMicrosecondsPerInvocation="17486" maxMicrosecondsPerInvocation="91337" standardDeviationMircosecondsPerInvocation="32219"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="271" invocations="334" avgMicrosecondsPerInvocation="812" maxMicrosecondsPerInvocation="64994" standardDeviationMircosecondsPerInvocation="4855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="235" invocations="92" avgMicrosecondsPerInvocation="2564" maxMicrosecondsPerInvocation="44482" standardDeviationMircosecondsPerInvocation="6924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="232" invocations="20" avgMicrosecondsPerInvocation="11619" maxMicrosecondsPerInvocation="111455" standardDeviationMircosecondsPerInvocation="26228"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="188" invocations="20" avgMicrosecondsPerInvocation="9434" maxMicrosecondsPerInvocation="105934" standardDeviationMircosecondsPerInvocation="23104"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="186" invocations="40" avgMicrosecondsPerInvocation="4652" maxMicrosecondsPerInvocation="38255" standardDeviationMircosecondsPerInvocation="10031"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="177" invocations="40" avgMicrosecondsPerInvocation="4426" maxMicrosecondsPerInvocation="74747" standardDeviationMircosecondsPerInvocation="13055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="166" invocations="40" avgMicrosecondsPerInvocation="4150" maxMicrosecondsPerInvocation="76326" standardDeviationMircosecondsPerInvocation="12800"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="164" invocations="402" avgMicrosecondsPerInvocation="408" maxMicrosecondsPerInvocation="26250" standardDeviationMircosecondsPerInvocation="2252"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="154" invocations="20" avgMicrosecondsPerInvocation="7740" maxMicrosecondsPerInvocation="100312" standardDeviationMircosecondsPerInvocation="21958"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

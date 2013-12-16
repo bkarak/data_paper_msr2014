@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1304801270000" analysisTimestamp="1360895771983" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/wicket/wicket-request/1.5-RC4.2/wicket-request-1.5-RC4.2.jar</Jar>
+  </Project>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.apache.wicket.request.mapper.CompoundRequestMapper$EncoderWithSegmentsCount">
+      <SourceLine classname="org.apache.wicket.request.mapper.CompoundRequestMapper$EncoderWithSegmentsCount" start="44" end="71" sourcefile="CompoundRequestMapper.java" sourcepath="org/apache/wicket/request/mapper/CompoundRequestMapper.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.request.mapper.CompoundRequestMapper$EncoderWithSegmentsCount" name="compareTo" signature="(Lorg/apache/wicket/request/mapper/CompoundRequestMapper$EncoderWithSegmentsCount;)I" isStatic="false">
+      <SourceLine classname="org.apache.wicket.request.mapper.CompoundRequestMapper$EncoderWithSegmentsCount" start="57" end="57" startBytecode="0" endBytecode="61" sourcefile="CompoundRequestMapper.java" sourcepath="org/apache/wicket/request/mapper/CompoundRequestMapper.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.apache.wicket.request.mapper.parameter.PageParameters">
+      <SourceLine classname="org.apache.wicket.request.mapper.parameter.PageParameters" start="71" end="593" sourcefile="PageParameters.java" sourcepath="org/apache/wicket/request/mapper/parameter/PageParameters.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.request.mapper.parameter.PageParameters" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.wicket.request.mapper.parameter.PageParameters" start="472" end="517" startBytecode="0" endBytecode="567" sourcefile="PageParameters.java" sourcepath="org/apache/wicket/request/mapper/parameter/PageParameters.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="17">
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>org.apache.wicket.util.IProvider</MissingClass>
+    <MissingClass>org.apache.wicket.util.NullProvider</MissingClass>
+    <MissingClass>org.apache.wicket.util.lang.Args</MissingClass>
+    <MissingClass>org.apache.wicket.util.lang.Checks</MissingClass>
+    <MissingClass>org.apache.wicket.util.lang.Exceptions</MissingClass>
+    <MissingClass>org.apache.wicket.util.lang.Generics</MissingClass>
+    <MissingClass>org.apache.wicket.util.lang.Objects</MissingClass>
+    <MissingClass>org.apache.wicket.util.string.IStringIterator</MissingClass>
+    <MissingClass>org.apache.wicket.util.string.PrependingStringBuffer</MissingClass>
+    <MissingClass>org.apache.wicket.util.string.StringList</MissingClass>
+    <MissingClass>org.apache.wicket.util.string.StringValue</MissingClass>
+    <MissingClass>org.apache.wicket.util.string.Strings</MissingClass>
+    <MissingClass>org.apache.wicket.util.time.Duration</MissingClass>
+    <MissingClass>org.apache.wicket.util.time.Time</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 7 May 2011 23:47:50 +0300" total_classes="56" referenced_classes="109" total_bugs="2" total_size="1673" num_packages="11" vm_version="20.4-b02-402" cpu_seconds="26.81" clock_seconds="13.69" peak_mbytes="76.09" alloc_mbytes="763.88" gc_seconds="0.23" priority_2="1" priority_1="1">
+    <PackageStats package="org.apache.wicket.request" total_bugs="0" total_types="19" total_size="682">
+      <ClassStats class="org.apache.wicket.request.IExceptionMapper" sourceFile="IExceptionMapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.IRequestCycle" sourceFile="IRequestCycle.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.IRequestHandler" sourceFile="IRequestHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.IRequestHandlerDelegate" sourceFile="IRequestHandlerDelegate.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.IRequestMapper" sourceFile="IRequestMapper.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.IRequestParameters" sourceFile="IRequestParameters.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.IWritableRequestParameters" sourceFile="IWritableRequestParameters.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.Request" sourceFile="Request.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.Request$1" sourceFile="Request.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.RequestHandlerStack" sourceFile="RequestHandlerStack.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.RequestHandlerStack$ReplaceHandlerException" sourceFile="RequestHandlerStack.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.Response" sourceFile="Response.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.Url" sourceFile="Url.java" interface="false" size="229" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.Url$QueryParameter" sourceFile="Url.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.UrlDecoder" sourceFile="UrlDecoder.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.UrlEncoder" sourceFile="UrlEncoder.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.UrlEncoder$1" sourceFile="UrlEncoder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.UrlEncoder$Type" sourceFile="UrlEncoder.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.UrlRenderer" sourceFile="UrlRenderer.java" interface="false" size="98" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.request.flow" total_bugs="0" total_types="3" total_size="28">
+      <ClassStats class="org.apache.wicket.request.flow.RedirectToUrlException" sourceFile="RedirectToUrlException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.flow.ResetResponseException" sourceFile="ResetResponseException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.flow.ResetResponseException$ResponseResettingDecorator" sourceFile="ResetResponseException.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.request.handler" total_bugs="0" total_types="2" total_size="45">
+      <ClassStats class="org.apache.wicket.request.handler.EmptyRequestHandler" sourceFile="EmptyRequestHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.handler.TextRequestHandler" sourceFile="TextRequestHandler.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.request.http" total_bugs="0" total_types="4" total_size="112">
+      <ClassStats class="org.apache.wicket.request.http.WebRequest" sourceFile="WebRequest.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.http.WebRequest$1" sourceFile="WebRequest.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.http.WebResponse" sourceFile="WebResponse.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.http.WebResponse$CacheScope" sourceFile="WebResponse.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.request.http.flow" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="org.apache.wicket.request.http.flow.AbortWithHttpErrorCodeException" sourceFile="AbortWithHttpErrorCodeException.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.request.http.handler" total_bugs="0" total_types="2" total_size="46">
+      <ClassStats class="org.apache.wicket.request.http.handler.ErrorCodeRequestHandler" sourceFile="ErrorCodeRequestHandler.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.http.handler.RedirectRequestHandler" sourceFile="RedirectRequestHandler.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.request.mapper" total_bugs="1" total_types="5" total_size="144" priority_2="1">
+      <ClassStats class="org.apache.wicket.request.mapper.AbstractMapper" sourceFile="AbstractMapper.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.CompoundRequestMapper" sourceFile="CompoundRequestMapper.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.CompoundRequestMapper$EncoderWithSegmentsCount" sourceFile="CompoundRequestMapper.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.wicket.request.mapper.ICompoundRequestMapper" sourceFile="ICompoundRequestMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.ParentPathReferenceRewriter" sourceFile="ParentPathReferenceRewriter.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.request.mapper.info" total_bugs="0" total_types="3" total_size="145">
+      <ClassStats class="org.apache.wicket.request.mapper.info.ComponentInfo" sourceFile="ComponentInfo.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.info.PageComponentInfo" sourceFile="PageComponentInfo.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.info.PageInfo" sourceFile="PageInfo.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.request.mapper.mount" total_bugs="0" total_types="6" total_size="138">
+      <ClassStats class="org.apache.wicket.request.mapper.mount.IMountedRequestMapper" sourceFile="IMountedRequestMapper.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.mount.Mount" sourceFile="Mount.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.mount.MountMapper" sourceFile="MountMapper.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.mount.MountParameters" sourceFile="MountParameters.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.mount.UnmountedMapperAdapter" sourceFile="UnmountedMapperAdapter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.mount.UnmountedRequestHandlerAdapter" sourceFile="UnmountedRequestHandlerAdapter.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.request.mapper.parameter" total_bugs="1" total_types="8" total_size="255" priority_1="1">
+      <ClassStats class="org.apache.wicket.request.mapper.parameter.IIndexedParameters" sourceFile="IIndexedParameters.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.parameter.INamedParameters" sourceFile="INamedParameters.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.parameter.IPageParametersEncoder" sourceFile="IPageParametersEncoder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.parameter.PageParameters" sourceFile="PageParameters.java" interface="false" size="188" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.request.mapper.parameter.PageParameters$1" sourceFile="PageParameters.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.parameter.PageParameters$Entry" sourceFile="PageParameters.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.parameter.PageParameters$NamedPair" sourceFile="PageParameters.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.mapper.parameter.PageParametersEncoder" sourceFile="PageParametersEncoder.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.request.parameter" total_bugs="0" total_types="3" total_size="65">
+      <ClassStats class="org.apache.wicket.request.parameter.CombinedRequestParametersAdapter" sourceFile="CombinedRequestParametersAdapter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.parameter.EmptyRequestParameters" sourceFile="EmptyRequestParameters.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.wicket.request.parameter.UrlRequestParametersAdapter" sourceFile="UrlRequestParametersAdapter.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="977" invocations="294" avgMicrosecondsPerInvocation="3325" maxMicrosecondsPerInvocation="115879" standardDeviationMircosecondsPerInvocation="8895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="956" invocations="300" avgMicrosecondsPerInvocation="3189" maxMicrosecondsPerInvocation="123213" standardDeviationMircosecondsPerInvocation="9784"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="909" invocations="294" avgMicrosecondsPerInvocation="3092" maxMicrosecondsPerInvocation="71996" standardDeviationMircosecondsPerInvocation="7590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="899" invocations="544" avgMicrosecondsPerInvocation="1654" maxMicrosecondsPerInvocation="162981" standardDeviationMircosecondsPerInvocation="8416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="856" invocations="289" avgMicrosecondsPerInvocation="2962" maxMicrosecondsPerInvocation="33202" standardDeviationMircosecondsPerInvocation="5132"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="631" invocations="297" avgMicrosecondsPerInvocation="2126" maxMicrosecondsPerInvocation="27632" standardDeviationMircosecondsPerInvocation="4311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="581" invocations="109" avgMicrosecondsPerInvocation="5333" maxMicrosecondsPerInvocation="53293" standardDeviationMircosecondsPerInvocation="11052"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="490" invocations="109" avgMicrosecondsPerInvocation="4503" maxMicrosecondsPerInvocation="89333" standardDeviationMircosecondsPerInvocation="10934"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="489" invocations="232" avgMicrosecondsPerInvocation="2111" maxMicrosecondsPerInvocation="79779" standardDeviationMircosecondsPerInvocation="6026"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="370" invocations="294" avgMicrosecondsPerInvocation="1260" maxMicrosecondsPerInvocation="25672" standardDeviationMircosecondsPerInvocation="2553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="323" invocations="294" avgMicrosecondsPerInvocation="1101" maxMicrosecondsPerInvocation="47371" standardDeviationMircosecondsPerInvocation="3447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="287" invocations="109" avgMicrosecondsPerInvocation="2638" maxMicrosecondsPerInvocation="47479" standardDeviationMircosecondsPerInvocation="6144"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="250" invocations="279" avgMicrosecondsPerInvocation="898" maxMicrosecondsPerInvocation="84357" standardDeviationMircosecondsPerInvocation="5231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="231" invocations="563" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="9449" standardDeviationMircosecondsPerInvocation="602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="157" invocations="109" avgMicrosecondsPerInvocation="1448" maxMicrosecondsPerInvocation="13661" standardDeviationMircosecondsPerInvocation="2384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="126" invocations="289" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="22706" standardDeviationMircosecondsPerInvocation="1619"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="125" invocations="109" avgMicrosecondsPerInvocation="1155" maxMicrosecondsPerInvocation="18160" standardDeviationMircosecondsPerInvocation="2574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="124" invocations="56" avgMicrosecondsPerInvocation="2220" maxMicrosecondsPerInvocation="38832" standardDeviationMircosecondsPerInvocation="6635"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="119" invocations="109" avgMicrosecondsPerInvocation="1099" maxMicrosecondsPerInvocation="18330" standardDeviationMircosecondsPerInvocation="2516"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="119" invocations="483" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="30724" standardDeviationMircosecondsPerInvocation="1453"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

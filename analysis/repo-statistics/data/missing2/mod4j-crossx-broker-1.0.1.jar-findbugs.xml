@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1239651529000" analysisTimestamp="1360893936712" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/mod4j/crossx/mod4j-crossx-broker/1.0.1/mod4j-crossx-broker-1.0.1.jar</Jar>
+  </Project>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.mod4j.crossx.broker.CrossxBroker">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxBroker" start="34" end="270" sourcefile="CrossxBroker.java" sourcepath="org/mod4j/crossx/broker/CrossxBroker.java"/>
+    </Class>
+    <Method classname="org.mod4j.crossx.broker.CrossxBroker" name="findAllSymbols" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" isStatic="true">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxBroker" start="262" end="270" startBytecode="0" endBytecode="244" sourcefile="CrossxBroker.java" sourcepath="org/mod4j/crossx/broker/CrossxBroker.java"/>
+    </Method>
+    <LocalVariable name="tmp" register="3" pc="14" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.mod4j.crossx.broker.CrossxEnvironment" name="findAllSymbols" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxEnvironment" start="136" end="140" startBytecode="0" endBytecode="104" sourcefile="CrossxEnvironment.java" sourcepath="org/mod4j/crossx/broker/CrossxEnvironment.java"/>
+    </Method>
+    <SourceLine classname="org.mod4j.crossx.broker.CrossxBroker" start="264" end="264" startBytecode="15" endBytecode="15" sourcefile="CrossxBroker.java" sourcepath="org/mod4j/crossx/broker/CrossxBroker.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.mod4j.crossx.broker.CrossxEnvironment">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxEnvironment" start="37" end="256" sourcefile="CrossxEnvironment.java" sourcepath="org/mod4j/crossx/broker/CrossxEnvironment.java"/>
+    </Class>
+    <Method classname="org.mod4j.crossx.broker.CrossxEnvironment" name="setPrintStream" signature="(Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxEnvironment" start="238" end="242" startBytecode="0" endBytecode="128" sourcefile="CrossxEnvironment.java" sourcepath="org/mod4j/crossx/broker/CrossxEnvironment.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="org.mod4j.crossx.broker.CrossxEnvironment" start="238" end="238" startBytecode="5" endBytecode="5" sourcefile="CrossxEnvironment.java" sourcepath="org/mod4j/crossx/broker/CrossxEnvironment.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.mod4j.crossx.broker.CrossxEnvironment">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxEnvironment" start="37" end="256" sourcefile="CrossxEnvironment.java" sourcepath="org/mod4j/crossx/broker/CrossxEnvironment.java"/>
+    </Class>
+    <Method classname="org.mod4j.crossx.broker.CrossxEnvironment" name="lookupSymbol" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/mod4j/crossx/mm/crossx/Symbol;" isStatic="true">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxEnvironment" start="117" end="126" startBytecode="0" endBytecode="190" sourcefile="CrossxEnvironment.java" sourcepath="org/mod4j/crossx/broker/CrossxEnvironment.java"/>
+    </Method>
+    <Field classname="org.mod4j.crossx.broker.CrossxEnvironment" name="environment" signature="Ljava/util/Map;" sourceSignature="Ljava/util/Map&lt;Ljava/lang/String;Lorg/mod4j/crossx/broker/CrossxLocation;&gt;;" isStatic="true" role="FIELD_CONTAINS_VALUE">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxEnvironment" sourcefile="CrossxEnvironment.java" sourcepath="org/mod4j/crossx/broker/CrossxEnvironment.java"/>
+    </Field>
+    <SourceLine classname="org.mod4j.crossx.broker.CrossxEnvironment" start="120" end="120" startBytecode="17" endBytecode="17" sourcefile="CrossxEnvironment.java" sourcepath="org/mod4j/crossx/broker/CrossxEnvironment.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.mod4j.crossx.broker.CrossxEnvironment" start="117" end="117" startBytecode="3" endBytecode="3" sourcefile="CrossxEnvironment.java" sourcepath="org/mod4j/crossx/broker/CrossxEnvironment.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.mod4j.crossx.broker.CrossxEnvironment" start="118" end="118" startBytecode="6" endBytecode="6" sourcefile="CrossxEnvironment.java" sourcepath="org/mod4j/crossx/broker/CrossxEnvironment.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.mod4j.crossx.broker.CrossxLocation">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxLocation" start="35" end="208" sourcefile="CrossxLocation.java" sourcepath="org/mod4j/crossx/broker/CrossxLocation.java"/>
+    </Class>
+    <Method classname="org.mod4j.crossx.broker.CrossxLocation" name="lookup" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/mod4j/crossx/mm/crossx/Symbol;" isStatic="false">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxLocation" start="96" end="108" startBytecode="0" endBytecode="276" sourcefile="CrossxLocation.java" sourcepath="org/mod4j/crossx/broker/CrossxLocation.java"/>
+    </Method>
+    <Field classname="org.mod4j.crossx.broker.CrossxLocation" name="information" signature="Ljava/util/List;" sourceSignature="Ljava/util/List&lt;Lorg/mod4j/crossx/mm/crossx/ModelInfo;&gt;;" isStatic="false" role="FIELD_CONTAINS_VALUE">
+      <SourceLine classname="org.mod4j.crossx.broker.CrossxLocation" sourcefile="CrossxLocation.java" sourcepath="org/mod4j/crossx/broker/CrossxLocation.java"/>
+    </Field>
+    <SourceLine classname="org.mod4j.crossx.broker.CrossxLocation" start="99" end="99" startBytecode="19" endBytecode="19" sourcefile="CrossxLocation.java" sourcepath="org/mod4j/crossx/broker/CrossxLocation.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.mod4j.crossx.broker.CrossxLocation" start="96" end="96" startBytecode="4" endBytecode="4" sourcefile="CrossxLocation.java" sourcepath="org/mod4j/crossx/broker/CrossxLocation.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.mod4j.crossx.broker.CrossxLocation" start="97" end="97" startBytecode="7" endBytecode="7" sourcefile="CrossxLocation.java" sourcepath="org/mod4j/crossx/broker/CrossxLocation.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="6">
+    <MissingClass>org.eclipse.emf.common.util.EList</MissingClass>
+    <MissingClass>org.mod4j.crossx.mm.crossx.LiteralSymbolProperty</MissingClass>
+    <MissingClass>org.mod4j.crossx.mm.crossx.ModelInfo</MissingClass>
+    <MissingClass>org.mod4j.crossx.mm.crossx.ReferenceSymbolProperty</MissingClass>
+    <MissingClass>org.mod4j.crossx.mm.crossx.Symbol</MissingClass>
+    <MissingClass>org.mod4j.crossx.mm.crossx.SymbolProperty</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 13 Apr 2009 22:38:49 +0300" total_classes="3" referenced_classes="23" total_bugs="4" total_size="260" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="10.77" clock_seconds="5.75" peak_mbytes="56.59" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="1" priority_1="3">
+    <PackageStats package="org.mod4j.crossx.broker" total_bugs="4" total_types="3" total_size="260" priority_2="1" priority_1="3">
+      <ClassStats class="org.mod4j.crossx.broker.CrossxBroker" sourceFile="CrossxBroker.java" interface="false" size="89" bugs="1" priority_2="1"/>
+      <ClassStats class="org.mod4j.crossx.broker.CrossxEnvironment" sourceFile="CrossxEnvironment.java" interface="false" size="90" bugs="2" priority_1="2"/>
+      <ClassStats class="org.mod4j.crossx.broker.CrossxLocation" sourceFile="CrossxLocation.java" interface="false" size="81" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="578" invocations="373" avgMicrosecondsPerInvocation="1549" maxMicrosecondsPerInvocation="75038" standardDeviationMircosecondsPerInvocation="5620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="306" invocations="46" avgMicrosecondsPerInvocation="6664" maxMicrosecondsPerInvocation="71533" standardDeviationMircosecondsPerInvocation="11978"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="259" invocations="23" avgMicrosecondsPerInvocation="11271" maxMicrosecondsPerInvocation="100656" standardDeviationMircosecondsPerInvocation="20577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="244" invocations="46" avgMicrosecondsPerInvocation="5306" maxMicrosecondsPerInvocation="24388" standardDeviationMircosecondsPerInvocation="5794"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="236" invocations="23" avgMicrosecondsPerInvocation="10282" maxMicrosecondsPerInvocation="47226" standardDeviationMircosecondsPerInvocation="12417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="227" invocations="46" avgMicrosecondsPerInvocation="4950" maxMicrosecondsPerInvocation="17097" standardDeviationMircosecondsPerInvocation="5061"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="216" invocations="46" avgMicrosecondsPerInvocation="4713" maxMicrosecondsPerInvocation="23532" standardDeviationMircosecondsPerInvocation="5588"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="208" invocations="46" avgMicrosecondsPerInvocation="4537" maxMicrosecondsPerInvocation="47101" standardDeviationMircosecondsPerInvocation="7222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="180" invocations="46" avgMicrosecondsPerInvocation="3932" maxMicrosecondsPerInvocation="77589" standardDeviationMircosecondsPerInvocation="11637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="154" invocations="42" avgMicrosecondsPerInvocation="3677" maxMicrosecondsPerInvocation="30148" standardDeviationMircosecondsPerInvocation="5019"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="122" invocations="23" avgMicrosecondsPerInvocation="5314" maxMicrosecondsPerInvocation="15580" standardDeviationMircosecondsPerInvocation="4892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="110" invocations="3" avgMicrosecondsPerInvocation="36960" maxMicrosecondsPerInvocation="100451" standardDeviationMircosecondsPerInvocation="44905"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="98" invocations="3" avgMicrosecondsPerInvocation="32892" maxMicrosecondsPerInvocation="34703" standardDeviationMircosecondsPerInvocation="1551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="96" invocations="46" avgMicrosecondsPerInvocation="2093" maxMicrosecondsPerInvocation="19038" standardDeviationMircosecondsPerInvocation="3358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="86" invocations="163" avgMicrosecondsPerInvocation="527" maxMicrosecondsPerInvocation="2526" standardDeviationMircosecondsPerInvocation="405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDerefsInvolvingNonShortCircuitEvaluation" totalMilliseconds="82" invocations="3" avgMicrosecondsPerInvocation="27380" maxMicrosecondsPerInvocation="74583" standardDeviationMircosecondsPerInvocation="33378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="73" invocations="328" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="8898" standardDeviationMircosecondsPerInvocation="672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="72" invocations="46" avgMicrosecondsPerInvocation="1585" maxMicrosecondsPerInvocation="5092" standardDeviationMircosecondsPerInvocation="1532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadForLoop" totalMilliseconds="69" invocations="3" avgMicrosecondsPerInvocation="23203" maxMicrosecondsPerInvocation="61153" standardDeviationMircosecondsPerInvocation="26836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="60" invocations="23" avgMicrosecondsPerInvocation="2637" maxMicrosecondsPerInvocation="14591" standardDeviationMircosecondsPerInvocation="3153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="60" invocations="46" avgMicrosecondsPerInvocation="1309" maxMicrosecondsPerInvocation="43076" standardDeviationMircosecondsPerInvocation="6396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="53" invocations="3" avgMicrosecondsPerInvocation="17868" maxMicrosecondsPerInvocation="44398" standardDeviationMircosecondsPerInvocation="18768"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

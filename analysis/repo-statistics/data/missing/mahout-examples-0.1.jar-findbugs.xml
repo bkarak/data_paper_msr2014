@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1238741596000" analysisTimestamp="1360508193191" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/mahout/mahout-examples/0.1/mahout-examples-0.1.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.mahout.cf.taste.example.bookcrossing.BookCrossingDataModel">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.bookcrossing.BookCrossingDataModel" start="47" end="201" sourcefile="BookCrossingDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingDataModel.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.cf.taste.example.bookcrossing.BookCrossingDataModel" name="convertBCFile" signature="(Ljava/io/File;)Ljava/io/File;" isStatic="true">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.bookcrossing.BookCrossingDataModel" start="175" end="196" startBytecode="0" endBytecode="395" sourcefile="BookCrossingDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingDataModel.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.bookcrossing.BookCrossingDataModel" start="190" end="190" startBytecode="145" endBytecode="145" sourcefile="BookCrossingDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingDataModel.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="43" end="141" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" name="readResourceToTempFile" signature="(Ljava/lang/String;)Ljava/io/File;" isStatic="true">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="114" end="134" startBytecode="0" endBytecode="395" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="114" end="114" startBytecode="4" endBytecode="4" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="115" end="115" startBytecode="8" endBytecode="8" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="120" end="120" startBytecode="39" endBytecode="39" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="121" end="121" startBytecode="46" endBytecode="46" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="122" end="122" startBytecode="50" endBytecode="50" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="125" end="125" startBytecode="59" endBytecode="59" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="131" end="131" startBytecode="107" endBytecode="107" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="134" end="134" startBytecode="116" endBytecode="116" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1,OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="43" end="141" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" name="readResourceToTempFile" signature="(Ljava/lang/String;)Ljava/io/File;" isStatic="true">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="114" end="134" startBytecode="0" endBytecode="395" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="122" end="122" startBytecode="55" endBytecode="55" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="125" end="125" startBytecode="59" endBytecode="59" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="131" end="131" startBytecode="107" endBytecode="107" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="134" end="134" startBytecode="116" endBytecode="116" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1,OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="43" end="141" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" name="convertGLFile" signature="(Ljava/io/File;Z)Ljava/io/File;" isStatic="true">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="86" end="110" startBytecode="0" endBytecode="518" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" start="104" end="104" startBytecode="192" endBytecode="192" sourcefile="GroupLensDataModel.java" sourcepath="org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser" start="39" end="113" sourcefile="TransposeToByUser.java" sourcepath="org/apache/mahout/cf/taste/example/netflix/TransposeToByUser.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser" start="45" end="85" startBytecode="0" endBytecode="925" sourcefile="TransposeToByUser.java" sourcepath="org/apache/mahout/cf/taste/example/netflix/TransposeToByUser.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser" start="59" end="59" startBytecode="150" endBytecode="150" sourcefile="TransposeToByUser.java" sourcepath="org/apache/mahout/cf/taste/example/netflix/TransposeToByUser.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser" start="39" end="113" sourcefile="TransposeToByUser.java" sourcepath="org/apache/mahout/cf/taste/example/netflix/TransposeToByUser.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser" name="maybeFlushCache" signature="(Ljava/io/File;Ljava/util/Map;)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser" start="88" end="101" startBytecode="0" endBytecode="383" sourcefile="TransposeToByUser.java" sourcepath="org/apache/mahout/cf/taste/example/netflix/TransposeToByUser.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser" start="95" end="95" startBytecode="102" endBytecode="102" sourcefile="TransposeToByUser.java" sourcepath="org/apache/mahout/cf/taste/example/netflix/TransposeToByUser.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorMapper">
+      <SourceLine classname="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorMapper" start="42" end="121" sourcefile="WikipediaDatasetCreatorMapper.java" sourcepath="org/apache/mahout/classifier/bayes/WikipediaDatasetCreatorMapper.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorMapper" name="configure" signature="(Lorg/apache/hadoop/mapred/JobConf;)V" isStatic="false">
+      <SourceLine classname="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorMapper" start="106" end="121" startBytecode="0" endBytecode="247" sourcefile="WikipediaDatasetCreatorMapper.java" sourcepath="org/apache/mahout/classifier/bayes/WikipediaDatasetCreatorMapper.java"/>
+    </Method>
+    <Field classname="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorMapper" name="countries" signature="Ljava/util/Set;" isStatic="true">
+      <SourceLine classname="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorMapper" sourcefile="WikipediaDatasetCreatorMapper.java" sourcepath="org/apache/mahout/classifier/bayes/WikipediaDatasetCreatorMapper.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorMapper" start="115" end="115" startBytecode="53" endBytecode="53" sourcefile="WikipediaDatasetCreatorMapper.java" sourcepath="org/apache/mahout/classifier/bayes/WikipediaDatasetCreatorMapper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.clustering.dirichlet.Display2dASNDirichlet">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.Display2dASNDirichlet" start="31" end="67" sourcefile="Display2dASNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/Display2dASNDirichlet.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.dirichlet.Display2dASNDirichlet" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.Display2dASNDirichlet" start="59" end="63" startBytecode="0" endBytecode="80" sourcefile="Display2dASNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/Display2dASNDirichlet.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.dirichlet.Display2dASNDirichlet" start="59" end="59" startBytecode="2" endBytecode="2" sourcefile="Display2dASNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/Display2dASNDirichlet.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.clustering.dirichlet.DisplayASNDirichlet">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayASNDirichlet" start="31" end="67" sourcefile="DisplayASNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayASNDirichlet.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.dirichlet.DisplayASNDirichlet" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayASNDirichlet" start="59" end="63" startBytecode="0" endBytecode="80" sourcefile="DisplayASNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayASNDirichlet.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayASNDirichlet" start="59" end="59" startBytecode="2" endBytecode="2" sourcefile="DisplayASNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayASNDirichlet.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState" start="39" end="124" sourcefile="DisplayASNOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayASNOutputState.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState" start="112" end="120" startBytecode="0" endBytecode="131" sourcefile="DisplayASNOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayASNOutputState.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState" start="112" end="112" startBytecode="2" endBytecode="2" sourcefile="DisplayASNOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayASNOutputState.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState" start="39" end="124" sourcefile="DisplayASNOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayASNOutputState.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState" name="readFile" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="true">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState" start="76" end="84" startBytecode="0" endBytecode="230" sourcefile="DisplayASNOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayASNOutputState.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="41" end="42" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState" start="76" end="76" startBytecode="9" endBytecode="9" sourcefile="DisplayASNOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayASNOutputState.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.clustering.dirichlet.DisplayDirichlet">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayDirichlet" start="27" end="228" sourcefile="DisplayDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayDirichlet.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.dirichlet.DisplayDirichlet" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayDirichlet" start="81" end="84" startBytecode="0" endBytecode="73" sourcefile="DisplayDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayDirichlet.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayDirichlet" start="81" end="81" startBytecode="2" endBytecode="2" sourcefile="DisplayDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayDirichlet.java"/>
+  </BugInstance>
+  <BugInstance type="ICAST_IDIV_CAST_TO_DOUBLE" priority="2" abbrev="ICAST" category="STYLE">
+    <Class classname="org.apache.mahout.clustering.dirichlet.DisplayDirichlet">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayDirichlet" start="27" end="228" sourcefile="DisplayDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayDirichlet.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.dirichlet.DisplayDirichlet" name="plotSampleData" signature="(Ljava/awt/Graphics;)V" isStatic="false">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayDirichlet" start="103" end="118" startBytecode="0" endBytecode="337" sourcefile="DisplayDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayDirichlet.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayDirichlet" start="109" end="109" startBytecode="47" endBytecode="47" sourcefile="DisplayDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayDirichlet.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.clustering.dirichlet.DisplayNDirichlet">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayNDirichlet" start="31" end="66" sourcefile="DisplayNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayNDirichlet.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.dirichlet.DisplayNDirichlet" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayNDirichlet" start="58" end="62" startBytecode="0" endBytecode="80" sourcefile="DisplayNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayNDirichlet.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayNDirichlet" start="58" end="58" startBytecode="2" endBytecode="2" sourcefile="DisplayNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayNDirichlet.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.clustering.dirichlet.DisplayOutputState">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayOutputState" start="39" end="122" sourcefile="DisplayOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayOutputState.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.dirichlet.DisplayOutputState" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayOutputState" start="110" end="118" startBytecode="0" endBytecode="131" sourcefile="DisplayOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayOutputState.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayOutputState" start="110" end="110" startBytecode="2" endBytecode="2" sourcefile="DisplayOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayOutputState.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.clustering.dirichlet.DisplayOutputState">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayOutputState" start="39" end="122" sourcefile="DisplayOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayOutputState.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.dirichlet.DisplayOutputState" name="readFile" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="true">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayOutputState" start="75" end="83" startBytecode="0" endBytecode="230" sourcefile="DisplayOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayOutputState.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="41" end="42" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplayOutputState" start="75" end="75" startBytecode="9" endBytecode="9" sourcefile="DisplayOutputState.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplayOutputState.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.clustering.dirichlet.DisplaySNDirichlet">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplaySNDirichlet" start="31" end="66" sourcefile="DisplaySNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplaySNDirichlet.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.dirichlet.DisplaySNDirichlet" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplaySNDirichlet" start="58" end="62" startBytecode="0" endBytecode="80" sourcefile="DisplaySNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplaySNDirichlet.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.dirichlet.DisplaySNDirichlet" start="58" end="58" startBytecode="2" endBytecode="2" sourcefile="DisplaySNDirichlet.java" sourcepath="org/apache/mahout/clustering/dirichlet/DisplaySNDirichlet.java"/>
+  </BugInstance>
+  <BugInstance type="BX_BOXING_IMMEDIATELY_UNBOXED_TO_PERFORM_COERCION" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.mahout.clustering.syntheticcontrol.dirichlet.Job">
+      <SourceLine classname="org.apache.mahout.clustering.syntheticcontrol.dirichlet.Job" start="37" end="138" sourcefile="Job.java" sourcepath="org/apache/mahout/clustering/syntheticcontrol/dirichlet/Job.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.clustering.syntheticcontrol.dirichlet.Job" name="printResults" signature="(Ljava/util/List;I)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.clustering.syntheticcontrol.dirichlet.Job" start="124" end="138" startBytecode="0" endBytecode="432" sourcefile="Job.java" sourcepath="org/apache/mahout/clustering/syntheticcontrol/dirichlet/Job.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.clustering.syntheticcontrol.dirichlet.Job" start="130" end="130" startBytecode="127" endBytecode="127" sourcefile="Job.java" sourcepath="org/apache/mahout/clustering/syntheticcontrol/dirichlet/Job.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mahout.ga.watchmaker.cd.DataSet$NominalAttr">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.DataSet$NominalAttr" start="34" end="64" sourcefile="DataSet.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/DataSet.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.ga.watchmaker.cd.DataSet$NominalAttr" name="&lt;init&gt;" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.DataSet$NominalAttr" start="37" end="40" startBytecode="0" endBytecode="115" sourcefile="DataSet.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/DataSet.java"/>
+    </Method>
+    <Field classname="org.apache.mahout.ga.watchmaker.cd.DataSet$NominalAttr" name="values" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.DataSet$NominalAttr" sourcefile="DataSet.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/DataSet.java"/>
+    </Field>
+    <LocalVariable name="values" register="1" pc="27" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.DataSet$NominalAttr" start="39" end="39" startBytecode="27" endBytecode="27" sourcefile="DataSet.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/DataSet.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.ga.watchmaker.cd.FileInfoParser">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.FileInfoParser" start="48" end="182" sourcefile="FileInfoParser.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/FileInfoParser.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.ga.watchmaker.cd.FileInfoParser" name="parseFile" signature="(Lorg/apache/hadoop/fs/FileSystem;Lorg/apache/hadoop/fs/Path;)Lorg/apache/mahout/ga/watchmaker/cd/DataSet;" isStatic="true">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.FileInfoParser" start="70" end="105" startBytecode="0" endBytecode="597" sourcefile="FileInfoParser.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/FileInfoParser.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="590" end="591" startBytecode="0" endBytecode="43" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.FileInfoParser" start="73" end="73" startBytecode="17" endBytecode="17" sourcefile="FileInfoParser.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/FileInfoParser.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" start="58" end="116" sourcefile="DatasetSplit.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/hadoop/DatasetSplit.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" name="getSeed" signature="()[B" isStatic="false">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" start="75" end="75" startBytecode="0" endBytecode="46" sourcefile="DatasetSplit.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/hadoop/DatasetSplit.java"/>
+    </Method>
+    <Field classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" name="seed" signature="[B" isStatic="false">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" sourcefile="DatasetSplit.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/hadoop/DatasetSplit.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" start="75" end="75" startBytecode="4" endBytecode="4" sourcefile="DatasetSplit.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/hadoop/DatasetSplit.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" start="58" end="116" sourcefile="DatasetSplit.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/hadoop/DatasetSplit.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" name="&lt;init&gt;" signature="([BD)V" isStatic="false">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" start="58" end="62" startBytecode="0" endBytecode="97" sourcefile="DatasetSplit.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/hadoop/DatasetSplit.java"/>
+    </Method>
+    <Field classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" name="seed" signature="[B" isStatic="false">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" sourcefile="DatasetSplit.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/hadoop/DatasetSplit.java"/>
+    </Field>
+    <LocalVariable name="seed" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" start="59" end="59" startBytecode="6" endBytecode="6" sourcefile="DatasetSplit.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/hadoop/DatasetSplit.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool" start="54" end="226" sourcefile="CDInfosTool.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/CDInfosTool.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool" name="loadDescriptors" signature="(Lorg/apache/hadoop/fs/FileSystem;Lorg/apache/hadoop/fs/Path;)Lorg/apache/mahout/ga/watchmaker/cd/tool/Descriptors;" isStatic="true">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool" start="153" end="174" startBytecode="0" endBytecode="391" sourcefile="CDInfosTool.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/CDInfosTool.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="590" end="591" startBytecode="0" endBytecode="43" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool" start="156" end="156" startBytecode="17" endBytecode="17" sourcefile="CDInfosTool.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/CDInfosTool.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool" start="54" end="226" sourcefile="CDInfosTool.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/CDInfosTool.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool" name="storeDescriptions" signature="(Lorg/apache/hadoop/fs/FileSystem;Lorg/apache/hadoop/fs/Path;Lorg/apache/mahout/ga/watchmaker/cd/tool/Descriptors;Ljava/util/List;)V" isStatic="true">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool" start="181" end="205" startBytecode="0" endBytecode="442" sourcefile="CDInfosTool.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/CDInfosTool.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool" start="184" end="184" startBytecode="25" endBytecode="25" sourcefile="CDInfosTool.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/CDInfosTool.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" start="32" end="70" sourcefile="Descriptors.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/Descriptors.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" name="getChars" signature="()[C" isStatic="false">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" start="70" end="70" startBytecode="0" endBytecode="46" sourcefile="Descriptors.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/Descriptors.java"/>
+    </Method>
+    <Field classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" name="descriptors" signature="[C" isStatic="false">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" sourcefile="Descriptors.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/Descriptors.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" start="70" end="70" startBytecode="4" endBytecode="4" sourcefile="Descriptors.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/Descriptors.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" start="32" end="70" sourcefile="Descriptors.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/Descriptors.java"/>
+    </Class>
+    <Method classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" name="&lt;init&gt;" signature="([C)V" isStatic="false">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" start="36" end="47" startBytecode="0" endBytecode="219" sourcefile="Descriptors.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/Descriptors.java"/>
+    </Method>
+    <Field classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" name="descriptors" signature="[C" isStatic="false">
+      <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" sourcefile="Descriptors.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/Descriptors.java"/>
+    </Field>
+    <LocalVariable name="descriptors" register="1" pc="29" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" start="39" end="39" startBytecode="29" endBytecode="29" sourcefile="Descriptors.java" sourcepath="org/apache/mahout/ga/watchmaker/cd/tool/Descriptors.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="121">
+    <MissingClass>javax.ejb.CreateException</MissingClass>
+    <MissingClass>org.apache.commons.cli2.CommandLine</MissingClass>
+    <MissingClass>org.apache.commons.cli2.builder.ArgumentBuilder</MissingClass>
+    <MissingClass>org.apache.commons.cli2.builder.DefaultOptionBuilder</MissingClass>
+    <MissingClass>org.apache.commons.cli2.builder.GroupBuilder</MissingClass>
+    <MissingClass>org.apache.commons.cli2.commandline.Parser</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringEscapeUtils</MissingClass>
+    <MissingClass>org.apache.hadoop.conf.Configuration</MissingClass>
+    <MissingClass>org.apache.hadoop.fs.FSDataInputStream</MissingClass>
+    <MissingClass>org.apache.hadoop.fs.FileStatus</MissingClass>
+    <MissingClass>org.apache.hadoop.fs.FileSystem</MissingClass>
+    <MissingClass>org.apache.hadoop.fs.Path</MissingClass>
+    <MissingClass>org.apache.hadoop.io.DataOutputBuffer</MissingClass>
+    <MissingClass>org.apache.hadoop.io.DefaultStringifier</MissingClass>
+    <MissingClass>org.apache.hadoop.io.LongWritable</MissingClass>
+    <MissingClass>org.apache.hadoop.io.SequenceFile$Reader</MissingClass>
+    <MissingClass>org.apache.hadoop.io.SequenceFile$Sorter</MissingClass>
+    <MissingClass>org.apache.hadoop.io.Text</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.FileInputFormat</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.FileOutputFormat</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.FileSplit</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.InputSplit</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.JobClient</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.JobConf</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.LineRecordReader</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.MapReduceBase</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.OutputCollector</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.RecordReader</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.Reporter</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.TextInputFormat</MissingClass>
+    <MissingClass>org.apache.hadoop.mapred.lib.MultipleTextOutputFormat</MissingClass>
+    <MissingClass>org.apache.hadoop.util.GenericsUtil</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.Analyzer</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.Token</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.TokenStream</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.standard.StandardAnalyzer</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.eval.RecommenderEvaluator</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.common.ArrayIterator</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.common.FastMap</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.common.FileLineIterable</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.common.IOUtils</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.eval.AverageAbsoluteDifferenceRecommenderEvaluator</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.model.GenericDataModel</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.model.GenericItem</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.model.GenericPreference</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.model.GenericUser</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.model.file.FileDataModel</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.recommender.CachingRecommender</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.impl.recommender.slopeone.SlopeOneRecommender</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.model.DataModel</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.model.Item</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.model.User</MissingClass>
+    <MissingClass>org.apache.mahout.cf.taste.recommender.Recommender</MissingClass>
+    <MissingClass>org.apache.mahout.classifier.BayesFileFormatter</MissingClass>
+    <MissingClass>org.apache.mahout.classifier.ConfusionMatrix</MissingClass>
+    <MissingClass>org.apache.mahout.classifier.ResultAnalyzer</MissingClass>
+    <MissingClass>org.apache.mahout.classifier.bayes.BayesClassifier</MissingClass>
+    <MissingClass>org.apache.mahout.classifier.bayes.BayesDriver</MissingClass>
+    <MissingClass>org.apache.mahout.classifier.bayes.BayesModel</MissingClass>
+    <MissingClass>org.apache.mahout.classifier.bayes.io.SequenceFileModelReader</MissingClass>
+    <MissingClass>org.apache.mahout.classifier.cbayes.CBayesClassifier</MissingClass>
+    <MissingClass>org.apache.mahout.classifier.cbayes.CBayesDriver</MissingClass>
+    <MissingClass>org.apache.mahout.classifier.cbayes.CBayesModel</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.canopy.Canopy</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.canopy.CanopyClusteringJob</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.DirichletCluster</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.DirichletClusterer</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.DirichletDriver</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.DirichletMapper</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.DirichletState</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.UncommonDistributions</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.models.AsymmetricSampledNormalDistribution</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.models.AsymmetricSampledNormalModel</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.models.Model</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.models.NormalModel</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.models.NormalModelDistribution</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.dirichlet.models.SampledNormalDistribution</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.kmeans.Cluster</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.kmeans.KMeansDriver</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.meanshift.MeanShiftCanopy</MissingClass>
+    <MissingClass>org.apache.mahout.clustering.meanshift.MeanShiftCanopyJob</MissingClass>
+    <MissingClass>org.apache.mahout.common.Classifier</MissingClass>
+    <MissingClass>org.apache.mahout.common.Model</MissingClass>
+    <MissingClass>org.apache.mahout.ga.watchmaker.MahoutFitnessEvaluator</MissingClass>
+    <MissingClass>org.apache.mahout.ga.watchmaker.OutputUtils</MissingClass>
+    <MissingClass>org.apache.mahout.ga.watchmaker.STFitnessEvaluator</MissingClass>
+    <MissingClass>org.apache.mahout.matrix.AbstractVector</MissingClass>
+    <MissingClass>org.apache.mahout.matrix.DenseVector</MissingClass>
+    <MissingClass>org.apache.mahout.matrix.TimesFunction</MissingClass>
+    <MissingClass>org.apache.mahout.matrix.Vector</MissingClass>
+    <MissingClass>org.apache.mahout.utils.StringUtils</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.uncommons.maths.PermutationGenerator</MissingClass>
+    <MissingClass>org.uncommons.maths.binary.BitString</MissingClass>
+    <MissingClass>org.uncommons.maths.random.MersenneTwisterRNG</MissingClass>
+    <MissingClass>org.uncommons.maths.random.PoissonGenerator</MissingClass>
+    <MissingClass>org.uncommons.swing.SpringUtilities</MissingClass>
+    <MissingClass>org.uncommons.swing.SwingBackgroundTask</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.ConcurrentEvolutionEngine</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.EvolutionEngine</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.EvolutionObserver</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.FitnessEvaluator</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.PopulationData</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.Probability</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.SelectionStrategy</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.SequentialEvolutionEngine</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.factories.AbstractCandidateFactory</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.factories.ListPermutationFactory</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.operators.AbstractCrossover</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.operators.EvolutionPipeline</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.operators.ListOrderCrossover</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.operators.ListOrderMutation</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.selection.RankSelection</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.selection.RouletteWheelSelection</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.selection.StochasticUniversalSampling</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.selection.TournamentSelection</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.selection.TruncationSelection</MissingClass>
+    <MissingClass>org.uncommons.watchmaker.framework.termination.GenerationCount</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 3 Apr 2009 09:53:16 +0300" total_classes="112" referenced_classes="500" total_bugs="26" total_size="3604" num_packages="15" vm_version="20.4-b02-402" cpu_seconds="30.63" clock_seconds="17.25" peak_mbytes="102.47" alloc_mbytes="763.88" gc_seconds="0.76" priority_2="14" priority_1="12">
+    <PackageStats package="org.apache.mahout.cf.taste.ejb" total_bugs="0" total_types="5" total_size="72">
+      <ClassStats class="org.apache.mahout.cf.taste.ejb.RecommenderEJB" sourceFile="RecommenderEJB.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.ejb.RecommenderEJBBean" sourceFile="RecommenderEJBBean.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.ejb.RecommenderEJBHome" sourceFile="RecommenderEJBHome.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.ejb.RecommenderEJBLocal" sourceFile="RecommenderEJBLocal.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.ejb.RecommenderEJBLocalHome" sourceFile="RecommenderEJBLocalHome.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.cf.taste.example.bookcrossing" total_bugs="1" total_types="7" total_size="224" priority_2="1">
+      <ClassStats class="org.apache.mahout.cf.taste.example.bookcrossing.Book" sourceFile="Book.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.bookcrossing.BookCrossingDataModel" sourceFile="BookCrossingDataModel.java" interface="false" size="110" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.bookcrossing.BookCrossingRecommender" sourceFile="BookCrossingRecommender.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.bookcrossing.BookCrossingRecommenderBuilder" sourceFile="BookCrossingRecommenderBuilder.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.bookcrossing.BookCrossingRecommenderEvaluatorRunner" sourceFile="BookCrossingRecommenderEvaluatorRunner.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.bookcrossing.BookCrossingUser" sourceFile="BookCrossingUser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.bookcrossing.GeoUserSimilarity" sourceFile="GeoUserSimilarity.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.cf.taste.example.grouplens" total_bugs="3" total_types="5" total_size="117" priority_2="3">
+      <ClassStats class="org.apache.mahout.cf.taste.example.grouplens.GroupLensDataModel" sourceFile="GroupLensDataModel.java" interface="false" size="62" bugs="3" priority_2="3"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.grouplens.GroupLensRecommender" sourceFile="GroupLensRecommender.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.grouplens.GroupLensRecommenderBuilder" sourceFile="GroupLensRecommenderBuilder.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.grouplens.GroupLensRecommenderEvaluatorRunner" sourceFile="GroupLensRecommenderEvaluatorRunner.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.grouplens.Movie" sourceFile="Movie.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.cf.taste.example.jester" total_bugs="0" total_types="4" total_size="74">
+      <ClassStats class="org.apache.mahout.cf.taste.example.jester.JesterDataModel" sourceFile="JesterDataModel.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.jester.JesterRecommender" sourceFile="JesterRecommender.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.jester.JesterRecommenderBuilder" sourceFile="JesterRecommenderBuilder.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.jester.JesterRecommenderEvaluatorRunner" sourceFile="JesterRecommenderEvaluatorRunner.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.cf.taste.example.netflix" total_bugs="2" total_types="9" total_size="278" priority_2="2">
+      <ClassStats class="org.apache.mahout.cf.taste.example.netflix.NetflixDataModel" sourceFile="NetflixDataModel.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.netflix.NetflixDataModel$1" sourceFile="NetflixDataModel.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.netflix.NetflixDataModel$MovieFilenameFilter" sourceFile="NetflixDataModel.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.netflix.NetflixFileDataModel" sourceFile="NetflixFileDataModel.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.netflix.NetflixMovie" sourceFile="NetflixMovie.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.netflix.NetflixRecommender" sourceFile="NetflixRecommender.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.netflix.NetflixRecommenderBuilder" sourceFile="NetflixRecommenderBuilder.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.netflix.NetflixRecommenderEvaluatorRunner" sourceFile="NetflixRecommenderEvaluatorRunner.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.mahout.cf.taste.example.netflix.TransposeToByUser" sourceFile="TransposeToByUser.java" interface="false" size="58" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.classifier.bayes" total_bugs="1" total_types="11" total_size="369" priority_2="1">
+      <ClassStats class="org.apache.mahout.classifier.bayes.PrepareTwentyNewsgroups" sourceFile="PrepareTwentyNewsgroups.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.mahout.classifier.bayes.TestClassifier" sourceFile="TestClassifier.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.apache.mahout.classifier.bayes.TrainClassifier" sourceFile="TrainClassifier.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.mahout.classifier.bayes.WikipediaDatasetCreator" sourceFile="WikipediaDatasetCreator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorDriver" sourceFile="WikipediaDatasetCreatorDriver.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorMapper" sourceFile="WikipediaDatasetCreatorMapper.java" interface="false" size="51" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorOutputFormat" sourceFile="WikipediaDatasetCreatorOutputFormat.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorReducer" sourceFile="WikipediaDatasetCreatorReducer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mahout.classifier.bayes.WikipediaXmlSplitter" sourceFile="WikipediaXmlSplitter.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.mahout.classifier.bayes.XmlInputFormat" sourceFile="XmlInputFormat.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mahout.classifier.bayes.XmlInputFormat$XmlRecordReader" sourceFile="XmlInputFormat.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.clustering.dirichlet" total_bugs="10" total_types="8" total_size="361" priority_2="1" priority_1="9">
+      <ClassStats class="org.apache.mahout.clustering.dirichlet.Display2dASNDirichlet" sourceFile="Display2dASNDirichlet.java" interface="false" size="30" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.mahout.clustering.dirichlet.DisplayASNDirichlet" sourceFile="DisplayASNDirichlet.java" interface="false" size="30" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.mahout.clustering.dirichlet.DisplayASNOutputState" sourceFile="DisplayASNOutputState.java" interface="false" size="58" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.mahout.clustering.dirichlet.DisplayDirichlet" sourceFile="DisplayDirichlet.java" interface="false" size="119" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.mahout.clustering.dirichlet.DisplayDirichlet$1" sourceFile="DisplayDirichlet.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.dirichlet.DisplayNDirichlet" sourceFile="DisplayNDirichlet.java" interface="false" size="30" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.mahout.clustering.dirichlet.DisplayOutputState" sourceFile="DisplayOutputState.java" interface="false" size="57" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.mahout.clustering.dirichlet.DisplaySNDirichlet" sourceFile="DisplaySNDirichlet.java" interface="false" size="30" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.clustering.syntheticcontrol.canopy" total_bugs="0" total_types="5" total_size="94">
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.canopy.InputDriver" sourceFile="InputDriver.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.canopy.InputMapper" sourceFile="InputMapper.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.canopy.Job" sourceFile="Job.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.canopy.OutputDriver" sourceFile="OutputDriver.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.canopy.OutputMapper" sourceFile="OutputMapper.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.clustering.syntheticcontrol.dirichlet" total_bugs="1" total_types="3" total_size="128" priority_2="1">
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.dirichlet.Job" sourceFile="Job.java" interface="false" size="51" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.dirichlet.NormalScModel" sourceFile="NormalScModel.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.dirichlet.NormalScModelDistribution" sourceFile="NormalScModelDistribution.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.clustering.syntheticcontrol.kmeans" total_bugs="0" total_types="3" total_size="60">
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.kmeans.Job" sourceFile="Job.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.kmeans.OutputDriver" sourceFile="OutputDriver.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.kmeans.OutputMapper" sourceFile="OutputMapper.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.clustering.syntheticcontrol.meanshift" total_bugs="0" total_types="5" total_size="108">
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.meanshift.InputDriver" sourceFile="InputDriver.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.meanshift.InputMapper" sourceFile="InputMapper.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.meanshift.Job" sourceFile="Job.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.meanshift.OutputDriver" sourceFile="OutputDriver.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.mahout.clustering.syntheticcontrol.meanshift.OutputMapper" sourceFile="OutputMapper.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.ga.watchmaker.cd" total_bugs="2" total_types="15" total_size="543" priority_2="1" priority_1="1">
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.CDCrossover" sourceFile="CDCrossover.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.CDFactory" sourceFile="CDFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.CDFitness" sourceFile="CDFitness.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.CDFitnessEvaluator" sourceFile="CDFitnessEvaluator.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.CDGA" sourceFile="CDGA.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.CDGA$1" sourceFile="CDGA.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.CDMutation" sourceFile="CDMutation.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.CDRule" sourceFile="CDRule.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.DataLine" sourceFile="DataLine.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.DataSet" sourceFile="DataSet.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.DataSet$Attribute" sourceFile="DataSet.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.DataSet$NominalAttr" sourceFile="DataSet.java" interface="false" size="19" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.DataSet$NumericalAttr" sourceFile="DataSet.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.FileInfoParser" sourceFile="FileInfoParser.java" interface="false" size="73" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.Rule" sourceFile="Rule.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.ga.watchmaker.cd.hadoop" total_bugs="2" total_types="6" total_size="222" priority_2="2">
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.hadoop.CDMahoutEvaluator" sourceFile="CDMahoutEvaluator.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.hadoop.CDMapper" sourceFile="CDMapper.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.hadoop.CDReducer" sourceFile="CDReducer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit" sourceFile="DatasetSplit.java" interface="false" size="50" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit$DatasetTextInputFormat" sourceFile="DatasetSplit.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.hadoop.DatasetSplit$RndLineRecordReader" sourceFile="DatasetSplit.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.ga.watchmaker.cd.tool" total_bugs="4" total_types="7" total_size="264" priority_2="2" priority_1="2">
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.tool.CDInfosTool" sourceFile="CDInfosTool.java" interface="false" size="89" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.tool.DescriptionUtils" sourceFile="DescriptionUtils.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.tool.DescriptionUtils$Range" sourceFile="DescriptionUtils.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.tool.Descriptors" sourceFile="Descriptors.java" interface="false" size="25" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.tool.ToolCombiner" sourceFile="ToolCombiner.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.tool.ToolMapper" sourceFile="ToolMapper.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.cd.tool.ToolReducer" sourceFile="ToolReducer.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mahout.ga.watchmaker.travellingsalesman" total_bugs="0" total_types="19" total_size="690">
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.BruteForceTravellingSalesman" sourceFile="BruteForceTravellingSalesman.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.DistanceLookup" sourceFile="DistanceLookup.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.EuropeanDistanceLookup" sourceFile="EuropeanDistanceLookup.java" interface="false" size="268" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.EvolutionaryTravellingSalesman" sourceFile="EvolutionaryTravellingSalesman.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.EvolutionaryTravellingSalesman$1" sourceFile="EvolutionaryTravellingSalesman.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.ExecutionPanel" sourceFile="ExecutionPanel.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.ExecutionPanel$1" sourceFile="ExecutionPanel.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.ItineraryPanel" sourceFile="ItineraryPanel.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.ItineraryPanel$1" sourceFile="ItineraryPanel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.ProgressListener" sourceFile="ProgressListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.RouteEvaluator" sourceFile="RouteEvaluator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.StrategyPanel" sourceFile="StrategyPanel.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.StrategyPanel$1" sourceFile="StrategyPanel.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.StrategyPanel$EvolutionPanel" sourceFile="StrategyPanel.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.StrategyPanel$EvolutionPanel$1" sourceFile="StrategyPanel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.TravellingSalesman" sourceFile="TravellingSalesman.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.TravellingSalesman$1" sourceFile="TravellingSalesman.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.TravellingSalesman$2" sourceFile="TravellingSalesman.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.mahout.ga.watchmaker.travellingsalesman.TravellingSalesmanStrategy" sourceFile="TravellingSalesmanStrategy.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1498" invocations="1897" avgMicrosecondsPerInvocation="790" maxMicrosecondsPerInvocation="46648" standardDeviationMircosecondsPerInvocation="2818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1469" invocations="500" avgMicrosecondsPerInvocation="2939" maxMicrosecondsPerInvocation="110501" standardDeviationMircosecondsPerInvocation="8169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1268" invocations="500" avgMicrosecondsPerInvocation="2537" maxMicrosecondsPerInvocation="52411" standardDeviationMircosecondsPerInvocation="6310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="815" invocations="546" avgMicrosecondsPerInvocation="1494" maxMicrosecondsPerInvocation="54927" standardDeviationMircosecondsPerInvocation="5453"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="684" invocations="500" avgMicrosecondsPerInvocation="1368" maxMicrosecondsPerInvocation="55572" standardDeviationMircosecondsPerInvocation="5024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="623" invocations="551" avgMicrosecondsPerInvocation="1131" maxMicrosecondsPerInvocation="52717" standardDeviationMircosecondsPerInvocation="3580"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="600" invocations="524" avgMicrosecondsPerInvocation="1145" maxMicrosecondsPerInvocation="48840" standardDeviationMircosecondsPerInvocation="3429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="595" invocations="1422" avgMicrosecondsPerInvocation="418" maxMicrosecondsPerInvocation="64797" standardDeviationMircosecondsPerInvocation="2565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="551" invocations="479" avgMicrosecondsPerInvocation="1152" maxMicrosecondsPerInvocation="100015" standardDeviationMircosecondsPerInvocation="6164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="547" invocations="566" avgMicrosecondsPerInvocation="967" maxMicrosecondsPerInvocation="46692" standardDeviationMircosecondsPerInvocation="3632"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="469" invocations="573" avgMicrosecondsPerInvocation="819" maxMicrosecondsPerInvocation="31499" standardDeviationMircosecondsPerInvocation="2696"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="449" invocations="552" avgMicrosecondsPerInvocation="813" maxMicrosecondsPerInvocation="29751" standardDeviationMircosecondsPerInvocation="2572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="390" invocations="500" avgMicrosecondsPerInvocation="781" maxMicrosecondsPerInvocation="29097" standardDeviationMircosecondsPerInvocation="2661"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="378" invocations="1900" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="33742" standardDeviationMircosecondsPerInvocation="1395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="331" invocations="1687" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="28973" standardDeviationMircosecondsPerInvocation="1563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="293" invocations="500" avgMicrosecondsPerInvocation="587" maxMicrosecondsPerInvocation="28157" standardDeviationMircosecondsPerInvocation="2311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="220" invocations="500" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="29349" standardDeviationMircosecondsPerInvocation="1912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="213" invocations="509" avgMicrosecondsPerInvocation="418" maxMicrosecondsPerInvocation="33850" standardDeviationMircosecondsPerInvocation="2684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="193" invocations="500" avgMicrosecondsPerInvocation="386" maxMicrosecondsPerInvocation="15032" standardDeviationMircosecondsPerInvocation="1292"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="190" invocations="500" avgMicrosecondsPerInvocation="381" maxMicrosecondsPerInvocation="15797" standardDeviationMircosecondsPerInvocation="1286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="188" invocations="551" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="28647" standardDeviationMircosecondsPerInvocation="1858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="183" invocations="680" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="13829" standardDeviationMircosecondsPerInvocation="1025"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

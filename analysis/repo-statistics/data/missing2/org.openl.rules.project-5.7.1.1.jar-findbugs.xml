@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1281525123000" analysisTimestamp="1360903045463" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/openl/rules/org.openl.rules.project/5.7.1.1/org.openl.rules.project-5.7.1.1.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.openl.rules.project.ProjectDescriptorManager">
+      <SourceLine classname="org.openl.rules.project.ProjectDescriptorManager" start="18" end="66" sourcefile="ProjectDescriptorManager.java" sourcepath="org/openl/rules/project/ProjectDescriptorManager.java"/>
+    </Class>
+    <Method classname="org.openl.rules.project.ProjectDescriptorManager" name="writeDescriptor" signature="(Lorg/openl/rules/project/model/ProjectDescriptor;Ljava/io/OutputStream;)V" isStatic="false">
+      <SourceLine classname="org.openl.rules.project.ProjectDescriptorManager" start="52" end="56" startBytecode="0" endBytecode="111" sourcefile="ProjectDescriptorManager.java" sourcepath="org/openl/rules/project/ProjectDescriptorManager.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.openl.rules.project.ProjectDescriptorManager" start="55" end="55" startBytecode="21" endBytecode="21" sourcefile="ProjectDescriptorManager.java" sourcepath="org/openl/rules/project/ProjectDescriptorManager.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.openl.rules.project.ProjectDescriptorManager">
+      <SourceLine classname="org.openl.rules.project.ProjectDescriptorManager" start="18" end="66" sourcefile="ProjectDescriptorManager.java" sourcepath="org/openl/rules/project/ProjectDescriptorManager.java"/>
+    </Class>
+    <Method classname="org.openl.rules.project.ProjectDescriptorManager" name="readDescriptor" signature="(Ljava/io/File;)Lorg/openl/rules/project/model/ProjectDescriptor;" isStatic="false">
+      <SourceLine classname="org.openl.rules.project.ProjectDescriptorManager" start="36" end="42" startBytecode="0" endBytecode="118" sourcefile="ProjectDescriptorManager.java" sourcepath="org/openl/rules/project/ProjectDescriptorManager.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.openl.rules.project.ProjectDescriptorManager" start="36" end="36" startBytecode="5" endBytecode="5" sourcefile="ProjectDescriptorManager.java" sourcepath="org/openl/rules/project/ProjectDescriptorManager.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.openl.rules.project.ProjectDescriptorManager" start="38" end="38" startBytecode="9" endBytecode="9" sourcefile="ProjectDescriptorManager.java" sourcepath="org/openl/rules/project/ProjectDescriptorManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.openl.rules.project.ProjectDescriptorManager" start="39" end="39" startBytecode="15" endBytecode="15" sourcefile="ProjectDescriptorManager.java" sourcepath="org/openl/rules/project/ProjectDescriptorManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.openl.rules.project.ProjectDescriptorManager" start="40" end="40" startBytecode="21" endBytecode="21" sourcefile="ProjectDescriptorManager.java" sourcepath="org/openl/rules/project/ProjectDescriptorManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.openl.rules.project.ProjectDescriptorManager" start="42" end="42" startBytecode="29" endBytecode="29" sourcefile="ProjectDescriptorManager.java" sourcepath="org/openl/rules/project/ProjectDescriptorManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.openl.rules.project.instantiation.ApiBasedEngineFactoryInstantiationStrategy">
+      <SourceLine classname="org.openl.rules.project.instantiation.ApiBasedEngineFactoryInstantiationStrategy" start="20" end="99" sourcefile="ApiBasedEngineFactoryInstantiationStrategy.java" sourcepath="org/openl/rules/project/instantiation/ApiBasedEngineFactoryInstantiationStrategy.java"/>
+    </Class>
+    <Method classname="org.openl.rules.project.instantiation.ApiBasedEngineFactoryInstantiationStrategy" name="getClassLoader" signature="()Ljava/lang/ClassLoader;" isStatic="false">
+      <SourceLine classname="org.openl.rules.project.instantiation.ApiBasedEngineFactoryInstantiationStrategy" start="45" end="51" startBytecode="0" endBytecode="107" sourcefile="ApiBasedEngineFactoryInstantiationStrategy.java" sourcepath="org/openl/rules/project/instantiation/ApiBasedEngineFactoryInstantiationStrategy.java"/>
+    </Method>
+    <Class classname="java.net.URLClassLoader">
+      <SourceLine classname="java.net.URLClassLoader" start="58" end="602" sourcefile="URLClassLoader.java" sourcepath="java/net/URLClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.openl.rules.project.instantiation.ApiBasedEngineFactoryInstantiationStrategy" start="49" end="49" startBytecode="24" endBytecode="24" sourcefile="ApiBasedEngineFactoryInstantiationStrategy.java" sourcepath="org/openl/rules/project/instantiation/ApiBasedEngineFactoryInstantiationStrategy.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.openl.rules.project.model.ProjectDescriptor">
+      <SourceLine classname="org.openl.rules.project.model.ProjectDescriptor" start="12" end="117" sourcefile="ProjectDescriptor.java" sourcepath="org/openl/rules/project/model/ProjectDescriptor.java"/>
+    </Class>
+    <Method classname="org.openl.rules.project.model.ProjectDescriptor" name="getClassLoader" signature="(Z)Ljava/lang/ClassLoader;" isStatic="false">
+      <SourceLine classname="org.openl.rules.project.model.ProjectDescriptor" start="87" end="91" startBytecode="0" endBytecode="113" sourcefile="ProjectDescriptor.java" sourcepath="org/openl/rules/project/model/ProjectDescriptor.java"/>
+    </Method>
+    <Class classname="java.net.URLClassLoader">
+      <SourceLine classname="java.net.URLClassLoader" start="58" end="602" sourcefile="URLClassLoader.java" sourcepath="java/net/URLClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.openl.rules.project.model.ProjectDescriptor" start="89" end="89" startBytecode="17" endBytecode="17" sourcefile="ProjectDescriptor.java" sourcepath="org/openl/rules/project/model/ProjectDescriptor.java"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.openl.rules.project.resolving.RulesProjectResolver">
+      <SourceLine classname="org.openl.rules.project.resolving.RulesProjectResolver" start="19" end="122" sourcefile="RulesProjectResolver.java" sourcepath="org/openl/rules/project/resolving/RulesProjectResolver.java"/>
+    </Class>
+    <Field classname="org.openl.rules.project.resolving.RulesProjectResolver" name="projectSelector" signature="Lorg/openl/util/ISelector;" isStatic="false">
+      <SourceLine classname="org.openl.rules.project.resolving.RulesProjectResolver" sourcefile="RulesProjectResolver.java" sourcepath="org/openl/rules/project/resolving/RulesProjectResolver.java"/>
+    </Field>
+    <Int value="75" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.openl.rules.project.resolving.RulesProjectResolver" start="49" end="49" startBytecode="2" endBytecode="2" sourcefile="RulesProjectResolver.java" sourcepath="org/openl/rules/project/resolving/RulesProjectResolver.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.openl.rules.project.resolving.RulesProjectResolver" start="95" end="95" startBytecode="1" endBytecode="1" sourcefile="RulesProjectResolver.java" sourcepath="org/openl/rules/project/resolving/RulesProjectResolver.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.openl.rules.project.resolving.RulesProjectResolver" start="98" end="98" startBytecode="16" endBytecode="16" sourcefile="RulesProjectResolver.java" sourcepath="org/openl/rules/project/resolving/RulesProjectResolver.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.openl.rules.project.resolving.RulesProjectResolver" start="96" end="96" startBytecode="12" endBytecode="12" sourcefile="RulesProjectResolver.java" sourcepath="org/openl/rules/project/resolving/RulesProjectResolver.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="27">
+    <MissingClass>com.thoughtworks.xstream.XStream</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.io.xml.DomDriver</MissingClass>
+    <MissingClass>org.apache.commons.collections.map.ReferenceMap</MissingClass>
+    <MissingClass>org.apache.commons.io.FilenameUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.ArrayUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.openl.exception.OpenLRuntimeException</MissingClass>
+    <MissingClass>org.openl.main.OpenLProjectPropertiesLoader</MissingClass>
+    <MissingClass>org.openl.main.OpenLWrapper</MissingClass>
+    <MissingClass>org.openl.rules.context.IRulesRuntimeContext</MissingClass>
+    <MissingClass>org.openl.rules.context.IRulesRuntimeContextConsumer</MissingClass>
+    <MissingClass>org.openl.rules.runtime.ApiBasedRulesEngineFactory</MissingClass>
+    <MissingClass>org.openl.rules.runtime.RulesFactory</MissingClass>
+    <MissingClass>org.openl.runtime.EngineFactory</MissingClass>
+    <MissingClass>org.openl.runtime.IEngineWrapper</MissingClass>
+    <MissingClass>org.openl.util.ASelector</MissingClass>
+    <MissingClass>org.openl.util.FileTool</MissingClass>
+    <MissingClass>org.openl.util.ISelector</MissingClass>
+    <MissingClass>org.openl.util.Log</MissingClass>
+    <MissingClass>org.openl.util.StringTool</MissingClass>
+    <MissingClass>org.openl.util.tree.FileTreeIterator</MissingClass>
+    <MissingClass>org.openl.util.tree.FileTreeIterator$FileTreeAdaptor</MissingClass>
+    <MissingClass>org.openl.util.tree.TreeIterator</MissingClass>
+    <MissingClass>org.openl.vm.IRuntimeEnv</MissingClass>
+    <MissingClass>org.springframework.context.support.ClassPathXmlApplicationContext</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 11 Aug 2010 14:12:03 +0300" total_classes="25" referenced_classes="80" total_bugs="5" total_size="710" num_packages="6" vm_version="20.4-b02-402" cpu_seconds="13.10" clock_seconds="6.83" peak_mbytes="63.31" alloc_mbytes="763.88" gc_seconds="0.17" priority_2="4" priority_1="1">
+    <PackageStats package="org.openl.rules.project" total_bugs="2" total_types="3" total_size="60" priority_2="1" priority_1="1">
+      <ClassStats class="org.openl.rules.project.IProjectDescriptorSerializer" sourceFile="IProjectDescriptorSerializer.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.ModulesCache" sourceFile="ModulesCache.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.ProjectDescriptorManager" sourceFile="ProjectDescriptorManager.java" interface="false" size="34" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.openl.rules.project.instantiation" total_bugs="1" total_types="9" total_size="265" priority_2="1">
+      <ClassStats class="org.openl.rules.project.instantiation.ApiBasedEngineFactoryInstantiationStrategy" sourceFile="ApiBasedEngineFactoryInstantiationStrategy.java" interface="false" size="48" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.rules.project.instantiation.EngineFactoryInstantiationStrategy" sourceFile="EngineFactoryInstantiationStrategy.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.instantiation.ReloadType" sourceFile="ReloadType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.instantiation.RulesInstantiationStrategy" sourceFile="RulesInstantiationStrategy.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.instantiation.RulesInstantiationStrategyFactory" sourceFile="RulesInstantiationStrategyFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.instantiation.RulesInstantiationStrategyFactory$1" sourceFile="RulesInstantiationStrategyFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.instantiation.RulesServiceEnhancer" sourceFile="RulesServiceEnhancer.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.instantiation.RulesServiceEnhancerInvocationHandler" sourceFile="RulesServiceEnhancerInvocationHandler.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.instantiation.WrapperAdjustingInstantiationStrategy" sourceFile="WrapperAdjustingInstantiationStrategy.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.rules.project.model" total_bugs="1" total_types="4" total_size="124" priority_2="1">
+      <ClassStats class="org.openl.rules.project.model.Module" sourceFile="Module.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.model.ModuleType" sourceFile="ModuleType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.model.PathEntry" sourceFile="PathEntry.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.model.ProjectDescriptor" sourceFile="ProjectDescriptor.java" interface="false" size="70" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.openl.rules.project.model.validation" total_bugs="0" total_types="2" total_size="31">
+      <ClassStats class="org.openl.rules.project.model.validation.ProjectDescriptorValidator" sourceFile="ProjectDescriptorValidator.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.model.validation.ValidationException" sourceFile="ValidationException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.rules.project.resolving" total_bugs="1" total_types="5" total_size="193" priority_2="1">
+      <ClassStats class="org.openl.rules.project.resolving.EclipseBasedResolvingStrategy" sourceFile="EclipseBasedResolvingStrategy.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.resolving.ProjectDescriptorBasedResolvingStrategy" sourceFile="ProjectDescriptorBasedResolvingStrategy.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.resolving.ResolvingStrategy" sourceFile="ResolvingStrategy.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.resolving.RulesProjectResolver" sourceFile="RulesProjectResolver.java" interface="false" size="56" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.rules.project.resolving.SimpleXlsResolvingStrategy" sourceFile="SimpleXlsResolvingStrategy.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.rules.project.xml" total_bugs="0" total_types="2" total_size="37">
+      <ClassStats class="org.openl.rules.project.xml.ModuleTypeConverter" sourceFile="ModuleTypeConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.rules.project.xml.XmlProjectDescriptorSerializer" sourceFile="XmlProjectDescriptorSerializer.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="490" invocations="527" avgMicrosecondsPerInvocation="930" maxMicrosecondsPerInvocation="31704" standardDeviationMircosecondsPerInvocation="3076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="460" invocations="80" avgMicrosecondsPerInvocation="5757" maxMicrosecondsPerInvocation="125914" standardDeviationMircosecondsPerInvocation="16055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="376" invocations="80" avgMicrosecondsPerInvocation="4711" maxMicrosecondsPerInvocation="86709" standardDeviationMircosecondsPerInvocation="12575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="274" invocations="80" avgMicrosecondsPerInvocation="3433" maxMicrosecondsPerInvocation="75083" standardDeviationMircosecondsPerInvocation="11067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="244" invocations="139" avgMicrosecondsPerInvocation="1759" maxMicrosecondsPerInvocation="21312" standardDeviationMircosecondsPerInvocation="2809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="239" invocations="144" avgMicrosecondsPerInvocation="1661" maxMicrosecondsPerInvocation="42207" standardDeviationMircosecondsPerInvocation="4160"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="228" invocations="140" avgMicrosecondsPerInvocation="1630" maxMicrosecondsPerInvocation="35896" standardDeviationMircosecondsPerInvocation="3446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="212" invocations="140" avgMicrosecondsPerInvocation="1519" maxMicrosecondsPerInvocation="18367" standardDeviationMircosecondsPerInvocation="2255"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="194" invocations="144" avgMicrosecondsPerInvocation="1352" maxMicrosecondsPerInvocation="16995" standardDeviationMircosecondsPerInvocation="2596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="191" invocations="25" avgMicrosecondsPerInvocation="7666" maxMicrosecondsPerInvocation="158223" standardDeviationMircosecondsPerInvocation="30878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="188" invocations="80" avgMicrosecondsPerInvocation="2361" maxMicrosecondsPerInvocation="156323" standardDeviationMircosecondsPerInvocation="17331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="185" invocations="80" avgMicrosecondsPerInvocation="2316" maxMicrosecondsPerInvocation="67910" standardDeviationMircosecondsPerInvocation="8804"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="143" invocations="80" avgMicrosecondsPerInvocation="1795" maxMicrosecondsPerInvocation="58495" standardDeviationMircosecondsPerInvocation="6793"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="140" invocations="140" avgMicrosecondsPerInvocation="1003" maxMicrosecondsPerInvocation="18932" standardDeviationMircosecondsPerInvocation="2035"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="120" invocations="274" avgMicrosecondsPerInvocation="439" maxMicrosecondsPerInvocation="11049" standardDeviationMircosecondsPerInvocation="871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="117" invocations="107" avgMicrosecondsPerInvocation="1099" maxMicrosecondsPerInvocation="11569" standardDeviationMircosecondsPerInvocation="1603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="109" invocations="450" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="30269" standardDeviationMircosecondsPerInvocation="1643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="83" invocations="80" avgMicrosecondsPerInvocation="1044" maxMicrosecondsPerInvocation="20421" standardDeviationMircosecondsPerInvocation="2836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="81" invocations="25" avgMicrosecondsPerInvocation="3267" maxMicrosecondsPerInvocation="70744" standardDeviationMircosecondsPerInvocation="13778"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="78" invocations="80" avgMicrosecondsPerInvocation="982" maxMicrosecondsPerInvocation="12841" standardDeviationMircosecondsPerInvocation="2078"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="77" invocations="530" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="20301" standardDeviationMircosecondsPerInvocation="909"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="75" invocations="140" avgMicrosecondsPerInvocation="539" maxMicrosecondsPerInvocation="7427" standardDeviationMircosecondsPerInvocation="922"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="73" invocations="115" avgMicrosecondsPerInvocation="637" maxMicrosecondsPerInvocation="14191" standardDeviationMircosecondsPerInvocation="1938"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1274558026000" analysisTimestamp="1360906432015" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-csv/2.3.0/camel-csv-2.3.0.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.camel.dataformat.csv.CsvDataFormat">
+      <SourceLine classname="org.apache.camel.dataformat.csv.CsvDataFormat" start="51" end="151" sourcefile="CsvDataFormat.java" sourcepath="org/apache/camel/dataformat/csv/CsvDataFormat.java"/>
+    </Class>
+    <Method classname="org.apache.camel.dataformat.csv.CsvDataFormat" name="marshal" signature="(Lorg/apache/camel/Exchange;Ljava/lang/Object;Ljava/io/OutputStream;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.dataformat.csv.CsvDataFormat" start="57" end="77" startBytecode="0" endBytecode="376" sourcefile="CsvDataFormat.java" sourcepath="org/apache/camel/dataformat/csv/CsvDataFormat.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.dataformat.csv.CsvDataFormat" start="59" end="59" startBytecode="14" endBytecode="14" sourcefile="CsvDataFormat.java" sourcepath="org/apache/camel/dataformat/csv/CsvDataFormat.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.camel.dataformat.csv.CsvDataFormat">
+      <SourceLine classname="org.apache.camel.dataformat.csv.CsvDataFormat" start="51" end="151" sourcefile="CsvDataFormat.java" sourcepath="org/apache/camel/dataformat/csv/CsvDataFormat.java"/>
+    </Class>
+    <Method classname="org.apache.camel.dataformat.csv.CsvDataFormat" name="unmarshal" signature="(Lorg/apache/camel/Exchange;Ljava/io/InputStream;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.camel.dataformat.csv.CsvDataFormat" start="89" end="107" startBytecode="0" endBytecode="330" sourcefile="CsvDataFormat.java" sourcepath="org/apache/camel/dataformat/csv/CsvDataFormat.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.dataformat.csv.CsvDataFormat" start="89" end="89" startBytecode="5" endBytecode="5" sourcefile="CsvDataFormat.java" sourcepath="org/apache/camel/dataformat/csv/CsvDataFormat.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>org.apache.camel.CamelContext</MissingClass>
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.TypeConverter</MissingClass>
+    <MissingClass>org.apache.camel.util.ExchangeHelper</MissingClass>
+    <MissingClass>org.apache.camel.util.ObjectHelper</MissingClass>
+    <MissingClass>org.apache.commons.csv.CSVParser</MissingClass>
+    <MissingClass>org.apache.commons.csv.CSVStrategy</MissingClass>
+    <MissingClass>org.apache.commons.csv.writer.CSVConfig</MissingClass>
+    <MissingClass>org.apache.commons.csv.writer.CSVField</MissingClass>
+    <MissingClass>org.apache.commons.csv.writer.CSVWriter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 22 May 2010 22:53:46 +0300" total_classes="1" referenced_classes="23" total_bugs="2" total_size="69" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="6.23" clock_seconds="3.31" peak_mbytes="51.08" alloc_mbytes="763.88" gc_seconds="0.09" priority_1="2">
+    <PackageStats package="org.apache.camel.dataformat.csv" total_bugs="2" total_types="1" total_size="69" priority_1="2">
+      <ClassStats class="org.apache.camel.dataformat.csv.CsvDataFormat" sourceFile="CsvDataFormat.java" interface="false" size="69" bugs="2" priority_1="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="489" invocations="315" avgMicrosecondsPerInvocation="1552" maxMicrosecondsPerInvocation="42486" standardDeviationMircosecondsPerInvocation="4324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="222" invocations="23" avgMicrosecondsPerInvocation="9664" maxMicrosecondsPerInvocation="54249" standardDeviationMircosecondsPerInvocation="16018"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="182" invocations="23" avgMicrosecondsPerInvocation="7947" maxMicrosecondsPerInvocation="52283" standardDeviationMircosecondsPerInvocation="14361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="144" invocations="11" avgMicrosecondsPerInvocation="13103" maxMicrosecondsPerInvocation="140978" standardDeviationMircosecondsPerInvocation="40439"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="133" invocations="23" avgMicrosecondsPerInvocation="5790" maxMicrosecondsPerInvocation="37639" standardDeviationMircosecondsPerInvocation="10415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="90" invocations="139" avgMicrosecondsPerInvocation="648" maxMicrosecondsPerInvocation="2827" standardDeviationMircosecondsPerInvocation="568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="85" invocations="265" avgMicrosecondsPerInvocation="321" maxMicrosecondsPerInvocation="6736" standardDeviationMircosecondsPerInvocation="741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="69" invocations="23" avgMicrosecondsPerInvocation="3036" maxMicrosecondsPerInvocation="21667" standardDeviationMircosecondsPerInvocation="6042"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="69" invocations="11" avgMicrosecondsPerInvocation="6277" maxMicrosecondsPerInvocation="32877" standardDeviationMircosecondsPerInvocation="9566"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="59" invocations="1" avgMicrosecondsPerInvocation="59492" maxMicrosecondsPerInvocation="59492" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="50" invocations="23" avgMicrosecondsPerInvocation="2191" maxMicrosecondsPerInvocation="10673" standardDeviationMircosecondsPerInvocation="3044"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="47" invocations="34" avgMicrosecondsPerInvocation="1399" maxMicrosecondsPerInvocation="20218" standardDeviationMircosecondsPerInvocation="3549"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="43" invocations="23" avgMicrosecondsPerInvocation="1911" maxMicrosecondsPerInvocation="15074" standardDeviationMircosecondsPerInvocation="3262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="40" invocations="11" avgMicrosecondsPerInvocation="3711" maxMicrosecondsPerInvocation="14734" standardDeviationMircosecondsPerInvocation="4833"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="40" invocations="11" avgMicrosecondsPerInvocation="3638" maxMicrosecondsPerInvocation="14890" standardDeviationMircosecondsPerInvocation="5222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="39" invocations="23" avgMicrosecondsPerInvocation="1698" maxMicrosecondsPerInvocation="9103" standardDeviationMircosecondsPerInvocation="2612"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

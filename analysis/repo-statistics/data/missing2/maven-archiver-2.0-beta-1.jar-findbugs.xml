@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1147041096000" analysisTimestamp="1360868818035" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/maven/maven-archiver/2.0-beta-1/maven-archiver-2.0-beta-1.jar</Jar>
+  </Project>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.maven.archiver.ManifestConfiguration">
+      <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" start="26" end="76" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+    </Class>
+    <Field classname="org.apache.maven.archiver.ManifestConfiguration" name="addClasspath" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+    </Field>
+    <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" start="54" end="54" startBytecode="1" endBytecode="1" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.maven.archiver.ManifestConfiguration">
+      <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" start="26" end="76" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+    </Class>
+    <Field classname="org.apache.maven.archiver.ManifestConfiguration" name="addExtensions" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+    </Field>
+    <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" start="59" end="59" startBytecode="1" endBytecode="1" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.maven.archiver.ManifestConfiguration">
+      <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" start="26" end="76" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+    </Class>
+    <Field classname="org.apache.maven.archiver.ManifestConfiguration" name="mainClass" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+    </Field>
+    <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" start="49" end="49" startBytecode="1" endBytecode="1" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.maven.archiver.ManifestConfiguration">
+      <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" start="26" end="76" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+    </Class>
+    <Field classname="org.apache.maven.archiver.ManifestConfiguration" name="packageName" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+    </Field>
+    <SourceLine classname="org.apache.maven.archiver.ManifestConfiguration" start="64" end="64" startBytecode="1" endBytecode="1" sourcefile="ManifestConfiguration.java" sourcepath="org/apache/maven/archiver/ManifestConfiguration.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.maven.archiver.MavenArchiver">
+      <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="43" end="337" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    </Class>
+    <Method classname="org.apache.maven.archiver.MavenArchiver" name="getManifest" signature="(Lorg/apache/maven/project/MavenProject;Lorg/apache/maven/archiver/ManifestConfiguration;)Lorg/codehaus/plexus/archiver/jar/Manifest;" isStatic="false">
+      <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="58" end="198" startBytecode="0" endBytecode="336" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    </Method>
+    <LocalVariable name="projectArtifact" register="6" pc="55" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="64" end="64" startBytecode="53" endBytecode="53" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="projectArtifact"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.maven.archiver.MavenArchiver">
+      <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="43" end="337" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    </Class>
+    <Method classname="org.apache.maven.archiver.MavenArchiver" name="writeExportReadyPom" signature="(Lorg/apache/maven/project/MavenProject;)Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="316" end="337" startBytecode="0" endBytecode="222" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="328" end="328" startBytecode="43" endBytecode="43" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.maven.archiver.MavenArchiver">
+      <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="43" end="337" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    </Class>
+    <Method classname="org.apache.maven.archiver.MavenArchiver" name="createArchive" signature="(Lorg/apache/maven/project/MavenProject;Lorg/apache/maven/archiver/MavenArchiveConfiguration;)V" isStatic="false">
+      <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="232" end="311" startBytecode="0" endBytecode="753" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="310" end="310" startBytecode="401" endBytecode="401" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.maven.archiver.MavenArchiver">
+      <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="43" end="337" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    </Class>
+    <Method classname="org.apache.maven.archiver.MavenArchiver" name="writeExportReadyPom" signature="(Lorg/apache/maven/project/MavenProject;)Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="316" end="337" startBytecode="0" endBytecode="222" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="320" end="320" startBytecode="18" endBytecode="18" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.apache.maven.archiver.MavenArchiver">
+      <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="43" end="337" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    </Class>
+    <Method classname="org.apache.maven.archiver.MavenArchiver" name="createArchive" signature="(Lorg/apache/maven/project/MavenProject;Lorg/apache/maven/archiver/MavenArchiveConfiguration;)V" isStatic="false">
+      <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="232" end="311" startBytecode="0" endBytecode="753" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.archiver.MavenArchiver" start="290" end="290" startBytecode="317" endBytecode="317" sourcefile="MavenArchiver.java" sourcepath="org/apache/maven/archiver/MavenArchiver.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="12">
+    <MissingClass>org.apache.maven.artifact.Artifact</MissingClass>
+    <MissingClass>org.apache.maven.artifact.repository.ArtifactRepository</MissingClass>
+    <MissingClass>org.apache.maven.model.Build</MissingClass>
+    <MissingClass>org.apache.maven.model.BuildBase</MissingClass>
+    <MissingClass>org.apache.maven.model.Organization</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.codehaus.plexus.archiver.AbstractArchiver</MissingClass>
+    <MissingClass>org.codehaus.plexus.archiver.jar.JarArchiver</MissingClass>
+    <MissingClass>org.codehaus.plexus.archiver.jar.Manifest</MissingClass>
+    <MissingClass>org.codehaus.plexus.archiver.jar.Manifest$Attribute</MissingClass>
+    <MissingClass>org.codehaus.plexus.archiver.zip.AbstractZipArchiver</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.IOUtil</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 8 May 2006 01:31:36 +0300" total_classes="3" referenced_classes="27" total_bugs="9" total_size="195" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="11.68" clock_seconds="14.26" peak_mbytes="54.74" alloc_mbytes="763.88" gc_seconds="0.09" priority_2="8" priority_1="1">
+    <PackageStats package="org.apache.maven.archiver" total_bugs="9" total_types="3" total_size="195" priority_2="8" priority_1="1">
+      <ClassStats class="org.apache.maven.archiver.ManifestConfiguration" sourceFile="ManifestConfiguration.java" interface="false" size="22" bugs="4" priority_2="4"/>
+      <ClassStats class="org.apache.maven.archiver.MavenArchiveConfiguration" sourceFile="MavenArchiveConfiguration.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.archiver.MavenArchiver" sourceFile="MavenArchiver.java" interface="false" size="131" bugs="5" priority_2="4" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1194" invocations="376" avgMicrosecondsPerInvocation="3177" maxMicrosecondsPerInvocation="101630" standardDeviationMircosecondsPerInvocation="10039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="943" invocations="26" avgMicrosecondsPerInvocation="36303" maxMicrosecondsPerInvocation="577093" standardDeviationMircosecondsPerInvocation="121667"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="887" invocations="26" avgMicrosecondsPerInvocation="34133" maxMicrosecondsPerInvocation="461812" standardDeviationMircosecondsPerInvocation="115141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="775" invocations="26" avgMicrosecondsPerInvocation="29819" maxMicrosecondsPerInvocation="383927" standardDeviationMircosecondsPerInvocation="84444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="746" invocations="26" avgMicrosecondsPerInvocation="28712" maxMicrosecondsPerInvocation="374511" standardDeviationMircosecondsPerInvocation="88208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="695" invocations="27" avgMicrosecondsPerInvocation="25763" maxMicrosecondsPerInvocation="200008" standardDeviationMircosecondsPerInvocation="42448"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="570" invocations="26" avgMicrosecondsPerInvocation="21944" maxMicrosecondsPerInvocation="330884" standardDeviationMircosecondsPerInvocation="66245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="454" invocations="3" avgMicrosecondsPerInvocation="151625" maxMicrosecondsPerInvocation="448597" standardDeviationMircosecondsPerInvocation="209993"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="444" invocations="27" avgMicrosecondsPerInvocation="16451" maxMicrosecondsPerInvocation="89884" standardDeviationMircosecondsPerInvocation="23704"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="417" invocations="108" avgMicrosecondsPerInvocation="3862" maxMicrosecondsPerInvocation="96642" standardDeviationMircosecondsPerInvocation="11533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="398" invocations="13" avgMicrosecondsPerInvocation="30628" maxMicrosecondsPerInvocation="228298" standardDeviationMircosecondsPerInvocation="61002"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="340" invocations="27" avgMicrosecondsPerInvocation="12613" maxMicrosecondsPerInvocation="200618" standardDeviationMircosecondsPerInvocation="38153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="320" invocations="26" avgMicrosecondsPerInvocation="12327" maxMicrosecondsPerInvocation="198259" standardDeviationMircosecondsPerInvocation="39559"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="302" invocations="26" avgMicrosecondsPerInvocation="11631" maxMicrosecondsPerInvocation="232195" standardDeviationMircosecondsPerInvocation="45569"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="281" invocations="26" avgMicrosecondsPerInvocation="10820" maxMicrosecondsPerInvocation="238168" standardDeviationMircosecondsPerInvocation="45729"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="252" invocations="27" avgMicrosecondsPerInvocation="9336" maxMicrosecondsPerInvocation="45393" standardDeviationMircosecondsPerInvocation="13361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="240" invocations="3" avgMicrosecondsPerInvocation="80052" maxMicrosecondsPerInvocation="240085" standardDeviationMircosecondsPerInvocation="113160"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="200" invocations="377" avgMicrosecondsPerInvocation="532" maxMicrosecondsPerInvocation="62537" standardDeviationMircosecondsPerInvocation="4271"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1269617902000" analysisTimestamp="1360903281336" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/sonar/sonar-colorizer/2.1M1/sonar-colorizer-2.1M1.jar</Jar>
+  </Project>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE_BOOLEAN" priority="2" abbrev="RC" category="BAD_PRACTICE">
+    <Class classname="org.sonar.colorizer.MultilinesDocTokenizer">
+      <SourceLine classname="org.sonar.colorizer.MultilinesDocTokenizer" start="28" end="115" sourcefile="MultilinesDocTokenizer.java" sourcepath="org/sonar/colorizer/MultilinesDocTokenizer.java"/>
+    </Class>
+    <Method classname="org.sonar.colorizer.MultilinesDocTokenizer" name="isCommentStartedOnPreviousLine" signature="(Lorg/sonar/channel/CodeReader;)Z" isStatic="false">
+      <SourceLine classname="org.sonar.colorizer.MultilinesDocTokenizer" start="105" end="106" startBytecode="0" endBytecode="19" sourcefile="MultilinesDocTokenizer.java" sourcepath="org/sonar/colorizer/MultilinesDocTokenizer.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/Boolean;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Boolean" start="26" end="245" sourcefile="Boolean.java" sourcepath="java/lang/Boolean.java"/>
+    </Type>
+    <Field classname="java.lang.Boolean" name="TRUE" signature="Ljava/lang/Boolean;" isStatic="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="java.lang.Boolean" sourcefile="Boolean.java" sourcepath="java/lang/Boolean.java"/>
+    </Field>
+    <SourceLine classname="org.sonar.colorizer.MultilinesDocTokenizer" start="106" end="106" startBytecode="17" endBytecode="17" sourcefile="MultilinesDocTokenizer.java" sourcepath="org/sonar/colorizer/MultilinesDocTokenizer.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="4">
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.sonar.channel.Channel</MissingClass>
+    <MissingClass>org.sonar.channel.CodeReader</MissingClass>
+    <MissingClass>org.sonar.channel.EndMatcher</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 26 Mar 2010 17:38:22 +0200" total_classes="31" referenced_classes="73" total_bugs="1" total_size="572" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="16.38" clock_seconds="8.43" peak_mbytes="60.68" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="1">
+    <PackageStats package="org.sonar.colorizer" total_bugs="1" total_types="31" total_size="572" priority_2="1">
+      <ClassStats class="org.sonar.colorizer.CDocTokenizer" sourceFile="CDocTokenizer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.CaseInsensitiveKeywordsTokenizer" sourceFile="CaseInsensitiveKeywordsTokenizer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.CodeColorizer" sourceFile="CodeColorizer.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.CodeColorizer$Format" sourceFile="CodeColorizer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.ColorizationEngine" sourceFile="ColorizationEngine.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.ColorizerException" sourceFile="ColorizerException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.CppDocTokenizer" sourceFile="CppDocTokenizer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.GroovyKeywords" sourceFile="GroovyKeywords.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.GroovyTokenizers" sourceFile="GroovyTokenizers.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.HtmlCodeBuilder" sourceFile="HtmlCodeBuilder.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.HtmlDecorator" sourceFile="HtmlDecorator.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.HtmlOptions" sourceFile="HtmlOptions.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.HtmlRenderer" sourceFile="HtmlRenderer.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.InlineDocTokenizer" sourceFile="InlineDocTokenizer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.InlineDocTokenizer$1" sourceFile="InlineDocTokenizer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.JavaAnnotationTokenizer" sourceFile="JavaAnnotationTokenizer.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.JavaAnnotationTokenizer$1" sourceFile="JavaAnnotationTokenizer.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.JavaConstantTokenizer" sourceFile="JavaConstantTokenizer.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.JavaConstantTokenizer$1" sourceFile="JavaConstantTokenizer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.JavaKeywords" sourceFile="JavaKeywords.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.JavaTokenizers" sourceFile="JavaTokenizers.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.JavadocTokenizer" sourceFile="JavadocTokenizer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.KeywordsTokenizer" sourceFile="KeywordsTokenizer.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.KeywordsTokenizer$1" sourceFile="KeywordsTokenizer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.LiteralTokenizer" sourceFile="LiteralTokenizer.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.LiteralTokenizer$EndCommentMatcher" sourceFile="LiteralTokenizer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.MultilinesDocTokenizer" sourceFile="MultilinesDocTokenizer.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="org.sonar.colorizer.MultilinesDocTokenizer$MultilineEndTokenMatcher" sourceFile="MultilinesDocTokenizer.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.OnlySyntaxHtmlOptions" sourceFile="HtmlOptions.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.Renderer" sourceFile="Renderer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.sonar.colorizer.Tokenizer" sourceFile="Tokenizer.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="905" invocations="435" avgMicrosecondsPerInvocation="2082" maxMicrosecondsPerInvocation="93871" standardDeviationMircosecondsPerInvocation="8025"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="417" invocations="73" avgMicrosecondsPerInvocation="5718" maxMicrosecondsPerInvocation="96375" standardDeviationMircosecondsPerInvocation="13929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="361" invocations="73" avgMicrosecondsPerInvocation="4950" maxMicrosecondsPerInvocation="75613" standardDeviationMircosecondsPerInvocation="12846"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="324" invocations="127" avgMicrosecondsPerInvocation="2552" maxMicrosecondsPerInvocation="28449" standardDeviationMircosecondsPerInvocation="4856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="303" invocations="73" avgMicrosecondsPerInvocation="4152" maxMicrosecondsPerInvocation="53915" standardDeviationMircosecondsPerInvocation="10339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="278" invocations="119" avgMicrosecondsPerInvocation="2340" maxMicrosecondsPerInvocation="14607" standardDeviationMircosecondsPerInvocation="2856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="262" invocations="391" avgMicrosecondsPerInvocation="672" maxMicrosecondsPerInvocation="128597" standardDeviationMircosecondsPerInvocation="6737"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="246" invocations="127" avgMicrosecondsPerInvocation="1940" maxMicrosecondsPerInvocation="49743" standardDeviationMircosecondsPerInvocation="5183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="237" invocations="127" avgMicrosecondsPerInvocation="1869" maxMicrosecondsPerInvocation="23368" standardDeviationMircosecondsPerInvocation="2864"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="219" invocations="106" avgMicrosecondsPerInvocation="2072" maxMicrosecondsPerInvocation="109432" standardDeviationMircosecondsPerInvocation="10558"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="204" invocations="128" avgMicrosecondsPerInvocation="1599" maxMicrosecondsPerInvocation="17166" standardDeviationMircosecondsPerInvocation="2337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="191" invocations="128" avgMicrosecondsPerInvocation="1494" maxMicrosecondsPerInvocation="14503" standardDeviationMircosecondsPerInvocation="2150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="189" invocations="438" avgMicrosecondsPerInvocation="433" maxMicrosecondsPerInvocation="147192" standardDeviationMircosecondsPerInvocation="7020"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="150" invocations="292" avgMicrosecondsPerInvocation="514" maxMicrosecondsPerInvocation="4631" standardDeviationMircosecondsPerInvocation="617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="109" invocations="73" avgMicrosecondsPerInvocation="1505" maxMicrosecondsPerInvocation="14594" standardDeviationMircosecondsPerInvocation="2720"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="90" invocations="127" avgMicrosecondsPerInvocation="709" maxMicrosecondsPerInvocation="7939" standardDeviationMircosecondsPerInvocation="960"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="87" invocations="73" avgMicrosecondsPerInvocation="1201" maxMicrosecondsPerInvocation="17566" standardDeviationMircosecondsPerInvocation="2719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="87" invocations="130" avgMicrosecondsPerInvocation="672" maxMicrosecondsPerInvocation="51971" standardDeviationMircosecondsPerInvocation="4693"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="84" invocations="73" avgMicrosecondsPerInvocation="1160" maxMicrosecondsPerInvocation="15409" standardDeviationMircosecondsPerInvocation="2522"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="82" invocations="73" avgMicrosecondsPerInvocation="1132" maxMicrosecondsPerInvocation="18152" standardDeviationMircosecondsPerInvocation="2848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="76" invocations="85" avgMicrosecondsPerInvocation="901" maxMicrosecondsPerInvocation="25565" standardDeviationMircosecondsPerInvocation="2907"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="76" invocations="31" avgMicrosecondsPerInvocation="2463" maxMicrosecondsPerInvocation="40558" standardDeviationMircosecondsPerInvocation="7029"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="75" invocations="116" avgMicrosecondsPerInvocation="652" maxMicrosecondsPerInvocation="9359" standardDeviationMircosecondsPerInvocation="1105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="66" invocations="31" avgMicrosecondsPerInvocation="2129" maxMicrosecondsPerInvocation="28095" standardDeviationMircosecondsPerInvocation="5280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="64" invocations="31" avgMicrosecondsPerInvocation="2080" maxMicrosecondsPerInvocation="27304" standardDeviationMircosecondsPerInvocation="4712"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="60" invocations="31" avgMicrosecondsPerInvocation="1953" maxMicrosecondsPerInvocation="27648" standardDeviationMircosecondsPerInvocation="4749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="55" invocations="31" avgMicrosecondsPerInvocation="1783" maxMicrosecondsPerInvocation="21101" standardDeviationMircosecondsPerInvocation="3675"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

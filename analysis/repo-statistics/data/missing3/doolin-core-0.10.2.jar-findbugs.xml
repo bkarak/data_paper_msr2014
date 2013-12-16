@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1301929366000" analysisTimestamp="1361255212826" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/net/sf/doolin/doolin-core/0.10.2/doolin-core-0.10.2.jar</Jar>
+  </Project>
+  <BugInstance type="EQ_DOESNT_OVERRIDE_EQUALS" priority="2" abbrev="Eq" category="STYLE">
+    <Class classname="net.sf.doolin.util.I18NCode">
+      <SourceLine classname="net.sf.doolin.util.I18NCode" start="27" end="115" sourcefile="I18NCode.java" sourcepath="net/sf/doolin/util/I18NCode.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.util.I18NString" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_DID_YOU_MEAN_TO_OVERRIDE">
+      <SourceLine classname="net.sf.doolin.util.I18NString" start="229" end="237" startBytecode="0" endBytecode="140" sourcefile="I18NString.java" sourcepath="net/sf/doolin/util/I18NString.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="net.sf.doolin.util.Utils">
+      <SourceLine classname="net.sf.doolin.util.Utils" start="41" end="898" sourcefile="Utils.java" sourcepath="net/sf/doolin/util/Utils.java"/>
+    </Class>
+    <Field classname="net.sf.doolin.util.Utils" name="propertyResolver" signature="Lnet/sf/doolin/util/PropertyResolver;" isStatic="true">
+      <SourceLine classname="net.sf.doolin.util.Utils" sourcefile="Utils.java" sourcepath="net/sf/doolin/util/Utils.java"/>
+    </Field>
+    <SourceLine classname="net.sf.doolin.util.Utils" start="55" end="55" startBytecode="16" endBytecode="16" sourcefile="Utils.java" sourcepath="net/sf/doolin/util/Utils.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="net.sf.doolin.util.expression.Expression">
+      <SourceLine classname="net.sf.doolin.util.expression.Expression" start="36" end="357" sourcefile="Expression.java" sourcepath="net/sf/doolin/util/expression/Expression.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.util.expression.Expression" name="parse" signature="(Ljava/lang/String;)Lnet/sf/doolin/util/expression/Token;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.util.expression.Expression" start="159" end="331" startBytecode="0" endBytecode="1603" sourcefile="Expression.java" sourcepath="net/sf/doolin/util/expression/Expression.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.util.expression.Expression" start="308" end="315" startBytecode="801" endBytecode="844" sourcefile="Expression.java" sourcepath="net/sf/doolin/util/expression/Expression.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>com.google.common.base.Function</MissingClass>
+    <MissingClass>com.google.common.base.Predicate</MissingClass>
+    <MissingClass>com.google.common.collect.Collections2</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.google.common.collect.Maps</MissingClass>
+    <MissingClass>net.sf.jstring.JStrings</MissingClass>
+    <MissingClass>net.sf.jstring.LocalizableException</MissingClass>
+    <MissingClass>net.sf.sido.PropertyAccessor</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.BeanUtils</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.MethodUtils</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.NestedNullException</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.PropertyUtils</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.apache.commons.codec.digest.DigestUtils</MissingClass>
+    <MissingClass>org.apache.commons.digester.Digester</MissingClass>
+    <MissingClass>org.apache.commons.lang.ArrayUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.ObjectUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.SerializationUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.Validate</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.HashCodeBuilder</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 4 Apr 2011 18:02:46 +0300" total_classes="84" referenced_classes="207" total_bugs="3" total_size="2369" num_packages="7" vm_version="20.4-b02-402" cpu_seconds="28.40" clock_seconds="15.36" peak_mbytes="84.75" alloc_mbytes="4091.88" gc_seconds="0.35" priority_2="3">
+    <PackageStats package="net.sf.doolin.util" total_bugs="2" total_types="52" total_size="1407" priority_2="2">
+      <ClassStats class="net.sf.doolin.util.AbstractPropertySet" sourceFile="AbstractPropertySet.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.Adapter" sourceFile="Adapter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.AuthorizedUser" sourceFile="AuthorizedUser.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.BasicPropertySet" sourceFile="BasicPropertySet.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ChainedItemConverter" sourceFile="ChainedItemConverter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.CodeLabel" sourceFile="CodeLabel.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.CodecUtils" sourceFile="CodecUtils.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.CopyFunction" sourceFile="CopyFunction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.DefaultPropertyResolver" sourceFile="DefaultPropertyResolver.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ELocaleMode" sourceFile="ELocaleMode.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ELocaleMode$1" sourceFile="ELocaleMode.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ELocaleMode$2" sourceFile="ELocaleMode.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ELocaleMode$3" sourceFile="ELocaleMode.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.EditableValue" sourceFile="EditableValue.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.Enum2StringAdapter" sourceFile="Enum2StringAdapter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.Gradient" sourceFile="Gradient.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.I18NCode" sourceFile="I18NCode.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.I18NString" sourceFile="I18NString.java" interface="false" size="112" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.util.IOUtils" sourceFile="IOUtils.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.IdentityConverter" sourceFile="IdentityConverter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.Interruptible" sourceFile="Interruptible.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ItemConverter" sourceFile="ItemConverter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ItemCopier" sourceFile="ItemCopier.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ItemCopyConverter" sourceFile="ItemCopyConverter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.LocaleUtils" sourceFile="LocaleUtils.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.MethodFunction" sourceFile="MethodFunction.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.MethodItemConverter" sourceFile="MethodItemConverter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.MissingParameterException" sourceFile="MissingParameterException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.NYIException" sourceFile="NYIException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.Pair" sourceFile="Pair.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ParameterSet" sourceFile="ParameterSet.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.PasswordUtils" sourceFile="PasswordUtils.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.PatternFileFilter" sourceFile="PatternFileFilter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.PatternFormat" sourceFile="PatternFormat.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.PropertyComparator" sourceFile="PropertyComparator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.PropertyFunction" sourceFile="PropertyFunction.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.PropertyItemConverter" sourceFile="PropertyItemConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.PropertyResolver" sourceFile="PropertyResolver.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ReadOnlyAdapter" sourceFile="ReadOnlyAdapter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ReadOnlyNotNullBooleanAdapter" sourceFile="ReadOnlyNotNullBooleanAdapter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ReadOnlyStringAdapter" sourceFile="ReadOnlyStringAdapter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ScreenUtils" sourceFile="ScreenUtils.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.SimpleItemCopier" sourceFile="SimpleItemCopier.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.StringCodes" sourceFile="StringCodes.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ToStringItemConverter" sourceFile="ToStringItemConverter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.TreeProperties" sourceFile="TreeProperties.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.URLUtils" sourceFile="URLUtils.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.URLUtils$GlobalURLStreamHandlerFactory" sourceFile="URLUtils.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.Utils" sourceFile="Utils.java" interface="false" size="282" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.util.Utils$1" sourceFile="Utils.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.Version" sourceFile="Version.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.ZIPUtils" sourceFile="ZIPUtils.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.util.collection" total_bugs="0" total_types="3" total_size="86">
+      <ClassStats class="net.sf.doolin.util.collection.ListUtils" sourceFile="ListUtils.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.collection.MapPredicate" sourceFile="MapPredicate.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.collection.PropertyPredicate" sourceFile="PropertyPredicate.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.util.copy" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="net.sf.doolin.util.copy.CopyUtils" sourceFile="CopyUtils.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.util.expression" total_bugs="1" total_types="11" total_size="346" priority_2="1">
+      <ClassStats class="net.sf.doolin.util.expression.AbstractToken" sourceFile="AbstractToken.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.expression.Expression" sourceFile="Expression.java" interface="false" size="162" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.util.expression.Expression$1" sourceFile="Expression.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.expression.KeyToken" sourceFile="KeyToken.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.expression.SequenceToken" sourceFile="SequenceToken.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.expression.TextToken" sourceFile="TextToken.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.expression.Token" sourceFile="Token.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.expression.TokenList" sourceFile="TokenList.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.expression.TokenType" sourceFile="TokenType.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.expression.TokenVisitor" sourceFile="TokenVisitor.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.expression.ValueToken" sourceFile="ValueToken.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.util.factory" total_bugs="0" total_types="5" total_size="54">
+      <ClassStats class="net.sf.doolin.util.factory.DataFactory" sourceFile="DataFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.factory.IdentityDataFactory" sourceFile="IdentityDataFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.factory.InitialisingDataFactory" sourceFile="InitialisingDataFactory.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.factory.InstanceDataFactory" sourceFile="InstanceDataFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.factory.SimpleDataFactory" sourceFile="SimpleDataFactory.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.util.unit" total_bugs="0" total_types="7" total_size="107">
+      <ClassStats class="net.sf.doolin.util.unit.Unit" sourceFile="Unit.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.unit.Unit$1" sourceFile="Unit.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.unit.Unit$2" sourceFile="Unit.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.unit.Unit$3" sourceFile="Unit.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.unit.Unit$4" sourceFile="Unit.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.unit.ValueUnit" sourceFile="ValueUnit.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.unit.ValueUnitEditor" sourceFile="ValueUnitEditor.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.util.xml" total_bugs="0" total_types="5" total_size="360">
+      <ClassStats class="net.sf.doolin.util.xml.DOMUtils" sourceFile="DOMUtils.java" interface="false" size="162" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.xml.DigesterUtils" sourceFile="DigesterUtils.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.xml.SimpleErrorHandler" sourceFile="SimpleErrorHandler.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.xml.XMLUtils" sourceFile="XMLUtils.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.doolin.util.xml.XPathUtils" sourceFile="XPathUtils.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1159" invocations="418" avgMicrosecondsPerInvocation="2773" maxMicrosecondsPerInvocation="153457" standardDeviationMircosecondsPerInvocation="10305"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1136" invocations="1057" avgMicrosecondsPerInvocation="1075" maxMicrosecondsPerInvocation="85709" standardDeviationMircosecondsPerInvocation="5259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="946" invocations="418" avgMicrosecondsPerInvocation="2263" maxMicrosecondsPerInvocation="70954" standardDeviationMircosecondsPerInvocation="6483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="913" invocations="207" avgMicrosecondsPerInvocation="4414" maxMicrosecondsPerInvocation="110909" standardDeviationMircosecondsPerInvocation="12990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="755" invocations="412" avgMicrosecondsPerInvocation="1832" maxMicrosecondsPerInvocation="35478" standardDeviationMircosecondsPerInvocation="3133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="736" invocations="207" avgMicrosecondsPerInvocation="3557" maxMicrosecondsPerInvocation="82362" standardDeviationMircosecondsPerInvocation="9107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="734" invocations="426" avgMicrosecondsPerInvocation="1724" maxMicrosecondsPerInvocation="108573" standardDeviationMircosecondsPerInvocation="6311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="713" invocations="423" avgMicrosecondsPerInvocation="1687" maxMicrosecondsPerInvocation="95399" standardDeviationMircosecondsPerInvocation="5653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="567" invocations="418" avgMicrosecondsPerInvocation="1356" maxMicrosecondsPerInvocation="133121" standardDeviationMircosecondsPerInvocation="7245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="450" invocations="207" avgMicrosecondsPerInvocation="2178" maxMicrosecondsPerInvocation="89495" standardDeviationMircosecondsPerInvocation="7801"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="420" invocations="352" avgMicrosecondsPerInvocation="1194" maxMicrosecondsPerInvocation="20762" standardDeviationMircosecondsPerInvocation="2304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="338" invocations="418" avgMicrosecondsPerInvocation="810" maxMicrosecondsPerInvocation="43685" standardDeviationMircosecondsPerInvocation="2881"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="300" invocations="849" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="31508" standardDeviationMircosecondsPerInvocation="1284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="276" invocations="207" avgMicrosecondsPerInvocation="1334" maxMicrosecondsPerInvocation="47328" standardDeviationMircosecondsPerInvocation="4056"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="249" invocations="207" avgMicrosecondsPerInvocation="1205" maxMicrosecondsPerInvocation="74624" standardDeviationMircosecondsPerInvocation="5659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="191" invocations="1060" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="28086" standardDeviationMircosecondsPerInvocation="1258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="185" invocations="265" avgMicrosecondsPerInvocation="700" maxMicrosecondsPerInvocation="55155" standardDeviationMircosecondsPerInvocation="4022"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="173" invocations="409" avgMicrosecondsPerInvocation="423" maxMicrosecondsPerInvocation="22777" standardDeviationMircosecondsPerInvocation="1299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="142" invocations="84" avgMicrosecondsPerInvocation="1692" maxMicrosecondsPerInvocation="18680" standardDeviationMircosecondsPerInvocation="3213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="139" invocations="207" avgMicrosecondsPerInvocation="675" maxMicrosecondsPerInvocation="9957" standardDeviationMircosecondsPerInvocation="1384"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

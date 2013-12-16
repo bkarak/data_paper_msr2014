@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1308931460000" analysisTimestamp="1360517705782" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/antlr/antlr-runtime/3.4-beta3/antlr-runtime-3.4-beta3.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.antlr.runtime.ANTLRFileStream">
+      <SourceLine classname="org.antlr.runtime.ANTLRFileStream" start="42" end="76" sourcefile="ANTLRFileStream.java" sourcepath="org/antlr/runtime/ANTLRFileStream.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.ANTLRFileStream" name="load" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.ANTLRFileStream" start="53" end="73" startBytecode="0" endBytecode="280" sourcefile="ANTLRFileStream.java" sourcepath="org/antlr/runtime/ANTLRFileStream.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.antlr.runtime.ANTLRFileStream" start="64" end="64" startBytecode="56" endBytecode="56" sourcefile="ANTLRFileStream.java" sourcepath="org/antlr/runtime/ANTLRFileStream.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.antlr.runtime.ANTLRInputStream">
+      <SourceLine classname="org.antlr.runtime.ANTLRInputStream" start="36" end="69" sourcefile="ANTLRInputStream.java" sourcepath="org/antlr/runtime/ANTLRInputStream.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.ANTLRInputStream" name="&lt;init&gt;" signature="(Ljava/io/InputStream;IILjava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.ANTLRInputStream" start="60" end="69" startBytecode="0" endBytecode="164" sourcefile="ANTLRInputStream.java" sourcepath="org/antlr/runtime/ANTLRInputStream.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.antlr.runtime.ANTLRInputStream" start="66" end="66" startBytecode="29" endBytecode="29" sourcefile="ANTLRInputStream.java" sourcepath="org/antlr/runtime/ANTLRInputStream.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.antlr.runtime.ANTLRStringStream">
+      <SourceLine classname="org.antlr.runtime.ANTLRStringStream" start="45" end="229" sourcefile="ANTLRStringStream.java" sourcepath="org/antlr/runtime/ANTLRStringStream.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.ANTLRStringStream" name="&lt;init&gt;" signature="([CI)V" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.ANTLRStringStream" start="81" end="84" startBytecode="0" endBytecode="88" sourcefile="ANTLRStringStream.java" sourcepath="org/antlr/runtime/ANTLRStringStream.java"/>
+    </Method>
+    <Field classname="org.antlr.runtime.ANTLRStringStream" name="data" signature="[C" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.ANTLRStringStream" sourcefile="ANTLRStringStream.java" sourcepath="org/antlr/runtime/ANTLRStringStream.java"/>
+    </Field>
+    <LocalVariable name="data" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.ANTLRStringStream" start="82" end="82" startBytecode="6" endBytecode="6" sourcefile="ANTLRStringStream.java" sourcepath="org/antlr/runtime/ANTLRStringStream.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.antlr.runtime.ANTLRStringStream">
+      <SourceLine classname="org.antlr.runtime.ANTLRStringStream" start="45" end="229" sourcefile="ANTLRStringStream.java" sourcepath="org/antlr/runtime/ANTLRStringStream.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.ANTLRStringStream" name="name" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.ANTLRStringStream" sourcefile="ANTLRStringStream.java" sourcepath="org/antlr/runtime/ANTLRStringStream.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.ANTLRStringStream" start="226" end="226" startBytecode="1" endBytecode="1" sourcefile="ANTLRStringStream.java" sourcepath="org/antlr/runtime/ANTLRStringStream.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.antlr.runtime.BitSet">
+      <SourceLine classname="org.antlr.runtime.BitSet" start="52" end="321" sourcefile="BitSet.java" sourcepath="org/antlr/runtime/BitSet.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.BitSet" name="toPackedArray" signature="()[J" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.BitSet" start="289" end="289" startBytecode="0" endBytecode="46" sourcefile="BitSet.java" sourcepath="org/antlr/runtime/BitSet.java"/>
+    </Method>
+    <Field classname="org.antlr.runtime.BitSet" name="bits" signature="[J" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.BitSet" sourcefile="BitSet.java" sourcepath="org/antlr/runtime/BitSet.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.BitSet" start="289" end="289" startBytecode="4" endBytecode="4" sourcefile="BitSet.java" sourcepath="org/antlr/runtime/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.antlr.runtime.BitSet">
+      <SourceLine classname="org.antlr.runtime.BitSet" start="52" end="321" sourcefile="BitSet.java" sourcepath="org/antlr/runtime/BitSet.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.BitSet" name="&lt;init&gt;" signature="([J)V" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.BitSet" start="56" end="58" startBytecode="0" endBytecode="69" sourcefile="BitSet.java" sourcepath="org/antlr/runtime/BitSet.java"/>
+    </Method>
+    <Field classname="org.antlr.runtime.BitSet" name="bits" signature="[J" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.BitSet" sourcefile="BitSet.java" sourcepath="org/antlr/runtime/BitSet.java"/>
+    </Field>
+    <LocalVariable name="bits_" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.BitSet" start="57" end="57" startBytecode="6" endBytecode="6" sourcefile="BitSet.java" sourcepath="org/antlr/runtime/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.antlr.runtime.BitSet">
+      <SourceLine classname="org.antlr.runtime.BitSet" start="52" end="321" sourcefile="BitSet.java" sourcepath="org/antlr/runtime/BitSet.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.BitSet" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.BitSet" start="195" end="227" startBytecode="0" endBytecode="333" sourcefile="BitSet.java" sourcepath="org/antlr/runtime/BitSet.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="2" abbrev="SnVI" category="BAD_PRACTICE">
+    <Class classname="org.antlr.runtime.CommonToken">
+      <SourceLine classname="org.antlr.runtime.CommonToken" start="35" end="189" sourcefile="CommonToken.java" sourcepath="org/antlr/runtime/CommonToken.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.antlr.runtime.Lexer">
+      <SourceLine classname="org.antlr.runtime.Lexer" start="39" end="339" sourcefile="Lexer.java" sourcepath="org/antlr/runtime/Lexer.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.Lexer" name="getCharErrorDisplay" signature="(I)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.Lexer" start="302" end="317" startBytecode="0" endBytecode="191" sourcefile="Lexer.java" sourcepath="org/antlr/runtime/Lexer.java"/>
+    </Method>
+    <SourceLine classname="org.antlr.runtime.Lexer" start="303" end="314" startBytecode="7" endBytecode="68" sourcefile="Lexer.java" sourcepath="org/antlr/runtime/Lexer.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.antlr.runtime.ParserRuleReturnScope">
+      <SourceLine classname="org.antlr.runtime.ParserRuleReturnScope" start="50" end="56" sourcefile="ParserRuleReturnScope.java" sourcepath="org/antlr/runtime/ParserRuleReturnScope.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.ParserRuleReturnScope" name="start" signature="Lorg/antlr/runtime/Token;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.ParserRuleReturnScope" sourcefile="ParserRuleReturnScope.java" sourcepath="org/antlr/runtime/ParserRuleReturnScope.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.ParserRuleReturnScope" start="52" end="52" startBytecode="1" endBytecode="1" sourcefile="ParserRuleReturnScope.java" sourcepath="org/antlr/runtime/ParserRuleReturnScope.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.antlr.runtime.ParserRuleReturnScope">
+      <SourceLine classname="org.antlr.runtime.ParserRuleReturnScope" start="50" end="56" sourcefile="ParserRuleReturnScope.java" sourcepath="org/antlr/runtime/ParserRuleReturnScope.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.ParserRuleReturnScope" name="stop" signature="Lorg/antlr/runtime/Token;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.ParserRuleReturnScope" sourcefile="ParserRuleReturnScope.java" sourcepath="org/antlr/runtime/ParserRuleReturnScope.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.ParserRuleReturnScope" start="53" end="53" startBytecode="1" endBytecode="1" sourcefile="ParserRuleReturnScope.java" sourcepath="org/antlr/runtime/ParserRuleReturnScope.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.antlr.runtime.ParserRuleReturnScope">
+      <SourceLine classname="org.antlr.runtime.ParserRuleReturnScope" start="50" end="56" sourcefile="ParserRuleReturnScope.java" sourcepath="org/antlr/runtime/ParserRuleReturnScope.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.ParserRuleReturnScope" name="tree" signature="Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.ParserRuleReturnScope" sourcefile="ParserRuleReturnScope.java" sourcepath="org/antlr/runtime/ParserRuleReturnScope.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.ParserRuleReturnScope" start="56" end="56" startBytecode="1" endBytecode="1" sourcefile="ParserRuleReturnScope.java" sourcepath="org/antlr/runtime/ParserRuleReturnScope.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.SerializedGrammar">
+      <SourceLine classname="org.antlr.runtime.SerializedGrammar" start="89" end="196" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.SerializedGrammar" name="readFile" signature="(Ljava/io/DataInputStream;)V" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.SerializedGrammar" start="99" end="110" startBytecode="0" endBytecode="61" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    </Method>
+    <LocalVariable name="version" register="3" pc="30" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.SerializedGrammar" start="101" end="101" startBytecode="29" endBytecode="29" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="version"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.SerializedGrammar">
+      <SourceLine classname="org.antlr.runtime.SerializedGrammar" start="89" end="196" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.SerializedGrammar" name="readRule" signature="(Ljava/io/DataInputStream;)Lorg/antlr/runtime/SerializedGrammar$Rule;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.SerializedGrammar" start="122" end="130" startBytecode="0" endBytecode="49" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    </Method>
+    <LocalVariable name="B" register="4" pc="58" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.SerializedGrammar" start="126" end="126" startBytecode="56" endBytecode="56" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="B"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.antlr.runtime.SerializedGrammar">
+      <SourceLine classname="org.antlr.runtime.SerializedGrammar" start="89" end="196" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.SerializedGrammar" name="readAlt" signature="(Ljava/io/DataInputStream;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.SerializedGrammar" start="146" end="179" startBytecode="0" endBytecode="435" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    </Method>
+    <SourceLine classname="org.antlr.runtime.SerializedGrammar" start="151" end="173" startBytecode="44" endBytecode="198" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.antlr.runtime.SerializedGrammar$Block">
+      <SourceLine classname="org.antlr.runtime.SerializedGrammar$Block" start="61" end="73" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.antlr.runtime.SerializedGrammar$Rule">
+      <SourceLine classname="org.antlr.runtime.SerializedGrammar$Rule" start="50" end="55" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.antlr.runtime.SerializedGrammar$RuleRef">
+      <SourceLine classname="org.antlr.runtime.SerializedGrammar$RuleRef" start="85" end="86" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.antlr.runtime.SerializedGrammar$TokenRef">
+      <SourceLine classname="org.antlr.runtime.SerializedGrammar$TokenRef" start="79" end="80" sourcefile="SerializedGrammar.java" sourcepath="org/antlr/runtime/SerializedGrammar.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.UnbufferedTokenStream">
+      <SourceLine classname="org.antlr.runtime.UnbufferedTokenStream" start="50" end="81" sourcefile="UnbufferedTokenStream.java" sourcepath="org/antlr/runtime/UnbufferedTokenStream.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.UnbufferedTokenStream" name="channel" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.UnbufferedTokenStream" sourcefile="UnbufferedTokenStream.java" sourcepath="org/antlr/runtime/UnbufferedTokenStream.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.UnbufferedTokenStream" start="55" end="55" startBytecode="11" endBytecode="11" sourcefile="UnbufferedTokenStream.java" sourcepath="org/antlr/runtime/UnbufferedTokenStream.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugEventSocketProxy">
+      <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" start="47" end="351" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.debug.DebugEventSocketProxy" name="LT" signature="(ILjava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" start="228" end="236" startBytecode="0" endBytecode="36" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    </Method>
+    <LocalVariable name="ID" register="3" pc="11" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" start="228" end="228" startBytecode="10" endBytecode="10" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="ID"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugEventSocketProxy">
+      <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" start="47" end="351" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.debug.DebugEventSocketProxy" name="LT" signature="(ILjava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" start="228" end="236" startBytecode="0" endBytecode="36" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    </Method>
+    <LocalVariable name="text" register="4" pc="23" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" start="229" end="229" startBytecode="21" endBytecode="21" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="text"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugEventSocketProxy">
+      <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" start="47" end="351" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.debug.DebugEventSocketProxy" name="LT" signature="(ILjava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" start="228" end="236" startBytecode="0" endBytecode="36" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    </Method>
+    <LocalVariable name="type" register="5" pc="35" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" start="230" end="230" startBytecode="33" endBytecode="33" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="type"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugEventSocketProxy">
+      <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" start="47" end="351" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.DebugEventSocketProxy" name="recognizer" signature="Lorg/antlr/runtime/BaseRecognizer;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugEventSocketProxy" sourcefile="DebugEventSocketProxy.java" sourcepath="org/antlr/runtime/debug/DebugEventSocketProxy.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugParser">
+      <SourceLine classname="org.antlr.runtime.debug.DebugParser" start="36" end="97" sourcefile="DebugParser.java" sourcepath="org/antlr/runtime/debug/DebugParser.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.DebugParser" name="isCyclicDecision" signature="Z" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugParser" sourcefile="DebugParser.java" sourcepath="org/antlr/runtime/debug/DebugParser.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.DebugParser" start="41" end="41" startBytecode="32" endBytecode="32" sourcefile="DebugParser.java" sourcepath="org/antlr/runtime/debug/DebugParser.java"/>
+  </BugInstance>
+  <BugInstance type="IL_INFINITE_RECURSIVE_LOOP" priority="1" abbrev="IL" category="CORRECTNESS">
+    <Class classname="org.antlr.runtime.debug.DebugTreeAdaptor">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeAdaptor" start="51" end="248" sourcefile="DebugTreeAdaptor.java" sourcepath="org/antlr/runtime/debug/DebugTreeAdaptor.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.debug.DebugTreeAdaptor" name="deleteChild" signature="(Ljava/lang/Object;I)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeAdaptor" start="206" end="206" startBytecode="0" endBytecode="68" sourcefile="DebugTreeAdaptor.java" sourcepath="org/antlr/runtime/debug/DebugTreeAdaptor.java"/>
+    </Method>
+    <SourceLine classname="org.antlr.runtime.debug.DebugTreeAdaptor" start="206" end="206" startBytecode="3" endBytecode="3" sourcefile="DebugTreeAdaptor.java" sourcepath="org/antlr/runtime/debug/DebugTreeAdaptor.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugTreeNodeStream">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="42" end="153" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.debug.DebugTreeNodeStream" name="LA" signature="(I)I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="84" end="89" startBytecode="0" endBytecode="26" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Method>
+    <LocalVariable name="ID" register="3" pc="22" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="85" end="85" startBytecode="21" endBytecode="21" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="ID"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugTreeNodeStream">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="42" end="153" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.debug.DebugTreeNodeStream" name="LA" signature="(I)I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="84" end="89" startBytecode="0" endBytecode="26" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Method>
+    <LocalVariable name="text" register="4" pc="34" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="86" end="86" startBytecode="32" endBytecode="32" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="text"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugTreeNodeStream">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="42" end="153" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.debug.DebugTreeNodeStream" name="LT" signature="(I)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="75" end="80" startBytecode="0" endBytecode="26" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Method>
+    <LocalVariable name="ID" register="3" pc="22" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="76" end="76" startBytecode="21" endBytecode="21" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="ID"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugTreeNodeStream">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="42" end="153" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.debug.DebugTreeNodeStream" name="LT" signature="(I)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="75" end="80" startBytecode="0" endBytecode="26" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Method>
+    <LocalVariable name="text" register="4" pc="34" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="77" end="77" startBytecode="32" endBytecode="32" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="text"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugTreeNodeStream">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="42" end="153" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.debug.DebugTreeNodeStream" name="LT" signature="(I)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="75" end="80" startBytecode="0" endBytecode="26" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Method>
+    <LocalVariable name="type" register="5" pc="46" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="78" end="78" startBytecode="44" endBytecode="44" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="type"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugTreeNodeStream">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="42" end="153" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.DebugTreeNodeStream" name="initialStreamState" signature="Z" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.DebugTreeNodeStream" start="42" end="42" startBytecode="6" endBytecode="6" sourcefile="DebugTreeNodeStream.java" sourcepath="org/antlr/runtime/debug/DebugTreeNodeStream.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.DebugTreeParser">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeParser" start="38" end="108" sourcefile="DebugTreeParser.java" sourcepath="org/antlr/runtime/debug/DebugTreeParser.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.DebugTreeParser" name="isCyclicDecision" signature="Z" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.DebugTreeParser" sourcefile="DebugTreeParser.java" sourcepath="org/antlr/runtime/debug/DebugTreeParser.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.DebugTreeParser" start="43" end="43" startBytecode="32" endBytecode="32" sourcefile="DebugTreeParser.java" sourcepath="org/antlr/runtime/debug/DebugTreeParser.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$DecisionEvent">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$DecisionEvent" start="101" end="101" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$DecisionEvent" name="evalSemPred" signature="Z" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$DecisionEvent" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.Profiler" start="384" end="384" startBytecode="27" endBytecode="27" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$DecisionEvent">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$DecisionEvent" start="101" end="101" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$DecisionEvent" name="startTime" signature="J" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$DecisionEvent" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.Profiler" start="239" end="239" startBytecode="314" endBytecode="314" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$DecisionEvent">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$DecisionEvent" start="101" end="101" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$DecisionEvent" name="stopTime" signature="J" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$DecisionEvent" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.Profiler" start="245" end="245" startBytecode="15" endBytecode="15" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+  </BugInstance>
+  <BugInstance type="NM_FIELD_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="Version" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="avgDecisionMaxCyclicLookaheads" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="avgDecisionMaxFixedLookaheads" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="maxDecisionMaxCyclicLookaheads" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="maxDecisionMaxFixedLookaheads" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="minDecisionMaxCyclicLookaheads" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="minDecisionMaxFixedLookaheads" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="numCyclicDecisions" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="numFixedDecisions" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="stddevDecisionMaxCyclicLookaheads" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.Profiler$ProfileStats">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" start="44" end="44" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.Profiler$ProfileStats" name="stddevDecisionMaxFixedLookaheads" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.Profiler$ProfileStats" sourcefile="Profiler.java" sourcepath="org/antlr/runtime/debug/Profiler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" start="46" end="522" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" name="tokenIndexesInvalid" signature="Z" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" start="57" end="57" startBytecode="16" endBytecode="16" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" start="46" end="522" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" name="grammarFileName" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" start="242" end="242" startBytecode="41" endBytecode="41" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" start="46" end="522" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" name="version" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener" start="239" end="239" startBytecode="18" endBytecode="18" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" start="130" end="154" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" name="ID" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" start="136" end="136" startBytecode="21" endBytecode="21" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" start="130" end="154" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" name="charPos" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" start="131" end="131" startBytecode="11" endBytecode="11" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" start="130" end="154" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" name="line" signature="I" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" start="130" end="130" startBytecode="6" endBytecode="6" sourcefile="RemoteDebugEventSocketListener.java" sourcepath="org/antlr/runtime/debug/RemoteDebugEventSocketListener.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.antlr.runtime.debug.TraceDebugEventListener">
+      <SourceLine classname="org.antlr.runtime.debug.TraceDebugEventListener" start="37" end="94" sourcefile="TraceDebugEventListener.java" sourcepath="org/antlr/runtime/debug/TraceDebugEventListener.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.debug.TraceDebugEventListener" name="createNode" signature="(Ljava/lang/Object;Lorg/antlr/runtime/Token;)V" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.debug.TraceDebugEventListener" start="75" end="79" startBytecode="0" endBytecode="27" sourcefile="TraceDebugEventListener.java" sourcepath="org/antlr/runtime/debug/TraceDebugEventListener.java"/>
+    </Method>
+    <LocalVariable name="text" register="4" pc="23" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.antlr.runtime.debug.TraceDebugEventListener" start="76" end="76" startBytecode="21" endBytecode="21" sourcefile="TraceDebugEventListener.java" sourcepath="org/antlr/runtime/debug/TraceDebugEventListener.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="text"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.antlr.runtime.misc.Stats">
+      <SourceLine classname="org.antlr.runtime.misc.Stats" start="40" end="185" sourcefile="Stats.java" sourcepath="org/antlr/runtime/misc/Stats.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.misc.Stats" name="writeReport" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.antlr.runtime.misc.Stats" start="170" end="182" startBytecode="0" endBytecode="236" sourcefile="Stats.java" sourcepath="org/antlr/runtime/misc/Stats.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="62" end="63" startBytecode="0" endBytecode="34" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <SourceLine classname="org.antlr.runtime.misc.Stats" start="177" end="177" startBytecode="54" endBytecode="54" sourcefile="Stats.java" sourcepath="org/antlr/runtime/misc/Stats.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.antlr.runtime.misc.Stats">
+      <SourceLine classname="org.antlr.runtime.misc.Stats" start="40" end="185" sourcefile="Stats.java" sourcepath="org/antlr/runtime/misc/Stats.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.misc.Stats" name="writeReport" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.antlr.runtime.misc.Stats" start="170" end="182" startBytecode="0" endBytecode="236" sourcefile="Stats.java" sourcepath="org/antlr/runtime/misc/Stats.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.antlr.runtime.misc.Stats" start="173" end="173" startBytecode="22" endBytecode="22" sourcefile="Stats.java" sourcepath="org/antlr/runtime/misc/Stats.java"/>
+  </BugInstance>
+  <BugInstance type="BC_VACUOUS_INSTANCEOF" priority="2" abbrev="BC" category="STYLE">
+    <Class classname="org.antlr.runtime.tree.CommonErrorNode">
+      <SourceLine classname="org.antlr.runtime.tree.CommonErrorNode" start="41" end="106" sourcefile="CommonErrorNode.java" sourcepath="org/antlr/runtime/tree/CommonErrorNode.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.tree.CommonErrorNode" name="getText" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.tree.CommonErrorNode" start="68" end="85" startBytecode="0" endBytecode="49" sourcefile="CommonErrorNode.java" sourcepath="org/antlr/runtime/tree/CommonErrorNode.java"/>
+    </Method>
+    <Type descriptor="Lorg/antlr/runtime/Token;" role="TYPE_FOUND">
+      <SourceLine classname="org.antlr.runtime.Token" start="42" end="50" sourcefile="Token.java" sourcepath="org/antlr/runtime/Token.java"/>
+    </Type>
+    <Type descriptor="Lorg/antlr/runtime/Token;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.antlr.runtime.Token" start="42" end="50" sourcefile="Token.java" sourcepath="org/antlr/runtime/Token.java"/>
+    </Type>
+    <SourceLine classname="org.antlr.runtime.tree.CommonErrorNode" start="69" end="69" startBytecode="6" endBytecode="6" sourcefile="CommonErrorNode.java" sourcepath="org/antlr/runtime/tree/CommonErrorNode.java"/>
+  </BugInstance>
+  <BugInstance type="NP_TOSTRING_COULD_RETURN_NULL" priority="2" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.antlr.runtime.tree.CommonTree">
+      <SourceLine classname="org.antlr.runtime.tree.CommonTree" start="45" end="183" sourcefile="CommonTree.java" sourcepath="org/antlr/runtime/tree/CommonTree.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.tree.CommonTree" name="toString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.tree.CommonTree" start="174" end="183" startBytecode="0" endBytecode="104" sourcefile="CommonTree.java" sourcepath="org/antlr/runtime/tree/CommonTree.java"/>
+    </Method>
+    <SourceLine classname="org.antlr.runtime.tree.CommonTree" start="181" end="181" startBytecode="28" endBytecode="28" sourcefile="CommonTree.java" sourcepath="org/antlr/runtime/tree/CommonTree.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.antlr.runtime.tree.DOTTreeGenerator">
+      <SourceLine classname="org.antlr.runtime.tree.DOTTreeGenerator" start="53" end="222" sourcefile="DOTTreeGenerator.java" sourcepath="org/antlr/runtime/tree/DOTTreeGenerator.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.tree.DOTTreeGenerator" name="_edgeST" signature="Lorg/antlr/stringtemplate/StringTemplate;" isStatic="true">
+      <SourceLine classname="org.antlr.runtime.tree.DOTTreeGenerator" sourcefile="DOTTreeGenerator.java" sourcepath="org/antlr/runtime/tree/DOTTreeGenerator.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.tree.DOTTreeGenerator" start="70" end="70" startBytecode="33" endBytecode="33" sourcefile="DOTTreeGenerator.java" sourcepath="org/antlr/runtime/tree/DOTTreeGenerator.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.antlr.runtime.tree.DOTTreeGenerator">
+      <SourceLine classname="org.antlr.runtime.tree.DOTTreeGenerator" start="53" end="222" sourcefile="DOTTreeGenerator.java" sourcepath="org/antlr/runtime/tree/DOTTreeGenerator.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.tree.DOTTreeGenerator" name="_nodeST" signature="Lorg/antlr/stringtemplate/StringTemplate;" isStatic="true">
+      <SourceLine classname="org.antlr.runtime.tree.DOTTreeGenerator" sourcefile="DOTTreeGenerator.java" sourcepath="org/antlr/runtime/tree/DOTTreeGenerator.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.tree.DOTTreeGenerator" start="67" end="67" startBytecode="21" endBytecode="21" sourcefile="DOTTreeGenerator.java" sourcepath="org/antlr/runtime/tree/DOTTreeGenerator.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.antlr.runtime.tree.DOTTreeGenerator">
+      <SourceLine classname="org.antlr.runtime.tree.DOTTreeGenerator" start="53" end="222" sourcefile="DOTTreeGenerator.java" sourcepath="org/antlr/runtime/tree/DOTTreeGenerator.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.tree.DOTTreeGenerator" name="_treeST" signature="Lorg/antlr/stringtemplate/StringTemplate;" isStatic="true">
+      <SourceLine classname="org.antlr.runtime.tree.DOTTreeGenerator" sourcefile="DOTTreeGenerator.java" sourcepath="org/antlr/runtime/tree/DOTTreeGenerator.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.tree.DOTTreeGenerator" start="55" end="55" startBytecode="9" endBytecode="9" sourcefile="DOTTreeGenerator.java" sourcepath="org/antlr/runtime/tree/DOTTreeGenerator.java"/>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" abbrev="DE" category="BAD_PRACTICE">
+    <Class classname="org.antlr.runtime.tree.TreeFilter">
+      <SourceLine classname="org.antlr.runtime.tree.TreeFilter" start="87" end="134" sourcefile="TreeFilter.java" sourcepath="org/antlr/runtime/tree/TreeFilter.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.tree.TreeFilter" name="applyOnce" signature="(Ljava/lang/Object;Lorg/antlr/runtime/tree/TreeFilter$fptr;)V" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.tree.TreeFilter" start="96" end="107" startBytecode="0" endBytecode="178" sourcefile="TreeFilter.java" sourcepath="org/antlr/runtime/tree/TreeFilter.java"/>
+    </Method>
+    <Class classname="org.antlr.runtime.RecognitionException" role="CLASS_EXCEPTION">
+      <SourceLine classname="org.antlr.runtime.RecognitionException" start="99" end="177" sourcefile="RecognitionException.java" sourcepath="org/antlr/runtime/RecognitionException.java"/>
+    </Class>
+    <SourceLine classname="org.antlr.runtime.tree.TreeFilter" start="106" end="106" startBytecode="65" endBytecode="65" sourcefile="TreeFilter.java" sourcepath="org/antlr/runtime/tree/TreeFilter.java"/>
+    <SourceLine classname="org.antlr.runtime.tree.TreeFilter" start="106" end="106" startBytecode="65" endBytecode="65" sourcefile="TreeFilter.java" sourcepath="org/antlr/runtime/tree/TreeFilter.java"/>
+  </BugInstance>
+  <BugInstance type="BC_VACUOUS_INSTANCEOF" priority="2" abbrev="BC" category="STYLE">
+    <Class classname="org.antlr.runtime.tree.TreeParser">
+      <SourceLine classname="org.antlr.runtime.tree.TreeParser" start="44" end="237" sourcefile="TreeParser.java" sourcepath="org/antlr/runtime/tree/TreeParser.java"/>
+    </Class>
+    <Method classname="org.antlr.runtime.tree.TreeParser" name="getErrorMessage" signature="(Lorg/antlr/runtime/RecognitionException;[Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.tree.TreeParser" start="151" end="159" startBytecode="0" endBytecode="34" sourcefile="TreeParser.java" sourcepath="org/antlr/runtime/tree/TreeParser.java"/>
+    </Method>
+    <Type descriptor="Lorg/antlr/runtime/tree/TreeParser;" role="TYPE_FOUND">
+      <SourceLine classname="org.antlr.runtime.tree.TreeParser" start="44" end="237" sourcefile="TreeParser.java" sourcepath="org/antlr/runtime/tree/TreeParser.java"/>
+    </Type>
+    <Type descriptor="Lorg/antlr/runtime/tree/TreeParser;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.antlr.runtime.tree.TreeParser" start="44" end="237" sourcefile="TreeParser.java" sourcepath="org/antlr/runtime/tree/TreeParser.java"/>
+    </Type>
+    <SourceLine classname="org.antlr.runtime.tree.TreeParser" start="151" end="151" startBytecode="1" endBytecode="1" sourcefile="TreeParser.java" sourcepath="org/antlr/runtime/tree/TreeParser.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.antlr.runtime.tree.TreePatternLexer">
+      <SourceLine classname="org.antlr.runtime.tree.TreePatternLexer" start="44" end="134" sourcefile="TreePatternLexer.java" sourcepath="org/antlr/runtime/tree/TreePatternLexer.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.tree.TreePatternLexer" name="error" signature="Z" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.tree.TreePatternLexer" sourcefile="TreePatternLexer.java" sourcepath="org/antlr/runtime/tree/TreePatternLexer.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.tree.TreePatternLexer" start="55" end="55" startBytecode="22" endBytecode="22" sourcefile="TreePatternLexer.java" sourcepath="org/antlr/runtime/tree/TreePatternLexer.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.antlr.runtime.tree.TreeRuleReturnScope">
+      <SourceLine classname="org.antlr.runtime.tree.TreeRuleReturnScope" start="37" end="40" sourcefile="TreeRuleReturnScope.java" sourcepath="org/antlr/runtime/tree/TreeRuleReturnScope.java"/>
+    </Class>
+    <Field classname="org.antlr.runtime.tree.TreeRuleReturnScope" name="start" signature="Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.antlr.runtime.tree.TreeRuleReturnScope" sourcefile="TreeRuleReturnScope.java" sourcepath="org/antlr/runtime/tree/TreeRuleReturnScope.java"/>
+    </Field>
+    <SourceLine classname="org.antlr.runtime.tree.TreeRuleReturnScope" start="40" end="40" startBytecode="1" endBytecode="1" sourcefile="TreeRuleReturnScope.java" sourcepath="org/antlr/runtime/tree/TreeRuleReturnScope.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="1">
+    <MissingClass>org.antlr.stringtemplate.StringTemplate</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 24 Jun 2011 19:04:20 +0300" total_classes="115" referenced_classes="183" total_bugs="65" total_size="6332" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="51.85" clock_seconds="26.73" peak_mbytes="103.74" alloc_mbytes="763.88" gc_seconds="0.68" priority_2="57" priority_1="8">
+    <PackageStats package="org.antlr.runtime" total_bugs="20" total_types="44" total_size="2335" priority_2="17" priority_1="3">
+      <ClassStats class="org.antlr.runtime.ANTLRFileStream" sourceFile="ANTLRFileStream.java" interface="false" size="26" bugs="1" priority_1="1"/>
+      <ClassStats class="org.antlr.runtime.ANTLRInputStream" sourceFile="ANTLRInputStream.java" interface="false" size="23" bugs="1" priority_1="1"/>
+      <ClassStats class="org.antlr.runtime.ANTLRReaderStream" sourceFile="ANTLRReaderStream.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.ANTLRStringStream" sourceFile="ANTLRStringStream.java" interface="false" size="109" bugs="2" priority_2="2"/>
+      <ClassStats class="org.antlr.runtime.BaseRecognizer" sourceFile="BaseRecognizer.java" interface="false" size="294" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.BitSet" sourceFile="BitSet.java" interface="false" size="163" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.antlr.runtime.BufferedTokenStream" sourceFile="BufferedTokenStream.java" interface="false" size="143" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.CharStream" sourceFile="CharStream.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.CharStreamState" sourceFile="CharStreamState.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.ClassicToken" sourceFile="ClassicToken.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.CommonToken" sourceFile="CommonToken.java" interface="false" size="107" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.CommonTokenStream" sourceFile="CommonTokenStream.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.DFA" sourceFile="DFA.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.EarlyExitException" sourceFile="EarlyExitException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.FailedPredicateException" sourceFile="FailedPredicateException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.IntStream" sourceFile="IntStream.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.LegacyCommonTokenStream" sourceFile="LegacyCommonTokenStream.java" interface="false" size="199" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.Lexer" sourceFile="Lexer.java" interface="false" size="179" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.MismatchedNotSetException" sourceFile="MismatchedNotSetException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.MismatchedRangeException" sourceFile="MismatchedRangeException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.MismatchedSetException" sourceFile="MismatchedSetException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.MismatchedTokenException" sourceFile="MismatchedTokenException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.MismatchedTreeNodeException" sourceFile="MismatchedTreeNodeException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.MissingTokenException" sourceFile="MissingTokenException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.NoViableAltException" sourceFile="NoViableAltException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.Parser" sourceFile="Parser.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.ParserRuleReturnScope" sourceFile="ParserRuleReturnScope.java" interface="false" size="12" bugs="3" priority_2="3"/>
+      <ClassStats class="org.antlr.runtime.RecognitionException" sourceFile="RecognitionException.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.RecognizerSharedState" sourceFile="RecognizerSharedState.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.RuleReturnScope" sourceFile="RuleReturnScope.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.SerializedGrammar" sourceFile="SerializedGrammar.java" interface="false" size="86" bugs="3" priority_2="3"/>
+      <ClassStats class="org.antlr.runtime.SerializedGrammar$Block" sourceFile="SerializedGrammar.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.SerializedGrammar$Rule" sourceFile="SerializedGrammar.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.SerializedGrammar$RuleRef" sourceFile="SerializedGrammar.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.SerializedGrammar$TokenRef" sourceFile="SerializedGrammar.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.Token" sourceFile="Token.java" interface="true" size="30" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.TokenRewriteStream" sourceFile="TokenRewriteStream.java" interface="false" size="249" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.TokenRewriteStream$InsertBeforeOp" sourceFile="TokenRewriteStream.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.TokenRewriteStream$ReplaceOp" sourceFile="TokenRewriteStream.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.TokenRewriteStream$RewriteOperation" sourceFile="TokenRewriteStream.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.TokenSource" sourceFile="TokenSource.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.TokenStream" sourceFile="TokenStream.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.UnbufferedTokenStream" sourceFile="UnbufferedTokenStream.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.UnwantedTokenException" sourceFile="UnwantedTokenException.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.antlr.runtime.debug" total_bugs="34" total_types="20" total_size="1862" priority_2="33" priority_1="1">
+      <ClassStats class="org.antlr.runtime.debug.BlankDebugEventListener" sourceFile="BlankDebugEventListener.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.debug.DebugEventHub" sourceFile="DebugEventHub.java" interface="false" size="170" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.debug.DebugEventListener" sourceFile="DebugEventListener.java" interface="true" size="35" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.debug.DebugEventRepeater" sourceFile="DebugEventRepeater.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.debug.DebugEventSocketProxy" sourceFile="DebugEventSocketProxy.java" interface="false" size="243" bugs="4" priority_2="4"/>
+      <ClassStats class="org.antlr.runtime.debug.DebugParser" sourceFile="DebugParser.java" interface="false" size="42" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.debug.DebugTokenStream" sourceFile="DebugTokenStream.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.debug.DebugTreeAdaptor" sourceFile="DebugTreeAdaptor.java" interface="false" size="126" bugs="1" priority_1="1"/>
+      <ClassStats class="org.antlr.runtime.debug.DebugTreeNodeStream" sourceFile="DebugTreeNodeStream.java" interface="false" size="77" bugs="6" priority_2="6"/>
+      <ClassStats class="org.antlr.runtime.debug.DebugTreeParser" sourceFile="DebugTreeParser.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.debug.ParseTreeBuilder" sourceFile="ParseTreeBuilder.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.debug.Profiler" sourceFile="Profiler.java" interface="false" size="342" bugs="3" priority_2="3"/>
+      <ClassStats class="org.antlr.runtime.debug.Profiler$DecisionDescriptor" sourceFile="Profiler.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.debug.Profiler$DecisionEvent" sourceFile="Profiler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.debug.Profiler$ProfileStats" sourceFile="Profiler.java" interface="false" size="36" bugs="11" priority_2="11"/>
+      <ClassStats class="org.antlr.runtime.debug.RemoteDebugEventSocketListener" sourceFile="RemoteDebugEventSocketListener.java" interface="false" size="286" bugs="3" priority_2="3"/>
+      <ClassStats class="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyToken" sourceFile="RemoteDebugEventSocketListener.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.debug.RemoteDebugEventSocketListener$ProxyTree" sourceFile="RemoteDebugEventSocketListener.java" interface="false" size="37" bugs="3" priority_2="3"/>
+      <ClassStats class="org.antlr.runtime.debug.TraceDebugEventListener" sourceFile="TraceDebugEventListener.java" interface="false" size="51" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.debug.Tracer" sourceFile="Tracer.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.antlr.runtime.misc" total_bugs="2" total_types="5" total_size="275" priority_2="1" priority_1="1">
+      <ClassStats class="org.antlr.runtime.misc.DoubleKeyMap" sourceFile="DoubleKeyMap.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.misc.FastQueue" sourceFile="FastQueue.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.misc.IntArray" sourceFile="IntArray.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.misc.LookaheadStream" sourceFile="LookaheadStream.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.misc.Stats" sourceFile="Stats.java" interface="false" size="93" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.antlr.runtime.tree" total_bugs="9" total_types="46" total_size="1860" priority_2="6" priority_1="3">
+      <ClassStats class="org.antlr.runtime.tree.BaseTree" sourceFile="BaseTree.java" interface="false" size="181" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.BaseTreeAdaptor" sourceFile="BaseTreeAdaptor.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.BufferedTreeNodeStream" sourceFile="BufferedTreeNodeStream.java" interface="false" size="222" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.BufferedTreeNodeStream$StreamIterator" sourceFile="BufferedTreeNodeStream.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.CommonErrorNode" sourceFile="CommonErrorNode.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.tree.CommonTree" sourceFile="CommonTree.java" interface="false" size="92" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.tree.CommonTreeAdaptor" sourceFile="CommonTreeAdaptor.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.CommonTreeNodeStream" sourceFile="CommonTreeNodeStream.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.DOTTreeGenerator" sourceFile="DOTTreeGenerator.java" interface="false" size="83" bugs="3" priority_1="3"/>
+      <ClassStats class="org.antlr.runtime.tree.ParseTree" sourceFile="ParseTree.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.RewriteCardinalityException" sourceFile="RewriteCardinalityException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.RewriteEarlyExitException" sourceFile="RewriteEarlyExitException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.RewriteEmptyStreamException" sourceFile="RewriteEmptyStreamException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.RewriteRuleElementStream" sourceFile="RewriteRuleElementStream.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.RewriteRuleNodeStream" sourceFile="RewriteRuleNodeStream.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.RewriteRuleSubtreeStream" sourceFile="RewriteRuleSubtreeStream.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.RewriteRuleTokenStream" sourceFile="RewriteRuleTokenStream.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.Tree" sourceFile="Tree.java" interface="true" size="30" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeAdaptor" sourceFile="TreeAdaptor.java" interface="true" size="32" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeFilter" sourceFile="TreeFilter.java" interface="false" size="34" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeFilter$1" sourceFile="TreeFilter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeFilter$2" sourceFile="TreeFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeFilter$3" sourceFile="TreeFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeFilter$fptr" sourceFile="TreeFilter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeIterator" sourceFile="TreeIterator.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeNodeStream" sourceFile="TreeNodeStream.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeParser" sourceFile="TreeParser.java" interface="false" size="112" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.tree.TreePatternLexer" sourceFile="TreePatternLexer.java" interface="false" size="74" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.tree.TreePatternParser" sourceFile="TreePatternParser.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeRewriter" sourceFile="TreeRewriter.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeRewriter$1" sourceFile="TreeRewriter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeRewriter$2" sourceFile="TreeRewriter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeRewriter$3" sourceFile="TreeRewriter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeRewriter$fptr" sourceFile="TreeRewriter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeRuleReturnScope" sourceFile="TreeRuleReturnScope.java" interface="false" size="6" bugs="1" priority_2="1"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeVisitor" sourceFile="TreeVisitor.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeVisitorAction" sourceFile="TreeVisitorAction.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeWizard" sourceFile="TreeWizard.java" interface="false" size="150" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeWizard$1" sourceFile="TreeWizard.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeWizard$2" sourceFile="TreeWizard.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeWizard$3" sourceFile="TreeWizard.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeWizard$ContextVisitor" sourceFile="TreeWizard.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeWizard$TreePattern" sourceFile="TreeWizard.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeWizard$TreePatternTreeAdaptor" sourceFile="TreeWizard.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeWizard$Visitor" sourceFile="TreeWizard.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.antlr.runtime.tree.TreeWizard$WildcardTreePattern" sourceFile="TreeWizard.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="2126" invocations="1111" avgMicrosecondsPerInvocation="1913" maxMicrosecondsPerInvocation="262785" standardDeviationMircosecondsPerInvocation="9024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1805" invocations="1111" avgMicrosecondsPerInvocation="1625" maxMicrosecondsPerInvocation="167657" standardDeviationMircosecondsPerInvocation="6215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1666" invocations="1111" avgMicrosecondsPerInvocation="1499" maxMicrosecondsPerInvocation="186837" standardDeviationMircosecondsPerInvocation="6390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1665" invocations="1150" avgMicrosecondsPerInvocation="1447" maxMicrosecondsPerInvocation="155922" standardDeviationMircosecondsPerInvocation="5888"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1222" invocations="633" avgMicrosecondsPerInvocation="1930" maxMicrosecondsPerInvocation="64557" standardDeviationMircosecondsPerInvocation="5966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1187" invocations="1120" avgMicrosecondsPerInvocation="1060" maxMicrosecondsPerInvocation="122863" standardDeviationMircosecondsPerInvocation="4658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="917" invocations="183" avgMicrosecondsPerInvocation="5015" maxMicrosecondsPerInvocation="83641" standardDeviationMircosecondsPerInvocation="11577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="885" invocations="1111" avgMicrosecondsPerInvocation="796" maxMicrosecondsPerInvocation="52147" standardDeviationMircosecondsPerInvocation="2894"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="864" invocations="873" avgMicrosecondsPerInvocation="990" maxMicrosecondsPerInvocation="54186" standardDeviationMircosecondsPerInvocation="3417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="792" invocations="183" avgMicrosecondsPerInvocation="4328" maxMicrosecondsPerInvocation="133519" standardDeviationMircosecondsPerInvocation="12201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="682" invocations="1111" avgMicrosecondsPerInvocation="614" maxMicrosecondsPerInvocation="111014" standardDeviationMircosecondsPerInvocation="4162"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="482" invocations="136" avgMicrosecondsPerInvocation="3548" maxMicrosecondsPerInvocation="41779" standardDeviationMircosecondsPerInvocation="7568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="435" invocations="1401" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="53042" standardDeviationMircosecondsPerInvocation="1891"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="373" invocations="183" avgMicrosecondsPerInvocation="2040" maxMicrosecondsPerInvocation="71760" standardDeviationMircosecondsPerInvocation="5990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="359" invocations="115" avgMicrosecondsPerInvocation="3128" maxMicrosecondsPerInvocation="154353" standardDeviationMircosecondsPerInvocation="15100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="306" invocations="115" avgMicrosecondsPerInvocation="2666" maxMicrosecondsPerInvocation="47232" standardDeviationMircosecondsPerInvocation="5910"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="286" invocations="592" avgMicrosecondsPerInvocation="484" maxMicrosecondsPerInvocation="69944" standardDeviationMircosecondsPerInvocation="4049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="278" invocations="1111" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="46577" standardDeviationMircosecondsPerInvocation="1479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="275" invocations="115" avgMicrosecondsPerInvocation="2397" maxMicrosecondsPerInvocation="34206" standardDeviationMircosecondsPerInvocation="5379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="272" invocations="183" avgMicrosecondsPerInvocation="1490" maxMicrosecondsPerInvocation="48665" standardDeviationMircosecondsPerInvocation="4901"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="265" invocations="183" avgMicrosecondsPerInvocation="1450" maxMicrosecondsPerInvocation="80428" standardDeviationMircosecondsPerInvocation="6336"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="262" invocations="1111" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="14150" standardDeviationMircosecondsPerInvocation="680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="246" invocations="115" avgMicrosecondsPerInvocation="2146" maxMicrosecondsPerInvocation="23672" standardDeviationMircosecondsPerInvocation="4061"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="205" invocations="1256" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="43544" standardDeviationMircosecondsPerInvocation="1325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteRecursiveLoop" totalMilliseconds="201" invocations="115" avgMicrosecondsPerInvocation="1752" maxMicrosecondsPerInvocation="122991" standardDeviationMircosecondsPerInvocation="11415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="198" invocations="115" avgMicrosecondsPerInvocation="1724" maxMicrosecondsPerInvocation="42719" standardDeviationMircosecondsPerInvocation="4570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="197" invocations="115" avgMicrosecondsPerInvocation="1720" maxMicrosecondsPerInvocation="24798" standardDeviationMircosecondsPerInvocation="3405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="179" invocations="115" avgMicrosecondsPerInvocation="1560" maxMicrosecondsPerInvocation="36954" standardDeviationMircosecondsPerInvocation="4221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="175" invocations="115" avgMicrosecondsPerInvocation="1523" maxMicrosecondsPerInvocation="31114" standardDeviationMircosecondsPerInvocation="3627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="174" invocations="14456" avgMicrosecondsPerInvocation="12" maxMicrosecondsPerInvocation="14656" standardDeviationMircosecondsPerInvocation="137"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

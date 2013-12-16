@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1224716134000" analysisTimestamp="1360931469408" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/cargo/cargo-core-container-tomcat/1.0-beta-1/cargo-core-container-tomcat-1.0-beta-1.jar</Jar>
+  </Project>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.codehaus.cargo.container.tomcat.Tomcat5xEmbeddedLocalDeployer">
+      <SourceLine classname="org.codehaus.cargo.container.tomcat.Tomcat5xEmbeddedLocalDeployer" start="59" end="285" sourcefile="Tomcat5xEmbeddedLocalDeployer.java" sourcepath="org/codehaus/cargo/container/tomcat/Tomcat5xEmbeddedLocalDeployer.java"/>
+    </Class>
+    <Method classname="org.codehaus.cargo.container.tomcat.Tomcat5xEmbeddedLocalDeployer" name="explode" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.codehaus.cargo.container.tomcat.Tomcat5xEmbeddedLocalDeployer" start="241" end="285" startBytecode="0" endBytecode="483" sourcefile="Tomcat5xEmbeddedLocalDeployer.java" sourcepath="org/codehaus/cargo/container/tomcat/Tomcat5xEmbeddedLocalDeployer.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.codehaus.cargo.container.tomcat.Tomcat5xEmbeddedLocalDeployer" start="264" end="264" startBytecode="152" endBytecode="152" sourcefile="Tomcat5xEmbeddedLocalDeployer.java" sourcepath="org/codehaus/cargo/container/tomcat/Tomcat5xEmbeddedLocalDeployer.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.codehaus.cargo.container.tomcat.Tomcat5xEmbeddedLocalDeployer" start="269" end="269" startBytecode="157" endBytecode="157" sourcefile="Tomcat5xEmbeddedLocalDeployer.java" sourcepath="org/codehaus/cargo/container/tomcat/Tomcat5xEmbeddedLocalDeployer.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.codehaus.cargo.container.tomcat.Tomcat5xEmbeddedLocalDeployer" start="279" end="279" startBytecode="198" endBytecode="198" sourcefile="Tomcat5xEmbeddedLocalDeployer.java" sourcepath="org/codehaus/cargo/container/tomcat/Tomcat5xEmbeddedLocalDeployer.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.cargo.container.tomcat.internal.AbstractCatalinaInstalledLocalContainer">
+      <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.AbstractCatalinaInstalledLocalContainer" start="54" end="130" sourcefile="AbstractCatalinaInstalledLocalContainer.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/AbstractCatalinaInstalledLocalContainer.java"/>
+    </Class>
+    <Method classname="org.codehaus.cargo.container.tomcat.internal.AbstractCatalinaInstalledLocalContainer" name="getVersion" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.AbstractCatalinaInstalledLocalContainer" start="65" end="109" startBytecode="0" endBytecode="90" sourcefile="AbstractCatalinaInstalledLocalContainer.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/AbstractCatalinaInstalledLocalContainer.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/zip/ZipFile;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.util.zip.ZipFile" start="31" end="427" sourcefile="ZipFile.java" sourcepath="java/util/zip/ZipFile.java"/>
+    </Type>
+    <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.AbstractCatalinaInstalledLocalContainer" start="77" end="77" startBytecode="9" endBytecode="9" sourcefile="AbstractCatalinaInstalledLocalContainer.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/AbstractCatalinaInstalledLocalContainer.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager">
+      <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" start="80" end="668" sourcefile="TomcatManager.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/TomcatManager.java"/>
+    </Class>
+    <Method classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" name="toAuthorization" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" start="577" end="583" startBytecode="0" endBytecode="142" sourcefile="TomcatManager.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/TomcatManager.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" start="583" end="583" startBytecode="55" endBytecode="55" sourcefile="TomcatManager.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/TomcatManager.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager">
+      <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" start="80" end="668" sourcefile="TomcatManager.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/TomcatManager.java"/>
+    </Class>
+    <Method classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" name="toAuthorization" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" start="577" end="583" startBytecode="0" endBytecode="142" sourcefile="TomcatManager.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/TomcatManager.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" start="583" end="583" startBytecode="49" endBytecode="49" sourcefile="TomcatManager.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/TomcatManager.java"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager">
+      <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" start="80" end="668" sourcefile="TomcatManager.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/TomcatManager.java"/>
+    </Class>
+    <Method classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" name="invoke" signature="(Ljava/lang/String;Ljava/io/InputStream;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" start="460" end="528" startBytecode="0" endBytecode="557" sourcefile="TomcatManager.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/TomcatManager.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.cargo.container.tomcat.internal.TomcatManager" start="495" end="495" startBytecode="182" endBytecode="182" sourcefile="TomcatManager.java" sourcepath="org/codehaus/cargo/container/tomcat/internal/TomcatManager.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="46">
+    <MissingClass>org.apache.tools.ant.taskdefs.Copy</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.Java</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.Commandline$Argument</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.FileSet</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.Path</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.Path$PathElement</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.PatternSet$NameEntry</MissingClass>
+    <MissingClass>org.apache.tools.ant.util.FileUtils</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.Container</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.ContainerException</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.InstalledLocalContainer</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.LocalContainer</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.RemoteContainer</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.configuration.Configuration</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.configuration.LocalConfiguration</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.deployable.Deployable</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.deployable.DeployableType</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.deployable.WAR</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.deployer.Deployer</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.deployer.DeployerType</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.internal.AntContainerExecutorThread</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.internal.ServletContainerCapability</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.internal.util.ResourceUtils</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.property.DataSource</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.property.User</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.AbstractEmbeddedLocalContainer</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.AbstractInstalledLocalContainer</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.AbstractRemoteContainer</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.configuration.AbstractExistingLocalConfiguration</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.configuration.AbstractExistingLocalConfigurationCapability</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.configuration.AbstractRuntimeConfiguration</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.configuration.AbstractRuntimeConfigurationCapability</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.configuration.AbstractStandaloneLocalConfiguration</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.configuration.AbstractStandaloneLocalConfigurationCapability</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.deployer.AbstractCopyingInstalledLocalDeployer</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.deployer.AbstractLocalDeployer</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.deployer.AbstractRemoteDeployer</MissingClass>
+    <MissingClass>org.codehaus.cargo.container.spi.packager.AbstractDirectoryPackager</MissingClass>
+    <MissingClass>org.codehaus.cargo.module.webapp.tomcat.TomcatContextXml</MissingClass>
+    <MissingClass>org.codehaus.cargo.module.webapp.tomcat.TomcatWarArchive</MissingClass>
+    <MissingClass>org.codehaus.cargo.util.AntUtils</MissingClass>
+    <MissingClass>org.codehaus.cargo.util.Base64</MissingClass>
+    <MissingClass>org.codehaus.cargo.util.FileHandler</MissingClass>
+    <MissingClass>org.codehaus.cargo.util.log.LoggedObject</MissingClass>
+    <MissingClass>org.codehaus.cargo.util.log.Logger</MissingClass>
+    <MissingClass>org.jdom.Attribute</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 23 Oct 2008 01:55:34 +0300" total_classes="45" referenced_classes="102" total_bugs="5" total_size="1330" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="27.24" clock_seconds="17.20" peak_mbytes="77.32" alloc_mbytes="763.88" gc_seconds="0.30" priority_2="3" priority_1="2">
+    <PackageStats package="org.codehaus.cargo.container.tomcat" total_bugs="1" total_types="23" total_size="520" priority_2="1">
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat3xInstalledLocalContainer" sourceFile="Tomcat3xInstalledLocalContainer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat3xStandaloneLocalConfiguration" sourceFile="Tomcat3xStandaloneLocalConfiguration.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat4xInstalledLocalContainer" sourceFile="Tomcat4xInstalledLocalContainer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat4xRemoteContainer" sourceFile="Tomcat4xRemoteContainer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat4xRemoteDeployer" sourceFile="Tomcat4xRemoteDeployer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat4xStandaloneLocalConfiguration" sourceFile="Tomcat4xStandaloneLocalConfiguration.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat5xEmbeddedLocalContainer" sourceFile="Tomcat5xEmbeddedLocalContainer.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat5xEmbeddedLocalDeployer" sourceFile="Tomcat5xEmbeddedLocalDeployer.java" interface="false" size="94" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat5xInstalledLocalContainer" sourceFile="Tomcat5xInstalledLocalContainer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat5xRemoteContainer" sourceFile="Tomcat5xRemoteContainer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat5xRemoteDeployer" sourceFile="Tomcat5xRemoteDeployer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat5xStandaloneLocalConfiguration" sourceFile="Tomcat5xStandaloneLocalConfiguration.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat6xInstalledLocalContainer" sourceFile="Tomcat6xInstalledLocalContainer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat6xRemoteContainer" sourceFile="Tomcat6xRemoteContainer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat6xRemoteDeployer" sourceFile="Tomcat6xRemoteDeployer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.Tomcat6xStandaloneLocalConfiguration" sourceFile="Tomcat6xStandaloneLocalConfiguration.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.TomcatCopyingInstalledLocalDeployer" sourceFile="TomcatCopyingInstalledLocalDeployer.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.TomcatDirectoryPackager" sourceFile="TomcatDirectoryPackager.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.TomcatExistingLocalConfiguration" sourceFile="TomcatExistingLocalConfiguration.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.TomcatManagerInstalledLocalDeployer" sourceFile="TomcatManagerInstalledLocalDeployer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.TomcatPropertySet" sourceFile="TomcatPropertySet.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.TomcatRuntimeConfiguration" sourceFile="TomcatRuntimeConfiguration.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.TomcatWAR" sourceFile="TomcatWAR.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.codehaus.cargo.container.tomcat.internal" total_bugs="4" total_types="22" total_size="810" priority_2="2" priority_1="2">
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.AbstractCatalinaInstalledLocalContainer" sourceFile="AbstractCatalinaInstalledLocalContainer.java" interface="false" size="38" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.AbstractCatalinaStandaloneLocalConfiguration" sourceFile="AbstractCatalinaStandaloneLocalConfiguration.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.AbstractTomcatInstalledLocalContainer" sourceFile="AbstractTomcatInstalledLocalContainer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.AbstractTomcatManagerDeployer" sourceFile="AbstractTomcatManagerDeployer.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.AbstractTomcatManagerInstalledLocalDeployer" sourceFile="AbstractTomcatManagerInstalledLocalDeployer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.AbstractTomcatRemoteContainer" sourceFile="AbstractTomcatRemoteContainer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.AbstractTomcatRemoteDeployer" sourceFile="AbstractTomcatRemoteDeployer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.AbstractTomcatStandaloneLocalConfiguration" sourceFile="AbstractTomcatStandaloneLocalConfiguration.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.Tomcat5xEmbedded" sourceFile="Tomcat5xEmbedded.java" interface="false" size="135" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.Tomcat5xEmbedded$Connector" sourceFile="Tomcat5xEmbedded.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.Tomcat5xEmbedded$Context" sourceFile="Tomcat5xEmbedded.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.Tomcat5xEmbedded$Embedded" sourceFile="Tomcat5xEmbedded.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.Tomcat5xEmbedded$Engine" sourceFile="Tomcat5xEmbedded.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.Tomcat5xEmbedded$Host" sourceFile="Tomcat5xEmbedded.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.Tomcat5xEmbedded$MemoryRealm" sourceFile="Tomcat5xEmbedded.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.Tomcat5xEmbedded$Wrapper" sourceFile="Tomcat5xEmbedded.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.TomcatDeployableStatus" sourceFile="TomcatDeployableStatus.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.TomcatExistingLocalConfigurationCapability" sourceFile="TomcatExistingLocalConfigurationCapability.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.TomcatManager" sourceFile="TomcatManager.java" interface="false" size="169" bugs="3" priority_2="1" priority_1="2"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.TomcatManagerException" sourceFile="TomcatManagerException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.TomcatRuntimeConfigurationCapability" sourceFile="TomcatRuntimeConfigurationCapability.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.cargo.container.tomcat.internal.TomcatStandaloneLocalConfigurationCapability" sourceFile="TomcatStandaloneLocalConfigurationCapability.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1385" invocations="635" avgMicrosecondsPerInvocation="2182" maxMicrosecondsPerInvocation="108743" standardDeviationMircosecondsPerInvocation="8102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LazyInit" totalMilliseconds="1015" invocations="45" avgMicrosecondsPerInvocation="22576" maxMicrosecondsPerInvocation="1013737" standardDeviationMircosecondsPerInvocation="149423"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="969" invocations="251" avgMicrosecondsPerInvocation="3863" maxMicrosecondsPerInvocation="67075" standardDeviationMircosecondsPerInvocation="8698"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="967" invocations="102" avgMicrosecondsPerInvocation="9487" maxMicrosecondsPerInvocation="92273" standardDeviationMircosecondsPerInvocation="17818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="915" invocations="251" avgMicrosecondsPerInvocation="3646" maxMicrosecondsPerInvocation="87869" standardDeviationMircosecondsPerInvocation="10325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="845" invocations="251" avgMicrosecondsPerInvocation="3370" maxMicrosecondsPerInvocation="123372" standardDeviationMircosecondsPerInvocation="11407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="729" invocations="102" avgMicrosecondsPerInvocation="7152" maxMicrosecondsPerInvocation="65649" standardDeviationMircosecondsPerInvocation="13712"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="698" invocations="251" avgMicrosecondsPerInvocation="2783" maxMicrosecondsPerInvocation="47240" standardDeviationMircosecondsPerInvocation="6801"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="569" invocations="252" avgMicrosecondsPerInvocation="2259" maxMicrosecondsPerInvocation="86756" standardDeviationMircosecondsPerInvocation="7286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="485" invocations="180" avgMicrosecondsPerInvocation="2698" maxMicrosecondsPerInvocation="63911" standardDeviationMircosecondsPerInvocation="7617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="474" invocations="251" avgMicrosecondsPerInvocation="1890" maxMicrosecondsPerInvocation="52957" standardDeviationMircosecondsPerInvocation="5166"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="382" invocations="102" avgMicrosecondsPerInvocation="3754" maxMicrosecondsPerInvocation="69448" standardDeviationMircosecondsPerInvocation="8313"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="335" invocations="426" avgMicrosecondsPerInvocation="788" maxMicrosecondsPerInvocation="32805" standardDeviationMircosecondsPerInvocation="2825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="291" invocations="251" avgMicrosecondsPerInvocation="1163" maxMicrosecondsPerInvocation="42994" standardDeviationMircosecondsPerInvocation="4084"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="290" invocations="102" avgMicrosecondsPerInvocation="2843" maxMicrosecondsPerInvocation="60853" standardDeviationMircosecondsPerInvocation="8724"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="233" invocations="102" avgMicrosecondsPerInvocation="2293" maxMicrosecondsPerInvocation="74418" standardDeviationMircosecondsPerInvocation="7813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="197" invocations="251" avgMicrosecondsPerInvocation="787" maxMicrosecondsPerInvocation="62100" standardDeviationMircosecondsPerInvocation="4586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="195" invocations="534" avgMicrosecondsPerInvocation="366" maxMicrosecondsPerInvocation="40017" standardDeviationMircosecondsPerInvocation="2004"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="194" invocations="45" avgMicrosecondsPerInvocation="4323" maxMicrosecondsPerInvocation="25151" standardDeviationMircosecondsPerInvocation="6912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="186" invocations="153" avgMicrosecondsPerInvocation="1220" maxMicrosecondsPerInvocation="36914" standardDeviationMircosecondsPerInvocation="4159"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="163" invocations="256" avgMicrosecondsPerInvocation="637" maxMicrosecondsPerInvocation="95553" standardDeviationMircosecondsPerInvocation="6043"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="144" invocations="5239" avgMicrosecondsPerInvocation="27" maxMicrosecondsPerInvocation="54348" standardDeviationMircosecondsPerInvocation="890"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1242944704000" analysisTimestamp="1360509750048" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/com/google/protobuf/protobuf-java/2.1.0/protobuf-java-2.1.0.jar</Jar>
+  </Project>
+  <BugInstance type="SE_BAD_FIELD_STORE" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="com.google.protobuf.Descriptors$DescriptorValidationException">
+      <SourceLine classname="com.google.protobuf.Descriptors$DescriptorValidationException" start="1458" end="1498" sourcefile="Descriptors.java" sourcepath="com/google/protobuf/Descriptors.java"/>
+    </Class>
+    <Field classname="com.google.protobuf.Descriptors$DescriptorValidationException" name="proto" signature="Lcom/google/protobuf/Message;" isStatic="false">
+      <SourceLine classname="com.google.protobuf.Descriptors$DescriptorValidationException" sourcefile="Descriptors.java" sourcepath="com/google/protobuf/Descriptors.java"/>
+    </Field>
+    <Type descriptor="Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;" role="TYPE_FOUND">
+      <SourceLine classname="com.google.protobuf.DescriptorProtos$FileDescriptorProto" start="328" end="1138" sourcefile="DescriptorProtos.java" sourcepath="com/google/protobuf/DescriptorProtos.java"/>
+    </Type>
+    <SourceLine classname="com.google.protobuf.Descriptors$DescriptorValidationException" start="1496" end="1496" startBytecode="43" endBytecode="43" sourcefile="Descriptors.java" sourcepath="com/google/protobuf/Descriptors.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="com.google.protobuf.Descriptors$FieldDescriptor">
+      <SourceLine classname="com.google.protobuf.Descriptors$FieldDescriptor" start="608" end="1073" sourcefile="Descriptors.java" sourcepath="com/google/protobuf/Descriptors.java"/>
+    </Class>
+    <Method classname="com.google.protobuf.Descriptors$FieldDescriptor" name="compareTo" signature="(Lcom/google/protobuf/Descriptors$FieldDescriptor;)I" isStatic="false">
+      <SourceLine classname="com.google.protobuf.Descriptors$FieldDescriptor" start="746" end="751" startBytecode="0" endBytecode="90" sourcefile="Descriptors.java" sourcepath="com/google/protobuf/Descriptors.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 22 May 2009 01:25:04 +0300" total_classes="124" referenced_classes="198" total_bugs="2" total_size="9924" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="56.91" clock_seconds="32.52" peak_mbytes="109.09" alloc_mbytes="763.88" gc_seconds="1.48" priority_2="2">
+    <PackageStats package="com.google.protobuf" total_bugs="2" total_types="124" total_size="9924" priority_2="2">
+      <ClassStats class="com.google.protobuf.AbstractMessage" sourceFile="AbstractMessage.java" interface="false" size="115" bugs="0"/>
+      <ClassStats class="com.google.protobuf.AbstractMessage$Builder" sourceFile="AbstractMessage.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="com.google.protobuf.AbstractMessage$Builder$1" sourceFile="AbstractMessage.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.google.protobuf.BlockingRpcChannel" sourceFile="BlockingRpcChannel.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.google.protobuf.BlockingService" sourceFile="BlockingService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.google.protobuf.ByteString" sourceFile="ByteString.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.google.protobuf.ByteString$1" sourceFile="ByteString.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.google.protobuf.ByteString$CodedBuilder" sourceFile="ByteString.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.google.protobuf.ByteString$Output" sourceFile="ByteString.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.google.protobuf.CodedInputStream" sourceFile="CodedInputStream.java" interface="false" size="372" bugs="0"/>
+      <ClassStats class="com.google.protobuf.CodedInputStream$1" sourceFile="CodedInputStream.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.google.protobuf.CodedOutputStream" sourceFile="CodedOutputStream.java" interface="false" size="421" bugs="0"/>
+      <ClassStats class="com.google.protobuf.CodedOutputStream$1" sourceFile="CodedOutputStream.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.google.protobuf.CodedOutputStream$OutOfSpaceException" sourceFile="CodedOutputStream.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos" sourceFile="DescriptorProtos.java" interface="false" size="123" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$1" sourceFile="DescriptorProtos.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$DescriptorProto" sourceFile="DescriptorProtos.java" interface="false" size="177" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$DescriptorProto$Builder" sourceFile="DescriptorProtos.java" interface="false" size="340" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$DescriptorProto$ExtensionRange" sourceFile="DescriptorProtos.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$DescriptorProto$ExtensionRange$Builder" sourceFile="DescriptorProtos.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$EnumDescriptorProto" sourceFile="DescriptorProtos.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$EnumDescriptorProto$Builder" sourceFile="DescriptorProtos.java" interface="false" size="164" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$EnumOptions" sourceFile="DescriptorProtos.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$EnumOptions$Builder" sourceFile="DescriptorProtos.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$EnumValueDescriptorProto" sourceFile="DescriptorProtos.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$EnumValueDescriptorProto$Builder" sourceFile="DescriptorProtos.java" interface="false" size="136" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$EnumValueOptions" sourceFile="DescriptorProtos.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$EnumValueOptions$Builder" sourceFile="DescriptorProtos.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FieldDescriptorProto" sourceFile="DescriptorProtos.java" interface="false" size="178" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FieldDescriptorProto$Builder" sourceFile="DescriptorProtos.java" interface="false" size="234" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FieldDescriptorProto$Label" sourceFile="DescriptorProtos.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FieldDescriptorProto$Type" sourceFile="DescriptorProtos.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FieldOptions" sourceFile="DescriptorProtos.java" interface="false" size="140" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FieldOptions$Builder" sourceFile="DescriptorProtos.java" interface="false" size="188" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FieldOptions$CType" sourceFile="DescriptorProtos.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FileDescriptorProto" sourceFile="DescriptorProtos.java" interface="false" size="194" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FileDescriptorProto$Builder" sourceFile="DescriptorProtos.java" interface="false" size="348" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FileDescriptorSet" sourceFile="DescriptorProtos.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FileDescriptorSet$Builder" sourceFile="DescriptorProtos.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FileOptions" sourceFile="DescriptorProtos.java" interface="false" size="140" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FileOptions$Builder" sourceFile="DescriptorProtos.java" interface="false" size="190" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$FileOptions$OptimizeMode" sourceFile="DescriptorProtos.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$MessageOptions" sourceFile="DescriptorProtos.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$MessageOptions$Builder" sourceFile="DescriptorProtos.java" interface="false" size="132" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$MethodDescriptorProto" sourceFile="DescriptorProtos.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$MethodDescriptorProto$Builder" sourceFile="DescriptorProtos.java" interface="false" size="156" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$MethodOptions" sourceFile="DescriptorProtos.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$MethodOptions$Builder" sourceFile="DescriptorProtos.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$ServiceDescriptorProto" sourceFile="DescriptorProtos.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$ServiceDescriptorProto$Builder" sourceFile="DescriptorProtos.java" interface="false" size="164" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$ServiceOptions" sourceFile="DescriptorProtos.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$ServiceOptions$Builder" sourceFile="DescriptorProtos.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$UninterpretedOption" sourceFile="DescriptorProtos.java" interface="false" size="150" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$UninterpretedOption$Builder" sourceFile="DescriptorProtos.java" interface="false" size="197" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$UninterpretedOption$NamePart" sourceFile="DescriptorProtos.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DescriptorProtos$UninterpretedOption$NamePart$Builder" sourceFile="DescriptorProtos.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors" sourceFile="Descriptors.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$1" sourceFile="Descriptors.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$Descriptor" sourceFile="Descriptors.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$DescriptorPool" sourceFile="Descriptors.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$DescriptorPool$DescriptorIntPair" sourceFile="Descriptors.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$DescriptorPool$PackageDescriptor" sourceFile="Descriptors.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$DescriptorValidationException" sourceFile="Descriptors.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.protobuf.Descriptors$EnumDescriptor" sourceFile="Descriptors.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$EnumValueDescriptor" sourceFile="Descriptors.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$FieldDescriptor" sourceFile="Descriptors.java" interface="false" size="179" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.protobuf.Descriptors$FieldDescriptor$JavaType" sourceFile="Descriptors.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$FieldDescriptor$Type" sourceFile="Descriptors.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$FileDescriptor" sourceFile="Descriptors.java" interface="false" size="129" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$FileDescriptor$InternalDescriptorAssigner" sourceFile="Descriptors.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$GenericDescriptor" sourceFile="Descriptors.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$MethodDescriptor" sourceFile="Descriptors.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Descriptors$ServiceDescriptor" sourceFile="Descriptors.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DynamicMessage" sourceFile="DynamicMessage.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DynamicMessage$1" sourceFile="DynamicMessage.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.google.protobuf.DynamicMessage$Builder" sourceFile="DynamicMessage.java" interface="false" size="123" bugs="0"/>
+      <ClassStats class="com.google.protobuf.ExtensionRegistry" sourceFile="ExtensionRegistry.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.google.protobuf.ExtensionRegistry$1" sourceFile="ExtensionRegistry.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.google.protobuf.ExtensionRegistry$DescriptorIntPair" sourceFile="ExtensionRegistry.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.google.protobuf.ExtensionRegistry$ExtensionInfo" sourceFile="ExtensionRegistry.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.google.protobuf.FieldSet" sourceFile="FieldSet.java" interface="false" size="311" bugs="0"/>
+      <ClassStats class="com.google.protobuf.FieldSet$1" sourceFile="FieldSet.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage" sourceFile="GeneratedMessage.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$1" sourceFile="GeneratedMessage.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$Builder" sourceFile="GeneratedMessage.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$ExtendableBuilder" sourceFile="GeneratedMessage.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$ExtendableMessage" sourceFile="GeneratedMessage.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$ExtendableMessage$ExtensionWriter" sourceFile="GeneratedMessage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$FieldAccessorTable" sourceFile="GeneratedMessage.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$FieldAccessorTable$FieldAccessor" sourceFile="GeneratedMessage.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$FieldAccessorTable$RepeatedEnumFieldAccessor" sourceFile="GeneratedMessage.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor" sourceFile="GeneratedMessage.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor" sourceFile="GeneratedMessage.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor" sourceFile="GeneratedMessage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$FieldAccessorTable$SingularFieldAccessor" sourceFile="GeneratedMessage.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$FieldAccessorTable$SingularMessageFieldAccessor" sourceFile="GeneratedMessage.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.google.protobuf.GeneratedMessage$GeneratedExtension" sourceFile="GeneratedMessage.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.google.protobuf.InvalidProtocolBufferException" sourceFile="InvalidProtocolBufferException.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Message" sourceFile="Message.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Message$Builder" sourceFile="Message.java" interface="true" size="34" bugs="0"/>
+      <ClassStats class="com.google.protobuf.ProtocolMessageEnum" sourceFile="ProtocolMessageEnum.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.google.protobuf.RpcCallback" sourceFile="RpcCallback.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.google.protobuf.RpcChannel" sourceFile="RpcChannel.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.google.protobuf.RpcController" sourceFile="RpcController.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.google.protobuf.RpcUtil" sourceFile="RpcUtil.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.google.protobuf.RpcUtil$1" sourceFile="RpcUtil.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.google.protobuf.RpcUtil$2" sourceFile="RpcUtil.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.google.protobuf.RpcUtil$AlreadyCalledException" sourceFile="RpcUtil.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.google.protobuf.Service" sourceFile="Service.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.google.protobuf.ServiceException" sourceFile="ServiceException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.google.protobuf.TextFormat" sourceFile="TextFormat.java" interface="false" size="351" bugs="0"/>
+      <ClassStats class="com.google.protobuf.TextFormat$1" sourceFile="TextFormat.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.google.protobuf.TextFormat$InvalidEscapeSequence" sourceFile="TextFormat.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.google.protobuf.TextFormat$ParseException" sourceFile="TextFormat.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.google.protobuf.TextFormat$TextGenerator" sourceFile="TextFormat.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.google.protobuf.TextFormat$Tokenizer" sourceFile="TextFormat.java" interface="false" size="160" bugs="0"/>
+      <ClassStats class="com.google.protobuf.UninitializedMessageException" sourceFile="UninitializedMessageException.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.google.protobuf.UnknownFieldSet" sourceFile="UnknownFieldSet.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.google.protobuf.UnknownFieldSet$1" sourceFile="UnknownFieldSet.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.google.protobuf.UnknownFieldSet$Builder" sourceFile="UnknownFieldSet.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="com.google.protobuf.UnknownFieldSet$Field" sourceFile="UnknownFieldSet.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="com.google.protobuf.UnknownFieldSet$Field$Builder" sourceFile="UnknownFieldSet.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.google.protobuf.WireFormat" sourceFile="WireFormat.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.google.protobuf.WireFormat$1" sourceFile="WireFormat.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="2473" invocations="2260" avgMicrosecondsPerInvocation="1094" maxMicrosecondsPerInvocation="194613" standardDeviationMircosecondsPerInvocation="5827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="2284" invocations="2675" avgMicrosecondsPerInvocation="853" maxMicrosecondsPerInvocation="126812" standardDeviationMircosecondsPerInvocation="4345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1930" invocations="2431" avgMicrosecondsPerInvocation="793" maxMicrosecondsPerInvocation="135570" standardDeviationMircosecondsPerInvocation="4349"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1915" invocations="2735" avgMicrosecondsPerInvocation="700" maxMicrosecondsPerInvocation="81773" standardDeviationMircosecondsPerInvocation="3505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1608" invocations="2700" avgMicrosecondsPerInvocation="595" maxMicrosecondsPerInvocation="50486" standardDeviationMircosecondsPerInvocation="2711"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1301" invocations="2190" avgMicrosecondsPerInvocation="594" maxMicrosecondsPerInvocation="101646" standardDeviationMircosecondsPerInvocation="3516"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="1115" invocations="2675" avgMicrosecondsPerInvocation="416" maxMicrosecondsPerInvocation="59572" standardDeviationMircosecondsPerInvocation="2295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1084" invocations="198" avgMicrosecondsPerInvocation="5475" maxMicrosecondsPerInvocation="68277" standardDeviationMircosecondsPerInvocation="10585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1011" invocations="665" avgMicrosecondsPerInvocation="1521" maxMicrosecondsPerInvocation="58385" standardDeviationMircosecondsPerInvocation="4481"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="852" invocations="198" avgMicrosecondsPerInvocation="4304" maxMicrosecondsPerInvocation="81872" standardDeviationMircosecondsPerInvocation="8900"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="651" invocations="3119" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="55082" standardDeviationMircosecondsPerInvocation="1586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="541" invocations="2675" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="26985" standardDeviationMircosecondsPerInvocation="1338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="503" invocations="198" avgMicrosecondsPerInvocation="2543" maxMicrosecondsPerInvocation="71546" standardDeviationMircosecondsPerInvocation="7044"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="490" invocations="198" avgMicrosecondsPerInvocation="2475" maxMicrosecondsPerInvocation="59826" standardDeviationMircosecondsPerInvocation="6150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="446" invocations="33629" avgMicrosecondsPerInvocation="13" maxMicrosecondsPerInvocation="26189" standardDeviationMircosecondsPerInvocation="302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="434" invocations="124" avgMicrosecondsPerInvocation="3500" maxMicrosecondsPerInvocation="74564" standardDeviationMircosecondsPerInvocation="9996"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="376" invocations="2767" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="69165" standardDeviationMircosecondsPerInvocation="1728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="368" invocations="2260" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="55106" standardDeviationMircosecondsPerInvocation="1645"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="358" invocations="124" avgMicrosecondsPerInvocation="2894" maxMicrosecondsPerInvocation="39792" standardDeviationMircosecondsPerInvocation="6530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="335" invocations="124" avgMicrosecondsPerInvocation="2702" maxMicrosecondsPerInvocation="66999" standardDeviationMircosecondsPerInvocation="6686"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="326" invocations="124" avgMicrosecondsPerInvocation="2629" maxMicrosecondsPerInvocation="28376" standardDeviationMircosecondsPerInvocation="5375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="318" invocations="124" avgMicrosecondsPerInvocation="2570" maxMicrosecondsPerInvocation="36202" standardDeviationMircosecondsPerInvocation="5371"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="316" invocations="124" avgMicrosecondsPerInvocation="2549" maxMicrosecondsPerInvocation="54361" standardDeviationMircosecondsPerInvocation="7391"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="303" invocations="198" avgMicrosecondsPerInvocation="1530" maxMicrosecondsPerInvocation="19494" standardDeviationMircosecondsPerInvocation="2500"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="292" invocations="1073" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="23361" standardDeviationMircosecondsPerInvocation="1357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="233" invocations="198" avgMicrosecondsPerInvocation="1178" maxMicrosecondsPerInvocation="41724" standardDeviationMircosecondsPerInvocation="3542"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="233" invocations="124" avgMicrosecondsPerInvocation="1880" maxMicrosecondsPerInvocation="30695" standardDeviationMircosecondsPerInvocation="4841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="228" invocations="1940" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="36115" standardDeviationMircosecondsPerInvocation="970"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="211" invocations="616" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="73497" standardDeviationMircosecondsPerInvocation="3060"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="205" invocations="124" avgMicrosecondsPerInvocation="1655" maxMicrosecondsPerInvocation="22142" standardDeviationMircosecondsPerInvocation="3368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="205" invocations="219" avgMicrosecondsPerInvocation="936" maxMicrosecondsPerInvocation="22267" standardDeviationMircosecondsPerInvocation="2706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="198" invocations="124" avgMicrosecondsPerInvocation="1604" maxMicrosecondsPerInvocation="56711" standardDeviationMircosecondsPerInvocation="5865"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="197" invocations="124" avgMicrosecondsPerInvocation="1594" maxMicrosecondsPerInvocation="19878" standardDeviationMircosecondsPerInvocation="2935"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

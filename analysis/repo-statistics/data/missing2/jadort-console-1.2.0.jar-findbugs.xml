@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1231753244000" analysisTimestamp="1360895169172" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jasmine/jadort-console/1.2.0/jadort-console-1.2.0.jar</Jar>
+  </Project>
+  <BugInstance type="DMI_INVOKING_TOSTRING_ON_ARRAY" priority="2" abbrev="USELESS_STRING" category="CORRECTNESS">
+    <Class classname="org.ow2.jasmine.jadort.client.console.JadortConsole">
+      <SourceLine classname="org.ow2.jasmine.jadort.client.console.JadortConsole" start="59" end="1040" sourcefile="JadortConsole.java" sourcepath="org/ow2/jasmine/jadort/client/console/JadortConsole.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.jadort.client.console.JadortConsole" name="callRemoteMehod" signature="(Ljava/util/List;Ljava/lang/reflect/Method;Lorg/ow2/jasmine/jadort/client/console/JadortCommand;)Ljava/lang/Object;" isStatic="true">
+      <SourceLine classname="org.ow2.jasmine.jadort.client.console.JadortConsole" start="436" end="438" startBytecode="0" endBytecode="136" sourcefile="JadortConsole.java" sourcepath="org/ow2/jasmine/jadort/client/console/JadortConsole.java"/>
+    </Method>
+    <Method classname="java.util.List" name="toArray" signature="()[Ljava/lang/Object;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.util.List" sourcefile="List.java" sourcepath="java/util/List.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jasmine.jadort.client.console.JadortConsole" start="437" end="437" startBytecode="34" endBytecode="34" sourcefile="JadortConsole.java" sourcepath="org/ow2/jasmine/jadort/client/console/JadortConsole.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jasmine.jadort.client.console.JadortConsole">
+      <SourceLine classname="org.ow2.jasmine.jadort.client.console.JadortConsole" start="59" end="1040" sourcefile="JadortConsole.java" sourcepath="org/ow2/jasmine/jadort/client/console/JadortConsole.java"/>
+    </Class>
+    <Field classname="org.ow2.jasmine.jadort.client.console.JadortConsole" name="output" signature="Ljava/util/Map;" isStatic="true">
+      <SourceLine classname="org.ow2.jasmine.jadort.client.console.JadortConsole" sourcefile="JadortConsole.java" sourcepath="org/ow2/jasmine/jadort/client/console/JadortConsole.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jasmine.jadort.client.console.JadortConsole" start="328" end="328" startBytecode="1607" endBytecode="1607" sourcefile="JadortConsole.java" sourcepath="org/ow2/jasmine/jadort/client/console/JadortConsole.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>org.ow2.jasmine.jadort.api.IJadortService</MissingClass>
+    <MissingClass>org.ow2.jasmine.jadort.api.IJadortService$OperationType</MissingClass>
+    <MissingClass>org.ow2.jasmine.jadort.api.entities.deployment.ApplicationBean</MissingClass>
+    <MissingClass>org.ow2.jasmine.jadort.api.entities.deployment.OperationStateBean</MissingClass>
+    <MissingClass>org.ow2.jasmine.jadort.api.entities.deployment.OperationStateBean$Step</MissingClass>
+    <MissingClass>org.ow2.jasmine.jadort.api.entities.deployment.ServerProgressBean</MissingClass>
+    <MissingClass>org.ow2.jasmine.jadort.api.entities.deployment.WorkerProgressBean</MissingClass>
+    <MissingClass>org.ow2.jasmine.jadort.api.entities.topology.GroupBean</MissingClass>
+    <MissingClass>org.ow2.jasmine.jadort.api.entities.topology.ServerBean</MissingClass>
+    <MissingClass>org.ow2.jasmine.jadort.api.entities.topology.WorkerBean</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 12 Jan 2009 11:40:44 +0200" total_classes="3" referenced_classes="37" total_bugs="2" total_size="545" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="21.01" clock_seconds="10.78" peak_mbytes="61.48" alloc_mbytes="763.88" gc_seconds="0.14" priority_2="1" priority_1="1">
+    <PackageStats package="org.ow2.jasmine.jadort.client.console" total_bugs="2" total_types="3" total_size="545" priority_2="1" priority_1="1">
+      <ClassStats class="org.ow2.jasmine.jadort.client.console.JadortCommand" sourceFile="JadortCommand.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.jadort.client.console.JadortConsole" sourceFile="JadortConsole.java" interface="false" size="456" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.ow2.jasmine.jadort.client.console.JadortConsole$CommandArgs" sourceFile="JadortConsole.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="959" invocations="426" avgMicrosecondsPerInvocation="2253" maxMicrosecondsPerInvocation="158076" standardDeviationMircosecondsPerInvocation="8877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="714" invocations="37" avgMicrosecondsPerInvocation="19318" maxMicrosecondsPerInvocation="269177" standardDeviationMircosecondsPerInvocation="44845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="711" invocations="61" avgMicrosecondsPerInvocation="11658" maxMicrosecondsPerInvocation="338746" standardDeviationMircosecondsPerInvocation="45747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="639" invocations="37" avgMicrosecondsPerInvocation="17272" maxMicrosecondsPerInvocation="134662" standardDeviationMircosecondsPerInvocation="28164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="573" invocations="51" avgMicrosecondsPerInvocation="11248" maxMicrosecondsPerInvocation="23346" standardDeviationMircosecondsPerInvocation="6929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="461" invocations="61" avgMicrosecondsPerInvocation="7572" maxMicrosecondsPerInvocation="88959" standardDeviationMircosecondsPerInvocation="19408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="402" invocations="58" avgMicrosecondsPerInvocation="6937" maxMicrosecondsPerInvocation="120993" standardDeviationMircosecondsPerInvocation="17998"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="370" invocations="58" avgMicrosecondsPerInvocation="6387" maxMicrosecondsPerInvocation="89735" standardDeviationMircosecondsPerInvocation="15486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="347" invocations="37" avgMicrosecondsPerInvocation="9383" maxMicrosecondsPerInvocation="63328" standardDeviationMircosecondsPerInvocation="14348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="342" invocations="3" avgMicrosecondsPerInvocation="114058" maxMicrosecondsPerInvocation="342082" standardDeviationMircosecondsPerInvocation="161237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="321" invocations="54" avgMicrosecondsPerInvocation="5947" maxMicrosecondsPerInvocation="153596" standardDeviationMircosecondsPerInvocation="21155"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="291" invocations="58" avgMicrosecondsPerInvocation="5025" maxMicrosecondsPerInvocation="72416" standardDeviationMircosecondsPerInvocation="11175"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="272" invocations="59" avgMicrosecondsPerInvocation="4619" maxMicrosecondsPerInvocation="86998" standardDeviationMircosecondsPerInvocation="13809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="218" invocations="375" avgMicrosecondsPerInvocation="583" maxMicrosecondsPerInvocation="88252" standardDeviationMircosecondsPerInvocation="4610"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="206" invocations="188" avgMicrosecondsPerInvocation="1097" maxMicrosecondsPerInvocation="33727" standardDeviationMircosecondsPerInvocation="2747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="194" invocations="58" avgMicrosecondsPerInvocation="3360" maxMicrosecondsPerInvocation="66508" standardDeviationMircosecondsPerInvocation="10355"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

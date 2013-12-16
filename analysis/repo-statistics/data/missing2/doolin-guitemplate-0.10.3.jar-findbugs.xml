@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1301930811000" analysisTimestamp="1360895630365" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/net/sf/doolin/doolin-guitemplate/0.10.3/doolin-guitemplate-0.10.3.jar</Jar>
+  </Project>
+  <BugInstance type="SE_BAD_FIELD_STORE" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="net.sf.doolin.gui.template.component.JTemplate">
+      <SourceLine classname="net.sf.doolin.gui.template.component.JTemplate" start="35" end="307" sourcefile="JTemplate.java" sourcepath="net/sf/doolin/gui/template/component/JTemplate.java"/>
+    </Class>
+    <Field classname="net.sf.doolin.gui.template.component.JTemplate" name="hyperlinkListener" signature="Ljavax/swing/event/HyperlinkListener;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.template.component.JTemplate" sourcefile="JTemplate.java" sourcepath="net/sf/doolin/gui/template/component/JTemplate.java"/>
+    </Field>
+    <Type descriptor="Lnet/sf/doolin/gui/template/component/JTemplate$1;" role="TYPE_FOUND">
+      <SourceLine classname="net.sf.doolin.gui.template.component.JTemplate$1" start="261" end="288" sourcefile="JTemplate.java" sourcepath="net/sf/doolin/gui/template/component/JTemplate.java"/>
+    </Type>
+    <SourceLine classname="net.sf.doolin.gui.template.component.JTemplate" start="261" end="261" startBytecode="16" endBytecode="16" sourcefile="JTemplate.java" sourcepath="net/sf/doolin/gui/template/component/JTemplate.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>net.sf.doolin.gui.action.GUIAction</MissingClass>
+    <MissingClass>net.sf.doolin.gui.field.AbstractPropertyFieldDescriptor</MissingClass>
+    <MissingClass>net.sf.doolin.gui.field.support.FieldActionContext</MissingClass>
+    <MissingClass>net.sf.doolin.gui.field.support.SimpleField</MissingClass>
+    <MissingClass>net.sf.doolin.gui.view.GUIView</MissingClass>
+    <MissingClass>net.sf.doolin.template.TemplateEngine</MissingClass>
+    <MissingClass>net.sf.doolin.template.TemplateManager</MissingClass>
+    <MissingClass>net.sf.doolin.template.TemplateUtils</MissingClass>
+    <MissingClass>net.sf.doolin.util.URLUtils</MissingClass>
+    <MissingClass>net.sf.doolin.util.Utils</MissingClass>
+    <MissingClass>net.sf.doolin.util.factory.DataFactory</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 4 Apr 2011 18:26:51 +0300" total_classes="7" referenced_classes="362" total_bugs="1" total_size="213" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="30.12" clock_seconds="15.35" peak_mbytes="75.60" alloc_mbytes="763.88" gc_seconds="0.28" priority_2="1">
+    <PackageStats package="net.sf.doolin.gui.template.component" total_bugs="1" total_types="4" total_size="109" priority_2="1">
+      <ClassStats class="net.sf.doolin.gui.template.component.ActionCallback" sourceFile="ActionCallback.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.template.component.ActionURLStreamHandler" sourceFile="ActionURLStreamHandler.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.template.component.JTemplate" sourceFile="JTemplate.java" interface="false" size="82" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.gui.template.component.JTemplate$1" sourceFile="JTemplate.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.template.field" total_bugs="0" total_types="3" total_size="104">
+      <ClassStats class="net.sf.doolin.gui.template.field.FieldTemplate" sourceFile="FieldTemplate.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.template.field.FieldTemplate$1" sourceFile="FieldTemplate.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.template.field.FieldTemplate$2" sourceFile="FieldTemplate.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="3045" invocations="362" avgMicrosecondsPerInvocation="8411" maxMicrosecondsPerInvocation="253557" standardDeviationMircosecondsPerInvocation="20870"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="2574" invocations="362" avgMicrosecondsPerInvocation="7111" maxMicrosecondsPerInvocation="201240" standardDeviationMircosecondsPerInvocation="17082"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2348" invocations="1740" avgMicrosecondsPerInvocation="1349" maxMicrosecondsPerInvocation="104051" standardDeviationMircosecondsPerInvocation="5675"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="1194" invocations="362" avgMicrosecondsPerInvocation="3300" maxMicrosecondsPerInvocation="57267" standardDeviationMircosecondsPerInvocation="7525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="749" invocations="740" avgMicrosecondsPerInvocation="1013" maxMicrosecondsPerInvocation="51572" standardDeviationMircosecondsPerInvocation="2328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="567" invocations="362" avgMicrosecondsPerInvocation="1568" maxMicrosecondsPerInvocation="23924" standardDeviationMircosecondsPerInvocation="2848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="494" invocations="362" avgMicrosecondsPerInvocation="1364" maxMicrosecondsPerInvocation="42333" standardDeviationMircosecondsPerInvocation="3612"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

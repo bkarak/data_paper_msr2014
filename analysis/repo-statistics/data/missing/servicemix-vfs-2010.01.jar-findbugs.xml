@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1268735129000" analysisTimestamp="1360509541972" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/servicemix/servicemix-vfs/2010.01/servicemix-vfs-2010.01.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.servicemix.vfs.VFSComponent">
+      <SourceLine classname="org.apache.servicemix.vfs.VFSComponent" start="29" end="64" sourcefile="VFSComponent.java" sourcepath="org/apache/servicemix/vfs/VFSComponent.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.vfs.VFSComponent" name="getEndpoints" signature="()[Lorg/apache/servicemix/vfs/VFSEndpointType;" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.vfs.VFSComponent" start="40" end="40" startBytecode="0" endBytecode="46" sourcefile="VFSComponent.java" sourcepath="org/apache/servicemix/vfs/VFSComponent.java"/>
+    </Method>
+    <Field classname="org.apache.servicemix.vfs.VFSComponent" name="endpoints" signature="[Lorg/apache/servicemix/vfs/VFSEndpointType;" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.vfs.VFSComponent" sourcefile="VFSComponent.java" sourcepath="org/apache/servicemix/vfs/VFSComponent.java"/>
+    </Field>
+    <SourceLine classname="org.apache.servicemix.vfs.VFSComponent" start="40" end="40" startBytecode="4" endBytecode="4" sourcefile="VFSComponent.java" sourcepath="org/apache/servicemix/vfs/VFSComponent.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.servicemix.vfs.VFSComponent">
+      <SourceLine classname="org.apache.servicemix.vfs.VFSComponent" start="29" end="64" sourcefile="VFSComponent.java" sourcepath="org/apache/servicemix/vfs/VFSComponent.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.vfs.VFSComponent" name="setEndpoints" signature="([Lorg/apache/servicemix/vfs/VFSEndpointType;)V" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.vfs.VFSComponent" start="48" end="49" startBytecode="0" endBytecode="61" sourcefile="VFSComponent.java" sourcepath="org/apache/servicemix/vfs/VFSComponent.java"/>
+    </Method>
+    <Field classname="org.apache.servicemix.vfs.VFSComponent" name="endpoints" signature="[Lorg/apache/servicemix/vfs/VFSEndpointType;" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.vfs.VFSComponent" sourcefile="VFSComponent.java" sourcepath="org/apache/servicemix/vfs/VFSComponent.java"/>
+    </Field>
+    <LocalVariable name="endpoints" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.servicemix.vfs.VFSComponent" start="48" end="48" startBytecode="2" endBytecode="2" sourcefile="VFSComponent.java" sourcepath="org/apache/servicemix/vfs/VFSComponent.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="1" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.servicemix.vfs.VFSSendingEndpoint">
+      <SourceLine classname="org.apache.servicemix.vfs.VFSSendingEndpoint" start="43" end="182" sourcefile="VFSSendingEndpoint.java" sourcepath="org/apache/servicemix/vfs/VFSSendingEndpoint.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.vfs.VFSSendingEndpoint" name="processInOnly" signature="(Ljavax/jbi/messaging/MessageExchange;Ljavax/jbi/messaging/NormalizedMessage;)V" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.vfs.VFSSendingEndpoint" start="64" end="117" startBytecode="0" endBytecode="647" sourcefile="VFSSendingEndpoint.java" sourcepath="org/apache/servicemix/vfs/VFSSendingEndpoint.java"/>
+    </Method>
+    <LocalVariable name="tmpName" register="4" pc="76" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.servicemix.components.util.FileMarshaler" name="getTempOutputName" signature="(Ljavax/jbi/messaging/MessageExchange;Ljavax/jbi/messaging/NormalizedMessage;)Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.servicemix.components.util.FileMarshaler"/>
+    </Method>
+    <SourceLine classname="org.apache.servicemix.vfs.VFSSendingEndpoint" start="81" end="81" startBytecode="78" endBytecode="78" sourcefile="VFSSendingEndpoint.java" sourcepath="org/apache/servicemix/vfs/VFSSendingEndpoint.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="org.apache.servicemix.vfs.VFSSendingEndpoint">
+      <SourceLine classname="org.apache.servicemix.vfs.VFSSendingEndpoint" start="43" end="182" sourcefile="VFSSendingEndpoint.java" sourcepath="org/apache/servicemix/vfs/VFSSendingEndpoint.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.vfs.VFSSendingEndpoint" name="processInOnly" signature="(Ljavax/jbi/messaging/MessageExchange;Ljavax/jbi/messaging/NormalizedMessage;)V" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.vfs.VFSSendingEndpoint" start="64" end="117" startBytecode="0" endBytecode="647" sourcefile="VFSSendingEndpoint.java" sourcepath="org/apache/servicemix/vfs/VFSSendingEndpoint.java"/>
+    </Method>
+    <LocalVariable name="content" register="8" pc="153" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.commons.vfs.FileObject" name="getContent" signature="()Lorg/apache/commons/vfs/FileContent;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.commons.vfs.FileObject"/>
+    </Method>
+    <SourceLine classname="org.apache.servicemix.vfs.VFSSendingEndpoint" start="91" end="91" startBytecode="148" endBytecode="148" sourcefile="VFSSendingEndpoint.java" sourcepath="org/apache/servicemix/vfs/VFSSendingEndpoint.java"/>
+    <SourceLine classname="org.apache.servicemix.vfs.VFSSendingEndpoint" start="92" end="92" startBytecode="155" endBytecode="155" sourcefile="VFSSendingEndpoint.java" sourcepath="org/apache/servicemix/vfs/VFSSendingEndpoint.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="28">
+    <MissingClass>javax.jbi.JBIException</MissingClass>
+    <MissingClass>javax.jbi.component.ComponentContext</MissingClass>
+    <MissingClass>javax.jbi.component.InstallationContext</MissingClass>
+    <MissingClass>javax.jbi.management.MBeanNames</MissingClass>
+    <MissingClass>javax.jbi.messaging.ExchangeStatus</MissingClass>
+    <MissingClass>javax.jbi.messaging.InOnly</MissingClass>
+    <MissingClass>javax.jbi.messaging.MessageExchange</MissingClass>
+    <MissingClass>javax.jbi.messaging.MessageExchangeFactory</MissingClass>
+    <MissingClass>javax.jbi.messaging.MessagingException</MissingClass>
+    <MissingClass>javax.jbi.messaging.NormalizedMessage</MissingClass>
+    <MissingClass>javax.jbi.servicedesc.ServiceEndpoint</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.commons.vfs.FileContent</MissingClass>
+    <MissingClass>org.apache.commons.vfs.FileName</MissingClass>
+    <MissingClass>org.apache.commons.vfs.FileObject</MissingClass>
+    <MissingClass>org.apache.commons.vfs.FileSystemManager</MissingClass>
+    <MissingClass>org.apache.commons.vfs.FileType</MissingClass>
+    <MissingClass>org.apache.commons.vfs.VFS</MissingClass>
+    <MissingClass>org.apache.servicemix.common.DefaultComponent</MissingClass>
+    <MissingClass>org.apache.servicemix.common.endpoints.PollingEndpoint</MissingClass>
+    <MissingClass>org.apache.servicemix.common.endpoints.ProviderEndpoint</MissingClass>
+    <MissingClass>org.apache.servicemix.common.locks.LockManager</MissingClass>
+    <MissingClass>org.apache.servicemix.common.locks.impl.SimpleLockManager</MissingClass>
+    <MissingClass>org.apache.servicemix.components.util.DefaultFileMarshaler</MissingClass>
+    <MissingClass>org.apache.servicemix.components.util.FileMarshaler</MissingClass>
+    <MissingClass>org.apache.servicemix.executors.Executor</MissingClass>
+    <MissingClass>org.apache.servicemix.executors.ExecutorAwareRunnable</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 16 Mar 2010 12:25:29 +0200" total_classes="7" referenced_classes="33" total_bugs="4" total_size="390" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="11.08" clock_seconds="6.01" peak_mbytes="57.79" alloc_mbytes="763.88" gc_seconds="0.11" priority_2="3" priority_1="1">
+    <PackageStats package="org.apache.servicemix.common" total_bugs="0" total_types="1" total_size="68">
+      <ClassStats class="org.apache.servicemix.common.DefaultBootstrap" sourceFile="DefaultBootstrap.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.servicemix.vfs" total_bugs="4" total_types="6" total_size="322" priority_2="3" priority_1="1">
+      <ClassStats class="org.apache.servicemix.vfs.FileObjectResolver" sourceFile="FileObjectResolver.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.vfs.VFSComponent" sourceFile="VFSComponent.java" interface="false" size="14" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.servicemix.vfs.VFSEndpointType" sourceFile="VFSEndpointType.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.vfs.VFSPollingEndpoint" sourceFile="VFSPollingEndpoint.java" interface="false" size="203" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.vfs.VFSPollingEndpoint$1" sourceFile="VFSPollingEndpoint.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.vfs.VFSSendingEndpoint" sourceFile="VFSSendingEndpoint.java" interface="false" size="68" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="527" invocations="389" avgMicrosecondsPerInvocation="1356" maxMicrosecondsPerInvocation="92457" standardDeviationMircosecondsPerInvocation="5968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="263" invocations="33" avgMicrosecondsPerInvocation="7976" maxMicrosecondsPerInvocation="59308" standardDeviationMircosecondsPerInvocation="13845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="258" invocations="68" avgMicrosecondsPerInvocation="3794" maxMicrosecondsPerInvocation="83489" standardDeviationMircosecondsPerInvocation="12543"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="248" invocations="318" avgMicrosecondsPerInvocation="781" maxMicrosecondsPerInvocation="141931" standardDeviationMircosecondsPerInvocation="8038"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="187" invocations="68" avgMicrosecondsPerInvocation="2757" maxMicrosecondsPerInvocation="28445" standardDeviationMircosecondsPerInvocation="5715"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="185" invocations="68" avgMicrosecondsPerInvocation="2724" maxMicrosecondsPerInvocation="34195" standardDeviationMircosecondsPerInvocation="6320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="163" invocations="33" avgMicrosecondsPerInvocation="4963" maxMicrosecondsPerInvocation="26386" standardDeviationMircosecondsPerInvocation="7359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="153" invocations="68" avgMicrosecondsPerInvocation="2251" maxMicrosecondsPerInvocation="23615" standardDeviationMircosecondsPerInvocation="4627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="151" invocations="68" avgMicrosecondsPerInvocation="2228" maxMicrosecondsPerInvocation="40618" standardDeviationMircosecondsPerInvocation="5536"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="149" invocations="68" avgMicrosecondsPerInvocation="2203" maxMicrosecondsPerInvocation="35057" standardDeviationMircosecondsPerInvocation="5179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="148" invocations="35" avgMicrosecondsPerInvocation="4244" maxMicrosecondsPerInvocation="53528" standardDeviationMircosecondsPerInvocation="9337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="135" invocations="33" avgMicrosecondsPerInvocation="4102" maxMicrosecondsPerInvocation="23904" standardDeviationMircosecondsPerInvocation="6607"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="120" invocations="144" avgMicrosecondsPerInvocation="836" maxMicrosecondsPerInvocation="21299" standardDeviationMircosecondsPerInvocation="2272"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="95" invocations="33" avgMicrosecondsPerInvocation="2886" maxMicrosecondsPerInvocation="42681" standardDeviationMircosecondsPerInvocation="8066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="87" invocations="7" avgMicrosecondsPerInvocation="12440" maxMicrosecondsPerInvocation="71608" standardDeviationMircosecondsPerInvocation="24426"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="75" invocations="33" avgMicrosecondsPerInvocation="2294" maxMicrosecondsPerInvocation="20388" standardDeviationMircosecondsPerInvocation="4613"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="74" invocations="68" avgMicrosecondsPerInvocation="1094" maxMicrosecondsPerInvocation="20446" standardDeviationMircosecondsPerInvocation="2778"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="69" invocations="7" avgMicrosecondsPerInvocation="9986" maxMicrosecondsPerInvocation="45371" standardDeviationMircosecondsPerInvocation="16696"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="57" invocations="68" avgMicrosecondsPerInvocation="838" maxMicrosecondsPerInvocation="46140" standardDeviationMircosecondsPerInvocation="5537"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="53" invocations="33" avgMicrosecondsPerInvocation="1635" maxMicrosecondsPerInvocation="14358" standardDeviationMircosecondsPerInvocation="2717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="47" invocations="392" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="3600" standardDeviationMircosecondsPerInvocation="264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="47" invocations="7" avgMicrosecondsPerInvocation="6720" maxMicrosecondsPerInvocation="39172" standardDeviationMircosecondsPerInvocation="13281"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

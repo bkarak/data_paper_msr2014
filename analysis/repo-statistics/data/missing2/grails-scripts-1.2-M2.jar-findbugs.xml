@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1249988475000" analysisTimestamp="1360895432055" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/grails/grails-scripts/1.2-M2/grails-scripts-1.2-M2.jar</Jar>
+  </Project>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" abbrev="DE" category="BAD_PRACTICE">
+    <Class classname="ReleasePlugin">
+      <SourceLine classname="ReleasePlugin" start="32" end="387" sourcefile="ReleasePlugin.groovy" sourcepath="ReleasePlugin.groovy"/>
+    </Class>
+    <Method classname="ReleasePlugin" name="checkoutOrImportPluginMetadata" signature="(Ljava/io/File;Ljava/lang/String;Lorg/tmatesoft/svn/core/wc/SVNUpdateClient;Lorg/tmatesoft/svn/core/wc/SVNCommitClient;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="ReleasePlugin" start="195" end="216" startBytecode="0" endBytecode="743" sourcefile="ReleasePlugin.groovy" sourcepath="ReleasePlugin.groovy"/>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="29" end="78" sourcefile="Exception.java" sourcepath="java/lang/Exception.java"/>
+    </Class>
+    <SourceLine classname="ReleasePlugin" start="200" end="200" startBytecode="150" endBytecode="150" sourcefile="ReleasePlugin.groovy" sourcepath="ReleasePlugin.groovy"/>
+    <SourceLine classname="ReleasePlugin" start="200" end="200" startBytecode="150" endBytecode="150" sourcefile="ReleasePlugin.groovy" sourcepath="ReleasePlugin.groovy"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="_PluginDependencies">
+      <SourceLine classname="_PluginDependencies" start="57" end="1327" sourcefile="_PluginDependencies.groovy" sourcepath="_PluginDependencies.groovy"/>
+    </Class>
+    <Method classname="_PluginDependencies" name="buildReleaseInfo" signature="(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="_PluginDependencies" start="1105" end="1132" startBytecode="0" endBytecode="759" sourcefile="_PluginDependencies.groovy" sourcepath="_PluginDependencies.groovy"/>
+    </Method>
+    <SourceLine classname="_PluginDependencies" start="1130" end="1130" startBytecode="528" endBytecode="528" sourcefile="_PluginDependencies.groovy" sourcepath="_PluginDependencies.groovy"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>groovy.lang.Closure</MissingClass>
+    <MissingClass>groovy.lang.GroovyObjectSupport</MissingClass>
+    <MissingClass>groovy.lang.MetaClass</MissingClass>
+    <MissingClass>groovy.lang.Reference</MissingClass>
+    <MissingClass>groovy.lang.Script</MissingClass>
+    <MissingClass>org.codehaus.groovy.reflection.ClassInfo</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.ArrayUtil</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.GStringImpl</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.ScriptBytecodeAdapter</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.callsite.CallSite</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.callsite.CallSiteArray</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2009 14:01:15 +0300" total_classes="532" referenced_classes="566" total_bugs="2" total_size="15087" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="72.41" clock_seconds="39.72" peak_mbytes="148.11" alloc_mbytes="763.88" gc_seconds="4.07" priority_2="2">
+    <PackageStats package="" total_bugs="2" total_types="532" total_size="15087" priority_2="2">
+      <ClassStats class="Bootstrap" sourceFile="Bootstrap.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="BugReport" sourceFile="BugReport.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="BugReport$_run_closure1" sourceFile="BugReport.groovy" interface="false" size="28" bugs="0"/>
+      <ClassStats class="BugReport$_run_closure1_closure2" sourceFile="BugReport.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="Clean" sourceFile="Clean.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="Compile" sourceFile="Compile.groovy" interface="false" size="52" bugs="0"/>
+      <ClassStats class="Console" sourceFile="Console.groovy" interface="false" size="51" bugs="0"/>
+      <ClassStats class="Console$_run_closure1" sourceFile="Console.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="Console$_run_closure2" sourceFile="Console.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="Console$_run_closure2_closure4" sourceFile="Console.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Console$_run_closure2_closure5" sourceFile="Console.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="Console$_run_closure3" sourceFile="Console.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="Console$_run_closure3_closure6" sourceFile="Console.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Console$_run_closure3_closure6_closure8" sourceFile="Console.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Console$_run_closure3_closure7" sourceFile="Console.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Console$_run_closure3_closure7_closure9" sourceFile="Console.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="ConsoleFocusListener" sourceFile="Console.groovy" interface="false" size="43" bugs="0"/>
+      <ClassStats class="CreateApp_" sourceFile="CreateApp_.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="CreateController" sourceFile="CreateController.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="CreateController$_run_closure1" sourceFile="CreateController.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="CreateDomainClass" sourceFile="CreateDomainClass.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="CreateDomainClass$_run_closure1" sourceFile="CreateDomainClass.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="CreateFilters" sourceFile="CreateFilters.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="CreateFilters$_run_closure1" sourceFile="CreateFilters.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="CreateIntegrationTest" sourceFile="CreateIntegrationTest.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="CreateIntegrationTest$_run_closure1" sourceFile="CreateIntegrationTest.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="CreatePlugin_" sourceFile="CreatePlugin_.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="CreateScript" sourceFile="CreateScript.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="CreateScript$_run_closure1" sourceFile="CreateScript.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="CreateService" sourceFile="CreateService.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="CreateService$_run_closure1" sourceFile="CreateService.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="CreateTagLib" sourceFile="CreateTagLib.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="CreateTagLib$_run_closure1" sourceFile="CreateTagLib.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="CreateUnitTest" sourceFile="CreateUnitTest.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="CreateUnitTest$_run_closure1" sourceFile="CreateUnitTest.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="Doc" sourceFile="Doc.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="GenerateAll" sourceFile="GenerateAll.groovy" interface="false" size="52" bugs="0"/>
+      <ClassStats class="GenerateAll$_run_closure1" sourceFile="GenerateAll.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="GenerateController" sourceFile="GenerateController.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="GenerateController$_run_closure1" sourceFile="GenerateController.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="GenerateViews" sourceFile="GenerateViews.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="GenerateViews$_run_closure1" sourceFile="GenerateViews.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="HelpEvaluatingCategory" sourceFile="Help_.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="Help_" sourceFile="Help_.groovy" interface="false" size="65" bugs="0"/>
+      <ClassStats class="Help_$_run_closure1" sourceFile="Help_.groovy" interface="false" size="35" bugs="0"/>
+      <ClassStats class="Help_$_run_closure1_closure3" sourceFile="Help_.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Help_$_run_closure1_closure4" sourceFile="Help_.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="Help_$_run_closure1_closure5" sourceFile="Help_.groovy" interface="false" size="45" bugs="0"/>
+      <ClassStats class="Help_$_run_closure1_closure6" sourceFile="Help_.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Help_$_run_closure1_closure7" sourceFile="Help_.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Help_$_run_closure1_closure8" sourceFile="Help_.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Help_$_run_closure2" sourceFile="Help_.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="Help_$_run_closure2_closure9" sourceFile="Help_.groovy" interface="false" size="38" bugs="0"/>
+      <ClassStats class="Init" sourceFile="Init.groovy" interface="false" size="56" bugs="0"/>
+      <ClassStats class="Init$_run_closure1" sourceFile="Init.groovy" interface="false" size="36" bugs="0"/>
+      <ClassStats class="Init$_run_closure2" sourceFile="Init.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="Init$_run_closure2_closure7" sourceFile="Init.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="Init$_run_closure3" sourceFile="Init.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="Init$_run_closure3_closure8" sourceFile="Init.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="Init$_run_closure4" sourceFile="Init.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Init$_run_closure5" sourceFile="Init.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Init$_run_closure6" sourceFile="Init.groovy" interface="false" size="65" bugs="0"/>
+      <ClassStats class="Init$_run_closure6_closure9" sourceFile="Init.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="InstallPlugin" sourceFile="InstallPlugin.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="InstallTemplates" sourceFile="InstallTemplates.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="InstallTemplates$_run_closure1" sourceFile="InstallTemplates.groovy" interface="false" size="31" bugs="0"/>
+      <ClassStats class="ListPlugins_" sourceFile="ListPlugins_.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="Package" sourceFile="Package.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="Package$_run_closure1" sourceFile="Package.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="PackagePlugin_" sourceFile="PackagePlugin_.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="PluginInfo_" sourceFile="PluginInfo_.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="ReleasePlugin" sourceFile="ReleasePlugin.groovy" interface="false" size="94" bugs="1" priority_2="1"/>
+      <ClassStats class="ReleasePlugin$_run_closure1" sourceFile="ReleasePlugin.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="ReleasePlugin$_run_closure2" sourceFile="ReleasePlugin.groovy" interface="false" size="36" bugs="0"/>
+      <ClassStats class="ReleasePlugin$_run_closure3" sourceFile="ReleasePlugin.groovy" interface="false" size="84" bugs="0"/>
+      <ClassStats class="ReleasePlugin$_run_closure4" sourceFile="ReleasePlugin.groovy" interface="false" size="48" bugs="0"/>
+      <ClassStats class="ReleasePlugin$_run_closure5" sourceFile="ReleasePlugin.groovy" interface="false" size="44" bugs="0"/>
+      <ClassStats class="ReleasePlugin$_run_closure6" sourceFile="ReleasePlugin.groovy" interface="false" size="40" bugs="0"/>
+      <ClassStats class="ReleasePlugin$_run_closure7" sourceFile="ReleasePlugin.groovy" interface="false" size="46" bugs="0"/>
+      <ClassStats class="ReleasePlugin$_run_closure8" sourceFile="ReleasePlugin.groovy" interface="false" size="67" bugs="0"/>
+      <ClassStats class="ReleasePlugin$_run_closure9" sourceFile="ReleasePlugin.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="RunApp" sourceFile="RunApp.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="RunApp$_run_closure1" sourceFile="RunApp.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="RunWar" sourceFile="RunWar.groovy" interface="false" size="54" bugs="0"/>
+      <ClassStats class="RunWar$_run_closure1" sourceFile="RunWar.groovy" interface="false" size="27" bugs="0"/>
+      <ClassStats class="SchemaExport" sourceFile="SchemaExport.groovy" interface="false" size="59" bugs="0"/>
+      <ClassStats class="SchemaExport$_run_closure1" sourceFile="SchemaExport.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="SchemaExport$_run_closure1_closure5" sourceFile="SchemaExport.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="SchemaExport$_run_closure2" sourceFile="SchemaExport.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="SchemaExport$_run_closure2_closure6" sourceFile="SchemaExport.groovy" interface="false" size="30" bugs="0"/>
+      <ClassStats class="SchemaExport$_run_closure3" sourceFile="SchemaExport.groovy" interface="false" size="53" bugs="0"/>
+      <ClassStats class="SchemaExport$_run_closure4" sourceFile="SchemaExport.groovy" interface="false" size="58" bugs="0"/>
+      <ClassStats class="SetProxy_" sourceFile="SetProxy_.groovy" interface="false" size="51" bugs="0"/>
+      <ClassStats class="SetProxy_$_run_closure1" sourceFile="SetProxy_.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="SetProxy_$_run_closure2" sourceFile="SetProxy_.groovy" interface="false" size="38" bugs="0"/>
+      <ClassStats class="SetVersion" sourceFile="SetVersion.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="SetVersion$_run_closure1" sourceFile="SetVersion.groovy" interface="false" size="27" bugs="0"/>
+      <ClassStats class="Shell" sourceFile="Shell.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="Shell$_run_closure1" sourceFile="Shell.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="Shell$_run_closure2" sourceFile="Shell.groovy" interface="false" size="41" bugs="0"/>
+      <ClassStats class="Shell$_run_closure2_closure3" sourceFile="Shell.groovy" interface="false" size="27" bugs="0"/>
+      <ClassStats class="Shell$_run_closure2_closure3_closure4" sourceFile="Shell.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Shell$_run_closure2_closure3_closure5" sourceFile="Shell.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Shell$_run_closure2_closure3_closure6" sourceFile="Shell.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Stats" sourceFile="Stats.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="Stats$_run_closure1" sourceFile="Stats.groovy" interface="false" size="38" bugs="0"/>
+      <ClassStats class="Stats$_run_closure1_closure2" sourceFile="Stats.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="Stats$_run_closure1_closure2_closure4" sourceFile="Stats.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Stats$_run_closure1_closure2_closure5" sourceFile="Stats.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="Stats$_run_closure1_closure3" sourceFile="Stats.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="TestApp" sourceFile="TestApp.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="TestApp$_run_closure1" sourceFile="TestApp.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="UninstallPlugin" sourceFile="UninstallPlugin.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="Upgrade" sourceFile="Upgrade.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1" sourceFile="Upgrade.groovy" interface="false" size="57" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3" sourceFile="Upgrade.groovy" interface="false" size="62" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure10" sourceFile="Upgrade.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure11" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure12" sourceFile="Upgrade.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure13" sourceFile="Upgrade.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure4" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure5" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure5_closure14" sourceFile="Upgrade.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure6" sourceFile="Upgrade.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure6_closure15" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure7" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure7_closure16" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure7_closure17" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure7_closure17_closure18" sourceFile="Upgrade.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure8" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure8_closure19" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure8_closure20" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure8_closure20_closure21" sourceFile="Upgrade.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure9" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure9_closure22" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure9_closure23" sourceFile="Upgrade.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure1_closure3_closure9_closure23_closure24" sourceFile="Upgrade.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Upgrade$_run_closure2" sourceFile="Upgrade.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="War" sourceFile="War.groovy" interface="false" size="54" bugs="0"/>
+      <ClassStats class="War$_run_closure1" sourceFile="War.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsArgParsing" sourceFile="_GrailsArgParsing.groovy" interface="false" size="52" bugs="0"/>
+      <ClassStats class="_GrailsArgParsing$_run_closure1" sourceFile="_GrailsArgParsing.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsArgParsing$_run_closure1_closure2" sourceFile="_GrailsArgParsing.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap" sourceFile="_GrailsBootstrap.groovy" interface="false" size="57" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure1" sourceFile="_GrailsBootstrap.groovy" interface="false" size="43" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure1_closure8" sourceFile="_GrailsBootstrap.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure1_closure8_closure9" sourceFile="_GrailsBootstrap.groovy" interface="false" size="28" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure1_closure8_closure9_closure10" sourceFile="_GrailsBootstrap.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure1_closure8_closure9_closure11" sourceFile="_GrailsBootstrap.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure1_closure8_closure9_closure12" sourceFile="_GrailsBootstrap.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure2" sourceFile="_GrailsBootstrap.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure2_closure13" sourceFile="_GrailsBootstrap.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure3" sourceFile="_GrailsBootstrap.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure4" sourceFile="_GrailsBootstrap.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure5" sourceFile="_GrailsBootstrap.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure6" sourceFile="_GrailsBootstrap.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure6_closure14" sourceFile="_GrailsBootstrap.groovy" interface="false" size="32" bugs="0"/>
+      <ClassStats class="_GrailsBootstrap$_run_closure7" sourceFile="_GrailsBootstrap.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsClasspath" sourceFile="_GrailsClasspath.groovy" interface="false" size="91" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure1" sourceFile="_GrailsClasspath.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure10" sourceFile="_GrailsClasspath.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure10_closure16" sourceFile="_GrailsClasspath.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure11" sourceFile="_GrailsClasspath.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure11_closure17" sourceFile="_GrailsClasspath.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure2" sourceFile="_GrailsClasspath.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure3" sourceFile="_GrailsClasspath.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure4" sourceFile="_GrailsClasspath.groovy" interface="false" size="28" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure4_closure12" sourceFile="_GrailsClasspath.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure5" sourceFile="_GrailsClasspath.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure6" sourceFile="_GrailsClasspath.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure7" sourceFile="_GrailsClasspath.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure7_closure13" sourceFile="_GrailsClasspath.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure8" sourceFile="_GrailsClasspath.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure8_closure14" sourceFile="_GrailsClasspath.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure9" sourceFile="_GrailsClasspath.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsClasspath$_run_closure9_closure15" sourceFile="_GrailsClasspath.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsClean" sourceFile="_GrailsClean.groovy" interface="false" size="53" bugs="0"/>
+      <ClassStats class="_GrailsClean$_run_closure1" sourceFile="_GrailsClean.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsClean$_run_closure2" sourceFile="_GrailsClean.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsClean$_run_closure3" sourceFile="_GrailsClean.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsClean$_run_closure4" sourceFile="_GrailsClean.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsClean$_run_closure4_closure6" sourceFile="_GrailsClean.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsClean$_run_closure4_closure6_closure7" sourceFile="_GrailsClean.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsClean$_run_closure5" sourceFile="_GrailsClean.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="_GrailsCompile" sourceFile="_GrailsCompile.groovy" interface="false" size="58" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure1" sourceFile="_GrailsCompile.groovy" interface="false" size="30" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure2" sourceFile="_GrailsCompile.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure2_closure8" sourceFile="_GrailsCompile.groovy" interface="false" size="27" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure3" sourceFile="_GrailsCompile.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure3_closure9" sourceFile="_GrailsCompile.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure3_closure9_closure10" sourceFile="_GrailsCompile.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure3_closure9_closure11" sourceFile="_GrailsCompile.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure4" sourceFile="_GrailsCompile.groovy" interface="false" size="30" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure5" sourceFile="_GrailsCompile.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure5_closure12" sourceFile="_GrailsCompile.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure6" sourceFile="_GrailsCompile.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsCompile$_run_closure7" sourceFile="_GrailsCompile.groovy" interface="false" size="36" bugs="0"/>
+      <ClassStats class="_GrailsCreateArtifacts" sourceFile="_GrailsCreateArtifacts.groovy" interface="false" size="51" bugs="0"/>
+      <ClassStats class="_GrailsCreateArtifacts$_run_closure1" sourceFile="_GrailsCreateArtifacts.groovy" interface="false" size="68" bugs="0"/>
+      <ClassStats class="_GrailsCreateArtifacts$_run_closure2" sourceFile="_GrailsCreateArtifacts.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsCreateArtifacts$_run_closure3" sourceFile="_GrailsCreateArtifacts.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsCreateArtifacts$_run_closure4" sourceFile="_GrailsCreateArtifacts.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsCreateProject" sourceFile="_GrailsCreateProject.groovy" interface="false" size="67" bugs="0"/>
+      <ClassStats class="_GrailsCreateProject$_run_closure1" sourceFile="_GrailsCreateProject.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="_GrailsCreateProject$_run_closure2" sourceFile="_GrailsCreateProject.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="_GrailsCreateProject$_run_closure2_closure5" sourceFile="_GrailsCreateProject.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsCreateProject$_run_closure3" sourceFile="_GrailsCreateProject.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsCreateProject$_run_closure4" sourceFile="_GrailsCreateProject.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="_GrailsDocs" sourceFile="_GrailsDocs.groovy" interface="false" size="91" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_loadBasePlugin_closure7" sourceFile="_GrailsDocs.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure1" sourceFile="_GrailsDocs.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure2" sourceFile="_GrailsDocs.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure3" sourceFile="_GrailsDocs.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure4" sourceFile="_GrailsDocs.groovy" interface="false" size="27" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure4_closure8" sourceFile="_GrailsDocs.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure4_closure9" sourceFile="_GrailsDocs.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5" sourceFile="_GrailsDocs.groovy" interface="false" size="111" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure10" sourceFile="_GrailsDocs.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure11" sourceFile="_GrailsDocs.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure12" sourceFile="_GrailsDocs.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure13" sourceFile="_GrailsDocs.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure14" sourceFile="_GrailsDocs.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure15" sourceFile="_GrailsDocs.groovy" interface="false" size="31" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure15_closure23" sourceFile="_GrailsDocs.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure15_closure24" sourceFile="_GrailsDocs.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure16" sourceFile="_GrailsDocs.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure17" sourceFile="_GrailsDocs.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure18" sourceFile="_GrailsDocs.groovy" interface="false" size="45" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure18_closure25" sourceFile="_GrailsDocs.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure19" sourceFile="_GrailsDocs.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure19_closure26" sourceFile="_GrailsDocs.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure19_closure27" sourceFile="_GrailsDocs.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure20" sourceFile="_GrailsDocs.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure20_closure28" sourceFile="_GrailsDocs.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure21" sourceFile="_GrailsDocs.groovy" interface="false" size="51" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure21_closure29" sourceFile="_GrailsDocs.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure21_closure30" sourceFile="_GrailsDocs.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure21_closure31" sourceFile="_GrailsDocs.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure22" sourceFile="_GrailsDocs.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_run_closure5_closure22_closure32" sourceFile="_GrailsDocs.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="_GrailsDocs$_writeChapter_closure6" sourceFile="_GrailsDocs.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="_GrailsEvents" sourceFile="_GrailsEvents.groovy" interface="false" size="68" bugs="0"/>
+      <ClassStats class="_GrailsEvents$_run_closure1" sourceFile="_GrailsEvents.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="_GrailsEvents$_run_closure2" sourceFile="_GrailsEvents.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="_GrailsEvents$_run_closure3" sourceFile="_GrailsEvents.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsEvents$_run_closure4" sourceFile="_GrailsEvents.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsEvents$_run_closure5" sourceFile="_GrailsEvents.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsGenerate" sourceFile="_GrailsGenerate.groovy" interface="false" size="65" bugs="0"/>
+      <ClassStats class="_GrailsGenerate$_run_closure1" sourceFile="_GrailsGenerate.groovy" interface="false" size="30" bugs="0"/>
+      <ClassStats class="_GrailsGenerate$_run_closure2" sourceFile="_GrailsGenerate.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="_GrailsGenerate$_run_closure2_closure3" sourceFile="_GrailsGenerate.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="_GrailsInit" sourceFile="_GrailsInit.groovy" interface="false" size="64" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure1" sourceFile="_GrailsInit.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure10" sourceFile="_GrailsInit.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure11" sourceFile="_GrailsInit.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure12" sourceFile="_GrailsInit.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure2" sourceFile="_GrailsInit.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure2_closure13" sourceFile="_GrailsInit.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure3" sourceFile="_GrailsInit.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure3_closure14" sourceFile="_GrailsInit.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure3_closure15" sourceFile="_GrailsInit.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure4" sourceFile="_GrailsInit.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure4_closure16" sourceFile="_GrailsInit.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure5" sourceFile="_GrailsInit.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure6" sourceFile="_GrailsInit.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure6_closure17" sourceFile="_GrailsInit.groovy" interface="false" size="41" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure7" sourceFile="_GrailsInit.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure8" sourceFile="_GrailsInit.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure9" sourceFile="_GrailsInit.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsInit$_run_closure9_closure18" sourceFile="_GrailsInit.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsPackage" sourceFile="_GrailsPackage.groovy" interface="false" size="57" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure1" sourceFile="_GrailsPackage.groovy" interface="false" size="48" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure2" sourceFile="_GrailsPackage.groovy" interface="false" size="42" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure2_closure10" sourceFile="_GrailsPackage.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure2_closure11" sourceFile="_GrailsPackage.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure2_closure12" sourceFile="_GrailsPackage.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure2_closure13" sourceFile="_GrailsPackage.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure2_closure14" sourceFile="_GrailsPackage.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure2_closure15" sourceFile="_GrailsPackage.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure2_closure9" sourceFile="_GrailsPackage.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure3" sourceFile="_GrailsPackage.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure4" sourceFile="_GrailsPackage.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure4_closure16" sourceFile="_GrailsPackage.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure5" sourceFile="_GrailsPackage.groovy" interface="false" size="42" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure5_closure17" sourceFile="_GrailsPackage.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure5_closure17_closure18" sourceFile="_GrailsPackage.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure6" sourceFile="_GrailsPackage.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure6_closure19" sourceFile="_GrailsPackage.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure7" sourceFile="_GrailsPackage.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure8" sourceFile="_GrailsPackage.groovy" interface="false" size="37" bugs="0"/>
+      <ClassStats class="_GrailsPackage$_run_closure8_closure20" sourceFile="_GrailsPackage.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="_GrailsPluginDev" sourceFile="_GrailsPluginDev.groovy" interface="false" size="54" bugs="0"/>
+      <ClassStats class="_GrailsPluginDev$_loadBasePlugin_closure2" sourceFile="_GrailsPluginDev.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPluginDev$_run_closure1" sourceFile="_GrailsPluginDev.groovy" interface="false" size="33" bugs="0"/>
+      <ClassStats class="_GrailsPluginDev$_run_closure1_closure3" sourceFile="_GrailsPluginDev.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsPlugins" sourceFile="_GrailsPlugins.groovy" interface="false" size="85" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_printInstalledPlugins_closure12" sourceFile="_GrailsPlugins.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_printRemotePluginList_closure13" sourceFile="_GrailsPlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_printRemotePluginList_closure13_closure26" sourceFile="_GrailsPlugins.groovy" interface="false" size="32" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_printRemotePluginList_closure13_closure26_closure27" sourceFile="_GrailsPlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_printRemotePluginList_closure13_closure26_closure28" sourceFile="_GrailsPlugins.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_printRemotePluginList_closure14" sourceFile="_GrailsPlugins.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure1" sourceFile="_GrailsPlugins.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure10" sourceFile="_GrailsPlugins.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure11" sourceFile="_GrailsPlugins.groovy" interface="false" size="31" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure2" sourceFile="_GrailsPlugins.groovy" interface="false" size="38" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure3" sourceFile="_GrailsPlugins.groovy" interface="false" size="27" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure4" sourceFile="_GrailsPlugins.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure5" sourceFile="_GrailsPlugins.groovy" interface="false" size="28" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure5_closure15" sourceFile="_GrailsPlugins.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure6" sourceFile="_GrailsPlugins.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure7" sourceFile="_GrailsPlugins.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure8" sourceFile="_GrailsPlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure8_closure16" sourceFile="_GrailsPlugins.groovy" interface="false" size="74" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure8_closure16_closure17" sourceFile="_GrailsPlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure8_closure16_closure18" sourceFile="_GrailsPlugins.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure8_closure16_closure19" sourceFile="_GrailsPlugins.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure8_closure16_closure20" sourceFile="_GrailsPlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure8_closure16_closure21" sourceFile="_GrailsPlugins.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure8_closure16_closure22" sourceFile="_GrailsPlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure9" sourceFile="_GrailsPlugins.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure9_closure23" sourceFile="_GrailsPlugins.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure9_closure23_closure24" sourceFile="_GrailsPlugins.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="_GrailsPlugins$_run_closure9_closure23_closure24_closure25" sourceFile="_GrailsPlugins.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsProxy" sourceFile="_GrailsProxy.groovy" interface="false" size="48" bugs="0"/>
+      <ClassStats class="_GrailsProxy$_run_closure1" sourceFile="_GrailsProxy.groovy" interface="false" size="31" bugs="0"/>
+      <ClassStats class="_GrailsRun" sourceFile="_GrailsRun.groovy" interface="false" size="113" bugs="0"/>
+      <ClassStats class="_GrailsRun$_loadServerFactory_closure10" sourceFile="_GrailsRun.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure1" sourceFile="_GrailsRun.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure2" sourceFile="_GrailsRun.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure3" sourceFile="_GrailsRun.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure4" sourceFile="_GrailsRun.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure5" sourceFile="_GrailsRun.groovy" interface="false" size="35" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure5_closure11" sourceFile="_GrailsRun.groovy" interface="false" size="30" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure6" sourceFile="_GrailsRun.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure7" sourceFile="_GrailsRun.groovy" interface="false" size="46" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure7_closure12" sourceFile="_GrailsRun.groovy" interface="false" size="57" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure7_closure13" sourceFile="_GrailsRun.groovy" interface="false" size="37" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure8" sourceFile="_GrailsRun.groovy" interface="false" size="27" bugs="0"/>
+      <ClassStats class="_GrailsRun$_run_closure9" sourceFile="_GrailsRun.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsSettings" sourceFile="_GrailsSettings.groovy" interface="false" size="140" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure1" sourceFile="_GrailsSettings.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure10" sourceFile="_GrailsSettings.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure2" sourceFile="_GrailsSettings.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure3" sourceFile="_GrailsSettings.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure3_closure11" sourceFile="_GrailsSettings.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure4" sourceFile="_GrailsSettings.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure5" sourceFile="_GrailsSettings.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure6" sourceFile="_GrailsSettings.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure7" sourceFile="_GrailsSettings.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure7_closure12" sourceFile="_GrailsSettings.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure8" sourceFile="_GrailsSettings.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure8_closure13" sourceFile="_GrailsSettings.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure8_closure14" sourceFile="_GrailsSettings.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure8_closure14_closure15" sourceFile="_GrailsSettings.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure9" sourceFile="_GrailsSettings.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="_GrailsSettings$_run_closure9_closure16" sourceFile="_GrailsSettings.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsTest" sourceFile="_GrailsTest.groovy" interface="false" size="90" bugs="0"/>
+      <ClassStats class="_GrailsTest$_getFailedTests_closure17" sourceFile="_GrailsTest.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsTest$_getFailedTests_closure18" sourceFile="_GrailsTest.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure1" sourceFile="_GrailsTest.groovy" interface="false" size="52" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure10" sourceFile="_GrailsTest.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure11" sourceFile="_GrailsTest.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure12" sourceFile="_GrailsTest.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure13" sourceFile="_GrailsTest.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure14" sourceFile="_GrailsTest.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure14_closure22" sourceFile="_GrailsTest.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure14_closure23" sourceFile="_GrailsTest.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure15" sourceFile="_GrailsTest.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure15_closure24" sourceFile="_GrailsTest.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure15_closure25" sourceFile="_GrailsTest.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure15_closure25_closure26" sourceFile="_GrailsTest.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure15_closure25_closure27" sourceFile="_GrailsTest.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure15_closure25_closure28" sourceFile="_GrailsTest.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure16" sourceFile="_GrailsTest.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure16_closure29" sourceFile="_GrailsTest.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure16_closure29_closure30" sourceFile="_GrailsTest.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure1_closure19" sourceFile="_GrailsTest.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure1_closure20" sourceFile="_GrailsTest.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure2" sourceFile="_GrailsTest.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure3" sourceFile="_GrailsTest.groovy" interface="false" size="28" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure3_closure21" sourceFile="_GrailsTest.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure4" sourceFile="_GrailsTest.groovy" interface="false" size="53" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure5" sourceFile="_GrailsTest.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure6" sourceFile="_GrailsTest.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure7" sourceFile="_GrailsTest.groovy" interface="false" size="39" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure8" sourceFile="_GrailsTest.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsTest$_run_closure9" sourceFile="_GrailsTest.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsWar" sourceFile="_GrailsWar.groovy" interface="false" size="61" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure1" sourceFile="_GrailsWar.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure1_closure10" sourceFile="_GrailsWar.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure1_closure11" sourceFile="_GrailsWar.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure1_closure12" sourceFile="_GrailsWar.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure1_closure9" sourceFile="_GrailsWar.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure2" sourceFile="_GrailsWar.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure3" sourceFile="_GrailsWar.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4" sourceFile="_GrailsWar.groovy" interface="false" size="65" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure13" sourceFile="_GrailsWar.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure14" sourceFile="_GrailsWar.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure15" sourceFile="_GrailsWar.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure15_closure21" sourceFile="_GrailsWar.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure16" sourceFile="_GrailsWar.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure17" sourceFile="_GrailsWar.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure17_closure22" sourceFile="_GrailsWar.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure17_closure23" sourceFile="_GrailsWar.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure18" sourceFile="_GrailsWar.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure19" sourceFile="_GrailsWar.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure19_closure24" sourceFile="_GrailsWar.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure4_closure20" sourceFile="_GrailsWar.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure5" sourceFile="_GrailsWar.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure5_closure25" sourceFile="_GrailsWar.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure5_closure25_closure26" sourceFile="_GrailsWar.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure5_closure25_closure26_closure27" sourceFile="_GrailsWar.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure5_closure25_closure26_closure28" sourceFile="_GrailsWar.groovy" interface="false" size="30" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure6" sourceFile="_GrailsWar.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure7" sourceFile="_GrailsWar.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure7_closure29" sourceFile="_GrailsWar.groovy" interface="false" size="28" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure7_closure29_closure30" sourceFile="_GrailsWar.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure7_closure29_closure30_closure33" sourceFile="_GrailsWar.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure7_closure29_closure31" sourceFile="_GrailsWar.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure7_closure29_closure32" sourceFile="_GrailsWar.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure7_closure29_closure32_closure34" sourceFile="_GrailsWar.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure7_closure29_closure32_closure35" sourceFile="_GrailsWar.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_GrailsWar$_run_closure8" sourceFile="_GrailsWar.groovy" interface="false" size="31" bugs="0"/>
+      <ClassStats class="_PackagePlugins" sourceFile="_PackagePlugins.groovy" interface="false" size="50" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure1" sourceFile="_PackagePlugins.groovy" interface="false" size="31" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure1_closure4" sourceFile="_PackagePlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure1_closure4_closure8" sourceFile="_PackagePlugins.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure1_closure5" sourceFile="_PackagePlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure1_closure6" sourceFile="_PackagePlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure1_closure6_closure9" sourceFile="_PackagePlugins.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure1_closure7" sourceFile="_PackagePlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure1_closure7_closure10" sourceFile="_PackagePlugins.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure2" sourceFile="_PackagePlugins.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure3" sourceFile="_PackagePlugins.groovy" interface="false" size="34" bugs="0"/>
+      <ClassStats class="_PackagePlugins$_run_closure3_closure11" sourceFile="_PackagePlugins.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies" sourceFile="_PluginDependencies.groovy" interface="false" size="311" bugs="1" priority_2="1"/>
+      <ClassStats class="_PluginDependencies$_buildBinaryPluginInfo_closure40" sourceFile="_PluginDependencies.groovy" interface="false" size="35" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildBinaryPluginInfo_closure40_closure84" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildBinaryPluginInfo_closure40_closure85" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildBinaryPluginInfo_closure40_closure86" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildBinaryPluginInfo_closure40_closure87" sourceFile="_PluginDependencies.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildPluginInfo_closure41" sourceFile="_PluginDependencies.groovy" interface="false" size="44" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildPluginInfo_closure41_closure88" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildPluginInfo_closure41_closure89" sourceFile="_PluginDependencies.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildPluginInfo_closure41_closure89_closure93" sourceFile="_PluginDependencies.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildPluginInfo_closure41_closure90" sourceFile="_PluginDependencies.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildPluginInfo_closure41_closure91" sourceFile="_PluginDependencies.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildPluginInfo_closure41_closure91_closure94" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildPluginInfo_closure41_closure92" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildReleaseInfo_closure37" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_buildReleaseInfo_closure38" sourceFile="_PluginDependencies.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_configureAuth_closure32" sourceFile="_PluginDependencies.groovy" interface="false" size="38" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_fetchPluginListFile_closure43" sourceFile="_PluginDependencies.groovy" interface="false" size="37" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_fetchRemoteFile_closure42" sourceFile="_PluginDependencies.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_fetchRemoteFile_closure42_closure95" sourceFile="_PluginDependencies.groovy" interface="false" size="23" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_fetchRemote_closure44" sourceFile="_PluginDependencies.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_findZip_closure36" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_getAuthFromUrl_closure33" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_parsePluginList_closure34" sourceFile="_PluginDependencies.groovy" interface="false" size="28" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_parseRemoteXML_closure39" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_readMetadataFromZip_closure35" sourceFile="_PluginDependencies.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure1" sourceFile="_PluginDependencies.groovy" interface="false" size="30" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure10" sourceFile="_PluginDependencies.groovy" interface="false" size="16" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure10_closure73" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure11" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure12" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure13" sourceFile="_PluginDependencies.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure14" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure15" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure16" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure17" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure18" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure19" sourceFile="_PluginDependencies.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure1_closure45" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure2" sourceFile="_PluginDependencies.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure20" sourceFile="_PluginDependencies.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure21" sourceFile="_PluginDependencies.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure22" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure22_closure74" sourceFile="_PluginDependencies.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure22_closure74_closure75" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure23" sourceFile="_PluginDependencies.groovy" interface="false" size="26" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure23_closure76" sourceFile="_PluginDependencies.groovy" interface="false" size="51" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure23_closure76_closure77" sourceFile="_PluginDependencies.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure24" sourceFile="_PluginDependencies.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure25" sourceFile="_PluginDependencies.groovy" interface="false" size="36" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure26" sourceFile="_PluginDependencies.groovy" interface="false" size="104" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure26_closure78" sourceFile="_PluginDependencies.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure26_closure79" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure27" sourceFile="_PluginDependencies.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure27_closure80" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure28" sourceFile="_PluginDependencies.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure28_closure81" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure29" sourceFile="_PluginDependencies.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure29_closure82" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure2_closure46" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure3" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure30" sourceFile="_PluginDependencies.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure30_closure83" sourceFile="_PluginDependencies.groovy" interface="false" size="39" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure31" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure4" sourceFile="_PluginDependencies.groovy" interface="false" size="42" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure4_closure47" sourceFile="_PluginDependencies.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure4_closure48" sourceFile="_PluginDependencies.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure4_closure49" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure4_closure49_closure50" sourceFile="_PluginDependencies.groovy" interface="false" size="20" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure5" sourceFile="_PluginDependencies.groovy" interface="false" size="61" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure5_closure51" sourceFile="_PluginDependencies.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure5_closure52" sourceFile="_PluginDependencies.groovy" interface="false" size="30" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure5_closure52_closure53" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure5_closure52_closure54" sourceFile="_PluginDependencies.groovy" interface="false" size="22" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure5_closure52_closure55" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure5_closure52_closure56" sourceFile="_PluginDependencies.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure5_closure52_closure56_closure57" sourceFile="_PluginDependencies.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure5_closure52_closure56_closure58" sourceFile="_PluginDependencies.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure5_closure52_closure56_closure59" sourceFile="_PluginDependencies.groovy" interface="false" size="21" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure6" sourceFile="_PluginDependencies.groovy" interface="false" size="49" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure6_closure60" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure6_closure61" sourceFile="_PluginDependencies.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure6_closure62" sourceFile="_PluginDependencies.groovy" interface="false" size="17" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure6_closure63" sourceFile="_PluginDependencies.groovy" interface="false" size="24" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure6_closure63_closure65" sourceFile="_PluginDependencies.groovy" interface="false" size="32" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure6_closure64" sourceFile="_PluginDependencies.groovy" interface="false" size="38" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure7" sourceFile="_PluginDependencies.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure7_closure66" sourceFile="_PluginDependencies.groovy" interface="false" size="28" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure7_closure67" sourceFile="_PluginDependencies.groovy" interface="false" size="25" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure8" sourceFile="_PluginDependencies.groovy" interface="false" size="55" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure8_closure68" sourceFile="_PluginDependencies.groovy" interface="false" size="28" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure8_closure68_closure70" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure8_closure69" sourceFile="_PluginDependencies.groovy" interface="false" size="29" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure8_closure69_closure71" sourceFile="_PluginDependencies.groovy" interface="false" size="19" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure8_closure69_closure72" sourceFile="_PluginDependencies.groovy" interface="false" size="18" bugs="0"/>
+      <ClassStats class="_PluginDependencies$_run_closure9" sourceFile="_PluginDependencies.groovy" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="3173" invocations="7643" avgMicrosecondsPerInvocation="415" maxMicrosecondsPerInvocation="156120" standardDeviationMircosecondsPerInvocation="3237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="2415" invocations="7643" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="89614" standardDeviationMircosecondsPerInvocation="2435"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="2298" invocations="7643" avgMicrosecondsPerInvocation="300" maxMicrosecondsPerInvocation="106279" standardDeviationMircosecondsPerInvocation="2077"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="1805" invocations="7643" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="181408" standardDeviationMircosecondsPerInvocation="3051"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1730" invocations="7646" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="55392" standardDeviationMircosecondsPerInvocation="1368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1700" invocations="8180" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="44814" standardDeviationMircosecondsPerInvocation="1176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1499" invocations="566" avgMicrosecondsPerInvocation="2649" maxMicrosecondsPerInvocation="37017" standardDeviationMircosecondsPerInvocation="3938"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1387" invocations="7635" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="58875" standardDeviationMircosecondsPerInvocation="1334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1337" invocations="969" avgMicrosecondsPerInvocation="1379" maxMicrosecondsPerInvocation="152226" standardDeviationMircosecondsPerInvocation="6625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1312" invocations="566" avgMicrosecondsPerInvocation="2318" maxMicrosecondsPerInvocation="41423" standardDeviationMircosecondsPerInvocation="3426"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="1101" invocations="10091" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="21908" standardDeviationMircosecondsPerInvocation="617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="580" invocations="7642" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="29499" standardDeviationMircosecondsPerInvocation="656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="559" invocations="532" avgMicrosecondsPerInvocation="1052" maxMicrosecondsPerInvocation="56935" standardDeviationMircosecondsPerInvocation="2855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="533" invocations="566" avgMicrosecondsPerInvocation="943" maxMicrosecondsPerInvocation="21195" standardDeviationMircosecondsPerInvocation="1652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="525" invocations="532" avgMicrosecondsPerInvocation="986" maxMicrosecondsPerInvocation="51114" standardDeviationMircosecondsPerInvocation="3164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="422" invocations="7643" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="36010" standardDeviationMircosecondsPerInvocation="588"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="408" invocations="532" avgMicrosecondsPerInvocation="767" maxMicrosecondsPerInvocation="65880" standardDeviationMircosecondsPerInvocation="3698"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LazyInit" totalMilliseconds="405" invocations="532" avgMicrosecondsPerInvocation="762" maxMicrosecondsPerInvocation="40826" standardDeviationMircosecondsPerInvocation="2625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="395" invocations="81346" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="50437" standardDeviationMircosecondsPerInvocation="244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="349" invocations="2901" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="120174" standardDeviationMircosecondsPerInvocation="2337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="342" invocations="7643" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="82393" standardDeviationMircosecondsPerInvocation="1008"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="340" invocations="532" avgMicrosecondsPerInvocation="639" maxMicrosecondsPerInvocation="26968" standardDeviationMircosecondsPerInvocation="1847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="317" invocations="532" avgMicrosecondsPerInvocation="596" maxMicrosecondsPerInvocation="49608" standardDeviationMircosecondsPerInvocation="2357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="308" invocations="566" avgMicrosecondsPerInvocation="545" maxMicrosecondsPerInvocation="43498" standardDeviationMircosecondsPerInvocation="2005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="306" invocations="532" avgMicrosecondsPerInvocation="575" maxMicrosecondsPerInvocation="25312" standardDeviationMircosecondsPerInvocation="1843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="298" invocations="532" avgMicrosecondsPerInvocation="561" maxMicrosecondsPerInvocation="49375" standardDeviationMircosecondsPerInvocation="2284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="293" invocations="566" avgMicrosecondsPerInvocation="517" maxMicrosecondsPerInvocation="35690" standardDeviationMircosecondsPerInvocation="2195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="280" invocations="566" avgMicrosecondsPerInvocation="495" maxMicrosecondsPerInvocation="33041" standardDeviationMircosecondsPerInvocation="1995"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="279" invocations="532" avgMicrosecondsPerInvocation="525" maxMicrosecondsPerInvocation="32088" standardDeviationMircosecondsPerInvocation="1617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BadResultSetAccess" totalMilliseconds="271" invocations="532" avgMicrosecondsPerInvocation="510" maxMicrosecondsPerInvocation="81252" standardDeviationMircosecondsPerInvocation="3681"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FormatStringChecker" totalMilliseconds="247" invocations="532" avgMicrosecondsPerInvocation="464" maxMicrosecondsPerInvocation="53211" standardDeviationMircosecondsPerInvocation="2645"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="239" invocations="532" avgMicrosecondsPerInvocation="449" maxMicrosecondsPerInvocation="19244" standardDeviationMircosecondsPerInvocation="1415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNonShortCircuit" totalMilliseconds="236" invocations="532" avgMicrosecondsPerInvocation="444" maxMicrosecondsPerInvocation="59355" standardDeviationMircosecondsPerInvocation="2711"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="235" invocations="587" avgMicrosecondsPerInvocation="401" maxMicrosecondsPerInvocation="36594" standardDeviationMircosecondsPerInvocation="1815"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="233" invocations="532" avgMicrosecondsPerInvocation="439" maxMicrosecondsPerInvocation="18147" standardDeviationMircosecondsPerInvocation="843"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1299660239000" analysisTimestamp="1360895598911" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/openengsb/core/openengsb-core-test/1.2.0.M3/openengsb-core-test-1.2.0.M3.jar</Jar>
+  </Project>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.openengsb.core.test.rules.DedicatedThread$ThreadStatement">
+      <SourceLine classname="org.openengsb.core.test.rules.DedicatedThread$ThreadStatement" start="33" end="58" sourcefile="DedicatedThread.java" sourcepath="org/openengsb/core/test/rules/DedicatedThread.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>org.junit.runners.model.Statement</MissingClass>
+    <MissingClass>org.mockito.Matchers</MissingClass>
+    <MissingClass>org.mockito.Mockito</MissingClass>
+    <MissingClass>org.mockito.invocation.InvocationOnMock</MissingClass>
+    <MissingClass>org.mockito.stubbing.OngoingStubbing</MissingClass>
+    <MissingClass>org.openengsb.core.common.AbstractOpenEngSBService</MissingClass>
+    <MissingClass>org.openengsb.core.common.Activator</MissingClass>
+    <MissingClass>org.openengsb.core.common.AliveState</MissingClass>
+    <MissingClass>org.openengsb.core.common.Event</MissingClass>
+    <MissingClass>org.openengsb.core.common.util.OsgiServiceUtils</MissingClass>
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.Filter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 9 Mar 2011 10:43:59 +0200" total_classes="14" referenced_classes="62" total_bugs="1" total_size="222" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="14.30" clock_seconds="7.36" peak_mbytes="56.05" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="1">
+    <PackageStats package="org.openengsb.core.test" total_bugs="0" total_types="11" total_size="188">
+      <ClassStats class="org.openengsb.core.test.AbstractOsgiMockServiceTest" sourceFile="AbstractOsgiMockServiceTest.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.AbstractOsgiMockServiceTest$1" sourceFile="AbstractOsgiMockServiceTest.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.AbstractOsgiMockServiceTest$2" sourceFile="AbstractOsgiMockServiceTest.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.DummyPersistence" sourceFile="DummyPersistence.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.DummyPersistenceManager" sourceFile="DummyPersistenceManager.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.LocalisedTest" sourceFile="LocalisedTest.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.NullDomain" sourceFile="NullDomain.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.NullDomainImpl" sourceFile="NullDomainImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.NullEvent" sourceFile="NullEvent.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.NullEvent2" sourceFile="NullEvent2.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.NullEvent3" sourceFile="NullEvent3.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.test.rules" total_bugs="1" total_types="3" total_size="34" priority_2="1">
+      <ClassStats class="org.openengsb.core.test.rules.DedicatedThread" sourceFile="DedicatedThread.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openengsb.core.test.rules.DedicatedThread$ThreadStatement" sourceFile="DedicatedThread.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openengsb.core.test.rules.DedicatedThread$ThreadStatement$1" sourceFile="DedicatedThread.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1218" invocations="455" avgMicrosecondsPerInvocation="2677" maxMicrosecondsPerInvocation="206255" standardDeviationMircosecondsPerInvocation="13116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="675" invocations="62" avgMicrosecondsPerInvocation="10891" maxMicrosecondsPerInvocation="153816" standardDeviationMircosecondsPerInvocation="24487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="383" invocations="62" avgMicrosecondsPerInvocation="6193" maxMicrosecondsPerInvocation="42526" standardDeviationMircosecondsPerInvocation="10332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="349" invocations="62" avgMicrosecondsPerInvocation="5638" maxMicrosecondsPerInvocation="69934" standardDeviationMircosecondsPerInvocation="12847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="329" invocations="53" avgMicrosecondsPerInvocation="6213" maxMicrosecondsPerInvocation="207387" standardDeviationMircosecondsPerInvocation="28169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="269" invocations="62" avgMicrosecondsPerInvocation="4343" maxMicrosecondsPerInvocation="126941" standardDeviationMircosecondsPerInvocation="17436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="216" invocations="52" avgMicrosecondsPerInvocation="4164" maxMicrosecondsPerInvocation="55773" standardDeviationMircosecondsPerInvocation="9283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="208" invocations="189" avgMicrosecondsPerInvocation="1102" maxMicrosecondsPerInvocation="41423" standardDeviationMircosecondsPerInvocation="3415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="191" invocations="50" avgMicrosecondsPerInvocation="3823" maxMicrosecondsPerInvocation="43519" standardDeviationMircosecondsPerInvocation="7812"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="166" invocations="54" avgMicrosecondsPerInvocation="3089" maxMicrosecondsPerInvocation="37847" standardDeviationMircosecondsPerInvocation="5885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="141" invocations="52" avgMicrosecondsPerInvocation="2722" maxMicrosecondsPerInvocation="23422" standardDeviationMircosecondsPerInvocation="4908"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="122" invocations="62" avgMicrosecondsPerInvocation="1983" maxMicrosecondsPerInvocation="18167" standardDeviationMircosecondsPerInvocation="3087"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="97" invocations="62" avgMicrosecondsPerInvocation="1576" maxMicrosecondsPerInvocation="32564" standardDeviationMircosecondsPerInvocation="4285"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="95" invocations="387" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="4082" standardDeviationMircosecondsPerInvocation="507"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

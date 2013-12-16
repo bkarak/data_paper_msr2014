@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1229080468000" analysisTimestamp="1360915936904" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/jonas-webservices-jaxws/5.1.0-M2/jonas-webservices-jaxws-5.1.0-M2.jar</Jar>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.ow2.jonas.ws.jaxws.client.naming.factory.ServiceObjectFactory">
+      <SourceLine classname="org.ow2.jonas.ws.jaxws.client.naming.factory.ServiceObjectFactory" start="45" end="145" sourcefile="ServiceObjectFactory.java" sourcepath="org/ow2/jonas/ws/jaxws/client/naming/factory/ServiceObjectFactory.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.ws.jaxws.client.naming.factory.ServiceObjectFactory" name="getObjectInstance" signature="(Ljava/lang/Object;Ljavax/naming/Name;Ljavax/naming/Context;Ljava/util/Hashtable;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.ws.jaxws.client.naming.factory.ServiceObjectFactory" start="71" end="145" startBytecode="0" endBytecode="135" sourcefile="ServiceObjectFactory.java" sourcepath="org/ow2/jonas/ws/jaxws/client/naming/factory/ServiceObjectFactory.java"/>
+    </Method>
+    <LocalVariable name="serviceName" register="10" pc="65" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.ow2.jonas.ws.jaxws.client.naming.factory.ServiceObjectFactory" start="84" end="84" startBytecode="63" endBytecode="63" sourcefile="ServiceObjectFactory.java" sourcepath="org/ow2/jonas/ws/jaxws/client/naming/factory/ServiceObjectFactory.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="serviceName"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="8">
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.JNDIUtils</MissingClass>
+    <MissingClass>org.ow2.jonas.ws.jaxws.IWSRequest</MissingClass>
+    <MissingClass>org.ow2.jonas.ws.jaxws.IWebServiceEndpoint</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 12 Dec 2008 13:14:28 +0200" total_classes="7" referenced_classes="33" total_bugs="1" total_size="173" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="12.49" clock_seconds="8.30" peak_mbytes="54.23" alloc_mbytes="763.88" gc_seconds="0.09" priority_2="1">
+    <PackageStats package="org.ow2.jonas.ws.jaxws.client" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.client.JOnASGenericService" sourceFile="JOnASGenericService.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.client.naming" total_bugs="0" total_types="2" total_size="57">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.client.naming.Constants" sourceFile="Constants.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.client.naming.ServiceReferenceBuilder" sourceFile="ServiceReferenceBuilder.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.client.naming.factory" total_bugs="1" total_types="1" total_size="42" priority_2="1">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.client.naming.factory.ServiceObjectFactory" sourceFile="ServiceObjectFactory.java" interface="false" size="42" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.http.servlet" total_bugs="0" total_types="3" total_size="70">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.http.servlet.JAXWSServlet" sourceFile="JAXWSServlet.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.http.servlet.ServletRequestAdapter" sourceFile="ServletRequestAdapter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.http.servlet.ServletResponseAdapter" sourceFile="ServletResponseAdapter.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1097" invocations="420" avgMicrosecondsPerInvocation="2613" maxMicrosecondsPerInvocation="80228" standardDeviationMircosecondsPerInvocation="7801"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="566" invocations="33" avgMicrosecondsPerInvocation="17178" maxMicrosecondsPerInvocation="139910" standardDeviationMircosecondsPerInvocation="31132"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="368" invocations="33" avgMicrosecondsPerInvocation="11161" maxMicrosecondsPerInvocation="67582" standardDeviationMircosecondsPerInvocation="18080"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="356" invocations="33" avgMicrosecondsPerInvocation="10809" maxMicrosecondsPerInvocation="96720" standardDeviationMircosecondsPerInvocation="21091"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="271" invocations="122" avgMicrosecondsPerInvocation="2226" maxMicrosecondsPerInvocation="44839" standardDeviationMircosecondsPerInvocation="5921"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="194" invocations="36" avgMicrosecondsPerInvocation="5402" maxMicrosecondsPerInvocation="47643" standardDeviationMircosecondsPerInvocation="10910"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="145" invocations="36" avgMicrosecondsPerInvocation="4032" maxMicrosecondsPerInvocation="43869" standardDeviationMircosecondsPerInvocation="9861"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="144" invocations="7" avgMicrosecondsPerInvocation="20675" maxMicrosecondsPerInvocation="135504" standardDeviationMircosecondsPerInvocation="46901"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="133" invocations="38" avgMicrosecondsPerInvocation="3508" maxMicrosecondsPerInvocation="126943" standardDeviationMircosecondsPerInvocation="20294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="132" invocations="366" avgMicrosecondsPerInvocation="361" maxMicrosecondsPerInvocation="14687" standardDeviationMircosecondsPerInvocation="1381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="128" invocations="36" avgMicrosecondsPerInvocation="3565" maxMicrosecondsPerInvocation="33374" standardDeviationMircosecondsPerInvocation="7930"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="124" invocations="33" avgMicrosecondsPerInvocation="3762" maxMicrosecondsPerInvocation="27109" standardDeviationMircosecondsPerInvocation="7300"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="123" invocations="36" avgMicrosecondsPerInvocation="3441" maxMicrosecondsPerInvocation="45628" standardDeviationMircosecondsPerInvocation="8818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="118" invocations="33" avgMicrosecondsPerInvocation="3582" maxMicrosecondsPerInvocation="35583" standardDeviationMircosecondsPerInvocation="6645"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="116" invocations="33" avgMicrosecondsPerInvocation="3523" maxMicrosecondsPerInvocation="35882" standardDeviationMircosecondsPerInvocation="7705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="113" invocations="36" avgMicrosecondsPerInvocation="3153" maxMicrosecondsPerInvocation="43298" standardDeviationMircosecondsPerInvocation="9216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="105" invocations="25" avgMicrosecondsPerInvocation="4223" maxMicrosecondsPerInvocation="70142" standardDeviationMircosecondsPerInvocation="13745"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="104" invocations="423" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="12446" standardDeviationMircosecondsPerInvocation="1058"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="103" invocations="36" avgMicrosecondsPerInvocation="2871" maxMicrosecondsPerInvocation="32829" standardDeviationMircosecondsPerInvocation="7407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="96" invocations="53" avgMicrosecondsPerInvocation="1823" maxMicrosecondsPerInvocation="35366" standardDeviationMircosecondsPerInvocation="5823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="89" invocations="33" avgMicrosecondsPerInvocation="2725" maxMicrosecondsPerInvocation="30170" standardDeviationMircosecondsPerInvocation="6068"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

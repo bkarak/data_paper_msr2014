@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1271776761000" analysisTimestamp="1360930441935" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/efaps/maven-java5/1.0.1/maven-java5-1.0.1.jar</Jar>
+  </Project>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.efaps.maven_java5.EfapsAnnotationDescriptorExtractor">
+      <SourceLine classname="org.efaps.maven_java5.EfapsAnnotationDescriptorExtractor" start="94" end="555" sourcefile="EfapsAnnotationDescriptorExtractor.java" sourcepath="org/efaps/maven_java5/EfapsAnnotationDescriptorExtractor.java"/>
+    </Class>
+    <Method classname="org.efaps.maven_java5.EfapsAnnotationDescriptorExtractor" name="getClassLoader" signature="(Lorg/apache/maven/project/MavenProject;)Ljava/lang/ClassLoader;" isStatic="false">
+      <SourceLine classname="org.efaps.maven_java5.EfapsAnnotationDescriptorExtractor" start="378" end="436" startBytecode="0" endBytecode="978" sourcefile="EfapsAnnotationDescriptorExtractor.java" sourcepath="org/efaps/maven_java5/EfapsAnnotationDescriptorExtractor.java"/>
+    </Method>
+    <Class classname="java.net.URLClassLoader">
+      <SourceLine classname="java.net.URLClassLoader" start="58" end="602" sourcefile="URLClassLoader.java" sourcepath="java/net/URLClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.efaps.maven_java5.EfapsAnnotationDescriptorExtractor" start="436" end="436" startBytecode="514" endBytecode="514" sourcefile="EfapsAnnotationDescriptorExtractor.java" sourcepath="org/efaps/maven_java5/EfapsAnnotationDescriptorExtractor.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.efaps.maven_java5.org.apache.maven.tools.plugin.extractor.java.JavaMojoAnnotationDescriptorExtractor">
+      <SourceLine classname="org.efaps.maven_java5.org.apache.maven.tools.plugin.extractor.java.JavaMojoAnnotationDescriptorExtractor" start="58" end="315" sourcefile="JavaMojoAnnotationDescriptorExtractor.java" sourcepath="org/efaps/maven_java5/org/apache/maven/tools/plugin/extractor/java/JavaMojoAnnotationDescriptorExtractor.java"/>
+    </Class>
+    <Method classname="org.efaps.maven_java5.org.apache.maven.tools.plugin.extractor.java.JavaMojoAnnotationDescriptorExtractor" name="execute" signature="(Lorg/apache/maven/project/MavenProject;Lorg/apache/maven/plugin/descriptor/PluginDescriptor;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.efaps.maven_java5.org.apache.maven.tools.plugin.extractor.java.JavaMojoAnnotationDescriptorExtractor" start="240" end="301" startBytecode="0" endBytecode="901" sourcefile="JavaMojoAnnotationDescriptorExtractor.java" sourcepath="org/efaps/maven_java5/org/apache/maven/tools/plugin/extractor/java/JavaMojoAnnotationDescriptorExtractor.java"/>
+    </Method>
+    <Class classname="java.net.URLClassLoader">
+      <SourceLine classname="java.net.URLClassLoader" start="58" end="602" sourcefile="URLClassLoader.java" sourcepath="java/net/URLClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.efaps.maven_java5.org.apache.maven.tools.plugin.extractor.java.JavaMojoAnnotationDescriptorExtractor" start="276" end="276" startBytecode="323" endBytecode="323" sourcefile="JavaMojoAnnotationDescriptorExtractor.java" sourcepath="org/efaps/maven_java5/org/apache/maven/tools/plugin/extractor/java/JavaMojoAnnotationDescriptorExtractor.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="31">
+    <MissingClass>org.apache.maven.artifact.Artifact</MissingClass>
+    <MissingClass>org.apache.maven.artifact.factory.ArtifactFactory</MissingClass>
+    <MissingClass>org.apache.maven.artifact.metadata.ArtifactMetadataSource</MissingClass>
+    <MissingClass>org.apache.maven.artifact.repository.ArtifactRepositoryFactory</MissingClass>
+    <MissingClass>org.apache.maven.artifact.repository.DefaultArtifactRepository</MissingClass>
+    <MissingClass>org.apache.maven.artifact.repository.layout.ArtifactRepositoryLayout</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.ArtifactResolutionResult</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.ArtifactResolver</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.filter.ArtifactFilter</MissingClass>
+    <MissingClass>org.apache.maven.artifact.versioning.InvalidVersionSpecificationException</MissingClass>
+    <MissingClass>org.apache.maven.artifact.versioning.VersionRange</MissingClass>
+    <MissingClass>org.apache.maven.model.Build</MissingClass>
+    <MissingClass>org.apache.maven.model.Dependency</MissingClass>
+    <MissingClass>org.apache.maven.model.DependencyManagement</MissingClass>
+    <MissingClass>org.apache.maven.model.Resource</MissingClass>
+    <MissingClass>org.apache.maven.plugin.Mojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.descriptor.InvalidPluginDescriptorException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.descriptor.MojoDescriptor</MissingClass>
+    <MissingClass>org.apache.maven.plugin.descriptor.Parameter</MissingClass>
+    <MissingClass>org.apache.maven.plugin.descriptor.Requirement</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.apache.maven.settings.MavenSettingsBuilder</MissingClass>
+    <MissingClass>org.apache.maven.settings.Settings</MissingClass>
+    <MissingClass>org.apache.maven.tools.plugin.PluginToolsRequest</MissingClass>
+    <MissingClass>org.codehaus.plexus.PlexusContainer</MissingClass>
+    <MissingClass>org.codehaus.plexus.context.Context</MissingClass>
+    <MissingClass>org.codehaus.plexus.context.ContextException</MissingClass>
+    <MissingClass>org.codehaus.plexus.logging.AbstractLogEnabled</MissingClass>
+    <MissingClass>org.codehaus.plexus.logging.Logger</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.DirectoryScanner</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.pull.XmlPullParserException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 20 Apr 2010 18:19:21 +0300" total_classes="8" referenced_classes="50" total_bugs="2" total_size="468" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="17.89" clock_seconds="10.85" peak_mbytes="61.00" alloc_mbytes="763.88" gc_seconds="0.17" priority_2="2">
+    <PackageStats package="org.efaps.maven_java5" total_bugs="1" total_types="2" total_size="247" priority_2="1">
+      <ClassStats class="org.efaps.maven_java5.EfapsAnnotationDescriptorExtractor" sourceFile="EfapsAnnotationDescriptorExtractor.java" interface="false" size="240" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.maven_java5.EfapsAnnotationDescriptorExtractor$1" sourceFile="EfapsAnnotationDescriptorExtractor.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.maven_java5.org.apache.maven.tools.plugin" total_bugs="0" total_types="4" total_size="27">
+      <ClassStats class="org.efaps.maven_java5.org.apache.maven.tools.plugin.Component" sourceFile="Component.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.efaps.maven_java5.org.apache.maven.tools.plugin.Execute" sourceFile="Execute.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.efaps.maven_java5.org.apache.maven.tools.plugin.Goal" sourceFile="Goal.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.maven_java5.org.apache.maven.tools.plugin.Parameter" sourceFile="Parameter.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.maven_java5.org.apache.maven.tools.plugin.extractor.java" total_bugs="1" total_types="1" total_size="118" priority_2="1">
+      <ClassStats class="org.efaps.maven_java5.org.apache.maven.tools.plugin.extractor.java.JavaMojoAnnotationDescriptorExtractor" sourceFile="JavaMojoAnnotationDescriptorExtractor.java" interface="false" size="118" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.maven_java5.org.apache.maven.tools.plugin.lifecycle" total_bugs="0" total_types="1" total_size="76">
+      <ClassStats class="org.efaps.maven_java5.org.apache.maven.tools.plugin.lifecycle.Phase" sourceFile="Phase.java" interface="false" size="76" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1074" invocations="500" avgMicrosecondsPerInvocation="2148" maxMicrosecondsPerInvocation="56917" standardDeviationMircosecondsPerInvocation="5966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="621" invocations="24" avgMicrosecondsPerInvocation="25881" maxMicrosecondsPerInvocation="116692" standardDeviationMircosecondsPerInvocation="32836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="578" invocations="50" avgMicrosecondsPerInvocation="11578" maxMicrosecondsPerInvocation="87232" standardDeviationMircosecondsPerInvocation="19461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="545" invocations="24" avgMicrosecondsPerInvocation="22711" maxMicrosecondsPerInvocation="234696" standardDeviationMircosecondsPerInvocation="49365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="499" invocations="24" avgMicrosecondsPerInvocation="20814" maxMicrosecondsPerInvocation="83932" standardDeviationMircosecondsPerInvocation="26710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="498" invocations="24" avgMicrosecondsPerInvocation="20772" maxMicrosecondsPerInvocation="100659" standardDeviationMircosecondsPerInvocation="29240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="468" invocations="24" avgMicrosecondsPerInvocation="19516" maxMicrosecondsPerInvocation="86579" standardDeviationMircosecondsPerInvocation="25865"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="450" invocations="50" avgMicrosecondsPerInvocation="9003" maxMicrosecondsPerInvocation="69640" standardDeviationMircosecondsPerInvocation="15025"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="309" invocations="148" avgMicrosecondsPerInvocation="2094" maxMicrosecondsPerInvocation="37056" standardDeviationMircosecondsPerInvocation="4835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="265" invocations="23" avgMicrosecondsPerInvocation="11560" maxMicrosecondsPerInvocation="60695" standardDeviationMircosecondsPerInvocation="15515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="261" invocations="50" avgMicrosecondsPerInvocation="5221" maxMicrosecondsPerInvocation="60944" standardDeviationMircosecondsPerInvocation="10321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="258" invocations="24" avgMicrosecondsPerInvocation="10766" maxMicrosecondsPerInvocation="36967" standardDeviationMircosecondsPerInvocation="12113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="132" invocations="15" avgMicrosecondsPerInvocation="8848" maxMicrosecondsPerInvocation="131891" standardDeviationMircosecondsPerInvocation="32884"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="127" invocations="8" avgMicrosecondsPerInvocation="15900" maxMicrosecondsPerInvocation="78165" standardDeviationMircosecondsPerInvocation="27497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="126" invocations="47" avgMicrosecondsPerInvocation="2699" maxMicrosecondsPerInvocation="101639" standardDeviationMircosecondsPerInvocation="14663"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="125" invocations="50" avgMicrosecondsPerInvocation="2506" maxMicrosecondsPerInvocation="31994" standardDeviationMircosecondsPerInvocation="5879"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

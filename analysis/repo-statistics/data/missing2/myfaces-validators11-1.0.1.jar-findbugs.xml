@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1291849683000" analysisTimestamp="1360871023152" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/myfaces/commons/myfaces-validators11/1.0.1/myfaces-validators11-1.0.1.jar</Jar>
+  </Project>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.myfaces.commons.validator.AbstractRegExprValidator">
+      <SourceLine classname="org.apache.myfaces.commons.validator.AbstractRegExprValidator" start="56" end="85" sourcefile="AbstractRegExprValidator.java" sourcepath="org/apache/myfaces/commons/validator/AbstractRegExprValidator.java"/>
+    </Class>
+    <Method classname="org.apache.myfaces.commons.validator.AbstractRegExprValidator" name="validate" signature="(Ljavax/faces/context/FacesContext;Ljavax/faces/component/UIComponent;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.apache.myfaces.commons.validator.AbstractRegExprValidator" start="65" end="85" startBytecode="0" endBytecode="276" sourcefile="AbstractRegExprValidator.java" sourcepath="org/apache/myfaces/commons/validator/AbstractRegExprValidator.java"/>
+    </Method>
+    <LocalVariable name="pattern" register="5" pc="66" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.myfaces.commons.validator.AbstractRegExprValidator" name="getPattern" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.myfaces.commons.validator.AbstractRegExprValidator" sourcefile="AbstractRegExprValidator.java" sourcepath="org/apache/myfaces/commons/validator/AbstractRegExprValidator.java"/>
+    </Method>
+    <SourceLine classname="org.apache.myfaces.commons.validator.AbstractRegExprValidator" start="78" end="78" startBytecode="68" endBytecode="68" sourcefile="AbstractRegExprValidator.java" sourcepath="org/apache/myfaces/commons/validator/AbstractRegExprValidator.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.myfaces.commons.validator.ValidateEmailTag">
+      <SourceLine classname="org.apache.myfaces.commons.validator.ValidateEmailTag" start="36" end="50" sourcefile="ValidateEmailTag.java" sourcepath="org/apache/myfaces/commons/validator/ValidateEmailTag.java"/>
+    </Class>
+    <Method classname="org.apache.myfaces.commons.validator.ValidateEmailTag" name="createValidator" signature="()Ljavax/faces/validator/Validator;" isStatic="false">
+      <SourceLine classname="org.apache.myfaces.commons.validator.ValidateEmailTag" start="41" end="44" startBytecode="0" endBytecode="10" sourcefile="ValidateEmailTag.java" sourcepath="org/apache/myfaces/commons/validator/ValidateEmailTag.java"/>
+    </Method>
+    <LocalVariable name="facesContext" register="1" pc="4" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.myfaces.commons.validator.ValidateEmailTag" start="41" end="41" startBytecode="3" endBytecode="3" sourcefile="ValidateEmailTag.java" sourcepath="org/apache/myfaces/commons/validator/ValidateEmailTag.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="facesContext"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.myfaces.commons.validator.ValidateISBNTag">
+      <SourceLine classname="org.apache.myfaces.commons.validator.ValidateISBNTag" start="36" end="50" sourcefile="ValidateISBNTag.java" sourcepath="org/apache/myfaces/commons/validator/ValidateISBNTag.java"/>
+    </Class>
+    <Method classname="org.apache.myfaces.commons.validator.ValidateISBNTag" name="createValidator" signature="()Ljavax/faces/validator/Validator;" isStatic="false">
+      <SourceLine classname="org.apache.myfaces.commons.validator.ValidateISBNTag" start="41" end="44" startBytecode="0" endBytecode="10" sourcefile="ValidateISBNTag.java" sourcepath="org/apache/myfaces/commons/validator/ValidateISBNTag.java"/>
+    </Method>
+    <LocalVariable name="facesContext" register="1" pc="4" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.myfaces.commons.validator.ValidateISBNTag" start="41" end="41" startBytecode="3" endBytecode="3" sourcefile="ValidateISBNTag.java" sourcepath="org/apache/myfaces/commons/validator/ValidateISBNTag.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="facesContext"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="35">
+    <MissingClass>com.sun.facelets.el.LegacyValueBinding</MissingClass>
+    <MissingClass>com.sun.facelets.tag.MetaRule</MissingClass>
+    <MissingClass>com.sun.facelets.tag.MetaRuleset</MissingClass>
+    <MissingClass>com.sun.facelets.tag.Metadata</MissingClass>
+    <MissingClass>com.sun.facelets.tag.MetadataTarget</MissingClass>
+    <MissingClass>com.sun.facelets.tag.TagAttribute</MissingClass>
+    <MissingClass>com.sun.facelets.tag.jsf.ValidateHandler</MissingClass>
+    <MissingClass>javax.faces.FacesException</MissingClass>
+    <MissingClass>javax.faces.FactoryFinder</MissingClass>
+    <MissingClass>javax.faces.application.Application</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage$Severity</MissingClass>
+    <MissingClass>javax.faces.component.EditableValueHolder</MissingClass>
+    <MissingClass>javax.faces.component.StateHolder</MissingClass>
+    <MissingClass>javax.faces.component.UIComponent</MissingClass>
+    <MissingClass>javax.faces.component.UIViewRoot</MissingClass>
+    <MissingClass>javax.faces.component.ValueHolder</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.faces.convert.Converter</MissingClass>
+    <MissingClass>javax.faces.convert.ConverterException</MissingClass>
+    <MissingClass>javax.faces.el.ValueBinding</MissingClass>
+    <MissingClass>javax.faces.render.RenderKit</MissingClass>
+    <MissingClass>javax.faces.render.RenderKitFactory</MissingClass>
+    <MissingClass>javax.faces.render.Renderer</MissingClass>
+    <MissingClass>javax.faces.validator.Validator</MissingClass>
+    <MissingClass>javax.faces.validator.ValidatorException</MissingClass>
+    <MissingClass>javax.faces.webapp.UIComponentTag</MissingClass>
+    <MissingClass>javax.faces.webapp.ValidatorTag</MissingClass>
+    <MissingClass>javax.servlet.jsp.JspException</MissingClass>
+    <MissingClass>org.apache.commons.validator.CreditCardValidator</MissingClass>
+    <MissingClass>org.apache.commons.validator.GenericValidator</MissingClass>
+    <MissingClass>org.apache.commons.validator.ISBNValidator</MissingClass>
+    <MissingClass>org.apache.commons.validator.UrlValidator</MissingClass>
+    <MissingClass>org.apache.myfaces.commons.util.MessageUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 9 Dec 2010 01:08:03 +0200" total_classes="26" referenced_classes="54" total_bugs="3" total_size="1182" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="15.20" clock_seconds="14.02" peak_mbytes="64.58" alloc_mbytes="763.88" gc_seconds="0.16" priority_2="3">
+    <PackageStats package="org.apache.myfaces.commons.validator" total_bugs="3" total_types="26" total_size="1182" priority_2="3">
+      <ClassStats class="org.apache.myfaces.commons.validator.AbstractCSVValidator" sourceFile="AbstractCSVValidator.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.AbstractCompareToValidator" sourceFile="AbstractCompareToValidator.java" interface="false" size="180" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.AbstractCreditCardValidator" sourceFile="AbstractCreditCardValidator.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.AbstractRegExprValidator" sourceFile="AbstractRegExprValidator.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.AbstractUrlValidator" sourceFile="AbstractUrlValidator.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.CSVValidator" sourceFile="CSVValidator.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.CompareToValidator" sourceFile="CompareToValidator.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.CreditCardValidator" sourceFile="CreditCardValidator.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.EmailValidator" sourceFile="EmailValidator.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ISBNValidator" sourceFile="ISBNValidator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.RegExprValidator" sourceFile="RegExprValidator.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.UrlValidator" sourceFile="UrlValidator.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ValidateCSVTag" sourceFile="ValidateCSVTag.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ValidateCompareToTag" sourceFile="ValidateCompareToTag.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ValidateCreditCardTag" sourceFile="ValidateCreditCardTag.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ValidateEmailTag" sourceFile="ValidateEmailTag.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ValidateISBNTag" sourceFile="ValidateISBNTag.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ValidateRegExprTag" sourceFile="ValidateRegExprTag.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ValidateUrlTag" sourceFile="ValidateUrlTag.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ValidatorBase" sourceFile="ValidatorBase.java" interface="false" size="131" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ValidatorBaseTag" sourceFile="ValidatorBaseTag.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator.ValidatorBaseTagHandler" sourceFile="ValidatorBaseTagHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator._AttachedListStateWrapper" sourceFile="_AttachedListStateWrapper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator._AttachedStateWrapper" sourceFile="_AttachedStateWrapper.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator._ValidatorRule" sourceFile="_ValidatorRule.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.commons.validator._ValidatorRule$ValueBindingMetadata" sourceFile="_ValidatorRule.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1243" invocations="388" avgMicrosecondsPerInvocation="3205" maxMicrosecondsPerInvocation="102540" standardDeviationMircosecondsPerInvocation="9852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="840" invocations="54" avgMicrosecondsPerInvocation="15572" maxMicrosecondsPerInvocation="183372" standardDeviationMircosecondsPerInvocation="35342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="779" invocations="54" avgMicrosecondsPerInvocation="14439" maxMicrosecondsPerInvocation="152105" standardDeviationMircosecondsPerInvocation="30474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="706" invocations="149" avgMicrosecondsPerInvocation="4740" maxMicrosecondsPerInvocation="101296" standardDeviationMircosecondsPerInvocation="14109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="600" invocations="149" avgMicrosecondsPerInvocation="4028" maxMicrosecondsPerInvocation="100521" standardDeviationMircosecondsPerInvocation="11061"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="456" invocations="149" avgMicrosecondsPerInvocation="3061" maxMicrosecondsPerInvocation="60890" standardDeviationMircosecondsPerInvocation="9974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="426" invocations="149" avgMicrosecondsPerInvocation="2862" maxMicrosecondsPerInvocation="45661" standardDeviationMircosecondsPerInvocation="6866"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="416" invocations="234" avgMicrosecondsPerInvocation="1779" maxMicrosecondsPerInvocation="128070" standardDeviationMircosecondsPerInvocation="10394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="348" invocations="54" avgMicrosecondsPerInvocation="6454" maxMicrosecondsPerInvocation="116647" standardDeviationMircosecondsPerInvocation="19007"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="341" invocations="54" avgMicrosecondsPerInvocation="6324" maxMicrosecondsPerInvocation="104319" standardDeviationMircosecondsPerInvocation="16862"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="336" invocations="149" avgMicrosecondsPerInvocation="2261" maxMicrosecondsPerInvocation="79494" standardDeviationMircosecondsPerInvocation="8130"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="332" invocations="156" avgMicrosecondsPerInvocation="2134" maxMicrosecondsPerInvocation="61690" standardDeviationMircosecondsPerInvocation="6525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="320" invocations="105" avgMicrosecondsPerInvocation="3053" maxMicrosecondsPerInvocation="90491" standardDeviationMircosecondsPerInvocation="10703"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="249" invocations="392" avgMicrosecondsPerInvocation="636" maxMicrosecondsPerInvocation="103822" standardDeviationMircosecondsPerInvocation="6286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="238" invocations="311" avgMicrosecondsPerInvocation="768" maxMicrosecondsPerInvocation="41678" standardDeviationMircosecondsPerInvocation="3756"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="221" invocations="54" avgMicrosecondsPerInvocation="4092" maxMicrosecondsPerInvocation="90745" standardDeviationMircosecondsPerInvocation="15395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="202" invocations="180" avgMicrosecondsPerInvocation="1127" maxMicrosecondsPerInvocation="164141" standardDeviationMircosecondsPerInvocation="12268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="183" invocations="54" avgMicrosecondsPerInvocation="3400" maxMicrosecondsPerInvocation="63138" standardDeviationMircosecondsPerInvocation="10237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="159" invocations="100" avgMicrosecondsPerInvocation="1592" maxMicrosecondsPerInvocation="80568" standardDeviationMircosecondsPerInvocation="8396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="150" invocations="54" avgMicrosecondsPerInvocation="2787" maxMicrosecondsPerInvocation="46443" standardDeviationMircosecondsPerInvocation="7170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="136" invocations="26" avgMicrosecondsPerInvocation="5251" maxMicrosecondsPerInvocation="96599" standardDeviationMircosecondsPerInvocation="18924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="114" invocations="149" avgMicrosecondsPerInvocation="768" maxMicrosecondsPerInvocation="24779" standardDeviationMircosecondsPerInvocation="2766"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

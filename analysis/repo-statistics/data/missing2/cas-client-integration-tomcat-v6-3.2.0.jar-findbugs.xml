@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1291782378000" analysisTimestamp="1360905998557" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/jasig/cas/client/cas-client-integration-tomcat-v6/3.2.0/cas-client-integration-tomcat-v6-3.2.0.jar</Jar>
+  </Project>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.jasig.cas.client.tomcat.v6.ProxyCallbackValve">
+      <SourceLine classname="org.jasig.cas.client.tomcat.v6.ProxyCallbackValve" start="43" end="91" sourcefile="ProxyCallbackValve.java" sourcepath="org/jasig/cas/client/tomcat/v6/ProxyCallbackValve.java"/>
+    </Class>
+    <Method classname="org.jasig.cas.client.tomcat.v6.ProxyCallbackValve" name="start" signature="()V" isStatic="false">
+      <SourceLine classname="org.jasig.cas.client.tomcat.v6.ProxyCallbackValve" start="66" end="77" startBytecode="0" endBytecode="160" sourcefile="ProxyCallbackValve.java" sourcepath="org/jasig/cas/client/tomcat/v6/ProxyCallbackValve.java"/>
+    </Method>
+    <Field classname="org.jasig.cas.client.tomcat.v6.ProxyCallbackValve" name="PROXY_GRANTING_TICKET_STORAGE" signature="Lorg/jasig/cas/client/proxy/ProxyGrantingTicketStorage;" isStatic="true">
+      <SourceLine classname="org.jasig.cas.client.tomcat.v6.ProxyCallbackValve" sourcefile="ProxyCallbackValve.java" sourcepath="org/jasig/cas/client/tomcat/v6/ProxyCallbackValve.java"/>
+    </Field>
+    <SourceLine classname="org.jasig.cas.client.tomcat.v6.ProxyCallbackValve" start="72" end="72" startBytecode="41" endBytecode="41" sourcefile="ProxyCallbackValve.java" sourcepath="org/jasig/cas/client/tomcat/v6/ProxyCallbackValve.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="30">
+    <MissingClass>org.apache.catalina.Context</MissingClass>
+    <MissingClass>org.apache.catalina.LifecycleEvent</MissingClass>
+    <MissingClass>org.apache.catalina.LifecycleException</MissingClass>
+    <MissingClass>org.apache.catalina.Realm</MissingClass>
+    <MissingClass>org.apache.catalina.Session</MissingClass>
+    <MissingClass>org.apache.catalina.SessionEvent</MissingClass>
+    <MissingClass>org.apache.catalina.SessionListener</MissingClass>
+    <MissingClass>org.apache.catalina.Valve</MissingClass>
+    <MissingClass>org.apache.catalina.authenticator.AuthenticatorBase</MissingClass>
+    <MissingClass>org.apache.catalina.connector.Request</MissingClass>
+    <MissingClass>org.apache.catalina.realm.RealmBase</MissingClass>
+    <MissingClass>org.apache.catalina.util.LifecycleSupport</MissingClass>
+    <MissingClass>org.apache.catalina.valves.ValveBase</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.jasig.cas.client.session.SessionMappingStorage</MissingClass>
+    <MissingClass>org.jasig.cas.client.session.SingleSignOutHandler</MissingClass>
+    <MissingClass>org.jasig.cas.client.tomcat.AssertionCasRealmDelegate</MissingClass>
+    <MissingClass>org.jasig.cas.client.tomcat.AuthenticatorDelegate</MissingClass>
+    <MissingClass>org.jasig.cas.client.tomcat.CasRealm</MissingClass>
+    <MissingClass>org.jasig.cas.client.tomcat.LogoutHandler</MissingClass>
+    <MissingClass>org.jasig.cas.client.tomcat.PropertiesCasRealmDelegate</MissingClass>
+    <MissingClass>org.jasig.cas.client.tomcat.RegexUriLogoutHandler</MissingClass>
+    <MissingClass>org.jasig.cas.client.tomcat.StaticUriLogoutHandler</MissingClass>
+    <MissingClass>org.jasig.cas.client.util.CommonUtils</MissingClass>
+    <MissingClass>org.jasig.cas.client.util.ReflectUtils</MissingClass>
+    <MissingClass>org.jasig.cas.client.validation.Cas10TicketValidator</MissingClass>
+    <MissingClass>org.jasig.cas.client.validation.Cas20ProxyTicketValidator</MissingClass>
+    <MissingClass>org.jasig.cas.client.validation.Cas20ServiceTicketValidator</MissingClass>
+    <MissingClass>org.jasig.cas.client.validation.Saml11TicketValidator</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Dec 2010 06:26:18 +0200" total_classes="15" referenced_classes="24" total_bugs="1" total_size="411" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="11.73" clock_seconds="6.08" peak_mbytes="56.08" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="1">
+    <PackageStats package="org.jasig.cas.client.tomcat.v6" total_bugs="1" total_types="15" total_size="411" priority_2="1">
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.AbstractAuthenticator" sourceFile="AbstractAuthenticator.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.AbstractCasAuthenticator" sourceFile="AbstractCasAuthenticator.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.AbstractCasRealm" sourceFile="AbstractCasRealm.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.AbstractLifecycleValve" sourceFile="AbstractLifecycleValve.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.AbstractLogoutValve" sourceFile="AbstractLogoutValve.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.AssertionCasRealm" sourceFile="AssertionCasRealm.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.Cas10CasAuthenticator" sourceFile="Cas10CasAuthenticator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.Cas20CasAuthenticator" sourceFile="Cas20CasAuthenticator.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.Cas20ProxyCasAuthenticator" sourceFile="Cas20ProxyCasAuthenticator.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.PropertiesCasRealm" sourceFile="PropertiesCasRealm.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.ProxyCallbackValve" sourceFile="ProxyCallbackValve.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.RegexUriLogoutValve" sourceFile="RegexUriLogoutValve.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.Saml11Authenticator" sourceFile="Saml11Authenticator.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.SingleSignOutValve" sourceFile="SingleSignOutValve.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.jasig.cas.client.tomcat.v6.StaticUriLogoutValve" sourceFile="StaticUriLogoutValve.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="854" invocations="345" avgMicrosecondsPerInvocation="2477" maxMicrosecondsPerInvocation="241469" standardDeviationMircosecondsPerInvocation="14212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="234" invocations="106" avgMicrosecondsPerInvocation="2214" maxMicrosecondsPerInvocation="103362" standardDeviationMircosecondsPerInvocation="10181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="210" invocations="106" avgMicrosecondsPerInvocation="1985" maxMicrosecondsPerInvocation="76549" standardDeviationMircosecondsPerInvocation="7574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="209" invocations="24" avgMicrosecondsPerInvocation="8720" maxMicrosecondsPerInvocation="101095" standardDeviationMircosecondsPerInvocation="22259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="151" invocations="106" avgMicrosecondsPerInvocation="1429" maxMicrosecondsPerInvocation="12947" standardDeviationMircosecondsPerInvocation="2385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="147" invocations="24" avgMicrosecondsPerInvocation="6141" maxMicrosecondsPerInvocation="50263" standardDeviationMircosecondsPerInvocation="12094"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="131" invocations="149" avgMicrosecondsPerInvocation="880" maxMicrosecondsPerInvocation="35017" standardDeviationMircosecondsPerInvocation="3795"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="120" invocations="106" avgMicrosecondsPerInvocation="1135" maxMicrosecondsPerInvocation="20315" standardDeviationMircosecondsPerInvocation="2485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="114" invocations="114" avgMicrosecondsPerInvocation="1007" maxMicrosecondsPerInvocation="102504" standardDeviationMircosecondsPerInvocation="9548"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="113" invocations="266" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="20115" standardDeviationMircosecondsPerInvocation="1377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="106" invocations="106" avgMicrosecondsPerInvocation="1009" maxMicrosecondsPerInvocation="9517" standardDeviationMircosecondsPerInvocation="1410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="101" invocations="106" avgMicrosecondsPerInvocation="958" maxMicrosecondsPerInvocation="11231" standardDeviationMircosecondsPerInvocation="1730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="90" invocations="24" avgMicrosecondsPerInvocation="3754" maxMicrosecondsPerInvocation="29304" standardDeviationMircosecondsPerInvocation="7191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="79" invocations="66" avgMicrosecondsPerInvocation="1203" maxMicrosecondsPerInvocation="21218" standardDeviationMircosecondsPerInvocation="2644"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="74" invocations="15" avgMicrosecondsPerInvocation="4975" maxMicrosecondsPerInvocation="55635" standardDeviationMircosecondsPerInvocation="13602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="67" invocations="24" avgMicrosecondsPerInvocation="2807" maxMicrosecondsPerInvocation="21734" standardDeviationMircosecondsPerInvocation="5788"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="56" invocations="15" avgMicrosecondsPerInvocation="3784" maxMicrosecondsPerInvocation="41835" standardDeviationMircosecondsPerInvocation="10204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="54" invocations="24" avgMicrosecondsPerInvocation="2260" maxMicrosecondsPerInvocation="12931" standardDeviationMircosecondsPerInvocation="3570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="52" invocations="15" avgMicrosecondsPerInvocation="3527" maxMicrosecondsPerInvocation="22965" standardDeviationMircosecondsPerInvocation="5749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="48" invocations="15" avgMicrosecondsPerInvocation="3217" maxMicrosecondsPerInvocation="36176" standardDeviationMircosecondsPerInvocation="8832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="44" invocations="15" avgMicrosecondsPerInvocation="2995" maxMicrosecondsPerInvocation="23974" standardDeviationMircosecondsPerInvocation="5746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="41" invocations="106" avgMicrosecondsPerInvocation="388" maxMicrosecondsPerInvocation="3835" standardDeviationMircosecondsPerInvocation="508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="39" invocations="15" avgMicrosecondsPerInvocation="2601" maxMicrosecondsPerInvocation="17773" standardDeviationMircosecondsPerInvocation="4382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="38" invocations="24" avgMicrosecondsPerInvocation="1594" maxMicrosecondsPerInvocation="11005" standardDeviationMircosecondsPerInvocation="2683"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="37" invocations="55" avgMicrosecondsPerInvocation="673" maxMicrosecondsPerInvocation="14262" standardDeviationMircosecondsPerInvocation="2095"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="36" invocations="106" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="14045" standardDeviationMircosecondsPerInvocation="1371"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StaticCalendarDetector" totalMilliseconds="34" invocations="15" avgMicrosecondsPerInvocation="2311" maxMicrosecondsPerInvocation="28730" standardDeviationMircosecondsPerInvocation="7064"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="32" invocations="15" avgMicrosecondsPerInvocation="2175" maxMicrosecondsPerInvocation="8147" standardDeviationMircosecondsPerInvocation="2136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="30" invocations="349" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="475" standardDeviationMircosecondsPerInvocation="62"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

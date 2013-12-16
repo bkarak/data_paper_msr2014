@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1294317880000" analysisTimestamp="1360868377438" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/servicemix/specs/org.apache.servicemix.specs.jaxws-api-2.0/1.7.0/org.apache.servicemix.specs.jaxws-api-2.0-1.7.0.jar</Jar>
+  </Project>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="javax.xml.ws.Holder">
+      <SourceLine classname="javax.xml.ws.Holder" start="24" end="29" sourcefile="Holder.java" sourcepath="javax/xml/ws/Holder.java"/>
+    </Class>
+    <Field classname="javax.xml.ws.Holder" name="value" signature="Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="javax.xml.ws.Holder" sourcefile="Holder.java" sourcepath="javax/xml/ws/Holder.java"/>
+    </Field>
+    <SourceLine classname="javax.xml.ws.Holder" start="28" end="28" startBytecode="6" endBytecode="6" sourcefile="Holder.java" sourcepath="javax/xml/ws/Holder.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="javax.xml.ws.spi.FactoryFinder$3">
+      <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="166" end="264" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    </Class>
+    <Method classname="javax.xml.ws.spi.FactoryFinder$3" name="run" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="168" end="264" startBytecode="0" endBytecode="882" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="242" end="242" startBytecode="305" endBytecode="305" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="javax.xml.ws.spi.FactoryFinder$3">
+      <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="166" end="264" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    </Class>
+    <Method classname="javax.xml.ws.spi.FactoryFinder$3" name="run" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="168" end="264" startBytecode="0" endBytecode="882" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="200" end="200" startBytecode="152" endBytecode="152" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="201" end="201" startBytecode="158" endBytecode="158" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="202" end="202" startBytecode="169" endBytecode="169" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="203" end="203" startBytecode="192" endBytecode="192" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="javax.xml.ws.spi.FactoryFinder$3">
+      <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="166" end="264" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    </Class>
+    <Method classname="javax.xml.ws.spi.FactoryFinder$3" name="run" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="168" end="264" startBytecode="0" endBytecode="203" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="200" end="200" startBytecode="146" endBytecode="146" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="javax.xml.ws.spi.FactoryFinder$3">
+      <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="166" end="264" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    </Class>
+    <Method classname="javax.xml.ws.spi.FactoryFinder$3" name="run" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="168" end="264" startBytecode="0" endBytecode="882" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    </Method>
+    <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="205" end="205" startBytecode="202" endBytecode="202" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    <SourceLine classname="javax.xml.ws.spi.FactoryFinder$3" start="254" end="254" startBytecode="373" endBytecode="373" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DMI_BLOCKING_METHODS_ON_URL" priority="1" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader">
+      <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="131" end="174" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="171" end="174" startBytecode="0" endBytecode="83" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+    </Method>
+    <Method classname="java.net.URL" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.net.URL" start="838" end="842" startBytecode="0" endBytecode="59" sourcefile="URL.java" sourcepath="java/net/URL.java"/>
+    </Method>
+    <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="172" end="172" startBytecode="18" endBytecode="18" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+  </BugInstance>
+  <BugInstance type="DMI_BLOCKING_METHODS_ON_URL" priority="1" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader">
+      <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="131" end="174" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" name="hashCode" signature="()I" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="166" end="166" startBytecode="0" endBytecode="49" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+    </Method>
+    <Method classname="java.net.URL" name="hashCode" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.net.URL" start="854" end="858" startBytecode="0" endBytecode="65" sourcefile="URL.java" sourcepath="java/net/URL.java"/>
+    </Method>
+    <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="166" end="166" startBytecode="4" endBytecode="4" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.BundleEvent</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 6 Jan 2011 14:44:40 +0200" total_classes="48" referenced_classes="125" total_bugs="7" total_size="548" num_packages="7" vm_version="20.4-b02-402" cpu_seconds="16.18" clock_seconds="13.37" peak_mbytes="60.45" alloc_mbytes="763.88" gc_seconds="0.16" priority_2="4" priority_1="3">
+    <PackageStats package="javax.xml.ws" total_bugs="1" total_types="25" total_size="181" priority_2="1">
+      <ClassStats class="javax.xml.ws.AsyncHandler" sourceFile="AsyncHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Binding" sourceFile="Binding.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.ws.BindingProvider" sourceFile="BindingProvider.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.ws.BindingType" sourceFile="BindingType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Dispatch" sourceFile="Dispatch.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Endpoint" sourceFile="Endpoint.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Holder" sourceFile="Holder.java" interface="false" size="9" bugs="1" priority_2="1"/>
+      <ClassStats class="javax.xml.ws.LogicalMessage" sourceFile="LogicalMessage.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.ProtocolException" sourceFile="ProtocolException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Provider" sourceFile="Provider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.RequestWrapper" sourceFile="RequestWrapper.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Response" sourceFile="Response.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.ResponseWrapper" sourceFile="ResponseWrapper.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Service" sourceFile="Service.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Service$Mode" sourceFile="Service.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.ws.ServiceMode" sourceFile="ServiceMode.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebEndpoint" sourceFile="WebEndpoint.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebFault" sourceFile="WebFault.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceClient" sourceFile="WebServiceClient.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceContext" sourceFile="WebServiceContext.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceException" sourceFile="WebServiceException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServicePermission" sourceFile="WebServicePermission.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceProvider" sourceFile="WebServiceProvider.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceRef" sourceFile="WebServiceRef.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceRefs" sourceFile="WebServiceRefs.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.handler" total_bugs="0" total_types="7" total_size="44">
+      <ClassStats class="javax.xml.ws.handler.Handler" sourceFile="Handler.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.HandlerResolver" sourceFile="HandlerResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.LogicalHandler" sourceFile="LogicalHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.LogicalMessageContext" sourceFile="LogicalMessageContext.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.MessageContext" sourceFile="MessageContext.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.MessageContext$Scope" sourceFile="MessageContext.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.PortInfo" sourceFile="PortInfo.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.handler.soap" total_bugs="0" total_types="2" total_size="7">
+      <ClassStats class="javax.xml.ws.handler.soap.SOAPHandler" sourceFile="SOAPHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.soap.SOAPMessageContext" sourceFile="SOAPMessageContext.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.http" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="javax.xml.ws.http.HTTPBinding" sourceFile="HTTPBinding.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.http.HTTPException" sourceFile="HTTPException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.soap" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="javax.xml.ws.soap.SOAPBinding" sourceFile="SOAPBinding.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.SOAPFaultException" sourceFile="SOAPFaultException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.spi" total_bugs="4" total_types="7" total_size="144" priority_2="3" priority_1="1">
+      <ClassStats class="javax.xml.ws.spi.FactoryFinder" sourceFile="FactoryFinder.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.FactoryFinder$1" sourceFile="FactoryFinder.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.FactoryFinder$2" sourceFile="FactoryFinder.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.FactoryFinder$3" sourceFile="FactoryFinder.java" interface="false" size="52" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="javax.xml.ws.spi.FactoryFinder$ConfigurationError" sourceFile="FactoryFinder.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.Provider" sourceFile="Provider.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.ServiceDelegate" sourceFile="ServiceDelegate.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.servicemix.specs.locator" total_bugs="2" total_types="3" total_size="143" priority_1="2">
+      <ClassStats class="org.apache.servicemix.specs.locator.Activator" sourceFile="Activator.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" sourceFile="Activator.java" interface="false" size="34" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.servicemix.specs.locator.OsgiLocator" sourceFile="OsgiLocator.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1379" invocations="562" avgMicrosecondsPerInvocation="2455" maxMicrosecondsPerInvocation="110649" standardDeviationMircosecondsPerInvocation="9599"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="905" invocations="125" avgMicrosecondsPerInvocation="7242" maxMicrosecondsPerInvocation="185333" standardDeviationMircosecondsPerInvocation="21452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="593" invocations="81" avgMicrosecondsPerInvocation="7324" maxMicrosecondsPerInvocation="125981" standardDeviationMircosecondsPerInvocation="20387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="509" invocations="125" avgMicrosecondsPerInvocation="4078" maxMicrosecondsPerInvocation="96687" standardDeviationMircosecondsPerInvocation="11680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="507" invocations="86" avgMicrosecondsPerInvocation="5895" maxMicrosecondsPerInvocation="73710" standardDeviationMircosecondsPerInvocation="13632"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="484" invocations="82" avgMicrosecondsPerInvocation="5908" maxMicrosecondsPerInvocation="70518" standardDeviationMircosecondsPerInvocation="12800"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="424" invocations="81" avgMicrosecondsPerInvocation="5234" maxMicrosecondsPerInvocation="70077" standardDeviationMircosecondsPerInvocation="11890"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="414" invocations="507" avgMicrosecondsPerInvocation="817" maxMicrosecondsPerInvocation="190325" standardDeviationMircosecondsPerInvocation="8845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="365" invocations="87" avgMicrosecondsPerInvocation="4196" maxMicrosecondsPerInvocation="58183" standardDeviationMircosecondsPerInvocation="9807"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="344" invocations="82" avgMicrosecondsPerInvocation="4202" maxMicrosecondsPerInvocation="151289" standardDeviationMircosecondsPerInvocation="17488"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="310" invocations="78" avgMicrosecondsPerInvocation="3983" maxMicrosecondsPerInvocation="70818" standardDeviationMircosecondsPerInvocation="11166"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="283" invocations="125" avgMicrosecondsPerInvocation="2270" maxMicrosecondsPerInvocation="57317" standardDeviationMircosecondsPerInvocation="7836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="264" invocations="231" avgMicrosecondsPerInvocation="1145" maxMicrosecondsPerInvocation="30528" standardDeviationMircosecondsPerInvocation="3278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="238" invocations="48" avgMicrosecondsPerInvocation="4970" maxMicrosecondsPerInvocation="191726" standardDeviationMircosecondsPerInvocation="27443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="210" invocations="125" avgMicrosecondsPerInvocation="1681" maxMicrosecondsPerInvocation="48651" standardDeviationMircosecondsPerInvocation="5717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="196" invocations="566" avgMicrosecondsPerInvocation="347" maxMicrosecondsPerInvocation="99771" standardDeviationMircosecondsPerInvocation="4223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="174" invocations="174" avgMicrosecondsPerInvocation="1005" maxMicrosecondsPerInvocation="136285" standardDeviationMircosecondsPerInvocation="10334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="153" invocations="125" avgMicrosecondsPerInvocation="1226" maxMicrosecondsPerInvocation="53071" standardDeviationMircosecondsPerInvocation="5177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="148" invocations="125" avgMicrosecondsPerInvocation="1185" maxMicrosecondsPerInvocation="24331" standardDeviationMircosecondsPerInvocation="3819"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

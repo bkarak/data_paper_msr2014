@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1264779198000" analysisTimestamp="1360871118380" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jasmine/monitoring/jasmine-monitoring-util-extractor/1.2.2/jasmine-monitoring-util-extractor-1.2.2.jar</Jar>
+  </Project>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.ow2.jasmine.monitoring.common.util.extractor.AbstractJasmineEventDataExtractor">
+      <SourceLine classname="org.ow2.jasmine.monitoring.common.util.extractor.AbstractJasmineEventDataExtractor" start="39" end="89" sourcefile="AbstractJasmineEventDataExtractor.java" sourcepath="org/ow2/jasmine/monitoring/common/util/extractor/AbstractJasmineEventDataExtractor.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.common.util.extractor.AbstractJasmineEventDataExtractor" name="getEvents" signature="([Ljava/lang/String;)[Lorg/ow2/jasmine/event/beans/JasmineEventEB;" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.common.util.extractor.AbstractJasmineEventDataExtractor" start="42" end="62" startBytecode="0" endBytecode="74" sourcefile="AbstractJasmineEventDataExtractor.java" sourcepath="org/ow2/jasmine/monitoring/common/util/extractor/AbstractJasmineEventDataExtractor.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jasmine.monitoring.common.util.extractor.AbstractJasmineEventDataExtractor" start="45" end="45" startBytecode="30" endBytecode="30" sourcefile="AbstractJasmineEventDataExtractor.java" sourcepath="org/ow2/jasmine/monitoring/common/util/extractor/AbstractJasmineEventDataExtractor.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jasmine.monitoring.common.util.extractor.ArgumentParser">
+      <SourceLine classname="org.ow2.jasmine.monitoring.common.util.extractor.ArgumentParser" start="50" end="101" sourcefile="ArgumentParser.java" sourcepath="org/ow2/jasmine/monitoring/common/util/extractor/ArgumentParser.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.common.util.extractor.ArgumentParser" name="getOptions" signature="()Ljava/util/Hashtable;" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.common.util.extractor.ArgumentParser" start="90" end="90" startBytecode="0" endBytecode="46" sourcefile="ArgumentParser.java" sourcepath="org/ow2/jasmine/monitoring/common/util/extractor/ArgumentParser.java"/>
+    </Method>
+    <Field classname="org.ow2.jasmine.monitoring.common.util.extractor.ArgumentParser" name="options" signature="Ljava/util/Hashtable;" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.common.util.extractor.ArgumentParser" sourcefile="ArgumentParser.java" sourcepath="org/ow2/jasmine/monitoring/common/util/extractor/ArgumentParser.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jasmine.monitoring.common.util.extractor.ArgumentParser" start="90" end="90" startBytecode="4" endBytecode="4" sourcefile="ArgumentParser.java" sourcepath="org/ow2/jasmine/monitoring/common/util/extractor/ArgumentParser.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="2">
+    <MissingClass>org.ow2.jasmine.monitoring.eventswitch.beans.JasmineEventSLBRemote</MissingClass>
+    <MissingClass>org.ow2.jasmine.monitoring.eventswitch.connectors.EJB3Connector</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 29 Jan 2010 17:33:18 +0200" total_classes="2" referenced_classes="24" total_bugs="2" total_size="48" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="9.94" clock_seconds="9.65" peak_mbytes="52.24" alloc_mbytes="763.88" gc_seconds="0.09" priority_2="2">
+    <PackageStats package="org.ow2.jasmine.monitoring.common.util.extractor" total_bugs="2" total_types="2" total_size="48" priority_2="2">
+      <ClassStats class="org.ow2.jasmine.monitoring.common.util.extractor.AbstractJasmineEventDataExtractor" sourceFile="AbstractJasmineEventDataExtractor.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.common.util.extractor.ArgumentParser" sourceFile="ArgumentParser.java" interface="false" size="22" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2245" invocations="388" avgMicrosecondsPerInvocation="5787" maxMicrosecondsPerInvocation="114152" standardDeviationMircosecondsPerInvocation="14877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="864" invocations="24" avgMicrosecondsPerInvocation="36015" maxMicrosecondsPerInvocation="263163" standardDeviationMircosecondsPerInvocation="61343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="841" invocations="24" avgMicrosecondsPerInvocation="35076" maxMicrosecondsPerInvocation="154288" standardDeviationMircosecondsPerInvocation="41612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="472" invocations="24" avgMicrosecondsPerInvocation="19676" maxMicrosecondsPerInvocation="148751" standardDeviationMircosecondsPerInvocation="33193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="310" invocations="24" avgMicrosecondsPerInvocation="12924" maxMicrosecondsPerInvocation="90652" standardDeviationMircosecondsPerInvocation="22313"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="302" invocations="345" avgMicrosecondsPerInvocation="875" maxMicrosecondsPerInvocation="58714" standardDeviationMircosecondsPerInvocation="4529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="250" invocations="98" avgMicrosecondsPerInvocation="2553" maxMicrosecondsPerInvocation="33653" standardDeviationMircosecondsPerInvocation="5943"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="240" invocations="24" avgMicrosecondsPerInvocation="10034" maxMicrosecondsPerInvocation="112752" standardDeviationMircosecondsPerInvocation="22832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="174" invocations="34" avgMicrosecondsPerInvocation="5144" maxMicrosecondsPerInvocation="37404" standardDeviationMircosecondsPerInvocation="10355"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

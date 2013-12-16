@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1285061479000" analysisTimestamp="1360903801716" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/openl/org.openl.commons/5.7.2/org.openl.commons-5.7.2.jar</Jar>
+  </Project>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.openl.domain.Enum">
+      <SourceLine classname="org.openl.domain.Enum" start="19" end="64" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+    </Class>
+    <Method classname="org.openl.domain.Enum" name="&lt;init&gt;" signature="([Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.openl.domain.Enum" start="19" end="26" startBytecode="0" endBytecode="169" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.openl.domain.Enum" start="24" end="24" startBytecode="42" endBytecode="42" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.openl.domain.Enum">
+      <SourceLine classname="org.openl.domain.Enum" start="19" end="64" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+    </Class>
+    <Method classname="org.openl.domain.Enum" name="getAllObjects" signature="()[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.openl.domain.Enum" start="49" end="49" startBytecode="0" endBytecode="64" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+    </Method>
+    <Field classname="org.openl.domain.Enum" name="allObjects" signature="[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.openl.domain.Enum" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+    </Field>
+    <SourceLine classname="org.openl.domain.Enum" start="49" end="49" startBytecode="4" endBytecode="4" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.openl.domain.Enum">
+      <SourceLine classname="org.openl.domain.Enum" start="19" end="64" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+    </Class>
+    <Method classname="org.openl.domain.Enum" name="&lt;init&gt;" signature="([Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.openl.domain.Enum" start="19" end="26" startBytecode="0" endBytecode="169" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+    </Method>
+    <Field classname="org.openl.domain.Enum" name="allObjects" signature="[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.openl.domain.Enum" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+    </Field>
+    <LocalVariable name="objs" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.openl.domain.Enum" start="20" end="20" startBytecode="6" endBytecode="6" sourcefile="Enum.java" sourcepath="org/openl/domain/Enum.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.openl.domain.IntArrayIterator">
+      <SourceLine classname="org.openl.domain.IntArrayIterator" start="10" end="37" sourcefile="IntArrayIterator.java" sourcepath="org/openl/domain/IntArrayIterator.java"/>
+    </Class>
+    <Method classname="org.openl.domain.IntArrayIterator" name="&lt;init&gt;" signature="([I)V" isStatic="false">
+      <SourceLine classname="org.openl.domain.IntArrayIterator" start="14" end="16" startBytecode="0" endBytecode="78" sourcefile="IntArrayIterator.java" sourcepath="org/openl/domain/IntArrayIterator.java"/>
+    </Method>
+    <Field classname="org.openl.domain.IntArrayIterator" name="ary" signature="[I" isStatic="false">
+      <SourceLine classname="org.openl.domain.IntArrayIterator" sourcefile="IntArrayIterator.java" sourcepath="org/openl/domain/IntArrayIterator.java"/>
+    </Field>
+    <LocalVariable name="ary" register="1" pc="11" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.openl.domain.IntArrayIterator" start="15" end="15" startBytecode="11" endBytecode="11" sourcefile="IntArrayIterator.java" sourcepath="org/openl/domain/IntArrayIterator.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.AOpenIterator$MergeIterator">
+      <SourceLine classname="org.openl.util.AOpenIterator$MergeIterator" start="82" end="126" sourcefile="AOpenIterator.java" sourcepath="org/openl/util/AOpenIterator.java"/>
+    </Class>
+    <Method classname="org.openl.util.AOpenIterator$MergeIterator" name="&lt;init&gt;" signature="([Ljava/util/Iterator;)V" isStatic="false">
+      <SourceLine classname="org.openl.util.AOpenIterator$MergeIterator" start="91" end="93" startBytecode="0" endBytecode="106" sourcefile="AOpenIterator.java" sourcepath="org/openl/util/AOpenIterator.java"/>
+    </Method>
+    <Field classname="org.openl.util.AOpenIterator$MergeIterator" name="itt" signature="[Ljava/util/Iterator;" isStatic="false">
+      <SourceLine classname="org.openl.util.AOpenIterator$MergeIterator" sourcefile="AOpenIterator.java" sourcepath="org/openl/util/AOpenIterator.java"/>
+    </Field>
+    <LocalVariable name="itt" register="1" pc="11" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.openl.util.AOpenIterator$MergeIterator" start="92" end="92" startBytecode="11" endBytecode="11" sourcefile="AOpenIterator.java" sourcepath="org/openl/util/AOpenIterator.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.ArrayOfNamedValues">
+      <SourceLine classname="org.openl.util.ArrayOfNamedValues" start="17" end="52" sourcefile="ArrayOfNamedValues.java" sourcepath="org/openl/util/ArrayOfNamedValues.java"/>
+    </Class>
+    <Method classname="org.openl.util.ArrayOfNamedValues" name="&lt;init&gt;" signature="([Ljava/lang/String;[Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.openl.util.ArrayOfNamedValues" start="17" end="20" startBytecode="0" endBytecode="88" sourcefile="ArrayOfNamedValues.java" sourcepath="org/openl/util/ArrayOfNamedValues.java"/>
+    </Method>
+    <Field classname="org.openl.util.ArrayOfNamedValues" name="names" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.openl.util.ArrayOfNamedValues" sourcefile="ArrayOfNamedValues.java" sourcepath="org/openl/util/ArrayOfNamedValues.java"/>
+    </Field>
+    <LocalVariable name="names" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.openl.util.ArrayOfNamedValues" start="18" end="18" startBytecode="6" endBytecode="6" sourcefile="ArrayOfNamedValues.java" sourcepath="org/openl/util/ArrayOfNamedValues.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.ArrayOfNamedValues">
+      <SourceLine classname="org.openl.util.ArrayOfNamedValues" start="17" end="52" sourcefile="ArrayOfNamedValues.java" sourcepath="org/openl/util/ArrayOfNamedValues.java"/>
+    </Class>
+    <Method classname="org.openl.util.ArrayOfNamedValues" name="&lt;init&gt;" signature="([Ljava/lang/String;[Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.openl.util.ArrayOfNamedValues" start="17" end="20" startBytecode="0" endBytecode="88" sourcefile="ArrayOfNamedValues.java" sourcepath="org/openl/util/ArrayOfNamedValues.java"/>
+    </Method>
+    <Field classname="org.openl.util.ArrayOfNamedValues" name="values" signature="[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.openl.util.ArrayOfNamedValues" sourcefile="ArrayOfNamedValues.java" sourcepath="org/openl/util/ArrayOfNamedValues.java"/>
+    </Field>
+    <LocalVariable name="values" register="2" pc="11" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.openl.util.ArrayOfNamedValues" start="19" end="19" startBytecode="11" endBytecode="11" sourcefile="ArrayOfNamedValues.java" sourcepath="org/openl/util/ArrayOfNamedValues.java"/>
+  </BugInstance>
+  <BugInstance type="IT_NO_SUCH_ELEMENT" priority="2" abbrev="It" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.ArrayTool$ArrayIterator">
+      <SourceLine classname="org.openl.util.ArrayTool$ArrayIterator" start="36" end="54" sourcefile="ArrayTool.java" sourcepath="org/openl/util/ArrayTool.java"/>
+    </Class>
+    <Method classname="org.openl.util.ArrayTool$ArrayIterator" name="next" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.openl.util.ArrayTool$ArrayIterator" start="50" end="50" startBytecode="0" endBytecode="76" sourcefile="ArrayTool.java" sourcepath="org/openl/util/ArrayTool.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.CategorizedMap$Category">
+      <SourceLine classname="org.openl.util.CategorizedMap$Category" start="19" end="58" sourcefile="CategorizedMap.java" sourcepath="org/openl/util/CategorizedMap.java"/>
+    </Class>
+    <Method classname="org.openl.util.CategorizedMap$Category" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.openl.util.CategorizedMap$Category" start="32" end="32" startBytecode="0" endBytecode="66" sourcefile="CategorizedMap.java" sourcepath="org/openl/util/CategorizedMap.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.CategorizedMap$Category" start="32" end="32" startBytecode="5" endBytecode="5" sourcefile="CategorizedMap.java" sourcepath="org/openl/util/CategorizedMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="2" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.CategorizedMap$Category">
+      <SourceLine classname="org.openl.util.CategorizedMap$Category" start="19" end="58" sourcefile="CategorizedMap.java" sourcepath="org/openl/util/CategorizedMap.java"/>
+    </Class>
+    <Method classname="org.openl.util.CategorizedMap$Category" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.openl.util.CategorizedMap$Category" start="32" end="32" startBytecode="0" endBytecode="66" sourcefile="CategorizedMap.java" sourcepath="org/openl/util/CategorizedMap.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.openl.util.FileTool">
+      <SourceLine classname="org.openl.util.FileTool" start="24" end="596" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Class>
+    <Method classname="org.openl.util.FileTool" name="containsFileText" signature="(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="org.openl.util.FileTool" start="576" end="596" startBytecode="0" endBytecode="293" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.FileTool" start="578" end="578" startBytecode="18" endBytecode="18" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.openl.util.FileTool">
+      <SourceLine classname="org.openl.util.FileTool" start="24" end="596" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Class>
+    <Method classname="org.openl.util.FileTool" name="loadFileToByteArray" signature="(Ljava/io/InputStream;)[B" isStatic="true">
+      <SourceLine classname="org.openl.util.FileTool" start="427" end="438" startBytecode="0" endBytecode="148" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Method>
+    <LocalVariable name="bis" register="1" pc="13" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.openl.util.FileTool" start="436" end="436" startBytecode="36" endBytecode="36" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.openl.util.FileTool" start="427" end="427" startBytecode="0" endBytecode="0" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.openl.util.FileTool" start="432" end="432" startBytecode="14" endBytecode="14" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_ARE_CLONED" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.openl.util.FileTool">
+      <SourceLine classname="org.openl.util.FileTool" start="24" end="596" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Class>
+    <Method classname="org.openl.util.FileTool" name="loadFileToByteArray" signature="(Ljava/lang/String;)[B" isStatic="true">
+      <SourceLine classname="org.openl.util.FileTool" start="442" end="456" startBytecode="0" endBytecode="207" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Method>
+    <LocalVariable name="bis" register="2" pc="26" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.openl.util.FileTool" start="454" end="454" startBytecode="61" endBytecode="61" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.openl.util.FileTool" start="443" end="443" startBytecode="2" endBytecode="2" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.openl.util.FileTool" start="449" end="449" startBytecode="27" endBytecode="27" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_ARE_CLONED" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.openl.util.FileTool">
+      <SourceLine classname="org.openl.util.FileTool" start="24" end="596" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Class>
+    <Method classname="org.openl.util.FileTool" name="copyFile" signature="(Ljava/io/File;Ljava/io/File;)V" isStatic="true">
+      <SourceLine classname="org.openl.util.FileTool" start="308" end="341" startBytecode="0" endBytecode="358" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.openl.util.FileTool" start="322" end="322" startBytecode="48" endBytecode="48" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.openl.util.FileTool" start="324" end="324" startBytecode="53" endBytecode="53" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.openl.util.FileTool" start="326" end="326" startBytecode="60" endBytecode="60" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.openl.util.FileTool" start="333" end="333" startBytecode="113" endBytecode="113" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.openl.util.FileTool" start="334" end="334" startBytecode="120" endBytecode="120" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.FileTool">
+      <SourceLine classname="org.openl.util.FileTool" start="24" end="596" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Class>
+    <Method classname="org.openl.util.FileTool" name="copyFile" signature="(Ljava/io/File;Ljava/io/File;)V" isStatic="true">
+      <SourceLine classname="org.openl.util.FileTool" start="308" end="341" startBytecode="0" endBytecode="358" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.FileTool" start="315" end="315" startBytecode="23" endBytecode="23" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.FileTool">
+      <SourceLine classname="org.openl.util.FileTool" start="24" end="596" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Class>
+    <Method classname="org.openl.util.FileTool" name="removeDirRecursive" signature="(Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.openl.util.FileTool" start="498" end="506" startBytecode="0" endBytecode="109" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.FileTool" start="504" end="504" startBytecode="29" endBytecode="29" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.openl.util.FileTool">
+      <SourceLine classname="org.openl.util.FileTool" start="24" end="596" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Class>
+    <Method classname="org.openl.util.FileTool" name="buildRelativePath" signature="(Ljava/io/File;Ljava/io/File;)Ljava/io/File;" isStatic="true">
+      <SourceLine classname="org.openl.util.FileTool" start="169" end="211" startBytecode="0" endBytecode="481" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.FileTool" start="208" end="208" startBytecode="187" endBytecode="187" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.FileTool$DirectoryIterator$DefaultComparator">
+      <SourceLine classname="org.openl.util.FileTool$DirectoryIterator$DefaultComparator" start="53" end="70" sourcefile="FileTool.java" sourcepath="org/openl/util/FileTool.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.openl.util.IdMap">
+      <SourceLine classname="org.openl.util.IdMap" start="26" end="163" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java"/>
+    </Class>
+    <Field classname="org.openl.util.IdMap" name="data" signature="[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.openl.util.IdMap" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java"/>
+    </Field>
+    <Int value="75" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.openl.util.IdMap" start="109" end="109" startBytecode="1" endBytecode="1" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="114" end="114" startBytecode="14" endBytecode="14" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="95" end="95" startBytecode="7" endBytecode="7" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="66" end="66" startBytecode="27" endBytecode="27" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="71" end="71" startBytecode="49" endBytecode="49" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="131" end="131" startBytecode="7" endBytecode="7" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="135" end="135" startBytecode="18" endBytecode="18" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="140" end="140" startBytecode="35" endBytecode="35" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="145" end="145" startBytecode="47" endBytecode="47" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="152" end="152" startBytecode="72" endBytecode="72" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="79" end="79" startBytecode="27" endBytecode="27" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.openl.util.IdMap" start="80" end="80" startBytecode="46" endBytecode="46" sourcefile="IdMap.java" sourcepath="org/openl/util/IdMap.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.MultiIndexIterator">
+      <SourceLine classname="org.openl.util.MultiIndexIterator" start="15" end="58" sourcefile="MultiIndexIterator.java" sourcepath="org/openl/util/MultiIndexIterator.java"/>
+    </Class>
+    <Method classname="org.openl.util.MultiIndexIterator" name="nextDim" signature="()[I" isStatic="false">
+      <SourceLine classname="org.openl.util.MultiIndexIterator" start="44" end="58" startBytecode="0" endBytecode="152" sourcefile="MultiIndexIterator.java" sourcepath="org/openl/util/MultiIndexIterator.java"/>
+    </Method>
+    <Field classname="org.openl.util.MultiIndexIterator" name="values" signature="[I" isStatic="false">
+      <SourceLine classname="org.openl.util.MultiIndexIterator" sourcefile="MultiIndexIterator.java" sourcepath="org/openl/util/MultiIndexIterator.java"/>
+    </Field>
+    <SourceLine classname="org.openl.util.MultiIndexIterator" start="46" end="46" startBytecode="16" endBytecode="16" sourcefile="MultiIndexIterator.java" sourcepath="org/openl/util/MultiIndexIterator.java"/>
+    <SourceLine classname="org.openl.util.MultiIndexIterator" start="58" end="58" startBytecode="68" endBytecode="68" sourcefile="MultiIndexIterator.java" sourcepath="org/openl/util/MultiIndexIterator.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.MultiIndexIterator">
+      <SourceLine classname="org.openl.util.MultiIndexIterator" start="15" end="58" sourcefile="MultiIndexIterator.java" sourcepath="org/openl/util/MultiIndexIterator.java"/>
+    </Class>
+    <Method classname="org.openl.util.MultiIndexIterator" name="&lt;init&gt;" signature="([I)V" isStatic="false">
+      <SourceLine classname="org.openl.util.MultiIndexIterator" start="17" end="29" startBytecode="0" endBytecode="159" sourcefile="MultiIndexIterator.java" sourcepath="org/openl/util/MultiIndexIterator.java"/>
+    </Method>
+    <Field classname="org.openl.util.MultiIndexIterator" name="dims" signature="[I" isStatic="false">
+      <SourceLine classname="org.openl.util.MultiIndexIterator" sourcefile="MultiIndexIterator.java" sourcepath="org/openl/util/MultiIndexIterator.java"/>
+    </Field>
+    <LocalVariable name="dims" register="1" pc="11" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.openl.util.MultiIndexIterator" start="18" end="18" startBytecode="11" endBytecode="11" sourcefile="MultiIndexIterator.java" sourcepath="org/openl/util/MultiIndexIterator.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.SelectorSet">
+      <SourceLine classname="org.openl.util.SelectorSet" start="10" end="20" sourcefile="SelectorSet.java" sourcepath="org/openl/util/SelectorSet.java"/>
+    </Class>
+    <Method classname="org.openl.util.SelectorSet" name="getElements" signature="()[Lorg/openl/util/SelectorSetElement;" isStatic="false">
+      <SourceLine classname="org.openl.util.SelectorSet" start="15" end="15" startBytecode="0" endBytecode="46" sourcefile="SelectorSet.java" sourcepath="org/openl/util/SelectorSet.java"/>
+    </Method>
+    <Field classname="org.openl.util.SelectorSet" name="elements" signature="[Lorg/openl/util/SelectorSetElement;" isStatic="false">
+      <SourceLine classname="org.openl.util.SelectorSet" sourcefile="SelectorSet.java" sourcepath="org/openl/util/SelectorSet.java"/>
+    </Field>
+    <SourceLine classname="org.openl.util.SelectorSet" start="15" end="15" startBytecode="4" endBytecode="4" sourcefile="SelectorSet.java" sourcepath="org/openl/util/SelectorSet.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.SelectorSet">
+      <SourceLine classname="org.openl.util.SelectorSet" start="10" end="20" sourcefile="SelectorSet.java" sourcepath="org/openl/util/SelectorSet.java"/>
+    </Class>
+    <Method classname="org.openl.util.SelectorSet" name="setElements" signature="([Lorg/openl/util/SelectorSetElement;)V" isStatic="false">
+      <SourceLine classname="org.openl.util.SelectorSet" start="19" end="20" startBytecode="0" endBytecode="61" sourcefile="SelectorSet.java" sourcepath="org/openl/util/SelectorSet.java"/>
+    </Method>
+    <Field classname="org.openl.util.SelectorSet" name="elements" signature="[Lorg/openl/util/SelectorSetElement;" isStatic="false">
+      <SourceLine classname="org.openl.util.SelectorSet" sourcefile="SelectorSet.java" sourcepath="org/openl/util/SelectorSet.java"/>
+    </Field>
+    <LocalVariable name="elements" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.openl.util.SelectorSet" start="19" end="19" startBytecode="2" endBytecode="2" sourcefile="SelectorSet.java" sourcepath="org/openl/util/SelectorSet.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.StringTool">
+      <SourceLine classname="org.openl.util.StringTool" start="15" end="816" sourcefile="StringTool.java" sourcepath="org/openl/util/StringTool.java"/>
+    </Class>
+    <Field classname="org.openl.util.StringTool" name="IGNORE" signature="Lorg/openl/util/StringTool$Convertor;" isStatic="true">
+      <SourceLine classname="org.openl.util.StringTool" sourcefile="StringTool.java" sourcepath="org/openl/util/StringTool.java"/>
+    </Field>
+    <SourceLine classname="org.openl.util.StringTool" start="172" end="172" startBytecode="155" endBytecode="155" sourcefile="StringTool.java" sourcepath="org/openl/util/StringTool.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.StringTool">
+      <SourceLine classname="org.openl.util.StringTool" start="15" end="816" sourcefile="StringTool.java" sourcepath="org/openl/util/StringTool.java"/>
+    </Class>
+    <Field classname="org.openl.util.StringTool" name="VALID_JAVA_IDENTIFICATOR" signature="Lorg/openl/util/StringTool$Selector;" isStatic="true">
+      <SourceLine classname="org.openl.util.StringTool" sourcefile="StringTool.java" sourcepath="org/openl/util/StringTool.java"/>
+    </Field>
+    <SourceLine classname="org.openl.util.StringTool" start="162" end="162" startBytecode="145" endBytecode="145" sourcefile="StringTool.java" sourcepath="org/openl/util/StringTool.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.openl.util.StringTool$TextTransformer">
+      <SourceLine classname="org.openl.util.StringTool$TextTransformer" start="97" end="149" sourcefile="StringTool.java" sourcepath="org/openl/util/StringTool.java"/>
+    </Class>
+    <Field classname="org.openl.util.StringTool$TextTransformer" name="prev" signature="C" isStatic="false">
+      <SourceLine classname="org.openl.util.StringTool$TextTransformer" sourcefile="StringTool.java" sourcepath="org/openl/util/StringTool.java"/>
+    </Field>
+    <SourceLine classname="org.openl.util.StringTool$TextTransformer" start="99" end="99" startBytecode="7" endBytecode="7" sourcefile="StringTool.java" sourcepath="org/openl/util/StringTool.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.openl.util.StringTransformer">
+      <SourceLine classname="org.openl.util.StringTransformer" start="30" end="117" sourcefile="StringTransformer.java" sourcepath="org/openl/util/StringTransformer.java"/>
+    </Class>
+    <Method classname="org.openl.util.StringTransformer" name="transform" signature="(Ljava/lang/String;Lorg/openl/util/StringTransformer$IVarHolder;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;" isStatic="false">
+      <SourceLine classname="org.openl.util.StringTransformer" start="56" end="112" startBytecode="0" endBytecode="610" sourcefile="StringTransformer.java" sourcepath="org/openl/util/StringTransformer.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.StringTransformer" start="62" end="100" startBytecode="32" endBytecode="264" sourcefile="StringTransformer.java" sourcepath="org/openl/util/StringTransformer.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.benchmark.Benchmark">
+      <SourceLine classname="org.openl.util.benchmark.Benchmark" start="14" end="189" sourcefile="Benchmark.java" sourcepath="org/openl/util/benchmark/Benchmark.java"/>
+    </Class>
+    <Method classname="org.openl.util.benchmark.Benchmark" name="&lt;init&gt;" signature="([Lorg/openl/util/benchmark/BenchmarkUnit;)V" isStatic="false">
+      <SourceLine classname="org.openl.util.benchmark.Benchmark" start="16" end="18" startBytecode="0" endBytecode="78" sourcefile="Benchmark.java" sourcepath="org/openl/util/benchmark/Benchmark.java"/>
+    </Method>
+    <Field classname="org.openl.util.benchmark.Benchmark" name="_units" signature="[Lorg/openl/util/benchmark/BenchmarkUnit;" isStatic="false">
+      <SourceLine classname="org.openl.util.benchmark.Benchmark" sourcefile="Benchmark.java" sourcepath="org/openl/util/benchmark/Benchmark.java"/>
+    </Field>
+    <LocalVariable name="units" register="1" pc="11" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.openl.util.benchmark.Benchmark" start="17" end="17" startBytecode="11" endBytecode="11" sourcefile="Benchmark.java" sourcepath="org/openl/util/benchmark/Benchmark.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.openl.util.benchmark.Benchmark">
+      <SourceLine classname="org.openl.util.benchmark.Benchmark" start="14" end="189" sourcefile="Benchmark.java" sourcepath="org/openl/util/benchmark/Benchmark.java"/>
+    </Class>
+    <Method classname="org.openl.util.benchmark.Benchmark" name="makeTableHeader" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.openl.util.benchmark.Benchmark" start="83" end="87" startBytecode="0" endBytecode="140" sourcefile="Benchmark.java" sourcepath="org/openl/util/benchmark/Benchmark.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.benchmark.Benchmark" start="85" end="85" startBytecode="14" endBytecode="14" sourcefile="Benchmark.java" sourcepath="org/openl/util/benchmark/Benchmark.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.openl.util.benchmark.Benchmark">
+      <SourceLine classname="org.openl.util.benchmark.Benchmark" start="14" end="189" sourcefile="Benchmark.java" sourcepath="org/openl/util/benchmark/Benchmark.java"/>
+    </Class>
+    <Method classname="org.openl.util.benchmark.Benchmark" name="makeTableRow" signature="(Ljava/util/Map;Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.openl.util.benchmark.Benchmark" start="91" end="97" startBytecode="0" endBytecode="204" sourcefile="Benchmark.java" sourcepath="org/openl/util/benchmark/Benchmark.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.benchmark.Benchmark" start="94" end="94" startBytecode="37" endBytecode="37" sourcefile="Benchmark.java" sourcepath="org/openl/util/benchmark/Benchmark.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.openl.util.benchmark.BenchmarkJavaBasics$Invoke">
+      <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$Invoke" start="81" end="91" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java"/>
+    </Class>
+    <Method classname="org.openl.util.benchmark.BenchmarkJavaBasics$Invoke" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$Invoke" start="85" end="86" startBytecode="0" endBytecode="133" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$Invoke" start="83" end="83" startBytecode="45" endBytecode="45" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGet">
+      <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGet" start="140" end="152" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java"/>
+    </Class>
+    <Method classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGet" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGet" start="142" end="147" startBytecode="0" endBytecode="155" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGet" start="140" end="140" startBytecode="11" endBytecode="11" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java"/>
+    <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGet" start="145" end="145" startBytecode="47" endBytecode="47" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGetFirstKey">
+      <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGetFirstKey" start="158" end="173" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java"/>
+    </Class>
+    <Method classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGetFirstKey" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGetFirstKey" start="160" end="165" startBytecode="0" endBytecode="155" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGetFirstKey" start="158" end="158" startBytecode="11" endBytecode="11" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java"/>
+    <SourceLine classname="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGetFirstKey" start="163" end="163" startBytecode="47" endBytecode="47" sourcefile="BenchmarkJavaBasics.java" sourcepath="org/openl/util/benchmark/BenchmarkJavaBasics.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="org.openl.util.conf.LibraryDefinition">
+      <SourceLine classname="org.openl.util.conf.LibraryDefinition" start="12" end="12" sourcefile="LibraryDefinition.java" sourcepath="org/openl/util/conf/LibraryDefinition.java"/>
+    </Class>
+    <Field classname="org.openl.util.conf.LibraryDefinition" name="name" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.openl.util.conf.LibraryDefinition" sourcefile="LibraryDefinition.java" sourcepath="org/openl/util/conf/LibraryDefinition.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="org.openl.util.conf.LibraryVersionDefinition">
+      <SourceLine classname="org.openl.util.conf.LibraryVersionDefinition" start="12" end="12" sourcefile="LibraryVersionDefinition.java" sourcepath="org/openl/util/conf/LibraryVersionDefinition.java"/>
+    </Class>
+    <Field classname="org.openl.util.conf.LibraryVersionDefinition" name="maxVersion" signature="Lorg/openl/util/conf/Version;" isStatic="false">
+      <SourceLine classname="org.openl.util.conf.LibraryVersionDefinition" sourcefile="LibraryVersionDefinition.java" sourcepath="org/openl/util/conf/LibraryVersionDefinition.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="org.openl.util.conf.LibraryVersionDefinition">
+      <SourceLine classname="org.openl.util.conf.LibraryVersionDefinition" start="12" end="12" sourcefile="LibraryVersionDefinition.java" sourcepath="org/openl/util/conf/LibraryVersionDefinition.java"/>
+    </Class>
+    <Field classname="org.openl.util.conf.LibraryVersionDefinition" name="minVersion" signature="Lorg/openl/util/conf/Version;" isStatic="false">
+      <SourceLine classname="org.openl.util.conf.LibraryVersionDefinition" sourcefile="LibraryVersionDefinition.java" sourcepath="org/openl/util/conf/LibraryVersionDefinition.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="org.openl.util.conf.LibraryVersionDefinition">
+      <SourceLine classname="org.openl.util.conf.LibraryVersionDefinition" start="12" end="12" sourcefile="LibraryVersionDefinition.java" sourcepath="org/openl/util/conf/LibraryVersionDefinition.java"/>
+    </Class>
+    <Field classname="org.openl.util.conf.LibraryVersionDefinition" name="name" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.openl.util.conf.LibraryVersionDefinition" sourcefile="LibraryVersionDefinition.java" sourcepath="org/openl/util/conf/LibraryVersionDefinition.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.export.ExportRow">
+      <SourceLine classname="org.openl.util.export.ExportRow" start="9" end="29" sourcefile="ExportRow.java" sourcepath="org/openl/util/export/ExportRow.java"/>
+    </Class>
+    <Method classname="org.openl.util.export.ExportRow" name="record" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.openl.util.export.ExportRow" start="20" end="20" startBytecode="0" endBytecode="46" sourcefile="ExportRow.java" sourcepath="org/openl/util/export/ExportRow.java"/>
+    </Method>
+    <Field classname="org.openl.util.export.ExportRow" name="rows" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.openl.util.export.ExportRow" sourcefile="ExportRow.java" sourcepath="org/openl/util/export/ExportRow.java"/>
+    </Field>
+    <SourceLine classname="org.openl.util.export.ExportRow" start="20" end="20" startBytecode="4" endBytecode="4" sourcefile="ExportRow.java" sourcepath="org/openl/util/export/ExportRow.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.openl.util.export.ExportSectionSingleRow">
+      <SourceLine classname="org.openl.util.export.ExportSectionSingleRow" start="14" end="54" sourcefile="ExportSectionSingleRow.java" sourcepath="org/openl/util/export/ExportSectionSingleRow.java"/>
+    </Class>
+    <Method classname="org.openl.util.export.ExportSectionSingleRow" name="getRows" signature="()[Lorg/openl/util/export/IExportRow;" isStatic="false">
+      <SourceLine classname="org.openl.util.export.ExportSectionSingleRow" start="44" end="44" startBytecode="0" endBytecode="46" sourcefile="ExportSectionSingleRow.java" sourcepath="org/openl/util/export/ExportSectionSingleRow.java"/>
+    </Method>
+    <Field classname="org.openl.util.export.ExportSectionSingleRow" name="rows" signature="[Lorg/openl/util/export/IExportRow;" isStatic="false">
+      <SourceLine classname="org.openl.util.export.ExportSectionSingleRow" sourcefile="ExportSectionSingleRow.java" sourcepath="org/openl/util/export/ExportSectionSingleRow.java"/>
+    </Field>
+    <SourceLine classname="org.openl.util.export.ExportSectionSingleRow" start="44" end="44" startBytecode="4" endBytecode="4" sourcefile="ExportSectionSingleRow.java" sourcepath="org/openl/util/export/ExportSectionSingleRow.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getCommentText" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="23" end="23" startBytecode="0" endBytecode="55" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="/*\n * %s \n*/\n\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="23" end="23" startBytecode="10" endBytecode="10" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getConstructorWithFields" signature="(Ljava/lang/String;Ljava/util/Map;I)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="79" end="104" startBytecode="0" endBytecode="527" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="    this.%s = %s;\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="101" end="101" startBytecode="254" endBytecode="254" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getConstructorWithFields" signature="(Ljava/lang/String;Ljava/util/Map;I)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="79" end="104" startBytecode="0" endBytecode="527" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="\npublic %s(" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="80" end="80" startBytecode="19" endBytecode="19" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getDefaultConstructor" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="75" end="75" startBytecode="0" endBytecode="55" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="\npublic %s() {\n    super();\n}\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="75" end="75" startBytecode="10" endBytecode="10" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getDefaultFieldDeclaration" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="168" end="168" startBytecode="0" endBytecode="69" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="  %s %s;\n\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="168" end="168" startBytecode="14" endBytecode="14" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getEqualsMethod" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="117" end="129" startBytecode="0" endBytecode="317" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="    %s another = (%s)obj;\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="123" end="123" startBytecode="69" endBytecode="69" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getEqualsMethod" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="117" end="129" startBytecode="0" endBytecode="317" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="    builder.append(another.%s,%s);\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="125" end="125" startBytecode="135" endBytecode="135" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getEqualsMethod" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="117" end="129" startBytecode="0" endBytecode="317" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="    if (!(obj instanceof %s)) {;\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="120" end="120" startBytecode="33" endBytecode="33" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getHashCodeMethod" signature="(Ljava/util/Map;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="133" end="141" startBytecode="0" endBytecode="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="    builder.append(%s);\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="137" end="137" startBytecode="69" endBytecode="69" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getImportText" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="54" end="54" startBytecode="0" endBytecode="55" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="import %s;\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="54" end="54" startBytecode="10" endBytecode="10" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getPackageText" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="15" end="18" startBytecode="0" endBytecode="69" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="package %s;\n\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="16" end="16" startBytecode="14" endBytecode="14" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getProtectedFieldDeclaration" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="71" end="71" startBytecode="0" endBytecode="69" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="  protected %s %s;\n\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="71" end="71" startBytecode="14" endBytecode="14" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getPublicGetterMethod" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="108" end="108" startBytecode="0" endBytecode="76" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="  public %s %s() {\n   return %s;\n}\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="108" end="108" startBytecode="21" endBytecode="21" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getPublicSetterMethod" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="112" end="112" startBytecode="0" endBytecode="84" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="  public void %s(%s %s) {\n   this.%s = %s;\n}\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="112" end="112" startBytecode="29" endBytecode="29" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getSimplePublicClassDeclaration" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="58" end="58" startBytecode="0" endBytecode="55" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="\npublic class %s" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="58" end="58" startBytecode="10" endBytecode="10" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getStaticPublicFieldDeclaration" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="172" end="172" startBytecode="0" endBytecode="69" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="  public static %s %s;\n\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="172" end="172" startBytecode="14" endBytecode="14" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getStaticPublicFieldInitialization" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="176" end="176" startBytecode="0" endBytecode="83" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="  public static %s %s = %s;\n\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="176" end="176" startBytecode="18" endBytecode="18" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getToStringMethod" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="145" end="160" startBytecode="0" endBytecode="349" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="    builder.append(&quot; %s=&quot;);\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="150" end="150" startBytecode="89" endBytecode="89" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getToStringMethod" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="145" end="160" startBytecode="0" endBytecode="349" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="    builder.append(&quot;%s {&quot;);\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="148" end="148" startBytecode="33" endBytecode="33" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getToStringMethod" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="145" end="160" startBytecode="0" endBytecode="349" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="    builder.append(%s);\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="154" end="154" startBytecode="156" endBytecode="156" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.generation.JavaClassGeneratorHelper">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="12" end="225" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Class>
+    <Method classname="org.openl.util.generation.JavaClassGeneratorHelper" name="getToStringMethod" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="145" end="160" startBytecode="0" endBytecode="349" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="    builder.append(ArrayUtils.toString(%s));\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.openl.util.generation.JavaClassGeneratorHelper" start="152" end="152" startBytecode="129" endBytecode="129" sourcefile="JavaClassGeneratorHelper.java" sourcepath="org/openl/util/generation/JavaClassGeneratorHelper.java"/>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.meta.IOrderMetaInfo$ComparableComparator">
+      <SourceLine classname="org.openl.util.meta.IOrderMetaInfo$ComparableComparator" start="15" end="19" sourcefile="IOrderMetaInfo.java" sourcepath="org/openl/util/meta/IOrderMetaInfo.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.print.CategorizedSearchContext$CKey">
+      <SourceLine classname="org.openl.util.print.CategorizedSearchContext$CKey" start="19" end="32" sourcefile="CategorizedSearchContext.java" sourcepath="org/openl/util/print/CategorizedSearchContext.java"/>
+    </Class>
+    <Method classname="org.openl.util.print.CategorizedSearchContext$CKey" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.openl.util.print.CategorizedSearchContext$CKey" start="26" end="27" startBytecode="0" endBytecode="104" sourcefile="CategorizedSearchContext.java" sourcepath="org/openl/util/print/CategorizedSearchContext.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.print.CategorizedSearchContext$CKey" start="26" end="26" startBytecode="1" endBytecode="1" sourcefile="CategorizedSearchContext.java" sourcepath="org/openl/util/print/CategorizedSearchContext.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="2" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.print.CategorizedSearchContext$CKey">
+      <SourceLine classname="org.openl.util.print.CategorizedSearchContext$CKey" start="19" end="32" sourcefile="CategorizedSearchContext.java" sourcepath="org/openl/util/print/CategorizedSearchContext.java"/>
+    </Class>
+    <Method classname="org.openl.util.print.CategorizedSearchContext$CKey" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.openl.util.print.CategorizedSearchContext$CKey" start="26" end="27" startBytecode="0" endBytecode="104" sourcefile="CategorizedSearchContext.java" sourcepath="org/openl/util/print/CategorizedSearchContext.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.openl.util.print.NicePrinter">
+      <SourceLine classname="org.openl.util.print.NicePrinter" start="24" end="125" sourcefile="NicePrinter.java" sourcepath="org/openl/util/print/NicePrinter.java"/>
+    </Class>
+    <Method classname="org.openl.util.print.NicePrinter" name="print" signature="(Ljava/lang/Object;Lorg/openl/util/print/NicePrinterAdaptor;)V" isStatic="false">
+      <SourceLine classname="org.openl.util.print.NicePrinter" start="74" end="116" startBytecode="0" endBytecode="343" sourcefile="NicePrinter.java" sourcepath="org/openl/util/print/NicePrinter.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.openl.util.print.NicePrinter" start="92" end="92" startBytecode="76" endBytecode="76" sourcefile="NicePrinter.java" sourcepath="org/openl/util/print/NicePrinter.java"/>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.openl.util.print.NicePrinterAdaptor$MapEntryComparator">
+      <SourceLine classname="org.openl.util.print.NicePrinterAdaptor$MapEntryComparator" start="25" end="48" sourcefile="NicePrinterAdaptor.java" sourcepath="org/openl/util/print/NicePrinterAdaptor.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="11">
+    <MissingClass>org.apache.commons.beanutils.PropertyUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.ArrayUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.BooleanUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.ClassUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.EqualsBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.exception.NestableRuntimeException</MissingClass>
+    <MissingClass>org.apache.commons.lang.reflect.MethodUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.time.DateUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 21 Sep 2010 12:31:19 +0300" total_classes="223" referenced_classes="336" total_bugs="65" total_size="5549" num_packages="15" vm_version="20.4-b02-402" cpu_seconds="36.91" clock_seconds="18.90" peak_mbytes="101.15" alloc_mbytes="763.88" gc_seconds="0.69" priority_2="62" priority_1="3">
+    <PackageStats package="org.openl.base" total_bugs="0" total_types="7" total_size="61">
+      <ClassStats class="org.openl.base.INameSpacedThing" sourceFile="INameSpacedThing.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.base.INamedThing" sourceFile="INamedThing.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.openl.base.INamedThing$NameConverter" sourceFile="INamedThing.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.base.INamedThing$NameSelector" sourceFile="INamedThing.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.openl.base.INamedThing$Tool" sourceFile="INamedThing.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openl.base.NameSpacedThing" sourceFile="NameSpacedThing.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.openl.base.NamedThing" sourceFile="NamedThing.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.config" total_bugs="0" total_types="11" total_size="170">
+      <ClassStats class="org.openl.config.ClassPathConfigLocator" sourceFile="ClassPathConfigLocator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.config.ConfigLocator" sourceFile="ConfigLocator.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.config.ConfigManager" sourceFile="ConfigManager.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.openl.config.ConfigProperty" sourceFile="ConfigProperty.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.openl.config.ConfigPropertyBoolean" sourceFile="ConfigPropertyBoolean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.openl.config.ConfigPropertyDouble" sourceFile="ConfigPropertyDouble.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.openl.config.ConfigPropertyInteger" sourceFile="ConfigPropertyInteger.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.openl.config.ConfigPropertyLong" sourceFile="ConfigPropertyLong.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.openl.config.ConfigPropertyString" sourceFile="ConfigPropertyString.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.openl.config.ConfigSet" sourceFile="ConfigSet.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.openl.config.SysConfigManager" sourceFile="SysConfigManager.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.domain" total_bugs="4" total_types="24" total_size="450" priority_2="4">
+      <ClassStats class="org.openl.domain.AIntIterator" sourceFile="AIntIterator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openl.domain.BitSetIterator" sourceFile="BitSetIterator.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.openl.domain.DateRangeDomain" sourceFile="DateRangeDomain.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.openl.domain.DateRangeDomain$DateIterator" sourceFile="DateRangeDomain.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.openl.domain.Enum" sourceFile="Enum.java" interface="false" size="21" bugs="3" priority_2="3"/>
+      <ClassStats class="org.openl.domain.EnumDomain" sourceFile="EnumDomain.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="org.openl.domain.EnumDomain$EnumDomainIterator" sourceFile="EnumDomain.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.openl.domain.FixedSizeDomain" sourceFile="FixedSizeDomain.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.domain.IDomain" sourceFile="IDomain.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openl.domain.IFiniteDomain" sourceFile="IFiniteDomain.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.openl.domain.IIntDomain" sourceFile="IIntDomain.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.openl.domain.IIntIterator" sourceFile="IIntIterator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.domain.IIntSelector" sourceFile="IIntSelector.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.domain.IIntSelector$IntSelectIterator" sourceFile="IIntSelector.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.openl.domain.ISetDomain" sourceFile="ISetDomain.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.openl.domain.ISetDomain$EmptyDomain" sourceFile="ISetDomain.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.openl.domain.IType" sourceFile="IType.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.openl.domain.IType$1" sourceFile="IType.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.openl.domain.IType$AnyThing" sourceFile="IType.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.openl.domain.IntArrayIterator" sourceFile="IntArrayIterator.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.domain.IntRangeDomain" sourceFile="IntRangeDomain.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.openl.domain.IntRangeDomain$RangeIterator" sourceFile="IntRangeDomain.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.domain.IntSet" sourceFile="IntSet.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.openl.domain.StringDomain" sourceFile="StringDomain.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util" total_bugs="23" total_types="114" total_size="3178" priority_2="20" priority_1="3">
+      <ClassStats class="org.openl.util.AIndexedIterator" sourceFile="AIndexedIterator.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.openl.util.AIndexedIterator$AnyArrayIterator" sourceFile="AIndexedIterator.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.openl.util.AIndexedIterator$ArrayIterator" sourceFile="AIndexedIterator.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.openl.util.AOpenIterator" sourceFile="AOpenIterator.java" interface="false" size="131" bugs="0"/>
+      <ClassStats class="org.openl.util.AOpenIterator$CollectIterator" sourceFile="AOpenIterator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openl.util.AOpenIterator$EmptyIterator" sourceFile="AOpenIterator.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.util.AOpenIterator$IteratorWrapper" sourceFile="AOpenIterator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.util.AOpenIterator$MergeIterator" sourceFile="AOpenIterator.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.AOpenIterator$ModifierIterator" sourceFile="AOpenIterator.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.openl.util.AOpenIterator$SelectIterator" sourceFile="AOpenIterator.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.openl.util.AOpenIterator$SimpleIteratorWrapper" sourceFile="AOpenIterator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.AOpenIterator$SingleIterator" sourceFile="AOpenIterator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector" sourceFile="ASelector.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$ANDSelector" sourceFile="ASelector.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$AllSelector" sourceFile="ASelector.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$BoolBinSelector" sourceFile="ASelector.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$ClassSelector" sourceFile="ASelector.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$IntValueSelector" sourceFile="ASelector.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$NOTSelector" sourceFile="ASelector.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$NoneSelector" sourceFile="ASelector.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$ORSelector" sourceFile="ASelector.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$ObjectSelector" sourceFile="ASelector.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$StringValueSelector" sourceFile="ASelector.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.openl.util.ASelector$XORSelector" sourceFile="ASelector.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.AStringBoolOperator" sourceFile="AStringBoolOperator.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.openl.util.AStringBoolOperator$ContainsOperator" sourceFile="AStringBoolOperator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.AStringBoolOperator$EndsWithOperator" sourceFile="AStringBoolOperator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.AStringBoolOperator$EqualsIgnoreCaseOperator" sourceFile="AStringBoolOperator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.AStringBoolOperator$EqualsOperator" sourceFile="AStringBoolOperator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.AStringBoolOperator$Holder" sourceFile="AStringBoolOperator.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.openl.util.AStringBoolOperator$MatchesOperator" sourceFile="AStringBoolOperator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.AStringBoolOperator$StartsWithOperator" sourceFile="AStringBoolOperator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.AStringConvertor" sourceFile="AStringConvertor.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.openl.util.Appender" sourceFile="Appender.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.openl.util.Appender$ArrayAppender" sourceFile="Appender.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.openl.util.Appender$CollectionAppender" sourceFile="Appender.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.util.ArrayOfNamedValues" sourceFile="ArrayOfNamedValues.java" interface="false" size="28" bugs="2" priority_2="2"/>
+      <ClassStats class="org.openl.util.ArrayTool" sourceFile="ArrayTool.java" interface="false" size="390" bugs="0"/>
+      <ClassStats class="org.openl.util.ArrayTool$ArrayEnumeration" sourceFile="ArrayTool.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.openl.util.ArrayTool$ArrayIterator" sourceFile="ArrayTool.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.ArrayTool$ArrayModel" sourceFile="ArrayTool.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.BiMap" sourceFile="BiMap.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.openl.util.BooleanUtils" sourceFile="BooleanUtils.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.openl.util.CategorizedMap" sourceFile="CategorizedMap.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.openl.util.CategorizedMap$Category" sourceFile="CategorizedMap.java" interface="false" size="30" bugs="2" priority_2="2"/>
+      <ClassStats class="org.openl.util.CollectionsUtil" sourceFile="CollectionsUtil.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.openl.util.DateDifference" sourceFile="DateDifference.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.openl.util.DateTool" sourceFile="DateTool.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.openl.util.EnumUtils" sourceFile="EnumUtils.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.openl.util.FileSelector" sourceFile="FileSelector.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.openl.util.FileTool" sourceFile="FileTool.java" interface="false" size="251" bugs="7" priority_2="6" priority_1="1"/>
+      <ClassStats class="org.openl.util.FileTool$1" sourceFile="FileTool.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.openl.util.FileTool$CacheMap" sourceFile="FileTool.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.openl.util.FileTool$CacheMap$LTMValue" sourceFile="FileTool.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.FileTool$DirectoryIterator" sourceFile="FileTool.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.openl.util.FileTool$DirectoryIterator$DefaultComparator" sourceFile="FileTool.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.FileTool$DirectoryIterator$DirectoryHandler" sourceFile="FileTool.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.FileTool$DirectoryIterator$ExtensionFilter" sourceFile="FileTool.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.util.FileTool$DirectoryIterator$FileHandler" sourceFile="FileTool.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.FileTypeHelper" sourceFile="FileTypeHelper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.util.IAppender" sourceFile="IAppender.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.IBlock" sourceFile="IBlock.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.IConvertor" sourceFile="IConvertor.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.IConvertor$SameAs" sourceFile="IConvertor.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.IOpenCollection" sourceFile="IOpenCollection.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.IOpenIterator" sourceFile="IOpenIterator.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="org.openl.util.IOpenIteratorExtender" sourceFile="IOpenIteratorExtender.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.IOpenIteratorExtender$CollectionExtender" sourceFile="IOpenIteratorExtender.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.IOperator" sourceFile="IOperator.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.openl.util.ISelector" sourceFile="ISelector.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.IStringBoolOperator" sourceFile="IStringBoolOperator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.util.IdMap" sourceFile="IdMap.java" interface="false" size="76" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.IdMap$IdAdaptor" sourceFile="IdMap.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.IdMap$IdObjectAdaptor" sourceFile="IdMap.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.IdObject" sourceFile="IdObject.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.openl.util.IntervalMap" sourceFile="IntervalMap.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.openl.util.Log" sourceFile="Log.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="org.openl.util.MsgHelper" sourceFile="MsgHelper.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.MultiIndexIterator" sourceFile="MultiIndexIterator.java" interface="false" size="30" bugs="2" priority_2="2"/>
+      <ClassStats class="org.openl.util.NumberUtils" sourceFile="NumberUtils.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.openl.util.OpenIterator" sourceFile="OpenIterator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.openl.util.OpenIterator$EnumerationIterator" sourceFile="OpenIterator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.openl.util.PathTool" sourceFile="PathTool.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.openl.util.PriorityQueue" sourceFile="PriorityQueue.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.openl.util.PropertiesProxy" sourceFile="PropertiesProxy.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.openl.util.RangeWithBounds" sourceFile="RangeWithBounds.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.openl.util.RangeWithBounds$BoundType" sourceFile="RangeWithBounds.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.openl.util.RuntimeExceptionWrapper" sourceFile="RuntimeExceptionWrapper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.util.SelectorSet" sourceFile="SelectorSet.java" interface="false" size="9" bugs="2" priority_2="2"/>
+      <ClassStats class="org.openl.util.SelectorSetElement" sourceFile="SelectorSetElement.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.openl.util.SkipList" sourceFile="SkipList.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.openl.util.SkipList$ISkipListNode" sourceFile="SkipList.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.openl.util.SkipList$SkipListNode" sourceFile="SkipList.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool" sourceFile="StringTool.java" interface="false" size="380" bugs="2" priority_1="2"/>
+      <ClassStats class="org.openl.util.StringTool$1" sourceFile="StringTool.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$2" sourceFile="StringTool.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$3" sourceFile="StringTool.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$4" sourceFile="StringTool.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$5" sourceFile="StringTool.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$6" sourceFile="StringTool.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$7" sourceFile="StringTool.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$CharToStringConverter" sourceFile="StringTool.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$Convertor" sourceFile="StringTool.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$MacroKeyHandler" sourceFile="StringTool.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$MacroSubst" sourceFile="StringTool.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$Selector" sourceFile="StringTool.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTool$TextTransformer" sourceFile="StringTool.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.StringTransformer" sourceFile="StringTransformer.java" interface="false" size="64" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.StringTransformer$IVarHolder" sourceFile="StringTransformer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.StringTransformer$MapVarHolder" sourceFile="StringTransformer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openl.util.TopoSort" sourceFile="TopoSort.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.openl.util.TopoSort$Counter" sourceFile="TopoSort.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.TopoSort$IPair" sourceFile="TopoSort.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.util.TopoSortCycleException" sourceFile="TopoSortCycleException.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.benchmark" total_bugs="6" total_types="18" total_size="503" priority_2="6">
+      <ClassStats class="org.openl.util.benchmark.Benchmark" sourceFile="Benchmark.java" interface="false" size="106" bugs="3" priority_2="3"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkInfo" sourceFile="BenchmarkInfo.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics" sourceFile="BenchmarkJavaBasics.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics$BSearch" sourceFile="BenchmarkJavaBasics.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics$Call" sourceFile="BenchmarkJavaBasics.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics$Empty" sourceFile="BenchmarkJavaBasics.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics$IDMapGet" sourceFile="BenchmarkJavaBasics.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics$Invoke" sourceFile="BenchmarkJavaBasics.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics$MapGet" sourceFile="BenchmarkJavaBasics.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics$MapInternGet" sourceFile="BenchmarkJavaBasics.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics$ThreadG" sourceFile="BenchmarkJavaBasics.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGet" sourceFile="BenchmarkJavaBasics.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkJavaBasics$TreeMapGetFirstKey" sourceFile="BenchmarkJavaBasics.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkOrder" sourceFile="BenchmarkOrder.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.BenchmarkUnit" sourceFile="BenchmarkUnit.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.Profiler" sourceFile="Profiler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.Profiler$Unit" sourceFile="Profiler.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.openl.util.benchmark.RunInfo" sourceFile="RunInfo.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.conf" total_bugs="4" total_types="6" total_size="175" priority_2="4">
+      <ClassStats class="org.openl.util.conf.LibraryDefinition" sourceFile="LibraryDefinition.java" interface="false" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.conf.LibraryVersionDefinition" sourceFile="LibraryVersionDefinition.java" interface="false" size="6" bugs="3" priority_2="3"/>
+      <ClassStats class="org.openl.util.conf.Version" sourceFile="Version.java" interface="false" size="128" bugs="0"/>
+      <ClassStats class="org.openl.util.conf.Version$IVersionStartPatternFinder" sourceFile="Version.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.conf.Version$Parser" sourceFile="Version.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.openl.util.conf.Version$StandardVersionStartPatternFinder" sourceFile="Version.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.export" total_bugs="2" total_types="10" total_size="71" priority_2="2">
+      <ClassStats class="org.openl.util.export.ExportException" sourceFile="ExportException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.openl.util.export.ExportRow" sourceFile="ExportRow.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.export.ExportSectionSingleRow" sourceFile="ExportSectionSingleRow.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.export.IExportRow" sourceFile="IExportRow.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.util.export.IExportSection" sourceFile="IExportSection.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.export.IExportable" sourceFile="IExportable.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.util.export.IExporter" sourceFile="IExporter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.export.IImportedSection" sourceFile="IImportedSection.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.util.export.IImporter" sourceFile="IImporter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.util.export.ImportedSection" sourceFile="ImportedSection.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.fast" total_bugs="0" total_types="1" total_size="59">
+      <ClassStats class="org.openl.util.fast.FastStack" sourceFile="FastStack.java" interface="false" size="59" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.filter" total_bugs="0" total_types="3" total_size="15">
+      <ClassStats class="org.openl.util.filter.AllOpenLFilter" sourceFile="AllOpenLFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.openl.util.filter.BaseOpenLFilter" sourceFile="BaseOpenLFilter.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.openl.util.filter.OpenLFilter" sourceFile="OpenLFilter.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.generation" total_bugs="21" total_types="2" total_size="249" priority_2="21">
+      <ClassStats class="org.openl.util.generation.JavaClassGeneratorHelper" sourceFile="JavaClassGeneratorHelper.java" interface="false" size="122" bugs="21" priority_2="21"/>
+      <ClassStats class="org.openl.util.generation.SimpleBeanJavaGenerator" sourceFile="SimpleBeanJavaGenerator.java" interface="false" size="127" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.impl" total_bugs="0" total_types="1" total_size="45">
+      <ClassStats class="org.openl.util.impl.CollectionWrapper" sourceFile="CollectionWrapper.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.math" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="org.openl.util.math.MathUtils" sourceFile="MathUtils.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.meta" total_bugs="1" total_types="5" total_size="31" priority_2="1">
+      <ClassStats class="org.openl.util.meta.ICollectionMetaInfo" sourceFile="ICollectionMetaInfo.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.openl.util.meta.IOrderMetaInfo" sourceFile="IOrderMetaInfo.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.meta.IOrderMetaInfo$ComparableComparator" sourceFile="IOrderMetaInfo.java" interface="false" size="5" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.meta.IOrderMetaInfo$OrderedComparator" sourceFile="IOrderMetaInfo.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.openl.util.meta.ITypeMetaInfo" sourceFile="ITypeMetaInfo.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.print" total_bugs="4" total_types="14" total_size="426" priority_2="4">
+      <ClassStats class="org.openl.util.print.BeanNicePrinterAdaptor" sourceFile="BeanNicePrinterAdaptor.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.openl.util.print.CategorizedSearchContext" sourceFile="CategorizedSearchContext.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.openl.util.print.CategorizedSearchContext$CKey" sourceFile="CategorizedSearchContext.java" interface="false" size="13" bugs="2" priority_2="2"/>
+      <ClassStats class="org.openl.util.print.DefaultFormat" sourceFile="DefaultFormat.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.openl.util.print.DoublePrinter" sourceFile="DoublePrinter.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.openl.util.print.Formatter" sourceFile="Formatter.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.openl.util.print.ICategorizedSearchContext" sourceFile="ICategorizedSearchContext.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.print.IFormat" sourceFile="IFormat.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.print.NicePrinter" sourceFile="NicePrinter.java" interface="false" size="69" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.print.NicePrinter$PrintableObject" sourceFile="NicePrinter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.util.print.NicePrinterAdaptor" sourceFile="NicePrinterAdaptor.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="org.openl.util.print.NicePrinterAdaptor$MapEntryComparator" sourceFile="NicePrinterAdaptor.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.util.print.OutputFilter" sourceFile="OutputFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.util.print.PrintContext" sourceFile="PrintContext.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.util.tree" total_bugs="0" total_types="6" total_size="89">
+      <ClassStats class="org.openl.util.tree.FileTreeIterator" sourceFile="FileTreeIterator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openl.util.tree.FileTreeIterator$FileTreeAdaptor" sourceFile="FileTreeIterator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openl.util.tree.ITreeElement" sourceFile="ITreeElement.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openl.util.tree.TreeIterator" sourceFile="TreeIterator.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.openl.util.tree.TreeIterator$NodeInfo" sourceFile="TreeIterator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openl.util.tree.TreeIterator$TreeAdaptor" sourceFile="TreeIterator.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1286" invocations="1101" avgMicrosecondsPerInvocation="1168" maxMicrosecondsPerInvocation="106474" standardDeviationMircosecondsPerInvocation="4940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1120" invocations="1084" avgMicrosecondsPerInvocation="1033" maxMicrosecondsPerInvocation="104983" standardDeviationMircosecondsPerInvocation="4550"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1095" invocations="1109" avgMicrosecondsPerInvocation="987" maxMicrosecondsPerInvocation="74481" standardDeviationMircosecondsPerInvocation="4237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1088" invocations="856" avgMicrosecondsPerInvocation="1271" maxMicrosecondsPerInvocation="98507" standardDeviationMircosecondsPerInvocation="6675"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1030" invocations="1096" avgMicrosecondsPerInvocation="940" maxMicrosecondsPerInvocation="172816" standardDeviationMircosecondsPerInvocation="5580"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="962" invocations="336" avgMicrosecondsPerInvocation="2865" maxMicrosecondsPerInvocation="141364" standardDeviationMircosecondsPerInvocation="10223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="861" invocations="1103" avgMicrosecondsPerInvocation="780" maxMicrosecondsPerInvocation="127082" standardDeviationMircosecondsPerInvocation="4474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="787" invocations="336" avgMicrosecondsPerInvocation="2342" maxMicrosecondsPerInvocation="84019" standardDeviationMircosecondsPerInvocation="7193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="473" invocations="1628" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="104818" standardDeviationMircosecondsPerInvocation="2801"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="456" invocations="1101" avgMicrosecondsPerInvocation="414" maxMicrosecondsPerInvocation="17671" standardDeviationMircosecondsPerInvocation="961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="440" invocations="904" avgMicrosecondsPerInvocation="487" maxMicrosecondsPerInvocation="20402" standardDeviationMircosecondsPerInvocation="1037"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="428" invocations="1101" avgMicrosecondsPerInvocation="389" maxMicrosecondsPerInvocation="70404" standardDeviationMircosecondsPerInvocation="2541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="407" invocations="336" avgMicrosecondsPerInvocation="1211" maxMicrosecondsPerInvocation="61372" standardDeviationMircosecondsPerInvocation="4171"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="352" invocations="13890" avgMicrosecondsPerInvocation="25" maxMicrosecondsPerInvocation="178131" standardDeviationMircosecondsPerInvocation="1535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="325" invocations="1215" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="84535" standardDeviationMircosecondsPerInvocation="3486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="250" invocations="223" avgMicrosecondsPerInvocation="1122" maxMicrosecondsPerInvocation="96605" standardDeviationMircosecondsPerInvocation="6677"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="235" invocations="222" avgMicrosecondsPerInvocation="1062" maxMicrosecondsPerInvocation="43512" standardDeviationMircosecondsPerInvocation="4933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="230" invocations="336" avgMicrosecondsPerInvocation="687" maxMicrosecondsPerInvocation="48795" standardDeviationMircosecondsPerInvocation="3084"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="224" invocations="336" avgMicrosecondsPerInvocation="669" maxMicrosecondsPerInvocation="14028" standardDeviationMircosecondsPerInvocation="1360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="221" invocations="1076" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="15131" standardDeviationMircosecondsPerInvocation="776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="216" invocations="25187" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="80050" standardDeviationMircosecondsPerInvocation="504"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="214" invocations="223" avgMicrosecondsPerInvocation="960" maxMicrosecondsPerInvocation="87543" standardDeviationMircosecondsPerInvocation="6373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="186" invocations="336" avgMicrosecondsPerInvocation="556" maxMicrosecondsPerInvocation="38774" standardDeviationMircosecondsPerInvocation="2361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="162" invocations="336" avgMicrosecondsPerInvocation="484" maxMicrosecondsPerInvocation="43170" standardDeviationMircosecondsPerInvocation="2518"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

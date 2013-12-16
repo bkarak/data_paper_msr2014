@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1305287685000" analysisTimestamp="1360508498027" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/httpcomponents/httpcore-osgi/4.1.1/httpcore-osgi-4.1.1.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.http.entity.ByteArrayEntity">
+      <SourceLine classname="org.apache.http.entity.ByteArrayEntity" start="45" end="83" sourcefile="ByteArrayEntity.java" sourcepath="org/apache/http/entity/ByteArrayEntity.java"/>
+    </Class>
+    <Method classname="org.apache.http.entity.ByteArrayEntity" name="&lt;init&gt;" signature="([B)V" isStatic="false">
+      <SourceLine classname="org.apache.http.entity.ByteArrayEntity" start="45" end="50" startBytecode="0" endBytecode="91" sourcefile="ByteArrayEntity.java" sourcepath="org/apache/http/entity/ByteArrayEntity.java"/>
+    </Method>
+    <Field classname="org.apache.http.entity.ByteArrayEntity" name="content" signature="[B" isStatic="false">
+      <SourceLine classname="org.apache.http.entity.ByteArrayEntity" sourcefile="ByteArrayEntity.java" sourcepath="org/apache/http/entity/ByteArrayEntity.java"/>
+    </Field>
+    <LocalVariable name="b" register="1" pc="20" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.http.entity.ByteArrayEntity" start="49" end="49" startBytecode="20" endBytecode="20" sourcefile="ByteArrayEntity.java" sourcepath="org/apache/http/entity/ByteArrayEntity.java"/>
+  </BugInstance>
+  <BugInstance type="SF_DEAD_STORE_DUE_TO_SWITCH_FALLTHROUGH" priority="1" abbrev="SF" category="CORRECTNESS">
+    <Class classname="org.apache.http.impl.io.AbstractMessageParser">
+      <SourceLine classname="org.apache.http.impl.io.AbstractMessageParser" start="85" end="272" sourcefile="AbstractMessageParser.java" sourcepath="org/apache/http/impl/io/AbstractMessageParser.java"/>
+    </Class>
+    <Method classname="org.apache.http.impl.io.AbstractMessageParser" name="parse" signature="()Lorg/apache/http/HttpMessage;" isStatic="false">
+      <SourceLine classname="org.apache.http.impl.io.AbstractMessageParser" start="248" end="272" startBytecode="0" endBytecode="281" sourcefile="AbstractMessageParser.java" sourcepath="org/apache/http/impl/io/AbstractMessageParser.java"/>
+    </Method>
+    <Field classname="org.apache.http.impl.io.AbstractMessageParser" name="state" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.http.impl.io.AbstractMessageParser" sourcefile="AbstractMessageParser.java" sourcepath="org/apache/http/impl/io/AbstractMessageParser.java"/>
+    </Field>
+    <SourceLine classname="org.apache.http.impl.io.AbstractMessageParser" start="269" end="269" startBytecode="121" endBytecode="121" sourcefile="AbstractMessageParser.java" sourcepath="org/apache/http/impl/io/AbstractMessageParser.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_FALLTHROUGH" priority="1" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.http.impl.io.AbstractMessageParser">
+      <SourceLine classname="org.apache.http.impl.io.AbstractMessageParser" start="85" end="272" sourcefile="AbstractMessageParser.java" sourcepath="org/apache/http/impl/io/AbstractMessageParser.java"/>
+    </Class>
+    <Method classname="org.apache.http.impl.io.AbstractMessageParser" name="parse" signature="()Lorg/apache/http/HttpMessage;" isStatic="false">
+      <SourceLine classname="org.apache.http.impl.io.AbstractMessageParser" start="248" end="272" startBytecode="0" endBytecode="281" sourcefile="AbstractMessageParser.java" sourcepath="org/apache/http/impl/io/AbstractMessageParser.java"/>
+    </Method>
+    <SourceLine classname="org.apache.http.impl.io.AbstractMessageParser" start="256" end="259" startBytecode="63" endBytecode="66" sourcefile="AbstractMessageParser.java" sourcepath="org/apache/http/impl/io/AbstractMessageParser.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_FALLTHROUGH" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.http.impl.io.ChunkedInputStream">
+      <SourceLine classname="org.apache.http.impl.io.ChunkedInputStream" start="80" end="303" sourcefile="ChunkedInputStream.java" sourcepath="org/apache/http/impl/io/ChunkedInputStream.java"/>
+    </Class>
+    <Method classname="org.apache.http.impl.io.ChunkedInputStream" name="getChunkSize" signature="()I" isStatic="false">
+      <SourceLine classname="org.apache.http.impl.io.ChunkedInputStream" start="230" end="260" startBytecode="0" endBytecode="337" sourcefile="ChunkedInputStream.java" sourcepath="org/apache/http/impl/io/ChunkedInputStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.http.impl.io.ChunkedInputStream" start="242" end="245" startBytecode="82" endBytecode="85" sourcefile="ChunkedInputStream.java" sourcepath="org/apache/http/impl/io/ChunkedInputStream.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.http.impl.nio.codecs.AbstractMessageParser">
+      <SourceLine classname="org.apache.http.impl.nio.codecs.AbstractMessageParser" start="75" end="215" sourcefile="AbstractMessageParser.java" sourcepath="org/apache/http/impl/nio/codecs/AbstractMessageParser.java"/>
+    </Class>
+    <Method classname="org.apache.http.impl.nio.codecs.AbstractMessageParser" name="parse" signature="()Lorg/apache/http/HttpMessage;" isStatic="false">
+      <SourceLine classname="org.apache.http.impl.nio.codecs.AbstractMessageParser" start="163" end="215" startBytecode="0" endBytecode="598" sourcefile="AbstractMessageParser.java" sourcepath="org/apache/http/impl/nio/codecs/AbstractMessageParser.java"/>
+    </Method>
+    <SourceLine classname="org.apache.http.impl.nio.codecs.AbstractMessageParser" start="179" end="196" startBytecode="118" endBytecode="227" sourcefile="AbstractMessageParser.java" sourcepath="org/apache/http/impl/nio/codecs/AbstractMessageParser.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.http.impl.nio.codecs.ChunkDecoder">
+      <SourceLine classname="org.apache.http.impl.nio.codecs.ChunkDecoder" start="74" end="259" sourcefile="ChunkDecoder.java" sourcepath="org/apache/http/impl/nio/codecs/ChunkDecoder.java"/>
+    </Class>
+    <Method classname="org.apache.http.impl.nio.codecs.ChunkDecoder" name="read" signature="(Ljava/nio/ByteBuffer;)I" isStatic="false">
+      <SourceLine classname="org.apache.http.impl.nio.codecs.ChunkDecoder" start="154" end="242" startBytecode="0" endBytecode="741" sourcefile="ChunkDecoder.java" sourcepath="org/apache/http/impl/nio/codecs/ChunkDecoder.java"/>
+    </Method>
+    <SourceLine classname="org.apache.http.impl.nio.codecs.ChunkDecoder" start="174" end="236" startBytecode="95" endBytecode="432" sourcefile="ChunkDecoder.java" sourcepath="org/apache/http/impl/nio/codecs/ChunkDecoder.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" priority="1" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.apache.http.impl.nio.reactor.InterestOpEntry">
+      <SourceLine classname="org.apache.http.impl.nio.reactor.InterestOpEntry" start="44" end="67" sourcefile="InterestOpEntry.java" sourcepath="org/apache/http/impl/nio/reactor/InterestOpEntry.java"/>
+    </Class>
+    <Method classname="org.apache.http.impl.nio.reactor.InterestOpEntry" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.http.impl.nio.reactor.InterestOpEntry" start="62" end="62" startBytecode="0" endBytecode="60" sourcefile="InterestOpEntry.java" sourcepath="org/apache/http/impl/nio/reactor/InterestOpEntry.java"/>
+    </Method>
+    <Type descriptor="Ljava/nio/channels/SelectionKey;" role="TYPE_FOUND">
+      <SourceLine classname="java.nio.channels.SelectionKey" start="97" end="377" sourcefile="SelectionKey.java" sourcepath="java/nio/channels/SelectionKey.java"/>
+    </Type>
+    <SourceLine classname="org.apache.http.impl.nio.reactor.InterestOpEntry" start="62" end="62" startBytecode="5" endBytecode="5" sourcefile="InterestOpEntry.java" sourcepath="org/apache/http/impl/nio/reactor/InterestOpEntry.java"/>
+  </BugInstance>
+  <BugInstance type="NN_NAKED_NOTIFY" priority="2" abbrev="NN" category="MT_CORRECTNESS">
+    <Class classname="org.apache.http.impl.nio.reactor.ListenerEndpointImpl">
+      <SourceLine classname="org.apache.http.impl.nio.reactor.ListenerEndpointImpl" start="55" end="154" sourcefile="ListenerEndpointImpl.java" sourcepath="org/apache/http/impl/nio/reactor/ListenerEndpointImpl.java"/>
+    </Class>
+    <Method classname="org.apache.http.impl.nio.reactor.ListenerEndpointImpl" name="cancel" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.http.impl.nio.reactor.ListenerEndpointImpl" start="115" end="123" startBytecode="0" endBytecode="122" sourcefile="ListenerEndpointImpl.java" sourcepath="org/apache/http/impl/nio/reactor/ListenerEndpointImpl.java"/>
+    </Method>
+    <SourceLine classname="org.apache.http.impl.nio.reactor.ListenerEndpointImpl" start="121" end="121" startBytecode="23" endBytecode="23" sourcefile="ListenerEndpointImpl.java" sourcepath="org/apache/http/impl/nio/reactor/ListenerEndpointImpl.java"/>
+  </BugInstance>
+  <BugInstance type="NN_NAKED_NOTIFY" priority="2" abbrev="NN" category="MT_CORRECTNESS">
+    <Class classname="org.apache.http.impl.nio.reactor.ListenerEndpointImpl">
+      <SourceLine classname="org.apache.http.impl.nio.reactor.ListenerEndpointImpl" start="55" end="154" sourcefile="ListenerEndpointImpl.java" sourcepath="org/apache/http/impl/nio/reactor/ListenerEndpointImpl.java"/>
+    </Class>
+    <Method classname="org.apache.http.impl.nio.reactor.ListenerEndpointImpl" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.http.impl.nio.reactor.ListenerEndpointImpl" start="134" end="154" startBytecode="0" endBytecode="240" sourcefile="ListenerEndpointImpl.java" sourcepath="org/apache/http/impl/nio/reactor/ListenerEndpointImpl.java"/>
+    </Method>
+    <SourceLine classname="org.apache.http.impl.nio.reactor.ListenerEndpointImpl" start="152" end="152" startBytecode="81" endBytecode="81" sourcefile="ListenerEndpointImpl.java" sourcepath="org/apache/http/impl/nio/reactor/ListenerEndpointImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.http.message.BasicHeaderElement">
+      <SourceLine classname="org.apache.http.message.BasicHeaderElement" start="58" end="156" sourcefile="BasicHeaderElement.java" sourcepath="org/apache/http/message/BasicHeaderElement.java"/>
+    </Class>
+    <Method classname="org.apache.http.message.BasicHeaderElement" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;[Lorg/apache/http/NameValuePair;)V" isStatic="false">
+      <SourceLine classname="org.apache.http.message.BasicHeaderElement" start="58" end="69" startBytecode="0" endBytecode="152" sourcefile="BasicHeaderElement.java" sourcepath="org/apache/http/message/BasicHeaderElement.java"/>
+    </Method>
+    <Field classname="org.apache.http.message.BasicHeaderElement" name="parameters" signature="[Lorg/apache/http/NameValuePair;" isStatic="false">
+      <SourceLine classname="org.apache.http.message.BasicHeaderElement" sourcefile="BasicHeaderElement.java" sourcepath="org/apache/http/message/BasicHeaderElement.java"/>
+    </Field>
+    <LocalVariable name="parameters" register="3" pc="34" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.http.message.BasicHeaderElement" start="65" end="65" startBytecode="34" endBytecode="34" sourcefile="BasicHeaderElement.java" sourcepath="org/apache/http/message/BasicHeaderElement.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.http.message.BasicHeaderIterator">
+      <SourceLine classname="org.apache.http.message.BasicHeaderIterator" start="73" end="171" sourcefile="BasicHeaderIterator.java" sourcepath="org/apache/http/message/BasicHeaderIterator.java"/>
+    </Class>
+    <Method classname="org.apache.http.message.BasicHeaderIterator" name="&lt;init&gt;" signature="([Lorg/apache/http/Header;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.http.message.BasicHeaderIterator" start="73" end="82" startBytecode="0" endBytecode="123" sourcefile="BasicHeaderIterator.java" sourcepath="org/apache/http/message/BasicHeaderIterator.java"/>
+    </Method>
+    <Field classname="org.apache.http.message.BasicHeaderIterator" name="allHeaders" signature="[Lorg/apache/http/Header;" isStatic="false">
+      <SourceLine classname="org.apache.http.message.BasicHeaderIterator" sourcefile="BasicHeaderIterator.java" sourcepath="org/apache/http/message/BasicHeaderIterator.java"/>
+    </Field>
+    <LocalVariable name="headers" register="1" pc="20" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.http.message.BasicHeaderIterator" start="79" end="79" startBytecode="20" endBytecode="20" sourcefile="BasicHeaderIterator.java" sourcepath="org/apache/http/message/BasicHeaderIterator.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.http.nio.entity.NByteArrayEntity">
+      <SourceLine classname="org.apache.http.nio.entity.NByteArrayEntity" start="54" end="92" sourcefile="NByteArrayEntity.java" sourcepath="org/apache/http/nio/entity/NByteArrayEntity.java"/>
+    </Class>
+    <Method classname="org.apache.http.nio.entity.NByteArrayEntity" name="&lt;init&gt;" signature="([B)V" isStatic="false">
+      <SourceLine classname="org.apache.http.nio.entity.NByteArrayEntity" start="54" end="57" startBytecode="0" endBytecode="81" sourcefile="NByteArrayEntity.java" sourcepath="org/apache/http/nio/entity/NByteArrayEntity.java"/>
+    </Method>
+    <Field classname="org.apache.http.nio.entity.NByteArrayEntity" name="content" signature="[B" isStatic="false">
+      <SourceLine classname="org.apache.http.nio.entity.NByteArrayEntity" sourcefile="NByteArrayEntity.java" sourcepath="org/apache/http/nio/entity/NByteArrayEntity.java"/>
+    </Field>
+    <LocalVariable name="b" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.http.nio.entity.NByteArrayEntity" start="55" end="55" startBytecode="6" endBytecode="6" sourcefile="NByteArrayEntity.java" sourcepath="org/apache/http/nio/entity/NByteArrayEntity.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.http.nio.protocol.NHttpClientHandlerBase">
+      <SourceLine classname="org.apache.http.nio.protocol.NHttpClientHandlerBase" start="57" end="82" sourcefile="NHttpClientHandlerBase.java" sourcepath="org/apache/http/nio/protocol/NHttpClientHandlerBase.java"/>
+    </Class>
+    <Field classname="org.apache.http.nio.protocol.NHttpClientHandlerBase" name="execHandler" signature="Lorg/apache/http/nio/protocol/HttpRequestExecutionHandler;" isStatic="false">
+      <SourceLine classname="org.apache.http.nio.protocol.NHttpClientHandlerBase" sourcefile="NHttpClientHandlerBase.java" sourcepath="org/apache/http/nio/protocol/NHttpClientHandlerBase.java"/>
+    </Field>
+    <SourceLine classname="org.apache.http.nio.protocol.NHttpClientHandlerBase" start="61" end="61" startBytecode="26" endBytecode="26" sourcefile="NHttpClientHandlerBase.java" sourcepath="org/apache/http/nio/protocol/NHttpClientHandlerBase.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.http.nio.protocol.NHttpServiceHandlerBase">
+      <SourceLine classname="org.apache.http.nio.protocol.NHttpServiceHandlerBase" start="63" end="97" sourcefile="NHttpServiceHandlerBase.java" sourcepath="org/apache/http/nio/protocol/NHttpServiceHandlerBase.java"/>
+    </Class>
+    <Field classname="org.apache.http.nio.protocol.NHttpServiceHandlerBase" name="expectationVerifier" signature="Lorg/apache/http/protocol/HttpExpectationVerifier;" isStatic="false">
+      <SourceLine classname="org.apache.http.nio.protocol.NHttpServiceHandlerBase" sourcefile="NHttpServiceHandlerBase.java" sourcepath="org/apache/http/nio/protocol/NHttpServiceHandlerBase.java"/>
+    </Field>
+    <SourceLine classname="org.apache.http.nio.protocol.NHttpServiceHandlerBase" start="84" end="84" startBytecode="2" endBytecode="2" sourcefile="NHttpServiceHandlerBase.java" sourcepath="org/apache/http/nio/protocol/NHttpServiceHandlerBase.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.http.nio.protocol.NHttpServiceHandlerBase">
+      <SourceLine classname="org.apache.http.nio.protocol.NHttpServiceHandlerBase" start="63" end="97" sourcefile="NHttpServiceHandlerBase.java" sourcepath="org/apache/http/nio/protocol/NHttpServiceHandlerBase.java"/>
+    </Class>
+    <Field classname="org.apache.http.nio.protocol.NHttpServiceHandlerBase" name="handlerResolver" signature="Lorg/apache/http/protocol/HttpRequestHandlerResolver;" isStatic="false">
+      <SourceLine classname="org.apache.http.nio.protocol.NHttpServiceHandlerBase" sourcefile="NHttpServiceHandlerBase.java" sourcepath="org/apache/http/nio/protocol/NHttpServiceHandlerBase.java"/>
+    </Field>
+    <SourceLine classname="org.apache.http.nio.protocol.NHttpServiceHandlerBase" start="80" end="80" startBytecode="2" endBytecode="2" sourcefile="NHttpServiceHandlerBase.java" sourcepath="org/apache/http/nio/protocol/NHttpServiceHandlerBase.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.http.util.ByteArrayBuffer">
+      <SourceLine classname="org.apache.http.util.ByteArrayBuffer" start="51" end="342" sourcefile="ByteArrayBuffer.java" sourcepath="org/apache/http/util/ByteArrayBuffer.java"/>
+    </Class>
+    <Method classname="org.apache.http.util.ByteArrayBuffer" name="buffer" signature="()[B" isStatic="false">
+      <SourceLine classname="org.apache.http.util.ByteArrayBuffer" start="248" end="248" startBytecode="0" endBytecode="46" sourcefile="ByteArrayBuffer.java" sourcepath="org/apache/http/util/ByteArrayBuffer.java"/>
+    </Method>
+    <Field classname="org.apache.http.util.ByteArrayBuffer" name="buffer" signature="[B" isStatic="false">
+      <SourceLine classname="org.apache.http.util.ByteArrayBuffer" sourcefile="ByteArrayBuffer.java" sourcepath="org/apache/http/util/ByteArrayBuffer.java"/>
+    </Field>
+    <SourceLine classname="org.apache.http.util.ByteArrayBuffer" start="248" end="248" startBytecode="4" endBytecode="4" sourcefile="ByteArrayBuffer.java" sourcepath="org/apache/http/util/ByteArrayBuffer.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.http.util.CharArrayBuffer">
+      <SourceLine classname="org.apache.http.util.CharArrayBuffer" start="53" end="458" sourcefile="CharArrayBuffer.java" sourcepath="org/apache/http/util/CharArrayBuffer.java"/>
+    </Class>
+    <Method classname="org.apache.http.util.CharArrayBuffer" name="buffer" signature="()[C" isStatic="false">
+      <SourceLine classname="org.apache.http.util.CharArrayBuffer" start="273" end="273" startBytecode="0" endBytecode="46" sourcefile="CharArrayBuffer.java" sourcepath="org/apache/http/util/CharArrayBuffer.java"/>
+    </Method>
+    <Field classname="org.apache.http.util.CharArrayBuffer" name="buffer" signature="[C" isStatic="false">
+      <SourceLine classname="org.apache.http.util.CharArrayBuffer" sourcefile="CharArrayBuffer.java" sourcepath="org/apache/http/util/CharArrayBuffer.java"/>
+    </Field>
+    <SourceLine classname="org.apache.http.util.CharArrayBuffer" start="273" end="273" startBytecode="4" endBytecode="4" sourcefile="CharArrayBuffer.java" sourcepath="org/apache/http/util/CharArrayBuffer.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.http.util.EncodingUtils">
+      <SourceLine classname="org.apache.http.util.EncodingUtils" start="59" end="177" sourcefile="EncodingUtils.java" sourcepath="org/apache/http/util/EncodingUtils.java"/>
+    </Class>
+    <Method classname="org.apache.http.util.EncodingUtils" name="getBytes" signature="(Ljava/lang/String;Ljava/lang/String;)[B" isStatic="true">
+      <SourceLine classname="org.apache.http.util.EncodingUtils" start="101" end="112" startBytecode="0" endBytecode="140" sourcefile="EncodingUtils.java" sourcepath="org/apache/http/util/EncodingUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.http.util.EncodingUtils" start="112" end="112" startBytecode="43" endBytecode="43" sourcefile="EncodingUtils.java" sourcepath="org/apache/http/util/EncodingUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.http.util.EncodingUtils">
+      <SourceLine classname="org.apache.http.util.EncodingUtils" start="59" end="177" sourcefile="EncodingUtils.java" sourcepath="org/apache/http/util/EncodingUtils.java"/>
+    </Class>
+    <Method classname="org.apache.http.util.EncodingUtils" name="getString" signature="([BIILjava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.http.util.EncodingUtils" start="59" end="70" startBytecode="0" endBytecode="173" sourcefile="EncodingUtils.java" sourcepath="org/apache/http/util/EncodingUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([BII)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="568" end="574" startBytecode="0" endBytecode="84" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.http.util.EncodingUtils" start="70" end="70" startBytecode="56" endBytecode="56" sourcefile="EncodingUtils.java" sourcepath="org/apache/http/util/EncodingUtils.java"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.http.util.EntityUtils">
+      <SourceLine classname="org.apache.http.util.EntityUtils" start="48" end="221" sourcefile="EntityUtils.java" sourcepath="org/apache/http/util/EntityUtils.java"/>
+    </Class>
+    <Method classname="org.apache.http.util.EntityUtils" name="toString" signature="(Lorg/apache/http/HttpEntity;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.http.util.EntityUtils" start="173" end="204" startBytecode="0" endBytecode="81" sourcefile="EntityUtils.java" sourcepath="org/apache/http/util/EntityUtils.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/Reader;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.Reader" start="49" end="232" sourcefile="Reader.java" sourcepath="java/io/Reader.java"/>
+    </Type>
+    <SourceLine classname="org.apache.http.util.EntityUtils" start="195" end="195" startBytecode="89" endBytecode="89" sourcefile="EntityUtils.java" sourcepath="org/apache/http/util/EntityUtils.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 13 May 2011 14:54:45 +0300" total_classes="311" referenced_classes="429" total_bugs="20" total_size="11522" num_packages="20" vm_version="20.4-b02-402" cpu_seconds="47.99" clock_seconds="26.68" peak_mbytes="105.99" alloc_mbytes="763.88" gc_seconds="1.16" priority_2="15" priority_1="5">
+    <PackageStats package="org.apache.http" total_bugs="0" total_types="39" total_size="455">
+      <ClassStats class="org.apache.http.ConnectionClosedException" sourceFile="ConnectionClosedException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.ConnectionReuseStrategy" sourceFile="ConnectionReuseStrategy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.FormattedHeader" sourceFile="FormattedHeader.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.Header" sourceFile="Header.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.HeaderElement" sourceFile="HeaderElement.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.http.HeaderElementIterator" sourceFile="HeaderElementIterator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.HeaderIterator" sourceFile="HeaderIterator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpClientConnection" sourceFile="HttpClientConnection.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpConnection" sourceFile="HttpConnection.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpConnectionMetrics" sourceFile="HttpConnectionMetrics.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpEntity" sourceFile="HttpEntity.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpEntityEnclosingRequest" sourceFile="HttpEntityEnclosingRequest.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpException" sourceFile="HttpException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpHeaders" sourceFile="HttpHeaders.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpHost" sourceFile="HttpHost.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpInetConnection" sourceFile="HttpInetConnection.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpMessage" sourceFile="HttpMessage.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpRequest" sourceFile="HttpRequest.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpRequestFactory" sourceFile="HttpRequestFactory.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpRequestInterceptor" sourceFile="HttpRequestInterceptor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpResponse" sourceFile="HttpResponse.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpResponseFactory" sourceFile="HttpResponseFactory.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpResponseInterceptor" sourceFile="HttpResponseInterceptor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpServerConnection" sourceFile="HttpServerConnection.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpStatus" sourceFile="HttpStatus.java" interface="true" size="49" bugs="0"/>
+      <ClassStats class="org.apache.http.HttpVersion" sourceFile="HttpVersion.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.http.MalformedChunkCodingException" sourceFile="MalformedChunkCodingException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.MethodNotSupportedException" sourceFile="MethodNotSupportedException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.NameValuePair" sourceFile="NameValuePair.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.NoHttpResponseException" sourceFile="NoHttpResponseException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.ParseException" sourceFile="ParseException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.ProtocolException" sourceFile="ProtocolException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.http.ProtocolVersion" sourceFile="ProtocolVersion.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.apache.http.ReasonPhraseCatalog" sourceFile="ReasonPhraseCatalog.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.RequestLine" sourceFile="RequestLine.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.StatusLine" sourceFile="StatusLine.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.TokenIterator" sourceFile="TokenIterator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.TruncatedChunkException" sourceFile="TruncatedChunkException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.UnsupportedHttpVersionException" sourceFile="UnsupportedHttpVersionException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.entity" total_bugs="1" total_types="12" total_size="327" priority_2="1">
+      <ClassStats class="org.apache.http.entity.AbstractHttpEntity" sourceFile="AbstractHttpEntity.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.http.entity.BasicHttpEntity" sourceFile="BasicHttpEntity.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.http.entity.BufferedHttpEntity" sourceFile="BufferedHttpEntity.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.http.entity.ByteArrayEntity" sourceFile="ByteArrayEntity.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.entity.ContentLengthStrategy" sourceFile="ContentLengthStrategy.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.entity.ContentProducer" sourceFile="ContentProducer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.entity.EntityTemplate" sourceFile="EntityTemplate.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.http.entity.FileEntity" sourceFile="FileEntity.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.http.entity.HttpEntityWrapper" sourceFile="HttpEntityWrapper.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.http.entity.InputStreamEntity" sourceFile="InputStreamEntity.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apache.http.entity.SerializableEntity" sourceFile="SerializableEntity.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.http.entity.StringEntity" sourceFile="StringEntity.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.impl" total_bugs="0" total_types="12" total_size="660">
+      <ClassStats class="org.apache.http.impl.AbstractHttpClientConnection" sourceFile="AbstractHttpClientConnection.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.AbstractHttpServerConnection" sourceFile="AbstractHttpServerConnection.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.DefaultConnectionReuseStrategy" sourceFile="DefaultConnectionReuseStrategy.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.DefaultHttpClientConnection" sourceFile="DefaultHttpClientConnection.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.DefaultHttpRequestFactory" sourceFile="DefaultHttpRequestFactory.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.DefaultHttpResponseFactory" sourceFile="DefaultHttpResponseFactory.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.DefaultHttpServerConnection" sourceFile="DefaultHttpServerConnection.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.EnglishReasonPhraseCatalog" sourceFile="EnglishReasonPhraseCatalog.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.HttpConnectionMetricsImpl" sourceFile="HttpConnectionMetricsImpl.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.NoConnectionReuseStrategy" sourceFile="NoConnectionReuseStrategy.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.SocketHttpClientConnection" sourceFile="SocketHttpClientConnection.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.SocketHttpServerConnection" sourceFile="SocketHttpServerConnection.java" interface="false" size="90" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.impl.entity" total_bugs="0" total_types="4" total_size="132">
+      <ClassStats class="org.apache.http.impl.entity.EntityDeserializer" sourceFile="EntityDeserializer.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.entity.EntitySerializer" sourceFile="EntitySerializer.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.entity.LaxContentLengthStrategy" sourceFile="LaxContentLengthStrategy.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.entity.StrictContentLengthStrategy" sourceFile="StrictContentLengthStrategy.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.impl.io" total_bugs="3" total_types="17" total_size="856" priority_2="1" priority_1="2">
+      <ClassStats class="org.apache.http.impl.io.AbstractMessageParser" sourceFile="AbstractMessageParser.java" interface="false" size="87" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.http.impl.io.AbstractMessageWriter" sourceFile="AbstractMessageWriter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.AbstractSessionInputBuffer" sourceFile="AbstractSessionInputBuffer.java" interface="false" size="165" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.AbstractSessionOutputBuffer" sourceFile="AbstractSessionOutputBuffer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.ChunkedInputStream" sourceFile="ChunkedInputStream.java" interface="false" size="115" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.impl.io.ChunkedOutputStream" sourceFile="ChunkedOutputStream.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.ContentLengthInputStream" sourceFile="ContentLengthInputStream.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.ContentLengthOutputStream" sourceFile="ContentLengthOutputStream.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.HttpRequestParser" sourceFile="HttpRequestParser.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.HttpRequestWriter" sourceFile="HttpRequestWriter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.HttpResponseParser" sourceFile="HttpResponseParser.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.HttpResponseWriter" sourceFile="HttpResponseWriter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.HttpTransportMetricsImpl" sourceFile="HttpTransportMetricsImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.IdentityInputStream" sourceFile="IdentityInputStream.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.IdentityOutputStream" sourceFile="IdentityOutputStream.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.SocketInputBuffer" sourceFile="SocketInputBuffer.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.io.SocketOutputBuffer" sourceFile="SocketOutputBuffer.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.impl.nio" total_bugs="0" total_types="8" total_size="632">
+      <ClassStats class="org.apache.http.impl.nio.DefaultClientIOEventDispatch" sourceFile="DefaultClientIOEventDispatch.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.DefaultNHttpClientConnection" sourceFile="DefaultNHttpClientConnection.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.DefaultNHttpServerConnection" sourceFile="DefaultNHttpServerConnection.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.DefaultServerIOEventDispatch" sourceFile="DefaultServerIOEventDispatch.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.NHttpConnectionBase" sourceFile="NHttpConnectionBase.java" interface="false" size="163" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.SSLClientIOEventDispatch" sourceFile="SSLClientIOEventDispatch.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.SSLServerIOEventDispatch" sourceFile="SSLServerIOEventDispatch.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.SessionHttpContext" sourceFile="SessionHttpContext.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.impl.nio.codecs" total_bugs="2" total_types="18" total_size="656" priority_2="2">
+      <ClassStats class="org.apache.http.impl.nio.codecs.AbstractContentDecoder" sourceFile="AbstractContentDecoder.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.AbstractContentEncoder" sourceFile="AbstractContentEncoder.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.AbstractMessageParser" sourceFile="AbstractMessageParser.java" interface="false" size="98" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.AbstractMessageWriter" sourceFile="AbstractMessageWriter.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.ChunkDecoder" sourceFile="ChunkDecoder.java" interface="false" size="139" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.ChunkEncoder" sourceFile="ChunkEncoder.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.DefaultHttpRequestParser" sourceFile="DefaultHttpRequestParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.DefaultHttpRequestWriter" sourceFile="DefaultHttpRequestWriter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.DefaultHttpResponseParser" sourceFile="DefaultHttpResponseParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.DefaultHttpResponseWriter" sourceFile="DefaultHttpResponseWriter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.HttpRequestParser" sourceFile="HttpRequestParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.HttpRequestWriter" sourceFile="HttpRequestWriter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.HttpResponseParser" sourceFile="HttpResponseParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.HttpResponseWriter" sourceFile="HttpResponseWriter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.IdentityDecoder" sourceFile="IdentityDecoder.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.IdentityEncoder" sourceFile="IdentityEncoder.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.LengthDelimitedDecoder" sourceFile="LengthDelimitedDecoder.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.codecs.LengthDelimitedEncoder" sourceFile="LengthDelimitedEncoder.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.impl.nio.reactor" total_bugs="3" total_types="30" total_size="1855" priority_2="2" priority_1="1">
+      <ClassStats class="org.apache.http.impl.nio.reactor.AbstractIOReactor" sourceFile="AbstractIOReactor.java" interface="false" size="240" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.AbstractIOReactor$1" sourceFile="AbstractIOReactor.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.AbstractIOReactor$2" sourceFile="AbstractIOReactor.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor" sourceFile="AbstractMultiworkerIOReactor.java" interface="false" size="210" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$DefaultThreadFactory" sourceFile="AbstractMultiworkerIOReactor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker" sourceFile="AbstractMultiworkerIOReactor.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.BaseIOReactor" sourceFile="BaseIOReactor.java" interface="false" size="134" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.ChannelEntry" sourceFile="ChannelEntry.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor" sourceFile="DefaultConnectingIOReactor.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.DefaultListeningIOReactor" sourceFile="DefaultListeningIOReactor.java" interface="false" size="129" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.DefaultListeningIOReactor$1" sourceFile="DefaultListeningIOReactor.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.ExceptionEvent" sourceFile="ExceptionEvent.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.IOSessionImpl" sourceFile="IOSessionImpl.java" interface="false" size="139" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.InterestOpEntry" sourceFile="InterestOpEntry.java" interface="false" size="18" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.InterestOpsCallback" sourceFile="InterestOpsCallback.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.ListenerEndpointClosedCallback" sourceFile="ListenerEndpointClosedCallback.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.ListenerEndpointImpl" sourceFile="ListenerEndpointImpl.java" interface="false" size="81" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SSLIOSession" sourceFile="SSLIOSession.java" interface="false" size="251" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SSLIOSession$1" sourceFile="SSLIOSession.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SSLIOSession$InternalByteChannel" sourceFile="SSLIOSession.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SSLIOSessionHandler" sourceFile="SSLIOSessionHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SSLIOSessionHandlerAdaptor" sourceFile="SSLIOSessionHandlerAdaptor.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SSLMode" sourceFile="SSLMode.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SSLSetupHandler" sourceFile="SSLSetupHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SessionClosedCallback" sourceFile="SessionClosedCallback.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SessionHandle" sourceFile="SessionHandle.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SessionInputBufferImpl" sourceFile="SessionInputBufferImpl.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SessionOutputBufferImpl" sourceFile="SessionOutputBufferImpl.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SessionRequestHandle" sourceFile="SessionRequestHandle.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.reactor.SessionRequestImpl" sourceFile="SessionRequestImpl.java" interface="false" size="124" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.impl.nio.ssl" total_bugs="0" total_types="2" total_size="185">
+      <ClassStats class="org.apache.http.impl.nio.ssl.SSLClientIOEventDispatch" sourceFile="SSLClientIOEventDispatch.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="org.apache.http.impl.nio.ssl.SSLServerIOEventDispatch" sourceFile="SSLServerIOEventDispatch.java" interface="false" size="92" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.io" total_bugs="0" total_types="7" total_size="29">
+      <ClassStats class="org.apache.http.io.BufferInfo" sourceFile="BufferInfo.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.io.EofSensor" sourceFile="EofSensor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.io.HttpMessageParser" sourceFile="HttpMessageParser.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.io.HttpMessageWriter" sourceFile="HttpMessageWriter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.io.HttpTransportMetrics" sourceFile="HttpTransportMetrics.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.io.SessionInputBuffer" sourceFile="SessionInputBuffer.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.io.SessionOutputBuffer" sourceFile="SessionOutputBuffer.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.message" total_bugs="2" total_types="24" total_size="1366" priority_2="2">
+      <ClassStats class="org.apache.http.message.AbstractHttpMessage" sourceFile="AbstractHttpMessage.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicHeader" sourceFile="BasicHeader.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicHeaderElement" sourceFile="BasicHeaderElement.java" interface="false" size="62" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.message.BasicHeaderElementIterator" sourceFile="BasicHeaderElementIterator.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicHeaderIterator" sourceFile="BasicHeaderIterator.java" interface="false" size="35" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.message.BasicHeaderValueFormatter" sourceFile="BasicHeaderValueFormatter.java" interface="false" size="131" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicHeaderValueParser" sourceFile="BasicHeaderValueParser.java" interface="false" size="162" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicHttpEntityEnclosingRequest" sourceFile="BasicHttpEntityEnclosingRequest.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicHttpRequest" sourceFile="BasicHttpRequest.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicHttpResponse" sourceFile="BasicHttpResponse.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicLineFormatter" sourceFile="BasicLineFormatter.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicLineParser" sourceFile="BasicLineParser.java" interface="false" size="183" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicListHeaderIterator" sourceFile="BasicListHeaderIterator.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicNameValuePair" sourceFile="BasicNameValuePair.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicRequestLine" sourceFile="BasicRequestLine.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicStatusLine" sourceFile="BasicStatusLine.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BasicTokenIterator" sourceFile="BasicTokenIterator.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.http.message.BufferedHeader" sourceFile="BufferedHeader.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.http.message.HeaderGroup" sourceFile="HeaderGroup.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="org.apache.http.message.HeaderValueFormatter" sourceFile="HeaderValueFormatter.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.message.HeaderValueParser" sourceFile="HeaderValueParser.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.message.LineFormatter" sourceFile="LineFormatter.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.message.LineParser" sourceFile="LineParser.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.http.message.ParserCursor" sourceFile="ParserCursor.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.nio" total_bugs="0" total_types="16" total_size="92">
+      <ClassStats class="org.apache.http.nio.ContentDecoder" sourceFile="ContentDecoder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.ContentDecoderChannel" sourceFile="ContentDecoderChannel.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.ContentEncoder" sourceFile="ContentEncoder.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.ContentEncoderChannel" sourceFile="ContentEncoderChannel.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.FileContentDecoder" sourceFile="FileContentDecoder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.FileContentEncoder" sourceFile="FileContentEncoder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.IOControl" sourceFile="IOControl.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.NHttpClientConnection" sourceFile="NHttpClientConnection.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.NHttpClientHandler" sourceFile="NHttpClientHandler.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.NHttpClientIOTarget" sourceFile="NHttpClientIOTarget.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.NHttpConnection" sourceFile="NHttpConnection.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.NHttpMessageParser" sourceFile="NHttpMessageParser.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.NHttpMessageWriter" sourceFile="NHttpMessageWriter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.NHttpServerConnection" sourceFile="NHttpServerConnection.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.NHttpServerIOTarget" sourceFile="NHttpServerIOTarget.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.NHttpServiceHandler" sourceFile="NHttpServiceHandler.java" interface="true" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.nio.entity" total_bugs="1" total_types="17" total_size="330" priority_2="1">
+      <ClassStats class="org.apache.http.nio.entity.BufferingNHttpEntity" sourceFile="BufferingNHttpEntity.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.ByteArrayNIOEntity" sourceFile="ByteArrayNIOEntity.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.ConsumingNHttpEntity" sourceFile="ConsumingNHttpEntity.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.ConsumingNHttpEntityTemplate" sourceFile="ConsumingNHttpEntityTemplate.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.ContentBufferEntity" sourceFile="ContentBufferEntity.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.ContentInputStream" sourceFile="ContentInputStream.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.ContentListener" sourceFile="ContentListener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.ContentOutputStream" sourceFile="ContentOutputStream.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.FileNIOEntity" sourceFile="FileNIOEntity.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.HttpNIOEntity" sourceFile="HttpNIOEntity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.NByteArrayEntity" sourceFile="NByteArrayEntity.java" interface="false" size="30" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.nio.entity.NFileEntity" sourceFile="NFileEntity.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.NHttpEntityWrapper" sourceFile="NHttpEntityWrapper.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.NStringEntity" sourceFile="NStringEntity.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.ProducingNHttpEntity" sourceFile="ProducingNHttpEntity.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.SkipContentListener" sourceFile="SkipContentListener.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.entity.StringNIOEntity" sourceFile="StringNIOEntity.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.nio.params" total_bugs="0" total_types="3" total_size="55">
+      <ClassStats class="org.apache.http.nio.params.NIOReactorPNames" sourceFile="NIOReactorPNames.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.params.NIOReactorParamBean" sourceFile="NIOReactorParamBean.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.params.NIOReactorParams" sourceFile="NIOReactorParams.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.nio.protocol" total_bugs="3" total_types="28" total_size="1671" priority_2="3">
+      <ClassStats class="org.apache.http.nio.protocol.AsyncNHttpClientHandler" sourceFile="AsyncNHttpClientHandler.java" interface="false" size="201" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.AsyncNHttpClientHandler$ClientConnState" sourceFile="AsyncNHttpClientHandler.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.AsyncNHttpServiceHandler" sourceFile="AsyncNHttpServiceHandler.java" interface="false" size="247" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.AsyncNHttpServiceHandler$ResponseTriggerImpl" sourceFile="AsyncNHttpServiceHandler.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.AsyncNHttpServiceHandler$ServerConnState" sourceFile="AsyncNHttpServiceHandler.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.BufferingHttpClientHandler" sourceFile="BufferingHttpClientHandler.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.BufferingHttpClientHandler$ExecutionHandlerAdaptor" sourceFile="BufferingHttpClientHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.BufferingHttpServiceHandler" sourceFile="BufferingHttpServiceHandler.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.BufferingHttpServiceHandler$RequestHandlerAdaptor" sourceFile="BufferingHttpServiceHandler.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.BufferingHttpServiceHandler$RequestHandlerResolverAdaptor" sourceFile="BufferingHttpServiceHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.EventListener" sourceFile="EventListener.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.HttpRequestExecutionHandler" sourceFile="HttpRequestExecutionHandler.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.NHttpClientHandlerBase" sourceFile="NHttpClientHandlerBase.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.nio.protocol.NHttpHandlerBase" sourceFile="NHttpHandlerBase.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.NHttpRequestExecutionHandler" sourceFile="NHttpRequestExecutionHandler.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.NHttpRequestHandler" sourceFile="NHttpRequestHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.NHttpRequestHandlerRegistry" sourceFile="NHttpRequestHandlerRegistry.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.NHttpRequestHandlerResolver" sourceFile="NHttpRequestHandlerResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.NHttpResponseTrigger" sourceFile="NHttpResponseTrigger.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.NHttpServiceHandlerBase" sourceFile="NHttpServiceHandlerBase.java" interface="false" size="27" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.http.nio.protocol.SimpleNHttpRequestHandler" sourceFile="SimpleNHttpRequestHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.ThrottlingHttpClientHandler" sourceFile="ThrottlingHttpClientHandler.java" interface="false" size="203" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.ThrottlingHttpClientHandler$1" sourceFile="ThrottlingHttpClientHandler.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.ThrottlingHttpClientHandler$2" sourceFile="ThrottlingHttpClientHandler.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.ThrottlingHttpClientHandler$ClientConnState" sourceFile="ThrottlingHttpClientHandler.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.ThrottlingHttpServiceHandler" sourceFile="ThrottlingHttpServiceHandler.java" interface="false" size="290" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.ThrottlingHttpServiceHandler$1" sourceFile="ThrottlingHttpServiceHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.protocol.ThrottlingHttpServiceHandler$ServerConnState" sourceFile="ThrottlingHttpServiceHandler.java" interface="false" size="76" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.nio.reactor" total_bugs="0" total_types="15" total_size="120">
+      <ClassStats class="org.apache.http.nio.reactor.ConnectingIOReactor" sourceFile="ConnectingIOReactor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.EventMask" sourceFile="EventMask.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.IOEventDispatch" sourceFile="IOEventDispatch.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.IOReactor" sourceFile="IOReactor.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.IOReactorException" sourceFile="IOReactorException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.IOReactorExceptionHandler" sourceFile="IOReactorExceptionHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.IOReactorStatus" sourceFile="IOReactorStatus.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.IOSession" sourceFile="IOSession.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.ListenerEndpoint" sourceFile="ListenerEndpoint.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.ListeningIOReactor" sourceFile="ListeningIOReactor.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.SessionBufferStatus" sourceFile="SessionBufferStatus.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.SessionInputBuffer" sourceFile="SessionInputBuffer.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.SessionOutputBuffer" sourceFile="SessionOutputBuffer.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.SessionRequest" sourceFile="SessionRequest.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.reactor.SessionRequestCallback" sourceFile="SessionRequestCallback.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.nio.util" total_bugs="0" total_types="11" total_size="456">
+      <ClassStats class="org.apache.http.nio.util.BufferInfo" sourceFile="BufferInfo.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.util.ByteBufferAllocator" sourceFile="ByteBufferAllocator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.util.ContentInputBuffer" sourceFile="ContentInputBuffer.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.util.ContentOutputBuffer" sourceFile="ContentOutputBuffer.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.util.DirectByteBufferAllocator" sourceFile="DirectByteBufferAllocator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.util.ExpandableBuffer" sourceFile="ExpandableBuffer.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.util.HeapByteBufferAllocator" sourceFile="HeapByteBufferAllocator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.util.SharedInputBuffer" sourceFile="SharedInputBuffer.java" interface="false" size="128" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.util.SharedOutputBuffer" sourceFile="SharedOutputBuffer.java" interface="false" size="131" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.util.SimpleInputBuffer" sourceFile="SimpleInputBuffer.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.http.nio.util.SimpleOutputBuffer" sourceFile="SimpleOutputBuffer.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.params" total_bugs="0" total_types="12" total_size="340">
+      <ClassStats class="org.apache.http.params.AbstractHttpParams" sourceFile="AbstractHttpParams.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apache.http.params.BasicHttpParams" sourceFile="BasicHttpParams.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.http.params.CoreConnectionPNames" sourceFile="CoreConnectionPNames.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.http.params.CoreProtocolPNames" sourceFile="CoreProtocolPNames.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.apache.http.params.DefaultedHttpParams" sourceFile="DefaultedHttpParams.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.http.params.HttpAbstractParamBean" sourceFile="HttpAbstractParamBean.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.params.HttpConnectionParamBean" sourceFile="HttpConnectionParamBean.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.http.params.HttpConnectionParams" sourceFile="HttpConnectionParams.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.http.params.HttpParams" sourceFile="HttpParams.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="org.apache.http.params.HttpProtocolParamBean" sourceFile="HttpProtocolParamBean.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.http.params.HttpProtocolParams" sourceFile="HttpProtocolParams.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.apache.http.params.SyncBasicHttpParams" sourceFile="SyncBasicHttpParams.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.protocol" total_bugs="0" total_types="29" total_size="817">
+      <ClassStats class="org.apache.http.protocol.BasicHttpContext" sourceFile="BasicHttpContext.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.BasicHttpProcessor" sourceFile="BasicHttpProcessor.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.DefaultedHttpContext" sourceFile="DefaultedHttpContext.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.ExecutionContext" sourceFile="ExecutionContext.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HTTP" sourceFile="HTTP.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpContext" sourceFile="HttpContext.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpDateGenerator" sourceFile="HttpDateGenerator.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpExpectationVerifier" sourceFile="HttpExpectationVerifier.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpProcessor" sourceFile="HttpProcessor.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpRequestExecutor" sourceFile="HttpRequestExecutor.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpRequestHandler" sourceFile="HttpRequestHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpRequestHandlerRegistry" sourceFile="HttpRequestHandlerRegistry.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpRequestHandlerResolver" sourceFile="HttpRequestHandlerResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpRequestInterceptorList" sourceFile="HttpRequestInterceptorList.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpResponseInterceptorList" sourceFile="HttpResponseInterceptorList.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.HttpService" sourceFile="HttpService.java" interface="false" size="134" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.ImmutableHttpProcessor" sourceFile="ImmutableHttpProcessor.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.RequestConnControl" sourceFile="RequestConnControl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.RequestContent" sourceFile="RequestContent.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.RequestDate" sourceFile="RequestDate.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.RequestExpectContinue" sourceFile="RequestExpectContinue.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.RequestTargetHost" sourceFile="RequestTargetHost.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.RequestUserAgent" sourceFile="RequestUserAgent.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.ResponseConnControl" sourceFile="ResponseConnControl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.ResponseContent" sourceFile="ResponseContent.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.ResponseDate" sourceFile="ResponseDate.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.ResponseServer" sourceFile="ResponseServer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.SyncBasicHttpContext" sourceFile="SyncBasicHttpContext.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.http.protocol.UriPatternMatcher" sourceFile="UriPatternMatcher.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.http.util" total_bugs="5" total_types="7" total_size="488" priority_2="3" priority_1="2">
+      <ClassStats class="org.apache.http.util.ByteArrayBuffer" sourceFile="ByteArrayBuffer.java" interface="false" size="100" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.util.CharArrayBuffer" sourceFile="CharArrayBuffer.java" interface="false" size="139" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.util.EncodingUtils" sourceFile="EncodingUtils.java" interface="false" size="40" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.http.util.EntityUtils" sourceFile="EntityUtils.java" interface="false" size="74" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.http.util.ExceptionUtils" sourceFile="ExceptionUtils.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.http.util.LangUtils" sourceFile="LangUtils.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.http.util.VersionInfo" sourceFile="VersionInfo.java" interface="false" size="90" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1633" invocations="980" avgMicrosecondsPerInvocation="1667" maxMicrosecondsPerInvocation="73537" standardDeviationMircosecondsPerInvocation="5312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1597" invocations="1613" avgMicrosecondsPerInvocation="990" maxMicrosecondsPerInvocation="77055" standardDeviationMircosecondsPerInvocation="4003"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1568" invocations="1715" avgMicrosecondsPerInvocation="914" maxMicrosecondsPerInvocation="65410" standardDeviationMircosecondsPerInvocation="3560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1535" invocations="1609" avgMicrosecondsPerInvocation="954" maxMicrosecondsPerInvocation="30257" standardDeviationMircosecondsPerInvocation="2899"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1419" invocations="1696" avgMicrosecondsPerInvocation="836" maxMicrosecondsPerInvocation="54840" standardDeviationMircosecondsPerInvocation="3127"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1237" invocations="1613" avgMicrosecondsPerInvocation="767" maxMicrosecondsPerInvocation="35085" standardDeviationMircosecondsPerInvocation="2803"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1083" invocations="429" avgMicrosecondsPerInvocation="2525" maxMicrosecondsPerInvocation="82543" standardDeviationMircosecondsPerInvocation="6594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1067" invocations="429" avgMicrosecondsPerInvocation="2487" maxMicrosecondsPerInvocation="110607" standardDeviationMircosecondsPerInvocation="7906"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="857" invocations="1333" avgMicrosecondsPerInvocation="643" maxMicrosecondsPerInvocation="64275" standardDeviationMircosecondsPerInvocation="3020"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="830" invocations="1613" avgMicrosecondsPerInvocation="514" maxMicrosecondsPerInvocation="50500" standardDeviationMircosecondsPerInvocation="2097"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="492" invocations="429" avgMicrosecondsPerInvocation="1147" maxMicrosecondsPerInvocation="85391" standardDeviationMircosecondsPerInvocation="5384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="472" invocations="1939" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="35484" standardDeviationMircosecondsPerInvocation="1395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="436" invocations="1613" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="33209" standardDeviationMircosecondsPerInvocation="1576"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="333" invocations="429" avgMicrosecondsPerInvocation="777" maxMicrosecondsPerInvocation="41435" standardDeviationMircosecondsPerInvocation="2625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="300" invocations="1972" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="47848" standardDeviationMircosecondsPerInvocation="1424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="292" invocations="429" avgMicrosecondsPerInvocation="682" maxMicrosecondsPerInvocation="32288" standardDeviationMircosecondsPerInvocation="2784"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="274" invocations="16449" avgMicrosecondsPerInvocation="16" maxMicrosecondsPerInvocation="28813" standardDeviationMircosecondsPerInvocation="347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="267" invocations="307" avgMicrosecondsPerInvocation="870" maxMicrosecondsPerInvocation="26977" standardDeviationMircosecondsPerInvocation="2888"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="265" invocations="1609" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="35828" standardDeviationMircosecondsPerInvocation="1376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="265" invocations="930" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="26801" standardDeviationMircosecondsPerInvocation="1578"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="257" invocations="311" avgMicrosecondsPerInvocation="826" maxMicrosecondsPerInvocation="41337" standardDeviationMircosecondsPerInvocation="3253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="235" invocations="429" avgMicrosecondsPerInvocation="548" maxMicrosecondsPerInvocation="42835" standardDeviationMircosecondsPerInvocation="2623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="224" invocations="311" avgMicrosecondsPerInvocation="723" maxMicrosecondsPerInvocation="18581" standardDeviationMircosecondsPerInvocation="2149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="218" invocations="467" avgMicrosecondsPerInvocation="467" maxMicrosecondsPerInvocation="23954" standardDeviationMircosecondsPerInvocation="1799"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="193" invocations="310" avgMicrosecondsPerInvocation="623" maxMicrosecondsPerInvocation="22457" standardDeviationMircosecondsPerInvocation="2244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="185" invocations="311" avgMicrosecondsPerInvocation="596" maxMicrosecondsPerInvocation="32749" standardDeviationMircosecondsPerInvocation="2167"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="181" invocations="1602" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="26737" standardDeviationMircosecondsPerInvocation="781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="179" invocations="983" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="19284" standardDeviationMircosecondsPerInvocation="999"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="178" invocations="311" avgMicrosecondsPerInvocation="573" maxMicrosecondsPerInvocation="30459" standardDeviationMircosecondsPerInvocation="2094"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="176" invocations="311" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="39324" standardDeviationMircosecondsPerInvocation="2538"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="171" invocations="429" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="22003" standardDeviationMircosecondsPerInvocation="1562"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="171" invocations="429" avgMicrosecondsPerInvocation="399" maxMicrosecondsPerInvocation="23936" standardDeviationMircosecondsPerInvocation="1854"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

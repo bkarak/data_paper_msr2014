@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1226627230000" analysisTimestamp="1360868712100" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/archiva/archiva-xml-tools/1.2-M1/archiva-xml-tools-1.2-M1.jar</Jar>
+  </Project>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.maven.archiva.xml.XMLReader">
+      <SourceLine classname="org.apache.maven.archiva.xml.XMLReader" start="60" end="328" sourcefile="XMLReader.java" sourcepath="org/apache/maven/archiva/xml/XMLReader.java"/>
+    </Class>
+    <Method classname="org.apache.maven.archiva.xml.XMLReader" name="removeNamespaces" signature="(Lorg/dom4j/Element;)V" isStatic="false">
+      <SourceLine classname="org.apache.maven.archiva.xml.XMLReader" start="210" end="229" startBytecode="0" endBytecode="236" sourcefile="XMLReader.java" sourcepath="org/apache/maven/archiva/xml/XMLReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.archiva.xml.XMLReader" start="219" end="225" startBytecode="56" endBytecode="106" sourcefile="XMLReader.java" sourcepath="org/apache/maven/archiva/xml/XMLReader.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="14">
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.maven.archiva.common.ArchivaException</MissingClass>
+    <MissingClass>org.dom4j.Attribute</MissingClass>
+    <MissingClass>org.dom4j.Document</MissingClass>
+    <MissingClass>org.dom4j.DocumentException</MissingClass>
+    <MissingClass>org.dom4j.Element</MissingClass>
+    <MissingClass>org.dom4j.Namespace</MissingClass>
+    <MissingClass>org.dom4j.Node</MissingClass>
+    <MissingClass>org.dom4j.QName</MissingClass>
+    <MissingClass>org.dom4j.XPath</MissingClass>
+    <MissingClass>org.dom4j.io.OutputFormat</MissingClass>
+    <MissingClass>org.dom4j.io.SAXReader</MissingClass>
+    <MissingClass>org.dom4j.io.XMLWriter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 14 Nov 2008 03:47:10 +0200" total_classes="6" referenced_classes="39" total_bugs="1" total_size="493" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="15.55" clock_seconds="13.86" peak_mbytes="56.54" alloc_mbytes="763.88" gc_seconds="0.11" priority_2="1">
+    <PackageStats package="org.apache.maven.archiva.xml" total_bugs="1" total_types="6" total_size="493" priority_2="1">
+      <ClassStats class="org.apache.maven.archiva.xml.ElementTextListClosure" sourceFile="ElementTextListClosure.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.archiva.xml.LatinEntities" sourceFile="LatinEntities.java" interface="false" size="266" bugs="0"/>
+      <ClassStats class="org.apache.maven.archiva.xml.LatinEntityResolutionReader" sourceFile="LatinEntityResolutionReader.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.maven.archiva.xml.XMLException" sourceFile="XMLException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.archiva.xml.XMLReader" sourceFile="XMLReader.java" interface="false" size="124" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.maven.archiva.xml.XMLWriter" sourceFile="XMLWriter.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1586" invocations="39" avgMicrosecondsPerInvocation="40674" maxMicrosecondsPerInvocation="332331" standardDeviationMircosecondsPerInvocation="68080"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1148" invocations="464" avgMicrosecondsPerInvocation="2475" maxMicrosecondsPerInvocation="77119" standardDeviationMircosecondsPerInvocation="7460"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="852" invocations="39" avgMicrosecondsPerInvocation="21861" maxMicrosecondsPerInvocation="122014" standardDeviationMircosecondsPerInvocation="32128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="686" invocations="29" avgMicrosecondsPerInvocation="23664" maxMicrosecondsPerInvocation="249846" standardDeviationMircosecondsPerInvocation="46809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="533" invocations="39" avgMicrosecondsPerInvocation="13684" maxMicrosecondsPerInvocation="116776" standardDeviationMircosecondsPerInvocation="24407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="431" invocations="29" avgMicrosecondsPerInvocation="14876" maxMicrosecondsPerInvocation="204618" standardDeviationMircosecondsPerInvocation="36878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="411" invocations="29" avgMicrosecondsPerInvocation="14194" maxMicrosecondsPerInvocation="157562" standardDeviationMircosecondsPerInvocation="30114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="395" invocations="29" avgMicrosecondsPerInvocation="13621" maxMicrosecondsPerInvocation="56089" standardDeviationMircosecondsPerInvocation="16320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="359" invocations="29" avgMicrosecondsPerInvocation="12409" maxMicrosecondsPerInvocation="99309" standardDeviationMircosecondsPerInvocation="20005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="346" invocations="165" avgMicrosecondsPerInvocation="2097" maxMicrosecondsPerInvocation="61220" standardDeviationMircosecondsPerInvocation="6126"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="287" invocations="30" avgMicrosecondsPerInvocation="9568" maxMicrosecondsPerInvocation="78813" standardDeviationMircosecondsPerInvocation="19964"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="270" invocations="39" avgMicrosecondsPerInvocation="6945" maxMicrosecondsPerInvocation="102413" standardDeviationMircosecondsPerInvocation="19645"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="264" invocations="28" avgMicrosecondsPerInvocation="9451" maxMicrosecondsPerInvocation="107321" standardDeviationMircosecondsPerInvocation="20909"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="251" invocations="409" avgMicrosecondsPerInvocation="614" maxMicrosecondsPerInvocation="81614" standardDeviationMircosecondsPerInvocation="4363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="251" invocations="39" avgMicrosecondsPerInvocation="6439" maxMicrosecondsPerInvocation="73330" standardDeviationMircosecondsPerInvocation="13119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="181" invocations="39" avgMicrosecondsPerInvocation="4661" maxMicrosecondsPerInvocation="34934" standardDeviationMircosecondsPerInvocation="8369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="177" invocations="61" avgMicrosecondsPerInvocation="2904" maxMicrosecondsPerInvocation="59851" standardDeviationMircosecondsPerInvocation="9054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="173" invocations="39" avgMicrosecondsPerInvocation="4455" maxMicrosecondsPerInvocation="82384" standardDeviationMircosecondsPerInvocation="13189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="128" invocations="6" avgMicrosecondsPerInvocation="21392" maxMicrosecondsPerInvocation="114100" standardDeviationMircosecondsPerInvocation="41522"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="125" invocations="39" avgMicrosecondsPerInvocation="3208" maxMicrosecondsPerInvocation="39184" standardDeviationMircosecondsPerInvocation="7194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="121" invocations="29" avgMicrosecondsPerInvocation="4184" maxMicrosecondsPerInvocation="24978" standardDeviationMircosecondsPerInvocation="5536"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

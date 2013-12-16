@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1205563277000" analysisTimestamp="1360914621951" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/jvnet/hudson/main/jnlp-agent/1.196/jnlp-agent-1.196.jar</Jar>
+  </Project>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="hudson.jnlp.Main$1$2">
+      <SourceLine classname="hudson.jnlp.Main$1$2" start="43" end="51" sourcefile="Main.java" sourcepath="hudson/jnlp/Main.java"/>
+    </Class>
+    <Method classname="hudson.jnlp.Main$1$2" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="hudson.jnlp.Main$1$2" start="45" end="51" startBytecode="0" endBytecode="112" sourcefile="Main.java" sourcepath="hudson/jnlp/Main.java"/>
+    </Method>
+    <SourceLine classname="hudson.jnlp.Main$1$2" start="50" end="50" startBytecode="41" endBytecode="41" sourcefile="Main.java" sourcepath="hudson/jnlp/Main.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="hudson.jnlp.Main$2">
+      <SourceLine classname="hudson.jnlp.Main$2" start="60" end="68" sourcefile="Main.java" sourcepath="hudson/jnlp/Main.java"/>
+    </Class>
+    <Method classname="hudson.jnlp.Main$2" name="error" signature="(Ljava/lang/Throwable;)V" isStatic="false">
+      <SourceLine classname="hudson.jnlp.Main$2" start="66" end="68" startBytecode="0" endBytecode="74" sourcefile="Main.java" sourcepath="hudson/jnlp/Main.java"/>
+    </Method>
+    <SourceLine classname="hudson.jnlp.Main$2" start="67" end="67" startBytecode="11" endBytecode="11" sourcefile="Main.java" sourcepath="hudson/jnlp/Main.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="1">
+    <MissingClass>hudson.remoting.Channel</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 15 Mar 2008 08:41:17 +0200" total_classes="9" referenced_classes="302" total_bugs="2" total_size="177" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="21.53" clock_seconds="11.12" peak_mbytes="73.92" alloc_mbytes="763.88" gc_seconds="0.28" priority_2="2">
+    <PackageStats package="hudson.jnlp" total_bugs="2" total_types="9" total_size="177" priority_2="2">
+      <ClassStats class="hudson.jnlp.Engine" sourceFile="Engine.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="hudson.jnlp.GUI" sourceFile="GUI.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="hudson.jnlp.Listener" sourceFile="Listener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="hudson.jnlp.Main" sourceFile="Main.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="hudson.jnlp.Main$1" sourceFile="Main.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="hudson.jnlp.Main$1$1" sourceFile="Main.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="hudson.jnlp.Main$1$2" sourceFile="Main.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.jnlp.Main$2" sourceFile="Main.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.jnlp.MainDialog" sourceFile="MainDialog.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1758" invocations="1414" avgMicrosecondsPerInvocation="1243" maxMicrosecondsPerInvocation="133851" standardDeviationMircosecondsPerInvocation="5718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1594" invocations="302" avgMicrosecondsPerInvocation="5280" maxMicrosecondsPerInvocation="107404" standardDeviationMircosecondsPerInvocation="13198"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1031" invocations="302" avgMicrosecondsPerInvocation="3414" maxMicrosecondsPerInvocation="60942" standardDeviationMircosecondsPerInvocation="7407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="996" invocations="302" avgMicrosecondsPerInvocation="3298" maxMicrosecondsPerInvocation="93944" standardDeviationMircosecondsPerInvocation="10568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="632" invocations="669" avgMicrosecondsPerInvocation="945" maxMicrosecondsPerInvocation="165449" standardDeviationMircosecondsPerInvocation="7074"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="539" invocations="302" avgMicrosecondsPerInvocation="1787" maxMicrosecondsPerInvocation="79082" standardDeviationMircosecondsPerInvocation="6414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="267" invocations="302" avgMicrosecondsPerInvocation="886" maxMicrosecondsPerInvocation="48925" standardDeviationMircosecondsPerInvocation="3640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="252" invocations="302" avgMicrosecondsPerInvocation="837" maxMicrosecondsPerInvocation="22512" standardDeviationMircosecondsPerInvocation="1915"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="232" invocations="302" avgMicrosecondsPerInvocation="770" maxMicrosecondsPerInvocation="19548" standardDeviationMircosecondsPerInvocation="1745"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="214" invocations="1363" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="28000" standardDeviationMircosecondsPerInvocation="1159"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

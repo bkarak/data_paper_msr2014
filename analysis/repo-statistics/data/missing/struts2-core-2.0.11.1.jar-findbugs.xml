@@ -1,0 +1,1636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1204591922000" analysisTimestamp="1360516378171" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/struts/struts2-core/2.0.11.1/struts2-core-2.0.11.1.jar</Jar>
+  </Project>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="1" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.struts2.components.Autocompleter">
+      <SourceLine classname="org.apache.struts2.components.Autocompleter" start="90" end="304" sourcefile="Autocompleter.java" sourcepath="org/apache/struts2/components/Autocompleter.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.components.Autocompleter" name="disabled" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.struts2.components.Autocompleter" sourcefile="Autocompleter.java" sourcepath="org/apache/struts2/components/Autocompleter.java"/>
+    </Field>
+    <Field classname="org.apache.struts2.components.UIBean" name="disabled" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.struts2.components.UIBean" sourcefile="UIBean.java" sourcepath="org/apache/struts2/components/UIBean.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.components.Bean">
+      <SourceLine classname="org.apache.struts2.components.Bean" start="99" end="154" sourcefile="Bean.java" sourcepath="org/apache/struts2/components/Bean.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.components.Bean" name="log" signature="Lorg/apache/commons/logging/Log;" isStatic="true">
+      <SourceLine classname="org.apache.struts2.components.Bean" sourcefile="Bean.java" sourcepath="org/apache/struts2/components/Bean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.components.Bean" start="99" end="99" startBytecode="6" endBytecode="6" sourcefile="Bean.java" sourcepath="org/apache/struts2/components/Bean.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.struts2.components.Component">
+      <SourceLine classname="org.apache.struts2.components.Component" start="53" end="490" sourcefile="Component.java" sourcepath="org/apache/struts2/components/Component.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.components.Component" name="toString" signature="(Ljava/lang/Throwable;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.Component" start="425" end="430" startBytecode="0" endBytecode="118" sourcefile="Component.java" sourcepath="org/apache/struts2/components/Component.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.components.Component" start="426" end="426" startBytecode="13" endBytecode="13" sourcefile="Component.java" sourcepath="org/apache/struts2/components/Component.java"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.apache.struts2.components.Component">
+      <SourceLine classname="org.apache.struts2.components.Component" start="53" end="490" sourcefile="Component.java" sourcepath="org/apache/struts2/components/Component.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.components.Component" name="determineActionURL" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljava/util/Map;Ljava/lang/String;ZZZZ)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.Component" start="365" end="370" startBytecode="0" endBytecode="42" sourcefile="Component.java" sourcepath="org/apache/struts2/components/Component.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.components.Component" start="366" end="366" startBytecode="19" endBytecode="19" sourcefile="Component.java" sourcepath="org/apache/struts2/components/Component.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.components.Date">
+      <SourceLine classname="org.apache.struts2.components.Date" start="144" end="372" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.components.Date" name="formatTime" signature="(Lcom/opensymphony/xwork2/TextProvider;Ljava/util/Date;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.Date" start="219" end="269" startBytecode="0" endBytecode="896" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="&lt;init&gt;" signature="(J)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Long" start="660" end="662" startBytecode="0" endBytecode="41" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="valueOf" signature="(J)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Long" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.components.Date" start="233" end="233" startBytecode="122" endBytecode="122" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java"/>
+    <SourceLine classname="org.apache.struts2.components.Date" start="234" end="234" startBytecode="140" endBytecode="140" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.struts2.components.Date" start="239" end="239" startBytecode="203" endBytecode="203" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.struts2.components.Date" start="240" end="240" startBytecode="221" endBytecode="221" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.struts2.components.Date" start="245" end="245" startBytecode="284" endBytecode="284" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.struts2.components.Date" start="246" end="246" startBytecode="302" endBytecode="302" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.struts2.components.Date" start="251" end="251" startBytecode="365" endBytecode="365" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.struts2.components.Date" start="252" end="252" startBytecode="382" endBytecode="382" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.struts2.components.Date" start="257" end="257" startBytecode="439" endBytecode="439" sourcefile="Date.java" sourcepath="org/apache/struts2/components/Date.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE" priority="2" abbrev="STCAL" category="MT_CORRECTNESS">
+    <Class classname="org.apache.struts2.components.DateTimePicker">
+      <SourceLine classname="org.apache.struts2.components.DateTimePicker" start="132" end="317" sourcefile="DateTimePicker.java" sourcepath="org/apache/struts2/components/DateTimePicker.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.components.DateTimePicker" name="format" signature="(Ljava/lang/Object;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.DateTimePicker" start="293" end="317" startBytecode="0" endBytecode="282" sourcefile="DateTimePicker.java" sourcepath="org/apache/struts2/components/DateTimePicker.java"/>
+    </Method>
+    <Method classname="java.text.SimpleDateFormat" name="format" signature="(Ljava/util/Date;)Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.text.SimpleDateFormat" sourcefile="SimpleDateFormat.java" sourcepath="java/text/SimpleDateFormat.java"/>
+    </Method>
+    <Field classname="org.apache.struts2.components.DateTimePicker" name="RFC3339_FORMAT" signature="Ljava/text/SimpleDateFormat;" isStatic="true">
+      <SourceLine classname="org.apache.struts2.components.DateTimePicker" sourcefile="DateTimePicker.java" sourcepath="org/apache/struts2/components/DateTimePicker.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.components.DateTimePicker" start="297" end="297" startBytecode="20" endBytecode="20" sourcefile="DateTimePicker.java" sourcepath="org/apache/struts2/components/DateTimePicker.java"/>
+    <SourceLine classname="org.apache.struts2.components.DateTimePicker" start="302" end="302" startBytecode="48" endBytecode="48" sourcefile="DateTimePicker.java" sourcepath="org/apache/struts2/components/DateTimePicker.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.struts2.components.DateTimePicker" start="310" end="310" startBytecode="95" endBytecode="95" sourcefile="DateTimePicker.java" sourcepath="org/apache/struts2/components/DateTimePicker.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.components.Debug$DebugMapEntry">
+      <SourceLine classname="org.apache.struts2.components.Debug$DebugMapEntry" start="76" end="92" sourcefile="Debug.java" sourcepath="org/apache/struts2/components/Debug.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="org.apache.struts2.components.ElseIf">
+      <SourceLine classname="org.apache.struts2.components.ElseIf" start="68" end="106" sourcefile="ElseIf.java" sourcepath="org/apache/struts2/components/ElseIf.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.components.ElseIf" name="start" signature="(Ljava/io/Writer;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.ElseIf" start="75" end="90" startBytecode="0" endBytecode="212" sourcefile="ElseIf.java" sourcepath="org/apache/struts2/components/ElseIf.java"/>
+    </Method>
+    <Field classname="org.apache.struts2.components.ElseIf" name="answer" signature="Ljava/lang/Boolean;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.apache.struts2.components.ElseIf" sourcefile="ElseIf.java" sourcepath="org/apache/struts2/components/ElseIf.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.components.ElseIf" start="87" end="87" startBytecode="69" endBytecode="69" sourcefile="ElseIf.java" sourcepath="org/apache/struts2/components/ElseIf.java"/>
+    <SourceLine classname="org.apache.struts2.components.ElseIf" start="90" end="90" startBytecode="100" endBytecode="100" sourcefile="ElseIf.java" sourcepath="org/apache/struts2/components/ElseIf.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.apache.struts2.components.Include$PageResponse">
+      <SourceLine classname="org.apache.struts2.components.Include$PageResponse" start="360" end="408" sourcefile="Include.java" sourcepath="org/apache/struts2/components/Include.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.components.Include$PageResponse" name="outputStream" signature="Ljavax/servlet/ServletOutputStream;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.Include$PageResponse" sourcefile="Include.java" sourcepath="org/apache/struts2/components/Include.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.components.ListUIBean">
+      <SourceLine classname="org.apache.struts2.components.ListUIBean" start="56" end="151" sourcefile="ListUIBean.java" sourcepath="org/apache/struts2/components/ListUIBean.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.components.ListUIBean" name="evaluateExtraParams" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.ListUIBean" start="63" end="122" startBytecode="0" endBytecode="619" sourcefile="ListUIBean.java" sourcepath="org/apache/struts2/components/ListUIBean.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.components.ListUIBean" start="97" end="97" startBytecode="241" endBytecode="241" sourcefile="ListUIBean.java" sourcepath="org/apache/struts2/components/ListUIBean.java"/>
+    <SourceLine classname="org.apache.struts2.components.ListUIBean" start="99" end="99" startBytecode="273" endBytecode="273" sourcefile="ListUIBean.java" sourcepath="org/apache/struts2/components/ListUIBean.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.struts2.components.ListUIBean" start="101" end="101" startBytecode="307" endBytecode="307" sourcefile="ListUIBean.java" sourcepath="org/apache/struts2/components/ListUIBean.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.apache.struts2.components.Param">
+      <SourceLine classname="org.apache.struts2.components.Param" start="98" end="139" sourcefile="Param.java" sourcepath="org/apache/struts2/components/Param.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.components.Param" name="end" signature="(Ljava/io/Writer;Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.Param" start="102" end="124" startBytecode="0" endBytecode="66" sourcefile="Param.java" sourcepath="org/apache/struts2/components/Param.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.components.Param" start="110" end="110" startBytecode="73" endBytecode="73" sourcefile="Param.java" sourcepath="org/apache/struts2/components/Param.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.apache.struts2.components.Reset">
+      <SourceLine classname="org.apache.struts2.components.Reset" start="69" end="103" sourcefile="Reset.java" sourcepath="org/apache/struts2/components/Reset.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.components.Reset" name="action" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.Reset" sourcefile="Reset.java" sourcepath="org/apache/struts2/components/Reset.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.apache.struts2.components.Reset">
+      <SourceLine classname="org.apache.struts2.components.Reset" start="69" end="103" sourcefile="Reset.java" sourcepath="org/apache/struts2/components/Reset.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.components.Reset" name="align" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.Reset" sourcefile="Reset.java" sourcepath="org/apache/struts2/components/Reset.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.apache.struts2.components.Reset">
+      <SourceLine classname="org.apache.struts2.components.Reset" start="69" end="103" sourcefile="Reset.java" sourcepath="org/apache/struts2/components/Reset.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.components.Reset" name="method" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.Reset" sourcefile="Reset.java" sourcepath="org/apache/struts2/components/Reset.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.apache.struts2.components.Reset">
+      <SourceLine classname="org.apache.struts2.components.Reset" start="69" end="103" sourcefile="Reset.java" sourcepath="org/apache/struts2/components/Reset.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.components.Reset" name="type" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.Reset" sourcefile="Reset.java" sourcepath="org/apache/struts2/components/Reset.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.struts2.components.URL">
+      <SourceLine classname="org.apache.struts2.components.URL" start="123" end="420" sourcefile="URL.java" sourcepath="org/apache/struts2/components/URL.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.components.URL" name="mergeRequestParameters" signature="(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.URL" start="383" end="420" startBytecode="0" endBytecode="80" sourcefile="URL.java" sourcepath="org/apache/struts2/components/URL.java"/>
+    </Method>
+    <LocalVariable name="mergedParams" register="4" pc="42" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.struts2.components.URL" start="390" end="390" startBytecode="40" endBytecode="40" sourcefile="URL.java" sourcepath="org/apache/struts2/components/URL.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="mergedParams"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.components.table.SortFilterModel$Row">
+      <SourceLine classname="org.apache.struts2.components.table.SortFilterModel$Row" start="181" end="195" sourcefile="SortFilterModel.java" sourcepath="org/apache/struts2/components/table/SortFilterModel.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.components.table.SortFilterModel$Row" name="compareTo" signature="(Ljava/lang/Object;)I" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.table.SortFilterModel$Row" start="186" end="195" startBytecode="0" endBytecode="236" sourcefile="SortFilterModel.java" sourcepath="org/apache/struts2/components/table/SortFilterModel.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.components.table.WebTable">
+      <SourceLine classname="org.apache.struts2.components.table.WebTable" start="44" end="302" sourcefile="WebTable.java" sourcepath="org/apache/struts2/components/table/WebTable.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.components.table.WebTable" name="getColumns" signature="()[Lorg/apache/struts2/components/table/WebTableColumn;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.table.WebTable" start="177" end="177" startBytecode="0" endBytecode="46" sourcefile="WebTable.java" sourcepath="org/apache/struts2/components/table/WebTable.java"/>
+    </Method>
+    <Field classname="org.apache.struts2.components.table.WebTable" name="columns" signature="[Lorg/apache/struts2/components/table/WebTableColumn;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.components.table.WebTable" sourcefile="WebTable.java" sourcepath="org/apache/struts2/components/table/WebTable.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.components.table.WebTable" start="177" end="177" startBytecode="4" endBytecode="4" sourcefile="WebTable.java" sourcepath="org/apache/struts2/components/table/WebTable.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.components.table.WebTable$WebTableRowIterator">
+      <SourceLine classname="org.apache.struts2.components.table.WebTable$WebTableRowIterator" start="314" end="351" sourcefile="WebTable.java" sourcepath="org/apache/struts2/components/table/WebTable.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.config.BeanSelectionProvider$ObjectFactoryDelegateFactory">
+      <SourceLine classname="org.apache.struts2.config.BeanSelectionProvider$ObjectFactoryDelegateFactory" start="237" end="247" sourcefile="BeanSelectionProvider.java" sourcepath="org/apache/struts2/config/BeanSelectionProvider.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.config.ClasspathConfigurationProvider">
+      <SourceLine classname="org.apache.struts2.config.ClasspathConfigurationProvider" start="57" end="530" sourcefile="ClasspathConfigurationProvider.java" sourcepath="org/apache/struts2/config/ClasspathConfigurationProvider.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.config.ClasspathConfigurationProvider" name="&lt;init&gt;" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.config.ClasspathConfigurationProvider" start="152" end="154" startBytecode="0" endBytecode="147" sourcefile="ClasspathConfigurationProvider.java" sourcepath="org/apache/struts2/config/ClasspathConfigurationProvider.java"/>
+    </Method>
+    <Field classname="org.apache.struts2.config.ClasspathConfigurationProvider" name="packages" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.config.ClasspathConfigurationProvider" sourcefile="ClasspathConfigurationProvider.java" sourcepath="org/apache/struts2/config/ClasspathConfigurationProvider.java"/>
+    </Field>
+    <LocalVariable name="pkgs" register="1" pc="56" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.struts2.config.ClasspathConfigurationProvider" start="153" end="153" startBytecode="56" endBytecode="56" sourcefile="ClasspathConfigurationProvider.java" sourcepath="org/apache/struts2/config/ClasspathConfigurationProvider.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.config.ClasspathConfigurationProvider$ResultMap">
+      <SourceLine classname="org.apache.struts2.config.ClasspathConfigurationProvider$ResultMap" start="424" end="523" sourcefile="ClasspathConfigurationProvider.java" sourcepath="org/apache/struts2/config/ClasspathConfigurationProvider.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.config.MethodConfigurationProvider">
+      <SourceLine classname="org.apache.struts2.config.MethodConfigurationProvider" start="67" end="257" sourcefile="MethodConfigurationProvider.java" sourcepath="org/apache/struts2/config/MethodConfigurationProvider.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.config.MethodConfigurationProvider" name="loadPackages" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.config.MethodConfigurationProvider" start="101" end="123" startBytecode="0" endBytecode="395" sourcefile="MethodConfigurationProvider.java" sourcepath="org/apache/struts2/config/MethodConfigurationProvider.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.config.MethodConfigurationProvider" start="117" end="117" startBytecode="135" endBytecode="135" sourcefile="MethodConfigurationProvider.java" sourcepath="org/apache/struts2/config/MethodConfigurationProvider.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.dispatcher.ActionContextCleanUp">
+      <SourceLine classname="org.apache.struts2.dispatcher.ActionContextCleanUp" start="69" end="136" sourcefile="ActionContextCleanUp.java" sourcepath="org/apache/struts2/dispatcher/ActionContextCleanUp.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.ActionContextCleanUp" name="doFilter" signature="(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.ActionContextCleanUp" start="80" end="110" startBytecode="0" endBytecode="458" sourcefile="ActionContextCleanUp.java" sourcepath="org/apache/struts2/dispatcher/ActionContextCleanUp.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.dispatcher.ActionContextCleanUp" start="90" end="90" startBytecode="45" endBytecode="45" sourcefile="ActionContextCleanUp.java" sourcepath="org/apache/struts2/dispatcher/ActionContextCleanUp.java"/>
+    <SourceLine classname="org.apache.struts2.dispatcher.ActionContextCleanUp" start="93" end="93" startBytecode="64" endBytecode="64" sourcefile="ActionContextCleanUp.java" sourcepath="org/apache/struts2/dispatcher/ActionContextCleanUp.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.struts2.dispatcher.ActionContextCleanUp" start="103" end="103" startBytecode="120" endBytecode="120" sourcefile="ActionContextCleanUp.java" sourcepath="org/apache/struts2/dispatcher/ActionContextCleanUp.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.dispatcher.ApplicationMap$1">
+      <SourceLine classname="org.apache.struts2.dispatcher.ApplicationMap$1" start="86" end="108" sourcefile="ApplicationMap.java" sourcepath="org/apache/struts2/dispatcher/ApplicationMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.ApplicationMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.ApplicationMap$1" start="88" end="90" startBytecode="0" endBytecode="146" sourcefile="ApplicationMap.java" sourcepath="org/apache/struts2/dispatcher/ApplicationMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.dispatcher.ApplicationMap$1" start="88" end="88" startBytecode="1" endBytecode="1" sourcefile="ApplicationMap.java" sourcepath="org/apache/struts2/dispatcher/ApplicationMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="1" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.dispatcher.ApplicationMap$1">
+      <SourceLine classname="org.apache.struts2.dispatcher.ApplicationMap$1" start="86" end="108" sourcefile="ApplicationMap.java" sourcepath="org/apache/struts2/dispatcher/ApplicationMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.ApplicationMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.ApplicationMap$1" start="88" end="90" startBytecode="0" endBytecode="146" sourcefile="ApplicationMap.java" sourcepath="org/apache/struts2/dispatcher/ApplicationMap.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.dispatcher.ApplicationMap$2">
+      <SourceLine classname="org.apache.struts2.dispatcher.ApplicationMap$2" start="119" end="141" sourcefile="ApplicationMap.java" sourcepath="org/apache/struts2/dispatcher/ApplicationMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.ApplicationMap$2" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.ApplicationMap$2" start="121" end="123" startBytecode="0" endBytecode="146" sourcefile="ApplicationMap.java" sourcepath="org/apache/struts2/dispatcher/ApplicationMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.dispatcher.ApplicationMap$2" start="121" end="121" startBytecode="1" endBytecode="1" sourcefile="ApplicationMap.java" sourcepath="org/apache/struts2/dispatcher/ApplicationMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="1" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.dispatcher.ApplicationMap$2">
+      <SourceLine classname="org.apache.struts2.dispatcher.ApplicationMap$2" start="119" end="141" sourcefile="ApplicationMap.java" sourcepath="org/apache/struts2/dispatcher/ApplicationMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.ApplicationMap$2" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.ApplicationMap$2" start="121" end="123" startBytecode="0" endBytecode="146" sourcefile="ApplicationMap.java" sourcepath="org/apache/struts2/dispatcher/ApplicationMap.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.dispatcher.Dispatcher">
+      <SourceLine classname="org.apache.struts2.dispatcher.Dispatcher" start="85" end="855" sourcefile="Dispatcher.java" sourcepath="org/apache/struts2/dispatcher/Dispatcher.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.Dispatcher" name="getSaveDir" signature="(Ljavax/servlet/ServletContext;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.Dispatcher" start="617" end="638" startBytecode="0" endBytecode="240" sourcefile="Dispatcher.java" sourcepath="org/apache/struts2/dispatcher/Dispatcher.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdir" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1153" end="1157" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.dispatcher.Dispatcher" start="630" end="630" startBytecode="67" endBytecode="67" sourcefile="Dispatcher.java" sourcepath="org/apache/struts2/dispatcher/Dispatcher.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.dispatcher.Dispatcher$Locator">
+      <SourceLine classname="org.apache.struts2.dispatcher.Dispatcher$Locator" start="814" end="820" sourcefile="Dispatcher.java" sourcepath="org/apache/struts2/dispatcher/Dispatcher.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.dispatcher.Dispatcher$ServletContextPageLocator">
+      <SourceLine classname="org.apache.struts2.dispatcher.Dispatcher$ServletContextPageLocator" start="787" end="807" sourcefile="Dispatcher.java" sourcepath="org/apache/struts2/dispatcher/Dispatcher.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.struts2.dispatcher.PlainTextResult">
+      <SourceLine classname="org.apache.struts2.dispatcher.PlainTextResult" start="79" end="169" sourcefile="PlainTextResult.java" sourcepath="org/apache/struts2/dispatcher/PlainTextResult.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.PlainTextResult" name="doExecute" signature="(Ljava/lang/String;Lcom/opensymphony/xwork2/ActionInvocation;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.PlainTextResult" start="117" end="169" startBytecode="0" endBytecode="624" sourcefile="PlainTextResult.java" sourcepath="org/apache/struts2/dispatcher/PlainTextResult.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.dispatcher.PlainTextResult" start="148" end="148" startBytecode="204" endBytecode="204" sourcefile="PlainTextResult.java" sourcepath="org/apache/struts2/dispatcher/PlainTextResult.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.struts2.dispatcher.PlainTextResult">
+      <SourceLine classname="org.apache.struts2.dispatcher.PlainTextResult" start="79" end="169" sourcefile="PlainTextResult.java" sourcepath="org/apache/struts2/dispatcher/PlainTextResult.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.PlainTextResult" name="doExecute" signature="(Ljava/lang/String;Lcom/opensymphony/xwork2/ActionInvocation;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.PlainTextResult" start="117" end="169" startBytecode="0" endBytecode="624" sourcefile="PlainTextResult.java" sourcepath="org/apache/struts2/dispatcher/PlainTextResult.java"/>
+    </Method>
+    <LocalVariable name="reader" register="7" pc="209" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.struts2.dispatcher.PlainTextResult" start="150" end="150" startBytecode="211" endBytecode="211" sourcefile="PlainTextResult.java" sourcepath="org/apache/struts2/dispatcher/PlainTextResult.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.dispatcher.RequestMap$1">
+      <SourceLine classname="org.apache.struts2.dispatcher.RequestMap$1" start="80" end="102" sourcefile="RequestMap.java" sourcepath="org/apache/struts2/dispatcher/RequestMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.RequestMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.RequestMap$1" start="82" end="84" startBytecode="0" endBytecode="146" sourcefile="RequestMap.java" sourcepath="org/apache/struts2/dispatcher/RequestMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.dispatcher.RequestMap$1" start="82" end="82" startBytecode="1" endBytecode="1" sourcefile="RequestMap.java" sourcepath="org/apache/struts2/dispatcher/RequestMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="1" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.dispatcher.RequestMap$1">
+      <SourceLine classname="org.apache.struts2.dispatcher.RequestMap$1" start="80" end="102" sourcefile="RequestMap.java" sourcepath="org/apache/struts2/dispatcher/RequestMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.RequestMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.RequestMap$1" start="82" end="84" startBytecode="0" endBytecode="146" sourcefile="RequestMap.java" sourcepath="org/apache/struts2/dispatcher/RequestMap.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD" priority="2" abbrev="ML" category="MT_CORRECTNESS">
+    <Class classname="org.apache.struts2.dispatcher.SessionMap">
+      <SourceLine classname="org.apache.struts2.dispatcher.SessionMap" start="56" end="205" sourcefile="SessionMap.java" sourcepath="org/apache/struts2/dispatcher/SessionMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.SessionMap" name="invalidate" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.SessionMap" start="68" end="77" startBytecode="0" endBytecode="130" sourcefile="SessionMap.java" sourcepath="org/apache/struts2/dispatcher/SessionMap.java"/>
+    </Method>
+    <Field classname="org.apache.struts2.dispatcher.SessionMap" name="session" signature="Ljavax/servlet/http/HttpSession;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.SessionMap" sourcefile="SessionMap.java" sourcepath="org/apache/struts2/dispatcher/SessionMap.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.dispatcher.SessionMap" start="74" end="74" startBytecode="26" endBytecode="26" sourcefile="SessionMap.java" sourcepath="org/apache/struts2/dispatcher/SessionMap.java"/>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.dispatcher.SessionMap$1">
+      <SourceLine classname="org.apache.struts2.dispatcher.SessionMap$1" start="117" end="139" sourcefile="SessionMap.java" sourcepath="org/apache/struts2/dispatcher/SessionMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.SessionMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.SessionMap$1" start="119" end="121" startBytecode="0" endBytecode="146" sourcefile="SessionMap.java" sourcepath="org/apache/struts2/dispatcher/SessionMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.dispatcher.SessionMap$1" start="119" end="119" startBytecode="1" endBytecode="1" sourcefile="SessionMap.java" sourcepath="org/apache/struts2/dispatcher/SessionMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="1" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.dispatcher.SessionMap$1">
+      <SourceLine classname="org.apache.struts2.dispatcher.SessionMap$1" start="117" end="139" sourcefile="SessionMap.java" sourcepath="org/apache/struts2/dispatcher/SessionMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.SessionMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.SessionMap$1" start="119" end="121" startBytecode="0" endBytecode="146" sourcefile="SessionMap.java" sourcepath="org/apache/struts2/dispatcher/SessionMap.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.dispatcher.mapper.RestfulActionMapper">
+      <SourceLine classname="org.apache.struts2.dispatcher.mapper.RestfulActionMapper" start="65" end="128" sourcefile="RestfulActionMapper.java" sourcepath="org/apache/struts2/dispatcher/mapper/RestfulActionMapper.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.dispatcher.mapper.RestfulActionMapper" name="getUriFromActionMapping" signature="(Lorg/apache/struts2/dispatcher/mapper/ActionMapping;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.dispatcher.mapper.RestfulActionMapper" start="118" end="128" startBytecode="0" endBytecode="263" sourcefile="RestfulActionMapper.java" sourcepath="org/apache/struts2/dispatcher/mapper/RestfulActionMapper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.dispatcher.mapper.RestfulActionMapper" start="123" end="123" startBytecode="102" endBytecode="102" sourcefile="RestfulActionMapper.java" sourcepath="org/apache/struts2/dispatcher/mapper/RestfulActionMapper.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_PARAM_DEREF" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.struts2.impl.StrutsObjectFactory">
+      <SourceLine classname="org.apache.struts2.impl.StrutsObjectFactory" start="36" end="104" sourcefile="StrutsObjectFactory.java" sourcepath="org/apache/struts2/impl/StrutsObjectFactory.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.impl.StrutsObjectFactory" name="buildInterceptor" signature="(Lcom/opensymphony/xwork2/config/entities/InterceptorConfig;Ljava/util/Map;)Lcom/opensymphony/xwork2/interceptor/Interceptor;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.impl.StrutsObjectFactory" start="40" end="82" startBytecode="0" endBytecode="610" sourcefile="StrutsObjectFactory.java" sourcepath="org/apache/struts2/impl/StrutsObjectFactory.java"/>
+    </Method>
+    <Method classname="java.util.Map" name="putAll" signature="(Ljava/util/Map;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Map" sourcefile="Map.java" sourcepath="java/util/Map.java"/>
+    </Method>
+    <Int value="1" role="INT_MAYBE_NULL_ARG"/>
+    <LocalVariable name="refParams" register="2" pc="67" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.struts2.impl.StrutsObjectFactory" start="48" end="48" startBytecode="68" endBytecode="68" sourcefile="StrutsObjectFactory.java" sourcepath="org/apache/struts2/impl/StrutsObjectFactory.java" role="SOURCE_LINE_INVOKED"/>
+    <SourceLine classname="org.apache.struts2.impl.StrutsObjectFactory" start="46" end="46" startBytecode="45" endBytecode="45" sourcefile="StrutsObjectFactory.java" sourcepath="org/apache/struts2/impl/StrutsObjectFactory.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="SC_START_IN_CTOR" priority="2" abbrev="SC" category="MT_CORRECTNESS">
+    <Class classname="org.apache.struts2.interceptor.BackgroundProcess">
+      <SourceLine classname="org.apache.struts2.interceptor.BackgroundProcess" start="48" end="134" sourcefile="BackgroundProcess.java" sourcepath="org/apache/struts2/interceptor/BackgroundProcess.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.interceptor.BackgroundProcess" name="&lt;init&gt;" signature="(Ljava/lang/String;Lcom/opensymphony/xwork2/ActionInvocation;I)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.interceptor.BackgroundProcess" start="48" end="71" startBytecode="0" endBytecode="205" sourcefile="BackgroundProcess.java" sourcepath="org/apache/struts2/interceptor/BackgroundProcess.java"/>
+    </Method>
+    <Method classname="java.lang.Thread" name="start" signature="()V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Thread" start="655" end="662" startBytecode="0" endBytecode="98" sourcefile="Thread.java" sourcepath="java/lang/Thread.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.interceptor.BackgroundProcess" start="67" end="67" startBytecode="51" endBytecode="51" sourcefile="BackgroundProcess.java" sourcepath="org/apache/struts2/interceptor/BackgroundProcess.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.interceptor.FileUploadInterceptor">
+      <SourceLine classname="org.apache.struts2.interceptor.FileUploadInterceptor" start="161" end="368" sourcefile="FileUploadInterceptor.java" sourcepath="org/apache/struts2/interceptor/FileUploadInterceptor.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.interceptor.FileUploadInterceptor" name="intercept" signature="(Lcom/opensymphony/xwork2/ActionInvocation;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.interceptor.FileUploadInterceptor" start="198" end="285" startBytecode="0" endBytecode="1057" sourcefile="FileUploadInterceptor.java" sourcepath="org/apache/struts2/interceptor/FileUploadInterceptor.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.interceptor.FileUploadInterceptor" start="280" end="280" startBytecode="582" endBytecode="582" sourcefile="FileUploadInterceptor.java" sourcepath="org/apache/struts2/interceptor/FileUploadInterceptor.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.interceptor.MessageStoreInterceptor">
+      <SourceLine classname="org.apache.struts2.interceptor.MessageStoreInterceptor" start="139" end="330" sourcefile="MessageStoreInterceptor.java" sourcepath="org/apache/struts2/interceptor/MessageStoreInterceptor.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.interceptor.MessageStoreInterceptor" name="actionErrorsSessionKey" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.struts2.interceptor.MessageStoreInterceptor" sourcefile="MessageStoreInterceptor.java" sourcepath="org/apache/struts2/interceptor/MessageStoreInterceptor.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.interceptor.MessageStoreInterceptor" start="155" end="155" startBytecode="16" endBytecode="16" sourcefile="MessageStoreInterceptor.java" sourcepath="org/apache/struts2/interceptor/MessageStoreInterceptor.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.interceptor.MessageStoreInterceptor">
+      <SourceLine classname="org.apache.struts2.interceptor.MessageStoreInterceptor" start="139" end="330" sourcefile="MessageStoreInterceptor.java" sourcepath="org/apache/struts2/interceptor/MessageStoreInterceptor.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.interceptor.MessageStoreInterceptor" name="actionMessagesSessionKey" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.struts2.interceptor.MessageStoreInterceptor" sourcefile="MessageStoreInterceptor.java" sourcepath="org/apache/struts2/interceptor/MessageStoreInterceptor.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.interceptor.MessageStoreInterceptor" start="156" end="156" startBytecode="21" endBytecode="21" sourcefile="MessageStoreInterceptor.java" sourcepath="org/apache/struts2/interceptor/MessageStoreInterceptor.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.interceptor.MessageStoreInterceptor">
+      <SourceLine classname="org.apache.struts2.interceptor.MessageStoreInterceptor" start="139" end="330" sourcefile="MessageStoreInterceptor.java" sourcepath="org/apache/struts2/interceptor/MessageStoreInterceptor.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.interceptor.MessageStoreInterceptor" name="fieldErrorsSessionKey" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.struts2.interceptor.MessageStoreInterceptor" sourcefile="MessageStoreInterceptor.java" sourcepath="org/apache/struts2/interceptor/MessageStoreInterceptor.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.interceptor.MessageStoreInterceptor" start="154" end="154" startBytecode="11" endBytecode="11" sourcefile="MessageStoreInterceptor.java" sourcepath="org/apache/struts2/interceptor/MessageStoreInterceptor.java"/>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_INTERFACE" priority="2" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.interceptor.NoParameters">
+      <SourceLine classname="org.apache.struts2.interceptor.NoParameters" sourcefile="NoParameters.java" sourcepath="org/apache/struts2/interceptor/NoParameters.java"/>
+    </Class>
+    <Class classname="com.opensymphony.xwork2.interceptor.NoParameters">
+      <SourceLine classname="com.opensymphony.xwork2.interceptor.NoParameters"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="DM_BOOLEAN_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.interceptor.ScopeInterceptor">
+      <SourceLine classname="org.apache.struts2.interceptor.ScopeInterceptor" start="145" end="449" sourcefile="ScopeInterceptor.java" sourcepath="org/apache/struts2/interceptor/ScopeInterceptor.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.interceptor.ScopeInterceptor" name="setAutoCreateSession" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.interceptor.ScopeInterceptor" start="183" end="186" startBytecode="0" endBytecode="86" sourcefile="ScopeInterceptor.java" sourcepath="org/apache/struts2/interceptor/ScopeInterceptor.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.interceptor.ScopeInterceptor" start="184" end="184" startBytecode="17" endBytecode="17" sourcefile="ScopeInterceptor.java" sourcepath="org/apache/struts2/interceptor/ScopeInterceptor.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="2" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.interceptor.ScopeInterceptor$NULLClass">
+      <SourceLine classname="org.apache.struts2.interceptor.ScopeInterceptor$NULLClass" start="206" end="211" sourcefile="ScopeInterceptor.java" sourcepath="org/apache/struts2/interceptor/ScopeInterceptor.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.interceptor.ScopeInterceptor$NULLClass" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.interceptor.ScopeInterceptor$NULLClass" start="211" end="211" startBytecode="0" endBytecode="68" sourcefile="ScopeInterceptor.java" sourcepath="org/apache/struts2/interceptor/ScopeInterceptor.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.interceptor.debugging.DebuggingInterceptor">
+      <SourceLine classname="org.apache.struts2.interceptor.debugging.DebuggingInterceptor" start="85" end="385" sourcefile="DebuggingInterceptor.java" sourcepath="org/apache/struts2/interceptor/debugging/DebuggingInterceptor.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.interceptor.debugging.DebuggingInterceptor" name="serializeIt" signature="(Ljava/lang/Object;Ljava/lang/String;Lorg/apache/struts2/interceptor/debugging/PrettyPrintWriter;Ljava/util/List;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.interceptor.debugging.DebuggingInterceptor" start="304" end="377" startBytecode="0" endBytecode="858" sourcefile="DebuggingInterceptor.java" sourcepath="org/apache/struts2/interceptor/debugging/DebuggingInterceptor.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.interceptor.debugging.DebuggingInterceptor" start="339" end="339" startBytecode="198" endBytecode="198" sourcefile="DebuggingInterceptor.java" sourcepath="org/apache/struts2/interceptor/debugging/DebuggingInterceptor.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.interceptor.debugging.PrettyPrintWriter">
+      <SourceLine classname="org.apache.struts2.interceptor.debugging.PrettyPrintWriter" start="30" end="183" sourcefile="PrettyPrintWriter.java" sourcepath="org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.interceptor.debugging.PrettyPrintWriter" name="&lt;init&gt;" signature="(Ljava/io/Writer;[CLjava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.interceptor.debugging.PrettyPrintWriter" start="48" end="52" startBytecode="0" endBytecode="129" sourcefile="PrettyPrintWriter.java" sourcepath="org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java"/>
+    </Method>
+    <Field classname="org.apache.struts2.interceptor.debugging.PrettyPrintWriter" name="lineIndenter" signature="[C" isStatic="false">
+      <SourceLine classname="org.apache.struts2.interceptor.debugging.PrettyPrintWriter" sourcefile="PrettyPrintWriter.java" sourcepath="org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java"/>
+    </Field>
+    <LocalVariable name="lineIndenter" register="2" pc="29" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.struts2.interceptor.debugging.PrettyPrintWriter" start="50" end="50" startBytecode="29" endBytecode="29" sourcefile="PrettyPrintWriter.java" sourcepath="org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.portlet.PortletActionConstants">
+      <SourceLine classname="org.apache.struts2.portlet.PortletActionConstants" start="53" end="59" sourcefile="PortletActionConstants.java" sourcepath="org/apache/struts2/portlet/PortletActionConstants.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.PortletActionConstants" name="&lt;clinit&gt;" signature="()V" isStatic="true">
+      <SourceLine classname="org.apache.struts2.portlet.PortletActionConstants" start="53" end="59" startBytecode="0" endBytecode="50" sourcefile="PortletActionConstants.java" sourcepath="org/apache/struts2/portlet/PortletActionConstants.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.portlet.PortletActionConstants" start="53" end="53" startBytecode="5" endBytecode="5" sourcefile="PortletActionConstants.java" sourcepath="org/apache/struts2/portlet/PortletActionConstants.java"/>
+    <SourceLine classname="org.apache.struts2.portlet.PortletActionConstants" start="59" end="59" startBytecode="16" endBytecode="16" sourcefile="PortletActionConstants.java" sourcepath="org/apache/struts2/portlet/PortletActionConstants.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.portlet.PortletApplicationMap$1">
+      <SourceLine classname="org.apache.struts2.portlet.PortletApplicationMap$1" start="85" end="111" sourcefile="PortletApplicationMap.java" sourcepath="org/apache/struts2/portlet/PortletApplicationMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.PortletApplicationMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.portlet.PortletApplicationMap$1" start="87" end="89" startBytecode="0" endBytecode="146" sourcefile="PortletApplicationMap.java" sourcepath="org/apache/struts2/portlet/PortletApplicationMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.portlet.PortletApplicationMap$1" start="87" end="87" startBytecode="1" endBytecode="1" sourcefile="PortletApplicationMap.java" sourcepath="org/apache/struts2/portlet/PortletApplicationMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="1" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.portlet.PortletApplicationMap$1">
+      <SourceLine classname="org.apache.struts2.portlet.PortletApplicationMap$1" start="85" end="111" sourcefile="PortletApplicationMap.java" sourcepath="org/apache/struts2/portlet/PortletApplicationMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.PortletApplicationMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.portlet.PortletApplicationMap$1" start="87" end="89" startBytecode="0" endBytecode="146" sourcefile="PortletApplicationMap.java" sourcepath="org/apache/struts2/portlet/PortletApplicationMap.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.portlet.PortletApplicationMap$2">
+      <SourceLine classname="org.apache.struts2.portlet.PortletApplicationMap$2" start="122" end="148" sourcefile="PortletApplicationMap.java" sourcepath="org/apache/struts2/portlet/PortletApplicationMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.PortletApplicationMap$2" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.portlet.PortletApplicationMap$2" start="124" end="126" startBytecode="0" endBytecode="146" sourcefile="PortletApplicationMap.java" sourcepath="org/apache/struts2/portlet/PortletApplicationMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.portlet.PortletApplicationMap$2" start="124" end="124" startBytecode="1" endBytecode="1" sourcefile="PortletApplicationMap.java" sourcepath="org/apache/struts2/portlet/PortletApplicationMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="1" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.portlet.PortletApplicationMap$2">
+      <SourceLine classname="org.apache.struts2.portlet.PortletApplicationMap$2" start="122" end="148" sourcefile="PortletApplicationMap.java" sourcepath="org/apache/struts2/portlet/PortletApplicationMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.PortletApplicationMap$2" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.portlet.PortletApplicationMap$2" start="124" end="126" startBytecode="0" endBytecode="146" sourcefile="PortletApplicationMap.java" sourcepath="org/apache/struts2/portlet/PortletApplicationMap.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.portlet.PortletRequestMap$1">
+      <SourceLine classname="org.apache.struts2.portlet.PortletRequestMap$1" start="91" end="117" sourcefile="PortletRequestMap.java" sourcepath="org/apache/struts2/portlet/PortletRequestMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.PortletRequestMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.portlet.PortletRequestMap$1" start="93" end="95" startBytecode="0" endBytecode="146" sourcefile="PortletRequestMap.java" sourcepath="org/apache/struts2/portlet/PortletRequestMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.portlet.PortletRequestMap$1" start="93" end="93" startBytecode="1" endBytecode="1" sourcefile="PortletRequestMap.java" sourcepath="org/apache/struts2/portlet/PortletRequestMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="1" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.portlet.PortletRequestMap$1">
+      <SourceLine classname="org.apache.struts2.portlet.PortletRequestMap$1" start="91" end="117" sourcefile="PortletRequestMap.java" sourcepath="org/apache/struts2/portlet/PortletRequestMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.PortletRequestMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.portlet.PortletRequestMap$1" start="93" end="95" startBytecode="0" endBytecode="146" sourcefile="PortletRequestMap.java" sourcepath="org/apache/struts2/portlet/PortletRequestMap.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.portlet.PortletSessionMap$1">
+      <SourceLine classname="org.apache.struts2.portlet.PortletSessionMap$1" start="79" end="105" sourcefile="PortletSessionMap.java" sourcepath="org/apache/struts2/portlet/PortletSessionMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.PortletSessionMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.portlet.PortletSessionMap$1" start="81" end="83" startBytecode="0" endBytecode="146" sourcefile="PortletSessionMap.java" sourcepath="org/apache/struts2/portlet/PortletSessionMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.portlet.PortletSessionMap$1" start="81" end="81" startBytecode="1" endBytecode="1" sourcefile="PortletSessionMap.java" sourcepath="org/apache/struts2/portlet/PortletSessionMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="1" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.apache.struts2.portlet.PortletSessionMap$1">
+      <SourceLine classname="org.apache.struts2.portlet.PortletSessionMap$1" start="79" end="105" sourcefile="PortletSessionMap.java" sourcepath="org/apache/struts2/portlet/PortletSessionMap.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.PortletSessionMap$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.portlet.PortletSessionMap$1" start="81" end="83" startBytecode="0" endBytecode="146" sourcefile="PortletSessionMap.java" sourcepath="org/apache/struts2/portlet/PortletSessionMap.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.struts2.portlet.interceptor.PortletPreferencesInterceptor">
+      <SourceLine classname="org.apache.struts2.portlet.interceptor.PortletPreferencesInterceptor" start="82" end="102" sourcefile="PortletPreferencesInterceptor.java" sourcepath="org/apache/struts2/portlet/interceptor/PortletPreferencesInterceptor.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.interceptor.PortletPreferencesInterceptor" name="intercept" signature="(Lcom/opensymphony/xwork2/ActionInvocation;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.portlet.interceptor.PortletPreferencesInterceptor" start="87" end="102" startBytecode="0" endBytecode="33" sourcefile="PortletPreferencesInterceptor.java" sourcepath="org/apache/struts2/portlet/interceptor/PortletPreferencesInterceptor.java"/>
+    </Method>
+    <LocalVariable name="context" register="3" pc="14" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.struts2.portlet.interceptor.PortletPreferencesInterceptor" start="88" end="88" startBytecode="13" endBytecode="13" sourcefile="PortletPreferencesInterceptor.java" sourcepath="org/apache/struts2/portlet/interceptor/PortletPreferencesInterceptor.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="context"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.struts2.portlet.interceptor.PortletStateInterceptor">
+      <SourceLine classname="org.apache.struts2.portlet.interceptor.PortletStateInterceptor" start="37" end="92" sourcefile="PortletStateInterceptor.java" sourcepath="org/apache/struts2/portlet/interceptor/PortletStateInterceptor.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.interceptor.PortletStateInterceptor" name="restoreStack" signature="(Lcom/opensymphony/xwork2/ActionInvocation;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.portlet.interceptor.PortletStateInterceptor" start="70" end="89" startBytecode="0" endBytecode="51" sourcefile="PortletStateInterceptor.java" sourcepath="org/apache/struts2/portlet/interceptor/PortletStateInterceptor.java"/>
+    </Method>
+    <LocalVariable name="session" register="3" pc="39" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.struts2.portlet.interceptor.PortletStateInterceptor" start="72" end="72" startBytecode="38" endBytecode="38" sourcefile="PortletStateInterceptor.java" sourcepath="org/apache/struts2/portlet/interceptor/PortletStateInterceptor.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="session"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.portlet.util.PortletUrlHelper">
+      <SourceLine classname="org.apache.struts2.portlet.util.PortletUrlHelper" start="52" end="304" sourcefile="PortletUrlHelper.java" sourcepath="org/apache/struts2/portlet/util/PortletUrlHelper.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.util.PortletUrlHelper" name="buildResourceUrl" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.struts2.portlet.util.PortletUrlHelper" start="198" end="224" startBytecode="0" endBytecode="410" sourcefile="PortletUrlHelper.java" sourcepath="org/apache/struts2/portlet/util/PortletUrlHelper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.portlet.util.PortletUrlHelper" start="210" end="210" startBytecode="85" endBytecode="85" sourcefile="PortletUrlHelper.java" sourcepath="org/apache/struts2/portlet/util/PortletUrlHelper.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.portlet.util.PortletUrlHelper">
+      <SourceLine classname="org.apache.struts2.portlet.util.PortletUrlHelper" start="52" end="304" sourcefile="PortletUrlHelper.java" sourcepath="org/apache/struts2/portlet/util/PortletUrlHelper.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.portlet.util.PortletUrlHelper" name="ensureParamsAreStringArrays" signature="(Ljava/util/Map;)Ljava/util/Map;" isStatic="true">
+      <SourceLine classname="org.apache.struts2.portlet.util.PortletUrlHelper" start="235" end="249" startBytecode="0" endBytecode="228" sourcefile="PortletUrlHelper.java" sourcepath="org/apache/struts2/portlet/util/PortletUrlHelper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.portlet.util.PortletUrlHelper" start="241" end="241" startBytecode="50" endBytecode="50" sourcefile="PortletUrlHelper.java" sourcepath="org/apache/struts2/portlet/util/PortletUrlHelper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.util.Counter">
+      <SourceLine classname="org.apache.struts2.util.Counter" start="32" end="122" sourcefile="Counter.java" sourcepath="org/apache/struts2/util/Counter.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.util.Counter" name="next" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.util.Counter" start="117" end="117" startBytecode="0" endBytecode="53" sourcefile="Counter.java" sourcepath="org/apache/struts2/util/Counter.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="&lt;init&gt;" signature="(J)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Long" start="660" end="662" startBytecode="0" endBytecode="41" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="valueOf" signature="(J)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Long" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.util.Counter" start="117" end="117" startBytecode="8" endBytecode="8" sourcefile="Counter.java" sourcepath="org/apache/struts2/util/Counter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.util.DateFormatter">
+      <SourceLine classname="org.apache.struts2.util.DateFormatter" start="43" end="92" sourcefile="DateFormatter.java" sourcepath="org/apache/struts2/util/DateFormatter.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.util.DateFormatter" name="getDate" signature="()Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.util.DateFormatter" start="67" end="67" startBytecode="0" endBytecode="46" sourcefile="DateFormatter.java" sourcepath="org/apache/struts2/util/DateFormatter.java"/>
+    </Method>
+    <Field classname="org.apache.struts2.util.DateFormatter" name="date" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.util.DateFormatter" sourcefile="DateFormatter.java" sourcepath="org/apache/struts2/util/DateFormatter.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.util.DateFormatter" start="67" end="67" startBytecode="4" endBytecode="4" sourcefile="DateFormatter.java" sourcepath="org/apache/struts2/util/DateFormatter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.util.DateFormatter">
+      <SourceLine classname="org.apache.struts2.util.DateFormatter" start="43" end="92" sourcefile="DateFormatter.java" sourcepath="org/apache/struts2/util/DateFormatter.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.util.DateFormatter" name="setDate" signature="(Ljava/util/Date;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.util.DateFormatter" start="59" end="60" startBytecode="0" endBytecode="61" sourcefile="DateFormatter.java" sourcepath="org/apache/struts2/util/DateFormatter.java"/>
+    </Method>
+    <Field classname="org.apache.struts2.util.DateFormatter" name="date" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.util.DateFormatter" sourcefile="DateFormatter.java" sourcepath="org/apache/struts2/util/DateFormatter.java"/>
+    </Field>
+    <LocalVariable name="date" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.struts2.util.DateFormatter" start="59" end="59" startBytecode="2" endBytecode="2" sourcefile="DateFormatter.java" sourcepath="org/apache/struts2/util/DateFormatter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.struts2.util.FastByteArrayOutputStream">
+      <SourceLine classname="org.apache.struts2.util.FastByteArrayOutputStream" start="58" end="219" sourcefile="FastByteArrayOutputStream.java" sourcepath="org/apache/struts2/util/FastByteArrayOutputStream.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.util.FastByteArrayOutputStream" name="toString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.util.FastByteArrayOutputStream" start="98" end="98" startBytecode="0" endBytecode="53" sourcefile="FastByteArrayOutputStream.java" sourcepath="org/apache/struts2/util/FastByteArrayOutputStream.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.util.FastByteArrayOutputStream" start="98" end="98" startBytecode="8" endBytecode="8" sourcefile="FastByteArrayOutputStream.java" sourcepath="org/apache/struts2/util/FastByteArrayOutputStream.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.struts2.util.FastByteArrayOutputStream">
+      <SourceLine classname="org.apache.struts2.util.FastByteArrayOutputStream" start="58" end="219" sourcefile="FastByteArrayOutputStream.java" sourcepath="org/apache/struts2/util/FastByteArrayOutputStream.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.util.FastByteArrayOutputStream" name="writeTo" signature="(Ljava/io/Writer;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.util.FastByteArrayOutputStream" start="183" end="203" startBytecode="0" endBytecode="249" sourcefile="FastByteArrayOutputStream.java" sourcepath="org/apache/struts2/util/FastByteArrayOutputStream.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.util.FastByteArrayOutputStream" start="192" end="192" startBytecode="66" endBytecode="66" sourcefile="FastByteArrayOutputStream.java" sourcepath="org/apache/struts2/util/FastByteArrayOutputStream.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.struts2.util.FastByteArrayOutputStream">
+      <SourceLine classname="org.apache.struts2.util.FastByteArrayOutputStream" start="58" end="219" sourcefile="FastByteArrayOutputStream.java" sourcepath="org/apache/struts2/util/FastByteArrayOutputStream.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.util.FastByteArrayOutputStream" name="writeTo" signature="(Ljava/io/Writer;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.util.FastByteArrayOutputStream" start="183" end="203" startBytecode="0" endBytecode="249" sourcefile="FastByteArrayOutputStream.java" sourcepath="org/apache/struts2/util/FastByteArrayOutputStream.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([BII)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="568" end="574" startBytecode="0" endBytecode="84" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.util.FastByteArrayOutputStream" start="201" end="201" startBytecode="117" endBytecode="117" sourcefile="FastByteArrayOutputStream.java" sourcepath="org/apache/struts2/util/FastByteArrayOutputStream.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.util.IteratorFilterSupport$EnumerationIterator">
+      <SourceLine classname="org.apache.struts2.util.IteratorFilterSupport$EnumerationIterator" start="43" end="56" sourcefile="IteratorFilterSupport.java" sourcepath="org/apache/struts2/util/IteratorFilterSupport.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.views.JspSupportServlet">
+      <SourceLine classname="org.apache.struts2.views.JspSupportServlet" start="29" end="39" sourcefile="JspSupportServlet.java" sourcepath="org/apache/struts2/views/JspSupportServlet.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.views.JspSupportServlet" name="jspSupportServlet" signature="Lorg/apache/struts2/views/JspSupportServlet;" isStatic="true">
+      <SourceLine classname="org.apache.struts2.views.JspSupportServlet" sourcefile="JspSupportServlet.java" sourcepath="org/apache/struts2/views/JspSupportServlet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.struts2.views.JspSupportServlet">
+      <SourceLine classname="org.apache.struts2.views.JspSupportServlet" start="29" end="39" sourcefile="JspSupportServlet.java" sourcepath="org/apache/struts2/views/JspSupportServlet.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.views.JspSupportServlet" name="init" signature="(Ljavax/servlet/ServletConfig;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.JspSupportServlet" start="36" end="39" startBytecode="0" endBytecode="69" sourcefile="JspSupportServlet.java" sourcepath="org/apache/struts2/views/JspSupportServlet.java"/>
+    </Method>
+    <Field classname="org.apache.struts2.views.JspSupportServlet" name="jspSupportServlet" signature="Lorg/apache/struts2/views/JspSupportServlet;" isStatic="true">
+      <SourceLine classname="org.apache.struts2.views.JspSupportServlet" sourcefile="JspSupportServlet.java" sourcepath="org/apache/struts2/views/JspSupportServlet.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.views.JspSupportServlet" start="38" end="38" startBytecode="6" endBytecode="6" sourcefile="JspSupportServlet.java" sourcepath="org/apache/struts2/views/JspSupportServlet.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.struts2.views.freemarker.FreemarkerResult">
+      <SourceLine classname="org.apache.struts2.views.freemarker.FreemarkerResult" start="112" end="297" sourcefile="FreemarkerResult.java" sourcepath="org/apache/struts2/views/freemarker/FreemarkerResult.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.views.freemarker.FreemarkerResult" name="location" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.freemarker.FreemarkerResult" sourcefile="FreemarkerResult.java" sourcepath="org/apache/struts2/views/freemarker/FreemarkerResult.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.views.freemarker.FreemarkerResult" start="149" end="149" startBytecode="2" endBytecode="2" sourcefile="FreemarkerResult.java" sourcepath="org/apache/struts2/views/freemarker/FreemarkerResult.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.struts2.views.freemarker.PortletFreemarkerResult">
+      <SourceLine classname="org.apache.struts2.views.freemarker.PortletFreemarkerResult" start="62" end="269" sourcefile="PortletFreemarkerResult.java" sourcepath="org/apache/struts2/views/freemarker/PortletFreemarkerResult.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.views.freemarker.PortletFreemarkerResult" name="location" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.freemarker.PortletFreemarkerResult" sourcefile="PortletFreemarkerResult.java" sourcepath="org/apache/struts2/views/freemarker/PortletFreemarkerResult.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.views.freemarker.PortletFreemarkerResult" start="130" end="130" startBytecode="2" endBytecode="2" sourcefile="PortletFreemarkerResult.java" sourcepath="org/apache/struts2/views/freemarker/PortletFreemarkerResult.java"/>
+  </BugInstance>
+  <BugInstance type="IM_BAD_CHECK_FOR_ODD" priority="2" abbrev="IM" category="STYLE">
+    <Class classname="org.apache.struts2.views.jsp.IteratorStatus">
+      <SourceLine classname="org.apache.struts2.views.jsp.IteratorStatus" start="33" end="62" sourcefile="IteratorStatus.java" sourcepath="org/apache/struts2/views/jsp/IteratorStatus.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.views.jsp.IteratorStatus" name="isOdd" signature="()Z" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.jsp.IteratorStatus" start="58" end="58" startBytecode="0" endBytecode="62" sourcefile="IteratorStatus.java" sourcepath="org/apache/struts2/views/jsp/IteratorStatus.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.views.jsp.IteratorStatus" start="58" end="58" startBytecode="12" endBytecode="12" sourcefile="IteratorStatus.java" sourcepath="org/apache/struts2/views/jsp/IteratorStatus.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.struts2.views.jsp.StrutsBodyTagSupport">
+      <SourceLine classname="org.apache.struts2.views.jsp.StrutsBodyTagSupport" start="38" end="123" sourcefile="StrutsBodyTagSupport.java" sourcepath="org/apache/struts2/views/jsp/StrutsBodyTagSupport.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.views.jsp.StrutsBodyTagSupport" name="toString" signature="(Ljava/lang/Throwable;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.jsp.StrutsBodyTagSupport" start="86" end="91" startBytecode="0" endBytecode="118" sourcefile="StrutsBodyTagSupport.java" sourcepath="org/apache/struts2/views/jsp/StrutsBodyTagSupport.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.struts2.views.jsp.StrutsBodyTagSupport" start="87" end="87" startBytecode="13" endBytecode="13" sourcefile="StrutsBodyTagSupport.java" sourcepath="org/apache/struts2/views/jsp/StrutsBodyTagSupport.java"/>
+  </BugInstance>
+  <BugInstance type="BC_IMPOSSIBLE_CAST" priority="1" abbrev="BC" category="CORRECTNESS">
+    <Class classname="org.apache.struts2.views.jsp.iterator.IteratorGeneratorTag">
+      <SourceLine classname="org.apache.struts2.views.jsp.iterator.IteratorGeneratorTag" start="129" end="253" sourcefile="IteratorGeneratorTag.java" sourcepath="org/apache/struts2/views/jsp/iterator/IteratorGeneratorTag.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.views.jsp.iterator.IteratorGeneratorTag" name="doStartTag" signature="()I" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.jsp.iterator.IteratorGeneratorTag" start="185" end="245" startBytecode="0" endBytecode="147" sourcefile="IteratorGeneratorTag.java" sourcepath="org/apache/struts2/views/jsp/iterator/IteratorGeneratorTag.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/Double;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Double" start="32" end="944" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+    </Type>
+    <Type descriptor="Ljava/lang/Long;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.lang.Long" start="34" end="1146" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Type>
+    <LocalVariable name="countObj" register="4" pc="135" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.struts2.views.jsp.iterator.IteratorGeneratorTag" start="208" end="208" startBytecode="137" endBytecode="137" sourcefile="IteratorGeneratorTag.java" sourcepath="org/apache/struts2/views/jsp/iterator/IteratorGeneratorTag.java"/>
+  </BugInstance>
+  <BugInstance type="BC_IMPOSSIBLE_CAST" priority="1" abbrev="BC" category="CORRECTNESS">
+    <Class classname="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag">
+      <SourceLine classname="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag" start="152" end="287" sourcefile="SubsetIteratorTag.java" sourcepath="org/apache/struts2/views/jsp/iterator/SubsetIteratorTag.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag" name="doStartTag" signature="()I" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag" start="196" end="278" startBytecode="0" endBytecode="232" sourcefile="SubsetIteratorTag.java" sourcepath="org/apache/struts2/views/jsp/iterator/SubsetIteratorTag.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/Double;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Double" start="32" end="944" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+    </Type>
+    <Type descriptor="Ljava/lang/Long;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.lang.Long" start="34" end="1146" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Type>
+    <LocalVariable name="countObj" register="3" pc="127" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag" start="217" end="217" startBytecode="128" endBytecode="128" sourcefile="SubsetIteratorTag.java" sourcepath="org/apache/struts2/views/jsp/iterator/SubsetIteratorTag.java"/>
+  </BugInstance>
+  <BugInstance type="BC_IMPOSSIBLE_CAST" priority="1" abbrev="BC" category="CORRECTNESS">
+    <Class classname="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag">
+      <SourceLine classname="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag" start="152" end="287" sourcefile="SubsetIteratorTag.java" sourcepath="org/apache/struts2/views/jsp/iterator/SubsetIteratorTag.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag" name="doStartTag" signature="()I" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag" start="196" end="278" startBytecode="0" endBytecode="232" sourcefile="SubsetIteratorTag.java" sourcepath="org/apache/struts2/views/jsp/iterator/SubsetIteratorTag.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/Double;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Double" start="32" end="944" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+    </Type>
+    <Type descriptor="Ljava/lang/Long;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.lang.Long" start="34" end="1146" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Type>
+    <LocalVariable name="startObj" register="4" pc="289" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag" start="243" end="243" startBytecode="291" endBytecode="291" sourcefile="SubsetIteratorTag.java" sourcepath="org/apache/struts2/views/jsp/iterator/SubsetIteratorTag.java"/>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="1" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.apache.struts2.views.jsp.ui.AutocompleterTag">
+      <SourceLine classname="org.apache.struts2.views.jsp.ui.AutocompleterTag" start="34" end="176" sourcefile="AutocompleterTag.java" sourcepath="org/apache/struts2/views/jsp/ui/AutocompleterTag.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.views.jsp.ui.AutocompleterTag" name="disabled" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.apache.struts2.views.jsp.ui.AutocompleterTag" sourcefile="AutocompleterTag.java" sourcepath="org/apache/struts2/views/jsp/ui/AutocompleterTag.java"/>
+    </Field>
+    <Field classname="org.apache.struts2.views.jsp.ui.AbstractUITag" name="disabled" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.apache.struts2.views.jsp.ui.AbstractUITag" sourcefile="AbstractUITag.java" sourcepath="org/apache/struts2/views/jsp/ui/AbstractUITag.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.struts2.views.jsp.ui.table.WebTableTag">
+      <SourceLine classname="org.apache.struts2.views.jsp.ui.table.WebTableTag" start="36" end="73" sourcefile="WebTableTag.java" sourcepath="org/apache/struts2/views/jsp/ui/table/WebTableTag.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.views.jsp.ui.table.WebTableTag" name="sortColumn" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.jsp.ui.table.WebTableTag" sourcefile="WebTableTag.java" sourcepath="org/apache/struts2/views/jsp/ui/table/WebTableTag.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.views.jsp.ui.table.WebTableTag" start="72" end="72" startBytecode="2" endBytecode="2" sourcefile="WebTableTag.java" sourcepath="org/apache/struts2/views/jsp/ui/table/WebTableTag.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.views.util.ContextUtil">
+      <SourceLine classname="org.apache.struts2.views.util.ContextUtil" start="42" end="101" sourcefile="ContextUtil.java" sourcepath="org/apache/struts2/views/util/ContextUtil.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.views.util.ContextUtil" name="altSyntax" signature="Z" isStatic="true">
+      <SourceLine classname="org.apache.struts2.views.util.ContextUtil" sourcefile="ContextUtil.java" sourcepath="org/apache/struts2/views/util/ContextUtil.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.views.util.TextUtil">
+      <SourceLine classname="org.apache.struts2.views.util.TextUtil" start="26" end="241" sourcefile="TextUtil.java" sourcepath="org/apache/struts2/views/util/TextUtil.java"/>
+    </Class>
+    <Field classname="org.apache.struts2.views.util.TextUtil" name="_stringChars" signature="[[C" isStatic="true">
+      <SourceLine classname="org.apache.struts2.views.util.TextUtil" sourcefile="TextUtil.java" sourcepath="org/apache/struts2/views/util/TextUtil.java"/>
+    </Field>
+    <SourceLine classname="org.apache.struts2.views.util.TextUtil" start="34" end="34" startBytecode="6" endBytecode="6" sourcefile="TextUtil.java" sourcepath="org/apache/struts2/views/util/TextUtil.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.struts2.views.velocity.StrutsVelocityContext">
+      <SourceLine classname="org.apache.struts2.views.velocity.StrutsVelocityContext" start="30" end="113" sourcefile="StrutsVelocityContext.java" sourcepath="org/apache/struts2/views/velocity/StrutsVelocityContext.java"/>
+    </Class>
+    <Method classname="org.apache.struts2.views.velocity.StrutsVelocityContext" name="&lt;init&gt;" signature="([Lorg/apache/velocity/VelocityContext;Lcom/opensymphony/xwork2/util/ValueStack;)V" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.velocity.StrutsVelocityContext" start="41" end="44" startBytecode="0" endBytecode="88" sourcefile="StrutsVelocityContext.java" sourcepath="org/apache/struts2/views/velocity/StrutsVelocityContext.java"/>
+    </Method>
+    <Field classname="org.apache.struts2.views.velocity.StrutsVelocityContext" name="chainedContexts" signature="[Lorg/apache/velocity/VelocityContext;" isStatic="false">
+      <SourceLine classname="org.apache.struts2.views.velocity.StrutsVelocityContext" sourcefile="StrutsVelocityContext.java" sourcepath="org/apache/struts2/views/velocity/StrutsVelocityContext.java"/>
+    </Field>
+    <LocalVariable name="chainedContexts" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.struts2.views.velocity.StrutsVelocityContext" start="42" end="42" startBytecode="6" endBytecode="6" sourcefile="StrutsVelocityContext.java" sourcepath="org/apache/struts2/views/velocity/StrutsVelocityContext.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.struts2.views.xslt.MapAdapter$EntryElement">
+      <SourceLine classname="org.apache.struts2.views.xslt.MapAdapter$EntryElement" start="73" end="83" sourcefile="MapAdapter.java" sourcepath="org/apache/struts2/views/xslt/MapAdapter.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="155">
+    <MissingClass>com.opensymphony.xwork2.Action</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ActionContext</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ActionInvocation</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ActionProxy</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ActionProxyFactory</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ActionSupport</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.DefaultActionInvocation</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.DefaultActionProxy</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.DefaultActionProxyFactory</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.LocaleProvider</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ObjectFactory</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.Result</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.TestNGXWorkTestCase</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.TextProvider</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.TextProviderFactory</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ValidationAware</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ValidationAwareSupport</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.XWorkException</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.XWorkTestCase</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.Configuration</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.ConfigurationException</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.ConfigurationManager</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.ConfigurationProvider</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.RuntimeConfiguration</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.entities.ActionConfig</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.entities.InterceptorConfig</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.entities.InterceptorMapping</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.entities.PackageConfig</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.entities.ResultConfig</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.entities.ResultTypeConfig</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.config.providers.XmlConfigurationProvider</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.inject.Container</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.inject.ContainerBuilder</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.inject.Context</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.inject.Factory</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.inject.Scope</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.interceptor.AbstractInterceptor</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.interceptor.ConversionErrorInterceptor</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.interceptor.Interceptor</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.interceptor.MethodFilterInterceptor</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.interceptor.MethodFilterInterceptorUtil</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.interceptor.PreResultListener</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.ClassLoaderUtil</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.CompoundRoot</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.DomHelper</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.FileManager</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.LocalizedTextUtil</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.ObjectTypeDeterminerFactory</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.OgnlUtil</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.ResolverUtil</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.ResolverUtil$Test</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.TextParseUtil</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.TextParseUtil$ParsedValueEvaluator</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.TextUtils</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.ValueStack</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.ValueStackFactory</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.location.LocatableProperties</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.location.Location</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.location.LocationImpl</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.location.LocationUtils</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.util.profiling.UtilTimerStack</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.validator.ActionValidatorManager</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.validator.ActionValidatorManagerFactory</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.validator.FieldValidator</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.validator.ValidationInterceptor</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.validator.Validator</MissingClass>
+    <MissingClass>freemarker.cache.FileTemplateLoader</MissingClass>
+    <MissingClass>freemarker.cache.MultiTemplateLoader</MissingClass>
+    <MissingClass>freemarker.cache.URLTemplateLoader</MissingClass>
+    <MissingClass>freemarker.cache.WebappTemplateLoader</MissingClass>
+    <MissingClass>freemarker.core.CollectionAndSequence</MissingClass>
+    <MissingClass>freemarker.ext.beans.BeanModel</MissingClass>
+    <MissingClass>freemarker.ext.beans.BeansWrapper</MissingClass>
+    <MissingClass>freemarker.ext.beans.MapModel</MissingClass>
+    <MissingClass>freemarker.ext.jsp.TaglibFactory</MissingClass>
+    <MissingClass>freemarker.ext.servlet.HttpRequestHashModel</MissingClass>
+    <MissingClass>freemarker.ext.servlet.HttpRequestParametersHashModel</MissingClass>
+    <MissingClass>freemarker.ext.servlet.HttpSessionHashModel</MissingClass>
+    <MissingClass>freemarker.ext.servlet.ServletContextHashModel</MissingClass>
+    <MissingClass>freemarker.ext.util.ModelFactory</MissingClass>
+    <MissingClass>freemarker.template.Configuration</MissingClass>
+    <MissingClass>freemarker.template.DefaultObjectWrapper</MissingClass>
+    <MissingClass>freemarker.template.ObjectWrapper</MissingClass>
+    <MissingClass>freemarker.template.SimpleHash</MissingClass>
+    <MissingClass>freemarker.template.SimpleNumber</MissingClass>
+    <MissingClass>freemarker.template.SimpleSequence</MissingClass>
+    <MissingClass>freemarker.template.Template</MissingClass>
+    <MissingClass>freemarker.template.TemplateBooleanModel</MissingClass>
+    <MissingClass>freemarker.template.TemplateException</MissingClass>
+    <MissingClass>freemarker.template.TemplateExceptionHandler</MissingClass>
+    <MissingClass>freemarker.template.TemplateModel</MissingClass>
+    <MissingClass>freemarker.template.TransformControl</MissingClass>
+    <MissingClass>javax.portlet.ActionRequest</MissingClass>
+    <MissingClass>javax.portlet.ActionResponse</MissingClass>
+    <MissingClass>javax.portlet.GenericPortlet</MissingClass>
+    <MissingClass>javax.portlet.PortletConfig</MissingClass>
+    <MissingClass>javax.portlet.PortletContext</MissingClass>
+    <MissingClass>javax.portlet.PortletException</MissingClass>
+    <MissingClass>javax.portlet.PortletMode</MissingClass>
+    <MissingClass>javax.portlet.PortletRequest</MissingClass>
+    <MissingClass>javax.portlet.PortletRequestDispatcher</MissingClass>
+    <MissingClass>javax.portlet.PortletResponse</MissingClass>
+    <MissingClass>javax.portlet.PortletSession</MissingClass>
+    <MissingClass>javax.portlet.PortletURL</MissingClass>
+    <MissingClass>javax.portlet.RenderRequest</MissingClass>
+    <MissingClass>javax.portlet.RenderResponse</MissingClass>
+    <MissingClass>javax.portlet.WindowState</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletInputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequestWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponseWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.servlet.jsp.JspException</MissingClass>
+    <MissingClass>javax.servlet.jsp.JspFactory</MissingClass>
+    <MissingClass>javax.servlet.jsp.PageContext</MissingClass>
+    <MissingClass>javax.servlet.jsp.tagext.BodyContent</MissingClass>
+    <MissingClass>javax.servlet.jsp.tagext.BodyTagSupport</MissingClass>
+    <MissingClass>ognl.DefaultTypeConverter</MissingClass>
+    <MissingClass>ognl.Ognl</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.FileItem</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.FileUploadException</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.RequestContext</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.disk.DiskFileItem</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.disk.DiskFileItemFactory</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.servlet.ServletFileUpload</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.velocity.Template</MissingClass>
+    <MissingClass>org.apache.velocity.VelocityContext</MissingClass>
+    <MissingClass>org.apache.velocity.app.Velocity</MissingClass>
+    <MissingClass>org.apache.velocity.app.VelocityEngine</MissingClass>
+    <MissingClass>org.apache.velocity.context.Context</MissingClass>
+    <MissingClass>org.apache.velocity.context.InternalContextAdapter</MissingClass>
+    <MissingClass>org.apache.velocity.exception.ParseErrorException</MissingClass>
+    <MissingClass>org.apache.velocity.exception.ResourceNotFoundException</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.directive.Directive</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.parser.node.Node</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader</MissingClass>
+    <MissingClass>org.apache.velocity.tools.view.ToolboxManager</MissingClass>
+    <MissingClass>org.apache.velocity.tools.view.context.ChainedContext</MissingClass>
+    <MissingClass>org.apache.velocity.tools.view.servlet.ServletToolboxManager</MissingClass>
+    <MissingClass>org.springframework.mock.web.MockServletContext</MissingClass>
+    <MissingClass>uk.ltd.getahead.dwr.WebContext</MissingClass>
+    <MissingClass>uk.ltd.getahead.dwr.WebContextFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 4 Mar 2008 02:52:02 +0200" total_classes="483" referenced_classes="663" total_bugs="85" total_size="17288" num_packages="35" vm_version="20.4-b02-402" cpu_seconds="66.62" clock_seconds="36.40" peak_mbytes="108.53" alloc_mbytes="763.88" gc_seconds="2.15" priority_2="61" priority_1="24">
+    <PackageStats package="org.apache.struts2" total_bugs="0" total_types="7" total_size="156">
+      <ClassStats class="org.apache.struts2.RequestUtils" sourceFile="RequestUtils.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.struts2.ServletActionContext" sourceFile="ServletActionContext.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.struts2.StrutsConstants" sourceFile="StrutsConstants.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.struts2.StrutsException" sourceFile="StrutsException.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.struts2.StrutsStatics" sourceFile="StrutsStatics.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.StrutsTestCase" sourceFile="StrutsTestCase.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.struts2.TestNGStrutsTestCase" sourceFile="TestNGStrutsTestCase.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.components" total_bugs="16" total_types="65" total_size="3962" priority_2="13" priority_1="3">
+      <ClassStats class="org.apache.struts2.components.AbstractRemoteCallUIBean" sourceFile="AbstractRemoteCallUIBean.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.ActionComponent" sourceFile="ActionComponent.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.ActionError" sourceFile="ActionError.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.ActionMessage" sourceFile="ActionMessage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Anchor" sourceFile="Anchor.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.AppendIterator" sourceFile="AppendIterator.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Autocompleter" sourceFile="Autocompleter.java" interface="false" size="154" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.components.Bean" sourceFile="Bean.java" interface="false" size="36" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.components.Checkbox" sourceFile="Checkbox.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.CheckboxList" sourceFile="CheckboxList.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.ClosingUIBean" sourceFile="ClosingUIBean.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.ComboBox" sourceFile="ComboBox.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Component" sourceFile="Component.java" interface="false" size="148" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.components.Date" sourceFile="Date.java" interface="false" size="126" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.DateTimePicker" sourceFile="DateTimePicker.java" interface="false" size="132" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.Debug" sourceFile="Debug.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Debug$DebugMapEntry" sourceFile="Debug.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.Div" sourceFile="Div.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.DoubleListUIBean" sourceFile="DoubleListUIBean.java" interface="false" size="296" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.DoubleSelect" sourceFile="DoubleSelect.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Else" sourceFile="Else.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.ElseIf" sourceFile="ElseIf.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.FieldError" sourceFile="FieldError.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.File" sourceFile="File.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Form" sourceFile="Form.java" interface="false" size="199" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.FormButton" sourceFile="FormButton.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.GenericUIBean" sourceFile="GenericUIBean.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Head" sourceFile="Head.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Hidden" sourceFile="Hidden.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.I18n" sourceFile="I18n.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.I18n$1" sourceFile="I18n.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.If" sourceFile="If.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Include" sourceFile="Include.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Include$PageOutputStream" sourceFile="Include.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Include$PageResponse" sourceFile="Include.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.InputTransferSelect" sourceFile="InputTransferSelect.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.IteratorComponent" sourceFile="IteratorComponent.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Label" sourceFile="Label.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.ListUIBean" sourceFile="ListUIBean.java" interface="false" size="60" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.MergeIterator" sourceFile="MergeIterator.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.OptGroup" sourceFile="OptGroup.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.OptGroup$1" sourceFile="OptGroup.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.OptionTransferSelect" sourceFile="OptionTransferSelect.java" interface="false" size="239" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Param" sourceFile="Param.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.Param$UnnamedParametric" sourceFile="Param.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Password" sourceFile="Password.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Property" sourceFile="Property.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Push" sourceFile="Push.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Radio" sourceFile="Radio.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.RemoteUICallBean" sourceFile="RemoteUICallBean.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Reset" sourceFile="Reset.java" interface="false" size="23" bugs="4" priority_2="4"/>
+      <ClassStats class="org.apache.struts2.components.Select" sourceFile="Select.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Set" sourceFile="Set.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Submit" sourceFile="Submit.java" interface="false" size="128" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.TabbedPanel" sourceFile="TabbedPanel.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Text" sourceFile="Text.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.TextArea" sourceFile="TextArea.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.TextField" sourceFile="TextField.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Token" sourceFile="Token.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.Tree" sourceFile="Tree.java" interface="false" size="204" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.TreeNode" sourceFile="TreeNode.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.UIBean" sourceFile="UIBean.java" interface="false" size="359" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.URL" sourceFile="URL.java" interface="false" size="165" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.URL$ExtraParameterProvider" sourceFile="URL.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.UpDownSelect" sourceFile="UpDownSelect.java" interface="false" size="75" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.components.table" total_bugs="3" total_types="9" total_size="397" priority_2="3">
+      <ClassStats class="org.apache.struts2.components.table.AbstractFilterModel" sourceFile="AbstractFilterModel.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.RenderFilterModel" sourceFile="RenderFilterModel.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.SortFilterModel" sourceFile="SortFilterModel.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.SortFilterModel$1" sourceFile="SortFilterModel.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.SortFilterModel$Row" sourceFile="SortFilterModel.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.table.SortableTableModel" sourceFile="SortableTableModel.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.WebTable" sourceFile="WebTable.java" interface="false" size="156" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.table.WebTable$WebTableRowIterator" sourceFile="WebTable.java" interface="false" size="31" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.components.table.WebTableColumn" sourceFile="WebTableColumn.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.components.table.renderer" total_bugs="0" total_types="8" total_size="231">
+      <ClassStats class="org.apache.struts2.components.table.renderer.AbstractCellRenderer" sourceFile="AbstractCellRenderer.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.renderer.BooleanCellRenderer" sourceFile="BooleanCellRenderer.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.renderer.CellRenderer" sourceFile="CellRenderer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.renderer.DateCellRenderer" sourceFile="DateCellRenderer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.renderer.DefaultCellRenderer" sourceFile="DefaultCellRenderer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.renderer.FixedTextCellRenderer" sourceFile="FixedTextCellRenderer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.renderer.LinkCellRenderer" sourceFile="LinkCellRenderer.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.table.renderer.NumericCellRenderer" sourceFile="NumericCellRenderer.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.components.template" total_bugs="0" total_types="12" total_size="346">
+      <ClassStats class="org.apache.struts2.components.template.BaseTemplateEngine" sourceFile="BaseTemplateEngine.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.FreemarkerTemplateEngine" sourceFile="FreemarkerTemplateEngine.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.FreemarkerTemplateEngine$1" sourceFile="FreemarkerTemplateEngine.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.JspTemplateEngine" sourceFile="JspTemplateEngine.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.Template" sourceFile="Template.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.TemplateEngine" sourceFile="TemplateEngine.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.TemplateEngineManager" sourceFile="TemplateEngineManager.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.TemplateEngineManager$1" sourceFile="TemplateEngineManager.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.TemplateEngineManager$EngineFactory" sourceFile="TemplateEngineManager.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.TemplateEngineManager$LazyEngineFactory" sourceFile="TemplateEngineManager.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.TemplateRenderingContext" sourceFile="TemplateRenderingContext.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.struts2.components.template.VelocityTemplateEngine" sourceFile="VelocityTemplateEngine.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.config" total_bugs="4" total_types="23" total_size="725" priority_2="4">
+      <ClassStats class="org.apache.struts2.config.BeanSelectionProvider" sourceFile="BeanSelectionProvider.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.BeanSelectionProvider$ObjectFactoryDelegateFactory" sourceFile="BeanSelectionProvider.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.config.ClasspathConfigurationProvider" sourceFile="ClasspathConfigurationProvider.java" interface="false" size="135" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.config.ClasspathConfigurationProvider$1" sourceFile="ClasspathConfigurationProvider.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.ClasspathConfigurationProvider$ClasspathPageLocator" sourceFile="ClasspathConfigurationProvider.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.ClasspathConfigurationProvider$PageLocator" sourceFile="ClasspathConfigurationProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.ClasspathConfigurationProvider$ResultMap" sourceFile="ClasspathConfigurationProvider.java" interface="false" size="60" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.config.DefaultPropertiesProvider" sourceFile="DefaultPropertiesProvider.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.DefaultSettings" sourceFile="DefaultSettings.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.DelegatingSettings" sourceFile="DelegatingSettings.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.LegacyPropertiesConfigurationProvider" sourceFile="LegacyPropertiesConfigurationProvider.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.LegacyPropertiesConfigurationProvider$1" sourceFile="LegacyPropertiesConfigurationProvider.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.MethodConfigurationProvider" sourceFile="MethodConfigurationProvider.java" interface="false" size="94" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.config.Namespace" sourceFile="Namespace.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.NullResult" sourceFile="NullResult.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.ParentPackage" sourceFile="ParentPackage.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.PropertiesSettings" sourceFile="PropertiesSettings.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.Result" sourceFile="Result.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.Results" sourceFile="Results.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.ServletContextSingleton" sourceFile="ServletContextSingleton.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.Settings" sourceFile="Settings.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.StrutsXmlConfigurationProvider" sourceFile="StrutsXmlConfigurationProvider.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.struts2.config.StrutsXmlConfigurationProvider$1" sourceFile="StrutsXmlConfigurationProvider.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.dispatcher" total_bugs="15" total_types="26" total_size="1276" priority_2="10" priority_1="5">
+      <ClassStats class="org.apache.struts2.dispatcher.ActionContextCleanUp" sourceFile="ActionContextCleanUp.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.dispatcher.ApplicationMap" sourceFile="ApplicationMap.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.ApplicationMap$1" sourceFile="ApplicationMap.java" interface="false" size="18" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.dispatcher.ApplicationMap$2" sourceFile="ApplicationMap.java" interface="false" size="18" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.dispatcher.DefaultActionSupport" sourceFile="DefaultActionSupport.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.Dispatcher" sourceFile="Dispatcher.java" interface="false" size="314" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.dispatcher.Dispatcher$1" sourceFile="Dispatcher.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.Dispatcher$Locator" sourceFile="Dispatcher.java" interface="false" size="9" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.dispatcher.Dispatcher$ServletContextPageLocator" sourceFile="Dispatcher.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.dispatcher.DispatcherListener" sourceFile="DispatcherListener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.FilterDispatcher" sourceFile="FilterDispatcher.java" interface="false" size="173" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.FilterDispatcherCompatWeblogic61" sourceFile="FilterDispatcherCompatWeblogic61.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.HttpHeaderResult" sourceFile="HttpHeaderResult.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.PlainTextResult" sourceFile="PlainTextResult.java" interface="false" size="48" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.dispatcher.RequestMap" sourceFile="RequestMap.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.RequestMap$1" sourceFile="RequestMap.java" interface="false" size="18" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.dispatcher.ServletActionRedirectResult" sourceFile="ServletActionRedirectResult.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.ServletDispatcherResult" sourceFile="ServletDispatcherResult.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.ServletRedirectResult" sourceFile="ServletRedirectResult.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.SessionMap" sourceFile="SessionMap.java" interface="false" size="68" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.dispatcher.SessionMap$1" sourceFile="SessionMap.java" interface="false" size="18" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.dispatcher.StreamResult" sourceFile="StreamResult.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.StrutsRequestWrapper" sourceFile="StrutsRequestWrapper.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.StrutsResultSupport" sourceFile="StrutsResultSupport.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.StrutsResultSupport$1" sourceFile="StrutsResultSupport.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.VelocityResult" sourceFile="VelocityResult.java" interface="false" size="66" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.dispatcher.mapper" total_bugs="1" total_types="13" total_size="427" priority_2="1">
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.ActionMapper" sourceFile="ActionMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.ActionMapping" sourceFile="ActionMapping.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.CompositeActionMapper" sourceFile="CompositeActionMapper.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.DefaultActionMapper" sourceFile="DefaultActionMapper.java" interface="false" size="148" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.DefaultActionMapper$1" sourceFile="DefaultActionMapper.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.DefaultActionMapper$2" sourceFile="DefaultActionMapper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.DefaultActionMapper$2$1" sourceFile="DefaultActionMapper.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.DefaultActionMapper$2$2" sourceFile="DefaultActionMapper.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.DefaultActionMapper$2$3" sourceFile="DefaultActionMapper.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.DefaultActionMapper$2$4" sourceFile="DefaultActionMapper.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.DefaultActionMapper$ParameterAction" sourceFile="DefaultActionMapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.Restful2ActionMapper" sourceFile="Restful2ActionMapper.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.mapper.RestfulActionMapper" sourceFile="RestfulActionMapper.java" interface="false" size="41" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.dispatcher.multipart" total_bugs="0" total_types="4" total_size="209">
+      <ClassStats class="org.apache.struts2.dispatcher.multipart.JakartaMultiPartRequest" sourceFile="JakartaMultiPartRequest.java" interface="false" size="115" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.multipart.JakartaMultiPartRequest$1" sourceFile="JakartaMultiPartRequest.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.multipart.MultiPartRequest" sourceFile="MultiPartRequest.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.struts2.dispatcher.multipart.MultiPartRequestWrapper" sourceFile="MultiPartRequestWrapper.java" interface="false" size="70" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.impl" total_bugs="1" total_types="3" total_size="57" priority_2="1">
+      <ClassStats class="org.apache.struts2.impl.StrutsActionProxy" sourceFile="StrutsActionProxy.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.struts2.impl.StrutsActionProxyFactory" sourceFile="StrutsActionProxyFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.struts2.impl.StrutsObjectFactory" sourceFile="StrutsObjectFactory.java" interface="false" size="36" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.interceptor" total_bugs="8" total_types="27" total_size="827" priority_2="5" priority_1="3">
+      <ClassStats class="org.apache.struts2.interceptor.ApplicationAware" sourceFile="ApplicationAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.BackgroundProcess" sourceFile="BackgroundProcess.java" interface="false" size="33" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.interceptor.BackgroundProcess$1" sourceFile="BackgroundProcess.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.CheckboxInterceptor" sourceFile="CheckboxInterceptor.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.CookieInterceptor" sourceFile="CookieInterceptor.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.CookiesAware" sourceFile="CookiesAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.CreateSessionInterceptor" sourceFile="CreateSessionInterceptor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.ExecuteAndWaitInterceptor" sourceFile="ExecuteAndWaitInterceptor.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.FileUploadInterceptor" sourceFile="FileUploadInterceptor.java" interface="false" size="114" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.interceptor.MessageStoreInterceptor" sourceFile="MessageStoreInterceptor.java" interface="false" size="106" bugs="3" priority_1="3"/>
+      <ClassStats class="org.apache.struts2.interceptor.NoParameters" sourceFile="NoParameters.java" interface="true" size="1" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.interceptor.ParameterAware" sourceFile="ParameterAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.PrincipalAware" sourceFile="PrincipalAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.PrincipalProxy" sourceFile="PrincipalProxy.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.ProfilingActivationInterceptor" sourceFile="ProfilingActivationInterceptor.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.RequestAware" sourceFile="RequestAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.RolesInterceptor" sourceFile="RolesInterceptor.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.ScopeInterceptor" sourceFile="ScopeInterceptor.java" interface="false" size="171" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.interceptor.ScopeInterceptor$1" sourceFile="ScopeInterceptor.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.ScopeInterceptor$NULLClass" sourceFile="ScopeInterceptor.java" interface="false" size="8" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.interceptor.ServletConfigInterceptor" sourceFile="ServletConfigInterceptor.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.ServletRequestAware" sourceFile="ServletRequestAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.ServletResponseAware" sourceFile="ServletResponseAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.SessionAware" sourceFile="SessionAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.StrutsConversionErrorInterceptor" sourceFile="StrutsConversionErrorInterceptor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.TokenInterceptor" sourceFile="TokenInterceptor.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.TokenSessionStoreInterceptor" sourceFile="TokenSessionStoreInterceptor.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.interceptor.debugging" total_bugs="2" total_types="4" total_size="313" priority_2="2">
+      <ClassStats class="org.apache.struts2.interceptor.debugging.DebuggingInterceptor" sourceFile="DebuggingInterceptor.java" interface="false" size="150" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.interceptor.debugging.DebuggingInterceptor$1" sourceFile="DebuggingInterceptor.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.debugging.DebuggingInterceptor$2" sourceFile="DebuggingInterceptor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.debugging.PrettyPrintWriter" sourceFile="PrettyPrintWriter.java" interface="false" size="132" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.interceptor.validation" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="org.apache.struts2.interceptor.validation.AnnotationValidationInterceptor" sourceFile="AnnotationValidationInterceptor.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.struts2.interceptor.validation.SkipValidation" sourceFile="SkipValidation.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.portlet" total_bugs="9" total_types="8" total_size="247" priority_2="5" priority_1="4">
+      <ClassStats class="org.apache.struts2.portlet.PortletActionConstants" sourceFile="PortletActionConstants.java" interface="true" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.portlet.PortletApplicationMap" sourceFile="PortletApplicationMap.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.PortletApplicationMap$1" sourceFile="PortletApplicationMap.java" interface="false" size="18" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.portlet.PortletApplicationMap$2" sourceFile="PortletApplicationMap.java" interface="false" size="18" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.portlet.PortletRequestMap" sourceFile="PortletRequestMap.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.PortletRequestMap$1" sourceFile="PortletRequestMap.java" interface="false" size="18" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.portlet.PortletSessionMap" sourceFile="PortletSessionMap.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.PortletSessionMap$1" sourceFile="PortletSessionMap.java" interface="false" size="18" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.portlet.context" total_bugs="0" total_types="1" total_size="43">
+      <ClassStats class="org.apache.struts2.portlet.context.PortletActionContext" sourceFile="PortletActionContext.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.portlet.dispatcher" total_bugs="0" total_types="2" total_size="213">
+      <ClassStats class="org.apache.struts2.portlet.dispatcher.DirectRenderFromEventAction" sourceFile="DirectRenderFromEventAction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher" sourceFile="Jsr168Dispatcher.java" interface="false" size="200" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.portlet.interceptor" total_bugs="2" total_types="9" total_size="149" priority_2="2">
+      <ClassStats class="org.apache.struts2.portlet.interceptor.PortletAwareInterceptor" sourceFile="PortletAwareInterceptor.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.interceptor.PortletContextAware" sourceFile="PortletContextAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.interceptor.PortletPreferencesAware" sourceFile="PortletPreferencesAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.interceptor.PortletPreferencesInterceptor" sourceFile="PortletPreferencesInterceptor.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.portlet.interceptor.PortletPrincipalProxy" sourceFile="PortletPrincipalProxy.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.interceptor.PortletRequestAware" sourceFile="PortletRequestAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.interceptor.PortletResponseAware" sourceFile="PortletResponseAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.interceptor.PortletStateInterceptor" sourceFile="PortletStateInterceptor.java" interface="false" size="40" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.portlet.interceptor.ServletPortletPreferences" sourceFile="ServletPortletPreferences.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.portlet.result" total_bugs="0" total_types="5" total_size="252">
+      <ClassStats class="org.apache.struts2.portlet.result.PortletActionRedirectResult" sourceFile="PortletActionRedirectResult.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.result.PortletResult" sourceFile="PortletResult.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.result.PortletResult$1" sourceFile="PortletResult.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.result.PortletResult$IncludeTemplate" sourceFile="PortletResult.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.result.PortletVelocityResult" sourceFile="PortletVelocityResult.java" interface="false" size="78" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.portlet.servlet" total_bugs="0" total_types="8" total_size="459">
+      <ClassStats class="org.apache.struts2.portlet.servlet.PortletHttpSession" sourceFile="PortletHttpSession.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.servlet.PortletServletConfig" sourceFile="PortletServletConfig.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.servlet.PortletServletContext" sourceFile="PortletServletContext.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.servlet.PortletServletInputStream" sourceFile="PortletServletInputStream.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.servlet.PortletServletOutputStream" sourceFile="PortletServletOutputStream.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.servlet.PortletServletRequest" sourceFile="PortletServletRequest.java" interface="false" size="156" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.servlet.PortletServletRequestDispatcher" sourceFile="PortletServletRequestDispatcher.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.struts2.portlet.servlet.PortletServletResponse" sourceFile="PortletServletResponse.java" interface="false" size="101" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.portlet.util" total_bugs="2" total_types="1" total_size="142" priority_2="2">
+      <ClassStats class="org.apache.struts2.portlet.util.PortletUrlHelper" sourceFile="PortletUrlHelper.java" interface="false" size="142" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.servlet.interceptor" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="org.apache.struts2.servlet.interceptor.ServletPrincipalProxy" sourceFile="ServletPrincipalProxy.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.util" total_bugs="7" total_types="38" total_size="1093" priority_2="4" priority_1="3">
+      <ClassStats class="org.apache.struts2.util.AppendIteratorFilter" sourceFile="AppendIteratorFilter.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.AttributeMap" sourceFile="AttributeMap.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.ClassLoaderUtils" sourceFile="ClassLoaderUtils.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.ContainUtil" sourceFile="ContainUtil.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.Counter" sourceFile="Counter.java" interface="false" size="60" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.util.DateFormatter" sourceFile="DateFormatter.java" interface="false" size="41" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.struts2.util.FastByteArrayOutputStream" sourceFile="FastByteArrayOutputStream.java" interface="false" size="103" bugs="3" priority_1="3"/>
+      <ClassStats class="org.apache.struts2.util.InvocationSessionStore" sourceFile="InvocationSessionStore.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.InvocationSessionStore$InvocationContext" sourceFile="InvocationSessionStore.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.IteratorFilterSupport" sourceFile="IteratorFilterSupport.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.IteratorFilterSupport$EnumerationIterator" sourceFile="IteratorFilterSupport.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.util.IteratorGenerator" sourceFile="IteratorGenerator.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.IteratorGenerator$Converter" sourceFile="IteratorGenerator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.ListEntry" sourceFile="ListEntry.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.MakeIterator" sourceFile="MakeIterator.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.MergeIteratorFilter" sourceFile="MergeIteratorFilter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.ObjectFactoryDestroyable" sourceFile="ObjectFactoryDestroyable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.PrefixTrie" sourceFile="PrefixTrie.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.PrefixTrie$Node" sourceFile="PrefixTrie.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.ServletContextAware" sourceFile="ServletContextAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.SortIteratorFilter" sourceFile="SortIteratorFilter.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.Sorter" sourceFile="Sorter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.Sorter$1" sourceFile="Sorter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.Sorter$2" sourceFile="Sorter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.Sorter$3" sourceFile="Sorter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.Sorter$4" sourceFile="Sorter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.StrutsTestCaseHelper" sourceFile="StrutsTestCaseHelper.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.StrutsTypeConverter" sourceFile="StrutsTypeConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.StrutsUtil" sourceFile="StrutsUtil.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.StrutsUtil$ResponseWrapper" sourceFile="StrutsUtil.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.StrutsUtil$ServletOutputStreamWrapper" sourceFile="StrutsUtil.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.SubsetIteratorFilter" sourceFile="SubsetIteratorFilter.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.SubsetIteratorFilter$Decider" sourceFile="SubsetIteratorFilter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.TabbedPane" sourceFile="TabbedPane.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.Timer" sourceFile="Timer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.TokenHelper" sourceFile="TokenHelper.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.URLBean" sourceFile="URLBean.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.struts2.util.VelocityStrutsUtil" sourceFile="VelocityStrutsUtil.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.validators" total_bugs="0" total_types="3" total_size="53">
+      <ClassStats class="org.apache.struts2.validators.DWRValidator" sourceFile="DWRValidator.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.struts2.validators.DWRValidator$ValidatorActionInvocation" sourceFile="DWRValidator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.validators.DWRValidator$ValidatorActionProxy" sourceFile="DWRValidator.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views" total_bugs="2" total_types="3" total_size="20" priority_2="1" priority_1="1">
+      <ClassStats class="org.apache.struts2.views.DefaultTagLibrary" sourceFile="DefaultTagLibrary.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.JspSupportServlet" sourceFile="JspSupportServlet.java" interface="false" size="9" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.views.TagLibrary" sourceFile="TagLibrary.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.annotations" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="org.apache.struts2.views.annotations.StrutsTag" sourceFile="StrutsTag.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.annotations.StrutsTagAttribute" sourceFile="StrutsTagAttribute.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.freemarker" total_bugs="2" total_types="8" total_size="357" priority_2="2">
+      <ClassStats class="org.apache.struts2.views.freemarker.FreemarkerManager" sourceFile="FreemarkerManager.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.FreemarkerResult" sourceFile="FreemarkerResult.java" interface="false" size="78" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.PortletFreemarkerResult" sourceFile="PortletFreemarkerResult.java" interface="false" size="80" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.ScopesHashModel" sourceFile="ScopesHashModel.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.StrutsBeanWrapper" sourceFile="StrutsBeanWrapper.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.StrutsBeanWrapper$FriendlyMapModel" sourceFile="StrutsBeanWrapper.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.StrutsBeanWrapper$FriendlyMapModel$1" sourceFile="StrutsBeanWrapper.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.StrutsClassTemplateLoader" sourceFile="StrutsClassTemplateLoader.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.freemarker.tags" total_bugs="0" total_types="51" total_size="648">
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.ActionErrorModel" sourceFile="ActionErrorModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.ActionMessageModel" sourceFile="ActionMessageModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.ActionModel" sourceFile="ActionModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.AnchorModel" sourceFile="AnchorModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.AutocompleterModel" sourceFile="AutocompleterModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.BeanModel" sourceFile="BeanModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.CallbackWriter" sourceFile="CallbackWriter.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.CheckboxListModel" sourceFile="CheckboxListModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.CheckboxModel" sourceFile="CheckboxModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.ComboBoxModel" sourceFile="ComboBoxModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.ComponentModel" sourceFile="ComponentModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.DateModel" sourceFile="DateModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.DateTimePickerModel" sourceFile="DateTimePickerModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.DivModel" sourceFile="DivModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.DoubleSelectModel" sourceFile="DoubleSelectModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.ElseIfModel" sourceFile="ElseIfModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.ElseModel" sourceFile="ElseModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.FieldErrorModel" sourceFile="FieldErrorModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.FileModel" sourceFile="FileModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.FormModel" sourceFile="FormModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.HeadModel" sourceFile="HeadModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.HiddenModel" sourceFile="HiddenModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.I18nModel" sourceFile="I18nModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.IfModel" sourceFile="IfModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.IncludeModel" sourceFile="IncludeModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.InputTransferSelectModel" sourceFile="InputTransferSelectModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.IteratorModel" sourceFile="IteratorModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.LabelModel" sourceFile="LabelModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.OptGroupModel" sourceFile="OptGroupModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.OptionTransferSelectModel" sourceFile="OptionTransferSelectModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.ParamModel" sourceFile="ParamModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.PasswordModel" sourceFile="PasswordModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.PropertyModel" sourceFile="PropertyModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.PushModel" sourceFile="PushModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.RadioModel" sourceFile="RadioModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.ResetModel" sourceFile="ResetModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.SelectModel" sourceFile="SelectModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.SetModel" sourceFile="SetModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.StrutsModels" sourceFile="StrutsModels.java" interface="false" size="254" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.SubmitModel" sourceFile="SubmitModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.TabbedPanelModel" sourceFile="TabbedPanelModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.TagModel" sourceFile="TagModel.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.TextAreaModel" sourceFile="TextAreaModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.TextFieldModel" sourceFile="TextFieldModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.TextModel" sourceFile="TextModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.TokenModel" sourceFile="TokenModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.TreeModel" sourceFile="TreeModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.TreeNodeModel" sourceFile="TreeNodeModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.URLModel" sourceFile="URLModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.UpDownSelectModel" sourceFile="UpDownSelectModel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.freemarker.tags.WebTableModel" sourceFile="WebTableModel.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.jsp" total_bugs="2" total_types="20" total_size="496" priority_2="1" priority_1="1">
+      <ClassStats class="org.apache.struts2.views.jsp.ActionTag" sourceFile="ActionTag.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.BeanTag" sourceFile="BeanTag.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ComponentTagSupport" sourceFile="ComponentTagSupport.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.DateTag" sourceFile="DateTag.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ElseIfTag" sourceFile="ElseIfTag.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ElseTag" sourceFile="ElseTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.I18nTag" sourceFile="I18nTag.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.IfTag" sourceFile="IfTag.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.IncludeTag" sourceFile="IncludeTag.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.IteratorStatus" sourceFile="IteratorStatus.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.views.jsp.IteratorStatus$StatusState" sourceFile="IteratorStatus.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.IteratorTag" sourceFile="IteratorTag.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ParamTag" sourceFile="ParamTag.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.PropertyTag" sourceFile="PropertyTag.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.PushTag" sourceFile="PushTag.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.SetTag" sourceFile="SetTag.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.StrutsBodyTagSupport" sourceFile="StrutsBodyTagSupport.java" interface="false" size="46" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.views.jsp.TagUtils" sourceFile="TagUtils.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.TextTag" sourceFile="TextTag.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.URLTag" sourceFile="URLTag.java" interface="false" size="84" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.jsp.iterator" total_bugs="3" total_types="5" total_size="198" priority_1="3">
+      <ClassStats class="org.apache.struts2.views.jsp.iterator.AppendIteratorTag" sourceFile="AppendIteratorTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.iterator.IteratorGeneratorTag" sourceFile="IteratorGeneratorTag.java" interface="false" size="67" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.views.jsp.iterator.MergeIteratorTag" sourceFile="MergeIteratorTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.iterator.SortIteratorTag" sourceFile="SortIteratorTag.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.iterator.SubsetIteratorTag" sourceFile="SubsetIteratorTag.java" interface="false" size="82" bugs="2" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.jsp.ui" total_bugs="1" total_types="40" total_size="1941" priority_1="1">
+      <ClassStats class="org.apache.struts2.views.jsp.ui.AbstractClosingTag" sourceFile="AbstractClosingTag.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.AbstractDoubleListTag" sourceFile="AbstractDoubleListTag.java" interface="false" size="240" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.AbstractListTag" sourceFile="AbstractListTag.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.AbstractRemoteCallUITag" sourceFile="AbstractRemoteCallUITag.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.AbstractRequiredListTag" sourceFile="AbstractRequiredListTag.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.AbstractUITag" sourceFile="AbstractUITag.java" interface="false" size="168" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.ActionErrorTag" sourceFile="ActionErrorTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.ActionMessageTag" sourceFile="ActionMessageTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.AnchorTag" sourceFile="AnchorTag.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.AutocompleterTag" sourceFile="AutocompleterTag.java" interface="false" size="117" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.CheckboxListTag" sourceFile="CheckboxListTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.CheckboxTag" sourceFile="CheckboxTag.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.ComboBoxTag" sourceFile="ComboBoxTag.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.ComponentTag" sourceFile="ComponentTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.DateTimePickerTag" sourceFile="DateTimePickerTag.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.DebugTag" sourceFile="DebugTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.DivTag" sourceFile="DivTag.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.DoubleSelectTag" sourceFile="DoubleSelectTag.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.FieldErrorTag" sourceFile="FieldErrorTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.FileTag" sourceFile="FileTag.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.FormTag" sourceFile="FormTag.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.HeadTag" sourceFile="HeadTag.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.HiddenTag" sourceFile="HiddenTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.InputTransferSelectTag" sourceFile="InputTransferSelectTag.java" interface="false" size="115" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.LabelTag" sourceFile="LabelTag.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.OgnlTool" sourceFile="OgnlTool.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.OptGroupTag" sourceFile="OptGroupTag.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.OptionTransferSelectTag" sourceFile="OptionTransferSelectTag.java" interface="false" size="199" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.PasswordTag" sourceFile="PasswordTag.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.RadioTag" sourceFile="RadioTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.ResetTag" sourceFile="ResetTag.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.SelectTag" sourceFile="SelectTag.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.SubmitTag" sourceFile="SubmitTag.java" interface="false" size="115" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.TabbedPanelTag" sourceFile="TabbedPanelTag.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.TextFieldTag" sourceFile="TextFieldTag.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.TextareaTag" sourceFile="TextareaTag.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.TokenTag" sourceFile="TokenTag.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.TreeNodeTag" sourceFile="TreeNodeTag.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.TreeTag" sourceFile="TreeTag.java" interface="false" size="194" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.jsp.ui.UpDownSelectTag" sourceFile="UpDownSelectTag.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.jsp.ui.table" total_bugs="1" total_types="1" total_size="30" priority_2="1">
+      <ClassStats class="org.apache.struts2.views.jsp.ui.table.WebTableTag" sourceFile="WebTableTag.java" interface="false" size="30" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.util" total_bugs="2" total_types="4" total_size="343" priority_2="2">
+      <ClassStats class="org.apache.struts2.views.util.ContextUtil" sourceFile="ContextUtil.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.views.util.ResourceUtil" sourceFile="ResourceUtil.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.util.TextUtil" sourceFile="TextUtil.java" interface="false" size="136" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.views.util.UrlHelper" sourceFile="UrlHelper.java" interface="false" size="163" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.velocity" total_bugs="1" total_types="3" total_size="296" priority_2="1">
+      <ClassStats class="org.apache.struts2.views.velocity.StrutsResourceLoader" sourceFile="StrutsResourceLoader.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.StrutsVelocityContext" sourceFile="StrutsVelocityContext.java" interface="false" size="54" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.views.velocity.VelocityManager" sourceFile="VelocityManager.java" interface="false" size="231" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.velocity.components" total_bugs="0" total_types="45" total_size="358">
+      <ClassStats class="org.apache.struts2.views.velocity.components.AbstractDirective" sourceFile="AbstractDirective.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.ActionDirective" sourceFile="ActionDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.ActionErrorDirective" sourceFile="ActionErrorDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.ActionMessageDirective" sourceFile="ActionMessageDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.AnchorDirective" sourceFile="AnchorDirective.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.AutocompleterDirective" sourceFile="AutocompleterDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.BeanDirective" sourceFile="BeanDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.CheckBoxDirective" sourceFile="CheckBoxDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.CheckBoxListDirective" sourceFile="CheckBoxListDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.ComboBoxDirective" sourceFile="ComboBoxDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.ComponentDirective" sourceFile="ComponentDirective.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.DateDirective" sourceFile="DateDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.DateTimePickerDirective" sourceFile="DateTimePickerDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.DivDirective" sourceFile="DivDirective.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.DoubleSelectDirective" sourceFile="DoubleSelectDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.FieldErrorDirective" sourceFile="FieldErrorDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.FileDirective" sourceFile="FileDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.FormDirective" sourceFile="FormDirective.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.HeadDirective" sourceFile="HeadDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.HiddenDirective" sourceFile="HiddenDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.I18nDirective" sourceFile="I18nDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.IncludeDirective" sourceFile="IncludeDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.InputTransferSelectDirective" sourceFile="InputTransferSelectDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.LabelDirective" sourceFile="LabelDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.OptGroupDirective" sourceFile="OptGroupDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.OptionTransferSelectDirective" sourceFile="OptionTransferSelectDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.ParamDirective" sourceFile="ParamDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.PasswordDirective" sourceFile="PasswordDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.PropertyDirective" sourceFile="PropertyDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.PushDirective" sourceFile="PushDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.RadioDirective" sourceFile="RadioDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.ResetDirective" sourceFile="ResetDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.SelectDirective" sourceFile="SelectDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.SetDirective" sourceFile="SetDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.SubmitDirective" sourceFile="SubmitDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.TabbedPanelDirective" sourceFile="TabbedPanelDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.TextAreaDirective" sourceFile="TextAreaDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.TextDirective" sourceFile="TextDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.TextFieldDirective" sourceFile="TextFieldDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.TokenDirective" sourceFile="TokenDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.TreeDirective" sourceFile="TreeDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.TreeNodeDirective" sourceFile="TreeNodeDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.URLDirective" sourceFile="URLDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.UpDownSelectDirective" sourceFile="UpDownSelectDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.velocity.components.WebTableDirective" sourceFile="WebTableDirective.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.struts2.views.xslt" total_bugs="1" total_types="22" total_size="973" priority_2="1">
+      <ClassStats class="org.apache.struts2.views.xslt.AbstractAdapterElement" sourceFile="AbstractAdapterElement.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.AbstractAdapterNode" sourceFile="AbstractAdapterNode.java" interface="false" size="162" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.AbstractAdapterNode$1" sourceFile="AbstractAdapterNode.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.AdapterFactory" sourceFile="AdapterFactory.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.AdapterNode" sourceFile="AdapterNode.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.ArrayAdapter" sourceFile="ArrayAdapter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.BeanAdapter" sourceFile="BeanAdapter.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.CollectionAdapter" sourceFile="CollectionAdapter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.MapAdapter" sourceFile="MapAdapter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.MapAdapter$EntryElement" sourceFile="MapAdapter.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.struts2.views.xslt.ProxyAttrAdapter" sourceFile="ProxyAttrAdapter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.ProxyElementAdapter" sourceFile="ProxyElementAdapter.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.ProxyNamedNodeMap" sourceFile="ProxyNamedNodeMap.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.ProxyNodeAdapter" sourceFile="ProxyNodeAdapter.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.ProxyTextNodeAdapter" sourceFile="ProxyTextNodeAdapter.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.ServletURIResolver" sourceFile="ServletURIResolver.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.SimpleAdapterDocument" sourceFile="SimpleAdapterDocument.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.SimpleAdapterDocument$1" sourceFile="SimpleAdapterDocument.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.SimpleNodeList" sourceFile="SimpleNodeList.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.SimpleTextNode" sourceFile="SimpleTextNode.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.StringAdapter" sourceFile="StringAdapter.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.struts2.views.xslt.XSLTResult" sourceFile="XSLTResult.java" interface="false" size="120" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2164" invocations="1548" avgMicrosecondsPerInvocation="1398" maxMicrosecondsPerInvocation="70440" standardDeviationMircosecondsPerInvocation="4997"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="2131" invocations="3375" avgMicrosecondsPerInvocation="631" maxMicrosecondsPerInvocation="94255" standardDeviationMircosecondsPerInvocation="3835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1991" invocations="3370" avgMicrosecondsPerInvocation="591" maxMicrosecondsPerInvocation="101983" standardDeviationMircosecondsPerInvocation="3737"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1798" invocations="3364" avgMicrosecondsPerInvocation="534" maxMicrosecondsPerInvocation="61642" standardDeviationMircosecondsPerInvocation="2508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1637" invocations="663" avgMicrosecondsPerInvocation="2469" maxMicrosecondsPerInvocation="162412" standardDeviationMircosecondsPerInvocation="9259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1563" invocations="3438" avgMicrosecondsPerInvocation="454" maxMicrosecondsPerInvocation="77766" standardDeviationMircosecondsPerInvocation="2983"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1492" invocations="663" avgMicrosecondsPerInvocation="2250" maxMicrosecondsPerInvocation="127076" standardDeviationMircosecondsPerInvocation="7643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1459" invocations="3402" avgMicrosecondsPerInvocation="429" maxMicrosecondsPerInvocation="59894" standardDeviationMircosecondsPerInvocation="2362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1319" invocations="2000" avgMicrosecondsPerInvocation="659" maxMicrosecondsPerInvocation="208638" standardDeviationMircosecondsPerInvocation="5495"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="1047" invocations="3375" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="69871" standardDeviationMircosecondsPerInvocation="2320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="756" invocations="663" avgMicrosecondsPerInvocation="1141" maxMicrosecondsPerInvocation="75757" standardDeviationMircosecondsPerInvocation="4841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="633" invocations="3995" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="24968" standardDeviationMircosecondsPerInvocation="877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="550" invocations="663" avgMicrosecondsPerInvocation="830" maxMicrosecondsPerInvocation="43252" standardDeviationMircosecondsPerInvocation="3789"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="449" invocations="483" avgMicrosecondsPerInvocation="930" maxMicrosecondsPerInvocation="47905" standardDeviationMircosecondsPerInvocation="3381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="427" invocations="3473" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="85430" standardDeviationMircosecondsPerInvocation="1649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="389" invocations="663" avgMicrosecondsPerInvocation="587" maxMicrosecondsPerInvocation="24214" standardDeviationMircosecondsPerInvocation="2314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="376" invocations="3375" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="34697" standardDeviationMircosecondsPerInvocation="913"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="369" invocations="663" avgMicrosecondsPerInvocation="556" maxMicrosecondsPerInvocation="54305" standardDeviationMircosecondsPerInvocation="2805"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="356" invocations="3343" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="134837" standardDeviationMircosecondsPerInvocation="2446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="351" invocations="663" avgMicrosecondsPerInvocation="530" maxMicrosecondsPerInvocation="50379" standardDeviationMircosecondsPerInvocation="2687"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="350" invocations="43903" avgMicrosecondsPerInvocation="7" maxMicrosecondsPerInvocation="19682" standardDeviationMircosecondsPerInvocation="187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="342" invocations="483" avgMicrosecondsPerInvocation="708" maxMicrosecondsPerInvocation="43862" standardDeviationMircosecondsPerInvocation="2821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="338" invocations="3364" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="82641" standardDeviationMircosecondsPerInvocation="1578"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="320" invocations="871" avgMicrosecondsPerInvocation="368" maxMicrosecondsPerInvocation="46409" standardDeviationMircosecondsPerInvocation="2025"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="312" invocations="481" avgMicrosecondsPerInvocation="649" maxMicrosecondsPerInvocation="87682" standardDeviationMircosecondsPerInvocation="4718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="299" invocations="483" avgMicrosecondsPerInvocation="620" maxMicrosecondsPerInvocation="160179" standardDeviationMircosecondsPerInvocation="7335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="285" invocations="482" avgMicrosecondsPerInvocation="592" maxMicrosecondsPerInvocation="81473" standardDeviationMircosecondsPerInvocation="4120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="284" invocations="482" avgMicrosecondsPerInvocation="590" maxMicrosecondsPerInvocation="20640" standardDeviationMircosecondsPerInvocation="1515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="281" invocations="483" avgMicrosecondsPerInvocation="583" maxMicrosecondsPerInvocation="73638" standardDeviationMircosecondsPerInvocation="3940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="274" invocations="1312" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="24887" standardDeviationMircosecondsPerInvocation="1076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="260" invocations="483" avgMicrosecondsPerInvocation="540" maxMicrosecondsPerInvocation="34652" standardDeviationMircosecondsPerInvocation="2484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="252" invocations="483" avgMicrosecondsPerInvocation="522" maxMicrosecondsPerInvocation="25459" standardDeviationMircosecondsPerInvocation="2116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="249" invocations="483" avgMicrosecondsPerInvocation="517" maxMicrosecondsPerInvocation="33213" standardDeviationMircosecondsPerInvocation="2394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="236" invocations="483" avgMicrosecondsPerInvocation="490" maxMicrosecondsPerInvocation="28090" standardDeviationMircosecondsPerInvocation="1542"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="227" invocations="1552" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="19887" standardDeviationMircosecondsPerInvocation="776"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1272536834000" analysisTimestamp="1360867342353" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/servicemix/specs/org.apache.servicemix.specs.jsr303-api-1.0.0/1.5.0/org.apache.servicemix.specs.jsr303-api-1.0.0-1.5.0.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="javax.validation.Validation$DefaultValidationProviderResolver">
+      <SourceLine classname="javax.validation.Validation$DefaultValidationProviderResolver" start="291" end="380" sourcefile="Validation.java" sourcepath="javax/validation/Validation.java"/>
+    </Class>
+    <Method classname="javax.validation.Validation$DefaultValidationProviderResolver" name="getValidationProviders" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="javax.validation.Validation$DefaultValidationProviderResolver" start="303" end="363" startBytecode="0" endBytecode="786" sourcefile="Validation.java" sourcepath="javax/validation/Validation.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="javax.validation.Validation$DefaultValidationProviderResolver" start="322" end="322" startBytecode="108" endBytecode="108" sourcefile="Validation.java" sourcepath="javax/validation/Validation.java"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="javax.validation.Validation$DefaultValidationProviderResolver">
+      <SourceLine classname="javax.validation.Validation$DefaultValidationProviderResolver" start="291" end="380" sourcefile="Validation.java" sourcepath="javax/validation/Validation.java"/>
+    </Class>
+    <Method classname="javax.validation.Validation$DefaultValidationProviderResolver" name="getValidationProviders" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="javax.validation.Validation$DefaultValidationProviderResolver" start="303" end="363" startBytecode="0" endBytecode="165" sourcefile="Validation.java" sourcepath="javax/validation/Validation.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/Reader;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.Reader" start="49" end="232" sourcefile="Reader.java" sourcepath="java/io/Reader.java"/>
+    </Type>
+    <SourceLine classname="javax.validation.Validation$DefaultValidationProviderResolver" start="322" end="322" startBytecode="98" endBytecode="98" sourcefile="Validation.java" sourcepath="javax/validation/Validation.java"/>
+  </BugInstance>
+  <BugInstance type="DMI_BLOCKING_METHODS_ON_URL" priority="1" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader">
+      <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="131" end="174" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="171" end="174" startBytecode="0" endBytecode="83" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+    </Method>
+    <Method classname="java.net.URL" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.net.URL" start="838" end="842" startBytecode="0" endBytecode="59" sourcefile="URL.java" sourcepath="java/net/URL.java"/>
+    </Method>
+    <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="172" end="172" startBytecode="18" endBytecode="18" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+  </BugInstance>
+  <BugInstance type="DMI_BLOCKING_METHODS_ON_URL" priority="1" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader">
+      <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="131" end="174" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" name="hashCode" signature="()I" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="166" end="166" startBytecode="0" endBytecode="49" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+    </Method>
+    <Method classname="java.net.URL" name="hashCode" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.net.URL" start="854" end="858" startBytecode="0" endBytecode="65" sourcefile="URL.java" sourcepath="java/net/URL.java"/>
+    </Method>
+    <SourceLine classname="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" start="166" end="166" startBytecode="4" endBytecode="4" sourcefile="Activator.java" sourcepath="org/apache/servicemix/specs/locator/Activator.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.BundleEvent</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 29 Apr 2010 13:27:14 +0300" total_classes="79" referenced_classes="138" total_bugs="4" total_size="630" num_packages="7" vm_version="20.4-b02-402" cpu_seconds="19.67" clock_seconds="16.00" peak_mbytes="58.05" alloc_mbytes="763.88" gc_seconds="0.14" priority_2="1" priority_1="3">
+    <PackageStats package="javax.validation" total_bugs="2" total_types="37" total_size="314" priority_2="1" priority_1="1">
+      <ClassStats class="javax.validation.Configuration" sourceFile="Configuration.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="javax.validation.Constraint" sourceFile="Constraint.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintDeclarationException" sourceFile="ConstraintDeclarationException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintDefinitionException" sourceFile="ConstraintDefinitionException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintValidator" sourceFile="ConstraintValidator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintValidatorContext" sourceFile="ConstraintValidatorContext.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintValidatorContext$ConstraintViolationBuilder" sourceFile="ConstraintValidatorContext.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintValidatorContext$ConstraintViolationBuilder$NodeBuilderCustomizableContext" sourceFile="ConstraintValidatorContext.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintValidatorContext$ConstraintViolationBuilder$NodeBuilderDefinedContext" sourceFile="ConstraintValidatorContext.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintValidatorContext$ConstraintViolationBuilder$NodeContextBuilder" sourceFile="ConstraintValidatorContext.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintValidatorFactory" sourceFile="ConstraintValidatorFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintViolation" sourceFile="ConstraintViolation.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="javax.validation.ConstraintViolationException" sourceFile="ConstraintViolationException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="javax.validation.GroupDefinitionException" sourceFile="GroupDefinitionException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.validation.GroupSequence" sourceFile="GroupSequence.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.MessageInterpolator" sourceFile="MessageInterpolator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.validation.MessageInterpolator$Context" sourceFile="MessageInterpolator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.validation.OverridesAttribute" sourceFile="OverridesAttribute.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.validation.OverridesAttribute$List" sourceFile="OverridesAttribute.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.Path" sourceFile="Path.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.validation.Path$Node" sourceFile="Path.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.validation.Payload" sourceFile="Payload.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.validation.ReportAsSingleViolation" sourceFile="ReportAsSingleViolation.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.validation.TraversableResolver" sourceFile="TraversableResolver.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.validation.UnexpectedTypeException" sourceFile="UnexpectedTypeException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.validation.Valid" sourceFile="Valid.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.validation.Validation" sourceFile="Validation.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.validation.Validation$1" sourceFile="Validation.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="javax.validation.Validation$DefaultValidationProviderResolver" sourceFile="Validation.java" interface="false" size="56" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="javax.validation.Validation$GenericBootstrapImpl" sourceFile="Validation.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="javax.validation.Validation$GetClassLoader" sourceFile="Validation.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.validation.Validation$ProviderSpecificBootstrapImpl" sourceFile="Validation.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="javax.validation.ValidationException" sourceFile="ValidationException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.validation.ValidationProviderResolver" sourceFile="ValidationProviderResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.Validator" sourceFile="Validator.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.validation.ValidatorContext" sourceFile="ValidatorContext.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.validation.ValidatorFactory" sourceFile="ValidatorFactory.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.validation.bootstrap" total_bugs="0" total_types="2" total_size="6">
+      <ClassStats class="javax.validation.bootstrap.GenericBootstrap" sourceFile="GenericBootstrap.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.validation.bootstrap.ProviderSpecificBootstrap" sourceFile="ProviderSpecificBootstrap.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.validation.constraints" total_bugs="0" total_types="27" total_size="115">
+      <ClassStats class="javax.validation.constraints.AssertFalse" sourceFile="AssertFalse.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.AssertFalse$List" sourceFile="AssertFalse.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.AssertTrue" sourceFile="AssertTrue.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.AssertTrue$List" sourceFile="AssertTrue.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.DecimalMax" sourceFile="DecimalMax.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.DecimalMax$List" sourceFile="DecimalMax.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.DecimalMin" sourceFile="DecimalMin.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.DecimalMin$List" sourceFile="DecimalMin.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Digits" sourceFile="Digits.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Digits$List" sourceFile="Digits.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Future" sourceFile="Future.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Future$List" sourceFile="Future.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Max" sourceFile="Max.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Max$List" sourceFile="Max.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Min" sourceFile="Min.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Min$List" sourceFile="Min.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.NotNull" sourceFile="NotNull.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.NotNull$List" sourceFile="NotNull.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Null" sourceFile="Null.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Null$List" sourceFile="Null.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Past" sourceFile="Past.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Past$List" sourceFile="Past.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Pattern" sourceFile="Pattern.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Pattern$Flag" sourceFile="Pattern.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Pattern$List" sourceFile="Pattern.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Size" sourceFile="Size.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.validation.constraints.Size$List" sourceFile="Size.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.validation.groups" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="javax.validation.groups.Default" sourceFile="Default.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.validation.metadata" total_bugs="0" total_types="6" total_size="37">
+      <ClassStats class="javax.validation.metadata.BeanDescriptor" sourceFile="BeanDescriptor.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.validation.metadata.ConstraintDescriptor" sourceFile="ConstraintDescriptor.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.validation.metadata.ElementDescriptor" sourceFile="ElementDescriptor.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.validation.metadata.ElementDescriptor$ConstraintFinder" sourceFile="ElementDescriptor.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.validation.metadata.PropertyDescriptor" sourceFile="PropertyDescriptor.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.validation.metadata.Scope" sourceFile="Scope.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.validation.spi" total_bugs="0" total_types="3" total_size="14">
+      <ClassStats class="javax.validation.spi.BootstrapState" sourceFile="BootstrapState.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.validation.spi.ConfigurationState" sourceFile="ConfigurationState.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.validation.spi.ValidationProvider" sourceFile="ValidationProvider.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.servicemix.specs.locator" total_bugs="2" total_types="3" total_size="143" priority_1="2">
+      <ClassStats class="org.apache.servicemix.specs.locator.Activator" sourceFile="Activator.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.specs.locator.Activator$BundleFactoryLoader" sourceFile="Activator.java" interface="false" size="34" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.servicemix.specs.locator.OsgiLocator" sourceFile="OsgiLocator.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2235" invocations="530" avgMicrosecondsPerInvocation="4218" maxMicrosecondsPerInvocation="249527" standardDeviationMircosecondsPerInvocation="18307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="934" invocations="138" avgMicrosecondsPerInvocation="6771" maxMicrosecondsPerInvocation="79609" standardDeviationMircosecondsPerInvocation="16878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="886" invocations="78" avgMicrosecondsPerInvocation="11369" maxMicrosecondsPerInvocation="223716" standardDeviationMircosecondsPerInvocation="31577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="805" invocations="77" avgMicrosecondsPerInvocation="10457" maxMicrosecondsPerInvocation="179920" standardDeviationMircosecondsPerInvocation="32461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="675" invocations="138" avgMicrosecondsPerInvocation="4894" maxMicrosecondsPerInvocation="97082" standardDeviationMircosecondsPerInvocation="14497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="528" invocations="74" avgMicrosecondsPerInvocation="7139" maxMicrosecondsPerInvocation="127322" standardDeviationMircosecondsPerInvocation="22612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="521" invocations="74" avgMicrosecondsPerInvocation="7047" maxMicrosecondsPerInvocation="232071" standardDeviationMircosecondsPerInvocation="27512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="493" invocations="72" avgMicrosecondsPerInvocation="6856" maxMicrosecondsPerInvocation="119670" standardDeviationMircosecondsPerInvocation="17815"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="448" invocations="138" avgMicrosecondsPerInvocation="3249" maxMicrosecondsPerInvocation="75558" standardDeviationMircosecondsPerInvocation="9946"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="350" invocations="72" avgMicrosecondsPerInvocation="4873" maxMicrosecondsPerInvocation="118869" standardDeviationMircosecondsPerInvocation="16371"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="332" invocations="138" avgMicrosecondsPerInvocation="2406" maxMicrosecondsPerInvocation="79764" standardDeviationMircosecondsPerInvocation="8341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="314" invocations="69" avgMicrosecondsPerInvocation="4559" maxMicrosecondsPerInvocation="100192" standardDeviationMircosecondsPerInvocation="15754"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="298" invocations="211" avgMicrosecondsPerInvocation="1412" maxMicrosecondsPerInvocation="35947" standardDeviationMircosecondsPerInvocation="3595"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="267" invocations="482" avgMicrosecondsPerInvocation="554" maxMicrosecondsPerInvocation="115645" standardDeviationMircosecondsPerInvocation="5490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="246" invocations="79" avgMicrosecondsPerInvocation="3119" maxMicrosecondsPerInvocation="207811" standardDeviationMircosecondsPerInvocation="23259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="219" invocations="239" avgMicrosecondsPerInvocation="918" maxMicrosecondsPerInvocation="155270" standardDeviationMircosecondsPerInvocation="10199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="179" invocations="138" avgMicrosecondsPerInvocation="1302" maxMicrosecondsPerInvocation="29184" standardDeviationMircosecondsPerInvocation="4438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="164" invocations="72" avgMicrosecondsPerInvocation="2278" maxMicrosecondsPerInvocation="111914" standardDeviationMircosecondsPerInvocation="13132"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="162" invocations="79" avgMicrosecondsPerInvocation="2052" maxMicrosecondsPerInvocation="119100" standardDeviationMircosecondsPerInvocation="13743"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="147" invocations="158" avgMicrosecondsPerInvocation="935" maxMicrosecondsPerInvocation="31129" standardDeviationMircosecondsPerInvocation="3352"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="138" invocations="9108" avgMicrosecondsPerInvocation="15" maxMicrosecondsPerInvocation="8597" standardDeviationMircosecondsPerInvocation="163"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

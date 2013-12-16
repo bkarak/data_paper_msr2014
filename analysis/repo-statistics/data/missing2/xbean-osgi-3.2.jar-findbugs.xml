@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1191833004000" analysisTimestamp="1360894388662" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/xbean/xbean-osgi/3.2/xbean-osgi-3.2.jar</Jar>
+  </Project>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.xbean.osgi.MavenBundleManager">
+      <SourceLine classname="org.apache.xbean.osgi.MavenBundleManager" start="48" end="227" sourcefile="MavenBundleManager.java" sourcepath="org/apache/xbean/osgi/MavenBundleManager.java"/>
+    </Class>
+    <Method classname="org.apache.xbean.osgi.MavenBundleManager" name="createExportList" signature="(Ljava/lang/String;)Ljava/lang/StringBuffer;" isStatic="true">
+      <SourceLine classname="org.apache.xbean.osgi.MavenBundleManager" start="193" end="227" startBytecode="0" endBytecode="98" sourcefile="MavenBundleManager.java" sourcepath="org/apache/xbean/osgi/MavenBundleManager.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.apache.xbean.osgi.MavenBundleManager" start="197" end="197" startBytecode="19" endBytecode="19" sourcefile="MavenBundleManager.java" sourcepath="org/apache/xbean/osgi/MavenBundleManager.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="2">
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 8 Oct 2007 11:43:24 +0300" total_classes="5" referenced_classes="81" total_bugs="1" total_size="194" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="14.22" clock_seconds="7.36" peak_mbytes="58.72" alloc_mbytes="763.88" gc_seconds="0.11" priority_2="1">
+    <PackageStats package="org.apache.xbean.osgi" total_bugs="1" total_types="5" total_size="194" priority_2="1">
+      <ClassStats class="org.apache.xbean.osgi.Artifact" sourceFile="Artifact.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.xbean.osgi.BundleClassLoader" sourceFile="BundleClassLoader.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.xbean.osgi.Dependency" sourceFile="Dependency.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.xbean.osgi.MavenBundleManager" sourceFile="MavenBundleManager.java" interface="false" size="121" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.xbean.osgi.Project" sourceFile="Project.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="787" invocations="579" avgMicrosecondsPerInvocation="1359" maxMicrosecondsPerInvocation="100753" standardDeviationMircosecondsPerInvocation="5877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="640" invocations="81" avgMicrosecondsPerInvocation="7908" maxMicrosecondsPerInvocation="71903" standardDeviationMircosecondsPerInvocation="14442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="538" invocations="81" avgMicrosecondsPerInvocation="6644" maxMicrosecondsPerInvocation="82822" standardDeviationMircosecondsPerInvocation="13419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="445" invocations="81" avgMicrosecondsPerInvocation="5495" maxMicrosecondsPerInvocation="112774" standardDeviationMircosecondsPerInvocation="14546"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="218" invocations="239" avgMicrosecondsPerInvocation="915" maxMicrosecondsPerInvocation="9625" standardDeviationMircosecondsPerInvocation="1194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="211" invocations="81" avgMicrosecondsPerInvocation="2610" maxMicrosecondsPerInvocation="108645" standardDeviationMircosecondsPerInvocation="12114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="196" invocations="535" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="85217" standardDeviationMircosecondsPerInvocation="3704"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="168" invocations="26" avgMicrosecondsPerInvocation="6488" maxMicrosecondsPerInvocation="47340" standardDeviationMircosecondsPerInvocation="12487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="159" invocations="582" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="100155" standardDeviationMircosecondsPerInvocation="4144"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="151" invocations="81" avgMicrosecondsPerInvocation="1874" maxMicrosecondsPerInvocation="20209" standardDeviationMircosecondsPerInvocation="3477"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="145" invocations="26" avgMicrosecondsPerInvocation="5587" maxMicrosecondsPerInvocation="69630" standardDeviationMircosecondsPerInvocation="13650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="144" invocations="27" avgMicrosecondsPerInvocation="5339" maxMicrosecondsPerInvocation="32854" standardDeviationMircosecondsPerInvocation="8684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="137" invocations="27" avgMicrosecondsPerInvocation="5094" maxMicrosecondsPerInvocation="29687" standardDeviationMircosecondsPerInvocation="7805"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="135" invocations="26" avgMicrosecondsPerInvocation="5223" maxMicrosecondsPerInvocation="42088" standardDeviationMircosecondsPerInvocation="9823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="113" invocations="81" avgMicrosecondsPerInvocation="1398" maxMicrosecondsPerInvocation="16527" standardDeviationMircosecondsPerInvocation="2529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="103" invocations="26" avgMicrosecondsPerInvocation="3965" maxMicrosecondsPerInvocation="45042" standardDeviationMircosecondsPerInvocation="9459"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1270231728000" analysisTimestamp="1360875790852" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/directory/daemon/daemon-bootstrappers/1.1.8/daemon-bootstrappers-1.1.8.jar</Jar>
+  </Project>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.directory.daemon.AvailablePortFinder">
+      <SourceLine classname="org.apache.directory.daemon.AvailablePortFinder" start="55" end="202" sourcefile="AvailablePortFinder.java" sourcepath="org/apache/directory/daemon/AvailablePortFinder.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.AvailablePortFinder" name="getAvailablePorts" signature="(II)Ljava/util/Set;" isStatic="true">
+      <SourceLine classname="org.apache.directory.daemon.AvailablePortFinder" start="167" end="202" startBytecode="0" endBytecode="452" sourcefile="AvailablePortFinder.java" sourcepath="org/apache/directory/daemon/AvailablePortFinder.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.AvailablePortFinder" start="181" end="181" startBytecode="86" endBytecode="86" sourcefile="AvailablePortFinder.java" sourcepath="org/apache/directory/daemon/AvailablePortFinder.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="sendShutdownCommand" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="230" end="271" startBytecode="0" endBytecode="439" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="238" end="238" startBytecode="45" endBytecode="45" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="waitForShutdown" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="281" end="424" startBytecode="0" endBytecode="1132" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="290" end="290" startBytecode="102" endBytecode="102" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="callDestroy" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="201" end="212" startBytecode="0" endBytecode="162" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="209" end="209" startBytecode="61" endBytecode="61" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="callInit" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="131" end="162" startBytecode="0" endBytecode="362" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="139" end="139" startBytecode="60" endBytecode="60" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="149" end="149" startBytecode="113" endBytecode="113" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="159" end="159" startBytecode="175" endBytecode="175" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="callStart" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="167" end="178" startBytecode="0" endBytecode="164" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="175" end="175" startBytecode="63" endBytecode="63" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="callStop" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="183" end="196" startBytecode="0" endBytecode="185" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="193" end="193" startBytecode="70" endBytecode="70" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="setInstallationLayout" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="82" end="106" startBytecode="0" endBytecode="304" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="104" end="104" startBytecode="147" endBytecode="147" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="waitForShutdown" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="281" end="424" startBytecode="0" endBytecode="1132" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="313" end="313" startBytecode="157" endBytecode="157" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="326" end="326" startBytecode="251" endBytecode="251" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="350" end="350" startBytecode="331" endBytecode="331" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="setParentLoader" signature="(Ljava/lang/ClassLoader;)V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="111" end="125" startBytecode="0" endBytecode="221" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <Class classname="java.net.URLClassLoader">
+      <SourceLine classname="java.net.URLClassLoader" start="58" end="602" sourcefile="URLClassLoader.java" sourcepath="java/net/URLClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="113" end="113" startBytecode="14" endBytecode="14" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="setInstallationLayout" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="82" end="106" startBytecode="0" endBytecode="304" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="97" end="97" startBytecode="81" endBytecode="81" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="98" end="98" startBytecode="87" endBytecode="87" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="99" end="99" startBytecode="97" endBytecode="97" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="105" end="105" startBytecode="107" endBytecode="107" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="106" end="106" startBytecode="150" endBytecode="150" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="setInstallationLayout" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="82" end="106" startBytecode="0" endBytecode="64" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="97" end="97" startBytecode="70" endBytecode="70" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.Bootstrapper">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="53" end="424" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper" name="waitForShutdown" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="281" end="424" startBytecode="0" endBytecode="1132" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="288" end="288" startBytecode="89" endBytecode="89" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper" start="422" end="422" startBytecode="578" endBytecode="578" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.Bootstrapper$1">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper$1" start="298" end="307" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.Bootstrapper$1" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.Bootstrapper$1" start="301" end="307" startBytecode="0" endBytecode="133" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.Bootstrapper$1" start="304" end="304" startBytecode="28" endBytecode="28" sourcefile="Bootstrapper.java" sourcepath="org/apache/directory/daemon/Bootstrapper.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.directory.daemon.InstallationLayout">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="41" end="417" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.InstallationLayout" name="getAllJars" signature="()[Ljava/net/URL;" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="398" end="417" startBytecode="0" endBytecode="192" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Method>
+    <Field classname="org.apache.directory.daemon.InstallationLayout" name="allJars" signature="[Ljava/net/URL;" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Field>
+    <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="417" end="417" startBytecode="84" endBytecode="84" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.directory.daemon.InstallationLayout">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="41" end="417" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.InstallationLayout" name="getDependentJars" signature="()[Ljava/net/URL;" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="342" end="367" startBytecode="0" endBytecode="219" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Method>
+    <Field classname="org.apache.directory.daemon.InstallationLayout" name="dependentJars" signature="[Ljava/net/URL;" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Field>
+    <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="367" end="367" startBytecode="103" endBytecode="103" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.directory.daemon.InstallationLayout">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="41" end="417" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.InstallationLayout" name="getExtensionJars" signature="()[Ljava/net/URL;" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="373" end="392" startBytecode="0" endBytecode="214" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Method>
+    <Field classname="org.apache.directory.daemon.InstallationLayout" name="extensionJars" signature="[Ljava/net/URL;" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Field>
+    <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="392" end="392" startBytecode="98" endBytecode="98" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.InstallationLayout">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="41" end="417" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.InstallationLayout" name="mkdirs" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="331" end="337" startBytecode="0" endBytecode="99" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.InstallationLayout" start="335" end="335" startBytecode="21" endBytecode="21" sourcefile="InstallationLayout.java" sourcepath="org/apache/directory/daemon/InstallationLayout.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.apache.directory.daemon.JsvcBootstrapper$ShutdownListener">
+      <SourceLine classname="org.apache.directory.daemon.JsvcBootstrapper$ShutdownListener" start="96" end="112" sourcefile="JsvcBootstrapper.java" sourcepath="org/apache/directory/daemon/JsvcBootstrapper.java"/>
+    </Class>
+    <Method classname="org.apache.directory.daemon.JsvcBootstrapper$ShutdownListener" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.directory.daemon.JsvcBootstrapper$ShutdownListener" start="100" end="112" startBytecode="0" endBytecode="169" sourcefile="JsvcBootstrapper.java" sourcepath="org/apache/directory/daemon/JsvcBootstrapper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.directory.daemon.JsvcBootstrapper$ShutdownListener" start="110" end="110" startBytecode="84" endBytecode="84" sourcefile="JsvcBootstrapper.java" sourcepath="org/apache/directory/daemon/JsvcBootstrapper.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="4">
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.tanukisoftware.wrapper.WrapperListener</MissingClass>
+    <MissingClass>org.tanukisoftware.wrapper.WrapperManager</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 2 Apr 2010 21:08:48 +0300" total_classes="13" referenced_classes="80" total_bugs="19" total_size="617" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="25.94" clock_seconds="23.06" peak_mbytes="64.43" alloc_mbytes="763.88" gc_seconds="0.20" priority_2="17" priority_1="2">
+    <PackageStats package="org.apache.directory.daemon" total_bugs="19" total_types="13" total_size="617" priority_2="17" priority_1="2">
+      <ClassStats class="org.apache.directory.daemon.AvailablePortFinder" sourceFile="AvailablePortFinder.java" interface="false" size="49" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.daemon.Bootstrapper" sourceFile="Bootstrapper.java" interface="false" size="200" bugs="12" priority_2="10" priority_1="2"/>
+      <ClassStats class="org.apache.directory.daemon.Bootstrapper$1" sourceFile="Bootstrapper.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.daemon.DaemonApplication" sourceFile="DaemonApplication.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.directory.daemon.ExitCodes" sourceFile="ExitCodes.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="org.apache.directory.daemon.InstallationLayout" sourceFile="InstallationLayout.java" interface="false" size="146" bugs="4" priority_2="4"/>
+      <ClassStats class="org.apache.directory.daemon.InstallationLayout$1" sourceFile="InstallationLayout.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.directory.daemon.InstallationLayout$2" sourceFile="InstallationLayout.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.directory.daemon.JsvcBootstrapper" sourceFile="JsvcBootstrapper.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.directory.daemon.JsvcBootstrapper$ShutdownListener" sourceFile="JsvcBootstrapper.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.directory.daemon.MainBootstrapper" sourceFile="MainBootstrapper.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.apache.directory.daemon.ProcrunBootstrapper" sourceFile="ProcrunBootstrapper.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.apache.directory.daemon.TanukiBootstrapper" sourceFile="TanukiBootstrapper.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1803" invocations="80" avgMicrosecondsPerInvocation="22539" maxMicrosecondsPerInvocation="286814" standardDeviationMircosecondsPerInvocation="45332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1782" invocations="80" avgMicrosecondsPerInvocation="22279" maxMicrosecondsPerInvocation="196493" standardDeviationMircosecondsPerInvocation="38342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1756" invocations="533" avgMicrosecondsPerInvocation="3295" maxMicrosecondsPerInvocation="92462" standardDeviationMircosecondsPerInvocation="10285"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1489" invocations="91" avgMicrosecondsPerInvocation="16371" maxMicrosecondsPerInvocation="348192" standardDeviationMircosecondsPerInvocation="41767"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1461" invocations="86" avgMicrosecondsPerInvocation="16999" maxMicrosecondsPerInvocation="214527" standardDeviationMircosecondsPerInvocation="37642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1354" invocations="91" avgMicrosecondsPerInvocation="14879" maxMicrosecondsPerInvocation="161477" standardDeviationMircosecondsPerInvocation="29549"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1221" invocations="86" avgMicrosecondsPerInvocation="14208" maxMicrosecondsPerInvocation="239902" standardDeviationMircosecondsPerInvocation="34776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1180" invocations="86" avgMicrosecondsPerInvocation="13722" maxMicrosecondsPerInvocation="131630" standardDeviationMircosecondsPerInvocation="27625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="769" invocations="80" avgMicrosecondsPerInvocation="9623" maxMicrosecondsPerInvocation="90006" standardDeviationMircosecondsPerInvocation="16815"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="703" invocations="79" avgMicrosecondsPerInvocation="8904" maxMicrosecondsPerInvocation="94887" standardDeviationMircosecondsPerInvocation="18897"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="536" invocations="262" avgMicrosecondsPerInvocation="2047" maxMicrosecondsPerInvocation="70553" standardDeviationMircosecondsPerInvocation="7032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="524" invocations="86" avgMicrosecondsPerInvocation="6103" maxMicrosecondsPerInvocation="54284" standardDeviationMircosecondsPerInvocation="11077"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="509" invocations="80" avgMicrosecondsPerInvocation="6367" maxMicrosecondsPerInvocation="134591" standardDeviationMircosecondsPerInvocation="19373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="420" invocations="488" avgMicrosecondsPerInvocation="860" maxMicrosecondsPerInvocation="104765" standardDeviationMircosecondsPerInvocation="6392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="394" invocations="80" avgMicrosecondsPerInvocation="4930" maxMicrosecondsPerInvocation="88010" standardDeviationMircosecondsPerInvocation="13049"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

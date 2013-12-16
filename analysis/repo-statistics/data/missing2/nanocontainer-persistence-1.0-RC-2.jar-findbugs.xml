@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1132683501000" analysisTimestamp="1360903580654" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/nanocontainer/nanocontainer-persistence/1.0-RC-2/nanocontainer-persistence-1.0-RC-2.jar</Jar>
+  </Project>
+  <BugInstance type="BC_UNCONFIRMED_CAST" priority="2" abbrev="BC" category="STYLE">
+    <Class classname="org.nanocontainer.persistence.hibernate.SessionComponent$PingPongExceptionHandler">
+      <SourceLine classname="org.nanocontainer.persistence.hibernate.SessionComponent$PingPongExceptionHandler" start="682" end="685" sourcefile="SessionComponent.java" sourcepath="org/nanocontainer/persistence/hibernate/SessionComponent.java"/>
+    </Class>
+    <Method classname="org.nanocontainer.persistence.hibernate.SessionComponent$PingPongExceptionHandler" name="handle" signature="(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;" isStatic="false">
+      <SourceLine classname="org.nanocontainer.persistence.hibernate.SessionComponent$PingPongExceptionHandler" start="685" end="685" startBytecode="0" endBytecode="2" sourcefile="SessionComponent.java" sourcepath="org/nanocontainer/persistence/hibernate/SessionComponent.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/Throwable;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Throwable" start="158" end="653" sourcefile="Throwable.java" sourcepath="java/lang/Throwable.java"/>
+    </Type>
+    <Type descriptor="Ljava/lang/RuntimeException;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.lang.RuntimeException" start="32" end="78" sourcefile="RuntimeException.java" sourcepath="java/lang/RuntimeException.java"/>
+    </Type>
+    <LocalVariable name="ex" register="1" pc="0" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.nanocontainer.persistence.hibernate.SessionComponent$PingPongExceptionHandler" start="685" end="685" startBytecode="1" endBytecode="1" sourcefile="SessionComponent.java" sourcepath="org/nanocontainer/persistence/hibernate/SessionComponent.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.nanocontainer.persistence.hibernate.SessionComponent$PingPongExceptionHandler">
+      <SourceLine classname="org.nanocontainer.persistence.hibernate.SessionComponent$PingPongExceptionHandler" start="682" end="685" sourcefile="SessionComponent.java" sourcepath="org/nanocontainer/persistence/hibernate/SessionComponent.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="BC_UNCONFIRMED_CAST" priority="2" abbrev="BC" category="STYLE">
+    <Class classname="org.nanocontainer.persistence.hibernate.SessionDelegator$PingPongExceptionHandler">
+      <SourceLine classname="org.nanocontainer.persistence.hibernate.SessionDelegator$PingPongExceptionHandler" start="605" end="608" sourcefile="SessionDelegator.java" sourcepath="org/nanocontainer/persistence/hibernate/SessionDelegator.java"/>
+    </Class>
+    <Method classname="org.nanocontainer.persistence.hibernate.SessionDelegator$PingPongExceptionHandler" name="handle" signature="(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;" isStatic="false">
+      <SourceLine classname="org.nanocontainer.persistence.hibernate.SessionDelegator$PingPongExceptionHandler" start="608" end="608" startBytecode="0" endBytecode="2" sourcefile="SessionDelegator.java" sourcepath="org/nanocontainer/persistence/hibernate/SessionDelegator.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/Throwable;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Throwable" start="158" end="653" sourcefile="Throwable.java" sourcepath="java/lang/Throwable.java"/>
+    </Type>
+    <Type descriptor="Ljava/lang/RuntimeException;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.lang.RuntimeException" start="32" end="78" sourcefile="RuntimeException.java" sourcepath="java/lang/RuntimeException.java"/>
+    </Type>
+    <LocalVariable name="ex" register="1" pc="0" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.nanocontainer.persistence.hibernate.SessionDelegator$PingPongExceptionHandler" start="608" end="608" startBytecode="1" endBytecode="1" sourcefile="SessionDelegator.java" sourcepath="org/nanocontainer/persistence/hibernate/SessionDelegator.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.nanocontainer.persistence.hibernate.SessionDelegator$PingPongExceptionHandler">
+      <SourceLine classname="org.nanocontainer.persistence.hibernate.SessionDelegator$PingPongExceptionHandler" start="605" end="608" sourcefile="SessionDelegator.java" sourcepath="org/nanocontainer/persistence/hibernate/SessionDelegator.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="20">
+    <MissingClass>net.sf.hibernate.HibernateException</MissingClass>
+    <MissingClass>net.sf.hibernate.Session</MissingClass>
+    <MissingClass>net.sf.hibernate.SessionFactory</MissingClass>
+    <MissingClass>net.sf.hibernate.StaleObjectStateException</MissingClass>
+    <MissingClass>net.sf.hibernate.TransactionException</MissingClass>
+    <MissingClass>net.sf.hibernate.UnresolvableObjectException</MissingClass>
+    <MissingClass>net.sf.hibernate.WrongClassException</MissingClass>
+    <MissingClass>net.sf.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>net.sf.hibernate.exception.LockAcquisitionException</MissingClass>
+    <MissingClass>org.hibernate.HibernateException</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.StaleObjectStateException</MissingClass>
+    <MissingClass>org.hibernate.TransactionException</MissingClass>
+    <MissingClass>org.hibernate.UnresolvableObjectException</MissingClass>
+    <MissingClass>org.hibernate.WrongClassException</MissingClass>
+    <MissingClass>org.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>org.hibernate.exception.LockAcquisitionException</MissingClass>
+    <MissingClass>org.picocontainer.PicoException</MissingClass>
+    <MissingClass>org.picocontainer.PicoInitializationException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 22 Nov 2005 20:18:21 +0200" total_classes="29" referenced_classes="50" total_bugs="4" total_size="1534" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="15.66" clock_seconds="8.09" peak_mbytes="70.25" alloc_mbytes="763.88" gc_seconds="0.19" priority_2="4">
+    <PackageStats package="org.nanocontainer.persistence" total_bugs="0" total_types="9" total_size="62">
+      <ClassStats class="org.nanocontainer.persistence.ConcurrencyFailureException" sourceFile="ConcurrencyFailureException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.DefaultExceptionFactory" sourceFile="DefaultExceptionFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.EntityInfo" sourceFile="EntityInfo.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.ExceptionFactory" sourceFile="ExceptionFactory.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.ExceptionHandler" sourceFile="ExceptionHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.ObjectRetrievalFailureException" sourceFile="ObjectRetrievalFailureException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.PersistenceException" sourceFile="PersistenceException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.StaleObjectStateException" sourceFile="StaleObjectStateException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.TransactionException" sourceFile="TransactionException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.persistence.hibernate" total_bugs="4" total_types="12" total_size="920" priority_2="4">
+      <ClassStats class="org.nanocontainer.persistence.hibernate.ConstructableConfiguration" sourceFile="ConstructableConfiguration.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.DefaultHibernateExceptionHandler" sourceFile="DefaultHibernateExceptionHandler.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.FailoverSessionDelegator" sourceFile="FailoverSessionDelegator.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.SessionComponent" sourceFile="SessionComponent.java" interface="false" size="382" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.SessionComponent$1" sourceFile="SessionComponent.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.SessionComponent$PingPongExceptionHandler" sourceFile="SessionComponent.java" interface="false" size="7" bugs="2" priority_2="2"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.SessionDelegator" sourceFile="SessionDelegator.java" interface="false" size="335" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.SessionDelegator$1" sourceFile="SessionDelegator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.SessionDelegator$PingPongExceptionHandler" sourceFile="SessionDelegator.java" interface="false" size="7" bugs="2" priority_2="2"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.SessionFactoryDelegator" sourceFile="SessionFactoryDelegator.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.SessionFactoryLifecycle" sourceFile="SessionFactoryLifecycle.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.SessionLifecycle" sourceFile="SessionLifecycle.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.persistence.hibernate.classic" total_bugs="0" total_types="8" total_size="552">
+      <ClassStats class="org.nanocontainer.persistence.hibernate.classic.ConstructableConfiguration" sourceFile="ConstructableConfiguration.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.classic.FailoverSessionDelegator" sourceFile="FailoverSessionDelegator.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.classic.HibernateExceptionHandler" sourceFile="HibernateExceptionHandler.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.classic.SessionDelegator" sourceFile="SessionDelegator.java" interface="false" size="364" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.classic.SessionFactoryDelegator" sourceFile="SessionFactoryDelegator.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.classic.SessionFactoryLifecycle" sourceFile="SessionFactoryLifecycle.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.classic.SessionLifecycle" sourceFile="SessionLifecycle.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.nanocontainer.persistence.hibernate.classic.SessionProvider" sourceFile="SessionProvider.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="458" invocations="413" avgMicrosecondsPerInvocation="1109" maxMicrosecondsPerInvocation="66033" standardDeviationMircosecondsPerInvocation="4650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="416" invocations="314" avgMicrosecondsPerInvocation="1326" maxMicrosecondsPerInvocation="39437" standardDeviationMircosecondsPerInvocation="3293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="359" invocations="314" avgMicrosecondsPerInvocation="1143" maxMicrosecondsPerInvocation="8869" standardDeviationMircosecondsPerInvocation="986"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="342" invocations="314" avgMicrosecondsPerInvocation="1091" maxMicrosecondsPerInvocation="20008" standardDeviationMircosecondsPerInvocation="1724"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="321" invocations="314" avgMicrosecondsPerInvocation="1024" maxMicrosecondsPerInvocation="38036" standardDeviationMircosecondsPerInvocation="2398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="274" invocations="50" avgMicrosecondsPerInvocation="5499" maxMicrosecondsPerInvocation="106631" standardDeviationMircosecondsPerInvocation="15811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="268" invocations="295" avgMicrosecondsPerInvocation="909" maxMicrosecondsPerInvocation="22151" standardDeviationMircosecondsPerInvocation="1825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="244" invocations="314" avgMicrosecondsPerInvocation="777" maxMicrosecondsPerInvocation="19344" standardDeviationMircosecondsPerInvocation="1483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="243" invocations="50" avgMicrosecondsPerInvocation="4879" maxMicrosecondsPerInvocation="40568" standardDeviationMircosecondsPerInvocation="9647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="225" invocations="314" avgMicrosecondsPerInvocation="717" maxMicrosecondsPerInvocation="10767" standardDeviationMircosecondsPerInvocation="961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="119" invocations="29" avgMicrosecondsPerInvocation="4134" maxMicrosecondsPerInvocation="64703" standardDeviationMircosecondsPerInvocation="12640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="117" invocations="314" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="11163" standardDeviationMircosecondsPerInvocation="701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="114" invocations="29" avgMicrosecondsPerInvocation="3961" maxMicrosecondsPerInvocation="45666" standardDeviationMircosecondsPerInvocation="11275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="111" invocations="331" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="40481" standardDeviationMircosecondsPerInvocation="3069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="109" invocations="50" avgMicrosecondsPerInvocation="2197" maxMicrosecondsPerInvocation="18533" standardDeviationMircosecondsPerInvocation="3907"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="96" invocations="375" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="14850" standardDeviationMircosecondsPerInvocation="833"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="75" invocations="50" avgMicrosecondsPerInvocation="1518" maxMicrosecondsPerInvocation="9970" standardDeviationMircosecondsPerInvocation="2364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="71" invocations="325" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="12008" standardDeviationMircosecondsPerInvocation="735"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="67" invocations="185" avgMicrosecondsPerInvocation="362" maxMicrosecondsPerInvocation="24295" standardDeviationMircosecondsPerInvocation="1769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BadResultSetAccess" totalMilliseconds="63" invocations="29" avgMicrosecondsPerInvocation="2191" maxMicrosecondsPerInvocation="49030" standardDeviationMircosecondsPerInvocation="8930"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="62" invocations="29" avgMicrosecondsPerInvocation="2146" maxMicrosecondsPerInvocation="18642" standardDeviationMircosecondsPerInvocation="5024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="59" invocations="50" avgMicrosecondsPerInvocation="1196" maxMicrosecondsPerInvocation="15379" standardDeviationMircosecondsPerInvocation="2587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="55" invocations="314" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="1910" standardDeviationMircosecondsPerInvocation="181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUseOfNonSerializableValue" totalMilliseconds="54" invocations="29" avgMicrosecondsPerInvocation="1890" maxMicrosecondsPerInvocation="26377" standardDeviationMircosecondsPerInvocation="5324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="52" invocations="80" avgMicrosecondsPerInvocation="650" maxMicrosecondsPerInvocation="13526" standardDeviationMircosecondsPerInvocation="1999"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="50" invocations="50" avgMicrosecondsPerInvocation="1013" maxMicrosecondsPerInvocation="8372" standardDeviationMircosecondsPerInvocation="1758"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="49" invocations="29" avgMicrosecondsPerInvocation="1720" maxMicrosecondsPerInvocation="31495" standardDeviationMircosecondsPerInvocation="5789"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="49" invocations="50" avgMicrosecondsPerInvocation="985" maxMicrosecondsPerInvocation="7388" standardDeviationMircosecondsPerInvocation="1705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="48" invocations="29" avgMicrosecondsPerInvocation="1656" maxMicrosecondsPerInvocation="15617" standardDeviationMircosecondsPerInvocation="3611"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizingOnContentsOfFieldToProtectField" totalMilliseconds="47" invocations="29" avgMicrosecondsPerInvocation="1652" maxMicrosecondsPerInvocation="16748" standardDeviationMircosecondsPerInvocation="4087"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

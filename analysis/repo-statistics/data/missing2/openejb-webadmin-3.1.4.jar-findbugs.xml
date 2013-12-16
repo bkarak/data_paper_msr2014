@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1289605119000" analysisTimestamp="1360866938679" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/openejb/openejb-webadmin/3.1.4/openejb-webadmin-3.1.4.jar</Jar>
+  </Project>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.openejb.webadmin.WebAdminBean">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" start="61" end="476" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Class>
+    <Field classname="org.apache.openejb.webadmin.WebAdminBean" name="sections" signature="Ljava/util/HashMap;" isStatic="true">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.openejb.webadmin.WebAdminBean">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" start="61" end="476" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Class>
+    <Field classname="org.apache.openejb.webadmin.WebAdminBean" name="footer" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" start="285" end="285" startBytecode="3" endBytecode="3" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.openejb.webadmin.WebAdminBean">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" start="61" end="476" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.WebAdminBean" name="setSessionContext" signature="(Ljavax/ejb/SessionContext;)V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" start="472" end="476" startBytecode="0" endBytecode="82" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Method>
+    <Field classname="org.apache.openejb.webadmin.WebAdminBean" name="sections" signature="Ljava/util/HashMap;" isStatic="true">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" start="474" end="474" startBytecode="15" endBytecode="15" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.openejb.webadmin.WebAdminBean">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" start="61" end="476" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Class>
+    <Field classname="org.apache.openejb.webadmin.WebAdminBean" name="ejbContext" signature="Ljavax/ejb/SessionContext;" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" start="472" end="472" startBytecode="2" endBytecode="2" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.openejb.webadmin.WebAdminBean">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" start="61" end="476" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Class>
+    <Field classname="org.apache.openejb.webadmin.WebAdminBean" name="section" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.openejb.webadmin.WebAdminBean" start="73" end="73" startBytecode="7" endBytecode="7" sourcefile="WebAdminBean.java" sourcepath="org/apache/openejb/webadmin/WebAdminBean.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean">
+      <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean" start="44" end="662" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean" name="invoke" signature="(Lorg/apache/openejb/webadmin/clienttools/InvokeObjectBean$Invocation;)V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean" start="336" end="386" startBytecode="0" endBytecode="213" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+    </Method>
+    <LocalVariable name="re" register="4" pc="339" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean" start="369" end="369" startBytecode="337" endBytecode="337" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="re"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean">
+      <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean" start="44" end="662" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean" name="formatThrowable" signature="(Ljava/lang/Throwable;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean" start="389" end="402" startBytecode="0" endBytecode="282" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="62" end="63" startBytecode="0" endBytecode="34" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean" start="390" end="390" startBytecode="14" endBytecode="14" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOOLEAN_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$BooleanConverter">
+      <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$BooleanConverter" start="620" end="622" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$BooleanConverter" name="convert" signature="(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$BooleanConverter" start="622" end="622" startBytecode="0" endBytecode="70" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$BooleanConverter" start="622" end="622" startBytecode="5" endBytecode="5" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$CharacterConverter">
+      <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$CharacterConverter" start="614" end="616" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$CharacterConverter" name="convert" signature="(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$CharacterConverter" start="616" end="616" startBytecode="0" endBytecode="74" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="&lt;init&gt;" signature="(C)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Character" start="2056" end="2058" startBytecode="0" endBytecode="41" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="valueOf" signature="(C)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Character" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$CharacterConverter" start="616" end="616" startBytecode="9" endBytecode="9" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$Invocation">
+      <SourceLine classname="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$Invocation" start="83" end="101" sourcefile="InvokeObjectBean.java" sourcepath="org/apache/openejb/webadmin/clienttools/InvokeObjectBean.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.openejb.webadmin.httpd.DefaultHttpBean">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.DefaultHttpBean" start="45" end="228" sourcefile="DefaultHttpBean.java" sourcepath="org/apache/openejb/webadmin/httpd/DefaultHttpBean.java"/>
+    </Class>
+    <Field classname="org.apache.openejb.webadmin.httpd.DefaultHttpBean" name="context" signature="Ljavax/ejb/SessionContext;" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.DefaultHttpBean" sourcefile="DefaultHttpBean.java" sourcepath="org/apache/openejb/webadmin/httpd/DefaultHttpBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.DefaultHttpBean" start="227" end="227" startBytecode="2" endBytecode="2" sourcefile="DefaultHttpBean.java" sourcepath="org/apache/openejb/webadmin/httpd/DefaultHttpBean.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="50" end="650" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" name="parseFormParams" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="400" end="427" startBytecode="0" endBytecode="270" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="400" end="400" startBytecode="8" endBytecode="8" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="50" end="650" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" name="parseMultiPartFormParams" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="441" end="524" startBytecode="0" endBytecode="869" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="450" end="450" startBytecode="45" endBytecode="45" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="50" end="650" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" name="parseMultiPartFormParams" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="441" end="524" startBytecode="0" endBytecode="869" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="505" end="505" startBytecode="341" endBytecode="341" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="506" end="506" startBytecode="346" endBytecode="346" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="50" end="650" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" name="parseMultiPartFormParams" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="441" end="524" startBytecode="0" endBytecode="869" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Method>
+    <Method classname="java.io.File" name="createNewFile" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="881" end="883" startBytecode="0" endBytecode="58" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="501" end="501" startBytecode="331" endBytecode="331" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="50" end="650" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Class>
+    <Field classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" name="methodString" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Field>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="81" end="81" startBytecode="1" endBytecode="1" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="50" end="650" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Class>
+    <Field classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" name="pathString" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+    </Field>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpRequestImpl" start="88" end="88" startBytecode="1" endBytecode="1" sourcefile="HttpRequestImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpRequestImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="47" end="484" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" name="writeMessage" signature="(Ljava/io/OutputStream;)V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="218" end="228" startBytecode="0" endBytecode="21" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Method>
+    <LocalVariable name="log" register="3" pc="20" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="219" end="219" startBytecode="19" endBytecode="19" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="log"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="47" end="484" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" name="createError" signature="(Ljava/lang/String;Ljava/lang/Throwable;)Lorg/apache/openejb/webadmin/httpd/HttpResponseImpl;" isStatic="true">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="371" end="411" startBytecode="0" endBytecode="449" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="393" end="393" startBytecode="117" endBytecode="117" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="47" end="484" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" name="createError" signature="(Ljava/lang/String;Ljava/lang/Throwable;)Lorg/apache/openejb/webadmin/httpd/HttpResponseImpl;" isStatic="true">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="371" end="411" startBytecode="0" endBytecode="449" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="397" end="397" startBytecode="147" endBytecode="147" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="47" end="484" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" name="initBody" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="232" end="234" startBytecode="0" endBytecode="76" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="233" end="233" startBytecode="20" endBytecode="20" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="47" end="484" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" name="readObject" signature="(Ljava/io/ObjectInputStream;)V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="463" end="478" startBytecode="0" endBytecode="161" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="476" end="476" startBytecode="75" endBytecode="75" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="47" end="484" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Class>
+    <Field classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" name="server" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="2" abbrev="SnVI" category="BAD_PRACTICE">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="47" end="484" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="47" end="484" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" name="getServerName" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="341" end="352" startBytecode="0" endBytecode="205" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Method>
+    <Field classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" name="server" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+    </Field>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpResponseImpl" start="350" end="350" startBytecode="99" endBytecode="99" sourcefile="HttpResponseImpl.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpResponseImpl.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="org.apache.openejb.webadmin.httpd.HttpServer">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpServer" start="45" end="298" sourcefile="HttpServer.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpServer.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.httpd.HttpServer" name="service" signature="(Ljava/net/Socket;)V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpServer" start="58" end="85" startBytecode="0" endBytecode="554" sourcefile="HttpServer.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpServer.java"/>
+    </Method>
+    <LocalVariable name="socket" register="1" pc="37" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpServer" start="58" end="58" startBytecode="1" endBytecode="1" sourcefile="HttpServer.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpServer.java"/>
+    <SourceLine classname="org.apache.openejb.webadmin.httpd.HttpServer" start="77" end="77" startBytecode="38" endBytecode="38" sourcefile="HttpServer.java" sourcepath="org/apache/openejb/webadmin/httpd/HttpServer.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="IM_BAD_CHECK_FOR_ODD" priority="2" abbrev="IM" category="STYLE">
+    <Class classname="org.apache.openejb.webadmin.main.DeploymentListBean">
+      <SourceLine classname="org.apache.openejb.webadmin.main.DeploymentListBean" start="58" end="306" sourcefile="DeploymentListBean.java" sourcepath="org/apache/openejb/webadmin/main/DeploymentListBean.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.main.DeploymentListBean" name="printDeployments" signature="(Ljava/io/PrintWriter;)V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.main.DeploymentListBean" start="230" end="261" startBytecode="0" endBytecode="414" sourcefile="DeploymentListBean.java" sourcepath="org/apache/openejb/webadmin/main/DeploymentListBean.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.main.DeploymentListBean" start="247" end="247" startBytecode="117" endBytecode="117" sourcefile="DeploymentListBean.java" sourcepath="org/apache/openejb/webadmin/main/DeploymentListBean.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.openejb.webadmin.main.DeploymentListBean">
+      <SourceLine classname="org.apache.openejb.webadmin.main.DeploymentListBean" start="58" end="306" sourcefile="DeploymentListBean.java" sourcepath="org/apache/openejb/webadmin/main/DeploymentListBean.java"/>
+    </Class>
+    <Field classname="org.apache.openejb.webadmin.main.DeploymentListBean" name="containerIdIndex" signature="Ljava/util/HashMap;" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.main.DeploymentListBean" sourcefile="DeploymentListBean.java" sourcepath="org/apache/openejb/webadmin/main/DeploymentListBean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.openejb.webadmin.main.DeploymentListBean" start="103" end="103" startBytecode="19" endBytecode="19" sourcefile="DeploymentListBean.java" sourcepath="org/apache/openejb/webadmin/main/DeploymentListBean.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.openejb.webadmin.main.ListLogsBean">
+      <SourceLine classname="org.apache.openejb.webadmin.main.ListLogsBean" start="46" end="355" sourcefile="ListLogsBean.java" sourcepath="org/apache/openejb/webadmin/main/ListLogsBean.java"/>
+    </Class>
+    <Method classname="org.apache.openejb.webadmin.main.ListLogsBean" name="printLogFile" signature="(Ljava/io/PrintWriter;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.openejb.webadmin.main.ListLogsBean" start="183" end="311" startBytecode="0" endBytecode="1156" sourcefile="ListLogsBean.java" sourcepath="org/apache/openejb/webadmin/main/ListLogsBean.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.openejb.webadmin.main.ListLogsBean" start="183" end="183" startBytecode="9" endBytecode="9" sourcefile="ListLogsBean.java" sourcepath="org/apache/openejb/webadmin/main/ListLogsBean.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="39">
+    <MissingClass>javax.ejb.CreateException</MissingClass>
+    <MissingClass>javax.ejb.EJBHome</MissingClass>
+    <MissingClass>javax.ejb.EJBLocalHome</MissingClass>
+    <MissingClass>javax.ejb.EJBObject</MissingClass>
+    <MissingClass>javax.ejb.SessionBean</MissingClass>
+    <MissingClass>javax.ejb.SessionContext</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.MultipartStream</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.MultipartStream$MalformedStreamException</MissingClass>
+    <MissingClass>org.apache.openejb.BeanType</MissingClass>
+    <MissingClass>org.apache.openejb.Container</MissingClass>
+    <MissingClass>org.apache.openejb.DeploymentInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.AppInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.ContainerSystemInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.EjbJarInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.EjbLocalReferenceInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.EjbReferenceInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.EnterpriseBeanInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.EnvEntryInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.JndiEncInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.OpenEjbConfiguration</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.PersistenceContextReferenceInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.PersistenceUnitReferenceInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.ResourceEnvReferenceInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.ResourceReferenceInfo</MissingClass>
+    <MissingClass>org.apache.openejb.assembler.classic.ServiceReferenceInfo</MissingClass>
+    <MissingClass>org.apache.openejb.core.CoreDeploymentInfo</MissingClass>
+    <MissingClass>org.apache.openejb.core.ivm.BaseEjbProxyHandler</MissingClass>
+    <MissingClass>org.apache.openejb.core.stateful.StatefulEjbObjectHandler</MissingClass>
+    <MissingClass>org.apache.openejb.loader.FileUtils</MissingClass>
+    <MissingClass>org.apache.openejb.loader.SystemInstance</MissingClass>
+    <MissingClass>org.apache.openejb.spi.ContainerSystem</MissingClass>
+    <MissingClass>org.apache.openejb.util.LogCategory</MissingClass>
+    <MissingClass>org.apache.openejb.util.Logger</MissingClass>
+    <MissingClass>org.apache.openejb.util.OpenEjbVersion</MissingClass>
+    <MissingClass>org.apache.openejb.util.StringUtilities</MissingClass>
+    <MissingClass>org.apache.openejb.util.proxy.InvocationHandler</MissingClass>
+    <MissingClass>org.apache.openejb.util.proxy.ProxyManager</MissingClass>
+    <MissingClass>org.apache.regexp.RE</MissingClass>
+    <MissingClass>org.apache.regexp.RESyntaxException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 13 Nov 2010 01:38:39 +0200" total_classes="41" referenced_classes="119" total_bugs="29" total_size="2220" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="32.90" clock_seconds="26.76" peak_mbytes="84.33" alloc_mbytes="763.88" gc_seconds="0.42" priority_2="19" priority_1="10">
+    <PackageStats package="org.apache.openejb.webadmin" total_bugs="5" total_types="7" total_size="220" priority_2="4" priority_1="1">
+      <ClassStats class="org.apache.openejb.webadmin.HttpBean" sourceFile="HttpBean.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.HttpHome" sourceFile="HttpHome.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.HttpObject" sourceFile="HttpObject.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.HttpRequest" sourceFile="HttpRequest.java" interface="true" size="29" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.HttpResponse" sourceFile="HttpResponse.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.HttpSession" sourceFile="HttpSession.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.WebAdminBean" sourceFile="WebAdminBean.java" interface="false" size="167" bugs="5" priority_2="4" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.openejb.webadmin.clienttools" total_bugs="5" total_types="20" total_size="839" priority_2="4" priority_1="1">
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.Constants" sourceFile="Constants.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean" sourceFile="InvokeObjectBean.java" interface="false" size="356" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$BooleanConverter" sourceFile="InvokeObjectBean.java" interface="false" size="6" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$ByteConverter" sourceFile="InvokeObjectBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$CharacterConverter" sourceFile="InvokeObjectBean.java" interface="false" size="6" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$Converter" sourceFile="InvokeObjectBean.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$DoubleConverter" sourceFile="InvokeObjectBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$FloatConverter" sourceFile="InvokeObjectBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$IntegerConverter" sourceFile="InvokeObjectBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$Invocation" sourceFile="InvokeObjectBean.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$LongConverter" sourceFile="InvokeObjectBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$ObjectConverter" sourceFile="InvokeObjectBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$ShortConverter" sourceFile="InvokeObjectBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.InvokeObjectBean$StringConverter" sourceFile="InvokeObjectBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.ViewClassBean" sourceFile="ViewClassBean.java" interface="false" size="115" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.ViewEjbBean" sourceFile="ViewEjbBean.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.ViewEjbBean$1" sourceFile="ViewEjbBean.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.ViewJndiBean" sourceFile="ViewJndiBean.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.ViewJndiBean$Node" sourceFile="ViewJndiBean.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.clienttools.ViewJndiBean$RootNode" sourceFile="ViewJndiBean.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.openejb.webadmin.httpd" total_bugs="16" total_types="7" total_size="751" priority_2="9" priority_1="7">
+      <ClassStats class="org.apache.openejb.webadmin.httpd.DefaultHttpBean" sourceFile="DefaultHttpBean.java" interface="false" size="106" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.openejb.webadmin.httpd.HttpRequestImpl" sourceFile="HttpRequestImpl.java" interface="false" size="283" bugs="6" priority_2="4" priority_1="2"/>
+      <ClassStats class="org.apache.openejb.webadmin.httpd.HttpResponseImpl" sourceFile="HttpResponseImpl.java" interface="false" size="206" bugs="8" priority_2="3" priority_1="5"/>
+      <ClassStats class="org.apache.openejb.webadmin.httpd.HttpServer" sourceFile="HttpServer.java" interface="false" size="124" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.openejb.webadmin.httpd.WebSession" sourceFile="WebSession.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.httpd.WebSessionBean" sourceFile="WebSessionBean.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.httpd.WebSessionHome" sourceFile="WebSessionHome.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.openejb.webadmin.main" total_bugs="3" total_types="7" total_size="410" priority_2="2" priority_1="1">
+      <ClassStats class="org.apache.openejb.webadmin.main.DeploymentListBean" sourceFile="DeploymentListBean.java" interface="false" size="128" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.openejb.webadmin.main.DeploymentListBean$1" sourceFile="DeploymentListBean.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.main.HomeBean" sourceFile="HomeBean.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.main.ListLogsBean" sourceFile="ListLogsBean.java" interface="false" size="149" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.openejb.webadmin.main.ListLogsBean$1" sourceFile="ListLogsBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.main.PropertiesBean" sourceFile="PropertiesBean.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.openejb.webadmin.main.ReferenceData" sourceFile="ReferenceData.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1719" invocations="264" avgMicrosecondsPerInvocation="6515" maxMicrosecondsPerInvocation="278764" standardDeviationMircosecondsPerInvocation="23756"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1601" invocations="119" avgMicrosecondsPerInvocation="13455" maxMicrosecondsPerInvocation="188443" standardDeviationMircosecondsPerInvocation="29936"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1560" invocations="264" avgMicrosecondsPerInvocation="5910" maxMicrosecondsPerInvocation="267960" standardDeviationMircosecondsPerInvocation="20145"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1487" invocations="264" avgMicrosecondsPerInvocation="5632" maxMicrosecondsPerInvocation="223553" standardDeviationMircosecondsPerInvocation="18671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1482" invocations="271" avgMicrosecondsPerInvocation="5471" maxMicrosecondsPerInvocation="201167" standardDeviationMircosecondsPerInvocation="19328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1277" invocations="671" avgMicrosecondsPerInvocation="1903" maxMicrosecondsPerInvocation="97452" standardDeviationMircosecondsPerInvocation="6266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1267" invocations="272" avgMicrosecondsPerInvocation="4658" maxMicrosecondsPerInvocation="163306" standardDeviationMircosecondsPerInvocation="15498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1111" invocations="119" avgMicrosecondsPerInvocation="9341" maxMicrosecondsPerInvocation="82146" standardDeviationMircosecondsPerInvocation="16368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="878" invocations="191" avgMicrosecondsPerInvocation="4599" maxMicrosecondsPerInvocation="227689" standardDeviationMircosecondsPerInvocation="18497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="782" invocations="264" avgMicrosecondsPerInvocation="2964" maxMicrosecondsPerInvocation="62871" standardDeviationMircosecondsPerInvocation="7525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="690" invocations="119" avgMicrosecondsPerInvocation="5805" maxMicrosecondsPerInvocation="155045" standardDeviationMircosecondsPerInvocation="17623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="465" invocations="565" avgMicrosecondsPerInvocation="824" maxMicrosecondsPerInvocation="19366" standardDeviationMircosecondsPerInvocation="2271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="464" invocations="264" avgMicrosecondsPerInvocation="1759" maxMicrosecondsPerInvocation="97273" standardDeviationMircosecondsPerInvocation="8469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="438" invocations="119" avgMicrosecondsPerInvocation="3683" maxMicrosecondsPerInvocation="98025" standardDeviationMircosecondsPerInvocation="11855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="426" invocations="674" avgMicrosecondsPerInvocation="633" maxMicrosecondsPerInvocation="63253" standardDeviationMircosecondsPerInvocation="3797"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="401" invocations="41" avgMicrosecondsPerInvocation="9788" maxMicrosecondsPerInvocation="127650" standardDeviationMircosecondsPerInvocation="24083"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="351" invocations="298" avgMicrosecondsPerInvocation="1179" maxMicrosecondsPerInvocation="236025" standardDeviationMircosecondsPerInvocation="13738"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="342" invocations="119" avgMicrosecondsPerInvocation="2879" maxMicrosecondsPerInvocation="38421" standardDeviationMircosecondsPerInvocation="6043"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="313" invocations="119" avgMicrosecondsPerInvocation="2634" maxMicrosecondsPerInvocation="34929" standardDeviationMircosecondsPerInvocation="6549"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="273" invocations="97" avgMicrosecondsPerInvocation="2817" maxMicrosecondsPerInvocation="29659" standardDeviationMircosecondsPerInvocation="4258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="271" invocations="577" avgMicrosecondsPerInvocation="469" maxMicrosecondsPerInvocation="32123" standardDeviationMircosecondsPerInvocation="2176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="256" invocations="262" avgMicrosecondsPerInvocation="979" maxMicrosecondsPerInvocation="66201" standardDeviationMircosecondsPerInvocation="5291"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

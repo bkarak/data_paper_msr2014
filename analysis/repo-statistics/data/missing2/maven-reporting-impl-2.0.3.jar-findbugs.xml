@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1147041063000" analysisTimestamp="1360876564776" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/maven/reporting/maven-reporting-impl/2.0.3/maven-reporting-impl-2.0.3.jar</Jar>
+  </Project>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.apache.maven.reporting.AbstractMavenReportRenderer">
+      <SourceLine classname="org.apache.maven.reporting.AbstractMavenReportRenderer" start="47" end="622" sourcefile="AbstractMavenReportRenderer.java" sourcepath="org/apache/maven/reporting/AbstractMavenReportRenderer.java"/>
+    </Class>
+    <Method classname="org.apache.maven.reporting.AbstractMavenReportRenderer" name="propertiesToString" signature="(Ljava/util/Properties;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.maven.reporting.AbstractMavenReportRenderer" start="424" end="441" startBytecode="0" endBytecode="199" sourcefile="AbstractMavenReportRenderer.java" sourcepath="org/apache/maven/reporting/AbstractMavenReportRenderer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.reporting.AbstractMavenReportRenderer" start="434" end="434" startBytecode="65" endBytecode="65" sourcefile="AbstractMavenReportRenderer.java" sourcepath="org/apache/maven/reporting/AbstractMavenReportRenderer.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="11">
+    <MissingClass>org.apache.commons.validator.EmailValidator</MissingClass>
+    <MissingClass>org.apache.commons.validator.UrlValidator</MissingClass>
+    <MissingClass>org.apache.maven.doxia.sink.Sink</MissingClass>
+    <MissingClass>org.apache.maven.doxia.sink.SinkAdapter</MissingClass>
+    <MissingClass>org.apache.maven.doxia.siterenderer.Renderer</MissingClass>
+    <MissingClass>org.apache.maven.doxia.siterenderer.RendererException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.AbstractMojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.reporting.MavenReport</MissingClass>
+    <MissingClass>org.apache.maven.reporting.MavenReportException</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.StringUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 8 May 2006 01:31:03 +0300" total_classes="5" referenced_classes="29" total_bugs="1" total_size="611" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="17.47" clock_seconds="16.98" peak_mbytes="60.09" alloc_mbytes="763.88" gc_seconds="0.14" priority_2="1">
+    <PackageStats package="org.apache.maven.reporting" total_bugs="1" total_types="3" total_size="322" priority_2="1">
+      <ClassStats class="org.apache.maven.reporting.AbstractMavenMultiPageReport" sourceFile="AbstractMavenMultiPageReport.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.maven.reporting.AbstractMavenReport" sourceFile="AbstractMavenReport.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.apache.maven.reporting.AbstractMavenReportRenderer" sourceFile="AbstractMavenReportRenderer.java" interface="false" size="233" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.reporting.sink" total_bugs="0" total_types="2" total_size="289">
+      <ClassStats class="org.apache.maven.reporting.sink.MultiPageSink" sourceFile="MultiPageSink.java" interface="false" size="276" bugs="0"/>
+      <ClassStats class="org.apache.maven.reporting.sink.SinkFactory" sourceFile="SinkFactory.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1834" invocations="403" avgMicrosecondsPerInvocation="4553" maxMicrosecondsPerInvocation="132872" standardDeviationMircosecondsPerInvocation="15239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="978" invocations="29" avgMicrosecondsPerInvocation="33755" maxMicrosecondsPerInvocation="224876" standardDeviationMircosecondsPerInvocation="52202"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="820" invocations="136" avgMicrosecondsPerInvocation="6034" maxMicrosecondsPerInvocation="267554" standardDeviationMircosecondsPerInvocation="25385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="779" invocations="29" avgMicrosecondsPerInvocation="26875" maxMicrosecondsPerInvocation="171865" standardDeviationMircosecondsPerInvocation="39069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="650" invocations="136" avgMicrosecondsPerInvocation="4786" maxMicrosecondsPerInvocation="95916" standardDeviationMircosecondsPerInvocation="12949"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="603" invocations="136" avgMicrosecondsPerInvocation="4436" maxMicrosecondsPerInvocation="150085" standardDeviationMircosecondsPerInvocation="16376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="599" invocations="29" avgMicrosecondsPerInvocation="20689" maxMicrosecondsPerInvocation="136241" standardDeviationMircosecondsPerInvocation="36450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="499" invocations="137" avgMicrosecondsPerInvocation="3649" maxMicrosecondsPerInvocation="65443" standardDeviationMircosecondsPerInvocation="10222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="398" invocations="136" avgMicrosecondsPerInvocation="2928" maxMicrosecondsPerInvocation="108812" standardDeviationMircosecondsPerInvocation="11136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="349" invocations="29" avgMicrosecondsPerInvocation="12043" maxMicrosecondsPerInvocation="132383" standardDeviationMircosecondsPerInvocation="28818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="331" invocations="248" avgMicrosecondsPerInvocation="1337" maxMicrosecondsPerInvocation="51264" standardDeviationMircosecondsPerInvocation="5004"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="322" invocations="350" avgMicrosecondsPerInvocation="922" maxMicrosecondsPerInvocation="93471" standardDeviationMircosecondsPerInvocation="6533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="318" invocations="136" avgMicrosecondsPerInvocation="2342" maxMicrosecondsPerInvocation="79045" standardDeviationMircosecondsPerInvocation="8647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="293" invocations="29" avgMicrosecondsPerInvocation="10122" maxMicrosecondsPerInvocation="93966" standardDeviationMircosecondsPerInvocation="22404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="282" invocations="121" avgMicrosecondsPerInvocation="2332" maxMicrosecondsPerInvocation="48274" standardDeviationMircosecondsPerInvocation="7452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="282" invocations="29" avgMicrosecondsPerInvocation="9730" maxMicrosecondsPerInvocation="76996" standardDeviationMircosecondsPerInvocation="17731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="222" invocations="5" avgMicrosecondsPerInvocation="44557" maxMicrosecondsPerInvocation="141092" standardDeviationMircosecondsPerInvocation="57054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="186" invocations="136" avgMicrosecondsPerInvocation="1373" maxMicrosecondsPerInvocation="49558" standardDeviationMircosecondsPerInvocation="5815"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="182" invocations="29" avgMicrosecondsPerInvocation="6280" maxMicrosecondsPerInvocation="75159" standardDeviationMircosecondsPerInvocation="14636"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="179" invocations="146" avgMicrosecondsPerInvocation="1227" maxMicrosecondsPerInvocation="126151" standardDeviationMircosecondsPerInvocation="10612"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

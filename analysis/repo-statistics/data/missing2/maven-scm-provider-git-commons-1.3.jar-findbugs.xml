@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1263216910000" analysisTimestamp="1360877449776" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/maven/scm/maven-scm-provider-git-commons/1.3/maven-scm-provider-git-commons-1.3.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.maven.scm.provider.git.GitConfigFileReader">
+      <SourceLine classname="org.apache.maven.scm.provider.git.GitConfigFileReader" start="37" end="156" sourcefile="GitConfigFileReader.java" sourcepath="org/apache/maven/scm/provider/git/GitConfigFileReader.java"/>
+    </Class>
+    <Method classname="org.apache.maven.scm.provider.git.GitConfigFileReader" name="getConfLines" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.apache.maven.scm.provider.git.GitConfigFileReader" start="127" end="156" startBytecode="0" endBytecode="303" sourcefile="GitConfigFileReader.java" sourcepath="org/apache/maven/scm/provider/git/GitConfigFileReader.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.scm.provider.git.GitConfigFileReader" start="135" end="135" startBytecode="41" endBytecode="41" sourcefile="GitConfigFileReader.java" sourcepath="org/apache/maven/scm/provider/git/GitConfigFileReader.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.maven.scm.provider.git.repository.GitScmProviderRepository">
+      <SourceLine classname="org.apache.maven.scm.provider.git.repository.GitScmProviderRepository" start="80" end="446" sourcefile="GitScmProviderRepository.java" sourcepath="org/apache/maven/scm/provider/git/repository/GitScmProviderRepository.java"/>
+    </Class>
+    <Field classname="org.apache.maven.scm.provider.git.repository.GitScmProviderRepository" name="provider" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.maven.scm.provider.git.repository.GitScmProviderRepository" sourcefile="GitScmProviderRepository.java" sourcepath="org/apache/maven/scm/provider/git/repository/GitScmProviderRepository.java"/>
+    </Field>
+    <SourceLine classname="org.apache.maven.scm.provider.git.repository.GitScmProviderRepository" start="157" end="157" startBytecode="1" endBytecode="1" sourcefile="GitScmProviderRepository.java" sourcepath="org/apache/maven/scm/provider/git/repository/GitScmProviderRepository.java"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE">
+    <Class classname="org.apache.maven.scm.providers.gitlib.settings.io.xpp3.GitXpp3Reader">
+      <SourceLine classname="org.apache.maven.scm.providers.gitlib.settings.io.xpp3.GitXpp3Reader" start="30" end="821" sourcefile="GitXpp3Reader.java" sourcepath="org/apache/maven/scm/providers/gitlib/settings/io/xpp3/GitXpp3Reader.java"/>
+    </Class>
+    <Method classname="org.apache.maven.scm.providers.gitlib.settings.io.xpp3.GitXpp3Reader" name="getBooleanValue" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/codehaus/plexus/util/xml/pull/XmlPullParser;)Z" isStatic="false">
+      <SourceLine classname="org.apache.maven.scm.providers.gitlib.settings.io.xpp3.GitXpp3Reader" start="101" end="101" startBytecode="0" endBytecode="80" sourcefile="GitXpp3Reader.java" sourcepath="org/apache/maven/scm/providers/gitlib/settings/io/xpp3/GitXpp3Reader.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE">
+    <Class classname="org.apache.maven.scm.providers.gitlib.settings.io.xpp3.GitXpp3Reader">
+      <SourceLine classname="org.apache.maven.scm.providers.gitlib.settings.io.xpp3.GitXpp3Reader" start="30" end="821" sourcefile="GitXpp3Reader.java" sourcepath="org/apache/maven/scm/providers/gitlib/settings/io/xpp3/GitXpp3Reader.java"/>
+    </Class>
+    <Method classname="org.apache.maven.scm.providers.gitlib.settings.io.xpp3.GitXpp3Reader" name="getDateValue" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/codehaus/plexus/util/xml/pull/XmlPullParser;)Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="org.apache.maven.scm.providers.gitlib.settings.io.xpp3.GitXpp3Reader" start="189" end="189" startBytecode="0" endBytecode="80" sourcefile="GitXpp3Reader.java" sourcepath="org/apache/maven/scm/providers/gitlib/settings/io/xpp3/GitXpp3Reader.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="21">
+    <MissingClass>org.apache.maven.scm.ChangeSet</MissingClass>
+    <MissingClass>org.apache.maven.scm.ScmException</MissingClass>
+    <MissingClass>org.apache.maven.scm.ScmFile</MissingClass>
+    <MissingClass>org.apache.maven.scm.ScmFileSet</MissingClass>
+    <MissingClass>org.apache.maven.scm.ScmFileStatus</MissingClass>
+    <MissingClass>org.apache.maven.scm.ScmResult</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.update.UpdateScmResultWithRevision</MissingClass>
+    <MissingClass>org.apache.maven.scm.log.ScmLogger</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.AbstractScmProvider</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.ScmProviderRepository</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.ScmProviderRepositoryWithHost</MissingClass>
+    <MissingClass>org.apache.maven.scm.repository.ScmRepositoryException</MissingClass>
+    <MissingClass>org.apache.regexp.RE</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.IOUtil</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.ReaderFactory</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.StringUtils</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.Arg</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.Commandline</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.pull.MXParser</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.pull.XmlPullParser</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.pull.XmlPullParserException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 11 Jan 2010 15:35:10 +0200" total_classes="16" referenced_classes="58" total_bugs="4" total_size="957" num_packages="9" vm_version="20.4-b02-402" cpu_seconds="18.67" clock_seconds="17.01" peak_mbytes="66.10" alloc_mbytes="763.88" gc_seconds="0.17" priority_2="3" priority_1="1">
+    <PackageStats package="org.apache.maven.scm.provider.git" total_bugs="1" total_types="6" total_size="171" priority_1="1">
+      <ClassStats class="org.apache.maven.scm.provider.git.AbstractGitScmProvider" sourceFile="AbstractGitScmProvider.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.git.AbstractGitScmProvider$1" sourceFile="AbstractGitScmProvider.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.git.AbstractGitScmProvider$ScmUrlParserResult" sourceFile="AbstractGitScmProvider.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.git.GitChangeSet" sourceFile="GitChangeSet.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.git.GitCommandUtils" sourceFile="GitCommandUtils.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.git.GitConfigFileReader" sourceFile="GitConfigFileReader.java" interface="false" size="51" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.git.command" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="org.apache.maven.scm.provider.git.command.GitCommand" sourceFile="GitCommand.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.git.command.diff" total_bugs="0" total_types="1" total_size="66">
+      <ClassStats class="org.apache.maven.scm.provider.git.command.diff.GitDiffConsumer" sourceFile="GitDiffConsumer.java" interface="false" size="66" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.git.command.info" total_bugs="0" total_types="2" total_size="79">
+      <ClassStats class="org.apache.maven.scm.provider.git.command.info.GitInfoItem" sourceFile="GitInfoItem.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.git.command.info.GitInfoScmResult" sourceFile="GitInfoScmResult.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.git.command.update" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="org.apache.maven.scm.provider.git.command.update.GitUpdateScmResult" sourceFile="GitUpdateScmResult.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.git.repository" total_bugs="1" total_types="2" total_size="199" priority_2="1">
+      <ClassStats class="org.apache.maven.scm.provider.git.repository.GitScmProviderRepository" sourceFile="GitScmProviderRepository.java" interface="false" size="160" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.maven.scm.provider.git.repository.RepositoryUrl" sourceFile="RepositoryUrl.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.git.util" total_bugs="0" total_types="1" total_size="26">
+      <ClassStats class="org.apache.maven.scm.provider.git.util.GitUtil" sourceFile="GitUtil.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.providers.gitlib.settings" total_bugs="0" total_types="1" total_size="31">
+      <ClassStats class="org.apache.maven.scm.providers.gitlib.settings.Settings" sourceFile="Settings.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.providers.gitlib.settings.io.xpp3" total_bugs="2" total_types="1" total_size="380" priority_2="2">
+      <ClassStats class="org.apache.maven.scm.providers.gitlib.settings.io.xpp3.GitXpp3Reader" sourceFile="GitXpp3Reader.java" interface="false" size="380" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1770" invocations="471" avgMicrosecondsPerInvocation="3759" maxMicrosecondsPerInvocation="179462" standardDeviationMircosecondsPerInvocation="14610"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1371" invocations="58" avgMicrosecondsPerInvocation="23643" maxMicrosecondsPerInvocation="131541" standardDeviationMircosecondsPerInvocation="36158"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1151" invocations="58" avgMicrosecondsPerInvocation="19853" maxMicrosecondsPerInvocation="262456" standardDeviationMircosecondsPerInvocation="44660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="679" invocations="131" avgMicrosecondsPerInvocation="5190" maxMicrosecondsPerInvocation="251595" standardDeviationMircosecondsPerInvocation="22900"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="630" invocations="58" avgMicrosecondsPerInvocation="10862" maxMicrosecondsPerInvocation="129491" standardDeviationMircosecondsPerInvocation="25394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="615" invocations="131" avgMicrosecondsPerInvocation="4699" maxMicrosecondsPerInvocation="110503" standardDeviationMircosecondsPerInvocation="16331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="612" invocations="132" avgMicrosecondsPerInvocation="4643" maxMicrosecondsPerInvocation="106679" standardDeviationMircosecondsPerInvocation="14247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="598" invocations="131" avgMicrosecondsPerInvocation="4572" maxMicrosecondsPerInvocation="111410" standardDeviationMircosecondsPerInvocation="13901"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="585" invocations="132" avgMicrosecondsPerInvocation="4437" maxMicrosecondsPerInvocation="154910" standardDeviationMircosecondsPerInvocation="16958"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="487" invocations="248" avgMicrosecondsPerInvocation="1965" maxMicrosecondsPerInvocation="111917" standardDeviationMircosecondsPerInvocation="10071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="399" invocations="58" avgMicrosecondsPerInvocation="6883" maxMicrosecondsPerInvocation="120852" standardDeviationMircosecondsPerInvocation="21273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="355" invocations="58" avgMicrosecondsPerInvocation="6124" maxMicrosecondsPerInvocation="113832" standardDeviationMircosecondsPerInvocation="17401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="344" invocations="131" avgMicrosecondsPerInvocation="2628" maxMicrosecondsPerInvocation="83561" standardDeviationMircosecondsPerInvocation="9787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="250" invocations="474" avgMicrosecondsPerInvocation="529" maxMicrosecondsPerInvocation="68903" standardDeviationMircosecondsPerInvocation="4540"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="218" invocations="58" avgMicrosecondsPerInvocation="3768" maxMicrosecondsPerInvocation="115687" standardDeviationMircosecondsPerInvocation="15576"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="216" invocations="106" avgMicrosecondsPerInvocation="2045" maxMicrosecondsPerInvocation="70021" standardDeviationMircosecondsPerInvocation="9225"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="200" invocations="58" avgMicrosecondsPerInvocation="3458" maxMicrosecondsPerInvocation="51456" standardDeviationMircosecondsPerInvocation="10041"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="193" invocations="58" avgMicrosecondsPerInvocation="3331" maxMicrosecondsPerInvocation="166360" standardDeviationMircosecondsPerInvocation="21625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="182" invocations="58" avgMicrosecondsPerInvocation="3150" maxMicrosecondsPerInvocation="33560" standardDeviationMircosecondsPerInvocation="6807"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="176" invocations="131" avgMicrosecondsPerInvocation="1349" maxMicrosecondsPerInvocation="37383" standardDeviationMircosecondsPerInvocation="5909"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="175" invocations="76" avgMicrosecondsPerInvocation="2307" maxMicrosecondsPerInvocation="33294" standardDeviationMircosecondsPerInvocation="5951"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

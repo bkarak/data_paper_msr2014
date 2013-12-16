@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1225361185000" analysisTimestamp="1360895139919" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/bundles/ow2-util-ee-metadata-common-impl/1.0.9/ow2-util-ee-metadata-common-impl-1.0.9.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.util.asm.ClassReader">
+      <SourceLine classname="org.ow2.util.asm.ClassReader"/>
+    </Class>
+    <Method classname="org.ow2.util.asm.ClassReader" name="&lt;init&gt;" signature="([BII)V" isStatic="false">
+      <SourceLine classname="org.ow2.util.asm.ClassReader"/>
+    </Method>
+    <Field classname="org.ow2.util.asm.ClassReader" name="b" signature="[B" isStatic="false">
+      <SourceLine classname="org.ow2.util.asm.ClassReader"/>
+    </Field>
+    <LocalVariable name="?" register="1" pc="6" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.ow2.util.asm.ClassReader" startBytecode="6" endBytecode="6"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_STRINGS_WITH_EQ" priority="2" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="org.ow2.util.asm.ClassReader">
+      <SourceLine classname="org.ow2.util.asm.ClassReader"/>
+    </Class>
+    <Method classname="org.ow2.util.asm.ClassReader" name="accept" signature="(Lorg/ow2/util/asm/ClassVisitor;[Lorg/ow2/util/asm/Attribute;I)V" isStatic="false">
+      <SourceLine classname="org.ow2.util.asm.ClassReader" startBytecode="0" endBytecode="2518"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Field classname="org.ow2.util.asm.MethodWriter" name="g" signature="Ljava/lang/String;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.ow2.util.asm.MethodWriter"/>
+    </Field>
+    <LocalVariable name="?" register="21" pc="1925" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.ow2.util.asm.ClassReader" startBytecode="1928" endBytecode="1928"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.ow2.util.asm.Label">
+      <SourceLine classname="org.ow2.util.asm.Label"/>
+    </Class>
+    <Field classname="org.ow2.util.asm.Label" name="info" signature="Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.ow2.util.asm.Label"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="51">
+    <MissingClass>javax.ejb.TransactionAttributeType</MissingClass>
+    <MissingClass>javax.persistence.PersistenceContextType</MissingClass>
+    <MissingClass>org.ow2.util.ee.deploy.api.deployable.metadata.DeployableMetadataException</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.ICommonClassMetadata</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.ICommonFieldMetadata</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.ICommonMethodMetadata</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IAnnotationResource</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IAnnotationSecurityPermitAll</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IAnnotationSecurityRolesAllowed</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IEJBInterceptors</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IEjbEJB</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IEnvironmentRefAccessor</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IHandlerChain</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IInterceptorExcludeDefaultInterceptors</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IPersistenceContext</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IPersistenceUnit</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.ISharedMetadata</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.ITransactionAttribute</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IWebService</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.interfaces.IWebServiceRef</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.struct.IJAnnotationResource</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.struct.IJEjbEJB</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.struct.IJavaxPersistenceContext</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.struct.IJavaxPersistenceUnit</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.struct.IJaxwsWebServiceRef</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.struct.IJwsHandlerChain</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.struct.IJwsWebService</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.IAnnotationVisitor</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.IClassesLocator</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.IScanner</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.IType</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.configurator.metadata.ClassMetadataConfigurator</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.configurator.metadata.FieldMetadataConfigurator</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.configurator.metadata.MethodMetadataConfigurator</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.ClassMetadata</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.FieldMetadata</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.IClassMetadata</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.IFieldMetadata</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.IMethodMetadata</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.MethodMetadata</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.specific.ISpecificClassMetadata</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.specific.SpecificClassMetadata</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.specific.SpecificFieldMetadata</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.specific.SpecificMethodMetadata</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.structures.JClass</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.structures.JField</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.structures.JMethod</MissingClass>
+    <MissingClass>org.ow2.util.scan.impl.ASMScannerImpl</MissingClass>
+    <MissingClass>org.ow2.util.xml.XMLSerializer</MissingClass>
+    <MissingClass>org.ow2.util.xml.XMLUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 30 Oct 2008 12:06:25 +0200" total_classes="91" referenced_classes="149" total_bugs="3" total_size="6747" num_packages="12" vm_version="20.4-b02-402" cpu_seconds="49.49" clock_seconds="25.37" peak_mbytes="119.54" alloc_mbytes="763.88" gc_seconds="0.83" priority_2="3">
+    <PackageStats package="org.ow2.util.asm" total_bugs="3" total_types="20" total_size="4095" priority_2="3">
+      <ClassStats class="org.ow2.util.asm.AnnotationVisitor" sourceFile="&lt;Unknown&gt;" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.AnnotationWriter" sourceFile="&lt;Unknown&gt;" interface="false" size="163" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.Attribute" sourceFile="&lt;Unknown&gt;" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.ByteVector" sourceFile="&lt;Unknown&gt;" interface="false" size="108" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.ClassAdapter" sourceFile="&lt;Unknown&gt;" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.ClassReader" sourceFile="&lt;Unknown&gt;" interface="false" size="908" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.util.asm.ClassVisitor" sourceFile="&lt;Unknown&gt;" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.ClassWriter" sourceFile="&lt;Unknown&gt;" interface="false" size="394" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.Edge" sourceFile="&lt;Unknown&gt;" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.FieldVisitor" sourceFile="&lt;Unknown&gt;" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.FieldWriter" sourceFile="&lt;Unknown&gt;" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.Frame" sourceFile="&lt;Unknown&gt;" interface="false" size="437" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.Handler" sourceFile="&lt;Unknown&gt;" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.Item" sourceFile="&lt;Unknown&gt;" interface="false" size="77" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.Label" sourceFile="&lt;Unknown&gt;" interface="false" size="99" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.util.asm.MethodAdapter" sourceFile="&lt;Unknown&gt;" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.MethodVisitor" sourceFile="&lt;Unknown&gt;" interface="true" size="25" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.MethodWriter" sourceFile="&lt;Unknown&gt;" interface="false" size="1182" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.Opcodes" sourceFile="&lt;Unknown&gt;" interface="true" size="211" bugs="0"/>
+      <ClassStats class="org.ow2.util.asm.Type" sourceFile="&lt;Unknown&gt;" interface="false" size="249" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl" total_bugs="0" total_types="6" total_size="370">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.AbsDeployableMetadataFactory" sourceFile="AbsDeployableMetadataFactory.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.AbsEnvironmentRefAccessor" sourceFile="AbsEnvironmentRefAccessor.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.AbsSharedMetadata" sourceFile="AbsSharedMetadata.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.CommonClassMetadata" sourceFile="CommonClassMetadata.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.CommonFieldMetadata" sourceFile="CommonFieldMetadata.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.CommonMethodMetadata" sourceFile="CommonMethodMetadata.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl.configurator" total_bugs="0" total_types="4" total_size="56">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.CommonClassMetadataConfigurator" sourceFile="CommonClassMetadataConfigurator.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.CommonFieldMetadataConfigurator" sourceFile="CommonFieldMetadataConfigurator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.CommonMetadataConfigurator" sourceFile="CommonMetadataConfigurator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.CommonMethodMetadataConfigurator" sourceFile="CommonMethodMetadataConfigurator.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl.configurator.visitor" total_bugs="0" total_types="16" total_size="321">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.AbsAnnotationVisitor" sourceFile="AbsAnnotationVisitor.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.AnnotationType" sourceFile="AnnotationType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.EnumAnnotationVisitor" sourceFile="EnumAnnotationVisitor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxAnnotationResourceVisitor" sourceFile="JavaxAnnotationResourceVisitor.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxAnnotationSecurityPermitAllVisitor" sourceFile="JavaxAnnotationSecurityPermitAllVisitor.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxAnnotationSecurityRolesAllowedVisitor" sourceFile="JavaxAnnotationSecurityRolesAllowedVisitor.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxEjbEJBVisitor" sourceFile="JavaxEjbEJBVisitor.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxEjbTransactionAttributeVisitor" sourceFile="JavaxEjbTransactionAttributeVisitor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxInterceptorExcludeDefaultInterceptorsVisitor" sourceFile="JavaxInterceptorExcludeDefaultInterceptorsVisitor.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxInterceptorInterceptorsVisitor" sourceFile="JavaxInterceptorInterceptorsVisitor.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxJwsHandlerChainVisitor" sourceFile="JavaxJwsHandlerChainVisitor.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxPersistencePersistenceContextVisitor" sourceFile="JavaxPersistencePersistenceContextVisitor.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxPersistencePersistenceUnitVisitor" sourceFile="JavaxPersistencePersistenceUnitVisitor.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.JavaxXmlWsWebServiceRefVisitor" sourceFile="JavaxXmlWsWebServiceRefVisitor.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.ObjectAnnotationVisitor" sourceFile="ObjectAnnotationVisitor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.ObjectArrayAnnotationVisitor" sourceFile="ObjectArrayAnnotationVisitor.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl.configurator.visitor.clazz" total_bugs="0" total_types="6" total_size="152">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.clazz.JavaxAnnotationResourcesVisitor" sourceFile="JavaxAnnotationResourcesVisitor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.clazz.JavaxEjbEJBsVisitor" sourceFile="JavaxEjbEJBsVisitor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.clazz.JavaxJwsWebServiceVisitor" sourceFile="JavaxJwsWebServiceVisitor.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.clazz.JavaxPersistencePersistenceContextsVisitor" sourceFile="JavaxPersistencePersistenceContextsVisitor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.clazz.JavaxPersistencePersistenceUnitsVisitor" sourceFile="JavaxPersistencePersistenceUnitsVisitor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.clazz.JavaxXmlWsWebServiceRefsVisitor" sourceFile="JavaxXmlWsWebServiceRefsVisitor.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl.configurator.visitor.method" total_bugs="0" total_types="2" total_size="20">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.method.JavaxAnnotationPostConstructVisitor" sourceFile="JavaxAnnotationPostConstructVisitor.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.configurator.visitor.method.JavaxAnnotationPreDestroyVisitor" sourceFile="JavaxAnnotationPreDestroyVisitor.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl.enc" total_bugs="0" total_types="4" total_size="201">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.enc.AbsENCBindingBuilder" sourceFile="AbsENCBindingBuilder.java" interface="false" size="129" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.enc.ENCBinding" sourceFile="ENCBinding.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.enc.ENCBindingException" sourceFile="ENCBindingException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.enc.ENCBindingHolder" sourceFile="ENCBindingHolder.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl.specific" total_bugs="0" total_types="3" total_size="207">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.specific.SpecificCommonClassMetadata" sourceFile="SpecificCommonClassMetadata.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.specific.SpecificCommonFieldMetadata" sourceFile="SpecificCommonFieldMetadata.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.specific.SpecificCommonMethodMetadata" sourceFile="SpecificCommonMethodMetadata.java" interface="false" size="63" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl.struct" total_bugs="0" total_types="9" total_size="288">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.struct.EnvEntry" sourceFile="EnvEntry.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.struct.JAnnotationResource" sourceFile="JAnnotationResource.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.struct.JEjbEJB" sourceFile="JEjbEJB.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.struct.JInterceptors" sourceFile="JInterceptors.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.struct.JavaxPersistenceContext" sourceFile="JavaxPersistenceContext.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.struct.JavaxPersistenceUnit" sourceFile="JavaxPersistenceUnit.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.struct.JaxwsWebServiceRef" sourceFile="JaxwsWebServiceRef.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.struct.JwsHandlerChain" sourceFile="JwsHandlerChain.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.struct.JwsWebService" sourceFile="JwsWebService.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl.xml.merge" total_bugs="0" total_types="1" total_size="285">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.merge.MetadataMerge" sourceFile="MetadataMerge.java" interface="false" size="285" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl.xml.parsing" total_bugs="0" total_types="4" total_size="278">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.parsing.AbsDeploymentDescLoader" sourceFile="AbsDeploymentDescLoader.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.parsing.CommonDeploymentDescLoader" sourceFile="CommonDeploymentDescLoader.java" interface="false" size="216" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.parsing.IEntityResolver" sourceFile="IEntityResolver.java" interface="true" size="23" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.parsing.ParsingException" sourceFile="ParsingException.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.ee.metadata.common.impl.xml.struct" total_bugs="0" total_types="16" total_size="474">
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.AbsEJBRef" sourceFile="AbsEJBRef.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.AbsEnvironment" sourceFile="AbsEnvironment.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.AbsResourceGroup" sourceFile="AbsResourceGroup.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.ActivationConfig" sourceFile="ActivationConfig.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.AroundInvoke" sourceFile="AroundInvoke.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.EJBLocalRef" sourceFile="EJBLocalRef.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.EJBRef" sourceFile="EJBRef.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.EnvEntry" sourceFile="EnvEntry.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.InjectionTarget" sourceFile="InjectionTarget.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.LifeCycleCallback" sourceFile="LifeCycleCallback.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.MessageDestinationRef" sourceFile="MessageDestinationRef.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.MethodDD" sourceFile="MethodDD.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.PortComponentRef" sourceFile="PortComponentRef.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.ResourceEnvRef" sourceFile="ResourceEnvRef.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.ResourceRef" sourceFile="ResourceRef.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.ow2.util.ee.metadata.common.impl.xml.struct.ServiceRef" sourceFile="ServiceRef.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="2074" invocations="822" avgMicrosecondsPerInvocation="2524" maxMicrosecondsPerInvocation="189387" standardDeviationMircosecondsPerInvocation="8833"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1973" invocations="853" avgMicrosecondsPerInvocation="2313" maxMicrosecondsPerInvocation="372335" standardDeviationMircosecondsPerInvocation="14912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1909" invocations="827" avgMicrosecondsPerInvocation="2308" maxMicrosecondsPerInvocation="204405" standardDeviationMircosecondsPerInvocation="11106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1730" invocations="829" avgMicrosecondsPerInvocation="2087" maxMicrosecondsPerInvocation="285629" standardDeviationMircosecondsPerInvocation="11068"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1376" invocations="830" avgMicrosecondsPerInvocation="1658" maxMicrosecondsPerInvocation="272939" standardDeviationMircosecondsPerInvocation="10644"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="992" invocations="627" avgMicrosecondsPerInvocation="1582" maxMicrosecondsPerInvocation="151696" standardDeviationMircosecondsPerInvocation="7008"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="866" invocations="149" avgMicrosecondsPerInvocation="5813" maxMicrosecondsPerInvocation="97974" standardDeviationMircosecondsPerInvocation="13865"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="852" invocations="149" avgMicrosecondsPerInvocation="5724" maxMicrosecondsPerInvocation="136231" standardDeviationMircosecondsPerInvocation="15917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="794" invocations="553" avgMicrosecondsPerInvocation="1435" maxMicrosecondsPerInvocation="83052" standardDeviationMircosecondsPerInvocation="5032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="747" invocations="829" avgMicrosecondsPerInvocation="901" maxMicrosecondsPerInvocation="139724" standardDeviationMircosecondsPerInvocation="5220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="572" invocations="1106" avgMicrosecondsPerInvocation="517" maxMicrosecondsPerInvocation="56214" standardDeviationMircosecondsPerInvocation="2902"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="531" invocations="829" avgMicrosecondsPerInvocation="641" maxMicrosecondsPerInvocation="62388" standardDeviationMircosecondsPerInvocation="2979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="373" invocations="822" avgMicrosecondsPerInvocation="454" maxMicrosecondsPerInvocation="34963" standardDeviationMircosecondsPerInvocation="1923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="335" invocations="91" avgMicrosecondsPerInvocation="3683" maxMicrosecondsPerInvocation="87973" standardDeviationMircosecondsPerInvocation="11329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="300" invocations="13675" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="57493" standardDeviationMircosecondsPerInvocation="746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="299" invocations="822" avgMicrosecondsPerInvocation="364" maxMicrosecondsPerInvocation="52505" standardDeviationMircosecondsPerInvocation="2328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="297" invocations="149" avgMicrosecondsPerInvocation="1993" maxMicrosecondsPerInvocation="35979" standardDeviationMircosecondsPerInvocation="4566"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="271" invocations="149" avgMicrosecondsPerInvocation="1819" maxMicrosecondsPerInvocation="66848" standardDeviationMircosecondsPerInvocation="5748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="253" invocations="91" avgMicrosecondsPerInvocation="2781" maxMicrosecondsPerInvocation="52452" standardDeviationMircosecondsPerInvocation="6222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="197" invocations="149" avgMicrosecondsPerInvocation="1324" maxMicrosecondsPerInvocation="29271" standardDeviationMircosecondsPerInvocation="3320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InitializeNonnullFieldsInConstructor" totalMilliseconds="196" invocations="91" avgMicrosecondsPerInvocation="2155" maxMicrosecondsPerInvocation="95924" standardDeviationMircosecondsPerInvocation="11767"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="190" invocations="149" avgMicrosecondsPerInvocation="1279" maxMicrosecondsPerInvocation="53479" standardDeviationMircosecondsPerInvocation="4630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="185" invocations="91" avgMicrosecondsPerInvocation="2037" maxMicrosecondsPerInvocation="15220" standardDeviationMircosecondsPerInvocation="2896"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="185" invocations="91" avgMicrosecondsPerInvocation="2036" maxMicrosecondsPerInvocation="35605" standardDeviationMircosecondsPerInvocation="5164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="178" invocations="875" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="52398" standardDeviationMircosecondsPerInvocation="2151"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="157" invocations="521" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="14997" standardDeviationMircosecondsPerInvocation="1090"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="155" invocations="91" avgMicrosecondsPerInvocation="1711" maxMicrosecondsPerInvocation="63469" standardDeviationMircosecondsPerInvocation="6922"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

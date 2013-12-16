@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1281741144000" analysisTimestamp="1360516417055" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/activemq/activemq-optional/5.4.0/activemq-optional-5.4.0.jar</Jar>
+  </Project>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.activemq.benchmark.BenchmarkSupport">
+      <SourceLine classname="org.apache.activemq.benchmark.BenchmarkSupport" start="40" end="222" sourcefile="BenchmarkSupport.java" sourcepath="org/apache/activemq/benchmark/BenchmarkSupport.java"/>
+    </Class>
+    <Field classname="org.apache.activemq.benchmark.BenchmarkSupport" name="batch" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.activemq.benchmark.BenchmarkSupport" sourcefile="BenchmarkSupport.java" sourcepath="org/apache/activemq/benchmark/BenchmarkSupport.java"/>
+    </Field>
+    <SourceLine classname="org.apache.activemq.benchmark.BenchmarkSupport" start="41" end="41" startBytecode="13" endBytecode="13" sourcefile="BenchmarkSupport.java" sourcepath="org/apache/activemq/benchmark/BenchmarkSupport.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.apache.activemq.benchmark.BenchmarkSupport">
+      <SourceLine classname="org.apache.activemq.benchmark.BenchmarkSupport" start="40" end="222" sourcefile="BenchmarkSupport.java" sourcepath="org/apache/activemq/benchmark/BenchmarkSupport.java"/>
+    </Class>
+    <Field classname="org.apache.activemq.benchmark.BenchmarkSupport" name="destination" signature="Ljavax/jms/Destination;" isStatic="false">
+      <SourceLine classname="org.apache.activemq.benchmark.BenchmarkSupport" sourcefile="BenchmarkSupport.java" sourcepath="org/apache/activemq/benchmark/BenchmarkSupport.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.activemq.benchmark.Producer">
+      <SourceLine classname="org.apache.activemq.benchmark.Producer" start="37" end="187" sourcefile="Producer.java" sourcepath="org/apache/activemq/benchmark/Producer.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.benchmark.Producer" name="loadFile" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.activemq.benchmark.Producer" start="165" end="178" startBytecode="0" endBytecode="211" sourcefile="Producer.java" sourcepath="org/apache/activemq/benchmark/Producer.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="41" end="42" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.benchmark.Producer" start="168" end="168" startBytecode="42" endBytecode="42" sourcefile="Producer.java" sourcepath="org/apache/activemq/benchmark/Producer.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="org.apache.activemq.filter.XMLBeansXPathEvaluator">
+      <SourceLine classname="org.apache.activemq.filter.XMLBeansXPathEvaluator" start="32" end="59" sourcefile="XMLBeansXPathEvaluator.java" sourcepath="org/apache/activemq/filter/XMLBeansXPathEvaluator.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.filter.XMLBeansXPathEvaluator" name="evaluate" signature="(Lorg/apache/activemq/command/Message;)Z" isStatic="false">
+      <SourceLine classname="org.apache.activemq.filter.XMLBeansXPathEvaluator" start="37" end="59" startBytecode="0" endBytecode="353" sourcefile="XMLBeansXPathEvaluator.java" sourcepath="org/apache/activemq/filter/XMLBeansXPathEvaluator.java"/>
+    </Method>
+    <LocalVariable name="object" register="4" pc="109" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.xmlbeans.XmlObject$Factory" name="parse" signature="(Ljava/io/InputStream;)Lorg/apache/xmlbeans/XmlObject;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.xmlbeans.XmlObject$Factory"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.filter.XMLBeansXPathEvaluator" start="53" end="53" startBytecode="102" endBytecode="102" sourcefile="XMLBeansXPathEvaluator.java" sourcepath="org/apache/activemq/filter/XMLBeansXPathEvaluator.java"/>
+    <SourceLine classname="org.apache.activemq.filter.XMLBeansXPathEvaluator" start="54" end="54" startBytecode="111" endBytecode="111" sourcefile="XMLBeansXPathEvaluator.java" sourcepath="org/apache/activemq/filter/XMLBeansXPathEvaluator.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="org.apache.activemq.filter.XMLBeansXPathEvaluator">
+      <SourceLine classname="org.apache.activemq.filter.XMLBeansXPathEvaluator" start="32" end="59" sourcefile="XMLBeansXPathEvaluator.java" sourcepath="org/apache/activemq/filter/XMLBeansXPathEvaluator.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.filter.XMLBeansXPathEvaluator" name="evaluate" signature="(Lorg/apache/activemq/command/Message;)Z" isStatic="false">
+      <SourceLine classname="org.apache.activemq.filter.XMLBeansXPathEvaluator" start="37" end="59" startBytecode="0" endBytecode="353" sourcefile="XMLBeansXPathEvaluator.java" sourcepath="org/apache/activemq/filter/XMLBeansXPathEvaluator.java"/>
+    </Method>
+    <LocalVariable name="object" register="3" pc="34" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.xmlbeans.XmlObject$Factory" name="parse" signature="(Ljava/lang/String;)Lorg/apache/xmlbeans/XmlObject;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.xmlbeans.XmlObject$Factory"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.filter.XMLBeansXPathEvaluator" start="41" end="41" startBytecode="27" endBytecode="27" sourcefile="XMLBeansXPathEvaluator.java" sourcepath="org/apache/activemq/filter/XMLBeansXPathEvaluator.java"/>
+    <SourceLine classname="org.apache.activemq.filter.XMLBeansXPathEvaluator" start="42" end="42" startBytecode="35" endBytecode="35" sourcefile="XMLBeansXPathEvaluator.java" sourcepath="org/apache/activemq/filter/XMLBeansXPathEvaluator.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.activemq.store.amq.AMQJournalTool">
+      <SourceLine classname="org.apache.activemq.store.amq.AMQJournalTool" start="59" end="350" sourcefile="AMQJournalTool.java" sourcepath="org/apache/activemq/store/amq/AMQJournalTool.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.store.amq.AMQJournalTool" name="process" signature="(Lorg/apache/activemq/store/amq/Entry;)V" isStatic="false">
+      <SourceLine classname="org.apache.activemq.store.amq.AMQJournalTool" start="192" end="257" startBytecode="0" endBytecode="131" sourcefile="AMQJournalTool.java" sourcepath="org/apache/activemq/store/amq/AMQJournalTool.java"/>
+    </Method>
+    <LocalVariable name="location" register="2" pc="5" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.activemq.store.amq.AMQJournalTool" start="192" end="192" startBytecode="4" endBytecode="4" sourcefile="AMQJournalTool.java" sourcepath="org/apache/activemq/store/amq/AMQJournalTool.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="location"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.activemq.store.amq.AMQJournalTool">
+      <SourceLine classname="org.apache.activemq.store.amq.AMQJournalTool" start="59" end="350" sourcefile="AMQJournalTool.java" sourcepath="org/apache/activemq/store/amq/AMQJournalTool.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.store.amq.AMQJournalTool" name="display" signature="(Lorg/apache/activemq/store/amq/Entry;)V" isStatic="false">
+      <SourceLine classname="org.apache.activemq.store.amq.AMQJournalTool" start="277" end="304" startBytecode="0" endBytecode="357" sourcefile="AMQJournalTool.java" sourcepath="org/apache/activemq/store/amq/AMQJournalTool.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.store.amq.AMQJournalTool" start="297" end="297" startBytecode="136" endBytecode="136" sourcefile="AMQJournalTool.java" sourcepath="org/apache/activemq/store/amq/AMQJournalTool.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.activemq.store.amq.AMQJournalTool">
+      <SourceLine classname="org.apache.activemq.store.amq.AMQJournalTool" start="59" end="350" sourcefile="AMQJournalTool.java" sourcepath="org/apache/activemq/store/amq/AMQJournalTool.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.store.amq.AMQJournalTool" name="showHelp" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.activemq.store.amq.AMQJournalTool" start="182" end="188" startBytecode="0" endBytecode="140" sourcefile="AMQJournalTool.java" sourcepath="org/apache/activemq/store/amq/AMQJournalTool.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="590" end="591" startBytecode="0" endBytecode="43" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.store.amq.AMQJournalTool" start="183" end="183" startBytecode="14" endBytecode="14" sourcefile="AMQJournalTool.java" sourcepath="org/apache/activemq/store/amq/AMQJournalTool.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.activemq.store.amq.AMQJournalToolCommand">
+      <SourceLine classname="org.apache.activemq.store.amq.AMQJournalToolCommand" start="25" end="42" sourcefile="AMQJournalToolCommand.java" sourcepath="org/apache/activemq/store/amq/AMQJournalToolCommand.java"/>
+    </Class>
+    <Field classname="org.apache.activemq.store.amq.AMQJournalToolCommand" name="context" signature="Lorg/apache/activemq/console/CommandContext;" isStatic="false">
+      <SourceLine classname="org.apache.activemq.store.amq.AMQJournalToolCommand" sourcefile="AMQJournalToolCommand.java" sourcepath="org/apache/activemq/store/amq/AMQJournalToolCommand.java"/>
+    </Field>
+    <SourceLine classname="org.apache.activemq.store.amq.AMQJournalToolCommand" start="41" end="41" startBytecode="2" endBytecode="2" sourcefile="AMQJournalToolCommand.java" sourcepath="org/apache/activemq/store/amq/AMQJournalToolCommand.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.apache.activemq.store.amq.CommandLineSupport">
+      <SourceLine classname="org.apache.activemq.store.amq.CommandLineSupport" start="31" end="121" sourcefile="CommandLineSupport.java" sourcepath="org/apache/activemq/store/amq/CommandLineSupport.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.store.amq.CommandLineSupport" name="convertOptionToPropertyName" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.activemq.store.amq.CommandLineSupport" start="103" end="121" startBytecode="0" endBytecode="212" sourcefile="CommandLineSupport.java" sourcepath="org/apache/activemq/store/amq/CommandLineSupport.java"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.store.amq.CommandLineSupport" start="115" end="115" startBytecode="53" endBytecode="53" sourcefile="CommandLineSupport.java" sourcepath="org/apache/activemq/store/amq/CommandLineSupport.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.activemq.store.amq.CustomResourceLoader">
+      <SourceLine classname="org.apache.activemq.store.amq.CustomResourceLoader" start="30" end="95" sourcefile="CustomResourceLoader.java" sourcepath="org/apache/activemq/store/amq/CustomResourceLoader.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.store.amq.CustomResourceLoader" name="getResourceStream" signature="(Ljava/lang/String;)Ljava/io/InputStream;" isStatic="false">
+      <SourceLine classname="org.apache.activemq.store.amq.CustomResourceLoader" start="51" end="76" startBytecode="0" endBytecode="268" sourcefile="CustomResourceLoader.java" sourcepath="org/apache/activemq/store/amq/CustomResourceLoader.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.store.amq.CustomResourceLoader" start="69" end="69" startBytecode="72" endBytecode="72" sourcefile="CustomResourceLoader.java" sourcepath="org/apache/activemq/store/amq/CustomResourceLoader.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.activemq.tool.ConsumerTool">
+      <SourceLine classname="org.apache.activemq.tool.ConsumerTool" start="35" end="133" sourcefile="ConsumerTool.java" sourcepath="org/apache/activemq/tool/ConsumerTool.java"/>
+    </Class>
+    <Field classname="org.apache.activemq.tool.ConsumerTool" name="dumpCount" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.activemq.tool.ConsumerTool" sourcefile="ConsumerTool.java" sourcepath="org/apache/activemq/tool/ConsumerTool.java"/>
+    </Field>
+    <SourceLine classname="org.apache.activemq.tool.ConsumerTool" start="38" end="38" startBytecode="7" endBytecode="7" sourcefile="ConsumerTool.java" sourcepath="org/apache/activemq/tool/ConsumerTool.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.apache.activemq.tool.ConsumerTool">
+      <SourceLine classname="org.apache.activemq.tool.ConsumerTool" start="35" end="133" sourcefile="ConsumerTool.java" sourcepath="org/apache/activemq/tool/ConsumerTool.java"/>
+    </Class>
+    <Field classname="org.apache.activemq.tool.ConsumerTool" name="count" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.activemq.tool.ConsumerTool" sourcefile="ConsumerTool.java" sourcepath="org/apache/activemq/tool/ConsumerTool.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" abbrev="AT" category="MT_CORRECTNESS">
+    <Class classname="org.apache.activemq.transport.discovery.http.DiscoveryRegistryServlet">
+      <SourceLine classname="org.apache.activemq.transport.discovery.http.DiscoveryRegistryServlet" start="33" end="104" sourcefile="DiscoveryRegistryServlet.java" sourcepath="org/apache/activemq/transport/discovery/http/DiscoveryRegistryServlet.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.transport.discovery.http.DiscoveryRegistryServlet" name="getServiceGroup" signature="(Ljava/lang/String;)Ljava/util/concurrent/ConcurrentHashMap;" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.discovery.http.DiscoveryRegistryServlet" start="50" end="55" startBytecode="0" endBytecode="131" sourcefile="DiscoveryRegistryServlet.java" sourcepath="org/apache/activemq/transport/discovery/http/DiscoveryRegistryServlet.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="159" end="1280" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="880" end="883" startBytecode="0" endBytecode="68" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.transport.discovery.http.DiscoveryRegistryServlet" start="53" end="53" startBytecode="30" endBytecode="30" sourcefile="DiscoveryRegistryServlet.java" sourcepath="org/apache/activemq/transport/discovery/http/DiscoveryRegistryServlet.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent">
+      <SourceLine classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" start="41" end="347" sourcefile="HTTPDiscoveryAgent.java" sourcepath="org/apache/activemq/transport/discovery/http/HTTPDiscoveryAgent.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" name="doLookup" signature="(J)Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" start="126" end="148" startBytecode="0" endBytecode="461" sourcefile="HTTPDiscoveryAgent.java" sourcepath="org/apache/activemq/transport/discovery/http/HTTPDiscoveryAgent.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="590" end="591" startBytecode="0" endBytecode="43" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" start="134" end="134" startBytecode="111" endBytecode="111" sourcefile="HTTPDiscoveryAgent.java" sourcepath="org/apache/activemq/transport/discovery/http/HTTPDiscoveryAgent.java"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent">
+      <SourceLine classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" start="41" end="347" sourcefile="HTTPDiscoveryAgent.java" sourcepath="org/apache/activemq/transport/discovery/http/HTTPDiscoveryAgent.java"/>
+    </Class>
+    <Field classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" name="registryURL" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" sourcefile="HTTPDiscoveryAgent.java" sourcepath="org/apache/activemq/transport/discovery/http/HTTPDiscoveryAgent.java"/>
+    </Field>
+    <Int value="60" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" start="330" end="330" startBytecode="2" endBytecode="2" sourcefile="HTTPDiscoveryAgent.java" sourcepath="org/apache/activemq/transport/discovery/http/HTTPDiscoveryAgent.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" start="326" end="326" startBytecode="1" endBytecode="1" sourcefile="HTTPDiscoveryAgent.java" sourcepath="org/apache/activemq/transport/discovery/http/HTTPDiscoveryAgent.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" start="107" end="107" startBytecode="1" endBytecode="1" sourcefile="HTTPDiscoveryAgent.java" sourcepath="org/apache/activemq/transport/discovery/http/HTTPDiscoveryAgent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" start="126" end="126" startBytecode="8" endBytecode="8" sourcefile="HTTPDiscoveryAgent.java" sourcepath="org/apache/activemq/transport/discovery/http/HTTPDiscoveryAgent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" start="94" end="94" startBytecode="1" endBytecode="1" sourcefile="HTTPDiscoveryAgent.java" sourcepath="org/apache/activemq/transport/discovery/http/HTTPDiscoveryAgent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="2" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="org.apache.activemq.transport.http.HttpClientTransport">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpClientTransport" start="52" end="227" sourcefile="HttpClientTransport.java" sourcepath="org/apache/activemq/transport/http/HttpClientTransport.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.transport.http.HttpClientTransport" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpClientTransport" start="114" end="155" startBytecode="0" endBytecode="637" sourcefile="HttpClientTransport.java" sourcepath="org/apache/activemq/transport/http/HttpClientTransport.java"/>
+    </Method>
+    <Field classname="org.apache.activemq.transport.http.HttpClientTransport" name="receiveCounter" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpClientTransport" sourcefile="HttpClientTransport.java" sourcepath="org/apache/activemq/transport/http/HttpClientTransport.java"/>
+    </Field>
+    <SourceLine classname="org.apache.activemq.transport.http.HttpClientTransport" start="139" end="139" startBytecode="195" endBytecode="195" sourcefile="HttpClientTransport.java" sourcepath="org/apache/activemq/transport/http/HttpClientTransport.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.activemq.transport.http.HttpTransport">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTransport" start="42" end="234" sourcefile="HttpTransport.java" sourcepath="org/apache/activemq/transport/http/HttpTransport.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.transport.http.HttpTransport" name="oneway" signature="(Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTransport" start="60" end="87" startBytecode="0" endBytecode="421" sourcefile="HttpTransport.java" sourcepath="org/apache/activemq/transport/http/HttpTransport.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.transport.http.HttpTransport" start="76" end="76" startBytecode="88" endBytecode="88" sourcefile="HttpTransport.java" sourcepath="org/apache/activemq/transport/http/HttpTransport.java"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.activemq.transport.http.HttpTransport">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTransport" start="42" end="234" sourcefile="HttpTransport.java" sourcepath="org/apache/activemq/transport/http/HttpTransport.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.transport.http.HttpTransport" name="oneway" signature="(Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTransport" start="60" end="87" startBytecode="0" endBytecode="89" sourcefile="HttpTransport.java" sourcepath="org/apache/activemq/transport/http/HttpTransport.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/Writer;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.Writer" start="33" end="277" sourcefile="Writer.java" sourcepath="java/io/Writer.java"/>
+    </Type>
+    <SourceLine classname="org.apache.activemq.transport.http.HttpTransport" start="76" end="76" startBytecode="80" endBytecode="80" sourcefile="HttpTransport.java" sourcepath="org/apache/activemq/transport/http/HttpTransport.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="2" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="org.apache.activemq.transport.http.HttpTransport">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTransport" start="42" end="234" sourcefile="HttpTransport.java" sourcepath="org/apache/activemq/transport/http/HttpTransport.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.transport.http.HttpTransport" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTransport" start="90" end="135" startBytecode="0" endBytecode="704" sourcefile="HttpTransport.java" sourcepath="org/apache/activemq/transport/http/HttpTransport.java"/>
+    </Method>
+    <Field classname="org.apache.activemq.transport.http.HttpTransport" name="receiveCounter" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTransport" sourcefile="HttpTransport.java" sourcepath="org/apache/activemq/transport/http/HttpTransport.java"/>
+    </Field>
+    <SourceLine classname="org.apache.activemq.transport.http.HttpTransport" start="106" end="106" startBytecode="122" endBytecode="122" sourcefile="HttpTransport.java" sourcepath="org/apache/activemq/transport/http/HttpTransport.java"/>
+  </BugInstance>
+  <BugInstance type="SWL_SLEEP_WITH_LOCK_HELD" priority="2" abbrev="SWL" category="MT_CORRECTNESS">
+    <Class classname="org.apache.activemq.transport.http.HttpTunnelServlet">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTunnelServlet" start="47" end="201" sourcefile="HttpTunnelServlet.java" sourcepath="org/apache/activemq/transport/http/HttpTunnelServlet.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.transport.http.HttpTunnelServlet" name="createTransportChannel" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)Lorg/apache/activemq/transport/http/BlockingQueueTransport;" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTunnelServlet" start="166" end="193" startBytecode="0" endBytecode="400" sourcefile="HttpTunnelServlet.java" sourcepath="org/apache/activemq/transport/http/HttpTunnelServlet.java"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.transport.http.HttpTunnelServlet" start="188" end="188" startBytecode="172" endBytecode="172" sourcefile="HttpTunnelServlet.java" sourcepath="org/apache/activemq/transport/http/HttpTunnelServlet.java"/>
+  </BugInstance>
+  <BugInstance type="XSS_REQUEST_PARAMETER_TO_SEND_ERROR" priority="2" abbrev="XSS" category="SECURITY">
+    <Class classname="org.apache.activemq.transport.http.HttpTunnelServlet">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTunnelServlet" start="47" end="201" sourcefile="HttpTunnelServlet.java" sourcepath="org/apache/activemq/transport/http/HttpTunnelServlet.java"/>
+    </Class>
+    <Method classname="org.apache.activemq.transport.http.HttpTunnelServlet" name="createTransportChannel" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)Lorg/apache/activemq/transport/http/BlockingQueueTransport;" isStatic="false">
+      <SourceLine classname="org.apache.activemq.transport.http.HttpTunnelServlet" start="166" end="193" startBytecode="0" endBytecode="400" sourcefile="HttpTunnelServlet.java" sourcepath="org/apache/activemq/transport/http/HttpTunnelServlet.java"/>
+    </Method>
+    <SourceLine classname="org.apache.activemq.transport.http.HttpTunnelServlet" start="177" end="177" startBytecode="89" endBytecode="89" sourcefile="HttpTunnelServlet.java" sourcepath="org/apache/activemq/transport/http/HttpTunnelServlet.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="121">
+    <MissingClass>com.thoughtworks.xstream.XStream</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.io.HierarchicalStreamDriver</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.io.xml.PrettyPrintWriter</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.io.xml.XppReader</MissingClass>
+    <MissingClass>javax.jms.BytesMessage</MissingClass>
+    <MissingClass>javax.jms.Connection</MissingClass>
+    <MissingClass>javax.jms.ConnectionFactory</MissingClass>
+    <MissingClass>javax.jms.Destination</MissingClass>
+    <MissingClass>javax.jms.JMSException</MissingClass>
+    <MissingClass>javax.jms.Message</MissingClass>
+    <MissingClass>javax.jms.MessageConsumer</MissingClass>
+    <MissingClass>javax.jms.MessageListener</MissingClass>
+    <MissingClass>javax.jms.MessageProducer</MissingClass>
+    <MissingClass>javax.jms.ObjectMessage</MissingClass>
+    <MissingClass>javax.jms.Session</MissingClass>
+    <MissingClass>javax.jms.TextMessage</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>junit.framework.Assert</MissingClass>
+    <MissingClass>junit.framework.TestCase</MissingClass>
+    <MissingClass>org.apache.activemq.ActiveMQConnection</MissingClass>
+    <MissingClass>org.apache.activemq.ActiveMQConnectionFactory</MissingClass>
+    <MissingClass>org.apache.activemq.MessageTransformerSupport</MissingClass>
+    <MissingClass>org.apache.activemq.Service</MissingClass>
+    <MissingClass>org.apache.activemq.broker.BrokerService</MissingClass>
+    <MissingClass>org.apache.activemq.command.ActiveMQBlobMessage</MissingClass>
+    <MissingClass>org.apache.activemq.command.ActiveMQMapMessage</MissingClass>
+    <MissingClass>org.apache.activemq.command.ActiveMQMessage</MissingClass>
+    <MissingClass>org.apache.activemq.command.ActiveMQQueue</MissingClass>
+    <MissingClass>org.apache.activemq.command.ActiveMQTextMessage</MissingClass>
+    <MissingClass>org.apache.activemq.command.Command</MissingClass>
+    <MissingClass>org.apache.activemq.command.ConnectionInfo</MissingClass>
+    <MissingClass>org.apache.activemq.command.DataStructure</MissingClass>
+    <MissingClass>org.apache.activemq.command.DiscoveryEvent</MissingClass>
+    <MissingClass>org.apache.activemq.command.JournalTransaction</MissingClass>
+    <MissingClass>org.apache.activemq.command.Message</MissingClass>
+    <MissingClass>org.apache.activemq.command.ShutdownInfo</MissingClass>
+    <MissingClass>org.apache.activemq.command.WireFormatInfo</MissingClass>
+    <MissingClass>org.apache.activemq.filter.BooleanExpression</MissingClass>
+    <MissingClass>org.apache.activemq.filter.MessageEvaluationContext</MissingClass>
+    <MissingClass>org.apache.activemq.kaha.impl.async.AsyncDataManager</MissingClass>
+    <MissingClass>org.apache.activemq.kaha.impl.async.ReadOnlyAsyncDataManager</MissingClass>
+    <MissingClass>org.apache.activemq.management.JMSConnectionStatsImpl</MissingClass>
+    <MissingClass>org.apache.activemq.openwire.OpenWireFormat</MissingClass>
+    <MissingClass>org.apache.activemq.selector.SelectorParser</MissingClass>
+    <MissingClass>org.apache.activemq.transport.TransportAcceptListener</MissingClass>
+    <MissingClass>org.apache.activemq.transport.TransportFactory</MissingClass>
+    <MissingClass>org.apache.activemq.transport.TransportLogger</MissingClass>
+    <MissingClass>org.apache.activemq.transport.TransportLoggerFactory</MissingClass>
+    <MissingClass>org.apache.activemq.transport.TransportServerSupport</MissingClass>
+    <MissingClass>org.apache.activemq.transport.TransportSupport</MissingClass>
+    <MissingClass>org.apache.activemq.transport.TransportThreadSupport</MissingClass>
+    <MissingClass>org.apache.activemq.transport.discovery.DiscoveryAgentFactory</MissingClass>
+    <MissingClass>org.apache.activemq.transport.discovery.DiscoveryListener</MissingClass>
+    <MissingClass>org.apache.activemq.transport.stomp.LegacyFrameTranslator</MissingClass>
+    <MissingClass>org.apache.activemq.transport.stomp.ProtocolConverter</MissingClass>
+    <MissingClass>org.apache.activemq.transport.stomp.StompFrame</MissingClass>
+    <MissingClass>org.apache.activemq.transport.stomp.StompWireFormat</MissingClass>
+    <MissingClass>org.apache.activemq.util.ByteArrayInputStream</MissingClass>
+    <MissingClass>org.apache.activemq.util.ByteArrayOutputStream</MissingClass>
+    <MissingClass>org.apache.activemq.util.ByteSequence</MissingClass>
+    <MissingClass>org.apache.activemq.util.Callback</MissingClass>
+    <MissingClass>org.apache.activemq.util.IOExceptionSupport</MissingClass>
+    <MissingClass>org.apache.activemq.util.IdGenerator</MissingClass>
+    <MissingClass>org.apache.activemq.util.IndentPrinter</MissingClass>
+    <MissingClass>org.apache.activemq.util.IntrospectionSupport</MissingClass>
+    <MissingClass>org.apache.activemq.util.ServiceStopper</MissingClass>
+    <MissingClass>org.apache.activemq.util.URISupport</MissingClass>
+    <MissingClass>org.apache.activemq.wireformat.WireFormat</MissingClass>
+    <MissingClass>org.apache.activemq.xbean.BrokerFactoryBean</MissingClass>
+    <MissingClass>org.apache.axis.components.jms.BeanVendorAdapter</MissingClass>
+    <MissingClass>org.apache.axis.transport.jms.JMSURLHelper</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HostConfiguration</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpClient</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.DeleteMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.GetMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.HeadMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.InputStreamRequestEntity</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.PostMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.PutMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpClientParams</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.log4j.AppenderSkeleton</MissingClass>
+    <MissingClass>org.apache.log4j.Level</MissingClass>
+    <MissingClass>org.apache.log4j.helpers.LogLog</MissingClass>
+    <MissingClass>org.apache.log4j.spi.ErrorHandler</MissingClass>
+    <MissingClass>org.apache.log4j.spi.LoggingEvent</MissingClass>
+    <MissingClass>org.apache.velocity.Template</MissingClass>
+    <MissingClass>org.apache.velocity.VelocityContext</MissingClass>
+    <MissingClass>org.apache.velocity.app.VelocityEngine</MissingClass>
+    <MissingClass>org.apache.velocity.exception.ResourceNotFoundException</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.resource.loader.FileResourceLoader</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.resource.loader.ResourceLoader</MissingClass>
+    <MissingClass>org.apache.xmlbeans.XmlObject</MissingClass>
+    <MissingClass>org.apache.xmlbeans.XmlObject$Factory</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.Connector</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.Server</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.bio.SocketConnector</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.handler.ContextHandler</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.nio.SelectChannelConnector</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.session.SessionHandler</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.ssl.SslSocketConnector</MissingClass>
+    <MissingClass>org.eclipse.jetty.servlet.ServletContextHandler</MissingClass>
+    <MissingClass>org.eclipse.jetty.servlet.ServletHandler</MissingClass>
+    <MissingClass>org.eclipse.jetty.servlet.ServletHolder</MissingClass>
+    <MissingClass>org.eclipse.jetty.servlet.ServletMapping</MissingClass>
+    <MissingClass>org.eclipse.jetty.webapp.WebAppContext</MissingClass>
+    <MissingClass>org.eclipse.jetty.websocket.WebSocket$Outbound</MissingClass>
+    <MissingClass>org.eclipse.jetty.websocket.WebSocketServlet</MissingClass>
+    <MissingClass>org.josql.Query</MissingClass>
+    <MissingClass>org.josql.QueryResults</MissingClass>
+    <MissingClass>org.springframework.core.io.ClassPathResource</MissingClass>
+    <MissingClass>org.springframework.oxm.AbstractMarshaller</MissingClass>
+    <MissingClass>org.springframework.xml.transform.StringResult</MissingClass>
+    <MissingClass>org.springframework.xml.transform.StringSource</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 14 Aug 2010 02:12:24 +0300" total_classes="67" referenced_classes="178" total_bugs="22" total_size="2922" num_packages="15" vm_version="20.4-b02-402" cpu_seconds="34.62" clock_seconds="18.92" peak_mbytes="86.17" alloc_mbytes="763.88" gc_seconds="0.43" priority_2="16" priority_1="6">
+    <PackageStats package="org.apache.activemq.axis" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="org.apache.activemq.axis.ActiveMQVendorAdapter" sourceFile="ActiveMQVendorAdapter.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.benchmark" total_bugs="3" total_types="6" total_size="334" priority_2="2" priority_1="1">
+      <ClassStats class="org.apache.activemq.benchmark.BenchmarkSupport" sourceFile="BenchmarkSupport.java" interface="false" size="124" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.activemq.benchmark.BenchmarkSupport$1" sourceFile="BenchmarkSupport.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.activemq.benchmark.Consumer" sourceFile="Consumer.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.activemq.benchmark.Producer" sourceFile="Producer.java" interface="false" size="95" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.activemq.benchmark.Producer$1" sourceFile="Producer.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.activemq.benchmark.ProducerConsumer" sourceFile="ProducerConsumer.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.filter" total_bugs="2" total_types="2" total_size="57" priority_2="2">
+      <ClassStats class="org.apache.activemq.filter.JAXPXPathEvaluator" sourceFile="JAXPXPathEvaluator.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.activemq.filter.XMLBeansXPathEvaluator" sourceFile="XMLBeansXPathEvaluator.java" interface="false" size="24" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.store.amq" total_bugs="6" total_types="6" total_size="370" priority_2="3" priority_1="3">
+      <ClassStats class="org.apache.activemq.store.amq.AMQJournalTool" sourceFile="AMQJournalTool.java" interface="false" size="217" bugs="3" priority_2="1" priority_1="2"/>
+      <ClassStats class="org.apache.activemq.store.amq.AMQJournalToolCommand" sourceFile="AMQJournalToolCommand.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.activemq.store.amq.CommandLineSupport" sourceFile="CommandLineSupport.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.activemq.store.amq.CustomResourceLoader" sourceFile="CustomResourceLoader.java" interface="false" size="39" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.activemq.store.amq.Entry" sourceFile="Entry.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.activemq.store.amq.MessageBodyFormatter" sourceFile="MessageBodyFormatter.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.store.amq.reader" total_bugs="0" total_types="3" total_size="124">
+      <ClassStats class="org.apache.activemq.store.amq.reader.AMQIterator" sourceFile="AMQIterator.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.activemq.store.amq.reader.AMQReader" sourceFile="AMQReader.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.apache.activemq.store.amq.reader.MessageLocation" sourceFile="MessageLocation.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.tool" total_bugs="2" total_types="9" total_size="434" priority_2="2">
+      <ClassStats class="org.apache.activemq.tool.AcidTestTool" sourceFile="AcidTestTool.java" interface="false" size="132" bugs="0"/>
+      <ClassStats class="org.apache.activemq.tool.AcidTestTool$ConsumerWorker" sourceFile="AcidTestTool.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.activemq.tool.AcidTestTool$ProducerWorker" sourceFile="AcidTestTool.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.activemq.tool.AcidTestTool$Worker" sourceFile="AcidTestTool.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.activemq.tool.ConsumerTool" sourceFile="ConsumerTool.java" interface="false" size="73" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.activemq.tool.JndiProducerTool" sourceFile="JndiProducerTool.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.activemq.tool.ProducerTool" sourceFile="ProducerTool.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.apache.activemq.tool.ToolSupport" sourceFile="ToolSupport.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.activemq.tool.WebServer" sourceFile="WebServer.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.transport.discovery.http" total_bugs="3" total_types="7" total_size="364" priority_2="2" priority_1="1">
+      <ClassStats class="org.apache.activemq.transport.discovery.http.DiscoveryRegistryServlet" sourceFile="DiscoveryRegistryServlet.java" interface="false" size="54" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.activemq.transport.discovery.http.EmbeddedJettyServer" sourceFile="EmbeddedJettyServer.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent" sourceFile="HTTPDiscoveryAgent.java" interface="false" size="186" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent$1" sourceFile="HTTPDiscoveryAgent.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent$2" sourceFile="HTTPDiscoveryAgent.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgent$SimpleDiscoveryEvent" sourceFile="HTTPDiscoveryAgent.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.discovery.http.HTTPDiscoveryAgentFactory" sourceFile="HTTPDiscoveryAgentFactory.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.transport.http" total_bugs="6" total_types="11" total_size="537" priority_2="5" priority_1="1">
+      <ClassStats class="org.apache.activemq.transport.http.BlockingQueueTransport" sourceFile="BlockingQueueTransport.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.http.HttpClientTransport" sourceFile="HttpClientTransport.java" interface="false" size="119" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.activemq.transport.http.HttpEmbeddedTunnelServlet" sourceFile="HttpEmbeddedTunnelServlet.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.http.HttpSpringEmbeddedTunnelServlet" sourceFile="HttpSpringEmbeddedTunnelServlet.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.http.HttpTransport" sourceFile="HttpTransport.java" interface="false" size="119" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.apache.activemq.transport.http.HttpTransport$1" sourceFile="HttpTransport.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.http.HttpTransport$2" sourceFile="HttpTransport.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.http.HttpTransportFactory" sourceFile="HttpTransportFactory.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.http.HttpTransportServer" sourceFile="HttpTransportServer.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.http.HttpTransportSupport" sourceFile="HttpTransportSupport.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.http.HttpTunnelServlet" sourceFile="HttpTunnelServlet.java" interface="false" size="103" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.transport.https" total_bugs="0" total_types="4" total_size="106">
+      <ClassStats class="org.apache.activemq.transport.https.HttpsClientTransport" sourceFile="HttpsClientTransport.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.https.HttpsTransport" sourceFile="HttpsTransport.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.https.HttpsTransportFactory" sourceFile="HttpsTransportFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.https.HttpsTransportServer" sourceFile="HttpsTransportServer.java" interface="false" size="74" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.transport.util" total_bugs="0" total_types="1" total_size="30">
+      <ClassStats class="org.apache.activemq.transport.util.TextWireFormat" sourceFile="TextWireFormat.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.transport.ws" total_bugs="0" total_types="4" total_size="110">
+      <ClassStats class="org.apache.activemq.transport.ws.StompServlet" sourceFile="StompServlet.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.ws.StompSocket" sourceFile="StompSocket.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.ws.WSTransportFactory" sourceFile="WSTransportFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.ws.WSTransportServer" sourceFile="WSTransportServer.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.transport.xstream" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="org.apache.activemq.transport.xstream.XStreamWireFormat" sourceFile="XStreamWireFormat.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.activemq.transport.xstream.XStreamWireFormatFactory" sourceFile="XStreamWireFormatFactory.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.util" total_bugs="0" total_types="3" total_size="198">
+      <ClassStats class="org.apache.activemq.util.JmsLogAppender" sourceFile="JmsLogAppender.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.activemq.util.JmsLogAppenderSupport" sourceFile="JmsLogAppenderSupport.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.apache.activemq.util.JndiJmsLogAppender" sourceFile="JndiJmsLogAppender.java" interface="false" size="78" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.util.oxm" total_bugs="0" total_types="5" total_size="105">
+      <ClassStats class="org.apache.activemq.util.oxm.AbstractXMLMessageTransformer" sourceFile="AbstractXMLMessageTransformer.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.activemq.util.oxm.AbstractXMLMessageTransformer$1" sourceFile="AbstractXMLMessageTransformer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.activemq.util.oxm.AbstractXMLMessageTransformer$MessageTransform" sourceFile="AbstractXMLMessageTransformer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.activemq.util.oxm.OXMMessageTransformer" sourceFile="OXMMessageTransformer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.activemq.util.oxm.XStreamMessageTransformer" sourceFile="XStreamMessageTransformer.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.activemq.util.xstream" total_bugs="0" total_types="3" total_size="81">
+      <ClassStats class="org.apache.activemq.util.xstream.XStreamMessageTransformer" sourceFile="XStreamMessageTransformer.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.apache.activemq.util.xstream.XStreamMessageTransformer$1" sourceFile="XStreamMessageTransformer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.activemq.util.xstream.XStreamMessageTransformer$MessageTransform" sourceFile="XStreamMessageTransformer.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="1548" invocations="95" avgMicrosecondsPerInvocation="16296" maxMicrosecondsPerInvocation="95666" standardDeviationMircosecondsPerInvocation="25204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1097" invocations="508" avgMicrosecondsPerInvocation="2159" maxMicrosecondsPerInvocation="240425" standardDeviationMircosecondsPerInvocation="14571"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1086" invocations="486" avgMicrosecondsPerInvocation="2236" maxMicrosecondsPerInvocation="187173" standardDeviationMircosecondsPerInvocation="9827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1080" invocations="178" avgMicrosecondsPerInvocation="6071" maxMicrosecondsPerInvocation="89428" standardDeviationMircosecondsPerInvocation="12086"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="964" invocations="178" avgMicrosecondsPerInvocation="5419" maxMicrosecondsPerInvocation="51675" standardDeviationMircosecondsPerInvocation="10590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="954" invocations="486" avgMicrosecondsPerInvocation="1963" maxMicrosecondsPerInvocation="201887" standardDeviationMircosecondsPerInvocation="10915"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="909" invocations="861" avgMicrosecondsPerInvocation="1056" maxMicrosecondsPerInvocation="35356" standardDeviationMircosecondsPerInvocation="3298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="791" invocations="499" avgMicrosecondsPerInvocation="1587" maxMicrosecondsPerInvocation="131877" standardDeviationMircosecondsPerInvocation="7761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="781" invocations="487" avgMicrosecondsPerInvocation="1605" maxMicrosecondsPerInvocation="153779" standardDeviationMircosecondsPerInvocation="7871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="467" invocations="67" avgMicrosecondsPerInvocation="6973" maxMicrosecondsPerInvocation="168186" standardDeviationMircosecondsPerInvocation="22750"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="445" invocations="842" avgMicrosecondsPerInvocation="529" maxMicrosecondsPerInvocation="44391" standardDeviationMircosecondsPerInvocation="2343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="431" invocations="178" avgMicrosecondsPerInvocation="2423" maxMicrosecondsPerInvocation="53651" standardDeviationMircosecondsPerInvocation="5633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="412" invocations="487" avgMicrosecondsPerInvocation="846" maxMicrosecondsPerInvocation="28463" standardDeviationMircosecondsPerInvocation="2704"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="383" invocations="298" avgMicrosecondsPerInvocation="1288" maxMicrosecondsPerInvocation="59330" standardDeviationMircosecondsPerInvocation="5148"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="291" invocations="487" avgMicrosecondsPerInvocation="598" maxMicrosecondsPerInvocation="67645" standardDeviationMircosecondsPerInvocation="3925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="253" invocations="67" avgMicrosecondsPerInvocation="3783" maxMicrosecondsPerInvocation="118824" standardDeviationMircosecondsPerInvocation="16183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="218" invocations="178" avgMicrosecondsPerInvocation="1228" maxMicrosecondsPerInvocation="24440" standardDeviationMircosecondsPerInvocation="2634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="179" invocations="455" avgMicrosecondsPerInvocation="394" maxMicrosecondsPerInvocation="52062" standardDeviationMircosecondsPerInvocation="3036"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="174" invocations="178" avgMicrosecondsPerInvocation="977" maxMicrosecondsPerInvocation="27340" standardDeviationMircosecondsPerInvocation="2912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="169" invocations="178" avgMicrosecondsPerInvocation="953" maxMicrosecondsPerInvocation="22282" standardDeviationMircosecondsPerInvocation="2242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="168" invocations="67" avgMicrosecondsPerInvocation="2510" maxMicrosecondsPerInvocation="40566" standardDeviationMircosecondsPerInvocation="5934"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="167" invocations="178" avgMicrosecondsPerInvocation="938" maxMicrosecondsPerInvocation="20983" standardDeviationMircosecondsPerInvocation="2203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="164" invocations="319" avgMicrosecondsPerInvocation="516" maxMicrosecondsPerInvocation="42699" standardDeviationMircosecondsPerInvocation="2775"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

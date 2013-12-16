@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1301997206000" analysisTimestamp="1360931688789" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/com/vaadin/vaadin-maven-plugin/1.0.2/vaadin-maven-plugin-1.0.2.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="com.vaadin.integration.maven.UpdateWidgetsetMojo">
+      <SourceLine classname="com.vaadin.integration.maven.UpdateWidgetsetMojo" start="41" end="304" sourcefile="UpdateWidgetsetMojo.java" sourcepath="com/vaadin/integration/maven/UpdateWidgetsetMojo.java"/>
+    </Class>
+    <Method classname="com.vaadin.integration.maven.UpdateWidgetsetMojo" name="getModules" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.vaadin.integration.maven.UpdateWidgetsetMojo" start="149" end="199" startBytecode="0" endBytecode="666" sourcefile="UpdateWidgetsetMojo.java" sourcepath="com/vaadin/integration/maven/UpdateWidgetsetMojo.java"/>
+    </Method>
+    <Field classname="com.vaadin.integration.maven.UpdateWidgetsetMojo" name="modules" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.vaadin.integration.maven.UpdateWidgetsetMojo" sourcefile="UpdateWidgetsetMojo.java" sourcepath="com/vaadin/integration/maven/UpdateWidgetsetMojo.java"/>
+    </Field>
+    <SourceLine classname="com.vaadin.integration.maven.UpdateWidgetsetMojo" start="199" end="199" startBytecode="362" endBytecode="362" sourcefile="UpdateWidgetsetMojo.java" sourcepath="com/vaadin/integration/maven/UpdateWidgetsetMojo.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="com.vaadin.integration.maven.UpdateWidgetsetMojo$JavaShell">
+      <SourceLine classname="com.vaadin.integration.maven.UpdateWidgetsetMojo$JavaShell" start="285" end="296" sourcefile="UpdateWidgetsetMojo.java" sourcepath="com/vaadin/integration/maven/UpdateWidgetsetMojo.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="16">
+    <MissingClass>org.apache.maven.model.Resource</MissingClass>
+    <MissingClass>org.apache.maven.plugin.AbstractMojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.codehaus.mojo.gwt.ClasspathBuilder</MissingClass>
+    <MissingClass>org.codehaus.mojo.gwt.ClasspathBuilderException</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.DirectoryScanner</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.Os</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.StringUtils</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.CommandLineException</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.CommandLineTimeOutException</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.CommandLineUtils</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.Commandline</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.StreamConsumer</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.shell.Shell</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 5 Apr 2011 12:53:26 +0300" total_classes="5" referenced_classes="26" total_bugs="2" total_size="160" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="13.97" clock_seconds="8.40" peak_mbytes="55.03" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="2">
+    <PackageStats package="com.vaadin.integration.maven" total_bugs="2" total_types="5" total_size="160" priority_2="2">
+      <ClassStats class="com.vaadin.integration.maven.UpdateWidgetsetMojo" sourceFile="UpdateWidgetsetMojo.java" interface="false" size="92" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vaadin.integration.maven.UpdateWidgetsetMojo$1" sourceFile="UpdateWidgetsetMojo.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.vaadin.integration.maven.UpdateWidgetsetMojo$2" sourceFile="UpdateWidgetsetMojo.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.vaadin.integration.maven.UpdateWidgetsetMojo$JavaCommand" sourceFile="UpdateWidgetsetMojo.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.vaadin.integration.maven.UpdateWidgetsetMojo$JavaShell" sourceFile="UpdateWidgetsetMojo.java" interface="false" size="12" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="972" invocations="364" avgMicrosecondsPerInvocation="2671" maxMicrosecondsPerInvocation="59767" standardDeviationMircosecondsPerInvocation="6653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="428" invocations="26" avgMicrosecondsPerInvocation="16483" maxMicrosecondsPerInvocation="104193" standardDeviationMircosecondsPerInvocation="27042"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="378" invocations="20" avgMicrosecondsPerInvocation="18946" maxMicrosecondsPerInvocation="271322" standardDeviationMircosecondsPerInvocation="58569"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="353" invocations="20" avgMicrosecondsPerInvocation="17696" maxMicrosecondsPerInvocation="196600" standardDeviationMircosecondsPerInvocation="44694"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="336" invocations="20" avgMicrosecondsPerInvocation="16821" maxMicrosecondsPerInvocation="180438" standardDeviationMircosecondsPerInvocation="40557"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="328" invocations="26" avgMicrosecondsPerInvocation="12630" maxMicrosecondsPerInvocation="84656" standardDeviationMircosecondsPerInvocation="19122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="301" invocations="21" avgMicrosecondsPerInvocation="14358" maxMicrosecondsPerInvocation="96055" standardDeviationMircosecondsPerInvocation="25646"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="290" invocations="20" avgMicrosecondsPerInvocation="14513" maxMicrosecondsPerInvocation="144756" standardDeviationMircosecondsPerInvocation="32755"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="273" invocations="20" avgMicrosecondsPerInvocation="13674" maxMicrosecondsPerInvocation="175485" standardDeviationMircosecondsPerInvocation="38405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="232" invocations="26" avgMicrosecondsPerInvocation="8934" maxMicrosecondsPerInvocation="59487" standardDeviationMircosecondsPerInvocation="13894"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="170" invocations="165" avgMicrosecondsPerInvocation="1031" maxMicrosecondsPerInvocation="23477" standardDeviationMircosecondsPerInvocation="2307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="169" invocations="20" avgMicrosecondsPerInvocation="8468" maxMicrosecondsPerInvocation="49197" standardDeviationMircosecondsPerInvocation="13791"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="167" invocations="26" avgMicrosecondsPerInvocation="6444" maxMicrosecondsPerInvocation="46260" standardDeviationMircosecondsPerInvocation="11479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="109" invocations="20" avgMicrosecondsPerInvocation="5466" maxMicrosecondsPerInvocation="103504" standardDeviationMircosecondsPerInvocation="22493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="108" invocations="20" avgMicrosecondsPerInvocation="5445" maxMicrosecondsPerInvocation="32120" standardDeviationMircosecondsPerInvocation="9830"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="101" invocations="367" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="38109" standardDeviationMircosecondsPerInvocation="2294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="92" invocations="26" avgMicrosecondsPerInvocation="3562" maxMicrosecondsPerInvocation="40108" standardDeviationMircosecondsPerInvocation="8005"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

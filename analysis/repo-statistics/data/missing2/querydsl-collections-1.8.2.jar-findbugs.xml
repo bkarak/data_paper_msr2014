@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1279637116000" analysisTimestamp="1360917955809" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/com/mysema/querydsl/querydsl-collections/1.8.2/querydsl-collections-1.8.2.jar</Jar>
+  </Project>
+  <BugInstance type="CN_IDIOM_NO_SUPER_CALL" priority="2" abbrev="CN" category="BAD_PRACTICE">
+    <Class classname="com.mysema.query.collections.ColQueryImpl">
+      <SourceLine classname="com.mysema.query.collections.ColQueryImpl" start="17" end="56" sourcefile="ColQueryImpl.java" sourcepath="com/mysema/query/collections/ColQueryImpl.java"/>
+    </Class>
+    <Method classname="com.mysema.query.collections.ColQueryImpl" name="clone" signature="()Lcom/mysema/query/collections/ColQueryImpl;" isStatic="false">
+      <SourceLine classname="com.mysema.query.collections.ColQueryImpl" start="49" end="49" startBytecode="0" endBytecode="60" sourcefile="ColQueryImpl.java" sourcepath="com/mysema/query/collections/ColQueryImpl.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="RV_NEGATING_RESULT_OF_COMPARETO" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="com.mysema.util.MultiComparator">
+      <SourceLine classname="com.mysema.util.MultiComparator" start="23" end="52" sourcefile="MultiComparator.java" sourcepath="com/mysema/util/MultiComparator.java"/>
+    </Class>
+    <Method classname="com.mysema.util.MultiComparator" name="innerCompare" signature="([Ljava/lang/Object;[Ljava/lang/Object;)I" isStatic="false">
+      <SourceLine classname="com.mysema.util.MultiComparator" start="46" end="52" startBytecode="0" endBytecode="198" sourcefile="MultiComparator.java" sourcepath="com/mysema/util/MultiComparator.java"/>
+    </Method>
+    <Method classname="java.util.Comparator" name="compare" signature="(Ljava/lang/Object;Ljava/lang/Object;)I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Comparator" sourcefile="Comparator.java" sourcepath="java/util/Comparator.java"/>
+    </Method>
+    <LocalVariable name="res" register="4" pc="45" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.mysema.util.MultiComparator" start="49" end="49" startBytecode="45" endBytecode="45" sourcefile="MultiComparator.java" sourcepath="com/mysema/util/MultiComparator.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="41">
+    <MissingClass>com.mysema.codegen.ClassUtils</MissingClass>
+    <MissingClass>com.mysema.codegen.Evaluator</MissingClass>
+    <MissingClass>com.mysema.codegen.EvaluatorFactory</MissingClass>
+    <MissingClass>com.mysema.codegen.Type</MissingClass>
+    <MissingClass>com.mysema.commons.lang.Assert</MissingClass>
+    <MissingClass>com.mysema.commons.lang.IteratorAdapter</MissingClass>
+    <MissingClass>com.mysema.query.DefaultQueryMetadata</MissingClass>
+    <MissingClass>com.mysema.query.JoinExpression</MissingClass>
+    <MissingClass>com.mysema.query.JoinType</MissingClass>
+    <MissingClass>com.mysema.query.QueryException</MissingClass>
+    <MissingClass>com.mysema.query.QueryMetadata</MissingClass>
+    <MissingClass>com.mysema.query.QueryModifiers</MissingClass>
+    <MissingClass>com.mysema.query.SearchResults</MissingClass>
+    <MissingClass>com.mysema.query.alias.Alias</MissingClass>
+    <MissingClass>com.mysema.query.serialization.JavaTemplates</MissingClass>
+    <MissingClass>com.mysema.query.serialization.SerializerBase</MissingClass>
+    <MissingClass>com.mysema.query.support.ProjectableQuery</MissingClass>
+    <MissingClass>com.mysema.query.support.QueryMixin</MissingClass>
+    <MissingClass>com.mysema.query.types.Constant</MissingClass>
+    <MissingClass>com.mysema.query.types.EConstructor</MissingClass>
+    <MissingClass>com.mysema.query.types.Expr</MissingClass>
+    <MissingClass>com.mysema.query.types.Operation</MissingClass>
+    <MissingClass>com.mysema.query.types.Ops</MissingClass>
+    <MissingClass>com.mysema.query.types.Ops$DateTimeOps</MissingClass>
+    <MissingClass>com.mysema.query.types.Order</MissingClass>
+    <MissingClass>com.mysema.query.types.OrderSpecifier</MissingClass>
+    <MissingClass>com.mysema.query.types.ParamNotSetException</MissingClass>
+    <MissingClass>com.mysema.query.types.Path</MissingClass>
+    <MissingClass>com.mysema.query.types.PathMetadata</MissingClass>
+    <MissingClass>com.mysema.query.types.PathType</MissingClass>
+    <MissingClass>com.mysema.query.types.Template</MissingClass>
+    <MissingClass>com.mysema.query.types.Template$Element</MissingClass>
+    <MissingClass>com.mysema.query.types.expr.EArrayConstructor</MissingClass>
+    <MissingClass>com.mysema.query.types.expr.ExprConst</MissingClass>
+    <MissingClass>com.mysema.query.types.expr.OSimple</MissingClass>
+    <MissingClass>com.mysema.query.types.path.PMap</MissingClass>
+    <MissingClass>org.apache.commons.collections15.BeanMap</MissingClass>
+    <MissingClass>org.apache.commons.collections15.IteratorUtils</MissingClass>
+    <MissingClass>org.apache.commons.collections15.comparators.ComparableComparator</MissingClass>
+    <MissingClass>org.apache.commons.lang.ClassUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 20 Jul 2010 17:45:16 +0300" total_classes="18" referenced_classes="64" total_bugs="2" total_size="621" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="16.09" clock_seconds="9.62" peak_mbytes="67.92" alloc_mbytes="763.88" gc_seconds="0.22" priority_2="2">
+    <PackageStats package="com.mysema.query.collections" total_bugs="1" total_types="14" total_size="517" priority_2="1">
+      <ClassStats class="com.mysema.query.collections.AbstractColQuery" sourceFile="AbstractColQuery.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.ColDeleteClause" sourceFile="ColDeleteClause.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.ColQuery" sourceFile="ColQuery.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.ColQueryFunctions" sourceFile="ColQueryFunctions.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.ColQueryImpl" sourceFile="ColQueryImpl.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="com.mysema.query.collections.ColQuerySerializer" sourceFile="ColQuerySerializer.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.ColQueryTemplates" sourceFile="ColQueryTemplates.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.ColUpdateClause" sourceFile="ColUpdateClause.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.DefaultEvaluatorFactory" sourceFile="DefaultEvaluatorFactory.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.DefaultQueryEngine" sourceFile="DefaultQueryEngine.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.EvaluatorTransformer" sourceFile="EvaluatorTransformer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.MiniApi" sourceFile="MiniApi.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.QueryEngine" sourceFile="QueryEngine.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.mysema.query.collections.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysema.util" total_bugs="1" total_types="4" total_size="104" priority_2="1">
+      <ClassStats class="com.mysema.util.ArrayUtils" sourceFile="ArrayUtils.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mysema.util.LimitingIterator" sourceFile="LimitingIterator.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.mysema.util.MultiComparator" sourceFile="MultiComparator.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="com.mysema.util.MultiIterator" sourceFile="MultiIterator.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="926" invocations="542" avgMicrosecondsPerInvocation="1708" maxMicrosecondsPerInvocation="93842" standardDeviationMircosecondsPerInvocation="6224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="554" invocations="64" avgMicrosecondsPerInvocation="8664" maxMicrosecondsPerInvocation="120138" standardDeviationMircosecondsPerInvocation="21751"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="481" invocations="105" avgMicrosecondsPerInvocation="4586" maxMicrosecondsPerInvocation="46787" standardDeviationMircosecondsPerInvocation="8725"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="449" invocations="110" avgMicrosecondsPerInvocation="4089" maxMicrosecondsPerInvocation="68879" standardDeviationMircosecondsPerInvocation="9528"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="426" invocations="64" avgMicrosecondsPerInvocation="6669" maxMicrosecondsPerInvocation="69256" standardDeviationMircosecondsPerInvocation="13511"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="377" invocations="94" avgMicrosecondsPerInvocation="4016" maxMicrosecondsPerInvocation="57301" standardDeviationMircosecondsPerInvocation="9375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="365" invocations="112" avgMicrosecondsPerInvocation="3262" maxMicrosecondsPerInvocation="83842" standardDeviationMircosecondsPerInvocation="10320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="348" invocations="110" avgMicrosecondsPerInvocation="3171" maxMicrosecondsPerInvocation="71262" standardDeviationMircosecondsPerInvocation="8891"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="346" invocations="64" avgMicrosecondsPerInvocation="5417" maxMicrosecondsPerInvocation="57584" standardDeviationMircosecondsPerInvocation="12673"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="344" invocations="320" avgMicrosecondsPerInvocation="1076" maxMicrosecondsPerInvocation="20189" standardDeviationMircosecondsPerInvocation="2775"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="298" invocations="107" avgMicrosecondsPerInvocation="2792" maxMicrosecondsPerInvocation="73838" standardDeviationMircosecondsPerInvocation="8597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="265" invocations="110" avgMicrosecondsPerInvocation="2410" maxMicrosecondsPerInvocation="41978" standardDeviationMircosecondsPerInvocation="5961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="196" invocations="441" avgMicrosecondsPerInvocation="445" maxMicrosecondsPerInvocation="38233" standardDeviationMircosecondsPerInvocation="2721"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="188" invocations="18" avgMicrosecondsPerInvocation="10474" maxMicrosecondsPerInvocation="164873" standardDeviationMircosecondsPerInvocation="37515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="171" invocations="64" avgMicrosecondsPerInvocation="2675" maxMicrosecondsPerInvocation="36577" standardDeviationMircosecondsPerInvocation="6296"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="165" invocations="110" avgMicrosecondsPerInvocation="1507" maxMicrosecondsPerInvocation="28390" standardDeviationMircosecondsPerInvocation="4191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="147" invocations="114" avgMicrosecondsPerInvocation="1290" maxMicrosecondsPerInvocation="35237" standardDeviationMircosecondsPerInvocation="4197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="137" invocations="64" avgMicrosecondsPerInvocation="2142" maxMicrosecondsPerInvocation="17799" standardDeviationMircosecondsPerInvocation="4005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="135" invocations="64" avgMicrosecondsPerInvocation="2120" maxMicrosecondsPerInvocation="34952" standardDeviationMircosecondsPerInvocation="6051"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="120" invocations="64" avgMicrosecondsPerInvocation="1884" maxMicrosecondsPerInvocation="14732" standardDeviationMircosecondsPerInvocation="3660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="116" invocations="548" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="29156" standardDeviationMircosecondsPerInvocation="1530"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1268941586000" analysisTimestamp="1360503261689" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/cxf/cxf-rt-management/2.2.7/cxf-rt-management-2.2.7.jar</Jar>
+  </Project>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.cxf.management.interceptor.AbstractMessageResponseTimeInterceptor">
+      <SourceLine classname="org.apache.cxf.management.interceptor.AbstractMessageResponseTimeInterceptor" start="43" end="148" sourcefile="AbstractMessageResponseTimeInterceptor.java" sourcepath="org/apache/cxf/management/interceptor/AbstractMessageResponseTimeInterceptor.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.management.interceptor.AbstractMessageResponseTimeInterceptor" name="increaseCounter" signature="(Lorg/apache/cxf/message/Exchange;Lorg/apache/cxf/management/counters/MessageHandlingTimeRecorder;)V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.management.interceptor.AbstractMessageResponseTimeInterceptor" start="91" end="148" startBytecode="0" endBytecode="897" sourcefile="AbstractMessageResponseTimeInterceptor.java" sourcepath="org/apache/cxf/management/interceptor/AbstractMessageResponseTimeInterceptor.java"/>
+    </Method>
+    <LocalVariable name="bus" register="3" pc="42" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.cxf.management.interceptor.AbstractMessageResponseTimeInterceptor" start="99" end="99" startBytecode="45" endBytecode="45" sourcefile="AbstractMessageResponseTimeInterceptor.java" sourcepath="org/apache/cxf/management/interceptor/AbstractMessageResponseTimeInterceptor.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.cxf.management.interceptor.AbstractMessageResponseTimeInterceptor" start="92" end="92" startBytecode="15" endBytecode="15" sourcefile="AbstractMessageResponseTimeInterceptor.java" sourcepath="org/apache/cxf/management/interceptor/AbstractMessageResponseTimeInterceptor.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.apache.cxf.management.interceptor.AbstractMessageResponseTimeInterceptor" start="93" end="93" startBytecode="18" endBytecode="18" sourcefile="AbstractMessageResponseTimeInterceptor.java" sourcepath="org/apache/cxf/management/interceptor/AbstractMessageResponseTimeInterceptor.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.cxf.management.jmx.MBServerConnectorFactory">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="42" end="178" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="createConnector" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="119" end="171" startBytecode="0" endBytecode="405" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Method>
+    <Field classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="connectorServer" signature="Ljavax/management/remote/JMXConnectorServer;" isStatic="true">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Field>
+    <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="144" end="144" startBytecode="102" endBytecode="102" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.cxf.management.jmx.MBServerConnectorFactory">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="42" end="178" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="createConnector" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="119" end="171" startBytecode="0" endBytecode="405" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Method>
+    <Field classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="server" signature="Ljavax/management/MBeanServer;" isStatic="true">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Field>
+    <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="120" end="120" startBytecode="9" endBytecode="9" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.cxf.management.jmx.MBServerConnectorFactory">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="42" end="178" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="setDaemon" signature="(Z)V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="113" end="114" startBytecode="0" endBytecode="60" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Method>
+    <Field classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="daemon" signature="Z" isStatic="true">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Field>
+    <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="113" end="113" startBytecode="1" endBytecode="1" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.cxf.management.jmx.MBServerConnectorFactory">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="42" end="178" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="setEnvironment" signature="(Ljava/util/Map;)V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="105" end="106" startBytecode="0" endBytecode="78" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Method>
+    <Field classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="environment" signature="Ljava/util/Map;" isStatic="true">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Field>
+    <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="105" end="105" startBytecode="1" endBytecode="1" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.cxf.management.jmx.MBServerConnectorFactory">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="42" end="178" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="setMBeanServer" signature="(Ljavax/management/MBeanServer;)V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="97" end="98" startBytecode="0" endBytecode="60" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Method>
+    <Field classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="server" signature="Ljavax/management/MBeanServer;" isStatic="true">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Field>
+    <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="97" end="97" startBytecode="1" endBytecode="1" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.cxf.management.jmx.MBServerConnectorFactory">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="42" end="178" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="setServiceUrl" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="101" end="102" startBytecode="0" endBytecode="60" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Method>
+    <Field classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="serviceUrl" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Field>
+    <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="101" end="101" startBytecode="1" endBytecode="1" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.cxf.management.jmx.MBServerConnectorFactory">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="42" end="178" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="setThreaded" signature="(Z)V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="109" end="110" startBytecode="0" endBytecode="60" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Method>
+    <Field classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" name="threaded" signature="Z" isStatic="true">
+      <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+    </Field>
+    <SourceLine classname="org.apache.cxf.management.jmx.MBServerConnectorFactory" start="109" end="109" startBytecode="1" endBytecode="1" sourcefile="MBServerConnectorFactory.java" sourcepath="org/apache/cxf/management/jmx/MBServerConnectorFactory.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.cxf.management.jmx.export.runtime.ModelMBeanAssembler$ManagedAttributeInfo">
+      <SourceLine classname="org.apache.cxf.management.jmx.export.runtime.ModelMBeanAssembler$ManagedAttributeInfo" start="119" end="119" sourcefile="ModelMBeanAssembler.java" sourcepath="org/apache/cxf/management/jmx/export/runtime/ModelMBeanAssembler.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.cxf.management.utils.ManagementConsole">
+      <SourceLine classname="org.apache.cxf.management.utils.ManagementConsole" start="46" end="256" sourcefile="ManagementConsole.java" sourcepath="org/apache/cxf/management/utils/ManagementConsole.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.management.utils.ManagementConsole" name="getManagedObjectAttributes" signature="(Ljavax/management/ObjectName;)V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.management.utils.ManagementConsole" start="59" end="78" startBytecode="0" endBytecode="303" sourcefile="ManagementConsole.java" sourcepath="org/apache/cxf/management/utils/ManagementConsole.java"/>
+    </Method>
+    <LocalVariable name="attrs" register="3" pc="33" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="javax.management.MBeanInfo" name="getAttributes" signature="()[Ljavax/management/MBeanAttributeInfo;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="javax.management.MBeanInfo" start="283" end="287" startBytecode="0" endBytecode="58" sourcefile="MBeanInfo.java" sourcepath="javax/management/MBeanInfo.java"/>
+    </Method>
+    <SourceLine classname="org.apache.cxf.management.utils.ManagementConsole" start="65" end="65" startBytecode="34" endBytecode="34" sourcefile="ManagementConsole.java" sourcepath="org/apache/cxf/management/utils/ManagementConsole.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.cxf.management.utils.ManagementConsole">
+      <SourceLine classname="org.apache.cxf.management.utils.ManagementConsole" start="46" end="256" sourcefile="ManagementConsole.java" sourcepath="org/apache/cxf/management/utils/ManagementConsole.java"/>
+    </Class>
+    <Method classname="org.apache.cxf.management.utils.ManagementConsole" name="connectToMBserver" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.cxf.management.utils.ManagementConsole" start="82" end="86" startBytecode="0" endBytecode="125" sourcefile="ManagementConsole.java" sourcepath="org/apache/cxf/management/utils/ManagementConsole.java"/>
+    </Method>
+    <Field classname="org.apache.cxf.management.utils.ManagementConsole" name="mbsc" signature="Ljavax/management/MBeanServerConnection;" isStatic="true">
+      <SourceLine classname="org.apache.cxf.management.utils.ManagementConsole" sourcefile="ManagementConsole.java" sourcepath="org/apache/cxf/management/utils/ManagementConsole.java"/>
+    </Field>
+    <SourceLine classname="org.apache.cxf.management.utils.ManagementConsole" start="85" end="85" startBytecode="44" endBytecode="44" sourcefile="ManagementConsole.java" sourcepath="org/apache/cxf/management/utils/ManagementConsole.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="26">
+    <MissingClass>org.apache.cxf.Bus</MissingClass>
+    <MissingClass>org.apache.cxf.BusFactory</MissingClass>
+    <MissingClass>org.apache.cxf.bus.ManagedBus</MissingClass>
+    <MissingClass>org.apache.cxf.buslifecycle.BusLifeCycleManager</MissingClass>
+    <MissingClass>org.apache.cxf.common.logging.LogUtils</MissingClass>
+    <MissingClass>org.apache.cxf.endpoint.Endpoint</MissingClass>
+    <MissingClass>org.apache.cxf.feature.AbstractFeature</MissingClass>
+    <MissingClass>org.apache.cxf.helpers.CastUtils</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.InterceptorChain</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.InterceptorProvider</MissingClass>
+    <MissingClass>org.apache.cxf.management.InstrumentationManager</MissingClass>
+    <MissingClass>org.apache.cxf.management.ManagedComponent</MissingClass>
+    <MissingClass>org.apache.cxf.management.annotation.ManagedAttribute</MissingClass>
+    <MissingClass>org.apache.cxf.management.annotation.ManagedNotification</MissingClass>
+    <MissingClass>org.apache.cxf.management.annotation.ManagedNotifications</MissingClass>
+    <MissingClass>org.apache.cxf.management.annotation.ManagedOperation</MissingClass>
+    <MissingClass>org.apache.cxf.management.annotation.ManagedOperationParameter</MissingClass>
+    <MissingClass>org.apache.cxf.management.annotation.ManagedOperationParameters</MissingClass>
+    <MissingClass>org.apache.cxf.management.annotation.ManagedResource</MissingClass>
+    <MissingClass>org.apache.cxf.message.Exchange</MissingClass>
+    <MissingClass>org.apache.cxf.message.FaultMode</MissingClass>
+    <MissingClass>org.apache.cxf.message.Message</MissingClass>
+    <MissingClass>org.apache.cxf.phase.AbstractPhaseInterceptor</MissingClass>
+    <MissingClass>org.apache.cxf.service.Service</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.EndpointInfo</MissingClass>
+    <MissingClass>org.apache.cxf.service.model.OperationInfo</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 18 Mar 2010 21:46:26 +0200" total_classes="24" referenced_classes="121" total_bugs="11" total_size="1046" num_packages="6" vm_version="20.4-b02-402" cpu_seconds="19.75" clock_seconds="10.48" peak_mbytes="70.57" alloc_mbytes="763.88" gc_seconds="0.19" priority_2="3" priority_1="8">
+    <PackageStats package="org.apache.cxf.management" total_bugs="0" total_types="3" total_size="41">
+      <ClassStats class="org.apache.cxf.management.JMXConnectorPolicyType" sourceFile="JMXConnectorPolicyType.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.ObjectFactory" sourceFile="ObjectFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.cxf.management.counters" total_bugs="0" total_types="8" total_size="194">
+      <ClassStats class="org.apache.cxf.management.counters.Counter" sourceFile="Counter.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.counters.CounterRepository" sourceFile="CounterRepository.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.counters.MessageHandlingTimeRecorder" sourceFile="MessageHandlingTimeRecorder.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.counters.PerformanceCounter" sourceFile="PerformanceCounter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.counters.PerformanceCounterMBean" sourceFile="PerformanceCounterMBean.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.counters.ResponseTimeCounter" sourceFile="ResponseTimeCounter.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.counters.ResponseTimeCounter$1" sourceFile="ResponseTimeCounter.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.counters.ResponseTimeCounterMBean" sourceFile="ResponseTimeCounterMBean.java" interface="true" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.cxf.management.interceptor" total_bugs="1" total_types="6" total_size="167" priority_1="1">
+      <ClassStats class="org.apache.cxf.management.interceptor.AbstractMessageResponseTimeInterceptor" sourceFile="AbstractMessageResponseTimeInterceptor.java" interface="false" size="75" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.cxf.management.interceptor.ResponseTimeFeature" sourceFile="ResponseTimeFeature.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.interceptor.ResponseTimeMessageInInterceptor" sourceFile="ResponseTimeMessageInInterceptor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.interceptor.ResponseTimeMessageInvokerInterceptor" sourceFile="ResponseTimeMessageInvokerInterceptor.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.interceptor.ResponseTimeMessageOutInterceptor" sourceFile="ResponseTimeMessageOutInterceptor.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.interceptor.ResponseTimeMessageOutInterceptor$EndingInterceptor" sourceFile="ResponseTimeMessageOutInterceptor.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.cxf.management.jmx" total_bugs="7" total_types="3" total_size="260" priority_1="7">
+      <ClassStats class="org.apache.cxf.management.jmx.InstrumentationManagerImpl" sourceFile="InstrumentationManagerImpl.java" interface="false" size="168" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.jmx.MBServerConnectorFactory" sourceFile="MBServerConnectorFactory.java" interface="false" size="82" bugs="7" priority_1="7"/>
+      <ClassStats class="org.apache.cxf.management.jmx.MBServerConnectorFactory$1" sourceFile="MBServerConnectorFactory.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.cxf.management.jmx.export.runtime" total_bugs="1" total_types="3" total_size="241" priority_2="1">
+      <ClassStats class="org.apache.cxf.management.jmx.export.runtime.ModelMBeanAssembler" sourceFile="ModelMBeanAssembler.java" interface="false" size="128" bugs="0"/>
+      <ClassStats class="org.apache.cxf.management.jmx.export.runtime.ModelMBeanAssembler$ManagedAttributeInfo" sourceFile="ModelMBeanAssembler.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.cxf.management.jmx.export.runtime.ModelMBeanInfoSupporter" sourceFile="ModelMBeanInfoSupporter.java" interface="false" size="103" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.cxf.management.utils" total_bugs="2" total_types="1" total_size="143" priority_2="2">
+      <ClassStats class="org.apache.cxf.management.utils.ManagementConsole" sourceFile="ManagementConsole.java" interface="false" size="143" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="871" invocations="121" avgMicrosecondsPerInvocation="7205" maxMicrosecondsPerInvocation="135801" standardDeviationMircosecondsPerInvocation="17742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="735" invocations="121" avgMicrosecondsPerInvocation="6080" maxMicrosecondsPerInvocation="101664" standardDeviationMircosecondsPerInvocation="14921"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="636" invocations="658" avgMicrosecondsPerInvocation="967" maxMicrosecondsPerInvocation="28834" standardDeviationMircosecondsPerInvocation="2651"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="499" invocations="163" avgMicrosecondsPerInvocation="3062" maxMicrosecondsPerInvocation="87311" standardDeviationMircosecondsPerInvocation="9207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="489" invocations="121" avgMicrosecondsPerInvocation="4047" maxMicrosecondsPerInvocation="105060" standardDeviationMircosecondsPerInvocation="12429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="472" invocations="156" avgMicrosecondsPerInvocation="3026" maxMicrosecondsPerInvocation="36732" standardDeviationMircosecondsPerInvocation="6002"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="438" invocations="156" avgMicrosecondsPerInvocation="2808" maxMicrosecondsPerInvocation="50675" standardDeviationMircosecondsPerInvocation="6106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="414" invocations="165" avgMicrosecondsPerInvocation="2510" maxMicrosecondsPerInvocation="50614" standardDeviationMircosecondsPerInvocation="6287"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="378" invocations="156" avgMicrosecondsPerInvocation="2423" maxMicrosecondsPerInvocation="52980" standardDeviationMircosecondsPerInvocation="5510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="365" invocations="121" avgMicrosecondsPerInvocation="3019" maxMicrosecondsPerInvocation="65753" standardDeviationMircosecondsPerInvocation="9690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="297" invocations="119" avgMicrosecondsPerInvocation="2497" maxMicrosecondsPerInvocation="46317" standardDeviationMircosecondsPerInvocation="6640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="238" invocations="156" avgMicrosecondsPerInvocation="1530" maxMicrosecondsPerInvocation="23044" standardDeviationMircosecondsPerInvocation="3413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="220" invocations="375" avgMicrosecondsPerInvocation="588" maxMicrosecondsPerInvocation="10885" standardDeviationMircosecondsPerInvocation="1203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="178" invocations="121" avgMicrosecondsPerInvocation="1473" maxMicrosecondsPerInvocation="21244" standardDeviationMircosecondsPerInvocation="3131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="160" invocations="121" avgMicrosecondsPerInvocation="1328" maxMicrosecondsPerInvocation="80346" standardDeviationMircosecondsPerInvocation="7448"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="156" invocations="156" avgMicrosecondsPerInvocation="1000" maxMicrosecondsPerInvocation="18453" standardDeviationMircosecondsPerInvocation="2682"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="151" invocations="168" avgMicrosecondsPerInvocation="902" maxMicrosecondsPerInvocation="84158" standardDeviationMircosecondsPerInvocation="6988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="142" invocations="121" avgMicrosecondsPerInvocation="1173" maxMicrosecondsPerInvocation="30525" standardDeviationMircosecondsPerInvocation="4227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="117" invocations="20" avgMicrosecondsPerInvocation="5892" maxMicrosecondsPerInvocation="66890" standardDeviationMircosecondsPerInvocation="14373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="113" invocations="121" avgMicrosecondsPerInvocation="935" maxMicrosecondsPerInvocation="35484" standardDeviationMircosecondsPerInvocation="3355"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

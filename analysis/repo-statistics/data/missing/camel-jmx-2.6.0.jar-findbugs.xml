@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1295913240000" analysisTimestamp="1360510014425" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-jmx/2.6.0/camel-jmx-2.6.0.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.camel.component.jmx.JMXEndpoint">
+      <SourceLine classname="org.apache.camel.component.jmx.JMXEndpoint" start="49" end="227" sourcefile="JMXEndpoint.java" sourcepath="org/apache/camel/component/jmx/JMXEndpoint.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.jmx.JMXEndpoint" name="getObjectProperties" signature="()Ljava/util/Hashtable;" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.jmx.JMXEndpoint" start="187" end="187" startBytecode="0" endBytecode="46" sourcefile="JMXEndpoint.java" sourcepath="org/apache/camel/component/jmx/JMXEndpoint.java"/>
+    </Method>
+    <Field classname="org.apache.camel.component.jmx.JMXEndpoint" name="mObjectProperties" signature="Ljava/util/Hashtable;" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.jmx.JMXEndpoint" sourcefile="JMXEndpoint.java" sourcepath="org/apache/camel/component/jmx/JMXEndpoint.java"/>
+    </Field>
+    <SourceLine classname="org.apache.camel.component.jmx.JMXEndpoint" start="187" end="187" startBytecode="4" endBytecode="4" sourcefile="JMXEndpoint.java" sourcepath="org/apache/camel/component/jmx/JMXEndpoint.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.camel.component.jmx.JMXEndpoint">
+      <SourceLine classname="org.apache.camel.component.jmx.JMXEndpoint" start="49" end="227" sourcefile="JMXEndpoint.java" sourcepath="org/apache/camel/component/jmx/JMXEndpoint.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.jmx.JMXEndpoint" name="setObjectProperties" signature="(Ljava/util/Hashtable;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.jmx.JMXEndpoint" start="201" end="205" startBytecode="0" endBytecode="104" sourcefile="JMXEndpoint.java" sourcepath="org/apache/camel/component/jmx/JMXEndpoint.java"/>
+    </Method>
+    <Field classname="org.apache.camel.component.jmx.JMXEndpoint" name="mObjectProperties" signature="Ljava/util/Hashtable;" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.jmx.JMXEndpoint" sourcefile="JMXEndpoint.java" sourcepath="org/apache/camel/component/jmx/JMXEndpoint.java"/>
+    </Field>
+    <LocalVariable name="aObjectProperties" register="1" pc="19" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.camel.component.jmx.JMXEndpoint" start="204" end="204" startBytecode="19" endBytecode="19" sourcefile="JMXEndpoint.java" sourcepath="org/apache/camel/component/jmx/JMXEndpoint.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>org.apache.camel.Endpoint</MissingClass>
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.ExchangePattern</MissingClass>
+    <MissingClass>org.apache.camel.Message</MissingClass>
+    <MissingClass>org.apache.camel.Processor</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultComponent</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultConsumer</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultEndpoint</MissingClass>
+    <MissingClass>org.apache.camel.spi.ExceptionHandler</MissingClass>
+    <MissingClass>org.apache.camel.util.EndpointHelper</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 25 Jan 2011 01:54:00 +0200" total_classes="16" referenced_classes="90" total_bugs="2" total_size="762" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="21.89" clock_seconds="12.57" peak_mbytes="65.63" alloc_mbytes="763.88" gc_seconds="0.18" priority_2="2">
+    <PackageStats package="org.apache.camel.component.jmx" total_bugs="2" total_types="6" total_size="299" priority_2="2">
+      <ClassStats class="org.apache.camel.component.jmx.JMXComponent" sourceFile="JMXComponent.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.JMXConsumer" sourceFile="JMXConsumer.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.JMXEndpoint" sourceFile="JMXEndpoint.java" interface="false" size="89" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.camel.component.jmx.JMXUriBuilder" sourceFile="JMXUriBuilder.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.NotificationFormatException" sourceFile="NotificationFormatException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.NotificationXmlFormatter" sourceFile="NotificationXmlFormatter.java" interface="false" size="75" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.camel.component.jmx.jaxb" total_bugs="0" total_types="10" total_size="463">
+      <ClassStats class="org.apache.camel.component.jmx.jaxb.AttributeChangeNotification" sourceFile="AttributeChangeNotification.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.jaxb.JMXConnectionNotification" sourceFile="JMXConnectionNotification.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.jaxb.MBeanServerNotification" sourceFile="MBeanServerNotification.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.jaxb.MonitorNotification" sourceFile="MonitorNotification.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.jaxb.NotificationEventType" sourceFile="NotificationEventType.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.jaxb.ObjectFactory" sourceFile="ObjectFactory.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.jaxb.ObjectNamesType" sourceFile="ObjectNamesType.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.jaxb.RelationNotification" sourceFile="RelationNotification.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.jaxb.TimerNotification" sourceFile="TimerNotification.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jmx.jaxb.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1160" invocations="561" avgMicrosecondsPerInvocation="2067" maxMicrosecondsPerInvocation="82085" standardDeviationMircosecondsPerInvocation="6780"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="695" invocations="90" avgMicrosecondsPerInvocation="7730" maxMicrosecondsPerInvocation="73587" standardDeviationMircosecondsPerInvocation="14893"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="639" invocations="90" avgMicrosecondsPerInvocation="7100" maxMicrosecondsPerInvocation="96857" standardDeviationMircosecondsPerInvocation="16646"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="483" invocations="239" avgMicrosecondsPerInvocation="2023" maxMicrosecondsPerInvocation="70433" standardDeviationMircosecondsPerInvocation="6383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="396" invocations="90" avgMicrosecondsPerInvocation="4409" maxMicrosecondsPerInvocation="72168" standardDeviationMircosecondsPerInvocation="10055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="391" invocations="227" avgMicrosecondsPerInvocation="1726" maxMicrosecondsPerInvocation="63168" standardDeviationMircosecondsPerInvocation="5415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="364" invocations="197" avgMicrosecondsPerInvocation="1850" maxMicrosecondsPerInvocation="61236" standardDeviationMircosecondsPerInvocation="5740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="360" invocations="243" avgMicrosecondsPerInvocation="1484" maxMicrosecondsPerInvocation="45027" standardDeviationMircosecondsPerInvocation="4945"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="345" invocations="241" avgMicrosecondsPerInvocation="1432" maxMicrosecondsPerInvocation="64358" standardDeviationMircosecondsPerInvocation="5422"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="320" invocations="372" avgMicrosecondsPerInvocation="860" maxMicrosecondsPerInvocation="47135" standardDeviationMircosecondsPerInvocation="3553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="267" invocations="90" avgMicrosecondsPerInvocation="2966" maxMicrosecondsPerInvocation="39840" standardDeviationMircosecondsPerInvocation="5505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="248" invocations="239" avgMicrosecondsPerInvocation="1038" maxMicrosecondsPerInvocation="36503" standardDeviationMircosecondsPerInvocation="3277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="181" invocations="167" avgMicrosecondsPerInvocation="1089" maxMicrosecondsPerInvocation="28573" standardDeviationMircosecondsPerInvocation="3461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="174" invocations="508" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="24287" standardDeviationMircosecondsPerInvocation="1568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="156" invocations="90" avgMicrosecondsPerInvocation="1743" maxMicrosecondsPerInvocation="21043" standardDeviationMircosecondsPerInvocation="3711"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="147" invocations="239" avgMicrosecondsPerInvocation="619" maxMicrosecondsPerInvocation="112739" standardDeviationMircosecondsPerInvocation="7277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="143" invocations="564" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="29206" standardDeviationMircosecondsPerInvocation="1690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="138" invocations="16" avgMicrosecondsPerInvocation="8645" maxMicrosecondsPerInvocation="34256" standardDeviationMircosecondsPerInvocation="8517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="131" invocations="114" avgMicrosecondsPerInvocation="1151" maxMicrosecondsPerInvocation="28287" standardDeviationMircosecondsPerInvocation="3468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="123" invocations="16" avgMicrosecondsPerInvocation="7729" maxMicrosecondsPerInvocation="28609" standardDeviationMircosecondsPerInvocation="6718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="113" invocations="16" avgMicrosecondsPerInvocation="7071" maxMicrosecondsPerInvocation="59587" standardDeviationMircosecondsPerInvocation="14597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="112" invocations="239" avgMicrosecondsPerInvocation="472" maxMicrosecondsPerInvocation="13686" standardDeviationMircosecondsPerInvocation="1386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="110" invocations="16" avgMicrosecondsPerInvocation="6916" maxMicrosecondsPerInvocation="68354" standardDeviationMircosecondsPerInvocation="15946"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="107" invocations="90" avgMicrosecondsPerInvocation="1192" maxMicrosecondsPerInvocation="26666" standardDeviationMircosecondsPerInvocation="3478"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="106" invocations="16" avgMicrosecondsPerInvocation="6638" maxMicrosecondsPerInvocation="46369" standardDeviationMircosecondsPerInvocation="15090"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteNonnullReturnValues" totalMilliseconds="95" invocations="16" avgMicrosecondsPerInvocation="5996" maxMicrosecondsPerInvocation="27236" standardDeviationMircosecondsPerInvocation="7980"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="93" invocations="90" avgMicrosecondsPerInvocation="1040" maxMicrosecondsPerInvocation="11687" standardDeviationMircosecondsPerInvocation="2072"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="89" invocations="90" avgMicrosecondsPerInvocation="995" maxMicrosecondsPerInvocation="11204" standardDeviationMircosecondsPerInvocation="1850"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="84" invocations="6" avgMicrosecondsPerInvocation="14073" maxMicrosecondsPerInvocation="77944" standardDeviationMircosecondsPerInvocation="28583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="81" invocations="16" avgMicrosecondsPerInvocation="5108" maxMicrosecondsPerInvocation="30038" standardDeviationMircosecondsPerInvocation="7490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="81" invocations="197" avgMicrosecondsPerInvocation="413" maxMicrosecondsPerInvocation="27335" standardDeviationMircosecondsPerInvocation="2116"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

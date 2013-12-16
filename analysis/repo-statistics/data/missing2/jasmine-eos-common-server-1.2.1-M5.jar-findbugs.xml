@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1252317762000" analysisTimestamp="1360870948426" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jasmine/monitoring/jasmine-eos-common-server/1.2.1-M5/jasmine-eos-common-server-1.2.1-M5.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.fileupload.FileUploadBase">
+      <SourceLine classname="org.apache.commons.fileupload.FileUploadBase" start="63" end="1309" sourcefile="FileUploadBase.java" sourcepath="org/apache/commons/fileupload/FileUploadBase.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.FileUploadBase" name="getBoundary" signature="(Ljava/lang/String;)[B" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.FileUploadBase" start="398" end="413" startBytecode="0" endBytecode="225" sourcefile="FileUploadBase.java" sourcepath="org/apache/commons/fileupload/FileUploadBase.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.FileUploadBase" start="411" end="411" startBytecode="68" endBytecode="68" sourcefile="FileUploadBase.java" sourcepath="org/apache/commons/fileupload/FileUploadBase.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.apache.commons.fileupload.FileUploadBase">
+      <SourceLine classname="org.apache.commons.fileupload.FileUploadBase" start="63" end="1309" sourcefile="FileUploadBase.java" sourcepath="org/apache/commons/fileupload/FileUploadBase.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.FileUploadBase" name="getParsedHeaders" signature="(Ljava/lang/String;)Lorg/apache/commons/fileupload/FileItemHeaders;" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.FileUploadBase" start="557" end="586" startBytecode="0" endBytecode="385" sourcefile="FileUploadBase.java" sourcepath="org/apache/commons/fileupload/FileUploadBase.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.FileUploadBase" start="581" end="581" startBytecode="114" endBytecode="114" sourcefile="FileUploadBase.java" sourcepath="org/apache/commons/fileupload/FileUploadBase.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.apache.commons.fileupload.FileUploadBase">
+      <SourceLine classname="org.apache.commons.fileupload.FileUploadBase" start="63" end="1309" sourcefile="FileUploadBase.java" sourcepath="org/apache/commons/fileupload/FileUploadBase.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.FileUploadBase" name="parseHeaders" signature="(Ljava/lang/String;)Ljava/util/Map;" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.FileUploadBase" start="611" end="622" startBytecode="0" endBytecode="278" sourcefile="FileUploadBase.java" sourcepath="org/apache/commons/fileupload/FileUploadBase.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.FileUploadBase" start="618" end="618" startBytecode="76" endBytecode="76" sourcefile="FileUploadBase.java" sourcepath="org/apache/commons/fileupload/FileUploadBase.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.fileupload.MultipartStream">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="89" end="728" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.MultipartStream" name="readHeaders" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="530" end="567" startBytecode="0" endBytecode="345" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Method>
+    <Method classname="java.io.ByteArrayOutputStream" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.ByteArrayOutputStream" start="163" end="163" startBytecode="0" endBytecode="40" sourcefile="ByteArrayOutputStream.java" sourcepath="java/io/ByteArrayOutputStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="561" end="561" startBytecode="113" endBytecode="113" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.fileupload.MultipartStream">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="89" end="728" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.MultipartStream" name="readHeaders" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="530" end="567" startBytecode="0" endBytecode="345" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Method>
+    <Method classname="java.io.ByteArrayOutputStream" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.ByteArrayOutputStream" start="163" end="163" startBytecode="0" endBytecode="40" sourcefile="ByteArrayOutputStream.java" sourcepath="java/io/ByteArrayOutputStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="564" end="564" startBytecode="122" endBytecode="122" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.fileupload.MultipartStream">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="89" end="728" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Class>
+    <Field classname="org.apache.commons.fileupload.MultipartStream" name="BOUNDARY_PREFIX" signature="[B" isStatic="true">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="201" end="201" startBytecode="81" endBytecode="81" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.fileupload.MultipartStream">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="89" end="728" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Class>
+    <Field classname="org.apache.commons.fileupload.MultipartStream" name="FIELD_SEPARATOR" signature="[B" isStatic="true">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="186" end="186" startBytecode="39" endBytecode="39" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.fileupload.MultipartStream">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="89" end="728" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Class>
+    <Field classname="org.apache.commons.fileupload.MultipartStream" name="HEADER_SEPARATOR" signature="[B" isStatic="true">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="178" end="178" startBytecode="23" endBytecode="23" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.fileupload.MultipartStream">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="89" end="728" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Class>
+    <Field classname="org.apache.commons.fileupload.MultipartStream" name="STREAM_TERMINATOR" signature="[B" isStatic="true">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="194" end="194" startBytecode="55" endBytecode="55" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_PARAM_DEREF_NONVIRTUAL" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.commons.fileupload.MultipartStream">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="89" end="728" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.MultipartStream" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="282" end="283" startBytecode="0" endBytecode="53" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Method>
+    <Method classname="org.apache.commons.fileupload.MultipartStream" name="&lt;init&gt;" signature="(Ljava/io/InputStream;[BLorg/apache/commons/fileupload/MultipartStream$ProgressNotifier;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="365" end="366" startBytecode="0" endBytecode="86" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.MultipartStream" start="282" end="282" startBytecode="4" endBytecode="4" sourcefile="MultipartStream.java" sourcepath="org/apache/commons/fileupload/MultipartStream.java"/>
+    <Int value="2" role="INT_NULL_ARG"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullArgumentWarningProperty.ALL_DANGEROUS_TARGETS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullArgumentWarningProperty.ARG_DEFINITELY_NULL" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullArgumentWarningProperty.MONOMORPHIC_CALL_SITE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullArgumentWarningProperty.ACTUAL_PARAMETER_GUARANTEED_NULL" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.fileupload.ParameterParser">
+      <SourceLine classname="org.apache.commons.fileupload.ParameterParser" start="39" end="327" sourcefile="ParameterParser.java" sourcepath="org/apache/commons/fileupload/ParameterParser.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.ParameterParser" name="parse" signature="([CIIC)Ljava/util/Map;" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.ParameterParser" start="298" end="327" startBytecode="0" endBytecode="375" sourcefile="ParameterParser.java" sourcepath="org/apache/commons/fileupload/ParameterParser.java"/>
+    </Method>
+    <Field classname="org.apache.commons.fileupload.ParameterParser" name="chars" signature="[C" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.ParameterParser" sourcefile="ParameterParser.java" sourcepath="org/apache/commons/fileupload/ParameterParser.java"/>
+    </Field>
+    <LocalVariable name="chars" register="1" pc="23" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.commons.fileupload.ParameterParser" start="302" end="302" startBytecode="23" endBytecode="23" sourcefile="ParameterParser.java" sourcepath="org/apache/commons/fileupload/ParameterParser.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.fileupload.disk.DiskFileItem">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="103" end="733" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.disk.DiskFileItem" name="getString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="379" end="387" startBytecode="0" endBytecode="140" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="387" end="387" startBytecode="33" endBytecode="33" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.fileupload.disk.DiskFileItem">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="103" end="733" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.disk.DiskFileItem" name="get" signature="()[B" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="322" end="347" startBytecode="0" endBytecode="371" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Method>
+    <Field classname="org.apache.commons.fileupload.disk.DiskFileItem" name="cachedContent" signature="[B" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="326" end="326" startBytecode="29" endBytecode="29" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+  </BugInstance>
+  <BugInstance type="RR_NOT_CHECKED" priority="2" abbrev="RR" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.fileupload.disk.DiskFileItem">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="103" end="733" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.disk.DiskFileItem" name="get" signature="()[B" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="322" end="347" startBytecode="0" endBytecode="371" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Method>
+    <Method classname="java.io.FileInputStream" name="read" signature="([B)I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileInputStream" start="198" end="198" startBytecode="0" endBytecode="32" sourcefile="FileInputStream.java" sourcepath="java/io/FileInputStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="334" end="334" startBytecode="57" endBytecode="57" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.fileupload.disk.DiskFileItem">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="103" end="733" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.disk.DiskFileItem" name="delete" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="479" end="484" startBytecode="0" endBytecode="94" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="482" end="482" startBytecode="22" endBytecode="22" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.fileupload.disk.DiskFileItem">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="103" end="733" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.disk.DiskFileItem" name="finalize" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="591" end="596" startBytecode="0" endBytecode="88" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="594" end="594" startBytecode="20" endBytecode="20" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.fileupload.disk.DiskFileItem">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="103" end="733" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.disk.DiskFileItem" name="readObject" signature="(Ljava/io/ObjectInputStream;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="703" end="717" startBytecode="0" endBytecode="179" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.disk.DiskFileItem" start="711" end="711" startBytecode="49" endBytecode="49" sourcefile="DiskFileItem.java" sourcepath="org/apache/commons/fileupload/disk/DiskFileItem.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.fileupload.util.Streams">
+      <SourceLine classname="org.apache.commons.fileupload.util.Streams" start="32" end="164" sourcefile="Streams.java" sourcepath="org/apache/commons/fileupload/util/Streams.java"/>
+    </Class>
+    <Method classname="org.apache.commons.fileupload.util.Streams" name="asString" signature="(Ljava/io/InputStream;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.commons.fileupload.util.Streams" start="145" end="147" startBytecode="0" endBytecode="79" sourcefile="Streams.java" sourcepath="org/apache/commons/fileupload/util/Streams.java"/>
+    </Method>
+    <Method classname="java.io.ByteArrayOutputStream" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.ByteArrayOutputStream" start="163" end="163" startBytecode="0" endBytecode="40" sourcefile="ByteArrayOutputStream.java" sourcepath="java/io/ByteArrayOutputStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.fileupload.util.Streams" start="147" end="147" startBytecode="16" endBytecode="16" sourcefile="Streams.java" sourcepath="org/apache/commons/fileupload/util/Streams.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.CopyUtils">
+      <SourceLine classname="org.apache.commons.io.CopyUtils" start="124" end="330" sourcefile="CopyUtils.java" sourcepath="org/apache/commons/io/CopyUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.CopyUtils" name="copy" signature="(Ljava/io/InputStream;Ljava/io/Writer;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.CopyUtils" start="247" end="249" startBytecode="0" endBytecode="85" sourcefile="CopyUtils.java" sourcepath="org/apache/commons/io/CopyUtils.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.CopyUtils" start="247" end="247" startBytecode="5" endBytecode="5" sourcefile="CopyUtils.java" sourcepath="org/apache/commons/io/CopyUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.CopyUtils">
+      <SourceLine classname="org.apache.commons.io.CopyUtils" start="124" end="330" sourcefile="CopyUtils.java" sourcepath="org/apache/commons/io/CopyUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.CopyUtils" name="copy" signature="(Ljava/io/Reader;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.CopyUtils" start="286" end="291" startBytecode="0" endBytecode="93" sourcefile="CopyUtils.java" sourcepath="org/apache/commons/io/CopyUtils.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.CopyUtils" start="286" end="286" startBytecode="5" endBytecode="5" sourcefile="CopyUtils.java" sourcepath="org/apache/commons/io/CopyUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.CopyUtils">
+      <SourceLine classname="org.apache.commons.io.CopyUtils" start="124" end="330" sourcefile="CopyUtils.java" sourcepath="org/apache/commons/io/CopyUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.CopyUtils" name="copy" signature="(Ljava/lang/String;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.CopyUtils" start="309" end="315" startBytecode="0" endBytecode="116" sourcefile="CopyUtils.java" sourcepath="org/apache/commons/io/CopyUtils.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.CopyUtils" start="310" end="310" startBytecode="14" endBytecode="14" sourcefile="CopyUtils.java" sourcepath="org/apache/commons/io/CopyUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.FileSystemUtils">
+      <SourceLine classname="org.apache.commons.io.FileSystemUtils" start="52" end="454" sourcefile="FileSystemUtils.java" sourcepath="org/apache/commons/io/FileSystemUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.FileSystemUtils" name="performCommand" signature="([Ljava/lang/String;I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.FileSystemUtils" start="397" end="443" startBytecode="0" endBytecode="651" sourcefile="FileSystemUtils.java" sourcepath="org/apache/commons/io/FileSystemUtils.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.FileSystemUtils" start="408" end="408" startBytecode="63" endBytecode="63" sourcefile="FileSystemUtils.java" sourcepath="org/apache/commons/io/FileSystemUtils.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.io.FileUtils">
+      <SourceLine classname="org.apache.commons.io.FileUtils" start="86" end="1888" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.FileUtils" name="doCopyDirectory" signature="(Ljava/io/File;Ljava/io/File;Ljava/io/FileFilter;ZLjava/util/List;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.FileUtils" start="903" end="933" startBytecode="0" endBytecode="476" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+    </Method>
+    <Method classname="java.io.File" name="setLastModified" signature="(J)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1258" end="1263" startBytecode="0" endBytecode="80" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.FileUtils" start="912" end="912" startBytecode="94" endBytecode="94" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.io.FileUtils">
+      <SourceLine classname="org.apache.commons.io.FileUtils" start="86" end="1888" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.FileUtils" name="doCopyFile" signature="(Ljava/io/File;Ljava/io/File;Z)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.FileUtils" start="665" end="688" startBytecode="0" endBytecode="354" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+    </Method>
+    <Method classname="java.io.File" name="setLastModified" signature="(J)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1258" end="1263" startBytecode="0" endBytecode="80" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.FileUtils" start="686" end="686" startBytecode="168" endBytecode="168" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.io.FileUtils">
+      <SourceLine classname="org.apache.commons.io.FileUtils" start="86" end="1888" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.FileUtils" name="moveDirectoryToDirectory" signature="(Ljava/io/File;Ljava/io/File;Z)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.FileUtils" start="1765" end="1783" startBytecode="0" endBytecode="253" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.FileUtils" start="1772" end="1772" startBytecode="40" endBytecode="40" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.io.FileUtils">
+      <SourceLine classname="org.apache.commons.io.FileUtils" start="86" end="1888" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.FileUtils" name="moveFileToDirectory" signature="(Ljava/io/File;Ljava/io/File;Z)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.FileUtils" start="1840" end="1857" startBytecode="0" endBytecode="253" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.FileUtils" start="1847" end="1847" startBytecode="40" endBytecode="40" sourcefile="FileUtils.java" sourcepath="org/apache/commons/io/FileUtils.java"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.io.FilenameUtils">
+      <SourceLine classname="org.apache.commons.io.FilenameUtils" start="105" end="1257" sourcefile="FilenameUtils.java" sourcepath="org/apache/commons/io/FilenameUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.FilenameUtils" name="equals" signature="(Ljava/lang/String;Ljava/lang/String;ZLorg/apache/commons/io/IOCase;)Z" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.FilenameUtils" start="981" end="995" startBytecode="0" endBytecode="36" sourcefile="FilenameUtils.java" sourcepath="org/apache/commons/io/FilenameUtils.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="filename2" register="1" pc="9" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <LocalVariable name="filename1" register="0" pc="9" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.commons.io.FilenameUtils" start="982" end="982" startBytecode="10" endBytecode="10" sourcefile="FilenameUtils.java" sourcepath="org/apache/commons/io/FilenameUtils.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.HexDump">
+      <SourceLine classname="org.apache.commons.io.HexDump" start="40" end="146" sourcefile="HexDump.java" sourcepath="org/apache/commons/io/HexDump.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.HexDump" name="dump" signature="([BJLjava/io/OutputStream;I)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.HexDump" start="64" end="103" startBytecode="0" endBytecode="541" sourcefile="HexDump.java" sourcepath="org/apache/commons/io/HexDump.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.HexDump" start="98" end="98" startBytecode="259" endBytecode="259" sourcefile="HexDump.java" sourcepath="org/apache/commons/io/HexDump.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="copy" signature="(Ljava/io/InputStream;Ljava/io/Writer;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="1049" end="1051" startBytecode="0" endBytecode="85" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="1049" end="1049" startBytecode="5" endBytecode="5" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="copy" signature="(Ljava/io/Reader;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="1156" end="1161" startBytecode="0" endBytecode="93" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="1156" end="1156" startBytecode="5" endBytecode="5" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="lineIterator" signature="(Ljava/io/InputStream;Ljava/lang/String;)Lorg/apache/commons/io/LineIterator;" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="575" end="581" startBytecode="0" endBytecode="118" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="577" end="577" startBytecode="11" endBytecode="11" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="readLines" signature="(Ljava/io/InputStream;)Ljava/util/List;" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="456" end="457" startBytecode="0" endBytecode="69" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="456" end="456" startBytecode="5" endBytecode="5" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="toByteArray" signature="(Ljava/lang/String;)[B" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="277" end="277" startBytecode="0" endBytecode="46" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="277" end="277" startBytecode="1" endBytecode="1" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="toInputStream" signature="(Ljava/lang/String;)Ljava/io/InputStream;" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="594" end="595" startBytecode="0" endBytecode="69" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="594" end="594" startBytecode="1" endBytecode="1" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="toInputStream" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/io/InputStream;" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="612" end="613" startBytecode="0" endBytecode="91" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="612" end="612" startBytecode="13" endBytecode="13" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="toString" signature="([B)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="414" end="414" startBytecode="0" endBytecode="50" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="414" end="414" startBytecode="5" endBytecode="5" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="toString" signature="([BLjava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="433" end="436" startBytecode="0" endBytecode="82" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="434" end="434" startBytecode="9" endBytecode="9" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="write" signature="(Ljava/lang/String;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="783" end="786" startBytecode="0" endBytecode="72" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="784" end="784" startBytecode="6" endBytecode="6" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="write" signature="(Ljava/lang/StringBuffer;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="848" end="851" startBytecode="0" endBytecode="75" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="849" end="849" startBytecode="9" endBytecode="9" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="write" signature="([BLjava/io/Writer;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="649" end="652" startBytecode="0" endBytecode="76" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="650" end="650" startBytecode="10" endBytecode="10" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="write" signature="([CLjava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="717" end="720" startBytecode="0" endBytecode="79" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="718" end="718" startBytecode="13" endBytecode="13" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="writeLines" signature="(Ljava/util/Collection;Ljava/lang/String;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="896" end="909" startBytecode="0" endBytecode="187" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="905" end="905" startBytecode="48" endBytecode="48" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.IOUtils">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="97" end="1271" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.IOUtils" name="writeLines" signature="(Ljava/util/Collection;Ljava/lang/String;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.commons.io.IOUtils" start="896" end="909" startBytecode="0" endBytecode="187" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.IOUtils" start="907" end="907" startBytecode="56" endBytecode="56" sourcefile="IOUtils.java" sourcepath="org/apache/commons/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.io.filefilter.NameFileFilter">
+      <SourceLine classname="org.apache.commons.io.filefilter.NameFileFilter" start="61" end="188" sourcefile="NameFileFilter.java" sourcepath="org/apache/commons/io/filefilter/NameFileFilter.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.filefilter.NameFileFilter" name="&lt;init&gt;" signature="([Ljava/lang/String;Lorg/apache/commons/io/IOCase;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.filefilter.NameFileFilter" start="102" end="108" startBytecode="0" endBytecode="120" sourcefile="NameFileFilter.java" sourcepath="org/apache/commons/io/filefilter/NameFileFilter.java"/>
+    </Method>
+    <Field classname="org.apache.commons.io.filefilter.NameFileFilter" name="names" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.filefilter.NameFileFilter" sourcefile="NameFileFilter.java" sourcepath="org/apache/commons/io/filefilter/NameFileFilter.java"/>
+    </Field>
+    <LocalVariable name="names" register="1" pc="20" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.commons.io.filefilter.NameFileFilter" start="106" end="106" startBytecode="20" endBytecode="20" sourcefile="NameFileFilter.java" sourcepath="org/apache/commons/io/filefilter/NameFileFilter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.io.filefilter.PrefixFileFilter">
+      <SourceLine classname="org.apache.commons.io.filefilter.PrefixFileFilter" start="62" end="194" sourcefile="PrefixFileFilter.java" sourcepath="org/apache/commons/io/filefilter/PrefixFileFilter.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.filefilter.PrefixFileFilter" name="&lt;init&gt;" signature="([Ljava/lang/String;Lorg/apache/commons/io/IOCase;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.filefilter.PrefixFileFilter" start="107" end="113" startBytecode="0" endBytecode="120" sourcefile="PrefixFileFilter.java" sourcepath="org/apache/commons/io/filefilter/PrefixFileFilter.java"/>
+    </Method>
+    <Field classname="org.apache.commons.io.filefilter.PrefixFileFilter" name="prefixes" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.filefilter.PrefixFileFilter" sourcefile="PrefixFileFilter.java" sourcepath="org/apache/commons/io/filefilter/PrefixFileFilter.java"/>
+    </Field>
+    <LocalVariable name="prefixes" register="1" pc="20" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.commons.io.filefilter.PrefixFileFilter" start="111" end="111" startBytecode="20" endBytecode="20" sourcefile="PrefixFileFilter.java" sourcepath="org/apache/commons/io/filefilter/PrefixFileFilter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.io.filefilter.SuffixFileFilter">
+      <SourceLine classname="org.apache.commons.io.filefilter.SuffixFileFilter" start="63" end="195" sourcefile="SuffixFileFilter.java" sourcepath="org/apache/commons/io/filefilter/SuffixFileFilter.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.filefilter.SuffixFileFilter" name="&lt;init&gt;" signature="([Ljava/lang/String;Lorg/apache/commons/io/IOCase;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.filefilter.SuffixFileFilter" start="108" end="114" startBytecode="0" endBytecode="120" sourcefile="SuffixFileFilter.java" sourcepath="org/apache/commons/io/filefilter/SuffixFileFilter.java"/>
+    </Method>
+    <Field classname="org.apache.commons.io.filefilter.SuffixFileFilter" name="suffixes" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.filefilter.SuffixFileFilter" sourcefile="SuffixFileFilter.java" sourcepath="org/apache/commons/io/filefilter/SuffixFileFilter.java"/>
+    </Field>
+    <LocalVariable name="suffixes" register="1" pc="20" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.commons.io.filefilter.SuffixFileFilter" start="112" end="112" startBytecode="20" endBytecode="20" sourcefile="SuffixFileFilter.java" sourcepath="org/apache/commons/io/filefilter/SuffixFileFilter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.io.filefilter.WildcardFileFilter">
+      <SourceLine classname="org.apache.commons.io.filefilter.WildcardFileFilter" start="66" end="193" sourcefile="WildcardFileFilter.java" sourcepath="org/apache/commons/io/filefilter/WildcardFileFilter.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.filefilter.WildcardFileFilter" name="&lt;init&gt;" signature="([Ljava/lang/String;Lorg/apache/commons/io/IOCase;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.filefilter.WildcardFileFilter" start="107" end="113" startBytecode="0" endBytecode="120" sourcefile="WildcardFileFilter.java" sourcepath="org/apache/commons/io/filefilter/WildcardFileFilter.java"/>
+    </Method>
+    <Field classname="org.apache.commons.io.filefilter.WildcardFileFilter" name="wildcards" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.filefilter.WildcardFileFilter" sourcefile="WildcardFileFilter.java" sourcepath="org/apache/commons/io/filefilter/WildcardFileFilter.java"/>
+    </Field>
+    <LocalVariable name="wildcards" register="1" pc="20" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.commons.io.filefilter.WildcardFileFilter" start="111" end="111" startBytecode="20" endBytecode="20" sourcefile="WildcardFileFilter.java" sourcepath="org/apache/commons/io/filefilter/WildcardFileFilter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.io.filefilter.WildcardFilter">
+      <SourceLine classname="org.apache.commons.io.filefilter.WildcardFilter" start="64" end="137" sourcefile="WildcardFilter.java" sourcepath="org/apache/commons/io/filefilter/WildcardFilter.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.filefilter.WildcardFilter" name="&lt;init&gt;" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.filefilter.WildcardFilter" start="77" end="82" startBytecode="0" endBytecode="91" sourcefile="WildcardFilter.java" sourcepath="org/apache/commons/io/filefilter/WildcardFilter.java"/>
+    </Method>
+    <Field classname="org.apache.commons.io.filefilter.WildcardFilter" name="wildcards" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.filefilter.WildcardFilter" sourcefile="WildcardFilter.java" sourcepath="org/apache/commons/io/filefilter/WildcardFilter.java"/>
+    </Field>
+    <LocalVariable name="wildcards" register="1" pc="20" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.commons.io.filefilter.WildcardFilter" start="81" end="81" startBytecode="20" endBytecode="20" sourcefile="WildcardFilter.java" sourcepath="org/apache/commons/io/filefilter/WildcardFilter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.output.ByteArrayOutputStream">
+      <SourceLine classname="org.apache.commons.io.output.ByteArrayOutputStream" start="54" end="305" sourcefile="ByteArrayOutputStream.java" sourcepath="org/apache/commons/io/output/ByteArrayOutputStream.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.output.ByteArrayOutputStream" name="toString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.output.ByteArrayOutputStream" start="292" end="292" startBytecode="0" endBytecode="53" sourcefile="ByteArrayOutputStream.java" sourcepath="org/apache/commons/io/output/ByteArrayOutputStream.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.output.ByteArrayOutputStream" start="292" end="292" startBytecode="8" endBytecode="8" sourcefile="ByteArrayOutputStream.java" sourcepath="org/apache/commons/io/output/ByteArrayOutputStream.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.commons.io.output.DeferredFileOutputStream">
+      <SourceLine classname="org.apache.commons.io.output.DeferredFileOutputStream" start="90" end="268" sourcefile="DeferredFileOutputStream.java" sourcepath="org/apache/commons/io/output/DeferredFileOutputStream.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.output.DeferredFileOutputStream" name="thresholdReached" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.output.DeferredFileOutputStream" start="162" end="169" startBytecode="0" endBytecode="132" sourcefile="DeferredFileOutputStream.java" sourcepath="org/apache/commons/io/output/DeferredFileOutputStream.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.commons.io.output.DeferredFileOutputStream" start="165" end="165" startBytecode="34" endBytecode="34" sourcefile="DeferredFileOutputStream.java" sourcepath="org/apache/commons/io/output/DeferredFileOutputStream.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.apache.commons.io.output.DeferredFileOutputStream" start="166" end="166" startBytecode="38" endBytecode="38" sourcefile="DeferredFileOutputStream.java" sourcepath="org/apache/commons/io/output/DeferredFileOutputStream.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.io.output.LockableFileWriter">
+      <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="71" end="331" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.output.LockableFileWriter" name="initWriter" signature="(Ljava/io/File;Ljava/lang/String;Z)Ljava/io/Writer;" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="231" end="258" startBytecode="0" endBytecode="360" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/lang/String;Z)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="61" end="62" startBytecode="0" endBytecode="41" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="236" end="236" startBytecode="25" endBytecode="25" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.io.output.LockableFileWriter">
+      <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="71" end="331" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.output.LockableFileWriter" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="269" end="273" startBytecode="0" endBytecode="107" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="271" end="271" startBytecode="11" endBytecode="11" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.io.output.LockableFileWriter">
+      <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="71" end="331" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java"/>
+    </Class>
+    <Method classname="org.apache.commons.io.output.LockableFileWriter" name="initWriter" signature="(Ljava/io/File;Ljava/lang/String;Z)Ljava/io/Writer;" isStatic="false">
+      <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="231" end="258" startBytecode="0" endBytecode="360" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="244" end="244" startBytecode="78" endBytecode="78" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java"/>
+    <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="246" end="246" startBytecode="88" endBytecode="88" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="252" end="252" startBytecode="111" endBytecode="111" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.commons.io.output.LockableFileWriter" start="254" end="254" startBytecode="121" endBytecode="121" sourcefile="LockableFileWriter.java" sourcepath="org/apache/commons/io/output/LockableFileWriter.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DMI_USING_REMOVEALL_TO_CLEAR_COLLECTION" priority="2" abbrev="DMI" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jasmine.monitoring.eos.common.JasmineEventManager">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.JasmineEventManager" start="42" end="96" sourcefile="JasmineEventManager.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/JasmineEventManager.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eos.common.JasmineEventManager" name="clear" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.JasmineEventManager" start="79" end="80" startBytecode="0" endBytecode="6" sourcefile="JasmineEventManager.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/JasmineEventManager.java"/>
+    </Method>
+    <Method classname="java.util.List" name="removeAll" signature="(Ljava/util/Collection;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.List" sourcefile="List.java" sourcepath="java/util/List.java"/>
+    </Method>
+    <Field classname="org.ow2.jasmine.monitoring.eos.common.JasmineEventManager" name="events" signature="Ljava/util/List;" sourceSignature="Ljava/util/List&lt;Lorg/ow2/jasmine/monitoring/eos/common/jms/event/JasmineMessageEvent;&gt;;" isStatic="false" role="FIELD_INVOKED_ON">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.JasmineEventManager" sourcefile="JasmineEventManager.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/JasmineEventManager.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.JasmineEventManager" start="79" end="79" startBytecode="8" endBytecode="8" sourcefile="JasmineEventManager.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/JasmineEventManager.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.ow2.jasmine.monitoring.eos.common.jms.JMSMessageListener">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.jms.JMSMessageListener" start="43" end="117" sourcefile="JMSMessageListener.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/jms/JMSMessageListener.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eos.common.jms.JMSMessageListener" name="onMessage" signature="(Ljavax/jms/Message;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.jms.JMSMessageListener" start="53" end="115" startBytecode="0" endBytecode="921" sourcefile="JMSMessageListener.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/jms/JMSMessageListener.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.jms.JMSMessageListener" start="87" end="87" startBytecode="305" endBytecode="305" sourcefile="JMSMessageListener.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/jms/JMSMessageListener.java"/>
+  </BugInstance>
+  <BugInstance type="PT_ABSOLUTE_PATH_TRAVERSAL" priority="2" abbrev="PT" category="SECURITY">
+    <Class classname="org.ow2.jasmine.monitoring.eos.common.servlet.DownloadFileServlet">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.DownloadFileServlet" start="47" end="114" sourcefile="DownloadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/DownloadFileServlet.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eos.common.servlet.DownloadFileServlet" name="download" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.DownloadFileServlet" start="87" end="114" startBytecode="0" endBytecode="324" sourcefile="DownloadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/DownloadFileServlet.java"/>
+    </Method>
+    <Method classname="java.io.File" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="220" end="226" startBytecode="0" endBytecode="85" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <String value="fileId" role="STRING_PARAMETER_NAME"/>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.DownloadFileServlet" start="87" end="87" startBytecode="3" endBytecode="3" sourcefile="DownloadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/DownloadFileServlet.java" role="SOURCE_LINE_GENERATED_AT"/>
+    <LocalVariable name="fileId" register="3" pc="13" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.DownloadFileServlet" start="90" end="90" startBytecode="14" endBytecode="14" sourcefile="DownloadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/DownloadFileServlet.java"/>
+  </BugInstance>
+  <BugInstance type="PT_ABSOLUTE_PATH_TRAVERSAL" priority="2" abbrev="PT" category="SECURITY">
+    <Class classname="org.ow2.jasmine.monitoring.eos.common.servlet.ExportBitmapServlet">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.ExportBitmapServlet" start="41" end="85" sourcefile="ExportBitmapServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/ExportBitmapServlet.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eos.common.servlet.ExportBitmapServlet" name="doDownload" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.ExportBitmapServlet" start="66" end="85" startBytecode="0" endBytecode="318" sourcefile="ExportBitmapServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/ExportBitmapServlet.java"/>
+    </Method>
+    <Method classname="java.io.File" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="220" end="226" startBytecode="0" endBytecode="85" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <String value="fileId" role="STRING_PARAMETER_NAME"/>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.ExportBitmapServlet" start="66" end="66" startBytecode="3" endBytecode="3" sourcefile="ExportBitmapServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/ExportBitmapServlet.java" role="SOURCE_LINE_GENERATED_AT"/>
+    <LocalVariable name="fileId" register="3" pc="31" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.ExportBitmapServlet" start="68" end="68" startBytecode="32" endBytecode="32" sourcefile="ExportBitmapServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/ExportBitmapServlet.java"/>
+  </BugInstance>
+  <BugInstance type="PT_ABSOLUTE_PATH_TRAVERSAL" priority="2" abbrev="PT" category="SECURITY">
+    <Class classname="org.ow2.jasmine.monitoring.eos.common.servlet.PrepareDownloadFileServlet">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.PrepareDownloadFileServlet" start="44" end="102" sourcefile="PrepareDownloadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/PrepareDownloadFileServlet.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eos.common.servlet.PrepareDownloadFileServlet" name="prepare" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.PrepareDownloadFileServlet" start="82" end="102" startBytecode="0" endBytecode="235" sourcefile="PrepareDownloadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/PrepareDownloadFileServlet.java"/>
+    </Method>
+    <Method classname="java.io.File" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="220" end="226" startBytecode="0" endBytecode="85" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <String value="file" role="STRING_PARAMETER_NAME"/>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.PrepareDownloadFileServlet" start="88" end="88" startBytecode="33" endBytecode="33" sourcefile="PrepareDownloadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/PrepareDownloadFileServlet.java"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet" start="50" end="134" sourcefile="UploadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/UploadFileServlet.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet" name="doPost" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet" start="68" end="125" startBytecode="0" endBytecode="767" sourcefile="UploadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/UploadFileServlet.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet" start="121" end="121" startBytecode="409" endBytecode="409" sourcefile="UploadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/UploadFileServlet.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet" start="50" end="134" sourcefile="UploadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/UploadFileServlet.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet" name="doPost" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet" start="68" end="125" startBytecode="0" endBytecode="767" sourcefile="UploadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/UploadFileServlet.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet" start="107" end="107" startBytecode="315" endBytecode="315" sourcefile="UploadFileServlet.java" sourcepath="org/ow2/jasmine/monitoring/eos/common/servlet/UploadFileServlet.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="21">
+    <MissingClass>javax.jms.JMSException</MissingClass>
+    <MissingClass>javax.jms.Message</MissingClass>
+    <MissingClass>javax.jms.ObjectMessage</MissingClass>
+    <MissingClass>javax.jms.TopicConnection</MissingClass>
+    <MissingClass>javax.jms.TopicConnectionFactory</MissingClass>
+    <MissingClass>javax.jms.TopicSession</MissingClass>
+    <MissingClass>javax.jms.TopicSubscriber</MissingClass>
+    <MissingClass>javax.portlet.ActionRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletContextEvent</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletInputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.ow2.jasmine.event.beans.JasmineEventEB</MissingClass>
+    <MissingClass>org.ow2.jasmine.event.messages.JasmineEvent</MissingClass>
+    <MissingClass>org.ow2.jasmine.event.messages.JasmineEventDetails</MissingClass>
+    <MissingClass>org.ow2.util.log.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 7 Sep 2009 13:02:42 +0300" total_classes="132" referenced_classes="297" total_bugs="60" total_size="5585" num_packages="16" vm_version="20.4-b02-402" cpu_seconds="33.38" clock_seconds="28.18" peak_mbytes="102.58" alloc_mbytes="763.88" gc_seconds="0.77" priority_2="31" priority_1="29">
+    <PackageStats package="org.apache.commons.fileupload" total_bugs="11" total_types="32" total_size="953" priority_2="7" priority_1="4">
+      <ClassStats class="org.apache.commons.fileupload.DefaultFileItem" sourceFile="DefaultFileItem.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.DefaultFileItemFactory" sourceFile="DefaultFileItemFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.DiskFileUpload" sourceFile="DiskFileUpload.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileItem" sourceFile="FileItem.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileItemFactory" sourceFile="FileItemFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileItemHeaders" sourceFile="FileItemHeaders.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileItemHeadersSupport" sourceFile="FileItemHeadersSupport.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileItemIterator" sourceFile="FileItemIterator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileItemStream" sourceFile="FileItemStream.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileItemStream$ItemSkippedException" sourceFile="FileItemStream.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUpload" sourceFile="FileUpload.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase" sourceFile="FileUploadBase.java" interface="false" size="188" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$FileItemIteratorImpl" sourceFile="FileUploadBase.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$FileItemIteratorImpl$1" sourceFile="FileUploadBase.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$FileItemIteratorImpl$FileItemStreamImpl" sourceFile="FileUploadBase.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$FileItemIteratorImpl$FileItemStreamImpl$1" sourceFile="FileUploadBase.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$FileSizeLimitExceededException" sourceFile="FileUploadBase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$FileUploadIOException" sourceFile="FileUploadBase.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$IOFileUploadException" sourceFile="FileUploadBase.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$InvalidContentTypeException" sourceFile="FileUploadBase.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$SizeException" sourceFile="FileUploadBase.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$SizeLimitExceededException" sourceFile="FileUploadBase.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadBase$UnknownSizeException" sourceFile="FileUploadBase.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.FileUploadException" sourceFile="FileUploadException.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.MultipartStream" sourceFile="MultipartStream.java" interface="false" size="167" bugs="7" priority_2="4" priority_1="3"/>
+      <ClassStats class="org.apache.commons.fileupload.MultipartStream$IllegalBoundaryException" sourceFile="MultipartStream.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.MultipartStream$ItemInputStream" sourceFile="MultipartStream.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.MultipartStream$MalformedStreamException" sourceFile="MultipartStream.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.MultipartStream$ProgressNotifier" sourceFile="MultipartStream.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.ParameterParser" sourceFile="ParameterParser.java" interface="false" size="111" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.fileupload.ProgressListener" sourceFile="ProgressListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.RequestContext" sourceFile="RequestContext.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.fileupload.disk" total_bugs="6" total_types="2" total_size="219" priority_2="5" priority_1="1">
+      <ClassStats class="org.apache.commons.fileupload.disk.DiskFileItem" sourceFile="DiskFileItem.java" interface="false" size="184" bugs="6" priority_2="5" priority_1="1"/>
+      <ClassStats class="org.apache.commons.fileupload.disk.DiskFileItemFactory" sourceFile="DiskFileItemFactory.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.fileupload.portlet" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="org.apache.commons.fileupload.portlet.PortletFileUpload" sourceFile="PortletFileUpload.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.portlet.PortletRequestContext" sourceFile="PortletRequestContext.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.fileupload.servlet" total_bugs="0" total_types="3" total_size="56">
+      <ClassStats class="org.apache.commons.fileupload.servlet.FileCleanerCleanup" sourceFile="FileCleanerCleanup.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.servlet.ServletFileUpload" sourceFile="ServletFileUpload.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.servlet.ServletRequestContext" sourceFile="ServletRequestContext.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.fileupload.util" total_bugs="1" total_types="4" total_size="108" priority_1="1">
+      <ClassStats class="org.apache.commons.fileupload.util.Closeable" sourceFile="Closeable.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.util.FileItemHeadersImpl" sourceFile="FileItemHeadersImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.util.LimitedInputStream" sourceFile="LimitedInputStream.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.commons.fileupload.util.Streams" sourceFile="Streams.java" interface="false" size="43" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.io" total_bugs="25" total_types="18" total_size="1902" priority_2="4" priority_1="21">
+      <ClassStats class="org.apache.commons.io.CopyUtils" sourceFile="CopyUtils.java" interface="false" size="55" bugs="3" priority_1="3"/>
+      <ClassStats class="org.apache.commons.io.DirectoryWalker" sourceFile="DirectoryWalker.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.DirectoryWalker$CancelException" sourceFile="DirectoryWalker.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.EndianUtils" sourceFile="EndianUtils.java" interface="false" size="118" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.FileCleaner" sourceFile="FileCleaner.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.FileCleaningTracker" sourceFile="FileCleaningTracker.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.FileCleaningTracker$Reaper" sourceFile="FileCleaningTracker.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.FileCleaningTracker$Tracker" sourceFile="FileCleaningTracker.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.FileDeleteStrategy" sourceFile="FileDeleteStrategy.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.FileDeleteStrategy$ForceFileDeleteStrategy" sourceFile="FileDeleteStrategy.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.FileSystemUtils" sourceFile="FileSystemUtils.java" interface="false" size="148" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.commons.io.FileUtils" sourceFile="FileUtils.java" interface="false" size="562" bugs="4" priority_2="4"/>
+      <ClassStats class="org.apache.commons.io.FilenameUtils" sourceFile="FilenameUtils.java" interface="false" size="336" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.commons.io.HexDump" sourceFile="HexDump.java" interface="false" size="48" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.commons.io.IOCase" sourceFile="IOCase.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.IOExceptionWithCause" sourceFile="IOExceptionWithCause.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.IOUtils" sourceFile="IOUtils.java" interface="false" size="297" bugs="15" priority_1="15"/>
+      <ClassStats class="org.apache.commons.io.LineIterator" sourceFile="LineIterator.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.io.comparator" total_bugs="0" total_types="7" total_size="160">
+      <ClassStats class="org.apache.commons.io.comparator.DefaultFileComparator" sourceFile="DefaultFileComparator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.comparator.ExtensionFileComparator" sourceFile="ExtensionFileComparator.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.comparator.LastModifiedFileComparator" sourceFile="LastModifiedFileComparator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.comparator.NameFileComparator" sourceFile="NameFileComparator.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.comparator.PathFileComparator" sourceFile="PathFileComparator.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.comparator.ReverseComparator" sourceFile="ReverseComparator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.comparator.SizeFileComparator" sourceFile="SizeFileComparator.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.io.filefilter" total_bugs="5" total_types="24" total_size="677" priority_2="5">
+      <ClassStats class="org.apache.commons.io.filefilter.AbstractFileFilter" sourceFile="AbstractFileFilter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.AgeFileFilter" sourceFile="AgeFileFilter.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.AndFileFilter" sourceFile="AndFileFilter.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.CanReadFileFilter" sourceFile="CanReadFileFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.CanWriteFileFilter" sourceFile="CanWriteFileFilter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.ConditionalFileFilter" sourceFile="ConditionalFileFilter.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.DelegateFileFilter" sourceFile="DelegateFileFilter.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.DirectoryFileFilter" sourceFile="DirectoryFileFilter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.EmptyFileFilter" sourceFile="EmptyFileFilter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.FalseFileFilter" sourceFile="FalseFileFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.FileFileFilter" sourceFile="FileFileFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.FileFilterUtils" sourceFile="FileFilterUtils.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.HiddenFileFilter" sourceFile="HiddenFileFilter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.IOFileFilter" sourceFile="IOFileFilter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.NameFileFilter" sourceFile="NameFileFilter.java" interface="false" size="55" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.io.filefilter.NotFileFilter" sourceFile="NotFileFilter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.OrFileFilter" sourceFile="OrFileFilter.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.PrefixFileFilter" sourceFile="PrefixFileFilter.java" interface="false" size="55" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.io.filefilter.RegexFileFilter" sourceFile="RegexFileFilter.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.SizeFileFilter" sourceFile="SizeFileFilter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.SuffixFileFilter" sourceFile="SuffixFileFilter.java" interface="false" size="55" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.io.filefilter.TrueFileFilter" sourceFile="TrueFileFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.filefilter.WildcardFileFilter" sourceFile="WildcardFileFilter.java" interface="false" size="55" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.io.filefilter.WildcardFilter" sourceFile="WildcardFilter.java" interface="false" size="34" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.io.input" total_bugs="0" total_types="13" total_size="466">
+      <ClassStats class="org.apache.commons.io.input.AutoCloseInputStream" sourceFile="AutoCloseInputStream.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.CharSequenceReader" sourceFile="CharSequenceReader.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.ClassLoaderObjectInputStream" sourceFile="ClassLoaderObjectInputStream.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.CloseShieldInputStream" sourceFile="CloseShieldInputStream.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.ClosedInputStream" sourceFile="ClosedInputStream.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.CountingInputStream" sourceFile="CountingInputStream.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.DemuxInputStream" sourceFile="DemuxInputStream.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.NullInputStream" sourceFile="NullInputStream.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.NullReader" sourceFile="NullReader.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.ProxyInputStream" sourceFile="ProxyInputStream.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.ProxyReader" sourceFile="ProxyReader.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.SwappedDataInputStream" sourceFile="SwappedDataInputStream.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.input.TeeInputStream" sourceFile="TeeInputStream.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.io.output" total_bugs="5" total_types="14" total_size="595" priority_2="3" priority_1="2">
+      <ClassStats class="org.apache.commons.io.output.ByteArrayOutputStream" sourceFile="ByteArrayOutputStream.java" interface="false" size="118" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.commons.io.output.CloseShieldOutputStream" sourceFile="CloseShieldOutputStream.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.output.ClosedOutputStream" sourceFile="ClosedOutputStream.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.output.CountingOutputStream" sourceFile="CountingOutputStream.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.output.DeferredFileOutputStream" sourceFile="DeferredFileOutputStream.java" interface="false" size="56" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.io.output.DemuxOutputStream" sourceFile="DemuxOutputStream.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.output.FileWriterWithEncoding" sourceFile="FileWriterWithEncoding.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.output.LockableFileWriter" sourceFile="LockableFileWriter.java" interface="false" size="104" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.apache.commons.io.output.NullOutputStream" sourceFile="NullOutputStream.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.output.NullWriter" sourceFile="NullWriter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.output.ProxyOutputStream" sourceFile="ProxyOutputStream.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.output.ProxyWriter" sourceFile="ProxyWriter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.output.TeeOutputStream" sourceFile="TeeOutputStream.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.commons.io.output.ThresholdingOutputStream" sourceFile="ThresholdingOutputStream.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jasmine.monitoring.eos.common" total_bugs="1" total_types="2" total_size="29" priority_2="1">
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.EventManager" sourceFile="EventManager.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.JasmineEventManager" sourceFile="JasmineEventManager.java" interface="false" size="26" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jasmine.monitoring.eos.common.jms" total_bugs="1" total_types="2" total_size="122" priority_2="1">
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.jms.JMSConnection" sourceFile="JMSConnection.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.jms.JMSMessageListener" sourceFile="JMSMessageListener.java" interface="false" size="54" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jasmine.monitoring.eos.common.jms.event" total_bugs="0" total_types="1" total_size="61">
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.jms.event.JasmineMessageEvent" sourceFile="JasmineMessageEvent.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jasmine.monitoring.eos.common.jndilocator" total_bugs="0" total_types="2" total_size="47">
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.jndilocator.ServiceLocator" sourceFile="ServiceLocator.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.jndilocator.ServiceLocatorException" sourceFile="ServiceLocatorException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jasmine.monitoring.eos.common.osgi" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.osgi.IOSGiManager" sourceFile="IOSGiManager.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.osgi.OSGiManager" sourceFile="OSGiManager.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jasmine.monitoring.eos.common.servlet" total_bugs="5" total_types="4" total_size="136" priority_2="5">
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.servlet.DownloadFileServlet" sourceFile="DownloadFileServlet.java" interface="false" size="31" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.servlet.ExportBitmapServlet" sourceFile="ExportBitmapServlet.java" interface="false" size="31" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.servlet.PrepareDownloadFileServlet" sourceFile="PrepareDownloadFileServlet.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eos.common.servlet.UploadFileServlet" sourceFile="UploadFileServlet.java" interface="false" size="51" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2126" invocations="905" avgMicrosecondsPerInvocation="2350" maxMicrosecondsPerInvocation="162091" standardDeviationMircosecondsPerInvocation="10195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1916" invocations="297" avgMicrosecondsPerInvocation="6452" maxMicrosecondsPerInvocation="124031" standardDeviationMircosecondsPerInvocation="15856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1688" invocations="982" avgMicrosecondsPerInvocation="1719" maxMicrosecondsPerInvocation="149806" standardDeviationMircosecondsPerInvocation="7151"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1441" invocations="297" avgMicrosecondsPerInvocation="4852" maxMicrosecondsPerInvocation="88643" standardDeviationMircosecondsPerInvocation="12346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1380" invocations="983" avgMicrosecondsPerInvocation="1404" maxMicrosecondsPerInvocation="71481" standardDeviationMircosecondsPerInvocation="5310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1193" invocations="997" avgMicrosecondsPerInvocation="1197" maxMicrosecondsPerInvocation="254143" standardDeviationMircosecondsPerInvocation="8731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1084" invocations="983" avgMicrosecondsPerInvocation="1103" maxMicrosecondsPerInvocation="134532" standardDeviationMircosecondsPerInvocation="6182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1004" invocations="998" avgMicrosecondsPerInvocation="1006" maxMicrosecondsPerInvocation="138995" standardDeviationMircosecondsPerInvocation="5563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="814" invocations="983" avgMicrosecondsPerInvocation="828" maxMicrosecondsPerInvocation="55706" standardDeviationMircosecondsPerInvocation="3349"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="775" invocations="1468" avgMicrosecondsPerInvocation="528" maxMicrosecondsPerInvocation="48012" standardDeviationMircosecondsPerInvocation="2597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="555" invocations="297" avgMicrosecondsPerInvocation="1869" maxMicrosecondsPerInvocation="42919" standardDeviationMircosecondsPerInvocation="5931"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="403" invocations="297" avgMicrosecondsPerInvocation="1358" maxMicrosecondsPerInvocation="41843" standardDeviationMircosecondsPerInvocation="3958"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="402" invocations="352" avgMicrosecondsPerInvocation="1142" maxMicrosecondsPerInvocation="76440" standardDeviationMircosecondsPerInvocation="5350"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="387" invocations="814" avgMicrosecondsPerInvocation="475" maxMicrosecondsPerInvocation="21111" standardDeviationMircosecondsPerInvocation="1682"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="380" invocations="1032" avgMicrosecondsPerInvocation="369" maxMicrosecondsPerInvocation="142301" standardDeviationMircosecondsPerInvocation="4699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="373" invocations="297" avgMicrosecondsPerInvocation="1258" maxMicrosecondsPerInvocation="50147" standardDeviationMircosecondsPerInvocation="4716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="368" invocations="909" avgMicrosecondsPerInvocation="405" maxMicrosecondsPerInvocation="65271" standardDeviationMircosecondsPerInvocation="2787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="342" invocations="983" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="54300" standardDeviationMircosecondsPerInvocation="2756"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="333" invocations="132" avgMicrosecondsPerInvocation="2529" maxMicrosecondsPerInvocation="107924" standardDeviationMircosecondsPerInvocation="10693"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="327" invocations="831" avgMicrosecondsPerInvocation="394" maxMicrosecondsPerInvocation="75072" standardDeviationMircosecondsPerInvocation="3192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="285" invocations="8913" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="45499" standardDeviationMircosecondsPerInvocation="694"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="279" invocations="297" avgMicrosecondsPerInvocation="940" maxMicrosecondsPerInvocation="47657" standardDeviationMircosecondsPerInvocation="4376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="261" invocations="297" avgMicrosecondsPerInvocation="881" maxMicrosecondsPerInvocation="21806" standardDeviationMircosecondsPerInvocation="2450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="255" invocations="132" avgMicrosecondsPerInvocation="1936" maxMicrosecondsPerInvocation="104983" standardDeviationMircosecondsPerInvocation="9880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="251" invocations="569" avgMicrosecondsPerInvocation="441" maxMicrosecondsPerInvocation="22679" standardDeviationMircosecondsPerInvocation="1569"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="240" invocations="297" avgMicrosecondsPerInvocation="809" maxMicrosecondsPerInvocation="35498" standardDeviationMircosecondsPerInvocation="3465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="219" invocations="132" avgMicrosecondsPerInvocation="1662" maxMicrosecondsPerInvocation="71354" standardDeviationMircosecondsPerInvocation="7505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="213" invocations="132" avgMicrosecondsPerInvocation="1614" maxMicrosecondsPerInvocation="62569" standardDeviationMircosecondsPerInvocation="7475"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

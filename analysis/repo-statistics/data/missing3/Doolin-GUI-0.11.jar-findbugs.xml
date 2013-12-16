@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1309698541000" analysisTimestamp="1361252457991" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/net/sf/doolin/Doolin-GUI/0.11/Doolin-GUI-0.11.jar</Jar>
+  </Project>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="1" abbrev="RCN" category="STYLE">
+    <Class classname="net.sf.doolin.gui.docking.DockingWindowDescriptor">
+      <SourceLine classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" start="77" end="868" sourcefile="DockingWindowDescriptor.java" sourcepath="net/sf/doolin/gui/docking/DockingWindowDescriptor.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" name="getDockingPath" signature="(Lcom/javadocking/dock/Dock;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" start="591" end="655" startBytecode="0" endBytecode="684" sourcefile="DockingWindowDescriptor.java" sourcepath="net/sf/doolin/gui/docking/DockingWindowDescriptor.java"/>
+    </Method>
+    <LocalVariable name="parentDock" register="4" pc="206" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="com.javadocking.dock.Dock" name="getParentDock" signature="()Lcom/javadocking/dock/CompositeDock;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.javadocking.dock.Dock"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" start="643" end="643" startBytecode="208" endBytecode="208" sourcefile="DockingWindowDescriptor.java" sourcepath="net/sf/doolin/gui/docking/DockingWindowDescriptor.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="net.sf.doolin.gui.docking.DockingWindowDescriptor">
+      <SourceLine classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" start="77" end="868" sourcefile="DockingWindowDescriptor.java" sourcepath="net/sf/doolin/gui/docking/DockingWindowDescriptor.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" name="getDock" signature="(Lcom/javadocking/dock/Dock;Ljava/lang/String;)Lcom/javadocking/dock/Dock;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" start="489" end="539" startBytecode="0" endBytecode="662" sourcefile="DockingWindowDescriptor.java" sourcepath="net/sf/doolin/gui/docking/DockingWindowDescriptor.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" start="524" end="533" startBytecode="159" endBytecode="217" sourcefile="DockingWindowDescriptor.java" sourcepath="net/sf/doolin/gui/docking/DockingWindowDescriptor.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="net.sf.doolin.gui.docking.DockingWindowDescriptor">
+      <SourceLine classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" start="77" end="868" sourcefile="DockingWindowDescriptor.java" sourcepath="net/sf/doolin/gui/docking/DockingWindowDescriptor.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" name="restore" signature="(Lnet/sf/doolin/gui/window/GUIWindow;Lcom/javadocking/dock/CompositeDock;Lnet/sf/doolin/gui/docking/DockDescription;)V" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" start="721" end="783" startBytecode="0" endBytecode="1083" sourcefile="DockingWindowDescriptor.java" sourcepath="net/sf/doolin/gui/docking/DockingWindowDescriptor.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.gui.docking.DockingWindowDescriptor" start="747" end="758" startBytecode="171" endBytecode="248" sourcefile="DockingWindowDescriptor.java" sourcepath="net/sf/doolin/gui/docking/DockingWindowDescriptor.java"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD_STORE" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="net.sf.doolin.gui.field.table.renderer.LabelInfoTableCellRenderer">
+      <SourceLine classname="net.sf.doolin.gui.field.table.renderer.LabelInfoTableCellRenderer" start="27" end="79" sourcefile="LabelInfoTableCellRenderer.java" sourcepath="net/sf/doolin/gui/field/table/renderer/LabelInfoTableCellRenderer.java"/>
+    </Class>
+    <Field classname="net.sf.doolin.gui.field.table.renderer.LabelInfoTableCellRenderer" name="labelProvider" signature="Lnet/sf/doolin/gui/swing/LabelInfoProvider;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.field.table.renderer.LabelInfoTableCellRenderer" sourcefile="LabelInfoTableCellRenderer.java" sourcepath="net/sf/doolin/gui/field/table/renderer/LabelInfoTableCellRenderer.java"/>
+    </Field>
+    <Type descriptor="Lnet/sf/doolin/gui/swing/DefaultLabelInfoProvider;" role="TYPE_FOUND">
+      <SourceLine classname="net.sf.doolin.gui.swing.DefaultLabelInfoProvider" start="15" end="19" sourcefile="DefaultLabelInfoProvider.java" sourcepath="net/sf/doolin/gui/swing/DefaultLabelInfoProvider.java"/>
+    </Type>
+    <SourceLine classname="net.sf.doolin.gui.field.table.renderer.LabelInfoTableCellRenderer" start="27" end="27" startBytecode="12" endBytecode="12" sourcefile="LabelInfoTableCellRenderer.java" sourcepath="net/sf/doolin/gui/field/table/renderer/LabelInfoTableCellRenderer.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="net.sf.doolin.gui.monitor.TaskMonitor">
+      <SourceLine classname="net.sf.doolin.gui.monitor.TaskMonitor" start="29" end="242" sourcefile="TaskMonitor.java" sourcepath="net/sf/doolin/gui/monitor/TaskMonitor.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.gui.monitor.TaskMonitor" name="propertyChange" signature="(Ljava/beans/PropertyChangeEvent;)V" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.monitor.TaskMonitor" start="100" end="120" startBytecode="0" endBytecode="293" sourcefile="TaskMonitor.java" sourcepath="net/sf/doolin/gui/monitor/TaskMonitor.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.gui.monitor.TaskMonitor" start="110" end="114" startBytecode="79" endBytecode="120" sourcefile="TaskMonitor.java" sourcepath="net/sf/doolin/gui/monitor/TaskMonitor.java"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="net.sf.doolin.gui.service.icon.AbstractIconService">
+      <SourceLine classname="net.sf.doolin.gui.service.icon.AbstractIconService" start="40" end="175" sourcefile="AbstractIconService.java" sourcepath="net/sf/doolin/gui/service/icon/AbstractIconService.java"/>
+    </Class>
+    <Field classname="net.sf.doolin.gui.service.icon.AbstractIconService" name="iconItems" signature="Ljava/util/Map;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.service.icon.AbstractIconService" sourcefile="AbstractIconService.java" sourcepath="net/sf/doolin/gui/service/icon/AbstractIconService.java"/>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="net.sf.doolin.gui.service.icon.AbstractIconService" start="65" end="65" startBytecode="5" endBytecode="5" sourcefile="AbstractIconService.java" sourcepath="net/sf/doolin/gui/service/icon/AbstractIconService.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="net.sf.doolin.gui.service.icon.AbstractIconService" start="121" end="121" startBytecode="1" endBytecode="1" sourcefile="AbstractIconService.java" sourcepath="net/sf/doolin/gui/service/icon/AbstractIconService.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="net.sf.doolin.gui.service.icon.AbstractIconService" start="130" end="130" startBytecode="1" endBytecode="1" sourcefile="AbstractIconService.java" sourcepath="net/sf/doolin/gui/service/icon/AbstractIconService.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="net.sf.doolin.gui.service.icon.AbstractIconService" start="152" end="152" startBytecode="212" endBytecode="212" sourcefile="AbstractIconService.java" sourcepath="net/sf/doolin/gui/service/icon/AbstractIconService.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="net.sf.doolin.gui.service.icon.AbstractIconService">
+      <SourceLine classname="net.sf.doolin.gui.service.icon.AbstractIconService" start="40" end="175" sourcefile="AbstractIconService.java" sourcepath="net/sf/doolin/gui/service/icon/AbstractIconService.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.gui.service.icon.AbstractIconService" name="getIcon" signature="(Ljava/lang/String;Lnet/sf/doolin/gui/service/IconSize;)Ljavax/swing/Icon;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.service.icon.AbstractIconService" start="64" end="87" startBytecode="0" endBytecode="57" sourcefile="AbstractIconService.java" sourcepath="net/sf/doolin/gui/service/icon/AbstractIconService.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.gui.service.icon.AbstractIconService" start="85" end="85" startBytecode="118" endBytecode="118" sourcefile="AbstractIconService.java" sourcepath="net/sf/doolin/gui/service/icon/AbstractIconService.java"/>
+  </BugInstance>
+  <BugInstance type="UI_INHERITANCE_UNSAFE_GETRESOURCE" priority="2" abbrev="UI" category="BAD_PRACTICE">
+    <Class classname="net.sf.doolin.gui.service.icon.DefaultIconService">
+      <SourceLine classname="net.sf.doolin.gui.service.icon.DefaultIconService" start="19" end="42" sourcefile="DefaultIconService.java" sourcepath="net/sf/doolin/gui/service/icon/DefaultIconService.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.gui.service.icon.DefaultIconService" name="toURL" signature="(Ljava/lang/String;)Ljava/net/URL;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.service.icon.DefaultIconService" start="41" end="42" startBytecode="0" endBytecode="76" sourcefile="DefaultIconService.java" sourcepath="net/sf/doolin/gui/service/icon/DefaultIconService.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.gui.service.icon.DefaultIconService" start="41" end="41" startBytecode="5" endBytecode="5" sourcefile="DefaultIconService.java" sourcepath="net/sf/doolin/gui/service/icon/DefaultIconService.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="net.sf.doolin.gui.swing.JFontChooser$ListSearchTextFieldDocumentHandler">
+      <SourceLine classname="net.sf.doolin.gui.swing.JFontChooser$ListSearchTextFieldDocumentHandler" start="181" end="222" sourcefile="JFontChooser.java" sourcepath="net/sf/doolin/gui/swing/JFontChooser.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="net.sf.doolin.gui.swing.JFontChooser$TextFieldKeyHandlerForListSelectionUpDown">
+      <SourceLine classname="net.sf.doolin.gui.swing.JFontChooser$TextFieldKeyHandlerForListSelectionUpDown" start="295" end="321" sourcefile="JFontChooser.java" sourcepath="net/sf/doolin/gui/swing/JFontChooser.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD_STORE" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="net.sf.doolin.gui.swing.LabelInfoListCellRenderer">
+      <SourceLine classname="net.sf.doolin.gui.swing.LabelInfoListCellRenderer" start="21" end="72" sourcefile="LabelInfoListCellRenderer.java" sourcepath="net/sf/doolin/gui/swing/LabelInfoListCellRenderer.java"/>
+    </Class>
+    <Field classname="net.sf.doolin.gui.swing.LabelInfoListCellRenderer" name="labelProvider" signature="Lnet/sf/doolin/gui/swing/LabelInfoProvider;" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.swing.LabelInfoListCellRenderer" sourcefile="LabelInfoListCellRenderer.java" sourcepath="net/sf/doolin/gui/swing/LabelInfoListCellRenderer.java"/>
+    </Field>
+    <Type descriptor="Lnet/sf/doolin/gui/swing/DefaultLabelInfoProvider;" role="TYPE_FOUND">
+      <SourceLine classname="net.sf.doolin.gui.swing.DefaultLabelInfoProvider" start="15" end="19" sourcefile="DefaultLabelInfoProvider.java" sourcepath="net/sf/doolin/gui/swing/DefaultLabelInfoProvider.java"/>
+    </Type>
+    <SourceLine classname="net.sf.doolin.gui.swing.LabelInfoListCellRenderer" start="21" end="21" startBytecode="12" endBytecode="12" sourcefile="LabelInfoListCellRenderer.java" sourcepath="net/sf/doolin/gui/swing/LabelInfoListCellRenderer.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="net.sf.doolin.gui.validation.IconFeedbackPanel">
+      <SourceLine classname="net.sf.doolin.gui.validation.IconFeedbackPanel" start="104" end="512" sourcefile="IconFeedbackPanel.java" sourcepath="net/sf/doolin/gui/validation/IconFeedbackPanel.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.gui.validation.IconFeedbackPanel" name="addFeedbackComponent" signature="(Ljava/awt/Component;Ljavax/swing/JComponent;Ljava/util/Map;II)V" isStatic="false">
+      <SourceLine classname="net.sf.doolin.gui.validation.IconFeedbackPanel" start="352" end="363" startBytecode="0" endBytecode="246" sourcefile="IconFeedbackPanel.java" sourcepath="net/sf/doolin/gui/validation/IconFeedbackPanel.java"/>
+    </Method>
+    <LocalVariable name="feedbackComponent" register="7" pc="16" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="net.sf.doolin.gui.validation.IconFeedbackPanel" name="createFeedbackComponent" signature="(Lnet/sf/doolin/gui/validation/GUIValidation;Ljava/awt/Component;)Ljavax/swing/JComponent;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="net.sf.doolin.gui.validation.IconFeedbackPanel" start="389" end="393" startBytecode="0" endBytecode="135" sourcefile="IconFeedbackPanel.java" sourcepath="net/sf/doolin/gui/validation/IconFeedbackPanel.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.gui.validation.IconFeedbackPanel" start="355" end="355" startBytecode="18" endBytecode="18" sourcefile="IconFeedbackPanel.java" sourcepath="net/sf/doolin/gui/validation/IconFeedbackPanel.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="141">
+    <MissingClass>ca.odell.glazedlists.BasicEventList</MissingClass>
+    <MissingClass>ca.odell.glazedlists.CompositeList</MissingClass>
+    <MissingClass>ca.odell.glazedlists.EventList</MissingClass>
+    <MissingClass>ca.odell.glazedlists.FilterList</MissingClass>
+    <MissingClass>ca.odell.glazedlists.FunctionList</MissingClass>
+    <MissingClass>ca.odell.glazedlists.GlazedLists</MissingClass>
+    <MissingClass>ca.odell.glazedlists.ObservableElementList</MissingClass>
+    <MissingClass>ca.odell.glazedlists.ObservableElementList$Connector</MissingClass>
+    <MissingClass>ca.odell.glazedlists.SortedList</MissingClass>
+    <MissingClass>ca.odell.glazedlists.TextFilterator</MissingClass>
+    <MissingClass>ca.odell.glazedlists.event.ListEventListener</MissingClass>
+    <MissingClass>ca.odell.glazedlists.gui.AbstractTableComparatorChooser</MissingClass>
+    <MissingClass>ca.odell.glazedlists.gui.AdvancedTableFormat</MissingClass>
+    <MissingClass>ca.odell.glazedlists.swing.AutoCompleteSupport</MissingClass>
+    <MissingClass>ca.odell.glazedlists.swing.EventComboBoxModel</MissingClass>
+    <MissingClass>ca.odell.glazedlists.swing.EventTableModel</MissingClass>
+    <MissingClass>ca.odell.glazedlists.swing.TableComparatorChooser</MissingClass>
+    <MissingClass>ca.odell.glazedlists.util.concurrent.Lock</MissingClass>
+    <MissingClass>ca.odell.glazedlists.util.concurrent.ReadWriteLock</MissingClass>
+    <MissingClass>com.google.common.base.Function</MissingClass>
+    <MissingClass>com.google.common.base.Functions</MissingClass>
+    <MissingClass>com.google.common.base.Predicate</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.javadocking.DockingExecutor</MissingClass>
+    <MissingClass>com.javadocking.DockingManager</MissingClass>
+    <MissingClass>com.javadocking.component.DefaultSwComponentFactory</MissingClass>
+    <MissingClass>com.javadocking.dock.BorderDock</MissingClass>
+    <MissingClass>com.javadocking.dock.CompositeDock</MissingClass>
+    <MissingClass>com.javadocking.dock.Dock</MissingClass>
+    <MissingClass>com.javadocking.dock.LeafDock</MissingClass>
+    <MissingClass>com.javadocking.dock.Position</MissingClass>
+    <MissingClass>com.javadocking.dock.SplitDock</MissingClass>
+    <MissingClass>com.javadocking.dock.TabDock</MissingClass>
+    <MissingClass>com.javadocking.dock.docker.BorderDocker</MissingClass>
+    <MissingClass>com.javadocking.dock.factory.ToolBarDockFactory</MissingClass>
+    <MissingClass>com.javadocking.dockable.ActionDockable</MissingClass>
+    <MissingClass>com.javadocking.dockable.DefaultDockable</MissingClass>
+    <MissingClass>com.javadocking.dockable.Dockable</MissingClass>
+    <MissingClass>com.javadocking.dockable.StateActionDockable</MissingClass>
+    <MissingClass>com.javadocking.dockable.action.DefaultDockableStateActionFactory</MissingClass>
+    <MissingClass>com.javadocking.model.DockModel</MissingClass>
+    <MissingClass>com.javadocking.model.FloatDockModel</MissingClass>
+    <MissingClass>com.javadocking.util.DockingUtil</MissingClass>
+    <MissingClass>com.javadocking.util.LookAndFeelUtil</MissingClass>
+    <MissingClass>com.javadocking.visualizer.DockingMinimizer</MissingClass>
+    <MissingClass>com.javadocking.visualizer.FloatExternalizer</MissingClass>
+    <MissingClass>com.javadocking.visualizer.SingleMaximizer</MissingClass>
+    <MissingClass>com.jgoodies.forms.builder.DefaultFormBuilder</MissingClass>
+    <MissingClass>com.jgoodies.forms.factories.ComponentFactory</MissingClass>
+    <MissingClass>com.jgoodies.forms.factories.DefaultComponentFactory</MissingClass>
+    <MissingClass>com.jgoodies.forms.layout.CellConstraints</MissingClass>
+    <MissingClass>com.jgoodies.forms.layout.FormLayout</MissingClass>
+    <MissingClass>com.jgoodies.forms.layout.RowSpec</MissingClass>
+    <MissingClass>net.sf.doolin.bus.Bus</MissingClass>
+    <MissingClass>net.sf.doolin.bus.BusLog</MissingClass>
+    <MissingClass>net.sf.doolin.bus.SimpleMessage</MissingClass>
+    <MissingClass>net.sf.doolin.bus.Subscriber</MissingClass>
+    <MissingClass>net.sf.doolin.bus.SubscriberInfo</MissingClass>
+    <MissingClass>net.sf.doolin.bus.bean.Bean</MissingClass>
+    <MissingClass>net.sf.doolin.bus.expression.BusExpression</MissingClass>
+    <MissingClass>net.sf.doolin.bus.support.AbstractClassSubscriber</MissingClass>
+    <MissingClass>net.sf.doolin.bus.support.AndSubscriberValidator</MissingClass>
+    <MissingClass>net.sf.doolin.bus.support.DefaultSubscriberValidator</MissingClass>
+    <MissingClass>net.sf.doolin.bus.support.PropertyChangeSubscriber</MissingClass>
+    <MissingClass>net.sf.doolin.bus.support.PropertyChangeSupport</MissingClass>
+    <MissingClass>net.sf.doolin.bus.support.SubscriberValidator</MissingClass>
+    <MissingClass>net.sf.doolin.bus.support.TriggeredSubscriberValidator</MissingClass>
+    <MissingClass>net.sf.doolin.bus.support.Value</MissingClass>
+    <MissingClass>net.sf.doolin.context.AbstractApplication</MissingClass>
+    <MissingClass>net.sf.doolin.context.ApplicationLauncher</MissingClass>
+    <MissingClass>net.sf.doolin.context.spring.AbstractDefinitionParser</MissingClass>
+    <MissingClass>net.sf.doolin.context.spring.CustomNamespaces</MissingClass>
+    <MissingClass>net.sf.doolin.context.spring.SimpleBeanFactory</MissingClass>
+    <MissingClass>net.sf.doolin.context.spring.SimpleDefinitionParser</MissingClass>
+    <MissingClass>net.sf.doolin.oxml.OXMLReader</MissingClass>
+    <MissingClass>net.sf.doolin.oxml.config.XMLOXMLConfig</MissingClass>
+    <MissingClass>net.sf.doolin.oxml.source.StreamOXMLSource</MissingClass>
+    <MissingClass>net.sf.doolin.template.Template</MissingClass>
+    <MissingClass>net.sf.doolin.template.TemplateEngine</MissingClass>
+    <MissingClass>net.sf.doolin.template.TemplateManager</MissingClass>
+    <MissingClass>net.sf.doolin.util.Adapter</MissingClass>
+    <MissingClass>net.sf.doolin.util.CodecUtils</MissingClass>
+    <MissingClass>net.sf.doolin.util.EditableValue</MissingClass>
+    <MissingClass>net.sf.doolin.util.Pair</MissingClass>
+    <MissingClass>net.sf.doolin.util.PasswordUtils</MissingClass>
+    <MissingClass>net.sf.doolin.util.PatternFileFilter</MissingClass>
+    <MissingClass>net.sf.doolin.util.TreeProperties</MissingClass>
+    <MissingClass>net.sf.doolin.util.URLUtils</MissingClass>
+    <MissingClass>net.sf.doolin.util.Utils</MissingClass>
+    <MissingClass>net.sf.doolin.util.collection.ListUtils</MissingClass>
+    <MissingClass>net.sf.doolin.util.factory.DataFactory</MissingClass>
+    <MissingClass>net.sf.doolin.util.factory.IdentityDataFactory</MissingClass>
+    <MissingClass>net.sf.doolin.util.factory.SimpleDataFactory</MissingClass>
+    <MissingClass>net.sf.doolin.util.unit.Unit</MissingClass>
+    <MissingClass>net.sf.doolin.util.unit.ValueUnit</MissingClass>
+    <MissingClass>net.sf.doolin.util.xml.DOMUtils</MissingClass>
+    <MissingClass>net.sf.jstring.JStrings</MissingClass>
+    <MissingClass>net.sf.jstring.Localizable</MissingClass>
+    <MissingClass>net.sf.jstring.LocalizableException</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.ConstructorUtils</MissingClass>
+    <MissingClass>org.apache.commons.jexl.Expression</MissingClass>
+    <MissingClass>org.apache.commons.jexl.ExpressionFactory</MissingClass>
+    <MissingClass>org.apache.commons.jexl.JexlContext</MissingClass>
+    <MissingClass>org.apache.commons.jexl.JexlHelper</MissingClass>
+    <MissingClass>org.apache.commons.lang.ArrayUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.ObjectUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.SerializationUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.Validate</MissingClass>
+    <MissingClass>org.apache.commons.lang.exception.ExceptionUtils</MissingClass>
+    <MissingClass>org.jfree.chart.ChartFactory</MissingClass>
+    <MissingClass>org.jfree.chart.ChartPanel</MissingClass>
+    <MissingClass>org.jfree.chart.JFreeChart</MissingClass>
+    <MissingClass>org.jfree.chart.axis.DateAxis</MissingClass>
+    <MissingClass>org.jfree.chart.plot.PlotOrientation</MissingClass>
+    <MissingClass>org.jfree.chart.plot.XYPlot</MissingClass>
+    <MissingClass>org.jfree.data.time.Millisecond</MissingClass>
+    <MissingClass>org.jfree.data.time.TimeSeries</MissingClass>
+    <MissingClass>org.jfree.data.time.TimeSeriesCollection</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.joda.time.LocalDate</MissingClass>
+    <MissingClass>org.joda.time.LocalDateTime</MissingClass>
+    <MissingClass>org.joda.time.Period</MissingClass>
+    <MissingClass>org.joda.time.format.PeriodFormatter</MissingClass>
+    <MissingClass>org.joda.time.format.PeriodFormatterBuilder</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.MutablePropertyValues</MissingClass>
+    <MissingClass>org.springframework.beans.PropertyValue</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanNameAware</MissingClass>
+    <MissingClass>org.springframework.beans.factory.InitializingBean</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.BeanDefinition</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.BeanDefinitionHolder</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.BeanDefinitionBuilder</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.GenericBeanDefinition</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.ManagedList</MissingClass>
+    <MissingClass>org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser</MissingClass>
+    <MissingClass>org.springframework.beans.factory.xml.BeanDefinitionParserDelegate</MissingClass>
+    <MissingClass>org.springframework.beans.factory.xml.NamespaceHandlerSupport</MissingClass>
+    <MissingClass>org.springframework.beans.factory.xml.ParserContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 3 Jul 2011 16:09:01 +0300" total_classes="628" referenced_classes="1226" total_bugs="14" total_size="13529" num_packages="69" vm_version="20.4-b02-402" cpu_seconds="60.21" clock_seconds="32.01" peak_mbytes="132.81" alloc_mbytes="4091.88" gc_seconds="1.89" priority_2="13" priority_1="1">
+    <PackageStats package="net.sf.doolin.gui" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="net.sf.doolin.gui.GUIErrorCodes" sourceFile="GUIErrorCodes.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.action" total_bugs="0" total_types="18" total_size="398">
+      <ClassStats class="net.sf.doolin.gui.action.AbstractGUIAction" sourceFile="AbstractGUIAction.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.AbstractSimpleGUIAction" sourceFile="AbstractSimpleGUIAction.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.AbstractTextAction" sourceFile="AbstractTextAction.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.AbstractTypedGUIAction" sourceFile="AbstractTypedGUIAction.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.ActionContext" sourceFile="ActionContext.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.CloseWindowAction" sourceFile="CloseWindowAction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.DelegateDialogAction" sourceFile="DelegateDialogAction.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.DelegateGUIAction" sourceFile="DelegateGUIAction.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.DialogAction" sourceFile="DialogAction.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.ExitAction" sourceFile="ExitAction.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.GUIAction" sourceFile="GUIAction.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.GUITaskAction" sourceFile="GUITaskAction.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.MethodGUIAction" sourceFile="MethodGUIAction.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.NOPGUIAction" sourceFile="NOPGUIAction.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.OpenViewAction" sourceFile="OpenViewAction.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.PromptGUIAction" sourceFile="PromptGUIAction.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.ServiceGUIAction" sourceFile="ServiceGUIAction.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.TaskDialogAction" sourceFile="TaskDialogAction.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.action.path" total_bugs="0" total_types="4" total_size="81">
+      <ClassStats class="net.sf.doolin.gui.action.path.ActionBarContext" sourceFile="ActionBarContext.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.ActionContextPath" sourceFile="ActionContextPath.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.ActionContextPathList" sourceFile="ActionContextPathList.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.DefaultActionContextPathList" sourceFile="DefaultActionContextPathList.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.action.path.item" total_bugs="0" total_types="7" total_size="109">
+      <ClassStats class="net.sf.doolin.gui.action.path.item.AbstractActionPath" sourceFile="AbstractActionPath.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.item.ActionPath" sourceFile="ActionPath.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.item.GUIActionPath" sourceFile="GUIActionPath.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.item.PlaceholderActionPath" sourceFile="PlaceholderActionPath.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.item.ReplacementActionPath" sourceFile="ReplacementActionPath.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.item.SeparatorActionPath" sourceFile="SeparatorActionPath.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.item.SubActionPath" sourceFile="SubActionPath.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.action.path.list" total_bugs="0" total_types="4" total_size="84">
+      <ClassStats class="net.sf.doolin.gui.action.path.list.ActionPathList" sourceFile="ActionPathList.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.list.AggregatedActionPathList" sourceFile="AggregatedActionPathList.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.list.DefaultActionPathList" sourceFile="DefaultActionPathList.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.list.ParsedActionPathList" sourceFile="ParsedActionPathList.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.action.path.statusbar" total_bugs="0" total_types="6" total_size="77">
+      <ClassStats class="net.sf.doolin.gui.action.path.statusbar.ExpressionLabelConnector" sourceFile="ExpressionLabelConnector.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.statusbar.GUIStatusBar" sourceFile="GUIStatusBar.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.statusbar.LabelConnector" sourceFile="LabelConnector.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.statusbar.StatusBarComponent" sourceFile="StatusBarComponent.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.statusbar.StatusBarLabel" sourceFile="StatusBarLabel.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.statusbar.StatusBarLabel$1" sourceFile="StatusBarLabel.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.action.path.toolbar" total_bugs="0" total_types="2" total_size="55">
+      <ClassStats class="net.sf.doolin.gui.action.path.toolbar.BarPosition" sourceFile="BarPosition.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.path.toolbar.ToolBar" sourceFile="ToolBar.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.action.support" total_bugs="0" total_types="17" total_size="313">
+      <ClassStats class="net.sf.doolin.gui.action.support.AbstractActionContext" sourceFile="AbstractActionContext.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.AbstractSwingAction" sourceFile="AbstractSwingAction.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.AbstractSwingAction$1" sourceFile="AbstractSwingAction.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.ActionContextDataExtractor" sourceFile="ActionContextDataExtractor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.ActionDelegate" sourceFile="ActionDelegate.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.ActionProxyDelegate" sourceFile="ActionProxyDelegate.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.ConverterDelegate" sourceFile="ConverterDelegate.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.DataActionContextConverter" sourceFile="DataActionContextConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.DefaultActionContextDataExtractor" sourceFile="DefaultActionContextDataExtractor.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.DelegateDataActionContext" sourceFile="DelegateDataActionContext.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.MethodActionDelegate" sourceFile="MethodActionDelegate.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.NOPActionDelegate" sourceFile="NOPActionDelegate.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.SaveInPrefsActionDelegate" sourceFile="SaveInPrefsActionDelegate.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.ServiceActionDelegate" sourceFile="ServiceActionDelegate.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.SwingAction" sourceFile="SwingAction.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.SwingAction$1" sourceFile="SwingAction.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.support.ViewOpenerDelegate" sourceFile="ViewOpenerDelegate.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.action.swing" total_bugs="0" total_types="10" total_size="236">
+      <ClassStats class="net.sf.doolin.gui.action.swing.AbstractJMenuBuilder" sourceFile="AbstractJMenuBuilder.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.swing.AbstractMenuBuilder" sourceFile="AbstractMenuBuilder.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.swing.ActionFactory" sourceFile="ActionFactory.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.swing.DefaultActionFactory" sourceFile="DefaultActionFactory.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.swing.JButtonBarBuilder" sourceFile="JButtonBarBuilder.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.swing.JMenuBarBuilder" sourceFile="JMenuBarBuilder.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.swing.JMenuBuilder" sourceFile="JMenuBuilder.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.swing.JPopupMenuBuilder" sourceFile="JPopupMenuBuilder.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.swing.JToolBarBuilder" sourceFile="JToolBarBuilder.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.swing.MenuBuilder" sourceFile="MenuBuilder.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.action.task" total_bugs="0" total_types="8" total_size="92">
+      <ClassStats class="net.sf.doolin.gui.action.task.AbstractGUITask" sourceFile="AbstractGUITask.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.task.BackgroundGUITaskExecutor" sourceFile="BackgroundGUITaskExecutor.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.task.BackgroundGUITaskExecutor$1" sourceFile="BackgroundGUITaskExecutor.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.task.GUITask" sourceFile="GUITask.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.task.GUITaskExecutor" sourceFile="GUITaskExecutor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.task.MethodGUITask" sourceFile="MethodGUITask.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.task.MonitoredGUITaskExecutor" sourceFile="MonitoredGUITaskExecutor.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.task.MonitoredGUITaskExecutor$1" sourceFile="MonitoredGUITaskExecutor.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.action.util" total_bugs="0" total_types="4" total_size="123">
+      <ClassStats class="net.sf.doolin.gui.action.util.ActionAbout" sourceFile="ActionAbout.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.util.ActionAbout$1" sourceFile="ActionAbout.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.util.ActionAbout$2" sourceFile="ActionAbout.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.action.util.ActionAbout$ImagePosition" sourceFile="ActionAbout.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.app" total_bugs="0" total_types="4" total_size="98">
+      <ClassStats class="net.sf.doolin.gui.app.GUIApplication" sourceFile="GUIApplication.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.app.GUIApplication$1" sourceFile="GUIApplication.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.app.GUIApplication$2" sourceFile="GUIApplication.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.app.GUIStartup" sourceFile="GUIStartup.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.app.support" total_bugs="0" total_types="3" total_size="58">
+      <ClassStats class="net.sf.doolin.gui.app.support.ApplicationActionContext" sourceFile="ApplicationActionContext.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.app.support.GUIWindowStartup" sourceFile="GUIWindowStartup.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.app.support.GUIWindowStartup$1" sourceFile="GUIWindowStartup.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.bus" total_bugs="0" total_types="16" total_size="390">
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitorRegistrationPeriodLabelInfoProvider" sourceFile="BusMonitorRegistrationPeriodLabelInfoProvider.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringChartField" sourceFile="BusMonitoringChartField.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringChartField$1" sourceFile="BusMonitoringChartField.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringChartField$2" sourceFile="BusMonitoringChartField.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringLog" sourceFile="BusMonitoringLog.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringLogEntry" sourceFile="BusMonitoringLogEntry.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringModel" sourceFile="BusMonitoringModel.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringRefreshActionPath" sourceFile="BusMonitoringRefreshActionPath.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringRefreshActionPath$1" sourceFile="BusMonitoringRefreshActionPath.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringRefreshActionPath$2" sourceFile="BusMonitoringRefreshActionPath.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringRefreshActionPath$3" sourceFile="BusMonitoringRefreshActionPath.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringRefreshTask" sourceFile="BusMonitoringRefreshTask.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringStat" sourceFile="BusMonitoringStat.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringSubscription" sourceFile="BusMonitoringSubscription.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringTestAction" sourceFile="BusMonitoringTestAction.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.bus.BusMonitoringWindowListener" sourceFile="BusMonitoringWindowListener.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.display" total_bugs="0" total_types="47" total_size="680">
+      <ClassStats class="net.sf.doolin.gui.display.AbstractContextPropertyDisplayStateHandler" sourceFile="AbstractContextPropertyDisplayStateHandler.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AbstractContextPropertyDisplayStateHandler$1" sourceFile="AbstractContextPropertyDisplayStateHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AbstractContextPropertyDisplayStateHandler$1$1" sourceFile="AbstractContextPropertyDisplayStateHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AbstractDisplayStateHandler" sourceFile="AbstractDisplayStateHandler.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AbstractDisplayStateHandler$1" sourceFile="AbstractDisplayStateHandler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AbstractFixedDisplayStateHandler" sourceFile="AbstractFixedDisplayStateHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AbstractSimpleDisplayStateHandler" sourceFile="AbstractSimpleDisplayStateHandler.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AbstractStateAdapter" sourceFile="AbstractStateAdapter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AdaptedContextPropertyDisplayStateHandler" sourceFile="AdaptedContextPropertyDisplayStateHandler.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AlwaysDisabledDisplayStateHandler" sourceFile="AlwaysDisabledDisplayStateHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AlwaysEnabledDisplayStateHandler" sourceFile="AlwaysEnabledDisplayStateHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AlwaysHiddenDisplayStateHandler" sourceFile="AlwaysHiddenDisplayStateHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AndDisplayStateHandler" sourceFile="AndDisplayStateHandler.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.AndDisplayStateHandler$1" sourceFile="AndDisplayStateHandler.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.BooleanStateAdapter" sourceFile="BooleanStateAdapter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalDisplayStateHandler" sourceFile="ConditionalDisplayStateHandler.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalJEXLDisplayStateHandler" sourceFile="ConditionalJEXLDisplayStateHandler.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator" sourceFile="ConditionalOperator.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$1" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$10" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$11" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$12" sourceFile="ConditionalOperator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$13" sourceFile="ConditionalOperator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$2" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$3" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$4" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$5" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$6" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$7" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$8" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalOperator$9" sourceFile="ConditionalOperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ConditionalStateAdapter" sourceFile="ConditionalStateAdapter.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ContextDisplayStateHandler" sourceFile="ContextDisplayStateHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.DisplayState" sourceFile="DisplayState.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.DisplayStateHandler" sourceFile="DisplayStateHandler.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.DisplayStateHandlerUtils" sourceFile="DisplayStateHandlerUtils.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.DisplayStateHandlerUtils$1" sourceFile="DisplayStateHandlerUtils.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.DisplayStateHandlers" sourceFile="DisplayStateHandlers.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.MapStateAdapter" sourceFile="MapStateAdapter.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.MultiDisplayStateHandler" sourceFile="MultiDisplayStateHandler.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.NotDisplayStateHandler" sourceFile="NotDisplayStateHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.NotDisplayStateHandler$1" sourceFile="NotDisplayStateHandler.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.OrDisplayStateHandler" sourceFile="OrDisplayStateHandler.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.OrDisplayStateHandler$1" sourceFile="OrDisplayStateHandler.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.StateAdapter" sourceFile="StateAdapter.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.SystemPropertyDisplayStateHandler" sourceFile="SystemPropertyDisplayStateHandler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.display.ValidationDisplayStateHandler" sourceFile="ValidationDisplayStateHandler.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.docking" total_bugs="3" total_types="11" total_size="559" priority_2="2" priority_1="1">
+      <ClassStats class="net.sf.doolin.gui.docking.DockDescription" sourceFile="DockDescription.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.DockType" sourceFile="DockType.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.DockingComponent" sourceFile="DockingComponent.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.DockingComponent$FocusRequester" sourceFile="DockingComponent.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.DockingConstraint" sourceFile="DockingConstraint.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.DockingPathConstraints" sourceFile="DockingPathConstraints.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.DockingWindowDescriptor" sourceFile="DockingWindowDescriptor.java" interface="false" size="323" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="net.sf.doolin.gui.docking.DockingWindowDescriptor$1" sourceFile="DockingWindowDescriptor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.DockingWindowDescriptor$1$1" sourceFile="DockingWindowDescriptor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.DockingWindowDescriptor$2" sourceFile="DockingWindowDescriptor.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.DockingWindowDescriptor$CloseAction" sourceFile="DockingWindowDescriptor.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.docking.storage" total_bugs="0" total_types="7" total_size="137">
+      <ClassStats class="net.sf.doolin.gui.docking.storage.DefaultDockingStorage" sourceFile="DefaultDockingStorage.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.storage.DefaultStorage" sourceFile="DefaultStorage.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.storage.DockingFormatter" sourceFile="DockingFormatter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.storage.DockingStorage" sourceFile="DockingStorage.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.storage.OXMLDocking" sourceFile="OXMLDocking.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.storage.Storage" sourceFile="Storage.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.docking.storage.XMLDockingStorage" sourceFile="XMLDockingStorage.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.edit" total_bugs="0" total_types="11" total_size="235">
+      <ClassStats class="net.sf.doolin.gui.edit.AbstractGUIEdit" sourceFile="AbstractGUIEdit.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.edit.DefaultGUIEditManager" sourceFile="DefaultGUIEditManager.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.edit.GUIEdit" sourceFile="GUIEdit.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.edit.GUIEditAction" sourceFile="GUIEditAction.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.edit.GUIEditAction$1" sourceFile="GUIEditAction.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.edit.GUIEditAction$1$1" sourceFile="GUIEditAction.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.edit.GUIEditAction$2" sourceFile="GUIEditAction.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.edit.GUIEditManager" sourceFile="GUIEditManager.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.edit.GUIEditManagerUpdateMessage" sourceFile="GUIEditManagerUpdateMessage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.edit.GUIRedoAction" sourceFile="GUIRedoAction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.edit.GUIUndoAction" sourceFile="GUIUndoAction.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.expression" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="net.sf.doolin.gui.expression.GUIExpression" sourceFile="GUIExpression.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field" total_bugs="0" total_types="51" total_size="1094">
+      <ClassStats class="net.sf.doolin.gui.field.AbstractFieldDescriptor" sourceFile="AbstractFieldDescriptor.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.AbstractFieldDescriptor$1" sourceFile="AbstractFieldDescriptor.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.AbstractFieldText" sourceFile="AbstractFieldText.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.AbstractFieldText$1" sourceFile="AbstractFieldText.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.AbstractFieldText$2" sourceFile="AbstractFieldText.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.AbstractFieldText$3" sourceFile="AbstractFieldText.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.AbstractFieldText$4" sourceFile="AbstractFieldText.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.AbstractPropertyFieldDescriptor" sourceFile="AbstractPropertyFieldDescriptor.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.AbstractPropertyFieldDescriptor$1" sourceFile="AbstractPropertyFieldDescriptor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.Field" sourceFile="Field.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldButton" sourceFile="FieldButton.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldCheck" sourceFile="FieldCheck.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldCheck$1" sourceFile="FieldCheck.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldColor" sourceFile="FieldColor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldColor$1" sourceFile="FieldColor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldDecimal" sourceFile="FieldDecimal.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldDecimal$1" sourceFile="FieldDecimal.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldDecimal$2" sourceFile="FieldDecimal.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldDecimal$3" sourceFile="FieldDecimal.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldDescriptor" sourceFile="FieldDescriptor.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldFile" sourceFile="FieldFile.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldFile$1" sourceFile="FieldFile.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldFont" sourceFile="FieldFont.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldFont$1" sourceFile="FieldFont.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldInteger" sourceFile="FieldInteger.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldInteger$1" sourceFile="FieldInteger.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldInteger$2" sourceFile="FieldInteger.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldInteger$3" sourceFile="FieldInteger.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldLabel" sourceFile="FieldLabel.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldLabelInfo" sourceFile="FieldLabelInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldLabelInfo$1" sourceFile="FieldLabelInfo.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldLabelInfo$1$1" sourceFile="FieldLabelInfo.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldLong" sourceFile="FieldLong.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldLong$1" sourceFile="FieldLong.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldLong$2" sourceFile="FieldLong.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldLong$3" sourceFile="FieldLong.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldMemo" sourceFile="FieldMemo.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldPassword" sourceFile="FieldPassword.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldPassword$1" sourceFile="FieldPassword.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldPassword$2" sourceFile="FieldPassword.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldPassword$3" sourceFile="FieldPassword.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldPassword$4" sourceFile="FieldPassword.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldPasswordStore" sourceFile="FieldPasswordStore.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldRadio" sourceFile="FieldRadio.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldRadio$1" sourceFile="FieldRadio.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldRadio$2" sourceFile="FieldRadio.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldRadio$3" sourceFile="FieldRadio.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldSeparator" sourceFile="FieldSeparator.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldText" sourceFile="FieldText.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldToggle" sourceFile="FieldToggle.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.FieldToggle$1" sourceFile="FieldToggle.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.list" total_bugs="0" total_types="8" total_size="245">
+      <ClassStats class="net.sf.doolin.gui.field.list.AbstractListPropertyFieldDescriptor" sourceFile="AbstractListPropertyFieldDescriptor.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.FieldCombo" sourceFile="FieldCombo.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.FieldCombo$1" sourceFile="FieldCombo.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.FieldCombo$2" sourceFile="FieldCombo.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.FieldRadioGroup" sourceFile="FieldRadioGroup.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.FieldRadioGroup$1" sourceFile="FieldRadioGroup.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.FieldRadioGroup$2" sourceFile="FieldRadioGroup.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.FieldRadioGroup$3" sourceFile="FieldRadioGroup.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.list.multi" total_bugs="0" total_types="16" total_size="371">
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.FieldMultiCombo" sourceFile="FieldMultiCombo.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.FieldMultiCombo$1" sourceFile="FieldMultiCombo.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboAdapter" sourceFile="MultiComboAdapter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboComponent" sourceFile="MultiComboComponent.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboComponent$1" sourceFile="MultiComboComponent.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboComponent$2" sourceFile="MultiComboComponent.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboComponent$3" sourceFile="MultiComboComponent.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboComponent$4" sourceFile="MultiComboComponent.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboComponent$Item2SelectableFunction" sourceFile="MultiComboComponent.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboComponent$Selectable2ItemFunction" sourceFile="MultiComboComponent.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboField" sourceFile="MultiComboField.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboListener" sourceFile="MultiComboListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboMouseAdapter" sourceFile="MultiComboMouseAdapter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboMouseAdapter$1" sourceFile="MultiComboMouseAdapter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.MultiComboTableFormat" sourceFile="MultiComboTableFormat.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.list.multi.SelectableItem" sourceFile="SelectableItem.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.support" total_bugs="0" total_types="5" total_size="86">
+      <ClassStats class="net.sf.doolin.gui.field.support.AbstractField" sourceFile="AbstractField.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.support.AbstractFieldActionContext" sourceFile="AbstractFieldActionContext.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.support.FieldActionContext" sourceFile="FieldActionContext.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.support.FieldTransferHandler" sourceFile="FieldTransferHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.support.SimpleField" sourceFile="SimpleField.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.table" total_bugs="0" total_types="6" total_size="258">
+      <ClassStats class="net.sf.doolin.gui.field.table.Column" sourceFile="Column.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.ColumnGenerator" sourceFile="ColumnGenerator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.ColumnValueFactory" sourceFile="ColumnValueFactory.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.FieldTable" sourceFile="FieldTable.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.ITableEventListFactory" sourceFile="ITableEventListFactory.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.TableSelectionMode" sourceFile="TableSelectionMode.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.table.action" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="net.sf.doolin.gui.field.table.action.NewItemAction" sourceFile="NewItemAction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.action.OpenItemAction" sourceFile="OpenItemAction.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.table.column" total_bugs="0" total_types="7" total_size="93">
+      <ClassStats class="net.sf.doolin.gui.field.table.column.ColumnAlwaysEditable" sourceFile="ColumnAlwaysEditable.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.column.ColumnEditable" sourceFile="ColumnEditable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.column.ColumnUpdatePolicy" sourceFile="ColumnUpdatePolicy.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.column.DefaultColumnGenerator" sourceFile="DefaultColumnGenerator.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.column.DefaultColumnGenerator$1" sourceFile="DefaultColumnGenerator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.column.DefaultColumnGenerator$2" sourceFile="DefaultColumnGenerator.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.column.PropertyColumnEditable" sourceFile="PropertyColumnEditable.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.table.editor" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="net.sf.doolin.gui.field.table.editor.ComboTableCellEditor" sourceFile="ComboTableCellEditor.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.table.header" total_bugs="0" total_types="3" total_size="6">
+      <ClassStats class="net.sf.doolin.gui.field.table.header.CustomHeaderFactory" sourceFile="CustomHeaderFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.header.GUITableHeaderFactory" sourceFile="GUITableHeaderFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.header.GUITableHeaderMenuFactory" sourceFile="GUITableHeaderMenuFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.table.header.support" total_bugs="0" total_types="3" total_size="45">
+      <ClassStats class="net.sf.doolin.gui.field.table.header.support.DefaultGUITableHeaderFactory" sourceFile="DefaultGUITableHeaderFactory.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.header.support.DefaultGUITableHeaderFactory$1" sourceFile="DefaultGUITableHeaderFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.header.support.DefaultGUITableHeaderMenuFactory" sourceFile="DefaultGUITableHeaderMenuFactory.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.table.renderer" total_bugs="2" total_types="2" total_size="44" priority_2="2">
+      <ClassStats class="net.sf.doolin.gui.field.table.renderer.GUITableCellRenderer" sourceFile="GUITableCellRenderer.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.renderer.LabelInfoTableCellRenderer" sourceFile="LabelInfoTableCellRenderer.java" interface="false" size="22" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.table.style" total_bugs="0" total_types="7" total_size="96">
+      <ClassStats class="net.sf.doolin.gui.field.table.style.AlternateColorTableStyle" sourceFile="AlternateColorTableStyle.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.style.ChainedTableStyle" sourceFile="ChainedTableStyle.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.style.DefaultTableStyle" sourceFile="DefaultTableStyle.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.style.FixedColorTableStyle" sourceFile="FixedColorTableStyle.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.style.FontTableStyle" sourceFile="FontTableStyle.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.style.PropertyValueTableStyle" sourceFile="PropertyValueTableStyle.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.style.TableStyle" sourceFile="TableStyle.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.table.support" total_bugs="0" total_types="21" total_size="532">
+      <ClassStats class="net.sf.doolin.gui.field.table.support.AbstractPropertyBasedTableEventListFactory" sourceFile="AbstractPropertyBasedTableEventListFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.ColumnMenuItem" sourceFile="ColumnMenuItem.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.ColumnMenuItem$1" sourceFile="ColumnMenuItem.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITable" sourceFile="GUITable.java" interface="false" size="134" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITable$1" sourceFile="GUITable.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITable$2" sourceFile="GUITable.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITable$3" sourceFile="GUITable.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITable$4" sourceFile="GUITable.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITable$5" sourceFile="GUITable.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITableField" sourceFile="GUITableField.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITableField$1" sourceFile="GUITableField.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITableField$2" sourceFile="GUITableField.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITableField$2$1" sourceFile="GUITableField.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITableField$2$2" sourceFile="GUITableField.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITableField$2$3" sourceFile="GUITableField.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITableFormat" sourceFile="GUITableFormat.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITableFormat$1" sourceFile="GUITableFormat.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.GUITableMouseListener" sourceFile="GUITableMouseListener.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.PropertyTableEventListFactory" sourceFile="PropertyTableEventListFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.TableActionContext" sourceFile="TableActionContext.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.support.TableActionContext$1" sourceFile="TableActionContext.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.table.value" total_bugs="0" total_types="2" total_size="24">
+      <ClassStats class="net.sf.doolin.gui.field.table.value.PropertyColumnValueFactory" sourceFile="PropertyColumnValueFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.table.value.PropertyColumnValueFactory$1" sourceFile="PropertyColumnValueFactory.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.tree" total_bugs="0" total_types="4" total_size="82">
+      <ClassStats class="net.sf.doolin.gui.field.tree.Children" sourceFile="Children.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.FieldTree" sourceFile="FieldTree.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.FieldTreeSelectionPropertyMode" sourceFile="FieldTreeSelectionPropertyMode.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.Node" sourceFile="Node.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.tree.model" total_bugs="0" total_types="5" total_size="146">
+      <ClassStats class="net.sf.doolin.gui.field.tree.model.GUITreeModel" sourceFile="GUITreeModel.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.model.GUITreeNode" sourceFile="GUITreeNode.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.model.GUITreeNode$1" sourceFile="GUITreeNode.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.model.GUITreeNode$2" sourceFile="GUITreeNode.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.model.GUITreeNodeUserObjectPredicate" sourceFile="GUITreeNodeUserObjectPredicate.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.field.tree.support" total_bugs="0" total_types="10" total_size="203">
+      <ClassStats class="net.sf.doolin.gui.field.tree.support.AbstractChildren" sourceFile="AbstractChildren.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.support.GUITree" sourceFile="GUITree.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.support.GUITree$1" sourceFile="GUITree.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.support.GUITree$2" sourceFile="GUITree.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.support.GUITree$3" sourceFile="GUITree.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.support.GUITreeField" sourceFile="GUITreeField.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.support.GUITreeRenderer" sourceFile="GUITreeRenderer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.support.PropertyChildren" sourceFile="PropertyChildren.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.support.TreeActionContext" sourceFile="TreeActionContext.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.field.tree.support.TreeActionContext$1" sourceFile="TreeActionContext.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.form" total_bugs="0" total_types="5" total_size="209">
+      <ClassStats class="net.sf.doolin.gui.form.FormPanel" sourceFile="FormPanel.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.form.FormPanel$1" sourceFile="FormPanel.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.form.FormSection" sourceFile="FormSection.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.form.FormSection$1" sourceFile="FormSection.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.form.FormViewDescriptor" sourceFile="FormViewDescriptor.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.layout" total_bugs="0" total_types="7" total_size="175">
+      <ClassStats class="net.sf.doolin.gui.layout.FormLayoutService" sourceFile="FormLayoutService.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.layout.IdentityLayoutConstraintAdapter" sourceFile="IdentityLayoutConstraintAdapter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.layout.LayoutConstraintAdapter" sourceFile="LayoutConstraintAdapter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.layout.LayoutManagerService" sourceFile="LayoutManagerService.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.layout.LayoutService" sourceFile="LayoutService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.layout.SingleLayoutService" sourceFile="SingleLayoutService.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.layout.TableLayoutService" sourceFile="TableLayoutService.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.lf" total_bugs="0" total_types="3" total_size="70">
+      <ClassStats class="net.sf.doolin.gui.lf.LFAction" sourceFile="LFAction.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.lf.LFChanged" sourceFile="LFChanged.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.lf.LookAndFeelActionPathList" sourceFile="LookAndFeelActionPathList.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.message" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="net.sf.doolin.gui.message.GUIMessage" sourceFile="GUIMessage.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.model" total_bugs="0" total_types="3" total_size="49">
+      <ClassStats class="net.sf.doolin.gui.model.EnumListDataFactory" sourceFile="EnumListDataFactory.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.model.MethodDataFactory" sourceFile="MethodDataFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.model.PropertyDataFactory" sourceFile="PropertyDataFactory.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.monitor" total_bugs="1" total_types="9" total_size="151" priority_2="1">
+      <ClassStats class="net.sf.doolin.gui.monitor.CallableTask" sourceFile="CallableTask.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.monitor.Task" sourceFile="Task.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.monitor.TaskException" sourceFile="TaskException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.monitor.TaskListener" sourceFile="TaskListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.monitor.TaskMonitor" sourceFile="TaskMonitor.java" interface="false" size="92" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.gui.monitor.TaskMonitor$1" sourceFile="TaskMonitor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.monitor.TaskMonitor$2" sourceFile="TaskMonitor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.monitor.TaskMonitor$3" sourceFile="TaskMonitor.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.monitor.TaskMonitorDialog" sourceFile="TaskMonitorDialog.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.service" total_bugs="0" total_types="8" total_size="82">
+      <ClassStats class="net.sf.doolin.gui.service.ConfirmResult" sourceFile="ConfirmResult.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.DesktopService" sourceFile="DesktopService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.GUIPreferences" sourceFile="GUIPreferences.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.IconService" sourceFile="IconService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.IconSize" sourceFile="IconSize.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.InfoService" sourceFile="InfoService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.Memento" sourceFile="Memento.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.Parameters" sourceFile="Parameters.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.service.icon" total_bugs="3" total_types="7" total_size="183" priority_2="3">
+      <ClassStats class="net.sf.doolin.gui.service.icon.AbstractIconService" sourceFile="AbstractIconService.java" interface="false" size="68" bugs="2" priority_2="2"/>
+      <ClassStats class="net.sf.doolin.gui.service.icon.AbstractIconService$IconItem" sourceFile="AbstractIconService.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.icon.DefaultIconService" sourceFile="DefaultIconService.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.gui.service.icon.IconDefinition" sourceFile="IconDefinition.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.icon.IconURLStreamHandler" sourceFile="IconURLStreamHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.icon.PropertyIconService" sourceFile="PropertyIconService.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.icon.SimpleIconService" sourceFile="SimpleIconService.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.service.info" total_bugs="0" total_types="4" total_size="37">
+      <ClassStats class="net.sf.doolin.gui.service.info.DefaultErrorMessageService" sourceFile="DefaultErrorMessageService.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.info.DefaultExceptionTranslator" sourceFile="DefaultExceptionTranslator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.info.ErrorMessageService" sourceFile="ErrorMessageService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.info.ExceptionTranslator" sourceFile="ExceptionTranslator.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.service.support" total_bugs="0" total_types="6" total_size="306">
+      <ClassStats class="net.sf.doolin.gui.service.support.AbstractGUIPreferences" sourceFile="AbstractGUIPreferences.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.support.DefaultGUIPreferences" sourceFile="DefaultGUIPreferences.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.support.DefaultInfoService" sourceFile="DefaultInfoService.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.support.DefaultParameters" sourceFile="DefaultParameters.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.support.JDK6DesktopService" sourceFile="JDK6DesktopService.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.service.support.PropertyFileGUIPreferences" sourceFile="PropertyFileGUIPreferences.java" interface="false" size="106" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.spring" total_bugs="0" total_types="43" total_size="511">
+      <ClassStats class="net.sf.doolin.gui.spring.AbstractFieldTypeParser" sourceFile="AbstractFieldTypeParser.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.AbstractListPropertyFieldTypeParser" sourceFile="AbstractListPropertyFieldTypeParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.AbstractListPropertyFieldTypeParser$1" sourceFile="AbstractListPropertyFieldTypeParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.AbstractListPropertyFieldTypeParser$2" sourceFile="AbstractListPropertyFieldTypeParser.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.AbstractListPropertyFieldTypeParser$3" sourceFile="AbstractListPropertyFieldTypeParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.AbstractPropertyFieldTypeParser" sourceFile="AbstractPropertyFieldTypeParser.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.ButtonParser" sourceFile="ButtonParser.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.CheckParser" sourceFile="CheckParser.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.ColorEditor" sourceFile="ColorEditor.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.ColorParser" sourceFile="ColorParser.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.ComboParser" sourceFile="ComboParser.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.DecimalParser" sourceFile="DecimalParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.DockingWindowParser" sourceFile="DockingWindowParser.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.FileParser" sourceFile="FileParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.FontParser" sourceFile="FontParser.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.GUI" sourceFile="GUI.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.GUINamespaceHandler" sourceFile="GUINamespaceHandler.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.GUINamespaceHandler$1" sourceFile="GUINamespaceHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.GUINamespaceHandler$2" sourceFile="GUINamespaceHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.IntegerParser" sourceFile="IntegerParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.LabelInfoParser" sourceFile="LabelInfoParser.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.LabelInfoParser$1" sourceFile="LabelInfoParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.LabelParser" sourceFile="LabelParser.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.LayoutManagerServiceParser" sourceFile="LayoutManagerServiceParser.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.LayoutWindowParser" sourceFile="LayoutWindowParser.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.ListDecorator" sourceFile="ListDecorator.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.LongParser" sourceFile="LongParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.MemoParser" sourceFile="MemoParser.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.MultiComboParser" sourceFile="MultiComboParser.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.PasswordParser" sourceFile="PasswordParser.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.PropertiesDecorator" sourceFile="PropertiesDecorator.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.PropertyIconServiceParser" sourceFile="PropertyIconServiceParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.RadioGroupParser" sourceFile="RadioGroupParser.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.RadioParser" sourceFile="RadioParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.RadioParser$1" sourceFile="RadioParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.SectionParser" sourceFile="SectionParser.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.SeparatorParser" sourceFile="SeparatorParser.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.SimpleWindowParser" sourceFile="SimpleWindowParser.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.TabbedWindowParser" sourceFile="TabbedWindowParser.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.TextParser" sourceFile="TextParser.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.ToggleParser" sourceFile="ToggleParser.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.ToolBarDecorator" sourceFile="ToolBarDecorator.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.WindowTypeParser" sourceFile="WindowTypeParser.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.spring.table" total_bugs="0" total_types="9" total_size="91">
+      <ClassStats class="net.sf.doolin.gui.spring.table.ColumnDateDecorator" sourceFile="ColumnDateDecorator.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.table.ColumnEnumDecorator" sourceFile="ColumnEnumDecorator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.table.ColumnExpressionDecorator" sourceFile="ColumnExpressionDecorator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.table.ColumnParser" sourceFile="ColumnParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.table.ColumnParser$1" sourceFile="ColumnParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.table.ColumnParser$2" sourceFile="ColumnParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.table.ColumnsParser" sourceFile="ColumnsParser.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.table.TableParser" sourceFile="TableParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.table.TableParser$1" sourceFile="TableParser.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.spring.tree" total_bugs="0" total_types="3" total_size="32">
+      <ClassStats class="net.sf.doolin.gui.spring.tree.TreeChildrenParser" sourceFile="TreeChildrenParser.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.tree.TreeNodeParser" sourceFile="TreeNodeParser.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.spring.tree.TreeParser" sourceFile="TreeParser.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.style" total_bugs="0" total_types="5" total_size="102">
+      <ClassStats class="net.sf.doolin.gui.style.BackgroundStyle" sourceFile="BackgroundStyle.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.style.ChainedStyle" sourceFile="ChainedStyle.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.style.FontStyle" sourceFile="FontStyle.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.style.PropertyStyle" sourceFile="PropertyStyle.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.style.Style" sourceFile="Style.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.swing" total_bugs="4" total_types="50" total_size="1626" priority_2="4">
+      <ClassStats class="net.sf.doolin.gui.swing.AbstractFilePath" sourceFile="AbstractFilePath.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.ByClassAndPropertyFormat" sourceFile="ByClassAndPropertyFormat.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.ClassLabelInfoProvider" sourceFile="ClassLabelInfoProvider.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.CollapsablePanel" sourceFile="CollapsablePanel.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.CollapsablePanel$1" sourceFile="CollapsablePanel.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.CollaspableBorder" sourceFile="CollaspableBorder.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.ComboFilePath" sourceFile="ComboFilePath.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.ComboFilePath$1" sourceFile="ComboFilePath.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.CompletionSupport" sourceFile="CompletionSupport.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.CompletionSupport$1" sourceFile="CompletionSupport.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.DateLabelInfoProvider" sourceFile="DateLabelInfoProvider.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.DefaultLabelInfoProvider" sourceFile="DefaultLabelInfoProvider.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.DefaultTextLabelInfoProvider" sourceFile="DefaultTextLabelInfoProvider.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.DockLayout" sourceFile="DockLayout.java" interface="false" size="160" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.DoolinIcons" sourceFile="DoolinIcons.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.EnumLabelInfoProvider" sourceFile="EnumLabelInfoProvider.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.ExpressionLabelInfoProvider" sourceFile="ExpressionLabelInfoProvider.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.FileBrowser" sourceFile="FileBrowser.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.FileBrowser$1" sourceFile="FileBrowser.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.FileBrowser$2" sourceFile="FileBrowser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.FileBrowser$3" sourceFile="FileBrowser.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.FileBrowsingMode" sourceFile="FileBrowsingMode.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.FilePathListener" sourceFile="FilePathListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.FormattedKeyLabelInfoProvider" sourceFile="FormattedKeyLabelInfoProvider.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.IFilePath" sourceFile="IFilePath.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JButtonBar" sourceFile="JButtonBar.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFile" sourceFile="JFile.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFile$1" sourceFile="JFile.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFile$2" sourceFile="JFile.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFontChooser" sourceFile="JFontChooser.java" interface="false" size="312" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFontChooser$1" sourceFile="JFontChooser.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFontChooser$DialogCancelAction" sourceFile="JFontChooser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFontChooser$DialogOKAction" sourceFile="JFontChooser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFontChooser$ListSearchTextFieldDocumentHandler" sourceFile="JFontChooser.java" interface="false" size="33" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFontChooser$ListSearchTextFieldDocumentHandler$ListSelector" sourceFile="JFontChooser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFontChooser$ListSelectionHandler" sourceFile="JFontChooser.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFontChooser$TextFieldFocusHandlerForTextSelection" sourceFile="JFontChooser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.JFontChooser$TextFieldKeyHandlerForListSelectionUpDown" sourceFile="JFontChooser.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.gui.swing.KeyLabelInfoProvider" sourceFile="KeyLabelInfoProvider.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.LabelInfo" sourceFile="LabelInfo.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.LabelInfoListCellRenderer" sourceFile="LabelInfoListCellRenderer.java" interface="false" size="22" bugs="2" priority_2="2"/>
+      <ClassStats class="net.sf.doolin.gui.swing.LabelInfoProvider" sourceFile="LabelInfoProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.MapLabelInfoProvider" sourceFile="MapLabelInfoProvider.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.MnemonicInfo" sourceFile="MnemonicInfo.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.PropertyLabelInfoProvider" sourceFile="PropertyLabelInfoProvider.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.ScrollablePanel" sourceFile="ScrollablePanel.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.SwingUtils" sourceFile="SwingUtils.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.SwingUtils$ClassComponentPredicate" sourceFile="SwingUtils.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.TextFilePath" sourceFile="TextFilePath.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.swing.TextFilePath$1" sourceFile="TextFilePath.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.system" total_bugs="0" total_types="3" total_size="57">
+      <ClassStats class="net.sf.doolin.gui.system.SystemInformation" sourceFile="SystemInformation.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.system.SystemInformationModel" sourceFile="SystemInformationModel.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.system.SystemInformationType" sourceFile="SystemInformationType.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.util" total_bugs="0" total_types="5" total_size="120">
+      <ClassStats class="net.sf.doolin.gui.util.GUILF" sourceFile="GUILF.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.util.GUIStrings" sourceFile="GUIStrings.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.util.PreferencesDataFactory" sourceFile="PreferencesDataFactory.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.util.PreferencesUtils" sourceFile="PreferencesUtils.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.util.PropertyContainer" sourceFile="PropertyContainer.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.validation" total_bugs="1" total_types="18" total_size="472" priority_2="1">
+      <ClassStats class="net.sf.doolin.gui.validation.AbstractValidationGUIViewDecorator" sourceFile="AbstractValidationGUIViewDecorator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.AbstractValidator" sourceFile="AbstractValidator.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.ChainedValidator" sourceFile="ChainedValidator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.ConfirmPasswordValidator" sourceFile="ConfirmPasswordValidator.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.DefaultValidationGUIViewDecorator" sourceFile="DefaultValidationGUIViewDecorator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.GUIValidation" sourceFile="GUIValidation.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.GUIValidationDecorator" sourceFile="GUIValidationDecorator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.GUIValidationMessage" sourceFile="GUIValidationMessage.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.GUIValidator" sourceFile="GUIValidator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.IconFeedbackPanel" sourceFile="IconFeedbackPanel.java" interface="false" size="137" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.gui.validation.IconFeedbackPanel$1" sourceFile="IconFeedbackPanel.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.IconFeedbackPanel$SimpleLayout" sourceFile="IconFeedbackPanel.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.IconFeedbackPanel$ValidationTask" sourceFile="IconFeedbackPanel.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.SimpleValidator" sourceFile="SimpleValidator.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.SimpleValidator$SimpleValidation" sourceFile="SimpleValidator.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.ValidationComponentUtils" sourceFile="ValidationComponentUtils.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.ValidationMsgKeys" sourceFile="ValidationMsgKeys.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.ValidationSupport" sourceFile="ValidationSupport.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.validation.support" total_bugs="0" total_types="9" total_size="124">
+      <ClassStats class="net.sf.doolin.gui.validation.support.DirExistsObjectValidator" sourceFile="DirExistsObjectValidator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.support.FalseObjectValidator" sourceFile="FalseObjectValidator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.support.NotBlankObjectValidator" sourceFile="NotBlankObjectValidator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.support.NotEmptyObjectValidator" sourceFile="NotEmptyObjectValidator.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.support.NotNullObjectValidator" sourceFile="NotNullObjectValidator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.support.ObjectValidator" sourceFile="ObjectValidator.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.support.TrueObjectValidator" sourceFile="TrueObjectValidator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.support.ValidationSupportImpl" sourceFile="ValidationSupportImpl.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.validation.support.ValidationSupportImpl$1" sourceFile="ValidationSupportImpl.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.view" total_bugs="0" total_types="2" total_size="20">
+      <ClassStats class="net.sf.doolin.gui.view.GUIView" sourceFile="GUIView.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.GUIViewListener" sourceFile="GUIViewListener.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.view.decorator" total_bugs="0" total_types="6" total_size="107">
+      <ClassStats class="net.sf.doolin.gui.view.decorator.AbstractGUIViewDecorator" sourceFile="AbstractGUIViewDecorator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.decorator.ChainedGUIViewDecorator" sourceFile="ChainedGUIViewDecorator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.decorator.DecorationStyle" sourceFile="DecorationStyle.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.decorator.DefaultGUIViewDecorator" sourceFile="DefaultGUIViewDecorator.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.decorator.GUIViewDecorator" sourceFile="GUIViewDecorator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.decorator.TitledGUIViewDecorator" sourceFile="TitledGUIViewDecorator.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.view.descriptor" total_bugs="0" total_types="4" total_size="164">
+      <ClassStats class="net.sf.doolin.gui.view.descriptor.AbstractGUIViewDescriptor" sourceFile="AbstractGUIViewDescriptor.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.descriptor.AbstractGUIViewDescriptor$1" sourceFile="AbstractGUIViewDescriptor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.descriptor.AbstractGUIViewDescriptor$2" sourceFile="AbstractGUIViewDescriptor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.descriptor.GUIViewDescriptor" sourceFile="GUIViewDescriptor.java" interface="true" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.view.support" total_bugs="0" total_types="8" total_size="190">
+      <ClassStats class="net.sf.doolin.gui.view.support.AbstractGUIView" sourceFile="AbstractGUIView.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.support.DefaultGUIView" sourceFile="DefaultGUIView.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.support.GUIViewAdapter" sourceFile="GUIViewAdapter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.support.GUIViewUtils" sourceFile="GUIViewUtils.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.support.ViewActionContext" sourceFile="ViewActionContext.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.support.ViewActionContext$1" sourceFile="ViewActionContext.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.support.ViewSubscriber" sourceFile="ViewSubscriber.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.view.support.ViewSubscriberValidator" sourceFile="ViewSubscriberValidator.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.window" total_bugs="0" total_types="3" total_size="30">
+      <ClassStats class="net.sf.doolin.gui.window.GUIWindow" sourceFile="GUIWindow.java" interface="true" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.GUIWindowFactory" sourceFile="GUIWindowFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.GUIWindowListener" sourceFile="GUIWindowListener.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.window.descriptor" total_bugs="0" total_types="8" total_size="335">
+      <ClassStats class="net.sf.doolin.gui.window.descriptor.AbstractCompositeGUIWindowDescriptor" sourceFile="AbstractCompositeGUIWindowDescriptor.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.descriptor.AbstractGUIWindowDescriptor" sourceFile="AbstractGUIWindowDescriptor.java" interface="false" size="144" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.descriptor.AbstractGUIWindowDescriptor$1" sourceFile="AbstractGUIWindowDescriptor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.descriptor.GUIWindowDescriptor" sourceFile="GUIWindowDescriptor.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.descriptor.LayoutGUIWindowDescriptor" sourceFile="LayoutGUIWindowDescriptor.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.descriptor.SimpleGUIWindowDescriptor" sourceFile="SimpleGUIWindowDescriptor.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.descriptor.TabbedGUIWindowDescriptor" sourceFile="TabbedGUIWindowDescriptor.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.descriptor.ViewReference" sourceFile="ViewReference.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.window.dialog" total_bugs="0" total_types="15" total_size="209">
+      <ClassStats class="net.sf.doolin.gui.window.dialog.AbstractDialogAction" sourceFile="AbstractDialogAction.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.AbstractDialogActionsFactory" sourceFile="AbstractDialogActionsFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.AbstractDialogWindow" sourceFile="AbstractDialogWindow.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.AbstractDialogWindow$1" sourceFile="AbstractDialogWindow.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.AbstractDialogWindow$2" sourceFile="AbstractDialogWindow.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.CustomDialogActionsFactory" sourceFile="CustomDialogActionsFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.CustomDialogWindowFactory" sourceFile="CustomDialogWindowFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.DefaultDialogActionsFactory" sourceFile="DefaultDialogActionsFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.DialogAction" sourceFile="DialogAction.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.DialogActionsFactory" sourceFile="DialogActionsFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.DialogCancelAction" sourceFile="DialogCancelAction.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.DialogGUIWindow" sourceFile="DialogGUIWindow.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.DialogOKAction" sourceFile="DialogOKAction.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.NoButtonDialogActionsFactory" sourceFile="NoButtonDialogActionsFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.dialog.OKOnlyDialogActionsFactory" sourceFile="OKOnlyDialogActionsFactory.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.window.opener" total_bugs="0" total_types="5" total_size="58">
+      <ClassStats class="net.sf.doolin.gui.window.opener.AbstractViewOpener" sourceFile="AbstractViewOpener.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.opener.GUIWindowAdapter" sourceFile="GUIWindowAdapter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.opener.InnerViewOpener" sourceFile="InnerViewOpener.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.opener.ViewOpener" sourceFile="ViewOpener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.opener.WindowOpener" sourceFile="WindowOpener.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.window.support" total_bugs="0" total_types="17" total_size="457">
+      <ClassStats class="net.sf.doolin.gui.window.support.AbstractGUIWindow" sourceFile="AbstractGUIWindow.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.AbstractIWindow" sourceFile="AbstractIWindow.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.AbstractRootPaneGUIWindow" sourceFile="AbstractRootPaneGUIWindow.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.DefaultIWindowFactory" sourceFile="DefaultIWindowFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.DialogIWindow" sourceFile="DialogIWindow.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.DialogWindowFactory" sourceFile="DialogWindowFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.FrameGUIWindow" sourceFile="FrameGUIWindow.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.FrameGUIWindow$1" sourceFile="FrameGUIWindow.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.FrameGUIWindow$2" sourceFile="FrameGUIWindow.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.FrameIWindow" sourceFile="FrameIWindow.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.FrameWindowFactory" sourceFile="FrameWindowFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.IWindow" sourceFile="IWindow.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.IWindowFactory" sourceFile="IWindowFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.WindowActionContext" sourceFile="WindowActionContext.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.WindowActionContext$1" sourceFile="WindowActionContext.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.WindowSize" sourceFile="WindowSize.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.window.support.WindowValidationSupportImpl" sourceFile="WindowValidationSupportImpl.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.wizard.descriptor" total_bugs="0" total_types="2" total_size="86">
+      <ClassStats class="net.sf.doolin.gui.wizard.descriptor.WizardDescriptor" sourceFile="WizardDescriptor.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.descriptor.WizardDescriptor$1" sourceFile="WizardDescriptor.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.wizard.rule" total_bugs="0" total_types="3" total_size="28">
+      <ClassStats class="net.sf.doolin.gui.wizard.rule.AbstractWizardRules" sourceFile="AbstractWizardRules.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.rule.SequenceWizardRules" sourceFile="SequenceWizardRules.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.rule.WizardRules" sourceFile="WizardRules.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.wizard.rule.condition" total_bugs="0" total_types="6" total_size="85">
+      <ClassStats class="net.sf.doolin.gui.wizard.rule.condition.AbstractWizardRule" sourceFile="AbstractWizardRule.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.rule.condition.ConditionWizardRules" sourceFile="ConditionWizardRules.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.rule.condition.FinishWizardRule" sourceFile="FinishWizardRule.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.rule.condition.FixedWizardRule" sourceFile="FixedWizardRule.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.rule.condition.JEXLWizardRule" sourceFile="JEXLWizardRule.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.rule.condition.WizardRule" sourceFile="WizardRule.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.wizard.state" total_bugs="0" total_types="5" total_size="82">
+      <ClassStats class="net.sf.doolin.gui.wizard.state.AbstractWizardDisplayStateHandler" sourceFile="AbstractWizardDisplayStateHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.state.FinishDisplayStateHandler" sourceFile="FinishDisplayStateHandler.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.state.NextDisplayStateHandler" sourceFile="NextDisplayStateHandler.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.state.PreviousDisplayStateHandler" sourceFile="PreviousDisplayStateHandler.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.state.WizardState" sourceFile="WizardState.java" interface="false" size="55" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.gui.wizard.support" total_bugs="0" total_types="12" total_size="164">
+      <ClassStats class="net.sf.doolin.gui.wizard.support.AbstractWizardAction" sourceFile="AbstractWizardAction.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.AbstractWizardActionsFactory" sourceFile="AbstractWizardActionsFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.DefaultWizardActionsFactory" sourceFile="DefaultWizardActionsFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.WizardAction" sourceFile="WizardAction.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.WizardCancelAction" sourceFile="WizardCancelAction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.WizardFinishAction" sourceFile="WizardFinishAction.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.WizardNextAction" sourceFile="WizardNextAction.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.WizardPreviousAction" sourceFile="WizardPreviousAction.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.WizardWindow" sourceFile="WizardWindow.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.WizardWindow$1" sourceFile="WizardWindow.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.WizardWindow$2" sourceFile="WizardWindow.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.doolin.gui.wizard.support.WizardWindowFactory" sourceFile="WizardWindowFactory.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="2086" invocations="2931" avgMicrosecondsPerInvocation="711" maxMicrosecondsPerInvocation="80386" standardDeviationMircosecondsPerInvocation="4049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2017" invocations="2926" avgMicrosecondsPerInvocation="689" maxMicrosecondsPerInvocation="71246" standardDeviationMircosecondsPerInvocation="3097"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1877" invocations="1226" avgMicrosecondsPerInvocation="1531" maxMicrosecondsPerInvocation="175896" standardDeviationMircosecondsPerInvocation="8134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1603" invocations="2785" avgMicrosecondsPerInvocation="575" maxMicrosecondsPerInvocation="122654" standardDeviationMircosecondsPerInvocation="3587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1560" invocations="2827" avgMicrosecondsPerInvocation="551" maxMicrosecondsPerInvocation="101380" standardDeviationMircosecondsPerInvocation="3782"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1480" invocations="2813" avgMicrosecondsPerInvocation="526" maxMicrosecondsPerInvocation="76561" standardDeviationMircosecondsPerInvocation="3020"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1366" invocations="1226" avgMicrosecondsPerInvocation="1114" maxMicrosecondsPerInvocation="76725" standardDeviationMircosecondsPerInvocation="4787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="1175" invocations="2813" avgMicrosecondsPerInvocation="417" maxMicrosecondsPerInvocation="250384" standardDeviationMircosecondsPerInvocation="5300"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1157" invocations="2809" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="71551" standardDeviationMircosecondsPerInvocation="2443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="1022" invocations="1226" avgMicrosecondsPerInvocation="833" maxMicrosecondsPerInvocation="134280" standardDeviationMircosecondsPerInvocation="5174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1021" invocations="2857" avgMicrosecondsPerInvocation="357" maxMicrosecondsPerInvocation="102334" standardDeviationMircosecondsPerInvocation="2298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="924" invocations="1802" avgMicrosecondsPerInvocation="512" maxMicrosecondsPerInvocation="60804" standardDeviationMircosecondsPerInvocation="2627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="486" invocations="3977" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="13268" standardDeviationMircosecondsPerInvocation="401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="452" invocations="1495" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="90372" standardDeviationMircosecondsPerInvocation="2976"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="439" invocations="2813" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="84690" standardDeviationMircosecondsPerInvocation="1788"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="426" invocations="2785" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="73399" standardDeviationMircosecondsPerInvocation="2593"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="425" invocations="1226" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="50139" standardDeviationMircosecondsPerInvocation="2240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="403" invocations="33433" avgMicrosecondsPerInvocation="12" maxMicrosecondsPerInvocation="80658" standardDeviationMircosecondsPerInvocation="534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="382" invocations="1226" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="70981" standardDeviationMircosecondsPerInvocation="2990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="348" invocations="2675" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="48191" standardDeviationMircosecondsPerInvocation="1279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="342" invocations="3083" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="57581" standardDeviationMircosecondsPerInvocation="1425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="332" invocations="1226" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="24055" standardDeviationMircosecondsPerInvocation="1104"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="306" invocations="628" avgMicrosecondsPerInvocation="488" maxMicrosecondsPerInvocation="128029" standardDeviationMircosecondsPerInvocation="5383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="284" invocations="621" avgMicrosecondsPerInvocation="457" maxMicrosecondsPerInvocation="19955" standardDeviationMircosecondsPerInvocation="1487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="258" invocations="628" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="58030" standardDeviationMircosecondsPerInvocation="2493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="247" invocations="628" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="90259" standardDeviationMircosecondsPerInvocation="3845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="237" invocations="1226" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="19737" standardDeviationMircosecondsPerInvocation="1057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="216" invocations="68386" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="29564" standardDeviationMircosecondsPerInvocation="155"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

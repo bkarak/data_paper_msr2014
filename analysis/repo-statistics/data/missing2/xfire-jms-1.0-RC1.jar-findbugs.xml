@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1140289652000" analysisTimestamp="1360906086217" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/xfire/xfire-jms/1.0-RC1/xfire-jms-1.0-RC1.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.codehaus.xfire.transport.jms.JMSChannel">
+      <SourceLine classname="org.codehaus.xfire.transport.jms.JMSChannel" start="36" end="153" sourcefile="JMSChannel.java" sourcepath="org/codehaus/xfire/transport/jms/JMSChannel.java"/>
+    </Class>
+    <Method classname="org.codehaus.xfire.transport.jms.JMSChannel" name="send" signature="(Lorg/codehaus/xfire/MessageContext;Lorg/codehaus/xfire/exchange/OutMessage;)V" isStatic="false">
+      <SourceLine classname="org.codehaus.xfire.transport.jms.JMSChannel" start="79" end="118" startBytecode="0" endBytecode="450" sourcefile="JMSChannel.java" sourcepath="org/codehaus/xfire/transport/jms/JMSChannel.java"/>
+    </Method>
+    <Method classname="java.io.ByteArrayOutputStream" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.ByteArrayOutputStream" start="163" end="163" startBytecode="0" endBytecode="40" sourcefile="ByteArrayOutputStream.java" sourcepath="java/io/ByteArrayOutputStream.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.xfire.transport.jms.JMSChannel" start="104" end="104" startBytecode="126" endBytecode="126" sourcefile="JMSChannel.java" sourcepath="org/codehaus/xfire/transport/jms/JMSChannel.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="org.codehaus.xfire.transport.jms.JMSChannel">
+      <SourceLine classname="org.codehaus.xfire.transport.jms.JMSChannel" start="36" end="153" sourcefile="JMSChannel.java" sourcepath="org/codehaus/xfire/transport/jms/JMSChannel.java"/>
+    </Class>
+    <Field classname="org.codehaus.xfire.transport.jms.JMSChannel" name="service" signature="Lorg/codehaus/xfire/service/Service;" isStatic="false">
+      <SourceLine classname="org.codehaus.xfire.transport.jms.JMSChannel" sourcefile="JMSChannel.java" sourcepath="org/codehaus/xfire/transport/jms/JMSChannel.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="25">
+    <MissingClass>javax.jms.Connection</MissingClass>
+    <MissingClass>javax.jms.ConnectionFactory</MissingClass>
+    <MissingClass>javax.jms.Destination</MissingClass>
+    <MissingClass>javax.jms.Message</MissingClass>
+    <MissingClass>javax.jms.MessageConsumer</MissingClass>
+    <MissingClass>javax.jms.MessageProducer</MissingClass>
+    <MissingClass>javax.jms.Session</MissingClass>
+    <MissingClass>javax.jms.TextMessage</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.codehaus.xfire.MessageContext</MissingClass>
+    <MissingClass>org.codehaus.xfire.XFire</MissingClass>
+    <MissingClass>org.codehaus.xfire.XFireRuntimeException</MissingClass>
+    <MissingClass>org.codehaus.xfire.exchange.InMessage</MissingClass>
+    <MissingClass>org.codehaus.xfire.exchange.MessageSerializer</MissingClass>
+    <MissingClass>org.codehaus.xfire.exchange.OutMessage</MissingClass>
+    <MissingClass>org.codehaus.xfire.fault.XFireFault</MissingClass>
+    <MissingClass>org.codehaus.xfire.service.Service</MissingClass>
+    <MissingClass>org.codehaus.xfire.service.ServiceRegistry</MissingClass>
+    <MissingClass>org.codehaus.xfire.soap.SoapTransportHelper</MissingClass>
+    <MissingClass>org.codehaus.xfire.transport.AbstractChannel</MissingClass>
+    <MissingClass>org.codehaus.xfire.transport.AbstractTransport</MissingClass>
+    <MissingClass>org.codehaus.xfire.transport.Channel</MissingClass>
+    <MissingClass>org.codehaus.xfire.transport.DefaultEndpoint</MissingClass>
+    <MissingClass>org.codehaus.xfire.util.STAXUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 18 Feb 2006 21:07:32 +0200" total_classes="2" referenced_classes="17" total_bugs="2" total_size="120" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="6.86" clock_seconds="3.65" peak_mbytes="51.22" alloc_mbytes="763.88" gc_seconds="0.07" priority_2="1" priority_1="1">
+    <PackageStats package="org.codehaus.xfire.transport.jms" total_bugs="2" total_types="2" total_size="120" priority_2="1" priority_1="1">
+      <ClassStats class="org.codehaus.xfire.transport.jms.JMSChannel" sourceFile="JMSChannel.java" interface="false" size="79" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.codehaus.xfire.transport.jms.JMSTransport" sourceFile="JMSTransport.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="482" invocations="342" avgMicrosecondsPerInvocation="1410" maxMicrosecondsPerInvocation="44410" standardDeviationMircosecondsPerInvocation="4101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="222" invocations="17" avgMicrosecondsPerInvocation="13111" maxMicrosecondsPerInvocation="71862" standardDeviationMircosecondsPerInvocation="20396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="134" invocations="17" avgMicrosecondsPerInvocation="7923" maxMicrosecondsPerInvocation="41593" standardDeviationMircosecondsPerInvocation="12837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="121" invocations="21" avgMicrosecondsPerInvocation="5770" maxMicrosecondsPerInvocation="33282" standardDeviationMircosecondsPerInvocation="10004"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="116" invocations="66" avgMicrosecondsPerInvocation="1761" maxMicrosecondsPerInvocation="51331" standardDeviationMircosecondsPerInvocation="6311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnreleasedLock" totalMilliseconds="102" invocations="2" avgMicrosecondsPerInvocation="51106" maxMicrosecondsPerInvocation="102191" standardDeviationMircosecondsPerInvocation="51085"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="94" invocations="17" avgMicrosecondsPerInvocation="5570" maxMicrosecondsPerInvocation="24937" standardDeviationMircosecondsPerInvocation="7860"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNonShortCircuit" totalMilliseconds="88" invocations="2" avgMicrosecondsPerInvocation="44454" maxMicrosecondsPerInvocation="84112" standardDeviationMircosecondsPerInvocation="39658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="79" invocations="271" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="3047" standardDeviationMircosecondsPerInvocation="509"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="65" invocations="21" avgMicrosecondsPerInvocation="3124" maxMicrosecondsPerInvocation="19438" standardDeviationMircosecondsPerInvocation="5001"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="63" invocations="2" avgMicrosecondsPerInvocation="31717" maxMicrosecondsPerInvocation="63358" standardDeviationMircosecondsPerInvocation="31641"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="59" invocations="21" avgMicrosecondsPerInvocation="2852" maxMicrosecondsPerInvocation="15640" standardDeviationMircosecondsPerInvocation="4058"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="57" invocations="21" avgMicrosecondsPerInvocation="2756" maxMicrosecondsPerInvocation="12531" standardDeviationMircosecondsPerInvocation="3420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="55" invocations="13" avgMicrosecondsPerInvocation="4276" maxMicrosecondsPerInvocation="19963" standardDeviationMircosecondsPerInvocation="6463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="53" invocations="21" avgMicrosecondsPerInvocation="2563" maxMicrosecondsPerInvocation="49274" standardDeviationMircosecondsPerInvocation="10445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="49" invocations="17" avgMicrosecondsPerInvocation="2935" maxMicrosecondsPerInvocation="19063" standardDeviationMircosecondsPerInvocation="5093"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="46" invocations="17" avgMicrosecondsPerInvocation="2749" maxMicrosecondsPerInvocation="11546" standardDeviationMircosecondsPerInvocation="3242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="45" invocations="22" avgMicrosecondsPerInvocation="2079" maxMicrosecondsPerInvocation="11817" standardDeviationMircosecondsPerInvocation="2928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="43" invocations="2" avgMicrosecondsPerInvocation="21813" maxMicrosecondsPerInvocation="40821" standardDeviationMircosecondsPerInvocation="19008"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="41" invocations="21" avgMicrosecondsPerInvocation="1977" maxMicrosecondsPerInvocation="9292" standardDeviationMircosecondsPerInvocation="2447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="39" invocations="17" avgMicrosecondsPerInvocation="2312" maxMicrosecondsPerInvocation="10288" standardDeviationMircosecondsPerInvocation="3146"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="36" invocations="40" avgMicrosecondsPerInvocation="910" maxMicrosecondsPerInvocation="14372" standardDeviationMircosecondsPerInvocation="2451"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

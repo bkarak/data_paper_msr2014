@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1285646549000" analysisTimestamp="1360508234410" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/owasp/appsensor/AppSensor/0.1.3/AppSensor-0.1.3.jar</Jar>
+  </Project>
+  <BugInstance type="SE_BAD_FIELD" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.owasp.appsensor.AppSensorIntrusion">
+      <SourceLine classname="org.owasp.appsensor.AppSensorIntrusion" start="78" end="278" sourcefile="AppSensorIntrusion.java" sourcepath="org/owasp/appsensor/AppSensorIntrusion.java"/>
+    </Class>
+    <Field classname="org.owasp.appsensor.AppSensorIntrusion" name="user" signature="Lorg/owasp/appsensor/ASUser;" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.AppSensorIntrusion" sourcefile="AppSensorIntrusion.java" sourcepath="org/owasp/appsensor/AppSensorIntrusion.java"/>
+    </Field>
+    <Type descriptor="Lorg/owasp/appsensor/ASUser;" role="TYPE_FOUND">
+      <SourceLine classname="org.owasp.appsensor.ASUser" sourcefile="ASUser.java" sourcepath="org/owasp/appsensor/ASUser.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="MS_EXPOSE_REP" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.owasp.appsensor.AppSensorServiceController">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" start="46" end="391" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.AppSensorServiceController" name="getPerUserServiceStorage" signature="()Ljava/util/Hashtable;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" start="391" end="391" startBytecode="0" endBytecode="27" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.AppSensorServiceController" name="perUserServiceStorage" signature="Ljava/util/Hashtable;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" start="391" end="391" startBytecode="3" endBytecode="3" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+  </BugInstance>
+  <BugInstance type="MS_EXPOSE_REP" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.owasp.appsensor.AppSensorServiceController">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" start="46" end="391" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.AppSensorServiceController" name="getServiceStorage" signature="()Ljava/util/Hashtable;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" start="383" end="383" startBytecode="0" endBytecode="27" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.AppSensorServiceController" name="serviceStorage" signature="Ljava/util/Hashtable;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" start="383" end="383" startBytecode="3" endBytecode="3" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+  </BugInstance>
+  <BugInstance type="MS_FINAL_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.owasp.appsensor.AppSensorServiceController">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" start="46" end="391" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Class>
+    <Field classname="org.owasp.appsensor.AppSensorServiceController" name="perUserServiceStorage" signature="Ljava/util/Hashtable;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" start="55" end="55" startBytecode="30" endBytecode="30" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+  </BugInstance>
+  <BugInstance type="MS_FINAL_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.owasp.appsensor.AppSensorServiceController">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" start="46" end="391" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Class>
+    <Field classname="org.owasp.appsensor.AppSensorServiceController" name="serviceStorage" signature="Ljava/util/Hashtable;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.AppSensorServiceController" start="52" end="52" startBytecode="20" endBytecode="20" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.owasp.appsensor.AppSensorServiceController$ThreadLocalRequestURI">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceController$ThreadLocalRequestURI" start="61" end="73" sourcefile="AppSensorServiceController.java" sourcepath="org/owasp/appsensor/AppSensorServiceController.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.owasp.appsensor.AppSensorServiceMonitor">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceMonitor" start="42" end="161" sourcefile="AppSensorServiceMonitor.java" sourcepath="org/owasp/appsensor/AppSensorServiceMonitor.java"/>
+    </Class>
+    <Field classname="org.owasp.appsensor.AppSensorServiceMonitor" name="acceptableTimeScales" signature="Ljava/util/Collection;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AppSensorServiceMonitor" sourcefile="AppSensorServiceMonitor.java" sourcepath="org/owasp/appsensor/AppSensorServiceMonitor.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.AppSensorServiceMonitor" start="63" end="63" startBytecode="7" endBytecode="7" sourcefile="AppSensorServiceMonitor.java" sourcepath="org/owasp/appsensor/AppSensorServiceMonitor.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.owasp.appsensor.AttackDetectorUtils">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="44" end="322" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.AttackDetectorUtils" name="verifySQLInjectionAttack" signature="(Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="170" end="186" startBytecode="0" endBytecode="47" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Method>
+    <LocalVariable name="attackPatterns" register="1" pc="8" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="170" end="170" startBytecode="7" endBytecode="7" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="attackPatterns"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.owasp.appsensor.AttackDetectorUtils">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="44" end="322" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.AttackDetectorUtils" name="verifyCarriageReturnOrLineFeedDoesNotExist" signature="(Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="282" end="298" startBytecode="0" endBytecode="262" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Method>
+    <Method classname="org.owasp.appsensor.errors.AppSensorException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.owasp.appsensor.errors.AppSensorException" start="75" end="80" startBytecode="0" endBytecode="171" sourcefile="AppSensorException.java" sourcepath="org/owasp/appsensor/errors/AppSensorException.java"/>
+    </Method>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="288" end="288" startBytecode="67" endBytecode="67" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="291" end="291" startBytecode="104" endBytecode="104" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="294" end="294" startBytecode="141" endBytecode="141" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.owasp.appsensor.AttackDetectorUtils">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="44" end="322" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.AttackDetectorUtils" name="verifyCookiesPresent" signature="(Ljavax/servlet/http/HttpServletRequest;Ljava/util/Collection;)Z" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="205" end="244" startBytecode="0" endBytecode="530" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Method>
+    <Method classname="org.owasp.appsensor.errors.AppSensorException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.owasp.appsensor.errors.AppSensorException" start="75" end="80" startBytecode="0" endBytecode="171" sourcefile="AppSensorException.java" sourcepath="org/owasp/appsensor/errors/AppSensorException.java"/>
+    </Method>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="232" end="232" startBytecode="182" endBytecode="182" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="240" end="240" startBytecode="250" endBytecode="250" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.owasp.appsensor.AttackDetectorUtils">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="44" end="322" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.AttackDetectorUtils" name="verifyNullByteDoesNotExist" signature="(Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="259" end="266" startBytecode="0" endBytecode="141" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Method>
+    <Method classname="org.owasp.appsensor.errors.AppSensorException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.owasp.appsensor.errors.AppSensorException" start="75" end="80" startBytecode="0" endBytecode="171" sourcefile="AppSensorException.java" sourcepath="org/owasp/appsensor/errors/AppSensorException.java"/>
+    </Method>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="264" end="264" startBytecode="56" endBytecode="56" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.owasp.appsensor.AttackDetectorUtils">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="44" end="322" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.AttackDetectorUtils" name="verifySQLInjectionAttack" signature="(Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="170" end="186" startBytecode="0" endBytecode="253" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Method>
+    <Method classname="org.owasp.appsensor.errors.AppSensorException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.owasp.appsensor.errors.AppSensorException" start="75" end="80" startBytecode="0" endBytecode="171" sourcefile="AppSensorException.java" sourcepath="org/owasp/appsensor/errors/AppSensorException.java"/>
+    </Method>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="180" end="180" startBytecode="93" endBytecode="93" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.owasp.appsensor.AttackDetectorUtils">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="44" end="322" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.AttackDetectorUtils" name="verifyValidRequestMethod" signature="(Ljavax/servlet/http/HttpServletRequest;Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="84" end="117" startBytecode="0" endBytecode="488" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Method>
+    <Method classname="org.owasp.appsensor.errors.AppSensorException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.owasp.appsensor.errors.AppSensorException" start="75" end="80" startBytecode="0" endBytecode="171" sourcefile="AppSensorException.java" sourcepath="org/owasp/appsensor/errors/AppSensorException.java"/>
+    </Method>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="96" end="96" startBytecode="105" endBytecode="105" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="101" end="101" startBytecode="164" endBytecode="164" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="108" end="108" startBytecode="230" endBytecode="230" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="111" end="111" startBytecode="283" endBytecode="283" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.owasp.appsensor.AttackDetectorUtils">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="44" end="322" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.AttackDetectorUtils" name="verifyXSSAttack" signature="(Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="137" end="151" startBytecode="0" endBytecode="241" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+    </Method>
+    <Method classname="org.owasp.appsensor.errors.AppSensorException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.owasp.appsensor.errors.AppSensorException" start="75" end="80" startBytecode="0" endBytecode="171" sourcefile="AppSensorException.java" sourcepath="org/owasp/appsensor/errors/AppSensorException.java"/>
+    </Method>
+    <SourceLine classname="org.owasp.appsensor.AttackDetectorUtils" start="145" end="145" startBytecode="85" endBytecode="85" sourcefile="AttackDetectorUtils.java" sourcepath="org/owasp/appsensor/AttackDetectorUtils.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.owasp.appsensor.filters.IpAddressChangeDetectionFilter">
+      <SourceLine classname="org.owasp.appsensor.filters.IpAddressChangeDetectionFilter" start="40" end="92" sourcefile="IpAddressChangeDetectionFilter.java" sourcepath="org/owasp/appsensor/filters/IpAddressChangeDetectionFilter.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.filters.IpAddressChangeDetectionFilter" name="doFilter" signature="(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.filters.IpAddressChangeDetectionFilter" start="58" end="86" startBytecode="0" endBytecode="344" sourcefile="IpAddressChangeDetectionFilter.java" sourcepath="org/owasp/appsensor/filters/IpAddressChangeDetectionFilter.java"/>
+    </Method>
+    <Method classname="org.owasp.appsensor.errors.AppSensorException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.owasp.appsensor.errors.AppSensorException" start="75" end="80" startBytecode="0" endBytecode="171" sourcefile="AppSensorException.java" sourcepath="org/owasp/appsensor/errors/AppSensorException.java"/>
+    </Method>
+    <SourceLine classname="org.owasp.appsensor.filters.IpAddressChangeDetectionFilter" start="76" end="76" startBytecode="166" endBytecode="166" sourcefile="IpAddressChangeDetectionFilter.java" sourcepath="org/owasp/appsensor/filters/IpAddressChangeDetectionFilter.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.owasp.appsensor.filters.UserAgentChangeDetectionFilter">
+      <SourceLine classname="org.owasp.appsensor.filters.UserAgentChangeDetectionFilter" start="40" end="92" sourcefile="UserAgentChangeDetectionFilter.java" sourcepath="org/owasp/appsensor/filters/UserAgentChangeDetectionFilter.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.filters.UserAgentChangeDetectionFilter" name="doFilter" signature="(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.filters.UserAgentChangeDetectionFilter" start="58" end="86" startBytecode="0" endBytecode="346" sourcefile="UserAgentChangeDetectionFilter.java" sourcepath="org/owasp/appsensor/filters/UserAgentChangeDetectionFilter.java"/>
+    </Method>
+    <Method classname="org.owasp.appsensor.errors.AppSensorException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.owasp.appsensor.errors.AppSensorException" start="75" end="80" startBytecode="0" endBytecode="171" sourcefile="AppSensorException.java" sourcepath="org/owasp/appsensor/errors/AppSensorException.java"/>
+    </Method>
+    <SourceLine classname="org.owasp.appsensor.filters.UserAgentChangeDetectionFilter" start="76" end="76" startBytecode="168" endBytecode="168" sourcefile="UserAgentChangeDetectionFilter.java" sourcepath="org/owasp/appsensor/filters/UserAgentChangeDetectionFilter.java"/>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="2" abbrev="LI" category="MT_CORRECTNESS">
+    <Class classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="74" end="333" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="102" end="110" startBytecode="0" endBytecode="10" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="intrusionStore" signature="Lorg/owasp/appsensor/intrusiondetection/IntrusionStore;" isStatic="true" role="FIELD_ON">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="107" end="108" startBytecode="16" endBytecode="25" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="2" abbrev="LI" category="MT_CORRECTNESS">
+    <Class classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="74" end="333" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="102" end="110" startBytecode="0" endBytecode="10" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="responseAction" signature="Lorg/owasp/appsensor/intrusiondetection/ResponseAction;" isStatic="true" role="FIELD_ON">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="103" end="104" startBytecode="4" endBytecode="13" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="74" end="333" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="addEvent" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="129" end="136" startBytecode="0" endBytecode="153" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Method>
+    <Method classname="org.owasp.appsensor.errors.AppSensorException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.owasp.appsensor.errors.AppSensorException" start="75" end="80" startBytecode="0" endBytecode="171" sourcefile="AppSensorException.java" sourcepath="org/owasp/appsensor/errors/AppSensorException.java"/>
+    </Method>
+    <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="135" end="135" startBytecode="75" endBytecode="75" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="74" end="333" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="&lt;init&gt;" signature="(Lorg/owasp/appsensor/intrusiondetection/ResponseAction;Lorg/owasp/appsensor/intrusiondetection/IntrusionStore;)V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="120" end="123" startBytecode="0" endBytecode="86" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="intrusionStore" signature="Lorg/owasp/appsensor/intrusiondetection/IntrusionStore;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="122" end="122" startBytecode="9" endBytecode="9" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="74" end="333" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="&lt;init&gt;" signature="(Lorg/owasp/appsensor/intrusiondetection/ResponseAction;Lorg/owasp/appsensor/intrusiondetection/IntrusionStore;)V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="120" end="123" startBytecode="0" endBytecode="86" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="responseAction" signature="Lorg/owasp/appsensor/intrusiondetection/ResponseAction;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="121" end="121" startBytecode="5" endBytecode="5" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="74" end="333" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="102" end="110" startBytecode="0" endBytecode="90" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="intrusionStore" signature="Lorg/owasp/appsensor/intrusiondetection/IntrusionStore;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="108" end="108" startBytecode="25" endBytecode="25" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="74" end="333" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="102" end="110" startBytecode="0" endBytecode="90" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" name="responseAction" signature="Lorg/owasp/appsensor/intrusiondetection/ResponseAction;" isStatic="true">
+      <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" start="104" end="104" startBytecode="13" endBytecode="13" sourcefile="AppSensorIntrusionDetector.java" sourcepath="org/owasp/appsensor/intrusiondetection/AppSensorIntrusionDetector.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.owasp.appsensor.trendmonitoring.TrendEvent">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" start="42" end="72" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.trendmonitoring.TrendEvent" name="getTime" signature="()Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" start="50" end="50" startBytecode="0" endBytecode="46" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.trendmonitoring.TrendEvent" name="time" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" start="50" end="50" startBytecode="4" endBytecode="4" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.owasp.appsensor.trendmonitoring.TrendEvent">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" start="42" end="72" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.trendmonitoring.TrendEvent" name="&lt;init&gt;" signature="(Ljava/util/Date;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" start="42" end="47" startBytecode="0" endBytecode="127" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.trendmonitoring.TrendEvent" name="time" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+    </Field>
+    <LocalVariable name="time" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" start="43" end="43" startBytecode="6" endBytecode="6" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.owasp.appsensor.trendmonitoring.TrendEvent">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" start="42" end="72" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.trendmonitoring.TrendEvent" name="setTime" signature="(Ljava/util/Date;)V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" start="53" end="54" startBytecode="0" endBytecode="61" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.trendmonitoring.TrendEvent" name="time" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+    </Field>
+    <LocalVariable name="time" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.owasp.appsensor.trendmonitoring.TrendEvent" start="53" end="53" startBytecode="2" endBytecode="2" sourcefile="TrendEvent.java" sourcepath="org/owasp/appsensor/trendmonitoring/TrendEvent.java"/>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="2" abbrev="LI" category="MT_CORRECTNESS">
+    <Class classname="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendDataStore">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendDataStore" start="41" end="134" sourcefile="InMemoryTrendDataStore.java" sourcepath="org/owasp/appsensor/trendmonitoring/reference/InMemoryTrendDataStore.java"/>
+    </Class>
+    <Method classname="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendDataStore" name="initializeEventsIfNecessary" signature="()V" isStatic="false">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendDataStore" start="123" end="126" startBytecode="0" endBytecode="6" sourcefile="InMemoryTrendDataStore.java" sourcepath="org/owasp/appsensor/trendmonitoring/reference/InMemoryTrendDataStore.java"/>
+    </Method>
+    <Field classname="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendDataStore" name="events" signature="Ljava/util/List;" isStatic="true" role="FIELD_ON">
+      <SourceLine classname="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendDataStore" sourcefile="InMemoryTrendDataStore.java" sourcepath="org/owasp/appsensor/trendmonitoring/reference/InMemoryTrendDataStore.java"/>
+    </Field>
+    <SourceLine classname="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendDataStore" start="123" end="124" startBytecode="0" endBytecode="13" sourcefile="InMemoryTrendDataStore.java" sourcepath="org/owasp/appsensor/trendmonitoring/reference/InMemoryTrendDataStore.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="28">
+    <MissingClass>javax.mail.Message$RecipientType</MissingClass>
+    <MissingClass>javax.mail.Session</MissingClass>
+    <MissingClass>javax.mail.Transport</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.owasp.esapi.Authenticator</MissingClass>
+    <MissingClass>org.owasp.esapi.ESAPI</MissingClass>
+    <MissingClass>org.owasp.esapi.Encoder</MissingClass>
+    <MissingClass>org.owasp.esapi.EncryptedProperties</MissingClass>
+    <MissingClass>org.owasp.esapi.HTTPUtilities</MissingClass>
+    <MissingClass>org.owasp.esapi.IntrusionDetector</MissingClass>
+    <MissingClass>org.owasp.esapi.Logger</MissingClass>
+    <MissingClass>org.owasp.esapi.Randomizer</MissingClass>
+    <MissingClass>org.owasp.esapi.SecurityConfiguration$Threshold</MissingClass>
+    <MissingClass>org.owasp.esapi.StringUtilities</MissingClass>
+    <MissingClass>org.owasp.esapi.User</MissingClass>
+    <MissingClass>org.owasp.esapi.errors.ConfigurationException</MissingClass>
+    <MissingClass>org.owasp.esapi.errors.EnterpriseSecurityException</MissingClass>
+    <MissingClass>org.owasp.esapi.errors.IntrusionException</MissingClass>
+    <MissingClass>org.owasp.esapi.reference.DefaultSecurityConfiguration</MissingClass>
+    <MissingClass>org.owasp.esapi.reference.crypto.DefaultEncryptedProperties</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 28 Sep 2010 07:02:29 +0300" total_classes="37" referenced_classes="101" total_bugs="27" total_size="1640" num_packages="9" vm_version="20.4-b02-402" cpu_seconds="28.28" clock_seconds="15.85" peak_mbytes="75.51" alloc_mbytes="763.88" gc_seconds="0.27" priority_2="15" priority_1="12">
+    <PackageStats package="org.owasp.appsensor" total_bugs="14" total_types="15" total_size="897" priority_2="7" priority_1="7">
+      <ClassStats class="org.owasp.appsensor.APPSENSOR" sourceFile="APPSENSOR.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.ASLogger" sourceFile="ASLogger.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.ASObjFactory" sourceFile="ASObjFactory.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.ASUser" sourceFile="ASUser.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.ASUtilities" sourceFile="ASUtilities.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.AppSensorIntrusion" sourceFile="AppSensorIntrusion.java" interface="false" size="93" bugs="1" priority_2="1"/>
+      <ClassStats class="org.owasp.appsensor.AppSensorSecurityConfiguration" sourceFile="AppSensorSecurityConfiguration.java" interface="false" size="236" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.AppSensorServiceController" sourceFile="AppSensorServiceController.java" interface="false" size="125" bugs="4" priority_2="4"/>
+      <ClassStats class="org.owasp.appsensor.AppSensorServiceController$1" sourceFile="AppSensorServiceController.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.AppSensorServiceController$ThreadLocalRequestURI" sourceFile="AppSensorServiceController.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.owasp.appsensor.AppSensorServiceMonitor" sourceFile="AppSensorServiceMonitor.java" interface="false" size="52" bugs="1" priority_1="1"/>
+      <ClassStats class="org.owasp.appsensor.AppSensorSystemUser" sourceFile="AppSensorSystemUser.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.AppSensorThreshold" sourceFile="AppSensorThreshold.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.AttackDetectorUtils" sourceFile="AttackDetectorUtils.java" interface="false" size="105" bugs="7" priority_2="1" priority_1="6"/>
+      <ClassStats class="org.owasp.appsensor.DateUtils" sourceFile="DateUtils.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.appsensor.errors" total_bugs="0" total_types="2" total_size="54">
+      <ClassStats class="org.owasp.appsensor.errors.AppSensorException" sourceFile="AppSensorException.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.errors.AppSensorSystemException" sourceFile="AppSensorSystemException.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.appsensor.filters" total_bugs="2" total_types="3" total_size="71" priority_1="2">
+      <ClassStats class="org.owasp.appsensor.filters.AppSensorRequestBlockingFilter" sourceFile="AppSensorRequestBlockingFilter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.filters.IpAddressChangeDetectionFilter" sourceFile="IpAddressChangeDetectionFilter.java" interface="false" size="24" bugs="1" priority_1="1"/>
+      <ClassStats class="org.owasp.appsensor.filters.UserAgentChangeDetectionFilter" sourceFile="UserAgentChangeDetectionFilter.java" interface="false" size="24" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.appsensor.intrusiondetection" total_bugs="7" total_types="4" total_size="135" priority_2="4" priority_1="3">
+      <ClassStats class="org.owasp.appsensor.intrusiondetection.AppSensorIntrusionDetector" sourceFile="AppSensorIntrusionDetector.java" interface="false" size="115" bugs="7" priority_2="4" priority_1="3"/>
+      <ClassStats class="org.owasp.appsensor.intrusiondetection.IntrusionRecord" sourceFile="IntrusionRecord.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.intrusiondetection.IntrusionStore" sourceFile="IntrusionStore.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.intrusiondetection.ResponseAction" sourceFile="ResponseAction.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.appsensor.intrusiondetection.reference" total_bugs="0" total_types="4" total_size="278">
+      <ClassStats class="org.owasp.appsensor.intrusiondetection.reference.DefaultIntrusionRecord" sourceFile="DefaultIntrusionRecord.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.intrusiondetection.reference.DefaultIntrusionStore" sourceFile="DefaultIntrusionStore.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.intrusiondetection.reference.DefaultResponseAction" sourceFile="DefaultResponseAction.java" interface="false" size="152" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.intrusiondetection.reference.DefaultResponseAction$MailType" sourceFile="DefaultResponseAction.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.appsensor.reference" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="org.owasp.appsensor.reference.DefaultASUtilities" sourceFile="DefaultASUtilities.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.appsensor.reference.adapters" total_bugs="0" total_types="2" total_size="64">
+      <ClassStats class="org.owasp.appsensor.reference.adapters.ESAPIASCurrentUser" sourceFile="ESAPIASCurrentUser.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.reference.adapters.ESAPIASLogger" sourceFile="ESAPIASLogger.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.appsensor.trendmonitoring" total_bugs="3" total_types="2" total_size="34" priority_2="3">
+      <ClassStats class="org.owasp.appsensor.trendmonitoring.TrendEvent" sourceFile="TrendEvent.java" interface="false" size="32" bugs="3" priority_2="3"/>
+      <ClassStats class="org.owasp.appsensor.trendmonitoring.TrendLogger" sourceFile="TrendLogger.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.appsensor.trendmonitoring.reference" total_bugs="1" total_types="4" total_size="90" priority_2="1">
+      <ClassStats class="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendDataStore" sourceFile="InMemoryTrendDataStore.java" interface="false" size="69" bugs="1" priority_2="1"/>
+      <ClassStats class="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendDataStore$1" sourceFile="InMemoryTrendDataStore.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendDataStore$InMemoryTrendDataStoreHolder" sourceFile="InMemoryTrendDataStore.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.owasp.appsensor.trendmonitoring.reference.InMemoryTrendLogger" sourceFile="InMemoryTrendLogger.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1176" invocations="612" avgMicrosecondsPerInvocation="1922" maxMicrosecondsPerInvocation="91117" standardDeviationMircosecondsPerInvocation="6474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1135" invocations="283" avgMicrosecondsPerInvocation="4011" maxMicrosecondsPerInvocation="125802" standardDeviationMircosecondsPerInvocation="11606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="953" invocations="284" avgMicrosecondsPerInvocation="3357" maxMicrosecondsPerInvocation="84287" standardDeviationMircosecondsPerInvocation="9840"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="876" invocations="285" avgMicrosecondsPerInvocation="3075" maxMicrosecondsPerInvocation="190276" standardDeviationMircosecondsPerInvocation="13432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="859" invocations="283" avgMicrosecondsPerInvocation="3037" maxMicrosecondsPerInvocation="70434" standardDeviationMircosecondsPerInvocation="7689"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="775" invocations="101" avgMicrosecondsPerInvocation="7677" maxMicrosecondsPerInvocation="141752" standardDeviationMircosecondsPerInvocation="17806"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="757" invocations="286" avgMicrosecondsPerInvocation="2649" maxMicrosecondsPerInvocation="67007" standardDeviationMircosecondsPerInvocation="7768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="658" invocations="101" avgMicrosecondsPerInvocation="6523" maxMicrosecondsPerInvocation="96266" standardDeviationMircosecondsPerInvocation="14550"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="587" invocations="284" avgMicrosecondsPerInvocation="2067" maxMicrosecondsPerInvocation="112053" standardDeviationMircosecondsPerInvocation="8623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="571" invocations="216" avgMicrosecondsPerInvocation="2645" maxMicrosecondsPerInvocation="113598" standardDeviationMircosecondsPerInvocation="9320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="379" invocations="101" avgMicrosecondsPerInvocation="3760" maxMicrosecondsPerInvocation="73348" standardDeviationMircosecondsPerInvocation="8872"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="329" invocations="512" avgMicrosecondsPerInvocation="643" maxMicrosecondsPerInvocation="27354" standardDeviationMircosecondsPerInvocation="2100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="263" invocations="101" avgMicrosecondsPerInvocation="2609" maxMicrosecondsPerInvocation="40316" standardDeviationMircosecondsPerInvocation="5662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="256" invocations="284" avgMicrosecondsPerInvocation="904" maxMicrosecondsPerInvocation="26222" standardDeviationMircosecondsPerInvocation="2773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="193" invocations="283" avgMicrosecondsPerInvocation="683" maxMicrosecondsPerInvocation="33947" standardDeviationMircosecondsPerInvocation="2846"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="183" invocations="101" avgMicrosecondsPerInvocation="1821" maxMicrosecondsPerInvocation="41058" standardDeviationMircosecondsPerInvocation="5256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="177" invocations="138" avgMicrosecondsPerInvocation="1287" maxMicrosecondsPerInvocation="55103" standardDeviationMircosecondsPerInvocation="5347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="175" invocations="281" avgMicrosecondsPerInvocation="625" maxMicrosecondsPerInvocation="20907" standardDeviationMircosecondsPerInvocation="2056"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="172" invocations="532" avgMicrosecondsPerInvocation="323" maxMicrosecondsPerInvocation="36189" standardDeviationMircosecondsPerInvocation="1803"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="167" invocations="37" avgMicrosecondsPerInvocation="4522" maxMicrosecondsPerInvocation="42490" standardDeviationMircosecondsPerInvocation="8232"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

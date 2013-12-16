@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1206980290000" analysisTimestamp="1360917869699" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/net/sf/click/click-extras/1.4.1/click-extras-1.4.1.jar</Jar>
+  </Project>
+  <BugInstance type="DM_BOOLEAN_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="net.sf.click.extras.control.DateField">
+      <SourceLine classname="net.sf.click.extras.control.DateField" start="102" end="782" sourcefile="DateField.java" sourcepath="net/sf/click/extras/control/DateField.java"/>
+    </Class>
+    <Method classname="net.sf.click.extras.control.DateField" name="getHtmlImports" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.control.DateField" start="401" end="416" startBytecode="0" endBytecode="180" sourcefile="DateField.java" sourcepath="net/sf/click/extras/control/DateField.java"/>
+    </Method>
+    <SourceLine classname="net.sf.click.extras.control.DateField" start="405" end="405" startBytecode="77" endBytecode="77" sourcefile="DateField.java" sourcepath="net/sf/click/extras/control/DateField.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="net.sf.click.extras.control.LinkDecorator">
+      <SourceLine classname="net.sf.click.extras.control.LinkDecorator" start="116" end="404" sourcefile="LinkDecorator.java" sourcepath="net/sf/click/extras/control/LinkDecorator.java"/>
+    </Class>
+    <Method classname="net.sf.click.extras.control.LinkDecorator" name="&lt;init&gt;" signature="(Lnet/sf/click/control/Table;[Lnet/sf/click/control/AbstractLink;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.control.LinkDecorator" start="158" end="173" startBytecode="0" endBytecode="200" sourcefile="LinkDecorator.java" sourcepath="net/sf/click/extras/control/LinkDecorator.java"/>
+    </Method>
+    <Field classname="net.sf.click.extras.control.LinkDecorator" name="linksArray" signature="[Lnet/sf/click/control/AbstractLink;" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.control.LinkDecorator" sourcefile="LinkDecorator.java" sourcepath="net/sf/click/extras/control/LinkDecorator.java"/>
+    </Field>
+    <LocalVariable name="links" register="2" pc="59" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="net.sf.click.extras.control.LinkDecorator" start="169" end="169" startBytecode="59" endBytecode="59" sourcefile="LinkDecorator.java" sourcepath="net/sf/click/extras/control/LinkDecorator.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="net.sf.click.extras.control.LinkDecorator">
+      <SourceLine classname="net.sf.click.extras.control.LinkDecorator" start="116" end="404" sourcefile="LinkDecorator.java" sourcepath="net/sf/click/extras/control/LinkDecorator.java"/>
+    </Class>
+    <Method classname="net.sf.click.extras.control.LinkDecorator" name="&lt;init&gt;" signature="(Lnet/sf/click/control/Table;[Lnet/sf/click/control/ActionButton;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.control.LinkDecorator" start="212" end="228" startBytecode="0" endBytecode="210" sourcefile="LinkDecorator.java" sourcepath="net/sf/click/extras/control/LinkDecorator.java"/>
+    </Method>
+    <Field classname="net.sf.click.extras.control.LinkDecorator" name="buttonsArray" signature="[Lnet/sf/click/control/ActionButton;" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.control.LinkDecorator" sourcefile="LinkDecorator.java" sourcepath="net/sf/click/extras/control/LinkDecorator.java"/>
+    </Field>
+    <LocalVariable name="buttons" register="2" pc="59" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="net.sf.click.extras.control.LinkDecorator" start="223" end="223" startBytecode="59" endBytecode="59" sourcefile="LinkDecorator.java" sourcepath="net/sf/click/extras/control/LinkDecorator.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="net.sf.click.extras.control.Menu">
+      <SourceLine classname="net.sf.click.extras.control.Menu" start="197" end="843" sourcefile="Menu.java" sourcepath="net/sf/click/extras/control/Menu.java"/>
+    </Class>
+    <Method classname="net.sf.click.extras.control.Menu" name="loadRootMenu" signature="()Lnet/sf/click/extras/control/Menu;" isStatic="true">
+      <SourceLine classname="net.sf.click.extras.control.Menu" start="814" end="843" startBytecode="0" endBytecode="68" sourcefile="Menu.java" sourcepath="net/sf/click/extras/control/Menu.java"/>
+    </Method>
+    <LocalVariable name="inputStream" register="3" pc="59" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="net.sf.click.extras.control.Menu" start="823" end="823" startBytecode="58" endBytecode="58" sourcefile="Menu.java" sourcepath="net/sf/click/extras/control/Menu.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="inputStream"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="net.sf.click.extras.control.Menu">
+      <SourceLine classname="net.sf.click.extras.control.Menu" start="197" end="843" sourcefile="Menu.java" sourcepath="net/sf/click/extras/control/Menu.java"/>
+    </Class>
+    <Field classname="net.sf.click.extras.control.Menu" name="rootMenu" signature="Lnet/sf/click/extras/control/Menu;" isStatic="true">
+      <SourceLine classname="net.sf.click.extras.control.Menu" sourcefile="Menu.java" sourcepath="net/sf/click/extras/control/Menu.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DM_BOOLEAN_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="net.sf.click.extras.control.PickList">
+      <SourceLine classname="net.sf.click.extras.control.PickList" start="130" end="529" sourcefile="PickList.java" sourcepath="net/sf/click/extras/control/PickList.java"/>
+    </Class>
+    <Method classname="net.sf.click.extras.control.PickList" name="toString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.control.PickList" start="503" end="529" startBytecode="0" endBytecode="520" sourcefile="PickList.java" sourcepath="net/sf/click/extras/control/PickList.java"/>
+    </Method>
+    <SourceLine classname="net.sf.click.extras.control.PickList" start="511" end="511" startBytecode="85" endBytecode="85" sourcefile="PickList.java" sourcepath="net/sf/click/extras/control/PickList.java"/>
+    <SourceLine classname="net.sf.click.extras.control.PickList" start="525" end="525" startBytecode="256" endBytecode="256" sourcefile="PickList.java" sourcepath="net/sf/click/extras/control/PickList.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="net.sf.click.extras.control.PickList" start="526" end="526" startBytecode="277" endBytecode="277" sourcefile="PickList.java" sourcepath="net/sf/click/extras/control/PickList.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="net.sf.click.extras.control.PickList" start="527" end="527" startBytecode="298" endBytecode="298" sourcefile="PickList.java" sourcepath="net/sf/click/extras/control/PickList.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="net.sf.click.extras.filter.CompressionResponseStream">
+      <SourceLine classname="net.sf.click.extras.filter.CompressionResponseStream" start="48" end="260" sourcefile="CompressionResponseStream.java" sourcepath="net/sf/click/extras/filter/CompressionResponseStream.java"/>
+    </Class>
+    <Field classname="net.sf.click.extras.filter.CompressionResponseStream" name="length" signature="I" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.filter.CompressionResponseStream" sourcefile="CompressionResponseStream.java" sourcepath="net/sf/click/extras/filter/CompressionResponseStream.java"/>
+    </Field>
+    <SourceLine classname="net.sf.click.extras.filter.CompressionResponseStream" start="92" end="92" startBytecode="36" endBytecode="36" sourcefile="CompressionResponseStream.java" sourcepath="net/sf/click/extras/filter/CompressionResponseStream.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="net.sf.click.extras.filter.CompressionServletResponseWrapper">
+      <SourceLine classname="net.sf.click.extras.filter.CompressionServletResponseWrapper" start="48" end="231" sourcefile="CompressionServletResponseWrapper.java" sourcepath="net/sf/click/extras/filter/CompressionServletResponseWrapper.java"/>
+    </Class>
+    <Method classname="net.sf.click.extras.filter.CompressionServletResponseWrapper" name="getWriter" signature="()Ljava/io/PrintWriter;" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.filter.CompressionServletResponseWrapper" start="189" end="214" startBytecode="0" endBytecode="249" sourcefile="CompressionServletResponseWrapper.java" sourcepath="net/sf/click/extras/filter/CompressionServletResponseWrapper.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="net.sf.click.extras.filter.CompressionServletResponseWrapper" start="211" end="211" startBytecode="129" endBytecode="129" sourcefile="CompressionServletResponseWrapper.java" sourcepath="net/sf/click/extras/filter/CompressionServletResponseWrapper.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="net.sf.click.extras.filter.CompressionServletResponseWrapper">
+      <SourceLine classname="net.sf.click.extras.filter.CompressionServletResponseWrapper" start="48" end="231" sourcefile="CompressionServletResponseWrapper.java" sourcepath="net/sf/click/extras/filter/CompressionServletResponseWrapper.java"/>
+    </Class>
+    <Field classname="net.sf.click.extras.filter.CompressionServletResponseWrapper" name="contentType" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.filter.CompressionServletResponseWrapper" sourcefile="CompressionServletResponseWrapper.java" sourcepath="net/sf/click/extras/filter/CompressionServletResponseWrapper.java"/>
+    </Field>
+    <SourceLine classname="net.sf.click.extras.filter.CompressionServletResponseWrapper" start="89" end="89" startBytecode="32" endBytecode="32" sourcefile="CompressionServletResponseWrapper.java" sourcepath="net/sf/click/extras/filter/CompressionServletResponseWrapper.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="net.sf.click.extras.graph.JSBarChart">
+      <SourceLine classname="net.sf.click.extras.graph.JSBarChart" start="45" end="112" sourcefile="JSBarChart.java" sourcepath="net/sf/click/extras/graph/JSBarChart.java"/>
+    </Class>
+    <Field classname="net.sf.click.extras.graph.JSBarChart" name="CHART_RESOURCES" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="net.sf.click.extras.graph.JSBarChart" sourcefile="JSBarChart.java" sourcepath="net/sf/click/extras/graph/JSBarChart.java"/>
+    </Field>
+    <SourceLine classname="net.sf.click.extras.graph.JSBarChart" start="45" end="45" startBytecode="14" endBytecode="14" sourcefile="JSBarChart.java" sourcepath="net/sf/click/extras/graph/JSBarChart.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="net.sf.click.extras.graph.JSLineChart">
+      <SourceLine classname="net.sf.click.extras.graph.JSLineChart" start="45" end="112" sourcefile="JSLineChart.java" sourcepath="net/sf/click/extras/graph/JSLineChart.java"/>
+    </Class>
+    <Field classname="net.sf.click.extras.graph.JSLineChart" name="CHART_RESOURCES" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="net.sf.click.extras.graph.JSLineChart" sourcefile="JSLineChart.java" sourcepath="net/sf/click/extras/graph/JSLineChart.java"/>
+    </Field>
+    <SourceLine classname="net.sf.click.extras.graph.JSLineChart" start="45" end="45" startBytecode="14" endBytecode="14" sourcefile="JSLineChart.java" sourcepath="net/sf/click/extras/graph/JSLineChart.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="net.sf.click.extras.graph.JSPieChart">
+      <SourceLine classname="net.sf.click.extras.graph.JSPieChart" start="44" end="111" sourcefile="JSPieChart.java" sourcepath="net/sf/click/extras/graph/JSPieChart.java"/>
+    </Class>
+    <Field classname="net.sf.click.extras.graph.JSPieChart" name="CHART_RESOURCES" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="net.sf.click.extras.graph.JSPieChart" sourcefile="JSPieChart.java" sourcepath="net/sf/click/extras/graph/JSPieChart.java"/>
+    </Field>
+    <SourceLine classname="net.sf.click.extras.graph.JSPieChart" start="44" end="44" startBytecode="14" endBytecode="14" sourcefile="JSPieChart.java" sourcepath="net/sf/click/extras/graph/JSPieChart.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="net.sf.click.extras.tree.CheckboxTree">
+      <SourceLine classname="net.sf.click.extras.tree.CheckboxTree" start="114" end="648" sourcefile="CheckboxTree.java" sourcepath="net/sf/click/extras/tree/CheckboxTree.java"/>
+    </Class>
+    <Field classname="net.sf.click.extras.tree.CheckboxTree" name="TREE_RESOURCES" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="net.sf.click.extras.tree.CheckboxTree" sourcefile="CheckboxTree.java" sourcepath="net/sf/click/extras/tree/CheckboxTree.java"/>
+    </Field>
+    <SourceLine classname="net.sf.click.extras.tree.CheckboxTree" start="114" end="114" startBytecode="9" endBytecode="9" sourcefile="CheckboxTree.java" sourcepath="net/sf/click/extras/tree/CheckboxTree.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="net.sf.click.extras.tree.Tree">
+      <SourceLine classname="net.sf.click.extras.tree.Tree" start="149" end="2598" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    </Class>
+    <Field classname="net.sf.click.extras.tree.Tree" name="TREE_IMAGES" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="net.sf.click.extras.tree.Tree" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    </Field>
+    <SourceLine classname="net.sf.click.extras.tree.Tree" start="188" end="188" startBytecode="81" endBytecode="81" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="net.sf.click.extras.tree.Tree">
+      <SourceLine classname="net.sf.click.extras.tree.Tree" start="149" end="2598" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    </Class>
+    <Field classname="net.sf.click.extras.tree.Tree" name="TREE_RESOURCES" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="net.sf.click.extras.tree.Tree" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    </Field>
+    <SourceLine classname="net.sf.click.extras.tree.Tree" start="175" end="175" startBytecode="19" endBytecode="19" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="net.sf.click.extras.tree.Tree">
+      <SourceLine classname="net.sf.click.extras.tree.Tree" start="149" end="2598" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    </Class>
+    <Method classname="net.sf.click.extras.tree.Tree" name="getHref" signature="(Ljava/util/Map;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.tree.Tree" start="1468" end="1491" startBytecode="0" endBytecode="348" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    </Method>
+    <LocalVariable name="parameters" register="1" pc="38" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="net.sf.click.extras.tree.Tree" start="1470" end="1470" startBytecode="20" endBytecode="20" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    <SourceLine classname="net.sf.click.extras.tree.Tree" start="1474" end="1474" startBytecode="39" endBytecode="39" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="net.sf.click.extras.tree.Tree">
+      <SourceLine classname="net.sf.click.extras.tree.Tree" start="149" end="2598" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    </Class>
+    <Field classname="net.sf.click.extras.tree.Tree" name="controls" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.tree.Tree" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="net.sf.click.extras.tree.Tree$CookieHandler">
+      <SourceLine classname="net.sf.click.extras.tree.Tree$CookieHandler" start="1960" end="2198" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    </Class>
+    <Method classname="net.sf.click.extras.tree.Tree$CookieHandler" name="setCookie" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.tree.Tree$CookieHandler" start="2151" end="2158" startBytecode="0" endBytecode="31" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+    </Method>
+    <SourceLine classname="net.sf.click.extras.tree.Tree$CookieHandler" start="2152" end="2152" startBytecode="25" endBytecode="25" sourcefile="Tree.java" sourcepath="net/sf/click/extras/tree/Tree.java"/>
+  </BugInstance>
+  <BugInstance type="RV_ABSOLUTE_VALUE_OF_RANDOM_INT" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="net.sf.click.extras.tree.TreeNode">
+      <SourceLine classname="net.sf.click.extras.tree.TreeNode" start="65" end="590" sourcefile="TreeNode.java" sourcepath="net/sf/click/extras/tree/TreeNode.java"/>
+    </Class>
+    <Method classname="net.sf.click.extras.tree.TreeNode" name="generateId" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="net.sf.click.extras.tree.TreeNode" start="590" end="590" startBytecode="0" endBytecode="54" sourcefile="TreeNode.java" sourcepath="net/sf/click/extras/tree/TreeNode.java"/>
+    </Method>
+    <SourceLine classname="net.sf.click.extras.tree.TreeNode" start="590" end="590" startBytecode="6" endBytecode="6" sourcefile="TreeNode.java" sourcepath="net/sf/click/extras/tree/TreeNode.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="74">
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.UnavailableException</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponseWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>net.sf.click.ClickServlet</MissingClass>
+    <MissingClass>net.sf.click.Context</MissingClass>
+    <MissingClass>net.sf.click.Control</MissingClass>
+    <MissingClass>net.sf.click.Page</MissingClass>
+    <MissingClass>net.sf.click.control.AbstractControl</MissingClass>
+    <MissingClass>net.sf.click.control.AbstractLink</MissingClass>
+    <MissingClass>net.sf.click.control.ActionButton</MissingClass>
+    <MissingClass>net.sf.click.control.ActionLink</MissingClass>
+    <MissingClass>net.sf.click.control.Column</MissingClass>
+    <MissingClass>net.sf.click.control.Decorator</MissingClass>
+    <MissingClass>net.sf.click.control.Field</MissingClass>
+    <MissingClass>net.sf.click.control.FieldSet</MissingClass>
+    <MissingClass>net.sf.click.control.Form</MissingClass>
+    <MissingClass>net.sf.click.control.HiddenField</MissingClass>
+    <MissingClass>net.sf.click.control.Option</MissingClass>
+    <MissingClass>net.sf.click.control.Panel</MissingClass>
+    <MissingClass>net.sf.click.control.Select</MissingClass>
+    <MissingClass>net.sf.click.control.Submit</MissingClass>
+    <MissingClass>net.sf.click.control.Table</MissingClass>
+    <MissingClass>net.sf.click.control.TextArea</MissingClass>
+    <MissingClass>net.sf.click.control.TextField</MissingClass>
+    <MissingClass>net.sf.click.util.ClickLogger</MissingClass>
+    <MissingClass>net.sf.click.util.ClickUtils</MissingClass>
+    <MissingClass>net.sf.click.util.Format</MissingClass>
+    <MissingClass>net.sf.click.util.HtmlStringBuffer</MissingClass>
+    <MissingClass>net.sf.click.util.PropertyUtils</MissingClass>
+    <MissingClass>ognl.Ognl</MissingClass>
+    <MissingClass>org.apache.cayenne.CayenneRuntimeException</MissingClass>
+    <MissingClass>org.apache.cayenne.DataObject</MissingClass>
+    <MissingClass>org.apache.cayenne.DataObjectUtils</MissingClass>
+    <MissingClass>org.apache.cayenne.DataRow</MissingClass>
+    <MissingClass>org.apache.cayenne.ObjectId</MissingClass>
+    <MissingClass>org.apache.cayenne.access.DataContext</MissingClass>
+    <MissingClass>org.apache.cayenne.conf.ServletUtil</MissingClass>
+    <MissingClass>org.apache.cayenne.dba.TypesMapping</MissingClass>
+    <MissingClass>org.apache.cayenne.exp.ExpressionFactory</MissingClass>
+    <MissingClass>org.apache.cayenne.map.DbAttribute</MissingClass>
+    <MissingClass>org.apache.cayenne.map.DbEntity</MissingClass>
+    <MissingClass>org.apache.cayenne.map.EntityResolver</MissingClass>
+    <MissingClass>org.apache.cayenne.map.ObjAttribute</MissingClass>
+    <MissingClass>org.apache.cayenne.map.ObjEntity</MissingClass>
+    <MissingClass>org.apache.cayenne.map.ObjRelationship</MissingClass>
+    <MissingClass>org.apache.cayenne.query.ObjectIdQuery</MissingClass>
+    <MissingClass>org.apache.cayenne.query.SelectQuery</MissingClass>
+    <MissingClass>org.apache.cayenne.validation.ValidationException</MissingClass>
+    <MissingClass>org.apache.cayenne.validation.ValidationResult</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringEscapeUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.Validate</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.hibernate.EntityMode</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.Transaction</MissingClass>
+    <MissingClass>org.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>org.hibernate.metadata.ClassMetadata</MissingClass>
+    <MissingClass>org.hibernate.type.Type</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextAware</MissingClass>
+    <MissingClass>org.springframework.context.support.ClassPathXmlApplicationContext</MissingClass>
+    <MissingClass>org.springframework.web.context.support.WebApplicationContextUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 31 Mar 2008 19:18:10 +0300" total_classes="67" referenced_classes="142" total_bugs="19" total_size="4951" num_packages="8" vm_version="20.4-b02-402" cpu_seconds="33.51" clock_seconds="24.43" peak_mbytes="102.52" alloc_mbytes="763.88" gc_seconds="0.64" priority_2="17" priority_1="2">
+    <PackageStats package="net.sf.click.extras.cayenne" total_bugs="0" total_types="6" total_size="708">
+      <ClassStats class="net.sf.click.extras.cayenne.CayenneForm" sourceFile="CayenneForm.java" interface="false" size="192" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.cayenne.CayenneTemplate" sourceFile="CayenneTemplate.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.cayenne.DataContextFilter" sourceFile="DataContextFilter.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.cayenne.PropertySelect" sourceFile="PropertySelect.java" interface="false" size="162" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.cayenne.QuerySelect" sourceFile="QuerySelect.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.cayenne.TabbedCayenneForm" sourceFile="TabbedCayenneForm.java" interface="false" size="88" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.click.extras.control" total_bugs="6" total_types="21" total_size="2265" priority_2="6">
+      <ClassStats class="net.sf.click.extras.control.AutoCompleteTextField" sourceFile="AutoCompleteTextField.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.CheckList" sourceFile="CheckList.java" interface="false" size="289" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.ColorPicker" sourceFile="ColorPicker.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.CreditCardField" sourceFile="CreditCardField.java" interface="false" size="121" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.DateField" sourceFile="DateField.java" interface="false" size="243" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.click.extras.control.DoubleField" sourceFile="DoubleField.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.EmailField" sourceFile="EmailField.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.ExternalLink" sourceFile="ExternalLink.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.FieldColumn" sourceFile="FieldColumn.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.FormTable" sourceFile="FormTable.java" interface="false" size="134" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.IntegerField" sourceFile="IntegerField.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.LinkDecorator" sourceFile="LinkDecorator.java" interface="false" size="130" bugs="2" priority_2="2"/>
+      <ClassStats class="net.sf.click.extras.control.LinkDecorator$PageNumberControl" sourceFile="LinkDecorator.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.LongField" sourceFile="LongField.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.Menu" sourceFile="Menu.java" interface="false" size="226" bugs="2" priority_2="2"/>
+      <ClassStats class="net.sf.click.extras.control.NumberField" sourceFile="NumberField.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.PageSubmit" sourceFile="PageSubmit.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.PickList" sourceFile="PickList.java" interface="false" size="155" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.click.extras.control.RegexField" sourceFile="RegexField.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.TabbedForm" sourceFile="TabbedForm.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.control.TelephoneField" sourceFile="TelephoneField.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.click.extras.filter" total_bugs="3" total_types="4" total_size="391" priority_2="2" priority_1="1">
+      <ClassStats class="net.sf.click.extras.filter.CompressionFilter" sourceFile="CompressionFilter.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.filter.CompressionResponseStream" sourceFile="CompressionResponseStream.java" interface="false" size="91" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.click.extras.filter.CompressionServletResponseWrapper" sourceFile="CompressionServletResponseWrapper.java" interface="false" size="74" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="net.sf.click.extras.filter.PerformanceFilter" sourceFile="PerformanceFilter.java" interface="false" size="151" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.click.extras.graph" total_bugs="3" total_types="4" total_size="157" priority_2="3">
+      <ClassStats class="net.sf.click.extras.graph.JSBarChart" sourceFile="JSBarChart.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.click.extras.graph.JSChart" sourceFile="JSChart.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.graph.JSLineChart" sourceFile="JSLineChart.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.click.extras.graph.JSPieChart" sourceFile="JSPieChart.java" interface="false" size="24" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="net.sf.click.extras.hibernate" total_bugs="0" total_types="3" total_size="152">
+      <ClassStats class="net.sf.click.extras.hibernate.HibernateForm" sourceFile="HibernateForm.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.hibernate.SessionContext" sourceFile="SessionContext.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.hibernate.SessionFilter" sourceFile="SessionFilter.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.click.extras.panel" total_bugs="0" total_types="2" total_size="84">
+      <ClassStats class="net.sf.click.extras.panel.ListPanel" sourceFile="ListPanel.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.panel.TabbedPanel" sourceFile="TabbedPanel.java" interface="false" size="80" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.click.extras.spring" total_bugs="0" total_types="1" total_size="29">
+      <ClassStats class="net.sf.click.extras.spring.SpringClickServlet" sourceFile="SpringClickServlet.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.click.extras.tree" total_bugs="7" total_types="26" total_size="1165" priority_2="6" priority_1="1">
+      <ClassStats class="net.sf.click.extras.tree.CheckboxTree" sourceFile="CheckboxTree.java" interface="false" size="50" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.click.extras.tree.CheckboxTree$1" sourceFile="CheckboxTree.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.CheckboxTree$BaseCheckboxJavascriptRenderer" sourceFile="CheckboxTree.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.CheckboxTree$CheckboxCookieHandler" sourceFile="CheckboxTree.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.CheckboxTree$CheckboxCookieJavascriptRenderer" sourceFile="CheckboxTree.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.CheckboxTree$CheckboxJavascriptRenderer" sourceFile="CheckboxTree.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.CheckboxTree$CheckboxSessionHandler" sourceFile="CheckboxTree.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.CheckboxTree$CheckboxSessionJavascriptRenderer" sourceFile="CheckboxTree.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.CheckboxTree$DecoratorFactory" sourceFile="CheckboxTree.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree" sourceFile="Tree.java" interface="false" size="496" bugs="4" priority_2="4"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$1" sourceFile="Tree.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$2" sourceFile="Tree.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$3" sourceFile="Tree.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$4" sourceFile="Tree.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$AbstractJavascriptRenderer" sourceFile="Tree.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$BreadthTreeIterator" sourceFile="Tree.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$Callback" sourceFile="Tree.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$CookieHandler" sourceFile="Tree.java" interface="false" size="83" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$CookieRenderer" sourceFile="Tree.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$Entry" sourceFile="Tree.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$JavascriptHandler" sourceFile="Tree.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$JavascriptRenderer" sourceFile="Tree.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$SessionHandler" sourceFile="Tree.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.Tree$SessionRenderer" sourceFile="Tree.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.TreeListener" sourceFile="TreeListener.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.sf.click.extras.tree.TreeNode" sourceFile="TreeNode.java" interface="false" size="169" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1428" invocations="777" avgMicrosecondsPerInvocation="1838" maxMicrosecondsPerInvocation="88349" standardDeviationMircosecondsPerInvocation="5833"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1368" invocations="814" avgMicrosecondsPerInvocation="1681" maxMicrosecondsPerInvocation="208245" standardDeviationMircosecondsPerInvocation="9111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1344" invocations="142" avgMicrosecondsPerInvocation="9469" maxMicrosecondsPerInvocation="188162" standardDeviationMircosecondsPerInvocation="21720"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1229" invocations="777" avgMicrosecondsPerInvocation="1582" maxMicrosecondsPerInvocation="74401" standardDeviationMircosecondsPerInvocation="5403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1217" invocations="142" avgMicrosecondsPerInvocation="8574" maxMicrosecondsPerInvocation="79846" standardDeviationMircosecondsPerInvocation="15892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1092" invocations="777" avgMicrosecondsPerInvocation="1405" maxMicrosecondsPerInvocation="111829" standardDeviationMircosecondsPerInvocation="5896"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1057" invocations="732" avgMicrosecondsPerInvocation="1445" maxMicrosecondsPerInvocation="50671" standardDeviationMircosecondsPerInvocation="5017"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="979" invocations="792" avgMicrosecondsPerInvocation="1236" maxMicrosecondsPerInvocation="45093" standardDeviationMircosecondsPerInvocation="3836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="870" invocations="777" avgMicrosecondsPerInvocation="1119" maxMicrosecondsPerInvocation="49293" standardDeviationMircosecondsPerInvocation="3740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="681" invocations="1148" avgMicrosecondsPerInvocation="593" maxMicrosecondsPerInvocation="29651" standardDeviationMircosecondsPerInvocation="2372"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="627" invocations="559" avgMicrosecondsPerInvocation="1122" maxMicrosecondsPerInvocation="35703" standardDeviationMircosecondsPerInvocation="3400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="613" invocations="142" avgMicrosecondsPerInvocation="4318" maxMicrosecondsPerInvocation="61988" standardDeviationMircosecondsPerInvocation="8864"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="470" invocations="797" avgMicrosecondsPerInvocation="589" maxMicrosecondsPerInvocation="118689" standardDeviationMircosecondsPerInvocation="5676"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="336" invocations="142" avgMicrosecondsPerInvocation="2368" maxMicrosecondsPerInvocation="71570" standardDeviationMircosecondsPerInvocation="8390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="325" invocations="777" avgMicrosecondsPerInvocation="418" maxMicrosecondsPerInvocation="43832" standardDeviationMircosecondsPerInvocation="2457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="319" invocations="142" avgMicrosecondsPerInvocation="2251" maxMicrosecondsPerInvocation="42761" standardDeviationMircosecondsPerInvocation="6170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="302" invocations="142" avgMicrosecondsPerInvocation="2131" maxMicrosecondsPerInvocation="27126" standardDeviationMircosecondsPerInvocation="4335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="267" invocations="67" avgMicrosecondsPerInvocation="3986" maxMicrosecondsPerInvocation="117917" standardDeviationMircosecondsPerInvocation="14752"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="255" invocations="600" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="50173" standardDeviationMircosecondsPerInvocation="2587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="234" invocations="67" avgMicrosecondsPerInvocation="3504" maxMicrosecondsPerInvocation="24385" standardDeviationMircosecondsPerInvocation="5408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="233" invocations="142" avgMicrosecondsPerInvocation="1642" maxMicrosecondsPerInvocation="25216" standardDeviationMircosecondsPerInvocation="4328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="212" invocations="235" avgMicrosecondsPerInvocation="903" maxMicrosecondsPerInvocation="28039" standardDeviationMircosecondsPerInvocation="2773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="199" invocations="142" avgMicrosecondsPerInvocation="1401" maxMicrosecondsPerInvocation="15513" standardDeviationMircosecondsPerInvocation="2888"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="197" invocations="9383" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="18699" standardDeviationMircosecondsPerInvocation="342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="186" invocations="67" avgMicrosecondsPerInvocation="2779" maxMicrosecondsPerInvocation="78541" standardDeviationMircosecondsPerInvocation="10060"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="185" invocations="67" avgMicrosecondsPerInvocation="2775" maxMicrosecondsPerInvocation="35300" standardDeviationMircosecondsPerInvocation="6313"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

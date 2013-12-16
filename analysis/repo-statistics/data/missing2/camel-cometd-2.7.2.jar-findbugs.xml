@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1306815951000" analysisTimestamp="1360882189865" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-cometd/2.7.2/camel-cometd-2.7.2.jar</Jar>
+  </Project>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.apache.camel.component.cometd.CometdComponent">
+      <SourceLine classname="org.apache.camel.component.cometd.CometdComponent" start="44" end="253" sourcefile="CometdComponent.java" sourcepath="org/apache/camel/component/cometd/CometdComponent.java"/>
+    </Class>
+    <Field classname="org.apache.camel.component.cometd.CometdComponent" name="sslKeystore" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.cometd.CometdComponent" sourcefile="CometdComponent.java" sourcepath="org/apache/camel/component/cometd/CometdComponent.java"/>
+    </Field>
+    <Int value="50" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.apache.camel.component.cometd.CometdComponent" start="215" end="215" startBytecode="1" endBytecode="1" sourcefile="CometdComponent.java" sourcepath="org/apache/camel/component/cometd/CometdComponent.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.cometd.CometdComponent" start="227" end="227" startBytecode="2" endBytecode="2" sourcefile="CometdComponent.java" sourcepath="org/apache/camel/component/cometd/CometdComponent.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.cometd.CometdComponent" start="188" end="188" startBytecode="41" endBytecode="41" sourcefile="CometdComponent.java" sourcepath="org/apache/camel/component/cometd/CometdComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.cometd.CometdComponent" start="189" end="189" startBytecode="52" endBytecode="52" sourcefile="CometdComponent.java" sourcepath="org/apache/camel/component/cometd/CometdComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.camel.component.cometd.CometdComponent$ConnectorRef">
+      <SourceLine classname="org.apache.camel.component.cometd.CometdComponent$ConnectorRef" start="60" end="71" sourcefile="CometdComponent.java" sourcepath="org/apache/camel/component/cometd/CometdComponent.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.apache.camel.component.cometd.CometdConsumer">
+      <SourceLine classname="org.apache.camel.component.cometd.CometdConsumer" start="34" end="63" sourcefile="CometdConsumer.java" sourcepath="org/apache/camel/component/cometd/CometdConsumer.java"/>
+    </Class>
+    <Field classname="org.apache.camel.component.cometd.CometdConsumer" name="service" signature="Lorg/apache/camel/component/cometd/CometdConsumer$ConsumerService;" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.cometd.CometdConsumer" sourcefile="CometdConsumer.java" sourcepath="org/apache/camel/component/cometd/CometdConsumer.java"/>
+    </Field>
+    <SourceLine classname="org.apache.camel.component.cometd.CometdConsumer" start="49" end="49" startBytecode="32" endBytecode="32" sourcefile="CometdConsumer.java" sourcepath="org/apache/camel/component/cometd/CometdConsumer.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="25">
+    <MissingClass>org.apache.camel.CamelContext</MissingClass>
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.Message</MissingClass>
+    <MissingClass>org.apache.camel.Processor</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultComponent</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultConsumer</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultEndpoint</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultMessage</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultProducer</MissingClass>
+    <MissingClass>org.apache.camel.spi.ClassResolver</MissingClass>
+    <MissingClass>org.apache.camel.util.ObjectHelper</MissingClass>
+    <MissingClass>org.cometd.Client</MissingClass>
+    <MissingClass>org.cometd.server.AbstractBayeux</MissingClass>
+    <MissingClass>org.cometd.server.BayeuxService</MissingClass>
+    <MissingClass>org.cometd.server.continuation.ContinuationCometdServlet</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.Connector</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.Server</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.handler.ContextHandlerCollection</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.nio.SelectChannelConnector</MissingClass>
+    <MissingClass>org.eclipse.jetty.server.ssl.SslSocketConnector</MissingClass>
+    <MissingClass>org.eclipse.jetty.servlet.ServletContextHandler</MissingClass>
+    <MissingClass>org.eclipse.jetty.servlet.ServletHolder</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.resource.Resource</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 31 May 2011 07:25:51 +0300" total_classes="8" referenced_classes="26" total_bugs="3" total_size="310" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="12.29" clock_seconds="8.06" peak_mbytes="54.89" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="3">
+    <PackageStats package="org.apache.camel.component.cometd" total_bugs="3" total_types="8" total_size="310" priority_2="3">
+      <ClassStats class="org.apache.camel.component.cometd.CometdComponent" sourceFile="CometdComponent.java" interface="false" size="123" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.component.cometd.CometdComponent$ConnectorRef" sourceFile="CometdComponent.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.component.cometd.CometdConsumer" sourceFile="CometdConsumer.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.component.cometd.CometdConsumer$ConsumerService" sourceFile="CometdConsumer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.cometd.CometdConverters" sourceFile="CometdConverters.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.cometd.CometdEndpoint" sourceFile="CometdEndpoint.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.cometd.CometdProducer" sourceFile="CometdProducer.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.cometd.CometdProducerConsumer" sourceFile="CometdProducerConsumer.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="974" invocations="381" avgMicrosecondsPerInvocation="2557" maxMicrosecondsPerInvocation="90806" standardDeviationMircosecondsPerInvocation="7869"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="465" invocations="26" avgMicrosecondsPerInvocation="17887" maxMicrosecondsPerInvocation="120460" standardDeviationMircosecondsPerInvocation="29911"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="449" invocations="26" avgMicrosecondsPerInvocation="17294" maxMicrosecondsPerInvocation="80542" standardDeviationMircosecondsPerInvocation="26084"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="329" invocations="26" avgMicrosecondsPerInvocation="12685" maxMicrosecondsPerInvocation="101547" standardDeviationMircosecondsPerInvocation="22683"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="224" invocations="62" avgMicrosecondsPerInvocation="3616" maxMicrosecondsPerInvocation="75044" standardDeviationMircosecondsPerInvocation="11294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="204" invocations="65" avgMicrosecondsPerInvocation="3148" maxMicrosecondsPerInvocation="33952" standardDeviationMircosecondsPerInvocation="6959"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="192" invocations="67" avgMicrosecondsPerInvocation="2867" maxMicrosecondsPerInvocation="41927" standardDeviationMircosecondsPerInvocation="7417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="173" invocations="152" avgMicrosecondsPerInvocation="1139" maxMicrosecondsPerInvocation="37619" standardDeviationMircosecondsPerInvocation="4207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="162" invocations="26" avgMicrosecondsPerInvocation="6259" maxMicrosecondsPerInvocation="56647" standardDeviationMircosecondsPerInvocation="13509"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="148" invocations="62" avgMicrosecondsPerInvocation="2401" maxMicrosecondsPerInvocation="30519" standardDeviationMircosecondsPerInvocation="5446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="137" invocations="66" avgMicrosecondsPerInvocation="2081" maxMicrosecondsPerInvocation="40420" standardDeviationMircosecondsPerInvocation="5660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="133" invocations="309" avgMicrosecondsPerInvocation="433" maxMicrosecondsPerInvocation="40978" standardDeviationMircosecondsPerInvocation="2464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="118" invocations="65" avgMicrosecondsPerInvocation="1827" maxMicrosecondsPerInvocation="16760" standardDeviationMircosecondsPerInvocation="3736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="114" invocations="26" avgMicrosecondsPerInvocation="4421" maxMicrosecondsPerInvocation="61611" standardDeviationMircosecondsPerInvocation="11864"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="92" invocations="384" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="14233" standardDeviationMircosecondsPerInvocation="1094"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="84" invocations="26" avgMicrosecondsPerInvocation="3256" maxMicrosecondsPerInvocation="29092" standardDeviationMircosecondsPerInvocation="5868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="79" invocations="65" avgMicrosecondsPerInvocation="1219" maxMicrosecondsPerInvocation="22808" standardDeviationMircosecondsPerInvocation="3838"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="75" invocations="67" avgMicrosecondsPerInvocation="1130" maxMicrosecondsPerInvocation="64341" standardDeviationMircosecondsPerInvocation="7786"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="71" invocations="26" avgMicrosecondsPerInvocation="2749" maxMicrosecondsPerInvocation="35745" standardDeviationMircosecondsPerInvocation="7008"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

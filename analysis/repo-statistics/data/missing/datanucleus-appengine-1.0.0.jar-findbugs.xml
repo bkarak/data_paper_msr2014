@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1240267016000" analysisTimestamp="1360504465929" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/com/google/appengine/orm/datanucleus-appengine/1.0.0/datanucleus-appengine-1.0.0.jar</Jar>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.datanucleus.store.appengine.DatastoreAbstractSetStoreSpecialization">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreAbstractSetStoreSpecialization" start="44" end="81" sourcefile="DatastoreAbstractSetStoreSpecialization.java" sourcepath="org/datanucleus/store/appengine/DatastoreAbstractSetStoreSpecialization.java"/>
+    </Class>
+    <Method classname="org.datanucleus.store.appengine.DatastoreAbstractSetStoreSpecialization" name="foo" signature="()V" isStatic="false">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreAbstractSetStoreSpecialization" start="44" end="46" startBytecode="0" endBytecode="12" sourcefile="DatastoreAbstractSetStoreSpecialization.java" sourcepath="org/datanucleus/store/appengine/DatastoreAbstractSetStoreSpecialization.java"/>
+    </Method>
+    <LocalVariable name="child" register="2" pc="24" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.datanucleus.store.appengine.DatastoreAbstractSetStoreSpecialization" start="45" end="45" startBytecode="23" endBytecode="23" sourcefile="DatastoreAbstractSetStoreSpecialization.java" sourcepath="org/datanucleus/store/appengine/DatastoreAbstractSetStoreSpecialization.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="child"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_INTERFACE" priority="2" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.datanucleus.store.appengine.DatastoreAdapter">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreAdapter" start="49" end="239" sourcefile="DatastoreAdapter.java" sourcepath="org/datanucleus/store/appengine/DatastoreAdapter.java"/>
+    </Class>
+    <Class classname="org.datanucleus.store.mapped.DatastoreAdapter">
+      <SourceLine classname="org.datanucleus.store.mapped.DatastoreAdapter"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.datanucleus.store.appengine.DatastoreFieldManager">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreFieldManager" start="78" end="933" sourcefile="DatastoreFieldManager.java" sourcepath="org/datanucleus/store/appengine/DatastoreFieldManager.java"/>
+    </Class>
+    <Method classname="org.datanucleus.store.appengine.DatastoreFieldManager" name="storeStringPKField" signature="(ILjava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreFieldManager" start="460" end="494" startBytecode="0" endBytecode="406" sourcefile="DatastoreFieldManager.java" sourcepath="org/datanucleus/store/appengine/DatastoreFieldManager.java"/>
+    </Method>
+    <LocalVariable name="value" register="2" pc="187" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.datanucleus.store.appengine.DatastoreFieldManager" start="485" end="485" startBytecode="188" endBytecode="188" sourcefile="DatastoreFieldManager.java" sourcepath="org/datanucleus/store/appengine/DatastoreFieldManager.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.datanucleus.store.appengine.DatastoreMappingManager">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreMappingManager" start="49" end="286" sourcefile="DatastoreMappingManager.java" sourcepath="org/datanucleus/store/appengine/DatastoreMappingManager.java"/>
+    </Class>
+    <Method classname="org.datanucleus.store.appengine.DatastoreMappingManager" name="createDatastoreField" signature="(Lorg/datanucleus/store/mapped/mapping/JavaTypeMapping;Ljava/lang/String;I)Lorg/datanucleus/store/mapped/DatastoreField;" isStatic="false">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreMappingManager" start="77" end="167" startBytecode="0" endBytecode="898" sourcefile="DatastoreMappingManager.java" sourcepath="org/datanucleus/store/appengine/DatastoreMappingManager.java"/>
+    </Method>
+    <LocalVariable name="identifier" register="13" pc="360" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.datanucleus.store.appengine.DatastoreMappingManager" start="143" end="143" startBytecode="385" endBytecode="385" sourcefile="DatastoreMappingManager.java" sourcepath="org/datanucleus/store/appengine/DatastoreMappingManager.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.datanucleus.store.appengine.DatastoreMappingManager" start="115" end="115" startBytecode="188" endBytecode="188" sourcefile="DatastoreMappingManager.java" sourcepath="org/datanucleus/store/appengine/DatastoreMappingManager.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.datanucleus.store.appengine.DatastoreMappingManager" start="137" end="137" startBytecode="362" endBytecode="362" sourcefile="DatastoreMappingManager.java" sourcepath="org/datanucleus/store/appengine/DatastoreMappingManager.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.datanucleus.store.appengine.DatastoreTable">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="83" end="1147" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Class>
+    <Method classname="org.datanucleus.store.appengine.DatastoreTable" name="addApplicationIdUsingClassTableId" signature="(Lorg/datanucleus/metadata/ColumnMetaDataContainer;Lorg/datanucleus/store/mapped/DatastoreClass;Lorg/datanucleus/ClassLoaderResolver;Lorg/datanucleus/metadata/AbstractClassMetaData;)V" isStatic="false">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="683" end="762" startBytecode="0" endBytecode="939" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Method>
+    <LocalVariable name="mapping" register="9" pc="425" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.datanucleus.store.mapped.DatastoreClass" name="getMemberMapping" signature="(Lorg/datanucleus/metadata/AbstractMemberMetaData;)Lorg/datanucleus/store/mapped/mapping/JavaTypeMapping;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.datanucleus.store.mapped.DatastoreClass"/>
+    </Method>
+    <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="745" end="745" startBytecode="427" endBytecode="427" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.datanucleus.store.appengine.DatastoreTable">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="83" end="1147" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Class>
+    <Method classname="org.datanucleus.store.appengine.DatastoreTable" name="addOrderColumn" signature="(Lorg/datanucleus/metadata/AbstractMemberMetaData;)Lorg/datanucleus/store/mapped/mapping/JavaTypeMapping;" isStatic="false">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="1049" end="1111" startBytecode="0" endBytecode="692" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Method>
+    <LocalVariable name="orderMapping" register="8" pc="99" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.datanucleus.store.appengine.DatastoreTable" name="getMemberMapping" signature="(Ljava/lang/String;)Lorg/datanucleus/store/mapped/mapping/JavaTypeMapping;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="188" end="193" startBytecode="0" endBytecode="121" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Method>
+    <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="1065" end="1065" startBytecode="101" endBytecode="101" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_EXPECTED_MESSAGE_FORMAT_SUPPLIED" priority="1" abbrev="FS" category="CORRECTNESS">
+    <Class classname="org.datanucleus.store.appengine.DatastoreTable">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="83" end="1147" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Class>
+    <Method classname="org.datanucleus.store.appengine.DatastoreTable" name="addOrderColumn" signature="(Lorg/datanucleus/metadata/AbstractMemberMetaData;)Lorg/datanucleus/store/mapped/mapping/JavaTypeMapping;" isStatic="false">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="1049" end="1111" startBytecode="0" endBytecode="692" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="Field &quot;{0}&quot; has an &lt;order&gt; defined to be persisted into the column of field &quot;{1}&quot;. This field is of an invalid type. Must be an int/Integer." role="STRING_FORMAT_STRING"/>
+    <Int value="0" role="INT_EXPECTED_ARGUMENTS"/>
+    <Int value="2" role="INT_ACTUAL_ARGUMENTS"/>
+    <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="1071" end="1071" startBytecode="179" endBytecode="179" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_EXPECTED_MESSAGE_FORMAT_SUPPLIED" priority="1" abbrev="FS" category="CORRECTNESS">
+    <Class classname="org.datanucleus.store.appengine.DatastoreTable">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="83" end="1147" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Class>
+    <Method classname="org.datanucleus.store.appengine.DatastoreTable" name="addOrderColumn" signature="(Lorg/datanucleus/metadata/AbstractMemberMetaData;)Lorg/datanucleus/store/mapped/mapping/JavaTypeMapping;" isStatic="false">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="1049" end="1111" startBytecode="0" endBytecode="692" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="Field &quot;{0}&quot; has an &lt;order&gt; defined to be persisted into the columns in the element table for element field &quot;{1}&quot;. This field is not found in the element class." role="STRING_FORMAT_STRING"/>
+    <Int value="0" role="INT_EXPECTED_ARGUMENTS"/>
+    <Int value="2" role="INT_ACTUAL_ARGUMENTS"/>
+    <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="1066" end="1066" startBytecode="130" endBytecode="130" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_EXPECTED_MESSAGE_FORMAT_SUPPLIED" priority="1" abbrev="FS" category="CORRECTNESS">
+    <Class classname="org.datanucleus.store.appengine.DatastoreTable">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="83" end="1147" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Class>
+    <Method classname="org.datanucleus.store.appengine.DatastoreTable" name="runCallBacks" signature="()V" isStatic="false">
+      <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="912" end="1011" startBytecode="0" endBytecode="1104" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="Unable to find the field &quot;{0}&quot; in the class &quot;{1}&quot; with a relationship to the field &quot;{2}&quot;" role="STRING_FORMAT_STRING"/>
+    <Int value="0" role="INT_EXPECTED_ARGUMENTS"/>
+    <Int value="3" role="INT_ACTUAL_ARGUMENTS"/>
+    <SourceLine classname="org.datanucleus.store.appengine.DatastoreTable" start="927" end="927" startBytecode="132" endBytecode="132" sourcefile="DatastoreTable.java" sourcepath="org/datanucleus/store/appengine/DatastoreTable.java"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="2" abbrev="SnVI" category="BAD_PRACTICE">
+    <Class classname="org.datanucleus.store.appengine.query.DatastoreQuery">
+      <SourceLine classname="org.datanucleus.store.appengine.query.DatastoreQuery" start="90" end="817" sourcefile="DatastoreQuery.java" sourcepath="org/datanucleus/store/appengine/query/DatastoreQuery.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="151">
+    <MissingClass>com.google.appengine.api.datastore.Blob</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.DatastoreService</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.DatastoreServiceFactory</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.Entity</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.FetchOptions</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.FetchOptions$Builder</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.Key</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.KeyFactory</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.PreparedQuery</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.Query</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.Query$FilterOperator</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.Query$FilterPredicate</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.Query$SortDirection</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.Query$SortPredicate</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.ShortBlob</MissingClass>
+    <MissingClass>com.google.appengine.api.datastore.Transaction</MissingClass>
+    <MissingClass>com.google.appengine.repackaged.com.google.common.base.Preconditions</MissingClass>
+    <MissingClass>com.google.appengine.repackaged.com.google.common.collect.AbstractIterator</MissingClass>
+    <MissingClass>com.google.appengine.repackaged.com.google.common.collect.PrimitiveArrays</MissingClass>
+    <MissingClass>javax.jdo.JDOFatalUserException</MissingClass>
+    <MissingClass>javax.jdo.JDOUserException</MissingClass>
+    <MissingClass>javax.jdo.spi.JDOImplHelper</MissingClass>
+    <MissingClass>javax.jdo.spi.PersistenceCapable</MissingClass>
+    <MissingClass>javax.persistence.PersistenceException</MissingClass>
+    <MissingClass>javax.persistence.spi.PersistenceUnitInfo</MissingClass>
+    <MissingClass>org.datanucleus.ClassLoaderResolver</MissingClass>
+    <MissingClass>org.datanucleus.ConnectionFactory</MissingClass>
+    <MissingClass>org.datanucleus.ConnectionFactoryRegistry</MissingClass>
+    <MissingClass>org.datanucleus.ConnectionManager</MissingClass>
+    <MissingClass>org.datanucleus.FetchPlan</MissingClass>
+    <MissingClass>org.datanucleus.ManagedConnection</MissingClass>
+    <MissingClass>org.datanucleus.ManagedConnectionResourceListener</MissingClass>
+    <MissingClass>org.datanucleus.OMFContext</MissingClass>
+    <MissingClass>org.datanucleus.ObjectManager</MissingClass>
+    <MissingClass>org.datanucleus.PersistenceConfiguration</MissingClass>
+    <MissingClass>org.datanucleus.StateManager</MissingClass>
+    <MissingClass>org.datanucleus.Transaction</MissingClass>
+    <MissingClass>org.datanucleus.api.ApiAdapter</MissingClass>
+    <MissingClass>org.datanucleus.exceptions.NucleusDataStoreException</MissingClass>
+    <MissingClass>org.datanucleus.exceptions.NucleusException</MissingClass>
+    <MissingClass>org.datanucleus.exceptions.NucleusObjectNotFoundException</MissingClass>
+    <MissingClass>org.datanucleus.exceptions.NucleusOptimisticException</MissingClass>
+    <MissingClass>org.datanucleus.exceptions.NucleusUserException</MissingClass>
+    <MissingClass>org.datanucleus.jdo.JDOPersistenceManager</MissingClass>
+    <MissingClass>org.datanucleus.jdo.JDOPersistenceManagerFactory</MissingClass>
+    <MissingClass>org.datanucleus.jpa.EntityManagerFactoryImpl</MissingClass>
+    <MissingClass>org.datanucleus.jpa.EntityManagerImpl</MissingClass>
+    <MissingClass>org.datanucleus.management.runtime.StoreManagerRuntime</MissingClass>
+    <MissingClass>org.datanucleus.metadata.AbstractClassMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.AbstractMemberMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.ArrayMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.ClassMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.CollectionMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.ColumnMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.ColumnMetaDataContainer</MissingClass>
+    <MissingClass>org.datanucleus.metadata.ContainerMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.ElementMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.EmbeddedMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.ExtensionMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.FieldPersistenceModifier</MissingClass>
+    <MissingClass>org.datanucleus.metadata.IdentityMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.IdentityStrategy</MissingClass>
+    <MissingClass>org.datanucleus.metadata.IdentityType</MissingClass>
+    <MissingClass>org.datanucleus.metadata.InheritanceMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.InheritanceStrategy</MissingClass>
+    <MissingClass>org.datanucleus.metadata.JoinMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.KeyMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.MapMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.MetaDataManager</MissingClass>
+    <MissingClass>org.datanucleus.metadata.NullValue</MissingClass>
+    <MissingClass>org.datanucleus.metadata.OrderMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.PropertyMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.ValueMetaData</MissingClass>
+    <MissingClass>org.datanucleus.metadata.VersionMetaData</MissingClass>
+    <MissingClass>org.datanucleus.plugin.ConfigurationElement</MissingClass>
+    <MissingClass>org.datanucleus.plugin.PluginManager</MissingClass>
+    <MissingClass>org.datanucleus.query.compiler.QueryCompilation</MissingClass>
+    <MissingClass>org.datanucleus.query.expression.DyadicExpression</MissingClass>
+    <MissingClass>org.datanucleus.query.expression.Expression</MissingClass>
+    <MissingClass>org.datanucleus.query.expression.Expression$DyadicOperator</MissingClass>
+    <MissingClass>org.datanucleus.query.expression.Expression$MonadicOperator</MissingClass>
+    <MissingClass>org.datanucleus.query.expression.Expression$Operator</MissingClass>
+    <MissingClass>org.datanucleus.query.expression.InvokeExpression</MissingClass>
+    <MissingClass>org.datanucleus.query.expression.Literal</MissingClass>
+    <MissingClass>org.datanucleus.query.expression.OrderExpression</MissingClass>
+    <MissingClass>org.datanucleus.query.expression.PrimaryExpression</MissingClass>
+    <MissingClass>org.datanucleus.query.symbol.Symbol</MissingClass>
+    <MissingClass>org.datanucleus.sco.SCOUtils</MissingClass>
+    <MissingClass>org.datanucleus.state.StateManagerFactory</MissingClass>
+    <MissingClass>org.datanucleus.store.AbstractExtent</MissingClass>
+    <MissingClass>org.datanucleus.store.FieldValues</MissingClass>
+    <MissingClass>org.datanucleus.store.NucleusConnectionImpl</MissingClass>
+    <MissingClass>org.datanucleus.store.StoreManager</MissingClass>
+    <MissingClass>org.datanucleus.store.StorePersistenceHandler</MissingClass>
+    <MissingClass>org.datanucleus.store.exceptions.NoExtentException</MissingClass>
+    <MissingClass>org.datanucleus.store.exceptions.NoSuchPersistentFieldException</MissingClass>
+    <MissingClass>org.datanucleus.store.exceptions.NoTableManagedException</MissingClass>
+    <MissingClass>org.datanucleus.store.exceptions.NotYetFlushedException</MissingClass>
+    <MissingClass>org.datanucleus.store.fieldmanager.SingleValueFieldManager</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.DatastoreAdapter</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.DatastoreClass</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.DatastoreContainerObject</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.DatastoreField</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.DatastoreIdentifier</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.IdentifierFactory</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.IdentifierType</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.MappedStoreData</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.MappedStoreManager</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.expression.BooleanExpression</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.expression.IntegerLiteral</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.expression.LogicSetExpression</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.expression.NumericExpression</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.expression.QueryExpression</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.expression.ScalarExpression</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.expression.ScalarExpression$DatastoreFieldExpression</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.expression.StatementText</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.expression.StringLiteral</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.AbstractMappingManager</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.CorrespondentColumnsMapper</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.DatastoreMapping</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.DatastoreMappingFactory</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.IndexMapping</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.JavaTypeMapping</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.MappingCallbacks</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.MappingConsumer</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.MappingManager</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.OIDMapping</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.PersistenceCapableMapping</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.mapping.SerialisedMapping</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.query.UnionIteratorStatement</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.scostore.AbstractArrayStoreSpecialization</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.scostore.AbstractCollectionStoreSpecialization</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.scostore.AbstractListStoreSpecialization</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.scostore.AbstractSetStoreSpecialization</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.scostore.BaseElementContainerStoreSpecialization</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.scostore.ElementContainerStore</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.scostore.FKArrayStoreSpecialization</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.scostore.FKListStore</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.scostore.FKListStoreSpecialization</MissingClass>
+    <MissingClass>org.datanucleus.store.mapped.scostore.FKSetStore</MissingClass>
+    <MissingClass>org.datanucleus.store.query.AbstractJDOQLQuery</MissingClass>
+    <MissingClass>org.datanucleus.store.query.AbstractJPQLQuery</MissingClass>
+    <MissingClass>org.datanucleus.store.query.AbstractJavaQuery</MissingClass>
+    <MissingClass>org.datanucleus.store.query.AbstractQueryResult</MissingClass>
+    <MissingClass>org.datanucleus.store.query.Query</MissingClass>
+    <MissingClass>org.datanucleus.store.types.TypeManager</MissingClass>
+    <MissingClass>org.datanucleus.util.ClassUtils</MissingClass>
+    <MissingClass>org.datanucleus.util.Localiser</MissingClass>
+    <MissingClass>org.datanucleus.util.MultiMap</MissingClass>
+    <MissingClass>org.datanucleus.util.NucleusLogger</MissingClass>
+    <MissingClass>org.datanucleus.util.StringUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 21 Apr 2009 01:36:56 +0300" total_classes="118" referenced_classes="206" total_bugs="10" total_size="4938" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="50.77" clock_seconds="31.78" peak_mbytes="113.40" alloc_mbytes="763.88" gc_seconds="0.77" priority_2="7" priority_1="3">
+    <PackageStats package="org.datanucleus.store.appengine" total_bugs="9" total_types="100" total_size="4272" priority_2="6" priority_1="3">
+      <ClassStats class="org.datanucleus.store.appengine.ConcurrentHashMapHelper" sourceFile="ConcurrentHashMapHelper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreAbstractArrayStoreSpecialization" sourceFile="DatastoreAbstractArrayStoreSpecialization.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreAbstractCollectionStoreSpecialization" sourceFile="DatastoreAbstractCollectionStoreSpecialization.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreAbstractListStoreSpecialization" sourceFile="DatastoreAbstractListStoreSpecialization.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreAbstractSetStoreSpecialization" sourceFile="DatastoreAbstractSetStoreSpecialization.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreAdapter" sourceFile="DatastoreAdapter.java" interface="false" size="102" bugs="1" priority_2="1"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreConnectionFactoryImpl" sourceFile="DatastoreConnectionFactoryImpl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreConnectionFactoryImpl$DatastoreManagedConnection" sourceFile="DatastoreConnectionFactoryImpl.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreElementContainerStoreSpecialization" sourceFile="DatastoreElementContainerStoreSpecialization.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreExceptionTranslator" sourceFile="DatastoreExceptionTranslator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreExtent" sourceFile="DatastoreExtent.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreFKArrayStoreSpecialization" sourceFile="DatastoreFKArrayStoreSpecialization.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreFKListStoreSpecialization" sourceFile="DatastoreFKListStoreSpecialization.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreFKMapping" sourceFile="DatastoreFKMapping.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreFKSetStore" sourceFile="DatastoreFKSetStore.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreFieldManager" sourceFile="DatastoreFieldManager.java" interface="false" size="433" bugs="1" priority_2="1"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreFieldManager$1" sourceFile="DatastoreFieldManager.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreFieldManager$2" sourceFile="DatastoreFieldManager.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreFieldManager$AbstractMemberMetaDataProvider" sourceFile="DatastoreFieldManager.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreFieldManager$FieldManagerState" sourceFile="DatastoreFieldManager.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreKind" sourceFile="DatastoreKind.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreManager" sourceFile="DatastoreManager.java" interface="false" size="152" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreManager$1" sourceFile="DatastoreManager.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreManager$KeyOnlyFieldManager" sourceFile="DatastoreManager.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreMappingManager" sourceFile="DatastoreMappingManager.java" interface="false" size="113" bugs="1" priority_2="1"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastorePersistenceHandler" sourceFile="DatastorePersistenceHandler.java" interface="false" size="217" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastorePersistenceHandler$VersionBehavior" sourceFile="DatastorePersistenceHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreProperty" sourceFile="DatastoreProperty.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreQueryExpression" sourceFile="DatastoreQueryExpression.java" interface="false" size="202" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreQueryExpression$1" sourceFile="DatastoreQueryExpression.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreRelationFieldManager" sourceFile="DatastoreRelationFieldManager.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreRelationFieldManager$1" sourceFile="DatastoreRelationFieldManager.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreRelationFieldManager$StoreRelationEvent" sourceFile="DatastoreRelationFieldManager.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreServiceFactoryInternal" sourceFile="DatastoreServiceFactoryInternal.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreTable" sourceFile="DatastoreTable.java" interface="false" size="530" bugs="5" priority_2="2" priority_1="3"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreTable$CallBack" sourceFile="DatastoreTable.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreTransaction" sourceFile="DatastoreTransaction.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreUnionIteratorStatement" sourceFile="DatastoreUnionIteratorStatement.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DatastoreXAResource" sourceFile="DatastoreXAResource.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DependentDeleteRequest" sourceFile="DependentDeleteRequest.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.DependentDeleteRequest$DependentDeleteMappingConsumer" sourceFile="DependentDeleteRequest.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.EmulatedXAResource" sourceFile="EmulatedXAResource.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.EmulatedXAResource$State" sourceFile="EmulatedXAResource.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.EntityUtils" sourceFile="EntityUtils.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.FetchMappingConsumer" sourceFile="FetchMappingConsumer.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.InsertMappingConsumer" sourceFile="InsertMappingConsumer.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.Ints" sourceFile="Ints.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.Ints$IntArrayAsList" sourceFile="Ints.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.KeyMapping" sourceFile="KeyMapping.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.KeyRegistry" sourceFile="KeyRegistry.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.Longs" sourceFile="Longs.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.Longs$LongArrayAsList" sourceFile="Longs.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.MetaDataValidator" sourceFile="MetaDataValidator.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.MetaDataValidator$1" sourceFile="MetaDataValidator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.MetaDataValidator$DatastoreMetaDataException" sourceFile="MetaDataValidator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveArrays" sourceFile="PrimitiveArrays.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveArrays$1" sourceFile="PrimitiveArrays.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveArrays$BooleanArray" sourceFile="PrimitiveArrays.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveArrays$ByteArray" sourceFile="PrimitiveArrays.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveArrays$CharacterArray" sourceFile="PrimitiveArrays.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveArrays$DoubleArray" sourceFile="PrimitiveArrays.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveArrays$FloatArray" sourceFile="PrimitiveArrays.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveArrays$PrimitiveArray" sourceFile="PrimitiveArrays.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveArrays$ShortArray" sourceFile="PrimitiveArrays.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils" sourceFile="PrimitiveUtils.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$1" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$10" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$11" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$12" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$13" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$14" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$15" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$16" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$2" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$3" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$4" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$5" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$6" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$7" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$8" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.PrimitiveUtils$9" sourceFile="PrimitiveUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.RuntimeExceptionWrappingDatastoreService" sourceFile="RuntimeExceptionWrappingDatastoreService.java" interface="false" size="132" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.SerializationManager" sourceFile="SerializationManager.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.SerializationManager$1" sourceFile="SerializationManager.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.SerializationStrategy" sourceFile="SerializationStrategy.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils" sourceFile="TypeConversionUtils.java" interface="false" size="235" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$1" sourceFile="TypeConversionUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$10" sourceFile="TypeConversionUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$11" sourceFile="TypeConversionUtils.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$2" sourceFile="TypeConversionUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$3" sourceFile="TypeConversionUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$4" sourceFile="TypeConversionUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$5" sourceFile="TypeConversionUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$6" sourceFile="TypeConversionUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$7" sourceFile="TypeConversionUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$8" sourceFile="TypeConversionUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.TypeConversionUtils$9" sourceFile="TypeConversionUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.Utils" sourceFile="Utils.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.Utils$1" sourceFile="Utils.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.Utils$Function" sourceFile="Utils.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.datanucleus.store.appengine.jdo" total_bugs="0" total_types="2" total_size="48">
+      <ClassStats class="org.datanucleus.store.appengine.jdo.DatastoreJDOPersistenceManager" sourceFile="DatastoreJDOPersistenceManager.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.jdo.DatastoreJDOPersistenceManagerFactory" sourceFile="DatastoreJDOPersistenceManagerFactory.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.datanucleus.store.appengine.jpa" total_bugs="0" total_types="3" total_size="59">
+      <ClassStats class="org.datanucleus.store.appengine.jpa.DatastoreEntityManager" sourceFile="DatastoreEntityManager.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.jpa.DatastoreEntityManagerFactory" sourceFile="DatastoreEntityManagerFactory.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.jpa.DatastorePersistenceProvider" sourceFile="DatastorePersistenceProvider.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.datanucleus.store.appengine.query" total_bugs="1" total_types="13" total_size="559" priority_2="1">
+      <ClassStats class="org.datanucleus.store.appengine.query.DatastoreQuery" sourceFile="DatastoreQuery.java" interface="false" size="320" bugs="1" priority_2="1"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.DatastoreQuery$1" sourceFile="DatastoreQuery.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.DatastoreQuery$2" sourceFile="DatastoreQuery.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.DatastoreQuery$QueryData" sourceFile="DatastoreQuery.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.DatastoreQuery$UnsupportedDatastoreFeatureException" sourceFile="DatastoreQuery.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.DatastoreQuery$UnsupportedDatastoreOperatorException" sourceFile="DatastoreQuery.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.JDOQLQuery" sourceFile="JDOQLQuery.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.JPQLQuery" sourceFile="JPQLQuery.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.RuntimeExceptionWrappingIterable" sourceFile="RuntimeExceptionWrappingIterable.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.RuntimeExceptionWrappingIterator" sourceFile="RuntimeExceptionWrappingIterator.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.StreamingQueryResult" sourceFile="StreamingQueryResult.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.StreamingQueryResult$1" sourceFile="StreamingQueryResult.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.datanucleus.store.appengine.query.StreamingQueryResult$AbstractListIterator" sourceFile="StreamingQueryResult.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="2485" invocations="961" avgMicrosecondsPerInvocation="2586" maxMicrosecondsPerInvocation="94626" standardDeviationMircosecondsPerInvocation="8227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="2284" invocations="1011" avgMicrosecondsPerInvocation="2260" maxMicrosecondsPerInvocation="143859" standardDeviationMircosecondsPerInvocation="7858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="2228" invocations="999" avgMicrosecondsPerInvocation="2230" maxMicrosecondsPerInvocation="247081" standardDeviationMircosecondsPerInvocation="10113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="2100" invocations="1029" avgMicrosecondsPerInvocation="2041" maxMicrosecondsPerInvocation="202234" standardDeviationMircosecondsPerInvocation="9923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1921" invocations="1014" avgMicrosecondsPerInvocation="1894" maxMicrosecondsPerInvocation="90812" standardDeviationMircosecondsPerInvocation="6551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1210" invocations="206" avgMicrosecondsPerInvocation="5875" maxMicrosecondsPerInvocation="109593" standardDeviationMircosecondsPerInvocation="15926"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1193" invocations="804" avgMicrosecondsPerInvocation="1484" maxMicrosecondsPerInvocation="71098" standardDeviationMircosecondsPerInvocation="4773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1103" invocations="829" avgMicrosecondsPerInvocation="1331" maxMicrosecondsPerInvocation="61702" standardDeviationMircosecondsPerInvocation="4416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="1085" invocations="1011" avgMicrosecondsPerInvocation="1073" maxMicrosecondsPerInvocation="60964" standardDeviationMircosecondsPerInvocation="4204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1010" invocations="206" avgMicrosecondsPerInvocation="4903" maxMicrosecondsPerInvocation="91176" standardDeviationMircosecondsPerInvocation="12761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="697" invocations="1360" avgMicrosecondsPerInvocation="512" maxMicrosecondsPerInvocation="74262" standardDeviationMircosecondsPerInvocation="3292"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="661" invocations="1011" avgMicrosecondsPerInvocation="654" maxMicrosecondsPerInvocation="83726" standardDeviationMircosecondsPerInvocation="3574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="526" invocations="206" avgMicrosecondsPerInvocation="2557" maxMicrosecondsPerInvocation="53038" standardDeviationMircosecondsPerInvocation="8021"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="435" invocations="118" avgMicrosecondsPerInvocation="3687" maxMicrosecondsPerInvocation="52912" standardDeviationMircosecondsPerInvocation="8237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="429" invocations="118" avgMicrosecondsPerInvocation="3638" maxMicrosecondsPerInvocation="152062" standardDeviationMircosecondsPerInvocation="17393"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="417" invocations="118" avgMicrosecondsPerInvocation="3536" maxMicrosecondsPerInvocation="85340" standardDeviationMircosecondsPerInvocation="10440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="377" invocations="18523" avgMicrosecondsPerInvocation="20" maxMicrosecondsPerInvocation="45013" standardDeviationMircosecondsPerInvocation="485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="302" invocations="13615" avgMicrosecondsPerInvocation="22" maxMicrosecondsPerInvocation="40102" standardDeviationMircosecondsPerInvocation="510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="285" invocations="118" avgMicrosecondsPerInvocation="2417" maxMicrosecondsPerInvocation="93186" standardDeviationMircosecondsPerInvocation="9441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="282" invocations="932" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="53714" standardDeviationMircosecondsPerInvocation="2050"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="281" invocations="206" avgMicrosecondsPerInvocation="1366" maxMicrosecondsPerInvocation="57261" standardDeviationMircosecondsPerInvocation="5892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="278" invocations="961" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="47706" standardDeviationMircosecondsPerInvocation="1936"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="252" invocations="118" avgMicrosecondsPerInvocation="2137" maxMicrosecondsPerInvocation="74439" standardDeviationMircosecondsPerInvocation="7453"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="248" invocations="589" avgMicrosecondsPerInvocation="421" maxMicrosecondsPerInvocation="44729" standardDeviationMircosecondsPerInvocation="2562"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="241" invocations="118" avgMicrosecondsPerInvocation="2048" maxMicrosecondsPerInvocation="45993" standardDeviationMircosecondsPerInvocation="6310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="236" invocations="1016" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="60816" standardDeviationMircosecondsPerInvocation="2105"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

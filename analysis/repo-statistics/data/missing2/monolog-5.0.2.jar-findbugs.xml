@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1207305757000" analysisTimestamp="1360875520019" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/osgi/monolog/5.0.2/monolog-5.0.2.jar</Jar>
+  </Project>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.Monolog">
+      <SourceLine classname="org.objectweb.util.monolog.Monolog" start="45" end="365" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.Monolog" name="monologFactory" signature="Lorg/objectweb/util/monolog/api/MonologFactory;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.Monolog" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.Monolog" start="61" end="61" startBytecode="31" endBytecode="31" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.Monolog">
+      <SourceLine classname="org.objectweb.util.monolog.Monolog" start="45" end="365" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.Monolog" name="debug" signature="Z" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.Monolog" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.Monolog" start="49" end="49" startBytecode="15" endBytecode="15" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.objectweb.util.monolog.Monolog">
+      <SourceLine classname="org.objectweb.util.monolog.Monolog" start="45" end="365" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.Monolog" name="getMonologFactory" signature="(Ljava/lang/String;)Lorg/objectweb/util/monolog/api/MonologFactory;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.Monolog" start="169" end="204" startBytecode="0" endBytecode="464" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.objectweb.util.monolog.Monolog" start="176" end="176" startBytecode="55" endBytecode="55" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.objectweb.util.monolog.Monolog" start="180" end="180" startBytecode="59" endBytecode="59" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.objectweb.util.monolog.Monolog" start="187" end="187" startBytecode="153" endBytecode="153" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.objectweb.util.monolog.Monolog" start="188" end="188" startBytecode="157" endBytecode="157" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.objectweb.util.monolog.Monolog" start="190" end="190" startBytecode="165" endBytecode="165" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.objectweb.util.monolog.Monolog" start="197" end="197" startBytecode="170" endBytecode="170" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.objectweb.util.monolog.Monolog" start="198" end="198" startBytecode="211" endBytecode="211" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.objectweb.util.monolog.Monolog" start="204" end="204" startBytecode="253" endBytecode="253" sourcefile="Monolog.java" sourcepath="org/objectweb/util/monolog/Monolog.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="DEBUG" signature="I" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="73" end="73" startBytecode="98" endBytecode="98" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="ERROR" signature="I" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="79" end="79" startBytecode="197" endBytecode="197" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="FATAL" signature="I" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="81" end="81" startBytecode="230" endBytecode="230" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="INFO" signature="I" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="75" end="75" startBytecode="131" endBytecode="131" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="INHERIT" signature="I" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="71" end="71" startBytecode="65" endBytecode="65" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="LEVEL_DEBUG" signature="Lorg/objectweb/util/monolog/api/Level;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="85" end="85" startBytecode="284" endBytecode="284" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="LEVEL_ERROR" signature="Lorg/objectweb/util/monolog/api/Level;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="88" end="88" startBytecode="329" endBytecode="329" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="LEVEL_FATAL" signature="Lorg/objectweb/util/monolog/api/Level;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="89" end="89" startBytecode="344" endBytecode="344" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="LEVEL_INFO" signature="Lorg/objectweb/util/monolog/api/Level;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="86" end="86" startBytecode="299" endBytecode="299" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="LEVEL_INHERIT" signature="Lorg/objectweb/util/monolog/api/Level;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="84" end="84" startBytecode="269" endBytecode="269" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="LEVEL_WARN" signature="Lorg/objectweb/util/monolog/api/Level;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="87" end="87" startBytecode="314" endBytecode="314" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.api.BasicLevel">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" start="49" end="49" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.api.BasicLevel" name="WARN" signature="I" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.api.BasicLevel" sourcefile="BasicLevel.java" sourcepath="org/objectweb/util/monolog/api/BasicLevel.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="77" end="77" startBytecode="164" endBytecode="164" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" start="41" end="183" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" name="readProperties" signature="(Ljava/io/InputStream;)Ljava/util/Properties;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" start="138" end="183" startBytecode="0" endBytecode="545" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" start="139" end="139" startBytecode="17" endBytecode="17" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" start="41" end="183" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" name="writeProperties" signature="(Ljava/util/Properties;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" start="51" end="135" startBytecode="0" endBytecode="979" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" start="51" end="51" startBytecode="9" endBytecode="9" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" start="41" end="183" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" name="PROP_VAL_SEPS" signature="[C" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" start="43" end="43" startBytecode="13" endBytecode="13" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" start="41" end="183" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" name="keywords" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" start="44" end="44" startBytecode="35" endBytecode="35" sourcefile="MonologPropertiesIO.java" sourcepath="org/objectweb/util/monolog/file/monolog/MonologPropertiesIO.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess" start="56" end="618" sourcefile="PropertiesConfAccess.java" sourcepath="org/objectweb/util/monolog/file/monolog/PropertiesConfAccess.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess" name="debug" signature="Z" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess" sourcefile="PropertiesConfAccess.java" sourcepath="org/objectweb/util/monolog/file/monolog/PropertiesConfAccess.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess" start="81" end="81" startBytecode="15" endBytecode="15" sourcefile="PropertiesConfAccess.java" sourcepath="org/objectweb/util/monolog/file/monolog/PropertiesConfAccess.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess" start="56" end="618" sourcefile="PropertiesConfAccess.java" sourcepath="org/objectweb/util/monolog/file/monolog/PropertiesConfAccess.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess" name="parseHandlerProp" signature="(Ljava/util/Properties;Ljava/lang/String;Lorg/objectweb/util/monolog/api/HandlerFactory;)Lorg/objectweb/util/monolog/api/Handler;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess" start="420" end="456" startBytecode="0" endBytecode="540" sourcefile="PropertiesConfAccess.java" sourcepath="org/objectweb/util/monolog/file/monolog/PropertiesConfAccess.java"/>
+    </Method>
+    <LocalVariable name="hc" register="7" pc="235" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess" start="448" end="448" startBytecode="237" endBytecode="237" sourcefile="PropertiesConfAccess.java" sourcepath="org/objectweb/util/monolog/file/monolog/PropertiesConfAccess.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess$NestedException">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess$NestedException" start="570" end="610" sourcefile="PropertiesConfAccess.java" sourcepath="org/objectweb/util/monolog/file/monolog/PropertiesConfAccess.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess$NestedException" name="printStackTrace" signature="()V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess$NestedException" start="609" end="610" startBytecode="0" endBytecode="60" sourcefile="PropertiesConfAccess.java" sourcepath="org/objectweb/util/monolog/file/monolog/PropertiesConfAccess.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="62" end="63" startBytecode="0" endBytecode="34" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess$NestedException" start="609" end="609" startBytecode="8" endBytecode="8" sourcefile="PropertiesConfAccess.java" sourcepath="org/objectweb/util/monolog/file/monolog/PropertiesConfAccess.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess$NestedException">
+      <SourceLine classname="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess$NestedException" start="570" end="610" sourcefile="PropertiesConfAccess.java" sourcepath="org/objectweb/util/monolog/file/monolog/PropertiesConfAccess.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.lib.LoggableImpl">
+      <SourceLine classname="org.objectweb.util.monolog.lib.LoggableImpl" start="35" end="132" sourcefile="LoggableImpl.java" sourcepath="org/objectweb/util/monolog/lib/LoggableImpl.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.lib.LoggableImpl" name="debug" signature="Z" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.lib.LoggableImpl" sourcefile="LoggableImpl.java" sourcepath="org/objectweb/util/monolog/lib/LoggableImpl.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.lib.LoggableImpl" start="37" end="37" startBytecode="6" endBytecode="6" sourcefile="LoggableImpl.java" sourcepath="org/objectweb/util/monolog/lib/LoggableImpl.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.log4j.Config">
+      <SourceLine classname="org.objectweb.util.monolog.log4j.Config" start="10" end="60" sourcefile="Config.java" sourcepath="org/objectweb/util/monolog/log4j/Config.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.log4j.Config" name="cfgfn" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.log4j.Config" sourcefile="Config.java" sourcepath="org/objectweb/util/monolog/log4j/Config.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.log4j.Config">
+      <SourceLine classname="org.objectweb.util.monolog.log4j.Config" start="10" end="60" sourcefile="Config.java" sourcepath="org/objectweb/util/monolog/log4j/Config.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.log4j.Config" name="factory" signature="Lorg/objectweb/util/monolog/api/LoggerFactory;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.log4j.Config" sourcefile="Config.java" sourcepath="org/objectweb/util/monolog/log4j/Config.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="45" end="437" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="handlerType2className" signature="[[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="49" end="49" startBytecode="48" endBytecode="48" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="45" end="437" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="handlerTypes" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="45" end="45" startBytecode="41" endBytecode="41" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="45" end="437" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="rootLoggerName" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="67" end="67" startBytecode="72" endBytecode="72" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="45" end="437" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="rootLoggerPrefix" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="61" end="61" startBytecode="68" endBytecode="68" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="45" end="437" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="classLoaderIsoltion" signature="Z" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="51" end="51" startBytecode="56" endBytecode="56" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="45" end="437" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="debug" signature="Z" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="56" end="56" startBytecode="64" endBytecode="64" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="45" end="437" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="initHandlerType2className" signature="()V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="186" end="228" startBytecode="0" endBytecode="650" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Method>
+    <Field classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="handlerType2className" signature="[[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="186" end="186" startBytecode="4" endBytecode="4" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="45" end="437" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="initHandlerType2className" signature="()V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="186" end="228" startBytecode="0" endBytecode="650" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Method>
+    <Field classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="handlerTypes" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="224" end="224" startBytecode="374" endBytecode="374" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+  </BugInstance>
+  <BugInstance type="WL_USING_GETCLASS_RATHER_THAN_CLASS_LITERAL" priority="1" abbrev="WL" category="MT_CORRECTNESS">
+    <Class classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="45" end="437" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="163" end="181" startBytecode="0" endBytecode="296" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.common.AbstractFactory" start="175" end="175" startBytecode="133" endBytecode="133" sourcefile="AbstractFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/common/AbstractFactory.java"/>
+    <Class classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" role="CLASS_SUBCLASS">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" start="41" end="271" sourcefile="LoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/LoggerFactory.java"/>
+    </Class>
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" role="CLASS_SUBCLASS">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="57" end="275" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.objectweb.util.monolog.wrapper.common.RelatifEnvironmentPathGetter">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.RelatifEnvironmentPathGetter" start="31" end="72" sourcefile="RelatifEnvironmentPathGetter.java" sourcepath="org/objectweb/util/monolog/wrapper/common/RelatifEnvironmentPathGetter.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.common.RelatifEnvironmentPathGetter" name="getRealPath" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.RelatifEnvironmentPathGetter" start="40" end="72" startBytecode="0" endBytecode="468" sourcefile="RelatifEnvironmentPathGetter.java" sourcepath="org/objectweb/util/monolog/wrapper/common/RelatifEnvironmentPathGetter.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.common.RelatifEnvironmentPathGetter" start="68" end="68" startBytecode="239" endBytecode="239" sourcefile="RelatifEnvironmentPathGetter.java" sourcepath="org/objectweb/util/monolog/wrapper/common/RelatifEnvironmentPathGetter.java"/>
+  </BugInstance>
+  <BugInstance type="BC_IMPOSSIBLE_CAST" priority="1" abbrev="BC" category="CORRECTNESS">
+    <Class classname="org.objectweb.util.monolog.wrapper.config.BasicFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.config.BasicFactory" start="49" end="294" sourcefile="BasicFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/config/BasicFactory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.config.BasicFactory" name="defineLevel" signature="(Lorg/objectweb/util/monolog/api/Level;)Lorg/objectweb/util/monolog/api/Level;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.config.BasicFactory" start="185" end="222" startBytecode="0" endBytecode="93" sourcefile="BasicFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/config/BasicFactory.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Type descriptor="Lorg/objectweb/util/monolog/api/Level;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.objectweb.util.monolog.api.Level" sourcefile="Level.java" sourcepath="org/objectweb/util/monolog/api/Level.java"/>
+    </Type>
+    <LocalVariable name="temp" register="6" pc="98" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.config.BasicFactory" start="199" end="199" startBytecode="100" endBytecode="100" sourcefile="BasicFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/config/BasicFactory.java"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.objectweb.util.monolog.wrapper.config.BasicLogger">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.config.BasicLogger" start="47" end="213" sourcefile="BasicLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/config/BasicLogger.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.config.BasicLogger" name="levelFactory" signature="Lorg/objectweb/util/monolog/api/LevelFactory;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.config.BasicLogger" sourcefile="BasicLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/config/BasicLogger.java"/>
+    </Field>
+    <Type descriptor="Lorg/objectweb/util/monolog/api/LevelFactory;" role="TYPE_FOUND">
+      <SourceLine classname="org.objectweb.util.monolog.api.LevelFactory" sourcefile="LevelFactory.java" sourcepath="org/objectweb/util/monolog/api/LevelFactory.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.objectweb.util.monolog.wrapper.javaLog.ConsoleHandler">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.ConsoleHandler" start="45" end="131" sourcefile="ConsoleHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/ConsoleHandler.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.javaLog.ConsoleHandler" name="setOutput" signature="(Ljava/io/OutputStream;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.ConsoleHandler" start="67" end="83" startBytecode="0" endBytecode="204" sourcefile="ConsoleHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/ConsoleHandler.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.ConsoleHandler" start="73" end="73" startBytecode="31" endBytecode="31" sourcefile="ConsoleHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/ConsoleHandler.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler" start="51" end="119" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/JMXHandler.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler" name="oss" signature="Lorg/objectweb/util/monolog/wrapper/common/OutputStreamSwitcher;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/JMXHandler.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler" start="51" end="119" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/JMXHandler.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler" name="writer" signature="Ljava/io/Writer;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/JMXHandler.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler" start="106" end="106" startBytecode="1" endBytecode="1" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/JMXHandler.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler$CustomNotificationBroadcasterSupport">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler$CustomNotificationBroadcasterSupport" start="92" end="102" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/JMXHandler.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" priority="1" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.objectweb.util.monolog.wrapper.javaLog.LevelImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.LevelImpl" start="40" end="96" sourcefile="LevelImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/LevelImpl.java"/>
+    </Class>
+    <Class classname="org.objectweb.util.monolog.wrapper.common.LevelImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.LevelImpl" start="34" end="156" sourcefile="LevelImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/common/LevelImpl.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" priority="1" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.objectweb.util.monolog.wrapper.javaLog.Logger">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.Logger" start="41" end="366" sourcefile="Logger.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/Logger.java"/>
+    </Class>
+    <Class classname="java.util.logging.Logger">
+      <SourceLine classname="java.util.logging.Logger" start="147" end="1491" sourcefile="Logger.java" sourcepath="java/util/logging/Logger.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_REFACTORED_TO_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" start="41" end="271" sourcefile="LoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/LoggerFactory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" name="manager" signature="Ljava/util/logging/LogManager;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" sourcefile="LoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/LoggerFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" start="41" end="41" startBytecode="1" endBytecode="1" sourcefile="LoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/LoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_REFACTORED_TO_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" start="41" end="271" sourcefile="LoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/LoggerFactory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" name="rootLogger" signature="Lorg/objectweb/util/monolog/wrapper/javaLog/Logger;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" sourcefile="LoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/LoggerFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" start="46" end="46" startBytecode="5" endBytecode="5" sourcefile="LoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/LoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.javaLog.MonologFormatter">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.MonologFormatter" start="53" end="642" sourcefile="MonologFormatter.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/MonologFormatter.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.javaLog.MonologFormatter" name="format" signature="(Ljava/util/Date;Ljava/lang/StringBuffer;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.MonologFormatter" start="494" end="559" startBytecode="0" endBytecode="647" sourcefile="MonologFormatter.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/MonologFormatter.java"/>
+    </Method>
+    <Field classname="org.objectweb.util.monolog.wrapper.javaLog.MonologFormatter" name="previousTime" signature="J" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.MonologFormatter" sourcefile="MonologFormatter.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/MonologFormatter.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.javaLog.MonologFormatter" start="548" end="548" startBytecode="278" endBytecode="278" sourcefile="MonologFormatter.java" sourcepath="org/objectweb/util/monolog/wrapper/javaLog/MonologFormatter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler" start="40" end="114" sourcefile="ConsoleHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/ConsoleHandler.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler" name="setAttribute" signature="(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler" start="86" end="114" startBytecode="0" endBytecode="426" sourcefile="ConsoleHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/ConsoleHandler.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler" start="108" end="108" startBytecode="184" endBytecode="184" sourcefile="ConsoleHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/ConsoleHandler.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler" start="40" end="114" sourcefile="ConsoleHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/ConsoleHandler.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler" name="setAttribute" signature="(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler" start="86" end="114" startBytecode="0" endBytecode="426" sourcefile="ConsoleHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/ConsoleHandler.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler" start="110" end="110" startBytecode="211" endBytecode="211" sourcefile="ConsoleHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/ConsoleHandler.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.DayFileHandler">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.DayFileHandler" start="40" end="85" sourcefile="DayFileHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/DayFileHandler.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.DayFileHandler" name="subAppend" signature="(Lorg/apache/log4j/spi/LoggingEvent;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.DayFileHandler" start="51" end="80" startBytecode="0" endBytecode="100" sourcefile="DayFileHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/DayFileHandler.java"/>
+    </Method>
+    <LocalVariable name="file" register="5" pc="149" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.DayFileHandler" start="70" end="70" startBytecode="147" endBytecode="147" sourcefile="DayFileHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/DayFileHandler.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="file"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" start="49" end="185" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/JMXHandler.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" name="setAttribute" signature="(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" start="117" end="140" startBytecode="0" endBytecode="74" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/JMXHandler.java"/>
+    </Method>
+    <LocalVariable name="output" register="6" pc="155" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" start="137" end="137" startBytecode="153" endBytecode="153" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/JMXHandler.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="output"/>
+  </BugInstance>
+  <BugInstance type="IL_INFINITE_RECURSIVE_LOOP" priority="1" abbrev="IL" category="CORRECTNESS">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" start="49" end="185" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/JMXHandler.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" name="append" signature="(Lorg/apache/log4j/spi/LoggingEvent;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" start="167" end="168" startBytecode="0" endBytecode="61" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/JMXHandler.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" start="167" end="167" startBytecode="2" endBytecode="2" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/JMXHandler.java"/>
+  </BugInstance>
+  <BugInstance type="IL_INFINITE_RECURSIVE_LOOP" priority="1" abbrev="IL" category="CORRECTNESS">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" start="49" end="185" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/JMXHandler.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" start="174" end="178" startBytecode="0" endBytecode="58" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/JMXHandler.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" start="175" end="175" startBytecode="5" endBytecode="5" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/JMXHandler.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler$CustomNotificationBroadcasterSupport">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.JMXHandler$CustomNotificationBroadcasterSupport" start="156" end="160" sourcefile="JMXHandler.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/JMXHandler.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" priority="1" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.LevelImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.LevelImpl" start="36" end="66" sourcefile="LevelImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/LevelImpl.java"/>
+    </Class>
+    <Class classname="org.objectweb.util.monolog.wrapper.common.LevelImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.common.LevelImpl" start="34" end="156" sourcefile="LevelImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/common/LevelImpl.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="57" end="665" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" name="log" signature="(ILjava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="323" end="330" startBytecode="0" endBytecode="38" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="329" end="329" startBytecode="63" endBytecode="63" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="327" end="327" startBytecode="36" endBytecode="36" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="57" end="665" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" name="log" signature="(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="376" end="387" startBytecode="0" endBytecode="57" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="380" end="380" startBytecode="36" endBytecode="36" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="382" end="382" startBytecode="104" endBytecode="104" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="57" end="665" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" name="log" signature="(ILjava/lang/Object;Ljava/lang/Throwable;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="348" end="357" startBytecode="0" endBytecode="38" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="355" end="355" startBytecode="63" endBytecode="63" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="352" end="352" startBytecode="36" endBytecode="36" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="57" end="665" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" name="log" signature="(ILjava/lang/Object;Ljava/lang/Throwable;Ljava/lang/Object;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="409" end="420" startBytecode="0" endBytecode="57" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="413" end="413" startBytecode="36" endBytecode="36" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="415" end="415" startBytecode="106" endBytecode="106" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="57" end="665" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" name="log" signature="(Lorg/objectweb/util/monolog/api/Level;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="333" end="342" startBytecode="0" endBytecode="41" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="340" end="340" startBytecode="78" endBytecode="78" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="337" end="337" startBytecode="46" endBytecode="46" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="57" end="665" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" name="log" signature="(Lorg/objectweb/util/monolog/api/Level;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="390" end="401" startBytecode="0" endBytecode="60" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="394" end="394" startBytecode="46" endBytecode="46" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="396" end="396" startBytecode="119" endBytecode="119" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="57" end="665" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" name="log" signature="(Lorg/objectweb/util/monolog/api/Level;Ljava/lang/Object;Ljava/lang/Throwable;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="360" end="369" startBytecode="0" endBytecode="41" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="367" end="367" startBytecode="78" endBytecode="78" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="364" end="364" startBytecode="46" endBytecode="46" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="57" end="665" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" name="log" signature="(Lorg/objectweb/util/monolog/api/Level;Ljava/lang/Object;Ljava/lang/Throwable;Ljava/lang/Object;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="424" end="435" startBytecode="0" endBytecode="60" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="428" end="428" startBytecode="46" endBytecode="46" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="430" end="430" startBytecode="121" endBytecode="121" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="57" end="665" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" name="appenders" signature="Ljava/util/ArrayList;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="74" end="74" startBytecode="27" endBytecode="27" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="57" end="665" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" name="depth" signature="B" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" start="61" end="61" startBytecode="17" endBytecode="17" sourcefile="MonologCategory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologCategory.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="57" end="275" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" name="rootLogger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="57" end="57" startBytecode="1" endBytecode="1" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="57" end="275" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" name="configure" signature="(Ljava/util/Properties;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="152" end="225" startBytecode="0" endBytecode="633" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="216" end="216" startBytecode="341" endBytecode="341" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="217" end="217" startBytecode="347" endBytecode="347" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="218" end="218" startBytecode="357" endBytecode="357" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="224" end="224" startBytecode="392" endBytecode="392" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="225" end="225" startBytecode="397" endBytecode="397" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="57" end="275" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" name="configure" signature="(Ljava/util/Properties;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="152" end="225" startBytecode="0" endBytecode="172" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="216" end="216" startBytecode="336" endBytecode="336" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="57" end="275" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="122" end="127" startBytecode="0" endBytecode="77" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+    </Method>
+    <Field classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" name="rootLogger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" start="124" end="124" startBytecode="20" endBytecode="20" sourcefile="MonologLoggerFactory.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/MonologLoggerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.PatternConverter">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.PatternConverter" start="28" end="108" sourcefile="PatternConverter.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/PatternConverter.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.PatternConverter" name="log4j2monolog" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.PatternConverter" start="69" end="100" startBytecode="0" endBytecode="371" sourcefile="PatternConverter.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/PatternConverter.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.PatternConverter" start="69" end="69" startBytecode="5" endBytecode="5" sourcefile="PatternConverter.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/PatternConverter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.objectweb.util.monolog.wrapper.log4j.PatternConverter">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.PatternConverter" start="28" end="108" sourcefile="PatternConverter.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/PatternConverter.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.log4j.PatternConverter" name="monolog2log4j" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.PatternConverter" start="31" end="65" startBytecode="0" endBytecode="390" sourcefile="PatternConverter.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/PatternConverter.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.log4j.PatternConverter" start="31" end="31" startBytecode="5" endBytecode="5" sourcefile="PatternConverter.java" sourcepath="org/objectweb/util/monolog/wrapper/log4j/PatternConverter.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" start="37" end="62" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" name="level" signature="I" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" start="37" end="62" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" start="37" end="62" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" start="37" end="39" startBytecode="0" endBytecode="60" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+    </Method>
+    <Field classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" name="level" signature="I" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" start="38" end="38" startBytecode="7" endBytecode="7" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" start="37" end="62" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+    </Class>
+    <Field classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" start="45" end="45" startBytecode="0" endBytecode="0" sourcefile="P6SpyLogger.java" sourcepath="org/objectweb/util/monolog/wrapper/p6spy/P6SpyLogger.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="41" end="361" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" name="&lt;init&gt;" signature="(Lorg/objectweb/util/monolog/api/Logger;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="58" end="63" startBytecode="0" endBytecode="137" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Method>
+    <Method classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="58" end="58" startBytecode="8" endBytecode="8" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="41" end="361" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" name="&lt;init&gt;" signature="(Lorg/objectweb/util/monolog/api/Logger;I)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="73" end="78" startBytecode="0" endBytecode="145" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Method>
+    <Method classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="73" end="73" startBytecode="8" endBytecode="8" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="41" end="361" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" name="write" signature="([B)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="135" end="136" startBytecode="0" endBytecode="88" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="135" end="135" startBytecode="20" endBytecode="20" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="41" end="361" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" name="write" signature="([BII)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="198" end="199" startBytecode="0" endBytecode="110" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([BII)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="568" end="574" startBytecode="0" endBytecode="84" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="198" end="198" startBytecode="22" endBytecode="22" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="41" end="361" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" start="142" end="142" startBytecode="0" endBytecode="78" sourcefile="PrintStreamImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/printwriter/PrintStreamImpl.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="62" end="133" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" name="getHandlerNames" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="81" end="81" startBytecode="0" endBytecode="46" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Method>
+    <Field classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" name="handlerNames" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="81" end="81" startBytecode="4" endBytecode="4" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="62" end="133" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" name="getTopics" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="99" end="99" startBytecode="0" endBytecode="46" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Method>
+    <Field classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" name="topics" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Field>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="99" end="99" startBytecode="4" endBytecode="4" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="62" end="133" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" name="setHandlerNames" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="84" end="85" startBytecode="0" endBytecode="61" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Method>
+    <Field classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" name="handlerNames" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Field>
+    <LocalVariable name="handlerNames" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="84" end="84" startBytecode="2" endBytecode="2" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="62" end="133" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" name="setTopics" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="102" end="103" startBytecode="0" endBytecode="61" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Method>
+    <Field classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" name="topics" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+    </Field>
+    <LocalVariable name="topics" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" start="102" end="102" startBytecode="2" endBytecode="2" sourcefile="LoggerInfo.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/api/LoggerInfo.java"/>
+  </BugInstance>
+  <BugInstance type="CO_COMPARETO_RESULTS_MIN_VALUE" priority="2" abbrev="Co" category="CORRECTNESS">
+    <Class classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryMBeanImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryMBeanImpl" start="52" end="282" sourcefile="MonologFactoryMBeanImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/lib/MonologFactoryMBeanImpl.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryMBeanImpl" name="compareTo" signature="(Ljava/lang/String;Ljava/lang/String;)I" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryMBeanImpl" start="90" end="98" startBytecode="0" endBytecode="152" sourcefile="MonologFactoryMBeanImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/lib/MonologFactoryMBeanImpl.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryMBeanImpl" start="96" end="96" startBytecode="37" endBytecode="37" sourcefile="MonologFactoryMBeanImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/lib/MonologFactoryMBeanImpl.java"/>
+  </BugInstance>
+  <BugInstance type="CO_COMPARETO_RESULTS_MIN_VALUE" priority="2" abbrev="Co" category="CORRECTNESS">
+    <Class classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl" start="56" end="317" sourcefile="MonologFactoryProxyImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/lib/MonologFactoryProxyImpl.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl" name="compareTo" signature="(Ljava/lang/String;Ljava/lang/String;)I" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl" start="140" end="148" startBytecode="0" endBytecode="151" sourcefile="MonologFactoryProxyImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/lib/MonologFactoryProxyImpl.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl" start="146" end="146" startBytecode="36" endBytecode="36" sourcefile="MonologFactoryProxyImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/lib/MonologFactoryProxyImpl.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="1" abbrev="RCN" category="STYLE">
+    <Class classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl" start="56" end="317" sourcefile="MonologFactoryProxyImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/lib/MonologFactoryProxyImpl.java"/>
+    </Class>
+    <Method classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl" name="compareTo" signature="(Ljava/lang/String;Ljava/lang/String;)I" isStatic="false">
+      <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl" start="140" end="148" startBytecode="0" endBytecode="151" sourcefile="MonologFactoryProxyImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/lib/MonologFactoryProxyImpl.java"/>
+    </Method>
+    <LocalVariable name="l1" register="3" pc="30" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.objectweb.util.monolog.api.MonologFactory" name="getLevel" signature="(Ljava/lang/String;)Lorg/objectweb/util/monolog/api/Level;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.objectweb.util.monolog.api.MonologFactory" sourcefile="MonologFactory.java" sourcepath="org/objectweb/util/monolog/api/MonologFactory.java"/>
+    </Method>
+    <SourceLine classname="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl" start="145" end="145" startBytecode="31" endBytecode="31" sourcefile="MonologFactoryProxyImpl.java" sourcepath="org/objectweb/util/monolog/wrapper/remote/lib/MonologFactoryProxyImpl.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>com.p6spy.engine.logging.appender.FormattedLogger</MissingClass>
+    <MissingClass>org.apache.log4j.Appender</MissingClass>
+    <MissingClass>org.apache.log4j.AppenderSkeleton</MissingClass>
+    <MissingClass>org.apache.log4j.BasicConfigurator</MissingClass>
+    <MissingClass>org.apache.log4j.Category</MissingClass>
+    <MissingClass>org.apache.log4j.ConsoleAppender</MissingClass>
+    <MissingClass>org.apache.log4j.FileAppender</MissingClass>
+    <MissingClass>org.apache.log4j.Level</MissingClass>
+    <MissingClass>org.apache.log4j.LogManager</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.apache.log4j.PatternLayout</MissingClass>
+    <MissingClass>org.apache.log4j.Priority</MissingClass>
+    <MissingClass>org.apache.log4j.PropertyConfigurator</MissingClass>
+    <MissingClass>org.apache.log4j.RollingFileAppender</MissingClass>
+    <MissingClass>org.apache.log4j.helpers.LogLog</MissingClass>
+    <MissingClass>org.apache.log4j.net.SocketHubAppender</MissingClass>
+    <MissingClass>org.apache.log4j.nt.NTEventLogAppender</MissingClass>
+    <MissingClass>org.apache.log4j.spi.LoggingEvent</MissingClass>
+    <MissingClass>org.apache.log4j.xml.DOMConfigurator</MissingClass>
+    <MissingClass>org.apache.tools.ant.BuildEvent</MissingClass>
+    <MissingClass>org.apache.tools.ant.Project</MissingClass>
+    <MissingClass>org.apache.tools.ant.Target</MissingClass>
+    <MissingClass>org.apache.tools.ant.Task</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 4 Apr 2008 13:42:37 +0300" total_classes="70" referenced_classes="207" total_bugs="87" total_size="4394" num_packages="17" vm_version="20.4-b02-402" cpu_seconds="39.49" clock_seconds="37.08" peak_mbytes="104.10" alloc_mbytes="763.88" gc_seconds="0.69" priority_2="62" priority_1="25">
+    <PackageStats package="org.objectweb.util.monolog" total_bugs="3" total_types="1" total_size="127" priority_2="3">
+      <ClassStats class="org.objectweb.util.monolog.Monolog" sourceFile="Monolog.java" interface="false" size="127" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.api" total_bugs="0" total_types="11" total_size="110">
+      <ClassStats class="org.objectweb.util.monolog.api.BasicLevel" sourceFile="BasicLevel.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.api.Handler" sourceFile="Handler.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.api.HandlerFactory" sourceFile="HandlerFactory.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.api.Level" sourceFile="Level.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.api.LevelFactory" sourceFile="LevelFactory.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.api.Loggable" sourceFile="Loggable.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.api.Logger" sourceFile="Logger.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.api.LoggerFactory" sourceFile="LoggerFactory.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.api.MonologFactory" sourceFile="MonologFactory.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.api.MonologFactoryListener" sourceFile="MonologFactoryListener.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.api.TopicalLogger" sourceFile="TopicalLogger.java" interface="true" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.file" total_bugs="0" total_types="1" total_size="37">
+      <ClassStats class="org.objectweb.util.monolog.file.DottedStringTools" sourceFile="DottedStringTools.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.file.api" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="org.objectweb.util.monolog.file.api.Pattern" sourceFile="Pattern.java" interface="true" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.file.monolog" total_bugs="8" total_types="3" total_size="408" priority_2="5" priority_1="3">
+      <ClassStats class="org.objectweb.util.monolog.file.monolog.MonologPropertiesIO" sourceFile="MonologPropertiesIO.java" interface="false" size="99" bugs="4" priority_2="2" priority_1="2"/>
+      <ClassStats class="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess" sourceFile="PropertiesConfAccess.java" interface="false" size="273" bugs="2" priority_2="2"/>
+      <ClassStats class="org.objectweb.util.monolog.file.monolog.PropertiesConfAccess$NestedException" sourceFile="PropertiesConfAccess.java" interface="false" size="36" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.lib" total_bugs="1" total_types="1" total_size="56" priority_2="1">
+      <ClassStats class="org.objectweb.util.monolog.lib.LoggableImpl" sourceFile="LoggableImpl.java" interface="false" size="56" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.log4j" total_bugs="2" total_types="1" total_size="34" priority_2="2">
+      <ClassStats class="org.objectweb.util.monolog.log4j.Config" sourceFile="Config.java" interface="false" size="34" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.wrapper.ant" total_bugs="0" total_types="1" total_size="59">
+      <ClassStats class="org.objectweb.util.monolog.wrapper.ant.MonologBuildListener" sourceFile="MonologBuildListener.java" interface="false" size="59" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.wrapper.common" total_bugs="10" total_types="7" total_size="358" priority_2="7" priority_1="3">
+      <ClassStats class="org.objectweb.util.monolog.wrapper.common.AbstractFactory" sourceFile="AbstractFactory.java" interface="false" size="208" bugs="9" priority_2="6" priority_1="3"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.common.Configurable" sourceFile="Configurable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.common.EnumrationImpl" sourceFile="EnumrationImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.common.LevelImpl" sourceFile="LevelImpl.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.common.LoggerFactorySingleton" sourceFile="LoggerFactorySingleton.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.common.OutputStreamSwitcher" sourceFile="OutputStreamSwitcher.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.common.RelatifEnvironmentPathGetter" sourceFile="RelatifEnvironmentPathGetter.java" interface="false" size="29" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.wrapper.config" total_bugs="2" total_types="3" total_size="254" priority_2="1" priority_1="1">
+      <ClassStats class="org.objectweb.util.monolog.wrapper.config.BasicFactory" sourceFile="BasicFactory.java" interface="false" size="127" bugs="1" priority_1="1"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.config.BasicHandler" sourceFile="BasicHandler.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.config.BasicLogger" sourceFile="BasicLogger.java" interface="false" size="96" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.wrapper.javaLog" total_bugs="9" total_types="9" total_size="875" priority_2="4" priority_1="5">
+      <ClassStats class="org.objectweb.util.monolog.wrapper.javaLog.ConsoleHandler" sourceFile="ConsoleHandler.java" interface="false" size="56" bugs="1" priority_1="1"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.javaLog.GenericHandler" sourceFile="GenericHandler.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.javaLog.JMXGenericHandler" sourceFile="JMXGenericHandler.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler" sourceFile="JMXHandler.java" interface="false" size="39" bugs="2" priority_2="2"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.javaLog.JMXHandler$CustomNotificationBroadcasterSupport" sourceFile="JMXHandler.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.javaLog.LevelImpl" sourceFile="LevelImpl.java" interface="false" size="35" bugs="1" priority_1="1"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.javaLog.Logger" sourceFile="Logger.java" interface="false" size="135" bugs="1" priority_1="1"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.javaLog.LoggerFactory" sourceFile="LoggerFactory.java" interface="false" size="111" bugs="2" priority_1="2"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.javaLog.MonologFormatter" sourceFile="MonologFormatter.java" interface="false" size="354" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.wrapper.log4j" total_bugs="36" total_types="16" total_size="1031" priority_2="30" priority_1="6">
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.ConsoleHandler" sourceFile="ConsoleHandler.java" interface="false" size="52" bugs="2" priority_1="2"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.DayFileHandler" sourceFile="DayFileHandler.java" interface="false" size="36" bugs="1" priority_1="1"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.FileHandler" sourceFile="FileHandler.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.GenericHandler" sourceFile="GenericHandler.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.JMXHandler" sourceFile="JMXHandler.java" interface="false" size="75" bugs="3" priority_2="1" priority_1="2"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.JMXHandler$CustomNotificationBroadcasterSupport" sourceFile="JMXHandler.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.LevelImpl" sourceFile="LevelImpl.java" interface="false" size="21" bugs="1" priority_1="1"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.MonologCategory" sourceFile="MonologCategory.java" interface="false" size="301" bugs="10" priority_2="10"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.MonologCategory$BetaCF" sourceFile="MonologCategory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.MonologCategory$OwPriority" sourceFile="MonologCategory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.MonologCategoryFactory" sourceFile="MonologCategoryFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.MonologLoggerFactory" sourceFile="MonologLoggerFactory.java" interface="false" size="125" bugs="16" priority_2="16"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.NTEventLogHandler" sourceFile="NTEventLogHandler.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.PatternConverter" sourceFile="PatternConverter.java" interface="false" size="63" bugs="2" priority_2="2"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.RollingFileHandler" sourceFile="RollingFileHandler.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.log4j.SocketHubHandler" sourceFile="SocketHubHandler.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.wrapper.p6spy" total_bugs="4" total_types="1" total_size="19" priority_2="3" priority_1="1">
+      <ClassStats class="org.objectweb.util.monolog.wrapper.p6spy.P6SpyLogger" sourceFile="P6SpyLogger.java" interface="false" size="19" bugs="4" priority_2="3" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.wrapper.printwriter" total_bugs="5" total_types="5" total_size="548" priority_1="5">
+      <ClassStats class="org.objectweb.util.monolog.wrapper.printwriter.EmptyOutputStream" sourceFile="EmptyOutputStream.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.printwriter.EmptyWriter" sourceFile="EmptyWriter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.printwriter.LoggerImpl" sourceFile="LoggerImpl.java" interface="false" size="250" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.printwriter.PrintStreamImpl" sourceFile="PrintStreamImpl.java" interface="false" size="128" bugs="5" priority_1="5"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.printwriter.PrintWriterImpl" sourceFile="PrintWriterImpl.java" interface="false" size="147" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.wrapper.remote.api" total_bugs="4" total_types="3" total_size="121" priority_2="4">
+      <ClassStats class="org.objectweb.util.monolog.wrapper.remote.api.LoggerInfo" sourceFile="LoggerInfo.java" interface="false" size="63" bugs="4" priority_2="4"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.remote.api.MonologFactoryMBean" sourceFile="MonologFactoryMBean.java" interface="true" size="29" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.remote.api.MonologFactoryProxy" sourceFile="MonologFactoryProxy.java" interface="true" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.wrapper.remote.lib" total_bugs="3" total_types="5" total_size="316" priority_2="2" priority_1="1">
+      <ClassStats class="org.objectweb.util.monolog.wrapper.remote.lib.Logging" sourceFile="Logging.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.remote.lib.LoggingMBean" sourceFile="LoggingMBean.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryMBeanImpl" sourceFile="MonologFactoryMBeanImpl.java" interface="false" size="143" bugs="1" priority_2="1"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryMBeanImpl$1" sourceFile="MonologFactoryMBeanImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.objectweb.util.monolog.wrapper.remote.lib.MonologFactoryProxyImpl" sourceFile="MonologFactoryProxyImpl.java" interface="false" size="159" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.objectweb.util.monolog.wrapper.velocity" total_bugs="0" total_types="1" total_size="30">
+      <ClassStats class="org.objectweb.util.monolog.wrapper.velocity.VelocityLogger" sourceFile="VelocityLogger.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="3023" invocations="881" avgMicrosecondsPerInvocation="3431" maxMicrosecondsPerInvocation="211443" standardDeviationMircosecondsPerInvocation="14965"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="2120" invocations="207" avgMicrosecondsPerInvocation="10244" maxMicrosecondsPerInvocation="130048" standardDeviationMircosecondsPerInvocation="20423"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1992" invocations="207" avgMicrosecondsPerInvocation="9627" maxMicrosecondsPerInvocation="170554" standardDeviationMircosecondsPerInvocation="21320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1926" invocations="685" avgMicrosecondsPerInvocation="2812" maxMicrosecondsPerInvocation="154743" standardDeviationMircosecondsPerInvocation="11275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="1737" invocations="1087" avgMicrosecondsPerInvocation="1598" maxMicrosecondsPerInvocation="322614" standardDeviationMircosecondsPerInvocation="13039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1626" invocations="685" avgMicrosecondsPerInvocation="2373" maxMicrosecondsPerInvocation="114267" standardDeviationMircosecondsPerInvocation="8606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1510" invocations="697" avgMicrosecondsPerInvocation="2167" maxMicrosecondsPerInvocation="102966" standardDeviationMircosecondsPerInvocation="8746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1395" invocations="692" avgMicrosecondsPerInvocation="2017" maxMicrosecondsPerInvocation="121846" standardDeviationMircosecondsPerInvocation="8613"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1325" invocations="685" avgMicrosecondsPerInvocation="1934" maxMicrosecondsPerInvocation="104483" standardDeviationMircosecondsPerInvocation="7834"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="899" invocations="685" avgMicrosecondsPerInvocation="1313" maxMicrosecondsPerInvocation="50046" standardDeviationMircosecondsPerInvocation="4702"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="748" invocations="515" avgMicrosecondsPerInvocation="1452" maxMicrosecondsPerInvocation="60191" standardDeviationMircosecondsPerInvocation="5441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="672" invocations="207" avgMicrosecondsPerInvocation="3250" maxMicrosecondsPerInvocation="101667" standardDeviationMircosecondsPerInvocation="11623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="635" invocations="207" avgMicrosecondsPerInvocation="3068" maxMicrosecondsPerInvocation="79223" standardDeviationMircosecondsPerInvocation="9140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="536" invocations="12451" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="71876" standardDeviationMircosecondsPerInvocation="1301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="532" invocations="262" avgMicrosecondsPerInvocation="2034" maxMicrosecondsPerInvocation="115012" standardDeviationMircosecondsPerInvocation="9635"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="498" invocations="207" avgMicrosecondsPerInvocation="2407" maxMicrosecondsPerInvocation="97761" standardDeviationMircosecondsPerInvocation="11183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="497" invocations="207" avgMicrosecondsPerInvocation="2405" maxMicrosecondsPerInvocation="109985" standardDeviationMircosecondsPerInvocation="10950"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="495" invocations="207" avgMicrosecondsPerInvocation="2391" maxMicrosecondsPerInvocation="56968" standardDeviationMircosecondsPerInvocation="6981"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="478" invocations="207" avgMicrosecondsPerInvocation="2309" maxMicrosecondsPerInvocation="70717" standardDeviationMircosecondsPerInvocation="8231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="407" invocations="808" avgMicrosecondsPerInvocation="503" maxMicrosecondsPerInvocation="199653" standardDeviationMircosecondsPerInvocation="7234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="354" invocations="794" avgMicrosecondsPerInvocation="446" maxMicrosecondsPerInvocation="45875" standardDeviationMircosecondsPerInvocation="2572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="347" invocations="884" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="70583" standardDeviationMircosecondsPerInvocation="2789"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="346" invocations="70" avgMicrosecondsPerInvocation="4944" maxMicrosecondsPerInvocation="114298" standardDeviationMircosecondsPerInvocation="16864"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="310" invocations="70" avgMicrosecondsPerInvocation="4438" maxMicrosecondsPerInvocation="116993" standardDeviationMircosecondsPerInvocation="15888"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="301" invocations="685" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="65140" standardDeviationMircosecondsPerInvocation="2921"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

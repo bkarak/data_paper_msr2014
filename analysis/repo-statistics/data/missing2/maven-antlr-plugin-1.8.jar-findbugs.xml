@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1289990116000" analysisTimestamp="1360868488036" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/xerial/maven/maven-antlr-plugin/1.8/maven-antlr-plugin-1.8.jar</Jar>
+  </Project>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.xerial.maven.plugin.antlr.ANTLRMojo">
+      <SourceLine classname="org.xerial.maven.plugin.antlr.ANTLRMojo" start="44" end="118" sourcefile="ANTLRMojo.java" sourcepath="org/xerial/maven/plugin/antlr/ANTLRMojo.java"/>
+    </Class>
+    <Field classname="org.xerial.maven.plugin.antlr.ANTLRMojo" name="sourceDirectory" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.xerial.maven.plugin.antlr.ANTLRMojo" sourcefile="ANTLRMojo.java" sourcepath="org/xerial/maven/plugin/antlr/ANTLRMojo.java"/>
+    </Field>
+    <SourceLine classname="org.xerial.maven.plugin.antlr.ANTLRMojo" start="56" end="56" startBytecode="1" endBytecode="1" sourcefile="ANTLRMojo.java" sourcepath="org/xerial/maven/plugin/antlr/ANTLRMojo.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="4">
+    <MissingClass>org.antlr.Tool</MissingClass>
+    <MissingClass>org.apache.maven.plugin.AbstractMojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 17 Nov 2010 12:35:16 +0200" total_classes="1" referenced_classes="9" total_bugs="1" total_size="40" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="9.10" clock_seconds="6.99" peak_mbytes="49.15" alloc_mbytes="763.88" gc_seconds="0.06" priority_2="1">
+    <PackageStats package="org.xerial.maven.plugin.antlr" total_bugs="1" total_types="1" total_size="40" priority_2="1">
+      <ClassStats class="org.xerial.maven.plugin.antlr.ANTLRMojo" sourceFile="ANTLRMojo.java" interface="false" size="40" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="873" invocations="242" avgMicrosecondsPerInvocation="3611" maxMicrosecondsPerInvocation="118705" standardDeviationMircosecondsPerInvocation="11164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="282" invocations="4" avgMicrosecondsPerInvocation="70699" maxMicrosecondsPerInvocation="113159" standardDeviationMircosecondsPerInvocation="37834"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="197" invocations="9" avgMicrosecondsPerInvocation="21976" maxMicrosecondsPerInvocation="82689" standardDeviationMircosecondsPerInvocation="26522"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="181" invocations="9" avgMicrosecondsPerInvocation="20164" maxMicrosecondsPerInvocation="67451" standardDeviationMircosecondsPerInvocation="25662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="130" invocations="3" avgMicrosecondsPerInvocation="43347" maxMicrosecondsPerInvocation="108769" standardDeviationMircosecondsPerInvocation="46992"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="128" invocations="199" avgMicrosecondsPerInvocation="647" maxMicrosecondsPerInvocation="22723" standardDeviationMircosecondsPerInvocation="2028"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="118" invocations="3" avgMicrosecondsPerInvocation="39350" maxMicrosecondsPerInvocation="114897" standardDeviationMircosecondsPerInvocation="53420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="109" invocations="3" avgMicrosecondsPerInvocation="36558" maxMicrosecondsPerInvocation="100132" standardDeviationMircosecondsPerInvocation="45018"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="102" invocations="3" avgMicrosecondsPerInvocation="34235" maxMicrosecondsPerInvocation="55050" standardDeviationMircosecondsPerInvocation="15042"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="100" invocations="9" avgMicrosecondsPerInvocation="11123" maxMicrosecondsPerInvocation="39161" standardDeviationMircosecondsPerInvocation="12543"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="99" invocations="3" avgMicrosecondsPerInvocation="33121" maxMicrosecondsPerInvocation="86383" standardDeviationMircosecondsPerInvocation="37990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="91" invocations="9" avgMicrosecondsPerInvocation="10138" maxMicrosecondsPerInvocation="36102" standardDeviationMircosecondsPerInvocation="14545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="82" invocations="3" avgMicrosecondsPerInvocation="27389" maxMicrosecondsPerInvocation="74009" standardDeviationMircosecondsPerInvocation="33102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="75" invocations="20" avgMicrosecondsPerInvocation="3779" maxMicrosecondsPerInvocation="35552" standardDeviationMircosecondsPerInvocation="7936"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="69" invocations="9" avgMicrosecondsPerInvocation="7729" maxMicrosecondsPerInvocation="32841" standardDeviationMircosecondsPerInvocation="10209"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

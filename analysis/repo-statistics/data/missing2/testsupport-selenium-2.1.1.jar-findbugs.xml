@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1209399854000" analysisTimestamp="1360917783906" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/geronimo/testsupport/testsupport-selenium/2.1.1/testsupport-selenium-2.1.1.jar</Jar>
+  </Project>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.geronimo.testsupport.SeleniumTestSupport">
+      <SourceLine classname="org.apache.geronimo.testsupport.SeleniumTestSupport" start="36" end="69" sourcefile="SeleniumTestSupport.java" sourcepath="org/apache/geronimo/testsupport/SeleniumTestSupport.java"/>
+    </Class>
+    <Field classname="org.apache.geronimo.testsupport.SeleniumTestSupport" name="selenium" signature="Lorg/apache/geronimo/testsupport/ExtendedSelenium;" isStatic="true">
+      <SourceLine classname="org.apache.geronimo.testsupport.SeleniumTestSupport" sourcefile="SeleniumTestSupport.java" sourcepath="org/apache/geronimo/testsupport/SeleniumTestSupport.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.geronimo.testsupport.SeleniumTestSupport">
+      <SourceLine classname="org.apache.geronimo.testsupport.SeleniumTestSupport" start="36" end="69" sourcefile="SeleniumTestSupport.java" sourcepath="org/apache/geronimo/testsupport/SeleniumTestSupport.java"/>
+    </Class>
+    <Method classname="org.apache.geronimo.testsupport.SeleniumTestSupport" name="startSeleniumClient" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.geronimo.testsupport.SeleniumTestSupport" start="58" end="62" startBytecode="0" endBytecode="80" sourcefile="SeleniumTestSupport.java" sourcepath="org/apache/geronimo/testsupport/SeleniumTestSupport.java"/>
+    </Method>
+    <Field classname="org.apache.geronimo.testsupport.SeleniumTestSupport" name="selenium" signature="Lorg/apache/geronimo/testsupport/ExtendedSelenium;" isStatic="true">
+      <SourceLine classname="org.apache.geronimo.testsupport.SeleniumTestSupport" sourcefile="SeleniumTestSupport.java" sourcepath="org/apache/geronimo/testsupport/SeleniumTestSupport.java"/>
+    </Field>
+    <SourceLine classname="org.apache.geronimo.testsupport.SeleniumTestSupport" start="60" end="60" startBytecode="17" endBytecode="17" sourcefile="SeleniumTestSupport.java" sourcepath="org/apache/geronimo/testsupport/SeleniumTestSupport.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>com.thoughtworks.selenium.DefaultSelenium</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.geronimo.testsupport.TestSupport</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 28 Apr 2008 19:24:14 +0300" total_classes="3" referenced_classes="9" total_bugs="2" total_size="50" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="7.22" clock_seconds="5.61" peak_mbytes="50.03" alloc_mbytes="763.88" gc_seconds="0.08" priority_2="2">
+    <PackageStats package="org.apache.geronimo.testsupport" total_bugs="2" total_types="2" total_size="27" priority_2="2">
+      <ClassStats class="org.apache.geronimo.testsupport.ExtendedSelenium" sourceFile="ExtendedSelenium.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.geronimo.testsupport.SeleniumTestSupport" sourceFile="SeleniumTestSupport.java" interface="false" size="20" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.apache.geronimo.testsupport.console" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="org.apache.geronimo.testsupport.console.ConsoleTestSupport" sourceFile="ConsoleTestSupport.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="594" invocations="256" avgMicrosecondsPerInvocation="2321" maxMicrosecondsPerInvocation="108383" standardDeviationMircosecondsPerInvocation="8735"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="271" invocations="9" avgMicrosecondsPerInvocation="30182" maxMicrosecondsPerInvocation="108000" standardDeviationMircosecondsPerInvocation="39858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="226" invocations="9" avgMicrosecondsPerInvocation="25210" maxMicrosecondsPerInvocation="136982" standardDeviationMircosecondsPerInvocation="40535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="128" invocations="9" avgMicrosecondsPerInvocation="14299" maxMicrosecondsPerInvocation="124891" standardDeviationMircosecondsPerInvocation="39102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="128" invocations="9" avgMicrosecondsPerInvocation="14266" maxMicrosecondsPerInvocation="50526" standardDeviationMircosecondsPerInvocation="17878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="114" invocations="214" avgMicrosecondsPerInvocation="534" maxMicrosecondsPerInvocation="33683" standardDeviationMircosecondsPerInvocation="2427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="92" invocations="9" avgMicrosecondsPerInvocation="10242" maxMicrosecondsPerInvocation="57705" standardDeviationMircosecondsPerInvocation="17372"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="84" invocations="259" avgMicrosecondsPerInvocation="324" maxMicrosecondsPerInvocation="23333" standardDeviationMircosecondsPerInvocation="1764"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="73" invocations="9" avgMicrosecondsPerInvocation="8209" maxMicrosecondsPerInvocation="37258" standardDeviationMircosecondsPerInvocation="13982"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="71" invocations="3" avgMicrosecondsPerInvocation="23906" maxMicrosecondsPerInvocation="69510" standardDeviationMircosecondsPerInvocation="32247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="68" invocations="9" avgMicrosecondsPerInvocation="7662" maxMicrosecondsPerInvocation="23468" standardDeviationMircosecondsPerInvocation="8298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="67" invocations="9" avgMicrosecondsPerInvocation="7475" maxMicrosecondsPerInvocation="18473" standardDeviationMircosecondsPerInvocation="7337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="66" invocations="28" avgMicrosecondsPerInvocation="2391" maxMicrosecondsPerInvocation="16424" standardDeviationMircosecondsPerInvocation="4004"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="58" invocations="9" avgMicrosecondsPerInvocation="6520" maxMicrosecondsPerInvocation="34595" standardDeviationMircosecondsPerInvocation="11324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="53" invocations="19" avgMicrosecondsPerInvocation="2791" maxMicrosecondsPerInvocation="23385" standardDeviationMircosecondsPerInvocation="5738"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1280176558000" analysisTimestamp="1360894316539" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/mortbay/jetty/cometd-client/6.1.25/cometd-client-6.1.25.jar</Jar>
+  </Project>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.mortbay.cometd.client.Advice">
+      <SourceLine classname="org.mortbay.cometd.client.Advice" start="46" end="134" sourcefile="Advice.java" sourcepath="org/mortbay/cometd/client/Advice.java"/>
+    </Class>
+    <Method classname="org.mortbay.cometd.client.Advice" name="parseReconnect" signature="(Ljava/lang/String;)Ljava/lang/Integer;" isStatic="false">
+      <SourceLine classname="org.mortbay.cometd.client.Advice" start="124" end="134" startBytecode="0" endBytecode="148" sourcefile="Advice.java" sourcepath="org/mortbay/cometd/client/Advice.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.mortbay.cometd.client.Advice" start="128" end="128" startBytecode="23" endBytecode="23" sourcefile="Advice.java" sourcepath="org/mortbay/cometd/client/Advice.java"/>
+    <SourceLine classname="org.mortbay.cometd.client.Advice" start="130" end="130" startBytecode="41" endBytecode="41" sourcefile="Advice.java" sourcepath="org/mortbay/cometd/client/Advice.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.mortbay.cometd.client.Advice" start="132" end="132" startBytecode="59" endBytecode="59" sourcefile="Advice.java" sourcepath="org/mortbay/cometd/client/Advice.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.mortbay.cometd.client.Advice">
+      <SourceLine classname="org.mortbay.cometd.client.Advice" start="46" end="134" sourcefile="Advice.java" sourcepath="org/mortbay/cometd/client/Advice.java"/>
+    </Class>
+    <Method classname="org.mortbay.cometd.client.Advice" name="getHosts" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.mortbay.cometd.client.Advice" start="110" end="119" startBytecode="0" endBytecode="133" sourcefile="Advice.java" sourcepath="org/mortbay/cometd/client/Advice.java"/>
+    </Method>
+    <Field classname="org.mortbay.cometd.client.Advice" name="_hosts" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.mortbay.cometd.client.Advice" sourcefile="Advice.java" sourcepath="org/mortbay/cometd/client/Advice.java"/>
+    </Field>
+    <SourceLine classname="org.mortbay.cometd.client.Advice" start="119" end="119" startBytecode="61" endBytecode="61" sourcefile="Advice.java" sourcepath="org/mortbay/cometd/client/Advice.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.mortbay.cometd.client.BayeuxClient$Handshake">
+      <SourceLine classname="org.mortbay.cometd.client.BayeuxClient$Handshake" start="907" end="1026" sourcefile="BayeuxClient.java" sourcepath="org/mortbay/cometd/client/BayeuxClient.java"/>
+    </Class>
+    <Method classname="org.mortbay.cometd.client.BayeuxClient$Handshake" name="onResponseComplete" signature="()V" isStatic="false">
+      <SourceLine classname="org.mortbay.cometd.client.BayeuxClient$Handshake" start="921" end="990" startBytecode="0" endBytecode="801" sourcefile="BayeuxClient.java" sourcepath="org/mortbay/cometd/client/BayeuxClient.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.mortbay.cometd.client.BayeuxClient$Handshake" start="982" end="982" startBytecode="478" endBytecode="478" sourcefile="BayeuxClient.java" sourcepath="org/mortbay/cometd/client/BayeuxClient.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>org.cometd.ClientListener</MissingClass>
+    <MissingClass>org.cometd.Extension</MissingClass>
+    <MissingClass>org.cometd.Message</MissingClass>
+    <MissingClass>org.cometd.MessageListener</MissingClass>
+    <MissingClass>org.mortbay.cometd.MessageImpl</MissingClass>
+    <MissingClass>org.mortbay.cometd.MessagePool</MissingClass>
+    <MissingClass>org.mortbay.component.AbstractLifeCycle</MissingClass>
+    <MissingClass>org.mortbay.io.Buffer</MissingClass>
+    <MissingClass>org.mortbay.io.ByteArrayBuffer</MissingClass>
+    <MissingClass>org.mortbay.jetty.HttpHeaders</MissingClass>
+    <MissingClass>org.mortbay.jetty.HttpSchemes</MissingClass>
+    <MissingClass>org.mortbay.jetty.HttpURI</MissingClass>
+    <MissingClass>org.mortbay.jetty.client.Address</MissingClass>
+    <MissingClass>org.mortbay.jetty.client.ContentExchange</MissingClass>
+    <MissingClass>org.mortbay.jetty.client.HttpClient</MissingClass>
+    <MissingClass>org.mortbay.jetty.client.HttpExchange</MissingClass>
+    <MissingClass>org.mortbay.log.Log</MissingClass>
+    <MissingClass>org.mortbay.util.ArrayQueue</MissingClass>
+    <MissingClass>org.mortbay.util.LazyList</MissingClass>
+    <MissingClass>org.mortbay.util.QuotedStringTokenizer</MissingClass>
+    <MissingClass>org.mortbay.util.ajax.JSON</MissingClass>
+    <MissingClass>org.mortbay.util.ajax.JSON$Literal</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 26 Jul 2010 23:35:58 +0300" total_classes="10" referenced_classes="47" total_bugs="3" total_size="968" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="18.02" clock_seconds="10.08" peak_mbytes="68.77" alloc_mbytes="763.88" gc_seconds="0.20" priority_2="3">
+    <PackageStats package="org.mortbay.cometd.client" total_bugs="3" total_types="8" total_size="901" priority_2="3">
+      <ClassStats class="org.mortbay.cometd.client.Advice" sourceFile="Advice.java" interface="false" size="50" bugs="2" priority_2="2"/>
+      <ClassStats class="org.mortbay.cometd.client.BayeuxClient" sourceFile="BayeuxClient.java" interface="false" size="471" bugs="0"/>
+      <ClassStats class="org.mortbay.cometd.client.BayeuxClient$1" sourceFile="BayeuxClient.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.mortbay.cometd.client.BayeuxClient$Connect" sourceFile="BayeuxClient.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.mortbay.cometd.client.BayeuxClient$Exchange" sourceFile="BayeuxClient.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="org.mortbay.cometd.client.BayeuxClient$ExpirableCookie" sourceFile="BayeuxClient.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.mortbay.cometd.client.BayeuxClient$Handshake" sourceFile="BayeuxClient.java" interface="false" size="77" bugs="1" priority_2="1"/>
+      <ClassStats class="org.mortbay.cometd.client.BayeuxClient$Publish" sourceFile="BayeuxClient.java" interface="false" size="70" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.mortbay.cometd.client.ext" total_bugs="0" total_types="2" total_size="67">
+      <ClassStats class="org.mortbay.cometd.client.ext.AckExtension" sourceFile="AckExtension.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.mortbay.cometd.client.ext.TimesyncClientExtension" sourceFile="TimesyncClientExtension.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1019" invocations="444" avgMicrosecondsPerInvocation="2297" maxMicrosecondsPerInvocation="185295" standardDeviationMircosecondsPerInvocation="10462"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="628" invocations="141" avgMicrosecondsPerInvocation="4457" maxMicrosecondsPerInvocation="109710" standardDeviationMircosecondsPerInvocation="11332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="582" invocations="124" avgMicrosecondsPerInvocation="4701" maxMicrosecondsPerInvocation="49084" standardDeviationMircosecondsPerInvocation="8419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="556" invocations="124" avgMicrosecondsPerInvocation="4489" maxMicrosecondsPerInvocation="90762" standardDeviationMircosecondsPerInvocation="9431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="522" invocations="47" avgMicrosecondsPerInvocation="11117" maxMicrosecondsPerInvocation="105045" standardDeviationMircosecondsPerInvocation="18547"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="483" invocations="124" avgMicrosecondsPerInvocation="3896" maxMicrosecondsPerInvocation="47704" standardDeviationMircosecondsPerInvocation="7039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="477" invocations="131" avgMicrosecondsPerInvocation="3642" maxMicrosecondsPerInvocation="93576" standardDeviationMircosecondsPerInvocation="9073"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="471" invocations="47" avgMicrosecondsPerInvocation="10030" maxMicrosecondsPerInvocation="68876" standardDeviationMircosecondsPerInvocation="16001"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="280" invocations="230" avgMicrosecondsPerInvocation="1218" maxMicrosecondsPerInvocation="36868" standardDeviationMircosecondsPerInvocation="4633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="274" invocations="47" avgMicrosecondsPerInvocation="5840" maxMicrosecondsPerInvocation="41548" standardDeviationMircosecondsPerInvocation="10134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="250" invocations="124" avgMicrosecondsPerInvocation="2021" maxMicrosecondsPerInvocation="30842" standardDeviationMircosecondsPerInvocation="3865"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="206" invocations="47" avgMicrosecondsPerInvocation="4386" maxMicrosecondsPerInvocation="44067" standardDeviationMircosecondsPerInvocation="9618"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="176" invocations="83" avgMicrosecondsPerInvocation="2131" maxMicrosecondsPerInvocation="15912" standardDeviationMircosecondsPerInvocation="2519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="167" invocations="47" avgMicrosecondsPerInvocation="3573" maxMicrosecondsPerInvocation="39206" standardDeviationMircosecondsPerInvocation="7566"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="147" invocations="10" avgMicrosecondsPerInvocation="14766" maxMicrosecondsPerInvocation="84737" standardDeviationMircosecondsPerInvocation="25310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="133" invocations="376" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="25472" standardDeviationMircosecondsPerInvocation="1973"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="128" invocations="47" avgMicrosecondsPerInvocation="2739" maxMicrosecondsPerInvocation="53695" standardDeviationMircosecondsPerInvocation="8588"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="126" invocations="10" avgMicrosecondsPerInvocation="12627" maxMicrosecondsPerInvocation="73503" standardDeviationMircosecondsPerInvocation="21952"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="124" invocations="80" avgMicrosecondsPerInvocation="1556" maxMicrosecondsPerInvocation="35590" standardDeviationMircosecondsPerInvocation="5565"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

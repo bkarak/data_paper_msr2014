@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1271742346000" analysisTimestamp="1360877727979" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/servicemix/camel/org.apache.servicemix.camel.component/4.2.0/org.apache.servicemix.camel.component-4.2.0.jar</Jar>
+  </Project>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="org.apache.servicemix.camel.nmr.ServiceMixBinding">
+      <SourceLine classname="org.apache.servicemix.camel.nmr.ServiceMixBinding" start="39" end="140" sourcefile="ServiceMixBinding.java" sourcepath="org/apache/servicemix/camel/nmr/ServiceMixBinding.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.camel.nmr.ServiceMixBinding" name="populateCamelExchangeFromNmrExchange" signature="(Lorg/apache/camel/CamelContext;Lorg/apache/servicemix/nmr/api/Exchange;)Lorg/apache/camel/Exchange;" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.camel.nmr.ServiceMixBinding" start="73" end="91" startBytecode="0" endBytecode="258" sourcefile="ServiceMixBinding.java" sourcepath="org/apache/servicemix/camel/nmr/ServiceMixBinding.java"/>
+    </Method>
+    <LocalVariable name="nmrExchange" register="2" pc="91" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.servicemix.camel.nmr.ServiceMixBinding" start="74" end="74" startBytecode="11" endBytecode="11" sourcefile="ServiceMixBinding.java" sourcepath="org/apache/servicemix/camel/nmr/ServiceMixBinding.java"/>
+    <SourceLine classname="org.apache.servicemix.camel.nmr.ServiceMixBinding" start="87" end="87" startBytecode="92" endBytecode="92" sourcefile="ServiceMixBinding.java" sourcepath="org/apache/servicemix/camel/nmr/ServiceMixBinding.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>javax.jbi.messaging.MessagingException</MissingClass>
+    <MissingClass>org.apache.camel.CamelContext</MissingClass>
+    <MissingClass>org.apache.camel.Component</MissingClass>
+    <MissingClass>org.apache.camel.Endpoint</MissingClass>
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.ExchangePattern</MissingClass>
+    <MissingClass>org.apache.camel.Message</MissingClass>
+    <MissingClass>org.apache.camel.Processor</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultComponent</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultConsumer</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultEndpoint</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultExchange</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultMessage</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultProducer</MissingClass>
+    <MissingClass>org.apache.camel.spi.Registry</MissingClass>
+    <MissingClass>org.apache.servicemix.nmr.api.Channel</MissingClass>
+    <MissingClass>org.apache.servicemix.nmr.api.EndpointRegistry</MissingClass>
+    <MissingClass>org.apache.servicemix.nmr.api.Exchange</MissingClass>
+    <MissingClass>org.apache.servicemix.nmr.api.Message</MissingClass>
+    <MissingClass>org.apache.servicemix.nmr.api.NMR</MissingClass>
+    <MissingClass>org.apache.servicemix.nmr.api.Pattern</MissingClass>
+    <MissingClass>org.apache.servicemix.nmr.api.Status</MissingClass>
+    <MissingClass>org.apache.servicemix.nmr.api.service.ServiceHelper</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 20 Apr 2010 08:45:46 +0300" total_classes="13" referenced_classes="65" total_bugs="1" total_size="297" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="10.50" clock_seconds="13.54" peak_mbytes="56.68" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="1">
+    <PackageStats package="org.apache.servicemix.camel.nmr" total_bugs="1" total_types="5" total_size="196" priority_2="1">
+      <ClassStats class="org.apache.servicemix.camel.nmr.ServiceMixBinding" sourceFile="ServiceMixBinding.java" interface="false" size="64" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.servicemix.camel.nmr.ServiceMixComponent" sourceFile="ServiceMixComponent.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.camel.nmr.ServiceMixConsumer" sourceFile="ServiceMixConsumer.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.camel.nmr.ServiceMixEndpoint" sourceFile="ServiceMixEndpoint.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.camel.nmr.ServiceMixProducer" sourceFile="ServiceMixProducer.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.servicemix.samples.wsdl_first" total_bugs="0" total_types="3" total_size="51">
+      <ClassStats class="org.apache.servicemix.samples.wsdl_first.Person" sourceFile="Person.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.samples.wsdl_first.PersonService" sourceFile="PersonService.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.samples.wsdl_first.UnknownPersonFault" sourceFile="UnknownPersonFault.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.servicemix.samples.wsdl_first.types" total_bugs="0" total_types="5" total_size="50">
+      <ClassStats class="org.apache.servicemix.samples.wsdl_first.types.GetPerson" sourceFile="GetPerson.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.samples.wsdl_first.types.GetPersonResponse" sourceFile="GetPersonResponse.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.samples.wsdl_first.types.ObjectFactory" sourceFile="ObjectFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.samples.wsdl_first.types.UnknownPersonFault" sourceFile="UnknownPersonFault.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.samples.wsdl_first.types.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1426" invocations="469" avgMicrosecondsPerInvocation="3042" maxMicrosecondsPerInvocation="90484" standardDeviationMircosecondsPerInvocation="10089"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="830" invocations="65" avgMicrosecondsPerInvocation="12782" maxMicrosecondsPerInvocation="121347" standardDeviationMircosecondsPerInvocation="27992"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="789" invocations="65" avgMicrosecondsPerInvocation="12141" maxMicrosecondsPerInvocation="154788" standardDeviationMircosecondsPerInvocation="28204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="567" invocations="70" avgMicrosecondsPerInvocation="8106" maxMicrosecondsPerInvocation="148163" standardDeviationMircosecondsPerInvocation="25251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="565" invocations="65" avgMicrosecondsPerInvocation="8693" maxMicrosecondsPerInvocation="79251" standardDeviationMircosecondsPerInvocation="19224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="436" invocations="70" avgMicrosecondsPerInvocation="6234" maxMicrosecondsPerInvocation="66570" standardDeviationMircosecondsPerInvocation="14047"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="386" invocations="71" avgMicrosecondsPerInvocation="5445" maxMicrosecondsPerInvocation="336686" standardDeviationMircosecondsPerInvocation="39720"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="338" invocations="70" avgMicrosecondsPerInvocation="4831" maxMicrosecondsPerInvocation="182962" standardDeviationMircosecondsPerInvocation="22573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="333" invocations="67" avgMicrosecondsPerInvocation="4981" maxMicrosecondsPerInvocation="120815" standardDeviationMircosecondsPerInvocation="16506"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="330" invocations="65" avgMicrosecondsPerInvocation="5080" maxMicrosecondsPerInvocation="131583" standardDeviationMircosecondsPerInvocation="17781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="309" invocations="401" avgMicrosecondsPerInvocation="772" maxMicrosecondsPerInvocation="63116" standardDeviationMircosecondsPerInvocation="4649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="297" invocations="472" avgMicrosecondsPerInvocation="629" maxMicrosecondsPerInvocation="67727" standardDeviationMircosecondsPerInvocation="4301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="294" invocations="70" avgMicrosecondsPerInvocation="4202" maxMicrosecondsPerInvocation="119983" standardDeviationMircosecondsPerInvocation="19469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="293" invocations="133" avgMicrosecondsPerInvocation="2209" maxMicrosecondsPerInvocation="61226" standardDeviationMircosecondsPerInvocation="7976"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="281" invocations="67" avgMicrosecondsPerInvocation="4200" maxMicrosecondsPerInvocation="55358" standardDeviationMircosecondsPerInvocation="9701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="269" invocations="13" avgMicrosecondsPerInvocation="20696" maxMicrosecondsPerInvocation="197324" standardDeviationMircosecondsPerInvocation="53106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="241" invocations="13" avgMicrosecondsPerInvocation="18549" maxMicrosecondsPerInvocation="234544" standardDeviationMircosecondsPerInvocation="62353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="240" invocations="70" avgMicrosecondsPerInvocation="3442" maxMicrosecondsPerInvocation="96827" standardDeviationMircosecondsPerInvocation="12595"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="236" invocations="65" avgMicrosecondsPerInvocation="3641" maxMicrosecondsPerInvocation="57457" standardDeviationMircosecondsPerInvocation="10846"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

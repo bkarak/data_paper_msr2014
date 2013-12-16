@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1299512185000" analysisTimestamp="1360894371738" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/autostart/starter/1.0.0-M2/starter-1.0.0-M2.jar</Jar>
+  </Project>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="1" abbrev="DMI" category="STYLE">
+    <Class classname="org.ow2.jonas.autostart.starter.Starter">
+      <SourceLine classname="org.ow2.jonas.autostart.starter.Starter" start="55" end="863" sourcefile="Starter.java" sourcepath="org/ow2/jonas/autostart/starter/Starter.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.autostart.starter.Starter" name="recursiveSeachValidJonasFolder" signature="(Z)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.autostart.starter.Starter" start="643" end="652" startBytecode="0" endBytecode="32" sourcefile="Starter.java" sourcepath="org/ow2/jonas/autostart/starter/Starter.java"/>
+    </Method>
+    <String value="/home" role="FILE_NAME"/>
+    <SourceLine classname="org.ow2.jonas.autostart.starter.Starter" start="643" end="643" startBytecode="6" endBytecode="6" sourcefile="Starter.java" sourcepath="org/ow2/jonas/autostart/starter/Starter.java"/>
+  </BugInstance>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="2" abbrev="DMI" category="STYLE">
+    <Class classname="org.ow2.jonas.autostart.starter.Starter">
+      <SourceLine classname="org.ow2.jonas.autostart.starter.Starter" start="55" end="863" sourcefile="Starter.java" sourcepath="org/ow2/jonas/autostart/starter/Starter.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.autostart.starter.Starter" name="recursiveSeachValidJonasFolder" signature="(Z)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.autostart.starter.Starter" start="643" end="652" startBytecode="0" endBytecode="32" sourcefile="Starter.java" sourcepath="org/ow2/jonas/autostart/starter/Starter.java"/>
+    </Method>
+    <String value="C:\\" role="FILE_NAME"/>
+    <SourceLine classname="org.ow2.jonas.autostart.starter.Starter" start="645" end="645" startBytecode="27" endBytecode="27" sourcefile="Starter.java" sourcepath="org/ow2/jonas/autostart/starter/Starter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.ow2.jonas.autostart.starter.Starter$1">
+      <SourceLine classname="org.ow2.jonas.autostart.starter.Starter$1" start="392" end="408" sourcefile="Starter.java" sourcepath="org/ow2/jonas/autostart/starter/Starter.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.autostart.starter.Starter$1" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.autostart.starter.Starter$1" start="396" end="408" startBytecode="0" endBytecode="216" sourcefile="Starter.java" sourcepath="org/ow2/jonas/autostart/starter/Starter.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.autostart.starter.Starter$1" start="396" end="396" startBytecode="15" endBytecode="15" sourcefile="Starter.java" sourcepath="org/ow2/jonas/autostart/starter/Starter.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="7">
+    <MissingClass>org.apache.tools.ant.Project</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.Copy</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.Execute</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.Get</MissingClass>
+    <MissingClass>org.ow2.jonas.autostart.unzip.Unzip</MissingClass>
+    <MissingClass>org.ow2.jonas.autostart.utility.Output</MissingClass>
+    <MissingClass>org.ow2.jonas.autostart.utility.Utility</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 7 Mar 2011 17:36:25 +0200" total_classes="3" referenced_classes="63" total_bugs="3" total_size="382" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="15.74" clock_seconds="8.24" peak_mbytes="61.59" alloc_mbytes="763.88" gc_seconds="0.18" priority_2="1" priority_1="2">
+    <PackageStats package="org.ow2.jonas.autostart.starter" total_bugs="3" total_types="3" total_size="382" priority_2="1" priority_1="2">
+      <ClassStats class="org.ow2.jonas.autostart.starter.Starter" sourceFile="Starter.java" interface="false" size="361" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.ow2.jonas.autostart.starter.Starter$1" sourceFile="Starter.java" interface="false" size="16" bugs="1" priority_1="1"/>
+      <ClassStats class="org.ow2.jonas.autostart.starter.StarterException" sourceFile="StarterException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="930" invocations="515" avgMicrosecondsPerInvocation="1806" maxMicrosecondsPerInvocation="189903" standardDeviationMircosecondsPerInvocation="9440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="649" invocations="63" avgMicrosecondsPerInvocation="10306" maxMicrosecondsPerInvocation="65796" standardDeviationMircosecondsPerInvocation="14744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="512" invocations="63" avgMicrosecondsPerInvocation="8139" maxMicrosecondsPerInvocation="50658" standardDeviationMircosecondsPerInvocation="11916"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="479" invocations="63" avgMicrosecondsPerInvocation="7615" maxMicrosecondsPerInvocation="165612" standardDeviationMircosecondsPerInvocation="21357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="386" invocations="52" avgMicrosecondsPerInvocation="7440" maxMicrosecondsPerInvocation="75560" standardDeviationMircosecondsPerInvocation="15970"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="331" invocations="56" avgMicrosecondsPerInvocation="5912" maxMicrosecondsPerInvocation="53137" standardDeviationMircosecondsPerInvocation="11441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="300" invocations="56" avgMicrosecondsPerInvocation="5363" maxMicrosecondsPerInvocation="51334" standardDeviationMircosecondsPerInvocation="9963"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="286" invocations="52" avgMicrosecondsPerInvocation="5511" maxMicrosecondsPerInvocation="71453" standardDeviationMircosecondsPerInvocation="12505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="282" invocations="52" avgMicrosecondsPerInvocation="5431" maxMicrosecondsPerInvocation="78913" standardDeviationMircosecondsPerInvocation="11801"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="181" invocations="211" avgMicrosecondsPerInvocation="859" maxMicrosecondsPerInvocation="17637" standardDeviationMircosecondsPerInvocation="1603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="166" invocations="63" avgMicrosecondsPerInvocation="2646" maxMicrosecondsPerInvocation="97822" standardDeviationMircosecondsPerInvocation="12374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="162" invocations="63" avgMicrosecondsPerInvocation="2585" maxMicrosecondsPerInvocation="27002" standardDeviationMircosecondsPerInvocation="4957"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="160" invocations="27" avgMicrosecondsPerInvocation="5947" maxMicrosecondsPerInvocation="41721" standardDeviationMircosecondsPerInvocation="8656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="155" invocations="52" avgMicrosecondsPerInvocation="2992" maxMicrosecondsPerInvocation="24478" standardDeviationMircosecondsPerInvocation="5145"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="152" invocations="63" avgMicrosecondsPerInvocation="2417" maxMicrosecondsPerInvocation="58126" standardDeviationMircosecondsPerInvocation="7632"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="149" invocations="63" avgMicrosecondsPerInvocation="2374" maxMicrosecondsPerInvocation="26200" standardDeviationMircosecondsPerInvocation="4681"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="135" invocations="63" avgMicrosecondsPerInvocation="2147" maxMicrosecondsPerInvocation="20656" standardDeviationMircosecondsPerInvocation="3596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="113" invocations="52" avgMicrosecondsPerInvocation="2177" maxMicrosecondsPerInvocation="25645" standardDeviationMircosecondsPerInvocation="4908"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

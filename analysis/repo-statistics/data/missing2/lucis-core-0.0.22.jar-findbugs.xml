@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1251441874000" analysisTimestamp="1360871566780" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/net/sf/lucis/lucis-core/0.0.22/lucis-core-0.0.22.jar</Jar>
+  </Project>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="net.sf.lucis.core.impl.DefaultIndexerService">
+      <SourceLine classname="net.sf.lucis.core.impl.DefaultIndexerService" start="38" end="126" sourcefile="DefaultIndexerService.java" sourcepath="net/sf/lucis/core/impl/DefaultIndexerService.java"/>
+    </Class>
+    <Field classname="net.sf.lucis.core.impl.DefaultIndexerService" name="log" signature="Ljava/util/logging/Logger;" isStatic="false">
+      <SourceLine classname="net.sf.lucis.core.impl.DefaultIndexerService" sourcefile="DefaultIndexerService.java" sourcepath="net/sf/lucis/core/impl/DefaultIndexerService.java"/>
+    </Field>
+    <SourceLine classname="net.sf.lucis.core.impl.DefaultIndexerService" start="54" end="54" startBytecode="32" endBytecode="32" sourcefile="DefaultIndexerService.java" sourcepath="net/sf/lucis/core/impl/DefaultIndexerService.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="net.sf.lucis.core.impl.DefaultReindexingWriter">
+      <SourceLine classname="net.sf.lucis.core.impl.DefaultReindexingWriter" start="43" end="73" sourcefile="DefaultReindexingWriter.java" sourcepath="net/sf/lucis/core/impl/DefaultReindexingWriter.java"/>
+    </Class>
+    <Field classname="net.sf.lucis.core.impl.DefaultReindexingWriter" name="log" signature="Ljava/util/logging/Logger;" isStatic="false">
+      <SourceLine classname="net.sf.lucis.core.impl.DefaultReindexingWriter" sourcefile="DefaultReindexingWriter.java" sourcepath="net/sf/lucis/core/impl/DefaultReindexingWriter.java"/>
+    </Field>
+    <SourceLine classname="net.sf.lucis.core.impl.DefaultReindexingWriter" start="47" end="47" startBytecode="15" endBytecode="15" sourcefile="DefaultReindexingWriter.java" sourcepath="net/sf/lucis/core/impl/DefaultReindexingWriter.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="net.sf.lucis.core.impl.DefaultWriter">
+      <SourceLine classname="net.sf.lucis.core.impl.DefaultWriter" start="46" end="122" sourcefile="DefaultWriter.java" sourcepath="net/sf/lucis/core/impl/DefaultWriter.java"/>
+    </Class>
+    <Field classname="net.sf.lucis.core.impl.DefaultWriter" name="log" signature="Ljava/util/logging/Logger;" isStatic="false">
+      <SourceLine classname="net.sf.lucis.core.impl.DefaultWriter" sourcefile="DefaultWriter.java" sourcepath="net/sf/lucis/core/impl/DefaultWriter.java"/>
+    </Field>
+    <SourceLine classname="net.sf.lucis.core.impl.DefaultWriter" start="46" end="46" startBytecode="15" endBytecode="15" sourcefile="DefaultWriter.java" sourcepath="net/sf/lucis/core/impl/DefaultWriter.java"/>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="1" abbrev="DE" category="BAD_PRACTICE">
+    <Class classname="net.sf.lucis.core.impl.MultiSearcherProvider$MultipleSearcher">
+      <SourceLine classname="net.sf.lucis.core.impl.MultiSearcherProvider$MultipleSearcher" start="72" end="92" sourcefile="MultiSearcherProvider.java" sourcepath="net/sf/lucis/core/impl/MultiSearcherProvider.java"/>
+    </Class>
+    <Method classname="net.sf.lucis.core.impl.MultiSearcherProvider$MultipleSearcher" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="net.sf.lucis.core.impl.MultiSearcherProvider$MultipleSearcher" start="90" end="92" startBytecode="0" endBytecode="79" sourcefile="MultiSearcherProvider.java" sourcepath="net/sf/lucis/core/impl/MultiSearcherProvider.java"/>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="29" end="78" sourcefile="Exception.java" sourcepath="java/lang/Exception.java"/>
+    </Class>
+    <SourceLine classname="net.sf.lucis.core.impl.MultiSearcherProvider$MultipleSearcher" start="91" end="91" startBytecode="10" endBytecode="10" sourcefile="MultiSearcherProvider.java" sourcepath="net/sf/lucis/core/impl/MultiSearcherProvider.java"/>
+    <SourceLine classname="net.sf.lucis.core.impl.MultiSearcherProvider$MultipleSearcher" start="91" end="91" startBytecode="10" endBytecode="10" sourcefile="MultiSearcherProvider.java" sourcepath="net/sf/lucis/core/impl/MultiSearcherProvider.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="net.sf.lucis.core.impl.ReindexingFSStore$Copy">
+      <SourceLine classname="net.sf.lucis.core.impl.ReindexingFSStore$Copy" start="174" end="186" sourcefile="ReindexingFSStore.java" sourcepath="net/sf/lucis/core/impl/ReindexingFSStore.java"/>
+    </Class>
+    <Method classname="net.sf.lucis.core.impl.ReindexingFSStore$Copy" name="&lt;init&gt;" signature="(Ljava/io/File;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="net.sf.lucis.core.impl.ReindexingFSStore$Copy" start="178" end="186" startBytecode="0" endBytecode="172" sourcefile="ReindexingFSStore.java" sourcepath="net/sf/lucis/core/impl/ReindexingFSStore.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdir" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1153" end="1157" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="net.sf.lucis.core.impl.ReindexingFSStore$Copy" start="183" end="183" startBytecode="71" endBytecode="71" sourcefile="ReindexingFSStore.java" sourcepath="net/sf/lucis/core/impl/ReindexingFSStore.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="net.sf.lucis.core.impl.ReindexingIndexerService">
+      <SourceLine classname="net.sf.lucis.core.impl.ReindexingIndexerService" start="38" end="126" sourcefile="ReindexingIndexerService.java" sourcepath="net/sf/lucis/core/impl/ReindexingIndexerService.java"/>
+    </Class>
+    <Field classname="net.sf.lucis.core.impl.ReindexingIndexerService" name="log" signature="Ljava/util/logging/Logger;" isStatic="false">
+      <SourceLine classname="net.sf.lucis.core.impl.ReindexingIndexerService" sourcefile="ReindexingIndexerService.java" sourcepath="net/sf/lucis/core/impl/ReindexingIndexerService.java"/>
+    </Field>
+    <SourceLine classname="net.sf.lucis.core.impl.ReindexingIndexerService" start="54" end="54" startBytecode="32" endBytecode="32" sourcefile="ReindexingIndexerService.java" sourcepath="net/sf/lucis/core/impl/ReindexingIndexerService.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="43">
+    <MissingClass>com.google.common.base.Objects</MissingClass>
+    <MissingClass>com.google.common.base.Preconditions</MissingClass>
+    <MissingClass>com.google.common.base.Supplier</MissingClass>
+    <MissingClass>com.google.common.collect.ArrayListMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableList</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMultimap$Builder</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableSet</MissingClass>
+    <MissingClass>com.google.common.collect.Iterables</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.google.common.collect.Multimap</MissingClass>
+    <MissingClass>net.sf.derquinse.lucis.Group</MissingClass>
+    <MissingClass>net.sf.derquinse.lucis.GroupResult</MissingClass>
+    <MissingClass>net.sf.derquinse.lucis.IndexNotAvailableException</MissingClass>
+    <MissingClass>net.sf.derquinse.lucis.Item</MissingClass>
+    <MissingClass>net.sf.derquinse.lucis.Page</MissingClass>
+    <MissingClass>net.sf.derquinse.lucis.Result</MissingClass>
+    <MissingClass>net.sf.derquinse.lucis.SearchException</MissingClass>
+    <MissingClass>net.sf.derquinsej.concurrent.ActiveObjectSupport</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.Analyzer</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.standard.StandardAnalyzer</MissingClass>
+    <MissingClass>org.apache.lucene.document.Document</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexReader</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexWriter</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexWriter$MaxFieldLength</MissingClass>
+    <MissingClass>org.apache.lucene.index.Term</MissingClass>
+    <MissingClass>org.apache.lucene.search.HitCollector</MissingClass>
+    <MissingClass>org.apache.lucene.search.IndexSearcher</MissingClass>
+    <MissingClass>org.apache.lucene.search.MultiSearcher</MissingClass>
+    <MissingClass>org.apache.lucene.search.Query</MissingClass>
+    <MissingClass>org.apache.lucene.search.ScoreDoc</MissingClass>
+    <MissingClass>org.apache.lucene.search.Searcher</MissingClass>
+    <MissingClass>org.apache.lucene.search.Sort</MissingClass>
+    <MissingClass>org.apache.lucene.search.TopDocCollector</MissingClass>
+    <MissingClass>org.apache.lucene.search.TopDocs</MissingClass>
+    <MissingClass>org.apache.lucene.search.TopFieldDocs</MissingClass>
+    <MissingClass>org.apache.lucene.search.highlight.Formatter</MissingClass>
+    <MissingClass>org.apache.lucene.search.highlight.Highlighter</MissingClass>
+    <MissingClass>org.apache.lucene.search.highlight.QueryScorer</MissingClass>
+    <MissingClass>org.apache.lucene.search.highlight.SimpleHTMLFormatter</MissingClass>
+    <MissingClass>org.apache.lucene.store.Directory</MissingClass>
+    <MissingClass>org.apache.lucene.store.FSDirectory</MissingClass>
+    <MissingClass>org.apache.lucene.store.RAMDirectory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 28 Aug 2009 09:44:34 +0300" total_classes="72" referenced_classes="136" total_bugs="6" total_size="1262" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="25.98" clock_seconds="28.27" peak_mbytes="65.99" alloc_mbytes="763.88" gc_seconds="0.21" priority_2="5" priority_1="1">
+    <PackageStats package="net.sf.lucis.core" total_bugs="0" total_types="33" total_size="454">
+      <ClassStats class="net.sf.lucis.core.Adder" sourceFile="Adder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Batch" sourceFile="Batch.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Batch$1" sourceFile="Batch.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Batch$Addition" sourceFile="Batch.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Batch$Builder" sourceFile="Batch.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.BatchException" sourceFile="BatchException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Checkpoint" sourceFile="Checkpoint.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Checkpoints" sourceFile="Checkpoints.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Checkpoints$1" sourceFile="Checkpoints.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Checkpoints$2" sourceFile="Checkpoints.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.ComplexQuery" sourceFile="ComplexQuery.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Delays" sourceFile="Delays.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.DirectoryProvider" sourceFile="DirectoryProvider.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.DocMapper" sourceFile="DocMapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.FullIndexer" sourceFile="FullIndexer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Highlight" sourceFile="Highlight.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.IndexException" sourceFile="IndexException.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.IndexStatus" sourceFile="IndexStatus.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Indexer" sourceFile="Indexer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.IndexerService" sourceFile="IndexerService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.LucisQuery" sourceFile="LucisQuery.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.LucisQuery$1" sourceFile="LucisQuery.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.LucisQuery$2" sourceFile="LucisQuery.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.LucisQuery$3" sourceFile="LucisQuery.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.LucisQuery$4" sourceFile="LucisQuery.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.LucisSearcher" sourceFile="LucisSearcher.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Queryable" sourceFile="Queryable.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.ReindexingStore" sourceFile="ReindexingStore.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.ReindexingWriter" sourceFile="ReindexingWriter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Store" sourceFile="Store.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.StoreException" sourceFile="StoreException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.Writer" sourceFile="Writer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.WriterConfiguration" sourceFile="WriterConfiguration.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.lucis.core.impl" total_bugs="6" total_types="36" total_size="760" priority_2="5" priority_1="1">
+      <ClassStats class="net.sf.lucis.core.impl.AbstractQueryable" sourceFile="AbstractQueryable.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.AbstractQueryable$1" sourceFile="AbstractQueryable.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.AbstractSearcher" sourceFile="AbstractSearcher.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultIndexerService" sourceFile="DefaultIndexerService.java" interface="false" size="55" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultIndexerService$1" sourceFile="DefaultIndexerService.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultIndexerService$2" sourceFile="DefaultIndexerService.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultIndexerService$Task" sourceFile="DefaultIndexerService.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultQueryable" sourceFile="DefaultQueryable.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultReindexingWriter" sourceFile="DefaultReindexingWriter.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultReindexingWriter$1" sourceFile="DefaultReindexingWriter.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultReindexingWriter$AdderImpl" sourceFile="DefaultReindexingWriter.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultReindexingWriter$AdderImpl$1" sourceFile="DefaultReindexingWriter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultReindexingWriter$AdderImpl$2" sourceFile="DefaultReindexingWriter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultReindexingWriter$AdderImpl$3" sourceFile="DefaultReindexingWriter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.DefaultWriter" sourceFile="DefaultWriter.java" interface="false" size="58" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.lucis.core.impl.FSStore" sourceFile="FSStore.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.MayFail" sourceFile="MayFail.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.MayFail$1" sourceFile="MayFail.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.MayFail$2" sourceFile="MayFail.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.MultiSearcherProvider" sourceFile="MultiSearcherProvider.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.MultiSearcherProvider$1" sourceFile="MultiSearcherProvider.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.MultiSearcherProvider$MultipleSearcher" sourceFile="MultiSearcherProvider.java" interface="false" size="17" bugs="1" priority_1="1"/>
+      <ClassStats class="net.sf.lucis.core.impl.RAMStore" sourceFile="RAMStore.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.ReindexingFSStore" sourceFile="ReindexingFSStore.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.ReindexingFSStore$1" sourceFile="ReindexingFSStore.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.ReindexingFSStore$Copy" sourceFile="ReindexingFSStore.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.lucis.core.impl.ReindexingFSStore$Status" sourceFile="ReindexingFSStore.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.ReindexingIndexerService" sourceFile="ReindexingIndexerService.java" interface="false" size="55" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.lucis.core.impl.ReindexingIndexerService$1" sourceFile="ReindexingIndexerService.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.ReindexingIndexerService$2" sourceFile="ReindexingIndexerService.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.ReindexingIndexerService$Task" sourceFile="ReindexingIndexerService.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.ReindexingIndexerService$Task$1" sourceFile="ReindexingIndexerService.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.SingleSearcherProvider" sourceFile="SingleSearcherProvider.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.SingleSearcherProvider$1" sourceFile="SingleSearcherProvider.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.SingleSearcherProvider$2" sourceFile="SingleSearcherProvider.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.impl.SingleSearcherProvider$SingleSearcher" sourceFile="SingleSearcherProvider.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.lucis.core.support" total_bugs="0" total_types="3" total_size="48">
+      <ClassStats class="net.sf.lucis.core.support.AllCollector" sourceFile="AllCollector.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.support.CountingCollector" sourceFile="CountingCollector.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.lucis.core.support.Queryables" sourceFile="Queryables.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1677" invocations="296" avgMicrosecondsPerInvocation="5666" maxMicrosecondsPerInvocation="100435" standardDeviationMircosecondsPerInvocation="13471"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1669" invocations="567" avgMicrosecondsPerInvocation="2944" maxMicrosecondsPerInvocation="151088" standardDeviationMircosecondsPerInvocation="11535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1369" invocations="136" avgMicrosecondsPerInvocation="10067" maxMicrosecondsPerInvocation="177127" standardDeviationMircosecondsPerInvocation="27318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1368" invocations="269" avgMicrosecondsPerInvocation="5088" maxMicrosecondsPerInvocation="64581" standardDeviationMircosecondsPerInvocation="10859"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1333" invocations="284" avgMicrosecondsPerInvocation="4695" maxMicrosecondsPerInvocation="135981" standardDeviationMircosecondsPerInvocation="14266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1264" invocations="296" avgMicrosecondsPerInvocation="4271" maxMicrosecondsPerInvocation="134274" standardDeviationMircosecondsPerInvocation="13837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1192" invocations="278" avgMicrosecondsPerInvocation="4289" maxMicrosecondsPerInvocation="93965" standardDeviationMircosecondsPerInvocation="10519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="1146" invocations="284" avgMicrosecondsPerInvocation="4038" maxMicrosecondsPerInvocation="164159" standardDeviationMircosecondsPerInvocation="14574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1054" invocations="231" avgMicrosecondsPerInvocation="4564" maxMicrosecondsPerInvocation="147228" standardDeviationMircosecondsPerInvocation="16067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1046" invocations="136" avgMicrosecondsPerInvocation="7693" maxMicrosecondsPerInvocation="148739" standardDeviationMircosecondsPerInvocation="22628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="894" invocations="136" avgMicrosecondsPerInvocation="6574" maxMicrosecondsPerInvocation="135874" standardDeviationMircosecondsPerInvocation="18934"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="678" invocations="284" avgMicrosecondsPerInvocation="2388" maxMicrosecondsPerInvocation="71525" standardDeviationMircosecondsPerInvocation="8525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="590" invocations="501" avgMicrosecondsPerInvocation="1178" maxMicrosecondsPerInvocation="73005" standardDeviationMircosecondsPerInvocation="6126"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="484" invocations="136" avgMicrosecondsPerInvocation="3561" maxMicrosecondsPerInvocation="108026" standardDeviationMircosecondsPerInvocation="13972"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="423" invocations="72" avgMicrosecondsPerInvocation="5888" maxMicrosecondsPerInvocation="129838" standardDeviationMircosecondsPerInvocation="18988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="419" invocations="231" avgMicrosecondsPerInvocation="1815" maxMicrosecondsPerInvocation="179435" standardDeviationMircosecondsPerInvocation="12741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="386" invocations="136" avgMicrosecondsPerInvocation="2844" maxMicrosecondsPerInvocation="64531" standardDeviationMircosecondsPerInvocation="8857"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="370" invocations="136" avgMicrosecondsPerInvocation="2725" maxMicrosecondsPerInvocation="114935" standardDeviationMircosecondsPerInvocation="11944"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="319" invocations="8336" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="57658" standardDeviationMircosecondsPerInvocation="858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="304" invocations="315" avgMicrosecondsPerInvocation="967" maxMicrosecondsPerInvocation="154494" standardDeviationMircosecondsPerInvocation="8898"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="293" invocations="189" avgMicrosecondsPerInvocation="1553" maxMicrosecondsPerInvocation="107918" standardDeviationMircosecondsPerInvocation="8653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="293" invocations="570" avgMicrosecondsPerInvocation="515" maxMicrosecondsPerInvocation="57752" standardDeviationMircosecondsPerInvocation="3711"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="267" invocations="474" avgMicrosecondsPerInvocation="564" maxMicrosecondsPerInvocation="60128" standardDeviationMircosecondsPerInvocation="3806"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="245" invocations="136" avgMicrosecondsPerInvocation="1808" maxMicrosecondsPerInvocation="69135" standardDeviationMircosecondsPerInvocation="8022"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="223" invocations="269" avgMicrosecondsPerInvocation="832" maxMicrosecondsPerInvocation="60729" standardDeviationMircosecondsPerInvocation="4390"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

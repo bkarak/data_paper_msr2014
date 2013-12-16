@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1263822361000" analysisTimestamp="1360930497086" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jasmine/rules/jasmine-selfmanagement-rules-cluster-cmi-ejb/1.3.2/jasmine-selfmanagement-rules-cluster-cmi-ejb-1.3.2.jar</Jar>
+  </Project>
+  <BugInstance type="UWF_NULL_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager">
+      <SourceLine classname="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager" start="68" end="534" sourcefile="EJBServerClusterViewManager.java" sourcepath="org/ow2/jasmine/rules/cluster/cmi/ejb/EJBServerClusterViewManager.java"/>
+    </Class>
+    <Field classname="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager" name="bundleContext" signature="Lorg/osgi/framework/BundleContext;" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager" sourcefile="EJBServerClusterViewManager.java" sourcepath="org/ow2/jasmine/rules/cluster/cmi/ejb/EJBServerClusterViewManager.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager$1">
+      <SourceLine classname="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager$1" start="88" end="100" sourcefile="EJBServerClusterViewManager.java" sourcepath="org/ow2/jasmine/rules/cluster/cmi/ejb/EJBServerClusterViewManager.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager$1" name="serviceChanged" signature="(Lorg/osgi/framework/ServiceEvent;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager$1" start="89" end="100" startBytecode="0" endBytecode="172" sourcefile="EJBServerClusterViewManager.java" sourcepath="org/ow2/jasmine/rules/cluster/cmi/ejb/EJBServerClusterViewManager.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager$1" start="91" end="97" startBytecode="9" endBytecode="85" sourcefile="EJBServerClusterViewManager.java" sourcepath="org/ow2/jasmine/rules/cluster/cmi/ejb/EJBServerClusterViewManager.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="5">
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.InvalidSyntaxException</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceEvent</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceListener</MissingClass>
+    <MissingClass>org.ow2.cmi.controller.server.ServerClusterViewManager</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 18 Jan 2010 15:46:01 +0200" total_classes="4" referenced_classes="29" total_bugs="2" total_size="226" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="11.63" clock_seconds="6.95" peak_mbytes="54.86" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="2">
+    <PackageStats package="org.ow2.jasmine.rules.cluster.cmi.client" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="org.ow2.jasmine.rules.cluster.cmi.client.Client" sourceFile="Client.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jasmine.rules.cluster.cmi.ejb" total_bugs="2" total_types="3" total_size="214" priority_2="2">
+      <ClassStats class="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager" sourceFile="EJBServerClusterViewManager.java" interface="false" size="147" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jasmine.rules.cluster.cmi.ejb.EJBServerClusterViewManager$1" sourceFile="EJBServerClusterViewManager.java" interface="false" size="12" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jasmine.rules.cluster.cmi.ejb.IEJBServerClusterViewManager" sourceFile="IEJBServerClusterViewManager.java" interface="true" size="55" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1010" invocations="404" avgMicrosecondsPerInvocation="2501" maxMicrosecondsPerInvocation="87852" standardDeviationMircosecondsPerInvocation="7382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="514" invocations="29" avgMicrosecondsPerInvocation="17752" maxMicrosecondsPerInvocation="177311" standardDeviationMircosecondsPerInvocation="36355"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="349" invocations="29" avgMicrosecondsPerInvocation="12049" maxMicrosecondsPerInvocation="60065" standardDeviationMircosecondsPerInvocation="17479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="195" invocations="29" avgMicrosecondsPerInvocation="6724" maxMicrosecondsPerInvocation="46618" standardDeviationMircosecondsPerInvocation="10519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="187" invocations="140" avgMicrosecondsPerInvocation="1342" maxMicrosecondsPerInvocation="33626" standardDeviationMircosecondsPerInvocation="4106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="177" invocations="343" avgMicrosecondsPerInvocation="516" maxMicrosecondsPerInvocation="39996" standardDeviationMircosecondsPerInvocation="2541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="172" invocations="29" avgMicrosecondsPerInvocation="5931" maxMicrosecondsPerInvocation="33229" standardDeviationMircosecondsPerInvocation="8448"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="158" invocations="29" avgMicrosecondsPerInvocation="5476" maxMicrosecondsPerInvocation="43802" standardDeviationMircosecondsPerInvocation="10547"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="135" invocations="43" avgMicrosecondsPerInvocation="3151" maxMicrosecondsPerInvocation="50601" standardDeviationMircosecondsPerInvocation="8632"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="135" invocations="63" avgMicrosecondsPerInvocation="2149" maxMicrosecondsPerInvocation="35159" standardDeviationMircosecondsPerInvocation="5043"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="133" invocations="63" avgMicrosecondsPerInvocation="2117" maxMicrosecondsPerInvocation="47266" standardDeviationMircosecondsPerInvocation="7078"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="133" invocations="63" avgMicrosecondsPerInvocation="2116" maxMicrosecondsPerInvocation="32865" standardDeviationMircosecondsPerInvocation="5661"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="111" invocations="63" avgMicrosecondsPerInvocation="1762" maxMicrosecondsPerInvocation="27210" standardDeviationMircosecondsPerInvocation="3655"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="94" invocations="117" avgMicrosecondsPerInvocation="811" maxMicrosecondsPerInvocation="86794" standardDeviationMircosecondsPerInvocation="7984"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="77" invocations="63" avgMicrosecondsPerInvocation="1225" maxMicrosecondsPerInvocation="26567" standardDeviationMircosecondsPerInvocation="3548"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="74" invocations="4" avgMicrosecondsPerInvocation="18597" maxMicrosecondsPerInvocation="70636" standardDeviationMircosecondsPerInvocation="30068"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1236217174000" analysisTimestamp="1360502936638" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/enunciate/enunciate-spring-app/1.10-RC1/enunciate-spring-app-1.10-RC1.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="368" end="1471" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" name="generateWebXml" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="755" end="834" startBytecode="0" endBytecode="1178" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="825" end="825" startBytecode="573" endBytecode="573" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="368" end="1471" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" name="knownExclude" signature="(Ljava/io/File;)Z" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="1352" end="1444" startBytecode="0" endBytecode="952" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Method>
+    <Class classname="java.net.URLClassLoader">
+      <SourceLine classname="java.net.URLClassLoader" start="58" end="602" sourcefile="URLClassLoader.java" sourcepath="java/net/URLClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="1352" end="1352" startBytecode="0" endBytecode="0" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="368" end="1471" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" name="copyPostBase" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="614" end="628" startBytecode="0" endBytecode="212" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="625" end="625" startBytecode="97" endBytecode="97" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="628" end="628" startBytecode="104" endBytecode="104" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="368" end="1471" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" name="copyPreBase" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="634" end="647" startBytecode="0" endBytecode="212" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="644" end="644" startBytecode="97" endBytecode="97" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="647" end="647" startBytecode="104" endBytecode="104" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="368" end="1471" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" name="doLibCopy" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="861" end="1014" startBytecode="0" endBytecode="2050" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="1010" end="1010" startBytecode="1146" endBytecode="1146" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="1011" end="1011" startBytecode="1151" endBytecode="1151" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="368" end="1471" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" name="createSecurityUI" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="653" end="724" startBytecode="0" endBytecode="643" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="657" end="657" startBytecode="35" endBytecode="35" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="368" end="1471" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" name="doLibCopy" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="861" end="1014" startBytecode="0" endBytecode="2050" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="1009" end="1009" startBytecode="1126" endBytecode="1126" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="368" end="1471" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" name="doPackage" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="1018" end="1041" startBytecode="0" endBytecode="252" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="1025" end="1025" startBytecode="45" endBytecode="45" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="368" end="1471" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" name="generateWebXml" signature="()V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="755" end="834" startBytecode="0" endBytecode="1178" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" start="758" end="758" startBytecode="22" endBytecode="22" sourcefile="SpringAppDeploymentModule.java" sourcepath="org/codehaus/enunciate/modules/spring_app/SpringAppDeploymentModule.java"/>
+  </BugInstance>
+  <BugInstance type="UCF_USELESS_CONTROL_FLOW" priority="2" abbrev="UCF" category="STYLE">
+    <Class classname="org.codehaus.enunciate.modules.spring_app.config.security.SecurityConfig">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.config.security.SecurityConfig" start="322" end="788" sourcefile="SecurityConfig.java" sourcepath="org/codehaus/enunciate/modules/spring_app/config/security/SecurityConfig.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.spring_app.config.security.SecurityConfig" name="setEnableFormBasedLogin" signature="(Z)V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.spring_app.config.security.SecurityConfig" start="370" end="374" startBytecode="0" endBytecode="69" sourcefile="SecurityConfig.java" sourcepath="org/codehaus/enunciate/modules/spring_app/config/security/SecurityConfig.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.modules.spring_app.config.security.SecurityConfig" start="372" end="372" startBytecode="6" endBytecode="6" sourcefile="SecurityConfig.java" sourcepath="org/codehaus/enunciate/modules/spring_app/config/security/SecurityConfig.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="20">
+    <MissingClass>freemarker.ext.beans.BeansWrapper</MissingClass>
+    <MissingClass>freemarker.ext.beans.StringModel</MissingClass>
+    <MissingClass>freemarker.ext.dom.NodeModel</MissingClass>
+    <MissingClass>freemarker.template.TemplateException</MissingClass>
+    <MissingClass>freemarker.template.TemplateModelException</MissingClass>
+    <MissingClass>org.apache.commons.digester.Digester</MissingClass>
+    <MissingClass>org.apache.commons.digester.RuleSetBase</MissingClass>
+    <MissingClass>org.codehaus.enunciate.EnunciateException</MissingClass>
+    <MissingClass>org.codehaus.enunciate.apt.EnunciateFreemarkerModel</MissingClass>
+    <MissingClass>org.codehaus.enunciate.config.EnunciateConfiguration</MissingClass>
+    <MissingClass>org.codehaus.enunciate.contract.ServiceEndpoint</MissingClass>
+    <MissingClass>org.codehaus.enunciate.contract.jaxws.EndpointInterface</MissingClass>
+    <MissingClass>org.codehaus.enunciate.contract.validation.BaseValidator</MissingClass>
+    <MissingClass>org.codehaus.enunciate.contract.validation.ValidationResult</MissingClass>
+    <MissingClass>org.codehaus.enunciate.main.Enunciate</MissingClass>
+    <MissingClass>org.codehaus.enunciate.main.FileArtifact</MissingClass>
+    <MissingClass>org.codehaus.enunciate.main.webapp.WebAppFragment</MissingClass>
+    <MissingClass>org.codehaus.enunciate.modules.FreemarkerDeploymentModule</MissingClass>
+    <MissingClass>org.springframework.util.AntPathMatcher</MissingClass>
+    <MissingClass>org.springframework.util.PathMatcher</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 5 Mar 2009 03:39:34 +0200" total_classes="24" referenced_classes="79" total_bugs="10" total_size="1401" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="25.16" clock_seconds="14.34" peak_mbytes="73.26" alloc_mbytes="763.88" gc_seconds="0.24" priority_2="9" priority_1="1">
+    <PackageStats package="org.codehaus.enunciate.modules.spring_app" total_bugs="9" total_types="5" total_size="622" priority_2="8" priority_1="1">
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.PatternFileFilter" sourceFile="PatternFileFilter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.ServiceEndpointBeanIdMethod" sourceFile="ServiceEndpointBeanIdMethod.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.ServletPatternToAntPattern" sourceFile="ServletPatternToAntPattern.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.SpringAppDeploymentModule" sourceFile="SpringAppDeploymentModule.java" interface="false" size="573" bugs="9" priority_2="8" priority_1="1"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.SpringAppValidator" sourceFile="SpringAppValidator.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.codehaus.enunciate.modules.spring_app.config" total_bugs="0" total_types="9" total_size="369">
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.CopyResources" sourceFile="CopyResources.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.GlobalServiceInterceptor" sourceFile="GlobalServiceInterceptor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.HandlerInterceptor" sourceFile="HandlerInterceptor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.IncludeExcludeLibs" sourceFile="IncludeExcludeLibs.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.SpringAppRuleSet" sourceFile="SpringAppRuleSet.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.SpringImport" sourceFile="SpringImport.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.WarConfig" sourceFile="WarConfig.java" interface="false" size="149" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.WarLib" sourceFile="WarLib.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.WebAppResource" sourceFile="WebAppResource.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.codehaus.enunciate.modules.spring_app.config.security" total_bugs="1" total_types="10" total_size="410" priority_2="1">
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.AnonymousConfig" sourceFile="AnonymousConfig.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.BasicAuthConfig" sourceFile="BasicAuthConfig.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.BeanReference" sourceFile="BeanReference.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.DigestAuthConfig" sourceFile="DigestAuthConfig.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.EntryPointConfig" sourceFile="EntryPointConfig.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.FormBasedLoginConfig" sourceFile="FormBasedLoginConfig.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.FormBasedLogoutConfig" sourceFile="FormBasedLogoutConfig.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.OAuthConfig" sourceFile="OAuthConfig.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.RememberMeConfig" sourceFile="RememberMeConfig.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.spring_app.config.security.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="166" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1634" invocations="270" avgMicrosecondsPerInvocation="6054" maxMicrosecondsPerInvocation="370668" standardDeviationMircosecondsPerInvocation="31105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1308" invocations="266" avgMicrosecondsPerInvocation="4919" maxMicrosecondsPerInvocation="327823" standardDeviationMircosecondsPerInvocation="23517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1002" invocations="266" avgMicrosecondsPerInvocation="3769" maxMicrosecondsPerInvocation="291697" standardDeviationMircosecondsPerInvocation="20173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="938" invocations="266" avgMicrosecondsPerInvocation="3526" maxMicrosecondsPerInvocation="133457" standardDeviationMircosecondsPerInvocation="12380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="768" invocations="266" avgMicrosecondsPerInvocation="2889" maxMicrosecondsPerInvocation="161867" standardDeviationMircosecondsPerInvocation="13069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="687" invocations="630" avgMicrosecondsPerInvocation="1091" maxMicrosecondsPerInvocation="48335" standardDeviationMircosecondsPerInvocation="3530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="479" invocations="79" avgMicrosecondsPerInvocation="6065" maxMicrosecondsPerInvocation="80074" standardDeviationMircosecondsPerInvocation="13309"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="478" invocations="266" avgMicrosecondsPerInvocation="1799" maxMicrosecondsPerInvocation="83211" standardDeviationMircosecondsPerInvocation="7094"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="407" invocations="633" avgMicrosecondsPerInvocation="644" maxMicrosecondsPerInvocation="68488" standardDeviationMircosecondsPerInvocation="3957"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="358" invocations="79" avgMicrosecondsPerInvocation="4540" maxMicrosecondsPerInvocation="48021" standardDeviationMircosecondsPerInvocation="8672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="351" invocations="67" avgMicrosecondsPerInvocation="5247" maxMicrosecondsPerInvocation="103121" standardDeviationMircosecondsPerInvocation="13821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="248" invocations="266" avgMicrosecondsPerInvocation="933" maxMicrosecondsPerInvocation="58971" standardDeviationMircosecondsPerInvocation="4404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="245" invocations="492" avgMicrosecondsPerInvocation="499" maxMicrosecondsPerInvocation="49529" standardDeviationMircosecondsPerInvocation="2691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="243" invocations="79" avgMicrosecondsPerInvocation="3078" maxMicrosecondsPerInvocation="47889" standardDeviationMircosecondsPerInvocation="7497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="241" invocations="266" avgMicrosecondsPerInvocation="909" maxMicrosecondsPerInvocation="32761" standardDeviationMircosecondsPerInvocation="3423"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="212" invocations="564" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="78026" standardDeviationMircosecondsPerInvocation="3491"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="171" invocations="79" avgMicrosecondsPerInvocation="2166" maxMicrosecondsPerInvocation="73373" standardDeviationMircosecondsPerInvocation="8726"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="145" invocations="79" avgMicrosecondsPerInvocation="1841" maxMicrosecondsPerInvocation="34491" standardDeviationMircosecondsPerInvocation="4359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="142" invocations="266" avgMicrosecondsPerInvocation="535" maxMicrosecondsPerInvocation="26751" standardDeviationMircosecondsPerInvocation="2553"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

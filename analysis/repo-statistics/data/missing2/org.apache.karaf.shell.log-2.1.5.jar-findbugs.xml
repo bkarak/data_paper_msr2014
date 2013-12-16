@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1303915778000" analysisTimestamp="1360871042798" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/karaf/shell/org.apache.karaf.shell.log/2.1.5/org.apache.karaf.shell.log-2.1.5.jar</Jar>
+  </Project>
+  <BugInstance type="ES_COMPARING_STRINGS_WITH_EQ" priority="2" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="org.apache.karaf.shell.log.GetLogLevel">
+      <SourceLine classname="org.apache.karaf.shell.log.GetLogLevel" start="35" end="116" sourcefile="GetLogLevel.java" sourcepath="org/apache/karaf/shell/log/GetLogLevel.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.shell.log.GetLogLevel" name="doExecute" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.karaf.shell.log.GetLogLevel" start="47" end="96" startBytecode="0" endBytecode="183" sourcefile="GetLogLevel.java" sourcepath="org/apache/karaf/shell/log/GetLogLevel.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Field classname="org.apache.karaf.shell.log.GetLogLevel" name="logger" signature="Ljava/lang/String;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.apache.karaf.shell.log.GetLogLevel" sourcefile="GetLogLevel.java" sourcepath="org/apache/karaf/shell/log/GetLogLevel.java"/>
+    </Field>
+    <LocalVariable name="logger" register="4" pc="390" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.karaf.shell.log.GetLogLevel" start="91" end="91" startBytecode="393" endBytecode="393" sourcefile="GetLogLevel.java" sourcepath="org/apache/karaf/shell/log/GetLogLevel.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.apache.karaf.shell.log.GetLogLevel">
+      <SourceLine classname="org.apache.karaf.shell.log.GetLogLevel" start="35" end="116" sourcefile="GetLogLevel.java" sourcepath="org/apache/karaf/shell/log/GetLogLevel.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.shell.log.GetLogLevel" name="doExecute" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.karaf.shell.log.GetLogLevel" start="47" end="96" startBytecode="0" endBytecode="807" sourcefile="GetLogLevel.java" sourcepath="org/apache/karaf/shell/log/GetLogLevel.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.shell.log.GetLogLevel" start="66" end="66" startBytecode="237" endBytecode="237" sourcefile="GetLogLevel.java" sourcepath="org/apache/karaf/shell/log/GetLogLevel.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.karaf.shell.log.layout.AbsoluteTimeDateFormat">
+      <SourceLine classname="org.apache.karaf.shell.log.layout.AbsoluteTimeDateFormat" start="61" end="143" sourcefile="AbsoluteTimeDateFormat.java" sourcepath="org/apache/karaf/shell/log/layout/AbsoluteTimeDateFormat.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.shell.log.layout.AbsoluteTimeDateFormat" name="format" signature="(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;" isStatic="false">
+      <SourceLine classname="org.apache.karaf.shell.log.layout.AbsoluteTimeDateFormat" start="85" end="135" startBytecode="0" endBytecode="477" sourcefile="AbsoluteTimeDateFormat.java" sourcepath="org/apache/karaf/shell/log/layout/AbsoluteTimeDateFormat.java"/>
+    </Method>
+    <Field classname="org.apache.karaf.shell.log.layout.AbsoluteTimeDateFormat" name="previousTime" signature="J" isStatic="true">
+      <SourceLine classname="org.apache.karaf.shell.log.layout.AbsoluteTimeDateFormat" sourcefile="AbsoluteTimeDateFormat.java" sourcepath="org/apache/karaf/shell/log/layout/AbsoluteTimeDateFormat.java"/>
+    </Field>
+    <SourceLine classname="org.apache.karaf.shell.log.layout.AbsoluteTimeDateFormat" start="121" end="121" startBytecode="179" endBytecode="179" sourcefile="AbsoluteTimeDateFormat.java" sourcepath="org/apache/karaf/shell/log/layout/AbsoluteTimeDateFormat.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.karaf.shell.log.layout.ISO8601DateFormat">
+      <SourceLine classname="org.apache.karaf.shell.log.layout.ISO8601DateFormat" start="46" end="152" sourcefile="ISO8601DateFormat.java" sourcepath="org/apache/karaf/shell/log/layout/ISO8601DateFormat.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.shell.log.layout.ISO8601DateFormat" name="format" signature="(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;" isStatic="false">
+      <SourceLine classname="org.apache.karaf.shell.log.layout.ISO8601DateFormat" start="67" end="144" startBytecode="0" endBytecode="814" sourcefile="ISO8601DateFormat.java" sourcepath="org/apache/karaf/shell/log/layout/ISO8601DateFormat.java"/>
+    </Method>
+    <Field classname="org.apache.karaf.shell.log.layout.ISO8601DateFormat" name="lastTime" signature="J" isStatic="true">
+      <SourceLine classname="org.apache.karaf.shell.log.layout.ISO8601DateFormat" sourcefile="ISO8601DateFormat.java" sourcepath="org/apache/karaf/shell/log/layout/ISO8601DateFormat.java"/>
+    </Field>
+    <SourceLine classname="org.apache.karaf.shell.log.layout.ISO8601DateFormat" start="131" end="131" startBytecode="398" endBytecode="398" sourcefile="ISO8601DateFormat.java" sourcepath="org/apache/karaf/shell/log/layout/ISO8601DateFormat.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.karaf.shell.log.layout.PatternParser">
+      <SourceLine classname="org.apache.karaf.shell.log.layout.PatternParser" start="47" end="373" sourcefile="PatternParser.java" sourcepath="org/apache/karaf/shell/log/layout/PatternParser.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.shell.log.layout.PatternParser" name="parse" signature="()Lorg/apache/karaf/shell/log/layout/PatternConverter;" isStatic="false">
+      <SourceLine classname="org.apache.karaf.shell.log.layout.PatternParser" start="135" end="227" startBytecode="0" endBytecode="837" sourcefile="PatternParser.java" sourcepath="org/apache/karaf/shell/log/layout/PatternParser.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.shell.log.layout.PatternParser" start="138" end="218" startBytecode="39" endBytecode="529" sourcefile="PatternParser.java" sourcepath="org/apache/karaf/shell/log/layout/PatternParser.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.karaf.shell.log.layout.PatternParser$LocationPatternConverter">
+      <SourceLine classname="org.apache.karaf.shell.log.layout.PatternParser$LocationPatternConverter" start="452" end="469" sourcefile="PatternParser.java" sourcepath="org/apache/karaf/shell/log/layout/PatternParser.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.karaf.shell.log.layout.PatternParser$MDCPatternConverter">
+      <SourceLine classname="org.apache.karaf.shell.log.layout.PatternParser$MDCPatternConverter" start="532" end="560" sourcefile="PatternParser.java" sourcepath="org/apache/karaf/shell/log/layout/PatternParser.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="9">
+    <MissingClass>org.apache.karaf.shell.console.OsgiCommandSupport</MissingClass>
+    <MissingClass>org.apache.karaf.shell.console.completer.StringsCompleter</MissingClass>
+    <MissingClass>org.apache.log4j.spi.LoggingEvent</MissingClass>
+    <MissingClass>org.ops4j.pax.logging.spi.PaxLevel</MissingClass>
+    <MissingClass>org.ops4j.pax.logging.spi.PaxLocationInfo</MissingClass>
+    <MissingClass>org.ops4j.pax.logging.spi.PaxLoggingEvent</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.service.cm.Configuration</MissingClass>
+    <MissingClass>org.osgi.service.cm.ConfigurationAdmin</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 27 Apr 2011 17:49:38 +0300" total_classes="22" referenced_classes="82" total_bugs="7" total_size="764" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="15.63" clock_seconds="15.79" peak_mbytes="63.70" alloc_mbytes="763.88" gc_seconds="0.17" priority_2="7">
+    <PackageStats package="org.apache.karaf.shell.log" total_bugs="2" total_types="7" total_size="261" priority_2="2">
+      <ClassStats class="org.apache.karaf.shell.log.DisplayException" sourceFile="DisplayException.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.DisplayLog" sourceFile="DisplayLog.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.GetLogLevel" sourceFile="GetLogLevel.java" interface="false" size="59" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.karaf.shell.log.Level" sourceFile="Level.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.LruList" sourceFile="LruList.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.SetLogLevel" sourceFile="SetLogLevel.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.VmLogAppender" sourceFile="VmLogAppender.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.karaf.shell.log.completers" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="org.apache.karaf.shell.log.completers.LogLevelCompleter" sourceFile="LogLevelCompleter.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.karaf.shell.log.layout" total_bugs="5" total_types="14" total_size="495" priority_2="5">
+      <ClassStats class="org.apache.karaf.shell.log.layout.AbsoluteTimeDateFormat" sourceFile="AbsoluteTimeDateFormat.java" interface="false" size="49" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.DateTimeDateFormat" sourceFile="DateTimeDateFormat.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.FormattingInfo" sourceFile="FormattingInfo.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.ISO8601DateFormat" sourceFile="ISO8601DateFormat.java" interface="false" size="66" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.PatternConverter" sourceFile="PatternConverter.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.PatternParser" sourceFile="PatternParser.java" interface="false" size="179" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.PatternParser$BasicPatternConverter" sourceFile="PatternParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.PatternParser$CategoryPatternConverter" sourceFile="PatternParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.PatternParser$ClassNamePatternConverter" sourceFile="PatternParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.PatternParser$DatePatternConverter" sourceFile="PatternParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.PatternParser$LiteralPatternConverter" sourceFile="PatternParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.PatternParser$LocationPatternConverter" sourceFile="PatternParser.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.PatternParser$MDCPatternConverter" sourceFile="PatternParser.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.karaf.shell.log.layout.PatternParser$NamedPatternConverter" sourceFile="PatternParser.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1982" invocations="468" avgMicrosecondsPerInvocation="4235" maxMicrosecondsPerInvocation="194029" standardDeviationMircosecondsPerInvocation="16493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="860" invocations="82" avgMicrosecondsPerInvocation="10492" maxMicrosecondsPerInvocation="285754" standardDeviationMircosecondsPerInvocation="35920"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="703" invocations="82" avgMicrosecondsPerInvocation="8578" maxMicrosecondsPerInvocation="138749" standardDeviationMircosecondsPerInvocation="23672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="618" invocations="82" avgMicrosecondsPerInvocation="7547" maxMicrosecondsPerInvocation="118150" standardDeviationMircosecondsPerInvocation="19010"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="570" invocations="83" avgMicrosecondsPerInvocation="6878" maxMicrosecondsPerInvocation="119516" standardDeviationMircosecondsPerInvocation="21438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="566" invocations="82" avgMicrosecondsPerInvocation="6903" maxMicrosecondsPerInvocation="96569" standardDeviationMircosecondsPerInvocation="16969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="560" invocations="82" avgMicrosecondsPerInvocation="6834" maxMicrosecondsPerInvocation="110008" standardDeviationMircosecondsPerInvocation="17584"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="417" invocations="83" avgMicrosecondsPerInvocation="5035" maxMicrosecondsPerInvocation="58551" standardDeviationMircosecondsPerInvocation="12369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="400" invocations="82" avgMicrosecondsPerInvocation="4887" maxMicrosecondsPerInvocation="83332" standardDeviationMircosecondsPerInvocation="14962"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="385" invocations="413" avgMicrosecondsPerInvocation="933" maxMicrosecondsPerInvocation="94973" standardDeviationMircosecondsPerInvocation="5774"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="349" invocations="82" avgMicrosecondsPerInvocation="4262" maxMicrosecondsPerInvocation="59777" standardDeviationMircosecondsPerInvocation="11100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="308" invocations="275" avgMicrosecondsPerInvocation="1122" maxMicrosecondsPerInvocation="41990" standardDeviationMircosecondsPerInvocation="4122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="277" invocations="84" avgMicrosecondsPerInvocation="3301" maxMicrosecondsPerInvocation="139604" standardDeviationMircosecondsPerInvocation="17360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="254" invocations="82" avgMicrosecondsPerInvocation="3099" maxMicrosecondsPerInvocation="64983" standardDeviationMircosecondsPerInvocation="9713"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="236" invocations="82" avgMicrosecondsPerInvocation="2885" maxMicrosecondsPerInvocation="142373" standardDeviationMircosecondsPerInvocation="15861"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="223" invocations="82" avgMicrosecondsPerInvocation="2726" maxMicrosecondsPerInvocation="33804" standardDeviationMircosecondsPerInvocation="6451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="222" invocations="102" avgMicrosecondsPerInvocation="2182" maxMicrosecondsPerInvocation="63975" standardDeviationMircosecondsPerInvocation="7525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="203" invocations="10" avgMicrosecondsPerInvocation="20368" maxMicrosecondsPerInvocation="88271" standardDeviationMircosecondsPerInvocation="29342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="200" invocations="22" avgMicrosecondsPerInvocation="9098" maxMicrosecondsPerInvocation="170103" standardDeviationMircosecondsPerInvocation="35211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="175" invocations="63" avgMicrosecondsPerInvocation="2779" maxMicrosecondsPerInvocation="43310" standardDeviationMircosecondsPerInvocation="6416"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

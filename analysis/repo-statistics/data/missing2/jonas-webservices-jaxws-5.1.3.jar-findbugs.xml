@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1286211827000" analysisTimestamp="1360915977601" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/jonas-webservices-jaxws/5.1.3/jonas-webservices-jaxws-5.1.3.jar</Jar>
+  </Project>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.ws.jaxws.handler.builder.AnnotationHandlerChainBuilder$HandlerChainAnnotation">
+      <SourceLine classname="org.ow2.jonas.ws.jaxws.handler.builder.AnnotationHandlerChainBuilder$HandlerChainAnnotation" start="189" end="199" sourcefile="AnnotationHandlerChainBuilder.java" sourcepath="org/ow2/jonas/ws/jaxws/handler/builder/AnnotationHandlerChainBuilder.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="44">
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.EZBContainer</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.Factory</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.bean.info.IBeanInfo</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.bean.info.ISecurityInfo</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.bean.info.IWebServiceInfo</MissingClass>
+    <MissingClass>org.ow2.easybeans.deployment.helper.JavaContextHelper</MissingClass>
+    <MissingClass>org.ow2.easybeans.deployment.metadata.ejbjar.EasyBeansEjbJarClassMetadata</MissingClass>
+    <MissingClass>org.ow2.easybeans.deployment.metadata.ejbjar.EasyBeansEjbJarFieldMetadata</MissingClass>
+    <MissingClass>org.ow2.easybeans.deployment.metadata.ejbjar.EasyBeansEjbJarMethodMetadata</MissingClass>
+    <MissingClass>org.ow2.easybeans.deployment.util.BytecodeDescriptorHelper</MissingClass>
+    <MissingClass>org.ow2.easybeans.event.naming.EnvNamingEvent</MissingClass>
+    <MissingClass>org.ow2.jonas.jmx.JmxService</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.service.AbsServiceImpl</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.JonasObjectName</MissingClass>
+    <MissingClass>org.ow2.jonas.ws.jaxws.IWSRequest</MissingClass>
+    <MissingClass>org.ow2.jonas.ws.jaxws.IWebServiceEndpoint</MissingClass>
+    <MissingClass>org.ow2.jonas.ws.jaxws.IWebservicesContainer</MissingClass>
+    <MissingClass>org.ow2.jonas.ws.jaxws.PortIdentifier</MissingClass>
+    <MissingClass>org.ow2.jonas.ws.jaxws.PortMetaData</MissingClass>
+    <MissingClass>org.ow2.util.annotation.processor.DefaultAnnotationProcessor</MissingClass>
+    <MissingClass>org.ow2.util.annotation.processor.IAnnotationProcessor</MissingClass>
+    <MissingClass>org.ow2.util.annotation.processor.ProcessorException</MissingClass>
+    <MissingClass>org.ow2.util.annotation.processor.handler.AbstractAnnotationHandler</MissingClass>
+    <MissingClass>org.ow2.util.annotation.processor.handler.AbstractInjectionHandler</MissingClass>
+    <MissingClass>org.ow2.util.ee.builder.webserviceref.Constants</MissingClass>
+    <MissingClass>org.ow2.util.ee.builder.webserviceref.ReferenceHelper</MissingClass>
+    <MissingClass>org.ow2.util.ee.builder.webserviceref.WebServiceRefBuilder</MissingClass>
+    <MissingClass>org.ow2.util.ee.builder.webserviceref.factory.WebServiceRefObjectFactory</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.struct.IJaxwsWebServiceRef</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.xml.struct.IHandler</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.xml.struct.IHandlerChain</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.api.xml.struct.IHandlerChains</MissingClass>
+    <MissingClass>org.ow2.util.ee.metadata.common.impl.xml.parsing.HandlerChainsLoader</MissingClass>
+    <MissingClass>org.ow2.util.event.api.EventPriority</MissingClass>
+    <MissingClass>org.ow2.util.event.api.IEvent</MissingClass>
+    <MissingClass>org.ow2.util.log.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.structures.JField</MissingClass>
+    <MissingClass>org.ow2.util.scan.api.metadata.structures.JMethod</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 4 Oct 2010 20:03:47 +0300" total_classes="22" referenced_classes="80" total_bugs="1" total_size="670" num_packages="9" vm_version="20.4-b02-402" cpu_seconds="14.66" clock_seconds="9.49" peak_mbytes="63.62" alloc_mbytes="763.88" gc_seconds="0.18" priority_2="1">
+    <PackageStats package="org.ow2.jonas.ws.jaxws.base" total_bugs="0" total_types="4" total_size="106">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.base.JAXWSService" sourceFile="JAXWSService.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.base.JAXWSServiceMBean" sourceFile="JAXWSServiceMBean.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.base.JAXWSWebservicesContainer" sourceFile="JAXWSWebservicesContainer.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.base.JAXWSWebservicesModule" sourceFile="JAXWSWebservicesModule.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.client" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.client.JAXWSWebServiceRefBuilder" sourceFile="JAXWSWebServiceRefBuilder.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.client.factory" total_bugs="0" total_types="1" total_size="32">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.client.factory.JAXWSWebServiceRefObjectFactory" sourceFile="JAXWSWebServiceRefObjectFactory.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.easybeans" total_bugs="0" total_types="2" total_size="52">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.easybeans.EasyBeansContextNamingInfo" sourceFile="EasyBeansContextNamingInfo.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.easybeans.EasyBeansSecurityConstraint" sourceFile="EasyBeansSecurityConstraint.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.easybeans.naming" total_bugs="0" total_types="1" total_size="70">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.easybeans.naming.WebServiceRefExtensionListener" sourceFile="WebServiceRefExtensionListener.java" interface="false" size="70" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.handler" total_bugs="0" total_types="3" total_size="107">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.handler.HandlerResourceProcessor" sourceFile="HandlerResourceProcessor.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.handler.JOnASHandlerResolver" sourceFile="JOnASHandlerResolver.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.handler.PostConstructProcessor" sourceFile="PostConstructProcessor.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.handler.builder" total_bugs="1" total_types="6" total_size="203" priority_2="1">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.handler.builder.AnnotationHandlerChainBuilder" sourceFile="AnnotationHandlerChainBuilder.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.handler.builder.AnnotationHandlerChainBuilder$HandlerChainAnnotation" sourceFile="AnnotationHandlerChainBuilder.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.handler.builder.BindingUtils" sourceFile="BindingUtils.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.handler.builder.DescriptorHandlerChainBuilder" sourceFile="DescriptorHandlerChainBuilder.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.handler.builder.HandlerBuilder" sourceFile="HandlerBuilder.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.handler.builder.HandlerChainBuilder" sourceFile="HandlerChainBuilder.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.http.servlet" total_bugs="0" total_types="3" total_size="70">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.http.servlet.JAXWSServlet" sourceFile="JAXWSServlet.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.http.servlet.ServletRequestAdapter" sourceFile="ServletRequestAdapter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.ws.jaxws.http.servlet.ServletResponseAdapter" sourceFile="ServletResponseAdapter.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.ws.jaxws.util" total_bugs="0" total_types="1" total_size="25">
+      <ClassStats class="org.ow2.jonas.ws.jaxws.util.JAXWSClassUtils" sourceFile="JAXWSClassUtils.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="904" invocations="638" avgMicrosecondsPerInvocation="1417" maxMicrosecondsPerInvocation="91194" standardDeviationMircosecondsPerInvocation="6066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="599" invocations="80" avgMicrosecondsPerInvocation="7499" maxMicrosecondsPerInvocation="75990" standardDeviationMircosecondsPerInvocation="14471"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="546" invocations="80" avgMicrosecondsPerInvocation="6827" maxMicrosecondsPerInvocation="61140" standardDeviationMircosecondsPerInvocation="13999"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="538" invocations="117" avgMicrosecondsPerInvocation="4600" maxMicrosecondsPerInvocation="91197" standardDeviationMircosecondsPerInvocation="12678"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="426" invocations="120" avgMicrosecondsPerInvocation="3553" maxMicrosecondsPerInvocation="69145" standardDeviationMircosecondsPerInvocation="9230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="398" invocations="120" avgMicrosecondsPerInvocation="3317" maxMicrosecondsPerInvocation="75868" standardDeviationMircosecondsPerInvocation="9111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="347" invocations="80" avgMicrosecondsPerInvocation="4339" maxMicrosecondsPerInvocation="37669" standardDeviationMircosecondsPerInvocation="7875"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="283" invocations="124" avgMicrosecondsPerInvocation="2287" maxMicrosecondsPerInvocation="38255" standardDeviationMircosecondsPerInvocation="5192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="260" invocations="128" avgMicrosecondsPerInvocation="2038" maxMicrosecondsPerInvocation="56743" standardDeviationMircosecondsPerInvocation="6039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="245" invocations="80" avgMicrosecondsPerInvocation="3066" maxMicrosecondsPerInvocation="44661" standardDeviationMircosecondsPerInvocation="8284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="228" invocations="314" avgMicrosecondsPerInvocation="728" maxMicrosecondsPerInvocation="28164" standardDeviationMircosecondsPerInvocation="2463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="186" invocations="120" avgMicrosecondsPerInvocation="1550" maxMicrosecondsPerInvocation="28707" standardDeviationMircosecondsPerInvocation="4208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="179" invocations="121" avgMicrosecondsPerInvocation="1487" maxMicrosecondsPerInvocation="155177" standardDeviationMircosecondsPerInvocation="14037"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="178" invocations="104" avgMicrosecondsPerInvocation="1713" maxMicrosecondsPerInvocation="27172" standardDeviationMircosecondsPerInvocation="3740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="171" invocations="80" avgMicrosecondsPerInvocation="2139" maxMicrosecondsPerInvocation="37693" standardDeviationMircosecondsPerInvocation="5842"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="168" invocations="80" avgMicrosecondsPerInvocation="2105" maxMicrosecondsPerInvocation="27551" standardDeviationMircosecondsPerInvocation="4467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="155" invocations="131" avgMicrosecondsPerInvocation="1183" maxMicrosecondsPerInvocation="63569" standardDeviationMircosecondsPerInvocation="6071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="137" invocations="641" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="21792" standardDeviationMircosecondsPerInvocation="1316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="127" invocations="80" avgMicrosecondsPerInvocation="1596" maxMicrosecondsPerInvocation="34753" standardDeviationMircosecondsPerInvocation="4212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="115" invocations="80" avgMicrosecondsPerInvocation="1438" maxMicrosecondsPerInvocation="27881" standardDeviationMircosecondsPerInvocation="4106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="113" invocations="541" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="11803" standardDeviationMircosecondsPerInvocation="777"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

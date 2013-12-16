@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1165599519000" analysisTimestamp="1360901058648" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/maven/scm/maven-scm-provider-cvsexe/1.0-beta-4/maven-scm-provider-cvsexe-1.0-beta-4.jar</Jar>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.maven.scm.provider.cvslib.cvsexe.command.diff.CvsExeDiffCommand">
+      <SourceLine classname="org.apache.maven.scm.provider.cvslib.cvsexe.command.diff.CvsExeDiffCommand" start="33" end="60" sourcefile="CvsExeDiffCommand.java" sourcepath="org/apache/maven/scm/provider/cvslib/cvsexe/command/diff/CvsExeDiffCommand.java"/>
+    </Class>
+    <Method classname="org.apache.maven.scm.provider.cvslib.cvsexe.command.diff.CvsExeDiffCommand" name="executeCvsCommand" signature="(Lorg/codehaus/plexus/util/cli/Commandline;)Lorg/apache/maven/scm/command/diff/DiffScmResult;" isStatic="false">
+      <SourceLine classname="org.apache.maven.scm.provider.cvslib.cvsexe.command.diff.CvsExeDiffCommand" start="39" end="60" startBytecode="0" endBytecode="36" sourcefile="CvsExeDiffCommand.java" sourcepath="org/apache/maven/scm/provider/cvslib/cvsexe/command/diff/CvsExeDiffCommand.java"/>
+    </Method>
+    <LocalVariable name="exitCode" register="4" pc="32" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.maven.scm.provider.cvslib.cvsexe.command.diff.CvsExeDiffCommand" start="47" end="47" startBytecode="30" endBytecode="30" sourcefile="CvsExeDiffCommand.java" sourcepath="org/apache/maven/scm/provider/cvslib/cvsexe/command/diff/CvsExeDiffCommand.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="exitCode"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="31">
+    <MissingClass>org.apache.maven.scm.ScmException</MissingClass>
+    <MissingClass>org.apache.maven.scm.ScmFile</MissingClass>
+    <MissingClass>org.apache.maven.scm.ScmFileStatus</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.add.AddScmResult</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.changelog.ChangeLogScmResult</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.changelog.ChangeLogSet</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.checkin.CheckInScmResult</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.checkout.CheckOutScmResult</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.diff.DiffScmResult</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.remove.RemoveScmResult</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.status.StatusScmResult</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.tag.TagScmResult</MissingClass>
+    <MissingClass>org.apache.maven.scm.command.update.UpdateScmResult</MissingClass>
+    <MissingClass>org.apache.maven.scm.log.ScmLogger</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.AbstractCvsScmProvider</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.add.AbstractCvsAddCommand</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.changelog.AbstractCvsChangeLogCommand</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.changelog.CvsChangeLogConsumer</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.checkin.AbstractCvsCheckInCommand</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.checkout.AbstractCvsCheckOutCommand</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.diff.AbstractCvsDiffCommand</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.login.CvsLoginCommand</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.remove.AbstractCvsRemoveCommand</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.status.AbstractCvsStatusCommand</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.tag.AbstractCvsTagCommand</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.command.update.AbstractCvsUpdateCommand</MissingClass>
+    <MissingClass>org.apache.maven.scm.provider.cvslib.repository.CvsScmProviderRepository</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.FileUtils</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.CommandLineUtils</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.CommandLineUtils$StringStreamConsumer</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.Commandline</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2006 19:38:39 +0200" total_classes="16" referenced_classes="33" total_bugs="1" total_size="361" num_packages="10" vm_version="20.4-b02-402" cpu_seconds="11.14" clock_seconds="5.84" peak_mbytes="56.05" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="1">
+    <PackageStats package="org.apache.maven.scm.provider.cvslib.cvsexe" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.CvsExeScmProvider" sourceFile="CvsExeScmProvider.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.cvslib.cvsexe.command.add" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.add.CvsExeAddCommand" sourceFile="CvsExeAddCommand.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.cvslib.cvsexe.command.changelog" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.changelog.CvsExeChangeLogCommand" sourceFile="CvsExeChangeLogCommand.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.cvslib.cvsexe.command.checkin" total_bugs="0" total_types="2" total_size="39">
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.checkin.CvsCheckInConsumer" sourceFile="CvsCheckInConsumer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.checkin.CvsExeCheckInCommand" sourceFile="CvsExeCheckInCommand.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.cvslib.cvsexe.command.checkout" total_bugs="0" total_types="2" total_size="41">
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.checkout.CvsCheckOutConsumer" sourceFile="CvsCheckOutConsumer.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.checkout.CvsExeCheckOutCommand" sourceFile="CvsExeCheckOutCommand.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.cvslib.cvsexe.command.diff" total_bugs="1" total_types="2" total_size="79" priority_2="1">
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.diff.CvsDiffConsumer" sourceFile="CvsDiffConsumer.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.diff.CvsExeDiffCommand" sourceFile="CvsExeDiffCommand.java" interface="false" size="11" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.cvslib.cvsexe.command.remove" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.remove.CvsExeRemoveCommand" sourceFile="CvsExeRemoveCommand.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.cvslib.cvsexe.command.status" total_bugs="0" total_types="2" total_size="54">
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.status.CvsExeStatusCommand" sourceFile="CvsExeStatusCommand.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.status.CvsStatusConsumer" sourceFile="CvsStatusConsumer.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.cvslib.cvsexe.command.tag" total_bugs="0" total_types="2" total_size="33">
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.tag.CvsExeTagCommand" sourceFile="CvsExeTagCommand.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.tag.CvsTagConsumer" sourceFile="CvsTagConsumer.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.scm.provider.cvslib.cvsexe.command.update" total_bugs="0" total_types="2" total_size="53">
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.update.CvsExeUpdateCommand" sourceFile="CvsExeUpdateCommand.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.maven.scm.provider.cvslib.cvsexe.command.update.CvsUpdateConsumer" sourceFile="CvsUpdateConsumer.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="910" invocations="389" avgMicrosecondsPerInvocation="2341" maxMicrosecondsPerInvocation="111290" standardDeviationMircosecondsPerInvocation="9710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="249" invocations="33" avgMicrosecondsPerInvocation="7552" maxMicrosecondsPerInvocation="48194" standardDeviationMircosecondsPerInvocation="11815"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="246" invocations="50" avgMicrosecondsPerInvocation="4935" maxMicrosecondsPerInvocation="111427" standardDeviationMircosecondsPerInvocation="15952"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="204" invocations="33" avgMicrosecondsPerInvocation="6200" maxMicrosecondsPerInvocation="35617" standardDeviationMircosecondsPerInvocation="9688"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="173" invocations="33" avgMicrosecondsPerInvocation="5248" maxMicrosecondsPerInvocation="60412" standardDeviationMircosecondsPerInvocation="11119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="146" invocations="50" avgMicrosecondsPerInvocation="2929" maxMicrosecondsPerInvocation="26342" standardDeviationMircosecondsPerInvocation="5519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="145" invocations="50" avgMicrosecondsPerInvocation="2917" maxMicrosecondsPerInvocation="42731" standardDeviationMircosecondsPerInvocation="6845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="128" invocations="50" avgMicrosecondsPerInvocation="2570" maxMicrosecondsPerInvocation="23393" standardDeviationMircosecondsPerInvocation="4720"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="122" invocations="50" avgMicrosecondsPerInvocation="2455" maxMicrosecondsPerInvocation="26752" standardDeviationMircosecondsPerInvocation="4662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="119" invocations="50" avgMicrosecondsPerInvocation="2388" maxMicrosecondsPerInvocation="23653" standardDeviationMircosecondsPerInvocation="4744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="111" invocations="317" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="10741" standardDeviationMircosecondsPerInvocation="967"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="86" invocations="128" avgMicrosecondsPerInvocation="676" maxMicrosecondsPerInvocation="15282" standardDeviationMircosecondsPerInvocation="1410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="85" invocations="43" avgMicrosecondsPerInvocation="1991" maxMicrosecondsPerInvocation="25256" standardDeviationMircosecondsPerInvocation="4199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="76" invocations="33" avgMicrosecondsPerInvocation="2330" maxMicrosecondsPerInvocation="17914" standardDeviationMircosecondsPerInvocation="4030"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="70" invocations="33" avgMicrosecondsPerInvocation="2136" maxMicrosecondsPerInvocation="26264" standardDeviationMircosecondsPerInvocation="4874"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="67" invocations="78" avgMicrosecondsPerInvocation="871" maxMicrosecondsPerInvocation="38786" standardDeviationMircosecondsPerInvocation="4395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="60" invocations="16" avgMicrosecondsPerInvocation="3785" maxMicrosecondsPerInvocation="45658" standardDeviationMircosecondsPerInvocation="10849"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="51" invocations="50" avgMicrosecondsPerInvocation="1023" maxMicrosecondsPerInvocation="42519" standardDeviationMircosecondsPerInvocation="5931"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="42" invocations="33" avgMicrosecondsPerInvocation="1298" maxMicrosecondsPerInvocation="7870" standardDeviationMircosecondsPerInvocation="1768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="41" invocations="50" avgMicrosecondsPerInvocation="839" maxMicrosecondsPerInvocation="8038" standardDeviationMircosecondsPerInvocation="1284"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

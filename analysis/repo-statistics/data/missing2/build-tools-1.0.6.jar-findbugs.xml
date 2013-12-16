@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1189512258000" analysisTimestamp="1360918681034" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/myfaces/maven/build-tools/1.0.6/build-tools-1.0.6.jar</Jar>
+  </Project>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.myfaces.codegen.component.ComponentDef">
+      <SourceLine classname="org.apache.myfaces.codegen.component.ComponentDef" start="33" end="245" sourcefile="ComponentDef.java" sourcepath="org/apache/myfaces/codegen/component/ComponentDef.java"/>
+    </Class>
+    <Field classname="org.apache.myfaces.codegen.component.ComponentDef" name="IMPLICIT_PACKAGES" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.myfaces.codegen.component.ComponentDef" sourcefile="ComponentDef.java" sourcepath="org/apache/myfaces/codegen/component/ComponentDef.java"/>
+    </Field>
+    <SourceLine classname="org.apache.myfaces.codegen.component.ComponentDef" start="33" end="33" startBytecode="29" endBytecode="29" sourcefile="ComponentDef.java" sourcepath="org/apache/myfaces/codegen/component/ComponentDef.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.myfaces.codegen.component.ComponentGenerator">
+      <SourceLine classname="org.apache.myfaces.codegen.component.ComponentGenerator" start="43" end="134" sourcefile="ComponentGenerator.java" sourcepath="org/apache/myfaces/codegen/component/ComponentGenerator.java"/>
+    </Class>
+    <Method classname="org.apache.myfaces.codegen.component.ComponentGenerator" name="generateComponent" signature="(Lorg/apache/myfaces/codegen/component/ComponentDef;)V" isStatic="false">
+      <SourceLine classname="org.apache.myfaces.codegen.component.ComponentGenerator" start="63" end="123" startBytecode="0" endBytecode="707" sourcefile="ComponentGenerator.java" sourcepath="org/apache/myfaces/codegen/component/ComponentGenerator.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.myfaces.codegen.component.ComponentGenerator" start="83" end="83" startBytecode="255" endBytecode="255" sourcefile="ComponentGenerator.java" sourcepath="org/apache/myfaces/codegen/component/ComponentGenerator.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.myfaces.codegen.component.ComponentGenerator">
+      <SourceLine classname="org.apache.myfaces.codegen.component.ComponentGenerator" start="43" end="134" sourcefile="ComponentGenerator.java" sourcepath="org/apache/myfaces/codegen/component/ComponentGenerator.java"/>
+    </Class>
+    <Method classname="org.apache.myfaces.codegen.component.ComponentGenerator" name="generateComponent" signature="(Lorg/apache/myfaces/codegen/component/ComponentDef;)V" isStatic="false">
+      <SourceLine classname="org.apache.myfaces.codegen.component.ComponentGenerator" start="63" end="123" startBytecode="0" endBytecode="707" sourcefile="ComponentGenerator.java" sourcepath="org/apache/myfaces/codegen/component/ComponentGenerator.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;Z)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="90" end="91" startBytecode="0" endBytecode="41" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.myfaces.codegen.component.ComponentGenerator" start="80" end="80" startBytecode="234" endBytecode="234" sourcefile="ComponentGenerator.java" sourcepath="org/apache/myfaces/codegen/component/ComponentGenerator.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.myfaces.codegen.component.ComponentGenerator">
+      <SourceLine classname="org.apache.myfaces.codegen.component.ComponentGenerator" start="43" end="134" sourcefile="ComponentGenerator.java" sourcepath="org/apache/myfaces/codegen/component/ComponentGenerator.java"/>
+    </Class>
+    <Method classname="org.apache.myfaces.codegen.component.ComponentGenerator" name="generateComponent" signature="(Lorg/apache/myfaces/codegen/component/ComponentDef;)V" isStatic="false">
+      <SourceLine classname="org.apache.myfaces.codegen.component.ComponentGenerator" start="63" end="123" startBytecode="0" endBytecode="707" sourcefile="ComponentGenerator.java" sourcepath="org/apache/myfaces/codegen/component/ComponentGenerator.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.myfaces.codegen.component.ComponentGenerator" start="67" end="67" startBytecode="72" endBytecode="72" sourcefile="ComponentGenerator.java" sourcepath="org/apache/myfaces/codegen/component/ComponentGenerator.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="8">
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.tools.ant.DirectoryScanner</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.MatchingTask</MissingClass>
+    <MissingClass>org.apache.velocity.Template</MissingClass>
+    <MissingClass>org.apache.velocity.VelocityContext</MissingClass>
+    <MissingClass>org.apache.velocity.app.Velocity</MissingClass>
+    <MissingClass>org.apache.velocity.context.AbstractContext</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Sep 2007 15:04:18 +0300" total_classes="7" referenced_classes="59" total_bugs="4" total_size="475" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="18.94" clock_seconds="11.99" peak_mbytes="62.20" alloc_mbytes="763.88" gc_seconds="0.15" priority_2="2" priority_1="2">
+    <PackageStats package="org.apache.myfaces.codegen" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="org.apache.myfaces.codegen.CodeGenerator" sourceFile="CodeGenerator.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.myfaces.codegen.component" total_bugs="4" total_types="6" total_size="456" priority_2="2" priority_1="2">
+      <ClassStats class="org.apache.myfaces.codegen.component.ComponentDef" sourceFile="ComponentDef.java" interface="false" size="122" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.myfaces.codegen.component.ComponentDefinitionParser" sourceFile="ComponentDefinitionParser.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.codegen.component.ComponentDefinitionParser$_EntityResolver" sourceFile="ComponentDefinitionParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.codegen.component.ComponentGenerator" sourceFile="ComponentGenerator.java" interface="false" size="57" bugs="3" priority_2="1" priority_1="2"/>
+      <ClassStats class="org.apache.myfaces.codegen.component.ComponentGeneratorTask" sourceFile="ComponentGeneratorTask.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apache.myfaces.codegen.component.FieldDef" sourceFile="FieldDef.java" interface="false" size="140" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1172" invocations="466" avgMicrosecondsPerInvocation="2515" maxMicrosecondsPerInvocation="84401" standardDeviationMircosecondsPerInvocation="7324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="821" invocations="59" avgMicrosecondsPerInvocation="13921" maxMicrosecondsPerInvocation="165357" standardDeviationMircosecondsPerInvocation="28761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="595" invocations="59" avgMicrosecondsPerInvocation="10099" maxMicrosecondsPerInvocation="75798" standardDeviationMircosecondsPerInvocation="16538"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="556" invocations="88" avgMicrosecondsPerInvocation="6327" maxMicrosecondsPerInvocation="84905" standardDeviationMircosecondsPerInvocation="12757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="467" invocations="88" avgMicrosecondsPerInvocation="5309" maxMicrosecondsPerInvocation="49425" standardDeviationMircosecondsPerInvocation="9261"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="464" invocations="88" avgMicrosecondsPerInvocation="5278" maxMicrosecondsPerInvocation="85548" standardDeviationMircosecondsPerInvocation="13598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="419" invocations="88" avgMicrosecondsPerInvocation="4763" maxMicrosecondsPerInvocation="61473" standardDeviationMircosecondsPerInvocation="10934"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="380" invocations="59" avgMicrosecondsPerInvocation="6445" maxMicrosecondsPerInvocation="79586" standardDeviationMircosecondsPerInvocation="13343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="319" invocations="88" avgMicrosecondsPerInvocation="3631" maxMicrosecondsPerInvocation="43015" standardDeviationMircosecondsPerInvocation="7449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="301" invocations="278" avgMicrosecondsPerInvocation="1084" maxMicrosecondsPerInvocation="15614" standardDeviationMircosecondsPerInvocation="2392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="285" invocations="50" avgMicrosecondsPerInvocation="5716" maxMicrosecondsPerInvocation="53595" standardDeviationMircosecondsPerInvocation="11478"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="237" invocations="88" avgMicrosecondsPerInvocation="2703" maxMicrosecondsPerInvocation="39360" standardDeviationMircosecondsPerInvocation="6316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="229" invocations="59" avgMicrosecondsPerInvocation="3883" maxMicrosecondsPerInvocation="33911" standardDeviationMircosecondsPerInvocation="6551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="186" invocations="59" avgMicrosecondsPerInvocation="3161" maxMicrosecondsPerInvocation="26840" standardDeviationMircosecondsPerInvocation="5442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="181" invocations="59" avgMicrosecondsPerInvocation="3073" maxMicrosecondsPerInvocation="28982" standardDeviationMircosecondsPerInvocation="5795"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="171" invocations="59" avgMicrosecondsPerInvocation="2902" maxMicrosecondsPerInvocation="43874" standardDeviationMircosecondsPerInvocation="7011"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="153" invocations="417" avgMicrosecondsPerInvocation="368" maxMicrosecondsPerInvocation="13300" standardDeviationMircosecondsPerInvocation="1301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="143" invocations="88" avgMicrosecondsPerInvocation="1625" maxMicrosecondsPerInvocation="107024" standardDeviationMircosecondsPerInvocation="11360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="140" invocations="75" avgMicrosecondsPerInvocation="1878" maxMicrosecondsPerInvocation="30070" standardDeviationMircosecondsPerInvocation="4790"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="121" invocations="7" avgMicrosecondsPerInvocation="17349" maxMicrosecondsPerInvocation="84003" standardDeviationMircosecondsPerInvocation="28245"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1300996191000" analysisTimestamp="1360870478421" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/openengsb/core/openengsb-core-persistence/1.2.0.M4/openengsb-core-persistence-1.2.0.M4.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.openengsb.core.persistence.internal.NeodatisPersistenceManager">
+      <SourceLine classname="org.openengsb.core.persistence.internal.NeodatisPersistenceManager" start="33" end="77" sourcefile="NeodatisPersistenceManager.java" sourcepath="org/openengsb/core/persistence/internal/NeodatisPersistenceManager.java"/>
+    </Class>
+    <Method classname="org.openengsb.core.persistence.internal.NeodatisPersistenceManager" name="checkRootDirCreated" signature="()V" isStatic="false">
+      <SourceLine classname="org.openengsb.core.persistence.internal.NeodatisPersistenceManager" start="56" end="61" startBytecode="0" endBytecode="100" sourcefile="NeodatisPersistenceManager.java" sourcepath="org/openengsb/core/persistence/internal/NeodatisPersistenceManager.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.openengsb.core.persistence.internal.NeodatisPersistenceManager" start="60" end="60" startBytecode="14" endBytecode="14" sourcefile="NeodatisPersistenceManager.java" sourcepath="org/openengsb/core/persistence/internal/NeodatisPersistenceManager.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.openengsb.core.persistence.internal.NeodatisPersistenceService">
+      <SourceLine classname="org.openengsb.core.persistence.internal.NeodatisPersistenceService" start="46" end="257" sourcefile="NeodatisPersistenceService.java" sourcepath="org/openengsb/core/persistence/internal/NeodatisPersistenceService.java"/>
+    </Class>
+    <Method classname="org.openengsb.core.persistence.internal.NeodatisPersistenceService" name="&lt;init&gt;" signature="(Ljava/lang/String;Lorg/osgi/framework/Bundle;)V" isStatic="false">
+      <SourceLine classname="org.openengsb.core.persistence.internal.NeodatisPersistenceService" start="54" end="58" startBytecode="0" endBytecode="130" sourcefile="NeodatisPersistenceService.java" sourcepath="org/openengsb/core/persistence/internal/NeodatisPersistenceService.java"/>
+    </Method>
+    <Class classname="org.openengsb.core.persistence.internal.CustomClassLoader">
+      <SourceLine classname="org.openengsb.core.persistence.internal.CustomClassLoader" start="29" end="83" sourcefile="CustomClassLoader.java" sourcepath="org/openengsb/core/persistence/internal/CustomClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.openengsb.core.persistence.internal.NeodatisPersistenceService" start="57" end="57" startBytecode="27" endBytecode="27" sourcefile="NeodatisPersistenceService.java" sourcepath="org/openengsb/core/persistence/internal/NeodatisPersistenceService.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.neodatis.odb.ODB</MissingClass>
+    <MissingClass>org.neodatis.odb.ODBFactory</MissingClass>
+    <MissingClass>org.neodatis.odb.Objects</MissingClass>
+    <MissingClass>org.neodatis.odb.OdbConfiguration</MissingClass>
+    <MissingClass>org.neodatis.odb.core.query.nq.NativeQuery</MissingClass>
+    <MissingClass>org.openengsb.core.common.persistence.PersistenceException</MissingClass>
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 24 Mar 2011 21:49:51 +0200" total_classes="4" referenced_classes="75" total_bugs="2" total_size="231" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="12.66" clock_seconds="13.22" peak_mbytes="59.26" alloc_mbytes="763.88" gc_seconds="0.13" priority_2="2">
+    <PackageStats package="org.openengsb.core.persistence.internal" total_bugs="2" total_types="4" total_size="231" priority_2="2">
+      <ClassStats class="org.openengsb.core.persistence.internal.CustomClassLoader" sourceFile="CustomClassLoader.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.openengsb.core.persistence.internal.NeodatisGetterQuery" sourceFile="NeodatisGetterQuery.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.openengsb.core.persistence.internal.NeodatisPersistenceManager" sourceFile="NeodatisPersistenceManager.java" interface="false" size="35" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openengsb.core.persistence.internal.NeodatisPersistenceService" sourceFile="NeodatisPersistenceService.java" interface="false" size="136" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1436" invocations="561" avgMicrosecondsPerInvocation="2559" maxMicrosecondsPerInvocation="128762" standardDeviationMircosecondsPerInvocation="9629"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="887" invocations="75" avgMicrosecondsPerInvocation="11836" maxMicrosecondsPerInvocation="123038" standardDeviationMircosecondsPerInvocation="24401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="839" invocations="75" avgMicrosecondsPerInvocation="11191" maxMicrosecondsPerInvocation="101652" standardDeviationMircosecondsPerInvocation="21999"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="572" invocations="75" avgMicrosecondsPerInvocation="7639" maxMicrosecondsPerInvocation="120863" standardDeviationMircosecondsPerInvocation="22542"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="479" invocations="32" avgMicrosecondsPerInvocation="14975" maxMicrosecondsPerInvocation="92822" standardDeviationMircosecondsPerInvocation="24417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="427" invocations="564" avgMicrosecondsPerInvocation="758" maxMicrosecondsPerInvocation="95090" standardDeviationMircosecondsPerInvocation="6092"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="413" invocations="36" avgMicrosecondsPerInvocation="11481" maxMicrosecondsPerInvocation="76629" standardDeviationMircosecondsPerInvocation="16700"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="409" invocations="226" avgMicrosecondsPerInvocation="1813" maxMicrosecondsPerInvocation="45806" standardDeviationMircosecondsPerInvocation="5649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="301" invocations="36" avgMicrosecondsPerInvocation="8377" maxMicrosecondsPerInvocation="70182" standardDeviationMircosecondsPerInvocation="13496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="293" invocations="501" avgMicrosecondsPerInvocation="586" maxMicrosecondsPerInvocation="38038" standardDeviationMircosecondsPerInvocation="2880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="283" invocations="4" avgMicrosecondsPerInvocation="70858" maxMicrosecondsPerInvocation="185062" standardDeviationMircosecondsPerInvocation="69205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="282" invocations="32" avgMicrosecondsPerInvocation="8827" maxMicrosecondsPerInvocation="51209" standardDeviationMircosecondsPerInvocation="14079"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="269" invocations="32" avgMicrosecondsPerInvocation="8434" maxMicrosecondsPerInvocation="42224" standardDeviationMircosecondsPerInvocation="9830"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="228" invocations="75" avgMicrosecondsPerInvocation="3051" maxMicrosecondsPerInvocation="104636" standardDeviationMircosecondsPerInvocation="12686"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="228" invocations="100" avgMicrosecondsPerInvocation="2287" maxMicrosecondsPerInvocation="68397" standardDeviationMircosecondsPerInvocation="9579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="226" invocations="75" avgMicrosecondsPerInvocation="3013" maxMicrosecondsPerInvocation="88093" standardDeviationMircosecondsPerInvocation="10688"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="219" invocations="31" avgMicrosecondsPerInvocation="7069" maxMicrosecondsPerInvocation="36617" standardDeviationMircosecondsPerInvocation="10410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizationOnSharedBuiltinConstant" totalMilliseconds="214" invocations="4" avgMicrosecondsPerInvocation="53695" maxMicrosecondsPerInvocation="212579" standardDeviationMircosecondsPerInvocation="91732"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

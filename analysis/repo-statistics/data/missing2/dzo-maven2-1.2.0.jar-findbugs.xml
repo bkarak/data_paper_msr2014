@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1260220644000" analysisTimestamp="1360884729729" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/se/grunddata/dzo/dzo-maven2/1.2.0/dzo-maven2-1.2.0.jar</Jar>
+  </Project>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="se.grunddata.dzo.maven2.Dzo">
+      <SourceLine classname="se.grunddata.dzo.maven2.Dzo" start="38" end="194" sourcefile="Dzo.java" sourcepath="se/grunddata/dzo/maven2/Dzo.java"/>
+    </Class>
+    <Field classname="se.grunddata.dzo.maven2.Dzo" name="itsSchema" signature="Lse/grunddata/dzo/build/IDiffSchema;" isStatic="false">
+      <SourceLine classname="se.grunddata.dzo.maven2.Dzo" sourcefile="Dzo.java" sourcepath="se/grunddata/dzo/maven2/Dzo.java"/>
+    </Field>
+    <SourceLine classname="se.grunddata.dzo.maven2.Dzo" start="180" end="180" startBytecode="1" endBytecode="1" sourcefile="Dzo.java" sourcepath="se/grunddata/dzo/maven2/Dzo.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="8">
+    <MissingClass>org.apache.maven.plugin.AbstractMojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+    <MissingClass>se.grunddata.dzo.build.DiffSchema</MissingClass>
+    <MissingClass>se.grunddata.dzo.build.IDiffSchema</MissingClass>
+    <MissingClass>se.grunddata.dzo.gen.Generator</MissingClass>
+    <MissingClass>se.grunddata.util.CollectionWriter</MissingClass>
+    <MissingClass>se.grunddata.util.ConnectionPool</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 7 Dec 2009 23:17:24 +0200" total_classes="7" referenced_classes="19" total_bugs="1" total_size="162" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="8.19" clock_seconds="5.49" peak_mbytes="51.36" alloc_mbytes="763.88" gc_seconds="0.07" priority_2="1">
+    <PackageStats package="se.grunddata.dzo.maven2" total_bugs="1" total_types="7" total_size="162" priority_2="1">
+      <ClassStats class="se.grunddata.dzo.maven2.CompareExec" sourceFile="CompareExec.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="se.grunddata.dzo.maven2.CompareShow" sourceFile="CompareShow.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="se.grunddata.dzo.maven2.Dzo" sourceFile="Dzo.java" interface="false" size="102" bugs="1" priority_2="1"/>
+      <ClassStats class="se.grunddata.dzo.maven2.GenerateEjb3" sourceFile="GenerateEjb3.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="se.grunddata.dzo.maven2.Schema" sourceFile="Schema.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="se.grunddata.dzo.maven2.Source" sourceFile="Source.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="se.grunddata.dzo.maven2.Xml" sourceFile="Xml.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="703" invocations="295" avgMicrosecondsPerInvocation="2383" maxMicrosecondsPerInvocation="70703" standardDeviationMircosecondsPerInvocation="7493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="175" invocations="19" avgMicrosecondsPerInvocation="9227" maxMicrosecondsPerInvocation="37170" standardDeviationMircosecondsPerInvocation="12406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="160" invocations="19" avgMicrosecondsPerInvocation="8448" maxMicrosecondsPerInvocation="64624" standardDeviationMircosecondsPerInvocation="14915"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="148" invocations="19" avgMicrosecondsPerInvocation="7824" maxMicrosecondsPerInvocation="50138" standardDeviationMircosecondsPerInvocation="12855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="141" invocations="298" avgMicrosecondsPerInvocation="475" maxMicrosecondsPerInvocation="36827" standardDeviationMircosecondsPerInvocation="3128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="137" invocations="19" avgMicrosecondsPerInvocation="7257" maxMicrosecondsPerInvocation="52096" standardDeviationMircosecondsPerInvocation="14432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="119" invocations="19" avgMicrosecondsPerInvocation="6290" maxMicrosecondsPerInvocation="82547" standardDeviationMircosecondsPerInvocation="18419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="116" invocations="19" avgMicrosecondsPerInvocation="6143" maxMicrosecondsPerInvocation="67164" standardDeviationMircosecondsPerInvocation="15323"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="105" invocations="47" avgMicrosecondsPerInvocation="2239" maxMicrosecondsPerInvocation="56953" standardDeviationMircosecondsPerInvocation="8364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="95" invocations="47" avgMicrosecondsPerInvocation="2025" maxMicrosecondsPerInvocation="81863" standardDeviationMircosecondsPerInvocation="11829"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BadResultSetAccess" totalMilliseconds="93" invocations="7" avgMicrosecondsPerInvocation="13299" maxMicrosecondsPerInvocation="90990" standardDeviationMircosecondsPerInvocation="31718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="76" invocations="7" avgMicrosecondsPerInvocation="10951" maxMicrosecondsPerInvocation="75484" standardDeviationMircosecondsPerInvocation="26345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="75" invocations="19" avgMicrosecondsPerInvocation="3953" maxMicrosecondsPerInvocation="15287" standardDeviationMircosecondsPerInvocation="5457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="72" invocations="15" avgMicrosecondsPerInvocation="4860" maxMicrosecondsPerInvocation="72157" standardDeviationMircosecondsPerInvocation="17985"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="71" invocations="47" avgMicrosecondsPerInvocation="1526" maxMicrosecondsPerInvocation="31588" standardDeviationMircosecondsPerInvocation="5199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="67" invocations="7" avgMicrosecondsPerInvocation="9619" maxMicrosecondsPerInvocation="62984" standardDeviationMircosecondsPerInvocation="21819"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="66" invocations="247" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="7514" standardDeviationMircosecondsPerInvocation="650"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

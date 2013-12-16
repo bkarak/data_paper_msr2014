@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1132682680000" analysisTimestamp="1360915423212" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/activemq/activemq-web/4.0-M1/activemq-web-4.0-M1.jar</Jar>
+  </Project>
+  <BugInstance type="XSS_REQUEST_PARAMETER_TO_SERVLET_WRITER" priority="1" abbrev="XSS" category="SECURITY">
+    <Class classname="org.activemq.web.MessageServlet">
+      <SourceLine classname="org.activemq.web.MessageServlet" start="49" end="258" sourcefile="MessageServlet.java" sourcepath="org/activemq/web/MessageServlet.java"/>
+    </Class>
+    <Method classname="org.activemq.web.MessageServlet" name="sendMessageResponse" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/jms/Message;)V" isStatic="false">
+      <SourceLine classname="org.activemq.web.MessageServlet" start="180" end="218" startBytecode="0" endBytecode="450" sourcefile="MessageServlet.java" sourcepath="org/activemq/web/MessageServlet.java"/>
+    </Method>
+    <String value="id" role="STRING_PARAMETER_NAME"/>
+    <SourceLine classname="org.activemq.web.MessageServlet" start="185" end="185" startBytecode="45" endBytecode="45" sourcefile="MessageServlet.java" sourcepath="org/activemq/web/MessageServlet.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.activemq.web.PortfolioPublishServlet">
+      <SourceLine classname="org.activemq.web.PortfolioPublishServlet" start="37" end="128" sourcefile="PortfolioPublishServlet.java" sourcepath="org/activemq/web/PortfolioPublishServlet.java"/>
+    </Class>
+    <Field classname="org.activemq.web.PortfolioPublishServlet" name="ricoStyle" signature="Z" isStatic="false">
+      <SourceLine classname="org.activemq.web.PortfolioPublishServlet" sourcefile="PortfolioPublishServlet.java" sourcepath="org/activemq/web/PortfolioPublishServlet.java"/>
+    </Field>
+    <SourceLine classname="org.activemq.web.PortfolioPublishServlet" start="41" end="41" startBytecode="6" endBytecode="6" sourcefile="PortfolioPublishServlet.java" sourcepath="org/activemq/web/PortfolioPublishServlet.java"/>
+  </BugInstance>
+  <BugInstance type="XSS_REQUEST_PARAMETER_TO_SERVLET_WRITER" priority="2" abbrev="XSS" category="SECURITY">
+    <Class classname="org.activemq.web.PortfolioPublishServlet">
+      <SourceLine classname="org.activemq.web.PortfolioPublishServlet" start="37" end="128" sourcefile="PortfolioPublishServlet.java" sourcepath="org/activemq/web/PortfolioPublishServlet.java"/>
+    </Class>
+    <Method classname="org.activemq.web.PortfolioPublishServlet" name="doGet" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="org.activemq.web.PortfolioPublishServlet" start="51" end="79" startBytecode="0" endBytecode="443" sourcefile="PortfolioPublishServlet.java" sourcepath="org/activemq/web/PortfolioPublishServlet.java"/>
+    </Method>
+    <String value="refresh" role="STRING_PARAMETER_NAME"/>
+    <SourceLine classname="org.activemq.web.PortfolioPublishServlet" start="64" end="64" startBytecode="84" endBytecode="84" sourcefile="PortfolioPublishServlet.java" sourcepath="org/activemq/web/PortfolioPublishServlet.java" role="SOURCE_LINE_GENERATED_AT"/>
+    <LocalVariable name="refreshRate" register="7" pc="110" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.activemq.web.PortfolioPublishServlet" start="68" end="68" startBytecode="111" endBytecode="111" sourcefile="PortfolioPublishServlet.java" sourcepath="org/activemq/web/PortfolioPublishServlet.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="org.activemq.web.SpringBrokerContextListener">
+      <SourceLine classname="org.activemq.web.SpringBrokerContextListener" start="44" end="109" sourcefile="SpringBrokerContextListener.java" sourcepath="org/activemq/web/SpringBrokerContextListener.java"/>
+    </Class>
+    <Method classname="org.activemq.web.SpringBrokerContextListener" name="createBroker" signature="(Ljavax/servlet/ServletContext;)Lorg/activemq/broker/BrokerService;" isStatic="false">
+      <SourceLine classname="org.activemq.web.SpringBrokerContextListener" start="102" end="109" startBytecode="0" endBytecode="25" sourcefile="SpringBrokerContextListener.java" sourcepath="org/activemq/web/SpringBrokerContextListener.java"/>
+    </Method>
+    <LocalVariable name="resource" register="3" pc="51" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.activemq.web.SpringBrokerContextListener" start="107" end="107" startBytecode="50" endBytecode="50" sourcefile="SpringBrokerContextListener.java" sourcepath="org/activemq/web/SpringBrokerContextListener.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="resource"/>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_UPDATE_STATIC" priority="1" abbrev="LI" category="MT_CORRECTNESS">
+    <Class classname="org.activemq.web.WebClient">
+      <SourceLine classname="org.activemq.web.WebClient" start="63" end="242" sourcefile="WebClient.java" sourcepath="org/activemq/web/WebClient.java"/>
+    </Class>
+    <Method classname="org.activemq.web.WebClient" name="initContext" signature="(Ljavax/servlet/ServletContext;)V" isStatic="true">
+      <SourceLine classname="org.activemq.web.WebClient" start="85" end="92" startBytecode="0" endBytecode="20" sourcefile="WebClient.java" sourcepath="org/activemq/web/WebClient.java"/>
+    </Method>
+    <Field classname="org.activemq.web.WebClient" name="factory" signature="Ljavax/jms/ConnectionFactory;" isStatic="true" role="FIELD_ON">
+      <SourceLine classname="org.activemq.web.WebClient" sourcefile="WebClient.java" sourcepath="org/activemq/web/WebClient.java"/>
+    </Field>
+    <SourceLine classname="org.activemq.web.WebClient" start="86" end="88" startBytecode="7" endBytecode="32" sourcefile="WebClient.java" sourcepath="org/activemq/web/WebClient.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.activemq.web.WebClient">
+      <SourceLine classname="org.activemq.web.WebClient" start="63" end="242" sourcefile="WebClient.java" sourcepath="org/activemq/web/WebClient.java"/>
+    </Class>
+    <Method classname="org.activemq.web.WebClient" name="initContext" signature="(Ljavax/servlet/ServletContext;)V" isStatic="true">
+      <SourceLine classname="org.activemq.web.WebClient" start="85" end="92" startBytecode="0" endBytecode="119" sourcefile="WebClient.java" sourcepath="org/activemq/web/WebClient.java"/>
+    </Method>
+    <Field classname="org.activemq.web.WebClient" name="factory" signature="Ljavax/jms/ConnectionFactory;" isStatic="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.activemq.web.WebClient" sourcefile="WebClient.java" sourcepath="org/activemq/web/WebClient.java"/>
+    </Field>
+    <SourceLine classname="org.activemq.web.WebClient" start="86" end="86" startBytecode="10" endBytecode="10" sourcefile="WebClient.java" sourcepath="org/activemq/web/WebClient.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="28">
+    <MissingClass>edu.emory.mathcs.backport.java.util.concurrent.ConcurrentHashMap</MissingClass>
+    <MissingClass>javax.jms.ConnectionFactory</MissingClass>
+    <MissingClass>javax.jms.Destination</MissingClass>
+    <MissingClass>javax.jms.JMSException</MissingClass>
+    <MissingClass>javax.jms.Message</MissingClass>
+    <MissingClass>javax.jms.MessageConsumer</MissingClass>
+    <MissingClass>javax.jms.MessageProducer</MissingClass>
+    <MissingClass>javax.jms.ObjectMessage</MissingClass>
+    <MissingClass>javax.jms.Session</MissingClass>
+    <MissingClass>javax.jms.TextMessage</MissingClass>
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletContextEvent</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSessionEvent</MissingClass>
+    <MissingClass>org.activemq.ActiveMQConnection</MissingClass>
+    <MissingClass>org.activemq.ActiveMQConnectionFactory</MissingClass>
+    <MissingClass>org.activemq.ActiveMQSession</MissingClass>
+    <MissingClass>org.activemq.broker.BrokerService</MissingClass>
+    <MissingClass>org.activemq.command.ActiveMQQueue</MissingClass>
+    <MissingClass>org.activemq.command.ActiveMQTopic</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.springframework.web.context.support.ServletContextResource</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 22 Nov 2005 20:04:40 +0200" total_classes="8" referenced_classes="37" total_bugs="6" total_size="477" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="12.03" clock_seconds="8.74" peak_mbytes="58.60" alloc_mbytes="763.88" gc_seconds="0.14" priority_2="3" priority_1="3">
+    <PackageStats package="org.activemq.web" total_bugs="6" total_types="8" total_size="477" priority_2="3" priority_1="3">
+      <ClassStats class="org.activemq.web.ConnectionManager" sourceFile="ConnectionManager.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.activemq.web.MessageServlet" sourceFile="MessageServlet.java" interface="false" size="123" bugs="1" priority_1="1"/>
+      <ClassStats class="org.activemq.web.MessageServletSupport" sourceFile="MessageServletSupport.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.activemq.web.NoDestinationSuppliedException" sourceFile="NoDestinationSuppliedException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.activemq.web.PortfolioPublishServlet" sourceFile="PortfolioPublishServlet.java" interface="false" size="68" bugs="2" priority_2="2"/>
+      <ClassStats class="org.activemq.web.SpringBrokerContextListener" sourceFile="SpringBrokerContextListener.java" interface="false" size="37" bugs="1" priority_1="1"/>
+      <ClassStats class="org.activemq.web.WebClient" sourceFile="WebClient.java" interface="false" size="128" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.activemq.web.WebClient$SessionConsumerPair" sourceFile="WebClient.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="772" invocations="393" avgMicrosecondsPerInvocation="1965" maxMicrosecondsPerInvocation="63072" standardDeviationMircosecondsPerInvocation="6134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="509" invocations="37" avgMicrosecondsPerInvocation="13781" maxMicrosecondsPerInvocation="124120" standardDeviationMircosecondsPerInvocation="25338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="496" invocations="68" avgMicrosecondsPerInvocation="7303" maxMicrosecondsPerInvocation="104735" standardDeviationMircosecondsPerInvocation="17762"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="413" invocations="68" avgMicrosecondsPerInvocation="6085" maxMicrosecondsPerInvocation="57125" standardDeviationMircosecondsPerInvocation="11684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="393" invocations="37" avgMicrosecondsPerInvocation="10633" maxMicrosecondsPerInvocation="63914" standardDeviationMircosecondsPerInvocation="14406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="348" invocations="37" avgMicrosecondsPerInvocation="9425" maxMicrosecondsPerInvocation="76217" standardDeviationMircosecondsPerInvocation="17385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="290" invocations="68" avgMicrosecondsPerInvocation="4267" maxMicrosecondsPerInvocation="44588" standardDeviationMircosecondsPerInvocation="7892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="269" invocations="68" avgMicrosecondsPerInvocation="3967" maxMicrosecondsPerInvocation="25031" standardDeviationMircosecondsPerInvocation="6364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="252" invocations="68" avgMicrosecondsPerInvocation="3719" maxMicrosecondsPerInvocation="218111" standardDeviationMircosecondsPerInvocation="26235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="240" invocations="68" avgMicrosecondsPerInvocation="3536" maxMicrosecondsPerInvocation="53270" standardDeviationMircosecondsPerInvocation="8980"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="229" invocations="163" avgMicrosecondsPerInvocation="1407" maxMicrosecondsPerInvocation="44326" standardDeviationMircosecondsPerInvocation="4711"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="199" invocations="320" avgMicrosecondsPerInvocation="624" maxMicrosecondsPerInvocation="40947" standardDeviationMircosecondsPerInvocation="3390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="197" invocations="68" avgMicrosecondsPerInvocation="2901" maxMicrosecondsPerInvocation="34348" standardDeviationMircosecondsPerInvocation="6216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="162" invocations="396" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="42318" standardDeviationMircosecondsPerInvocation="2758"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="156" invocations="68" avgMicrosecondsPerInvocation="2297" maxMicrosecondsPerInvocation="82488" standardDeviationMircosecondsPerInvocation="9929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="144" invocations="60" avgMicrosecondsPerInvocation="2408" maxMicrosecondsPerInvocation="29887" standardDeviationMircosecondsPerInvocation="5283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="137" invocations="37" avgMicrosecondsPerInvocation="3709" maxMicrosecondsPerInvocation="39958" standardDeviationMircosecondsPerInvocation="7589"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="120" invocations="37" avgMicrosecondsPerInvocation="3246" maxMicrosecondsPerInvocation="58294" standardDeviationMircosecondsPerInvocation="10340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="120" invocations="37" avgMicrosecondsPerInvocation="3246" maxMicrosecondsPerInvocation="58292" standardDeviationMircosecondsPerInvocation="9461"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

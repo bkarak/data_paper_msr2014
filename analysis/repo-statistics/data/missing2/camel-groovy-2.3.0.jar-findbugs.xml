@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1274558375000" analysisTimestamp="1360868574881" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-groovy/2.3.0/camel-groovy-2.3.0.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.camel.language.groovy.GroovyRouteBuilder">
+      <SourceLine classname="org.apache.camel.language.groovy.GroovyRouteBuilder" start="30" end="46" sourcefile="GroovyRouteBuilder.java" sourcepath="org/apache/camel/language/groovy/GroovyRouteBuilder.java"/>
+    </Class>
+    <Method classname="org.apache.camel.language.groovy.GroovyRouteBuilder" name="init" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.camel.language.groovy.GroovyRouteBuilder" start="40" end="46" startBytecode="0" endBytecode="109" sourcefile="GroovyRouteBuilder.java" sourcepath="org/apache/camel/language/groovy/GroovyRouteBuilder.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.language.groovy.GroovyRouteBuilder" start="42" end="42" startBytecode="28" endBytecode="28" sourcefile="GroovyRouteBuilder.java" sourcepath="org/apache/camel/language/groovy/GroovyRouteBuilder.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>groovy.lang.Binding</MissingClass>
+    <MissingClass>groovy.lang.Closure</MissingClass>
+    <MissingClass>groovy.lang.GroovyClassLoader</MissingClass>
+    <MissingClass>groovy.lang.GroovyShell</MissingClass>
+    <MissingClass>groovy.lang.Script</MissingClass>
+    <MissingClass>org.apache.camel.CamelContext</MissingClass>
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.TypeConverter</MissingClass>
+    <MissingClass>org.apache.camel.builder.RouteBuilder</MissingClass>
+    <MissingClass>org.apache.camel.impl.ExpressionSupport</MissingClass>
+    <MissingClass>org.apache.camel.model.ChoiceDefinition</MissingClass>
+    <MissingClass>org.apache.camel.model.ProcessorDefinition</MissingClass>
+    <MissingClass>org.apache.camel.util.ExchangeHelper</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 22 May 2010 22:59:35 +0300" total_classes="6" referenced_classes="32" total_bugs="1" total_size="83" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="8.17" clock_seconds="8.29" peak_mbytes="52.63" alloc_mbytes="763.88" gc_seconds="0.08" priority_1="1">
+    <PackageStats package="org.apache.camel.language.groovy" total_bugs="1" total_types="6" total_size="83" priority_1="1">
+      <ClassStats class="org.apache.camel.language.groovy.CamelGroovyMethods" sourceFile="CamelGroovyMethods.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.camel.language.groovy.CamelGroovyMethods$1" sourceFile="CamelGroovyMethods.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.camel.language.groovy.GroovyExpression" sourceFile="GroovyExpression.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.camel.language.groovy.GroovyExpression$1" sourceFile="GroovyExpression.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.camel.language.groovy.GroovyLanguage" sourceFile="GroovyLanguage.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.camel.language.groovy.GroovyRouteBuilder" sourceFile="GroovyRouteBuilder.java" interface="false" size="14" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1499" invocations="393" avgMicrosecondsPerInvocation="3816" maxMicrosecondsPerInvocation="172439" standardDeviationMircosecondsPerInvocation="13905"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="404" invocations="32" avgMicrosecondsPerInvocation="12642" maxMicrosecondsPerInvocation="85043" standardDeviationMircosecondsPerInvocation="22389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="395" invocations="32" avgMicrosecondsPerInvocation="12348" maxMicrosecondsPerInvocation="117060" standardDeviationMircosecondsPerInvocation="26810"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="293" invocations="32" avgMicrosecondsPerInvocation="9165" maxMicrosecondsPerInvocation="83623" standardDeviationMircosecondsPerInvocation="18080"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="248" invocations="337" avgMicrosecondsPerInvocation="737" maxMicrosecondsPerInvocation="64021" standardDeviationMircosecondsPerInvocation="4165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="226" invocations="397" avgMicrosecondsPerInvocation="571" maxMicrosecondsPerInvocation="81467" standardDeviationMircosecondsPerInvocation="4711"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="226" invocations="28" avgMicrosecondsPerInvocation="8071" maxMicrosecondsPerInvocation="68164" standardDeviationMircosecondsPerInvocation="16365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="213" invocations="120" avgMicrosecondsPerInvocation="1781" maxMicrosecondsPerInvocation="33129" standardDeviationMircosecondsPerInvocation="4880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="208" invocations="32" avgMicrosecondsPerInvocation="6513" maxMicrosecondsPerInvocation="85910" standardDeviationMircosecondsPerInvocation="20286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="156" invocations="28" avgMicrosecondsPerInvocation="5584" maxMicrosecondsPerInvocation="58208" standardDeviationMircosecondsPerInvocation="14343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteAnnotationRetention" totalMilliseconds="142" invocations="32" avgMicrosecondsPerInvocation="4461" maxMicrosecondsPerInvocation="119623" standardDeviationMircosecondsPerInvocation="20904"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="142" invocations="28" avgMicrosecondsPerInvocation="5082" maxMicrosecondsPerInvocation="65891" standardDeviationMircosecondsPerInvocation="13991"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="138" invocations="32" avgMicrosecondsPerInvocation="4340" maxMicrosecondsPerInvocation="25977" standardDeviationMircosecondsPerInvocation="7228"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="126" invocations="6" avgMicrosecondsPerInvocation="21050" maxMicrosecondsPerInvocation="125336" standardDeviationMircosecondsPerInvocation="46638"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1279551870000" analysisTimestamp="1360903790153" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/karaf/shell/org.apache.karaf.shell.config/2.0.0/org.apache.karaf.shell.config-2.0.0.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.karaf.shell.config.UpdateCommand">
+      <SourceLine classname="org.apache.karaf.shell.config.UpdateCommand" start="31" end="75" sourcefile="UpdateCommand.java" sourcepath="org/apache/karaf/shell/config/UpdateCommand.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.shell.config.UpdateCommand" name="doExecute" signature="(Lorg/osgi/service/cm/ConfigurationAdmin;)V" isStatic="false">
+      <SourceLine classname="org.apache.karaf.shell.config.UpdateCommand" start="47" end="75" startBytecode="0" endBytecode="524" sourcefile="UpdateCommand.java" sourcepath="org/apache/karaf/shell/config/UpdateCommand.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.shell.config.UpdateCommand" start="58" end="58" startBytecode="107" endBytecode="107" sourcefile="UpdateCommand.java" sourcepath="org/apache/karaf/shell/config/UpdateCommand.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="7">
+    <MissingClass>org.apache.karaf.shell.console.OsgiCommandSupport</MissingClass>
+    <MissingClass>org.apache.karaf.shell.console.completer.StringsCompleter</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.service.cm.Configuration</MissingClass>
+    <MissingClass>org.osgi.service.cm.ConfigurationAdmin</MissingClass>
+    <MissingClass>org.osgi.service.cm.ConfigurationEvent</MissingClass>
+    <MissingClass>org.osgi.service.command.CommandSession</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 19 Jul 2010 18:04:30 +0300" total_classes="11" referenced_classes="32" total_bugs="1" total_size="186" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="11.34" clock_seconds="6.16" peak_mbytes="54.46" alloc_mbytes="763.88" gc_seconds="0.08" priority_2="1">
+    <PackageStats package="org.apache.karaf.shell.config" total_bugs="1" total_types="9" total_size="149" priority_2="1">
+      <ClassStats class="org.apache.karaf.shell.config.CancelCommand" sourceFile="CancelCommand.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.config.ConfigCommandSupport" sourceFile="ConfigCommandSupport.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.config.EditCommand" sourceFile="EditCommand.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.config.ListCommand" sourceFile="ListCommand.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.config.PropAppendCommand" sourceFile="PropAppendCommand.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.config.PropDelCommand" sourceFile="PropDelCommand.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.config.PropListCommand" sourceFile="PropListCommand.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.config.PropSetCommand" sourceFile="PropSetCommand.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.config.UpdateCommand" sourceFile="UpdateCommand.java" interface="false" size="36" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.karaf.shell.config.completers" total_bugs="0" total_types="2" total_size="37">
+      <ClassStats class="org.apache.karaf.shell.config.completers.ConfigurationCompleter" sourceFile="ConfigurationCompleter.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.config.completers.ConfigurationPropertyCompleter" sourceFile="ConfigurationPropertyCompleter.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1087" invocations="376" avgMicrosecondsPerInvocation="2892" maxMicrosecondsPerInvocation="114999" standardDeviationMircosecondsPerInvocation="9738"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="278" invocations="32" avgMicrosecondsPerInvocation="8695" maxMicrosecondsPerInvocation="92697" standardDeviationMircosecondsPerInvocation="17874"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="255" invocations="32" avgMicrosecondsPerInvocation="7979" maxMicrosecondsPerInvocation="57695" standardDeviationMircosecondsPerInvocation="13722"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="219" invocations="32" avgMicrosecondsPerInvocation="6874" maxMicrosecondsPerInvocation="53931" standardDeviationMircosecondsPerInvocation="12390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="141" invocations="324" avgMicrosecondsPerInvocation="438" maxMicrosecondsPerInvocation="20983" standardDeviationMircosecondsPerInvocation="1719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="138" invocations="103" avgMicrosecondsPerInvocation="1340" maxMicrosecondsPerInvocation="29277" standardDeviationMircosecondsPerInvocation="3201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="128" invocations="28" avgMicrosecondsPerInvocation="4601" maxMicrosecondsPerInvocation="51314" standardDeviationMircosecondsPerInvocation="9821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="117" invocations="28" avgMicrosecondsPerInvocation="4189" maxMicrosecondsPerInvocation="46796" standardDeviationMircosecondsPerInvocation="9153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="92" invocations="24" avgMicrosecondsPerInvocation="3863" maxMicrosecondsPerInvocation="36810" standardDeviationMircosecondsPerInvocation="7949"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="87" invocations="28" avgMicrosecondsPerInvocation="3111" maxMicrosecondsPerInvocation="17100" standardDeviationMircosecondsPerInvocation="4708"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="83" invocations="28" avgMicrosecondsPerInvocation="2968" maxMicrosecondsPerInvocation="16195" standardDeviationMircosecondsPerInvocation="4247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="81" invocations="28" avgMicrosecondsPerInvocation="2925" maxMicrosecondsPerInvocation="16976" standardDeviationMircosecondsPerInvocation="4100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="80" invocations="11" avgMicrosecondsPerInvocation="7325" maxMicrosecondsPerInvocation="25498" standardDeviationMircosecondsPerInvocation="7067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="70" invocations="17" avgMicrosecondsPerInvocation="4147" maxMicrosecondsPerInvocation="9555" standardDeviationMircosecondsPerInvocation="2699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="69" invocations="46" avgMicrosecondsPerInvocation="1505" maxMicrosecondsPerInvocation="27615" standardDeviationMircosecondsPerInvocation="4253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="67" invocations="32" avgMicrosecondsPerInvocation="2120" maxMicrosecondsPerInvocation="22400" standardDeviationMircosecondsPerInvocation="4502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="63" invocations="32" avgMicrosecondsPerInvocation="1981" maxMicrosecondsPerInvocation="12528" standardDeviationMircosecondsPerInvocation="2930"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="58" invocations="28" avgMicrosecondsPerInvocation="2088" maxMicrosecondsPerInvocation="12856" standardDeviationMircosecondsPerInvocation="2837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="57" invocations="32" avgMicrosecondsPerInvocation="1809" maxMicrosecondsPerInvocation="11379" standardDeviationMircosecondsPerInvocation="2715"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="51" invocations="11" avgMicrosecondsPerInvocation="4706" maxMicrosecondsPerInvocation="30620" standardDeviationMircosecondsPerInvocation="8657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="49" invocations="29" avgMicrosecondsPerInvocation="1698" maxMicrosecondsPerInvocation="43229" standardDeviationMircosecondsPerInvocation="7851"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

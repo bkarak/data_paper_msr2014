@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1250617559000" analysisTimestamp="1360891964352" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/guice-maven-plugin/2.0.0/guice-maven-plugin-2.0.0.jar</Jar>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.camel.guice.maven.DotMojo">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="59" end="530" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Class>
+    <Method classname="org.apache.camel.guice.maven.DotMojo" name="convertFile" signature="(Ljava/io/File;Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="425" end="458" startBytecode="0" endBytecode="112" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Method>
+    <LocalVariable name="exitCode" register="8" pc="216" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="448" end="448" startBytecode="214" endBytecode="214" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="exitCode"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.camel.guice.maven.DotMojo">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="59" end="530" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Class>
+    <Method classname="org.apache.camel.guice.maven.DotMojo" name="addFileToBuffer" signature="(Ljava/io/PrintWriter;Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="493" end="509" startBytecode="0" endBytecode="259" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="495" end="495" startBytecode="11" endBytecode="11" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.camel.guice.maven.DotMojo">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="59" end="530" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Class>
+    <Method classname="org.apache.camel.guice.maven.DotMojo" name="writeIndexHtmlFile" signature="(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="367" end="388" startBytecode="0" endBytecode="344" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="371" end="371" startBytecode="29" endBytecode="29" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.camel.guice.maven.DotMojo">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="59" end="530" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Class>
+    <Field classname="org.apache.camel.guice.maven.DotMojo" name="DEFAULT_GRAPHVIZ_OUTPUT_TYPES" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Field>
+    <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="60" end="60" startBytecode="19" endBytecode="19" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.camel.guice.maven.DotMojo">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="59" end="530" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Class>
+    <Method classname="org.apache.camel.guice.maven.DotMojo" name="execute" signature="(Ljava/io/File;Ljava/util/Locale;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="243" end="305" startBytecode="0" endBytecode="947" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="247" end="247" startBytecode="38" endBytecode="38" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.camel.guice.maven.DotMojo">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="59" end="530" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Class>
+    <Method classname="org.apache.camel.guice.maven.DotMojo" name="writeIndexHtmlFile" signature="(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="367" end="388" startBytecode="0" endBytecode="344" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.guice.maven.DotMojo" start="367" end="367" startBytecode="1" endBytecode="1" sourcefile="DotMojo.java" sourcepath="org/apache/camel/guice/maven/DotMojo.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.apache.camel.guice.maven.EmbeddedMojo">
+      <SourceLine classname="org.apache.camel.guice.maven.EmbeddedMojo" start="41" end="230" sourcefile="EmbeddedMojo.java" sourcepath="org/apache/camel/guice/maven/EmbeddedMojo.java"/>
+    </Class>
+    <Method classname="org.apache.camel.guice.maven.EmbeddedMojo" name="createClassLoader" signature="(Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;" isStatic="false">
+      <SourceLine classname="org.apache.camel.guice.maven.EmbeddedMojo" start="219" end="230" startBytecode="0" endBytecode="293" sourcefile="EmbeddedMojo.java" sourcepath="org/apache/camel/guice/maven/EmbeddedMojo.java"/>
+    </Method>
+    <Class classname="java.net.URLClassLoader">
+      <SourceLine classname="java.net.URLClassLoader" start="58" end="602" sourcefile="URLClassLoader.java" sourcepath="java/net/URLClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.apache.camel.guice.maven.EmbeddedMojo" start="229" end="229" startBytecode="128" endBytecode="128" sourcefile="EmbeddedMojo.java" sourcepath="org/apache/camel/guice/maven/EmbeddedMojo.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="26">
+    <MissingClass>org.apache.maven.artifact.Artifact</MissingClass>
+    <MissingClass>org.apache.maven.artifact.DependencyResolutionRequiredException</MissingClass>
+    <MissingClass>org.apache.maven.artifact.factory.ArtifactFactory</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.ArtifactResolutionResult</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.ArtifactResolver</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.filter.ExcludesArtifactFilter</MissingClass>
+    <MissingClass>org.apache.maven.artifact.versioning.VersionRange</MissingClass>
+    <MissingClass>org.apache.maven.doxia.sink.Sink</MissingClass>
+    <MissingClass>org.apache.maven.model.Build</MissingClass>
+    <MissingClass>org.apache.maven.model.Dependency</MissingClass>
+    <MissingClass>org.apache.maven.model.Exclusion</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProjectBuilder</MissingClass>
+    <MissingClass>org.apache.maven.project.artifact.MavenMetadataSource</MissingClass>
+    <MissingClass>org.apache.maven.reporting.AbstractMavenReport</MissingClass>
+    <MissingClass>org.apache.maven.reporting.MavenReportException</MissingClass>
+    <MissingClass>org.codehaus.mojo.exec.AbstractExecMojo</MissingClass>
+    <MissingClass>org.codehaus.mojo.exec.ExecutableDependency</MissingClass>
+    <MissingClass>org.codehaus.mojo.exec.Property</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.CommandLineException</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.CommandLineUtils</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.CommandLineUtils$StringStreamConsumer</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.Commandline</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.cli.Commandline$Argument</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 18 Aug 2009 20:45:59 +0300" total_classes="5" referenced_classes="74" total_bugs="7" total_size="656" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="18.80" clock_seconds="9.94" peak_mbytes="65.09" alloc_mbytes="763.88" gc_seconds="0.21" priority_2="5" priority_1="2">
+    <PackageStats package="org.apache.camel.guice.maven" total_bugs="7" total_types="5" total_size="656" priority_2="5" priority_1="2">
+      <ClassStats class="org.apache.camel.guice.maven.DotMojo" sourceFile="DotMojo.java" interface="false" size="253" bugs="6" priority_2="4" priority_1="2"/>
+      <ClassStats class="org.apache.camel.guice.maven.EmbeddedMojo" sourceFile="EmbeddedMojo.java" interface="false" size="87" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.guice.maven.RunMojo" sourceFile="RunMojo.java" interface="false" size="283" bugs="0"/>
+      <ClassStats class="org.apache.camel.guice.maven.RunMojo$1" sourceFile="RunMojo.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.camel.guice.maven.RunMojo$IsolatedThreadGroup" sourceFile="RunMojo.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="776" invocations="71" avgMicrosecondsPerInvocation="10938" maxMicrosecondsPerInvocation="182219" standardDeviationMircosecondsPerInvocation="26361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="749" invocations="550" avgMicrosecondsPerInvocation="1362" maxMicrosecondsPerInvocation="37602" standardDeviationMircosecondsPerInvocation="3677"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="690" invocations="74" avgMicrosecondsPerInvocation="9334" maxMicrosecondsPerInvocation="98074" standardDeviationMircosecondsPerInvocation="18000"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="627" invocations="74" avgMicrosecondsPerInvocation="8481" maxMicrosecondsPerInvocation="78273" standardDeviationMircosecondsPerInvocation="12659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="573" invocations="71" avgMicrosecondsPerInvocation="8081" maxMicrosecondsPerInvocation="122915" standardDeviationMircosecondsPerInvocation="18664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="525" invocations="72" avgMicrosecondsPerInvocation="7296" maxMicrosecondsPerInvocation="69584" standardDeviationMircosecondsPerInvocation="13805"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="519" invocations="72" avgMicrosecondsPerInvocation="7211" maxMicrosecondsPerInvocation="79428" standardDeviationMircosecondsPerInvocation="14575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="497" invocations="71" avgMicrosecondsPerInvocation="7013" maxMicrosecondsPerInvocation="58138" standardDeviationMircosecondsPerInvocation="13338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="346" invocations="49" avgMicrosecondsPerInvocation="7073" maxMicrosecondsPerInvocation="54129" standardDeviationMircosecondsPerInvocation="11506"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="325" invocations="74" avgMicrosecondsPerInvocation="4399" maxMicrosecondsPerInvocation="50101" standardDeviationMircosecondsPerInvocation="8442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="278" invocations="332" avgMicrosecondsPerInvocation="838" maxMicrosecondsPerInvocation="13544" standardDeviationMircosecondsPerInvocation="1398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="222" invocations="74" avgMicrosecondsPerInvocation="3003" maxMicrosecondsPerInvocation="38678" standardDeviationMircosecondsPerInvocation="5284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="209" invocations="1784" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="178064" standardDeviationMircosecondsPerInvocation="4214"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="201" invocations="71" avgMicrosecondsPerInvocation="2839" maxMicrosecondsPerInvocation="17752" standardDeviationMircosecondsPerInvocation="4066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="192" invocations="71" avgMicrosecondsPerInvocation="2711" maxMicrosecondsPerInvocation="28566" standardDeviationMircosecondsPerInvocation="5275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="162" invocations="74" avgMicrosecondsPerInvocation="2190" maxMicrosecondsPerInvocation="26320" standardDeviationMircosecondsPerInvocation="4345"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

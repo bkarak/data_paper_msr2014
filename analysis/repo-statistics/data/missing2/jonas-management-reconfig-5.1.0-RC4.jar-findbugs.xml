@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1252582345000" analysisTimestamp="1360868301287" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/jonas-management-reconfig/5.1.0-RC4/jonas-management-reconfig-5.1.0-RC4.jar</Jar>
+  </Project>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.lib.management.reconfig.ReconfigManager">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.ReconfigManager" start="94" end="374" sourcefile="ReconfigManager.java" sourcepath="org/ow2/jonas/lib/management/reconfig/ReconfigManager.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.reconfig.ReconfigManager" name="reconfigManagerOn" signature="Ljavax/management/ObjectName;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.ReconfigManager" sourcefile="ReconfigManager.java" sourcepath="org/ow2/jonas/lib/management/reconfig/ReconfigManager.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.reconfig.ReconfigManager" start="94" end="94" startBytecode="10" endBytecode="10" sourcefile="ReconfigManager.java" sourcepath="org/ow2/jonas/lib/management/reconfig/ReconfigManager.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" start="61" end="79" sourcefile="BaseConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/BaseConfigurationActuator.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" sourcefile="BaseConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/BaseConfigurationActuator.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" start="61" end="61" startBytecode="1" endBytecode="1" sourcefile="BaseConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/BaseConfigurationActuator.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" start="61" end="79" sourcefile="BaseConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/BaseConfigurationActuator.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" start="68" end="79" startBytecode="0" endBytecode="170" sourcefile="BaseConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/BaseConfigurationActuator.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" sourcefile="BaseConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/BaseConfigurationActuator.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" start="70" end="70" startBytecode="9" endBytecode="9" sourcefile="BaseConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/BaseConfigurationActuator.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator" start="68" end="219" sourcefile="PropertiesConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/PropertiesConfigurationActuator.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator" name="updateValue" signature="(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator" start="154" end="180" startBytecode="0" endBytecode="405" sourcefile="PropertiesConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/PropertiesConfigurationActuator.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator" start="158" end="158" startBytecode="19" endBytecode="19" sourcefile="PropertiesConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/PropertiesConfigurationActuator.java"/>
+    <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator" start="172" end="172" startBytecode="168" endBytecode="168" sourcefile="PropertiesConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/PropertiesConfigurationActuator.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_VOID_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator" start="68" end="219" sourcefile="PropertiesConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/PropertiesConfigurationActuator.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator" name="updateValue" signature="(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator" start="154" end="180" startBytecode="0" endBytecode="405" sourcefile="PropertiesConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/PropertiesConfigurationActuator.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator" start="164" end="164" startBytecode="110" endBytecode="110" sourcefile="PropertiesConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/PropertiesConfigurationActuator.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.ow2.jonas.lib.management.reconfig.actuator.XMLConfigurationActuator">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.XMLConfigurationActuator" start="49" end="105" sourcefile="XMLConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/XMLConfigurationActuator.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.lib.management.reconfig.actuator.XMLConfigurationActuator" name="saveConfig" signature="(J)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.XMLConfigurationActuator" start="83" end="105" startBytecode="0" endBytecode="399" sourcefile="XMLConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/XMLConfigurationActuator.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.lib.management.reconfig.actuator.XMLConfigurationActuator" start="86" end="86" startBytecode="28" endBytecode="28" sourcefile="XMLConfigurationActuator.java" sourcepath="org/ow2/jonas/lib/management/reconfig/actuator/XMLConfigurationActuator.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>org.objectweb.util.monolog.api.BasicLevel</MissingClass>
+    <MissingClass>org.objectweb.util.monolog.api.Logger</MissingClass>
+    <MissingClass>org.ow2.jonas.jmx.JmxService</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.bootstrap.JProp</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.management.javaee.J2EEManagedObject</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.reconfig.IConfigurationData</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.reconfig.PropertiesConfigurationData</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.reconfig.XMLConfigurationData</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.Log</MissingClass>
+    <MissingClass>org.ow2.jonas.properties.ServerProperties</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 10 Sep 2009 14:32:25 +0300" total_classes="7" referenced_classes="46" total_bugs="6" total_size="291" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="13.38" clock_seconds="10.97" peak_mbytes="57.74" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="5" priority_1="1">
+    <PackageStats package="org.ow2.jonas.lib.management.reconfig" total_bugs="1" total_types="4" total_size="153" priority_2="1">
+      <ClassStats class="org.ow2.jonas.lib.management.reconfig.IConfigurationActuator" sourceFile="IConfigurationActuator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.reconfig.ReconfigException" sourceFile="ReconfigException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.lib.management.reconfig.ReconfigManager" sourceFile="ReconfigManager.java" interface="false" size="140" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jonas.lib.management.reconfig.ReconfigManagerMBean" sourceFile="ReconfigManagerMBean.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.lib.management.reconfig.actuator" total_bugs="5" total_types="3" total_size="138" priority_2="4" priority_1="1">
+      <ClassStats class="org.ow2.jonas.lib.management.reconfig.actuator.BaseConfigurationActuator" sourceFile="BaseConfigurationActuator.java" interface="false" size="16" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.jonas.lib.management.reconfig.actuator.PropertiesConfigurationActuator" sourceFile="PropertiesConfigurationActuator.java" interface="false" size="91" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.jonas.lib.management.reconfig.actuator.XMLConfigurationActuator" sourceFile="XMLConfigurationActuator.java" interface="false" size="31" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1071" invocations="425" avgMicrosecondsPerInvocation="2521" maxMicrosecondsPerInvocation="65804" standardDeviationMircosecondsPerInvocation="7829"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="819" invocations="46" avgMicrosecondsPerInvocation="17826" maxMicrosecondsPerInvocation="262963" standardDeviationMircosecondsPerInvocation="45531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="541" invocations="31" avgMicrosecondsPerInvocation="17475" maxMicrosecondsPerInvocation="178839" standardDeviationMircosecondsPerInvocation="38184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="520" invocations="46" avgMicrosecondsPerInvocation="11310" maxMicrosecondsPerInvocation="143006" standardDeviationMircosecondsPerInvocation="22778"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="375" invocations="27" avgMicrosecondsPerInvocation="13920" maxMicrosecondsPerInvocation="137001" standardDeviationMircosecondsPerInvocation="30310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="366" invocations="31" avgMicrosecondsPerInvocation="11814" maxMicrosecondsPerInvocation="93788" standardDeviationMircosecondsPerInvocation="21624"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="317" invocations="46" avgMicrosecondsPerInvocation="6908" maxMicrosecondsPerInvocation="53632" standardDeviationMircosecondsPerInvocation="11753"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="312" invocations="134" avgMicrosecondsPerInvocation="2334" maxMicrosecondsPerInvocation="41938" standardDeviationMircosecondsPerInvocation="5688"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="266" invocations="27" avgMicrosecondsPerInvocation="9863" maxMicrosecondsPerInvocation="69809" standardDeviationMircosecondsPerInvocation="16362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="224" invocations="27" avgMicrosecondsPerInvocation="8312" maxMicrosecondsPerInvocation="45044" standardDeviationMircosecondsPerInvocation="13909"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="219" invocations="27" avgMicrosecondsPerInvocation="8117" maxMicrosecondsPerInvocation="52531" standardDeviationMircosecondsPerInvocation="14070"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="186" invocations="46" avgMicrosecondsPerInvocation="4054" maxMicrosecondsPerInvocation="81361" standardDeviationMircosecondsPerInvocation="12544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="169" invocations="28" avgMicrosecondsPerInvocation="6042" maxMicrosecondsPerInvocation="149678" standardDeviationMircosecondsPerInvocation="27696"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="153" invocations="46" avgMicrosecondsPerInvocation="3326" maxMicrosecondsPerInvocation="31407" standardDeviationMircosecondsPerInvocation="7280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="149" invocations="23" avgMicrosecondsPerInvocation="6507" maxMicrosecondsPerInvocation="89681" standardDeviationMircosecondsPerInvocation="18249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="147" invocations="428" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="22517" standardDeviationMircosecondsPerInvocation="1686"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

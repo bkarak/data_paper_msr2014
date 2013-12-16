@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1211566786000" analysisTimestamp="1360876414078" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/jonas-commands/5.0.3/jonas-commands-5.0.3.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="menu" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="679" end="792" startBytecode="0" endBytecode="980" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="679" end="679" startBytecode="11" endBytecode="11" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="&lt;init&gt;" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="169" end="504" startBytecode="0" endBytecode="3391" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="190" end="190" startBytecode="143" endBytecode="143" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="345" end="345" startBytecode="1144" endBytecode="1144" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="382" end="382" startBytecode="1323" endBytecode="1323" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="404" end="404" startBytecode="1560" endBytecode="1560" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="497" end="497" startBytecode="1887" endBytecode="1887" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="initializeJMXConnectionHelper" signature="(Ljava/lang/String;Ljava/lang/String;)Ljavax/management/remote/JMXServiceURL;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="528" end="568" startBytecode="0" endBytecode="561" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="563" end="563" startBytecode="275" endBytecode="275" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+  </BugInstance>
+  <BugInstance type="NP_DEREFERENCE_OF_READLINE_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="menu" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="679" end="792" startBytecode="0" endBytecode="980" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <LocalVariable name="command" register="2" pc="56" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="683" end="683" startBytecode="57" endBytecode="57" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+  </BugInstance>
+  <BugInstance type="NP_DEREFERENCE_OF_READLINE_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="menu" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="679" end="792" startBytecode="0" endBytecode="980" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <LocalVariable name="fName" register="3" pc="90" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="689" end="689" startBytecode="91" endBytecode="91" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="740" end="740" startBytecode="322" endBytecode="322" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="NP_DEREFERENCE_OF_READLINE_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="menu" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="679" end="792" startBytecode="0" endBytecode="980" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <LocalVariable name="tstr" register="3" pc="495" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="781" end="781" startBytecode="496" endBytecode="496" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+  </BugInstance>
+  <BugInstance type="NP_IMMEDIATE_DEREFERENCE_OF_READLINE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="menu" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="679" end="792" startBytecode="0" endBytecode="980" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="749" end="749" startBytecode="364" endBytecode="364" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="754" end="754" startBytecode="390" endBytecode="390" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="initializeJMXConnectionHelper" signature="(Ljava/lang/String;Ljava/lang/String;)Ljavax/management/remote/JMXServiceURL;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="528" end="568" startBytecode="0" endBytecode="561" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="532" end="532" startBytecode="56" endBytecode="56" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="533" end="533" startBytecode="61" endBytecode="61" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="536" end="536" startBytecode="67" endBytecode="67" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="538" end="538" startBytecode="101" endBytecode="101" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="544" end="544" startBytecode="123" endBytecode="123" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="547" end="547" startBytecode="156" endBytecode="156" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="548" end="548" startBytecode="160" endBytecode="160" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="551" end="551" startBytecode="180" endBytecode="180" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="557" end="557" startBytecode="209" endBytecode="209" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="560" end="560" startBytecode="212" endBytecode="212" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="564" end="564" startBytecode="223" endBytecode="223" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="566" end="566" startBytecode="278" endBytecode="278" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="568" end="568" startBytecode="299" endBytecode="299" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="initializeJMXConnectionHelper" signature="(Ljava/lang/String;Ljava/lang/String;)Ljavax/management/remote/JMXServiceURL;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="528" end="568" startBytecode="0" endBytecode="132" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="532" end="532" startBytecode="15" endBytecode="15" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="getJ2EEServerObjectName" signature="(Ljavax/management/MBeanServerConnection;)Ljavax/management/ObjectName;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="871" end="882" startBytecode="0" endBytecode="176" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="878" end="878" startBytecode="49" endBytecode="49" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.ow2.jonas.commands.admin.ClientAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="122" end="1365" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.ClientAdmin" name="&lt;init&gt;" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="169" end="504" startBytecode="0" endBytecode="3391" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.commands.admin.ClientAdmin" start="417" end="485" startBytecode="1625" endBytecode="1864" sourcefile="ClientAdmin.java" sourcepath="org/ow2/jonas/commands/admin/ClientAdmin.java"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.commands.admin.UtilAdmin">
+      <SourceLine classname="org.ow2.jonas.commands.admin.UtilAdmin" start="55" end="375" sourcefile="UtilAdmin.java" sourcepath="org/ow2/jonas/commands/admin/UtilAdmin.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.admin.UtilAdmin" name="getJonasServiceMBean" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Properties;)Ljavax/management/ObjectName;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.commands.admin.UtilAdmin" start="149" end="158" startBytecode="0" endBytecode="249" sourcefile="UtilAdmin.java" sourcepath="org/ow2/jonas/commands/admin/UtilAdmin.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.commands.check.CheckEnv">
+      <SourceLine classname="org.ow2.jonas.commands.check.CheckEnv" start="76" end="298" sourcefile="CheckEnv.java" sourcepath="org/ow2/jonas/commands/check/CheckEnv.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.check.CheckEnv" name="&lt;init&gt;" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.check.CheckEnv" start="124" end="145" startBytecode="0" endBytecode="305" sourcefile="CheckEnv.java" sourcepath="org/ow2/jonas/commands/check/CheckEnv.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.commands.check.CheckEnv" start="129" end="129" startBytecode="64" endBytecode="64" sourcefile="CheckEnv.java" sourcepath="org/ow2/jonas/commands/check/CheckEnv.java"/>
+    <SourceLine classname="org.ow2.jonas.commands.check.CheckEnv" start="140" end="140" startBytecode="115" endBytecode="115" sourcefile="CheckEnv.java" sourcepath="org/ow2/jonas/commands/check/CheckEnv.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.ow2.jonas.commands.check.CheckEnv" start="143" end="143" startBytecode="138" endBytecode="138" sourcefile="CheckEnv.java" sourcepath="org/ow2/jonas/commands/check/CheckEnv.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.commands.wrapper.GenerateWrapperConf">
+      <SourceLine classname="org.ow2.jonas.commands.wrapper.GenerateWrapperConf" start="34" end="196" sourcefile="GenerateWrapperConf.java" sourcepath="org/ow2/jonas/commands/wrapper/GenerateWrapperConf.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.wrapper.GenerateWrapperConf" name="syntax" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.wrapper.GenerateWrapperConf" start="70" end="72" startBytecode="0" endBytecode="62" sourcefile="GenerateWrapperConf.java" sourcepath="org/ow2/jonas/commands/wrapper/GenerateWrapperConf.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.commands.wrapper.GenerateWrapperConf" start="71" end="71" startBytecode="9" endBytecode="9" sourcefile="GenerateWrapperConf.java" sourcepath="org/ow2/jonas/commands/wrapper/GenerateWrapperConf.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_FALLTHROUGH" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.ow2.jonas.commands.wrapper.GenerateWrapperConf">
+      <SourceLine classname="org.ow2.jonas.commands.wrapper.GenerateWrapperConf" start="34" end="196" sourcefile="GenerateWrapperConf.java" sourcepath="org/ow2/jonas/commands/wrapper/GenerateWrapperConf.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.commands.wrapper.GenerateWrapperConf" name="run" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.commands.wrapper.GenerateWrapperConf" start="107" end="158" startBytecode="0" endBytecode="459" sourcefile="GenerateWrapperConf.java" sourcepath="org/ow2/jonas/commands/wrapper/GenerateWrapperConf.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.commands.wrapper.GenerateWrapperConf" start="118" end="121" startBytecode="76" endBytecode="79" sourcefile="GenerateWrapperConf.java" sourcepath="org/ow2/jonas/commands/wrapper/GenerateWrapperConf.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="1">
+    <MissingClass>org.ow2.jonas.launcher.felix.JOnAS</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 23 May 2008 21:19:46 +0300" total_classes="7" referenced_classes="60" total_bugs="15" total_size="1321" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="28.16" clock_seconds="31.32" peak_mbytes="74.31" alloc_mbytes="763.88" gc_seconds="0.29" priority_2="14" priority_1="1">
+    <PackageStats package="org.ow2.jonas.commands.admin" total_bugs="12" total_types="4" total_size="1083" priority_2="11" priority_1="1">
+      <ClassStats class="org.ow2.jonas.commands.admin.CLIArgument" sourceFile="CLIArgument.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.commands.admin.CLIConstants" sourceFile="CLIConstants.java" interface="true" size="19" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.commands.admin.ClientAdmin" sourceFile="ClientAdmin.java" interface="false" size="844" bugs="11" priority_2="10" priority_1="1"/>
+      <ClassStats class="org.ow2.jonas.commands.admin.UtilAdmin" sourceFile="UtilAdmin.java" interface="false" size="208" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.commands.admin.util" total_bugs="0" total_types="1" total_size="57">
+      <ClassStats class="org.ow2.jonas.commands.admin.util.JMXConnectionHelper" sourceFile="JMXConnectionHelper.java" interface="false" size="57" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.commands.check" total_bugs="1" total_types="1" total_size="122" priority_2="1">
+      <ClassStats class="org.ow2.jonas.commands.check.CheckEnv" sourceFile="CheckEnv.java" interface="false" size="122" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.commands.wrapper" total_bugs="2" total_types="1" total_size="59" priority_2="2">
+      <ClassStats class="org.ow2.jonas.commands.wrapper.GenerateWrapperConf" sourceFile="GenerateWrapperConf.java" interface="false" size="59" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="2533" invocations="60" avgMicrosecondsPerInvocation="42221" maxMicrosecondsPerInvocation="327910" standardDeviationMircosecondsPerInvocation="73868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2527" invocations="490" avgMicrosecondsPerInvocation="5157" maxMicrosecondsPerInvocation="181335" standardDeviationMircosecondsPerInvocation="18193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1985" invocations="73" avgMicrosecondsPerInvocation="27199" maxMicrosecondsPerInvocation="323963" standardDeviationMircosecondsPerInvocation="51233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1716" invocations="91" avgMicrosecondsPerInvocation="18865" maxMicrosecondsPerInvocation="246491" standardDeviationMircosecondsPerInvocation="36533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1593" invocations="73" avgMicrosecondsPerInvocation="21833" maxMicrosecondsPerInvocation="507932" standardDeviationMircosecondsPerInvocation="64303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1514" invocations="60" avgMicrosecondsPerInvocation="25234" maxMicrosecondsPerInvocation="202713" standardDeviationMircosecondsPerInvocation="43479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1485" invocations="73" avgMicrosecondsPerInvocation="20343" maxMicrosecondsPerInvocation="154266" standardDeviationMircosecondsPerInvocation="32596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1473" invocations="86" avgMicrosecondsPerInvocation="17131" maxMicrosecondsPerInvocation="146372" standardDeviationMircosecondsPerInvocation="29343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="1329" invocations="60" avgMicrosecondsPerInvocation="22161" maxMicrosecondsPerInvocation="177561" standardDeviationMircosecondsPerInvocation="37795"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="1014" invocations="169" avgMicrosecondsPerInvocation="6001" maxMicrosecondsPerInvocation="77585" standardDeviationMircosecondsPerInvocation="13204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="884" invocations="261" avgMicrosecondsPerInvocation="3390" maxMicrosecondsPerInvocation="119135" standardDeviationMircosecondsPerInvocation="12533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="814" invocations="73" avgMicrosecondsPerInvocation="11156" maxMicrosecondsPerInvocation="134794" standardDeviationMircosecondsPerInvocation="22697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="769" invocations="70" avgMicrosecondsPerInvocation="10999" maxMicrosecondsPerInvocation="119063" standardDeviationMircosecondsPerInvocation="24216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="556" invocations="60" avgMicrosecondsPerInvocation="9266" maxMicrosecondsPerInvocation="98282" standardDeviationMircosecondsPerInvocation="20695"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="530" invocations="7" avgMicrosecondsPerInvocation="75777" maxMicrosecondsPerInvocation="373241" standardDeviationMircosecondsPerInvocation="130268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="529" invocations="449" avgMicrosecondsPerInvocation="1179" maxMicrosecondsPerInvocation="122587" standardDeviationMircosecondsPerInvocation="8298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="494" invocations="491" avgMicrosecondsPerInvocation="1007" maxMicrosecondsPerInvocation="102259" standardDeviationMircosecondsPerInvocation="7518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="454" invocations="60" avgMicrosecondsPerInvocation="7574" maxMicrosecondsPerInvocation="118852" standardDeviationMircosecondsPerInvocation="22803"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

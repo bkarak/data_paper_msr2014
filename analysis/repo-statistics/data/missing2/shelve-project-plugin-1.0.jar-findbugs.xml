@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1287407174000" analysisTimestamp="1360869196402" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/jvnet/hudson/plugins/shelve-project-plugin/1.0/shelve-project-plugin-1.0.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.jvnet.hudson.plugins.shelveproject.ShelveProjectExecutable">
+      <SourceLine classname="org.jvnet.hudson.plugins.shelveproject.ShelveProjectExecutable" start="19" end="93" sourcefile="ShelveProjectExecutable.java" sourcepath="org/jvnet/hudson/plugins/shelveproject/ShelveProjectExecutable.java"/>
+    </Class>
+    <Method classname="org.jvnet.hudson.plugins.shelveproject.ShelveProjectExecutable" name="createOutputStream" signature="(Ljava/io/File;Ljava/lang/String;)Ljava/io/OutputStream;" isStatic="false">
+      <SourceLine classname="org.jvnet.hudson.plugins.shelveproject.ShelveProjectExecutable" start="71" end="74" startBytecode="0" endBytecode="159" sourcefile="ShelveProjectExecutable.java" sourcepath="org/jvnet/hudson/plugins/shelveproject/ShelveProjectExecutable.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.jvnet.hudson.plugins.shelveproject.ShelveProjectExecutable" start="72" end="72" startBytecode="12" endBytecode="12" sourcefile="ShelveProjectExecutable.java" sourcepath="org/jvnet/hudson/plugins/shelveproject/ShelveProjectExecutable.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.jvnet.hudson.plugins.shelveproject.ShelvedProjectsAction">
+      <SourceLine classname="org.jvnet.hudson.plugins.shelveproject.ShelvedProjectsAction" start="29" end="109" sourcefile="ShelvedProjectsAction.java" sourcepath="org/jvnet/hudson/plugins/shelveproject/ShelvedProjectsAction.java"/>
+    </Class>
+    <Method classname="org.jvnet.hudson.plugins.shelveproject.ShelvedProjectsAction" name="getShelvedProjects" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.jvnet.hudson.plugins.shelveproject.ShelvedProjectsAction" start="60" end="73" startBytecode="0" endBytecode="248" sourcefile="ShelvedProjectsAction.java" sourcepath="org/jvnet/hudson/plugins/shelveproject/ShelvedProjectsAction.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.jvnet.hudson.plugins.shelveproject.ShelvedProjectsAction" start="63" end="63" startBytecode="26" endBytecode="26" sourcefile="ShelvedProjectsAction.java" sourcepath="org/jvnet/hudson/plugins/shelveproject/ShelvedProjectsAction.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.jvnet.hudson.plugins.shelveproject.UnshelveProjectExecutable">
+      <SourceLine classname="org.jvnet.hudson.plugins.shelveproject.UnshelveProjectExecutable" start="14" end="50" sourcefile="UnshelveProjectExecutable.java" sourcepath="org/jvnet/hudson/plugins/shelveproject/UnshelveProjectExecutable.java"/>
+    </Class>
+    <Method classname="org.jvnet.hudson.plugins.shelveproject.UnshelveProjectExecutable" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.jvnet.hudson.plugins.shelveproject.UnshelveProjectExecutable" start="33" end="45" startBytecode="0" endBytecode="212" sourcefile="UnshelveProjectExecutable.java" sourcepath="org/jvnet/hudson/plugins/shelveproject/UnshelveProjectExecutable.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.jvnet.hudson.plugins.shelveproject.UnshelveProjectExecutable" start="38" end="38" startBytecode="73" endBytecode="73" sourcefile="UnshelveProjectExecutable.java" sourcepath="org/jvnet/hudson/plugins/shelveproject/UnshelveProjectExecutable.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="14">
+    <MissingClass>hudson.FilePath</MissingClass>
+    <MissingClass>hudson.model.AbstractProject</MissingClass>
+    <MissingClass>hudson.model.Hudson</MissingClass>
+    <MissingClass>hudson.model.Item</MissingClass>
+    <MissingClass>hudson.model.Job</MissingClass>
+    <MissingClass>hudson.model.JobProperty</MissingClass>
+    <MissingClass>hudson.model.JobPropertyDescriptor</MissingClass>
+    <MissingClass>hudson.model.Queue</MissingClass>
+    <MissingClass>hudson.model.ResourceList</MissingClass>
+    <MissingClass>hudson.model.listeners.ItemListener</MissingClass>
+    <MissingClass>hudson.security.Permission</MissingClass>
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.kohsuke.stapler.HttpRedirect</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 18 Oct 2010 16:06:14 +0300" total_classes="11" referenced_classes="37" total_bugs="3" total_size="279" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="9.92" clock_seconds="8.15" peak_mbytes="55.84" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="3">
+    <PackageStats package="org.jvnet.hudson.plugins.shelveproject" total_bugs="3" total_types="11" total_size="279" priority_2="3">
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.ItemListenerImpl" sourceFile="ItemListenerImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.ShelveProjectAction" sourceFile="ShelveProjectAction.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.ShelveProjectExecutable" sourceFile="ShelveProjectExecutable.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.ShelveProjectExecutable$1" sourceFile="ShelveProjectExecutable.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty" sourceFile="ShelveProjectProperty.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty$DescriptorImpl" sourceFile="ShelveProjectProperty.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.ShelveProjectTask" sourceFile="ShelveProjectTask.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.ShelvedProject" sourceFile="ShelvedProject.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.ShelvedProjectsAction" sourceFile="ShelvedProjectsAction.java" interface="false" size="40" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.UnshelveProjectExecutable" sourceFile="UnshelveProjectExecutable.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jvnet.hudson.plugins.shelveproject.UnshelveProjectTask" sourceFile="UnshelveProjectTask.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="970" invocations="441" avgMicrosecondsPerInvocation="2201" maxMicrosecondsPerInvocation="93657" standardDeviationMircosecondsPerInvocation="8716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="539" invocations="37" avgMicrosecondsPerInvocation="14570" maxMicrosecondsPerInvocation="165917" standardDeviationMircosecondsPerInvocation="29939"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="322" invocations="179" avgMicrosecondsPerInvocation="1799" maxMicrosecondsPerInvocation="73188" standardDeviationMircosecondsPerInvocation="7359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="320" invocations="37" avgMicrosecondsPerInvocation="8662" maxMicrosecondsPerInvocation="41083" standardDeviationMircosecondsPerInvocation="12571"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="274" invocations="37" avgMicrosecondsPerInvocation="7407" maxMicrosecondsPerInvocation="60916" standardDeviationMircosecondsPerInvocation="13269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="222" invocations="11" avgMicrosecondsPerInvocation="20183" maxMicrosecondsPerInvocation="209694" standardDeviationMircosecondsPerInvocation="59956"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="203" invocations="87" avgMicrosecondsPerInvocation="2336" maxMicrosecondsPerInvocation="44043" standardDeviationMircosecondsPerInvocation="6871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="200" invocations="87" avgMicrosecondsPerInvocation="2305" maxMicrosecondsPerInvocation="40455" standardDeviationMircosecondsPerInvocation="6391"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="190" invocations="88" avgMicrosecondsPerInvocation="2161" maxMicrosecondsPerInvocation="43451" standardDeviationMircosecondsPerInvocation="6837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="153" invocations="89" avgMicrosecondsPerInvocation="1729" maxMicrosecondsPerInvocation="31025" standardDeviationMircosecondsPerInvocation="5199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="142" invocations="37" avgMicrosecondsPerInvocation="3850" maxMicrosecondsPerInvocation="62122" standardDeviationMircosecondsPerInvocation="10405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="137" invocations="37" avgMicrosecondsPerInvocation="3712" maxMicrosecondsPerInvocation="71816" standardDeviationMircosecondsPerInvocation="12768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="133" invocations="87" avgMicrosecondsPerInvocation="1533" maxMicrosecondsPerInvocation="110645" standardDeviationMircosecondsPerInvocation="11860"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="131" invocations="84" avgMicrosecondsPerInvocation="1559" maxMicrosecondsPerInvocation="24642" standardDeviationMircosecondsPerInvocation="4076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="130" invocations="369" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="14525" standardDeviationMircosecondsPerInvocation="1306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="127" invocations="37" avgMicrosecondsPerInvocation="3447" maxMicrosecondsPerInvocation="41355" standardDeviationMircosecondsPerInvocation="8574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="116" invocations="37" avgMicrosecondsPerInvocation="3159" maxMicrosecondsPerInvocation="68548" standardDeviationMircosecondsPerInvocation="11106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="114" invocations="37" avgMicrosecondsPerInvocation="3102" maxMicrosecondsPerInvocation="37575" standardDeviationMircosecondsPerInvocation="7359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="107" invocations="444" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="12742" standardDeviationMircosecondsPerInvocation="1075"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUseOfNonSerializableValue" totalMilliseconds="100" invocations="11" avgMicrosecondsPerInvocation="9171" maxMicrosecondsPerInvocation="85293" standardDeviationMircosecondsPerInvocation="24203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.NonReportingDetectorToDetector2Adapter" totalMilliseconds="100" invocations="503" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="74323" standardDeviationMircosecondsPerInvocation="3351"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

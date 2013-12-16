@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1132683824000" analysisTimestamp="1360895694546" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/payload/payload/0.5/payload-0.5.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.osjava.payload.IOUtils">
+      <SourceLine classname="org.osjava.payload.IOUtils" start="44" end="92" sourcefile="IOUtils.java" sourcepath="org/osjava/payload/IOUtils.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.IOUtils" name="readToString" signature="(Ljava/io/InputStream;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.osjava.payload.IOUtils" start="64" end="71" startBytecode="0" endBytecode="159" sourcefile="IOUtils.java" sourcepath="org/osjava/payload/IOUtils.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.osjava.payload.IOUtils" start="64" end="64" startBytecode="9" endBytecode="9" sourcefile="IOUtils.java" sourcepath="org/osjava/payload/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.osjava.payload.PayloadContractor">
+      <SourceLine classname="org.osjava.payload.PayloadContractor" start="50" end="216" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.PayloadContractor" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.osjava.payload.PayloadContractor" start="59" end="184" startBytecode="0" endBytecode="1521" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.osjava.payload.PayloadContractor" start="106" end="106" startBytecode="294" endBytecode="294" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.osjava.payload.PayloadContractor">
+      <SourceLine classname="org.osjava.payload.PayloadContractor" start="50" end="216" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.PayloadContractor" name="storeFile" signature="(Ljava/util/jar/JarOutputStream;Ljava/io/File;Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.osjava.payload.PayloadContractor" start="192" end="216" startBytecode="0" endBytecode="338" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.osjava.payload.PayloadContractor" start="206" end="206" startBytecode="90" endBytecode="90" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.osjava.payload.PayloadContractor" start="207" end="207" startBytecode="94" endBytecode="94" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.osjava.payload.PayloadContractor" start="209" end="209" startBytecode="104" endBytecode="104" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.osjava.payload.PayloadContractor" start="210" end="210" startBytecode="112" endBytecode="112" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.osjava.payload.PayloadContractor" start="211" end="211" startBytecode="121" endBytecode="121" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.osjava.payload.PayloadContractor">
+      <SourceLine classname="org.osjava.payload.PayloadContractor" start="50" end="216" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.PayloadContractor" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.osjava.payload.PayloadContractor" start="59" end="184" startBytecode="0" endBytecode="336" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/zip/ZipFile;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.util.zip.ZipFile" start="31" end="427" sourcefile="ZipFile.java" sourcepath="java/util/zip/ZipFile.java"/>
+    </Type>
+    <SourceLine classname="org.osjava.payload.PayloadContractor" start="93" end="93" startBytecode="163" endBytecode="163" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java"/>
+    <SourceLine classname="org.osjava.payload.PayloadContractor" start="151" end="151" startBytecode="552" endBytecode="552" sourcefile="PayloadContractor.java" sourcepath="org/osjava/payload/PayloadContractor.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.osjava.payload.PayloadExtractor">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="54" end="283" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.PayloadExtractor" name="interpolateArchive" signature="(Ljava/io/OutputStream;Ljava/io/InputStream;Lorg/osjava/payload/Interpolation;Ljava/util/Properties;)V" isStatic="true">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="217" end="283" startBytecode="0" endBytecode="832" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.osjava.payload.PayloadExtractor" start="229" end="229" startBytecode="107" endBytecode="107" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.osjava.payload.PayloadExtractor">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="54" end="283" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.PayloadExtractor" name="interpolateArchive" signature="(Ljava/io/OutputStream;Ljava/io/InputStream;Lorg/osjava/payload/Interpolation;Ljava/util/Properties;)V" isStatic="true">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="217" end="283" startBytecode="0" endBytecode="832" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.osjava.payload.PayloadExtractor" start="230" end="230" startBytecode="117" endBytecode="117" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.osjava.payload.PayloadExtractor">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="54" end="283" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.PayloadExtractor" name="interpolateArchive" signature="(Ljava/io/OutputStream;Ljava/io/InputStream;Lorg/osjava/payload/Interpolation;Ljava/util/Properties;)V" isStatic="true">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="217" end="283" startBytecode="0" endBytecode="832" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.osjava.payload.PayloadExtractor" start="232" end="232" startBytecode="137" endBytecode="137" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.osjava.payload.PayloadExtractor">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="54" end="283" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.PayloadExtractor" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="59" end="213" startBytecode="0" endBytecode="1740" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.osjava.payload.PayloadExtractor" start="163" end="163" startBytecode="657" endBytecode="657" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.osjava.payload.PayloadExtractor">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="54" end="283" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.PayloadExtractor" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="59" end="213" startBytecode="0" endBytecode="1740" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Method>
+    <String value="null" role="STRING_NONSTRING_CONSTANT"/>
+    <SourceLine classname="org.osjava.payload.PayloadExtractor" start="68" end="68" startBytecode="43" endBytecode="43" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.osjava.payload.PayloadExtractor" start="65" end="65" startBytecode="39" endBytecode="39" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.osjava.payload.PayloadExtractor">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="54" end="283" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.PayloadExtractor" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="59" end="213" startBytecode="0" endBytecode="377" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/zip/ZipFile;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.util.zip.ZipFile" start="31" end="427" sourcefile="ZipFile.java" sourcepath="java/util/zip/ZipFile.java"/>
+    </Type>
+    <SourceLine classname="org.osjava.payload.PayloadExtractor" start="102" end="102" startBytecode="268" endBytecode="268" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.osjava.payload.PayloadExtractor">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="54" end="283" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Class>
+    <Method classname="org.osjava.payload.PayloadExtractor" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.osjava.payload.PayloadExtractor" start="59" end="213" startBytecode="0" endBytecode="1740" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.osjava.payload.PayloadExtractor" start="145" end="145" startBytecode="555" endBytecode="555" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java"/>
+    <SourceLine classname="org.osjava.payload.PayloadExtractor" start="148" end="148" startBytecode="567" endBytecode="567" sourcefile="PayloadExtractor.java" sourcepath="org/osjava/payload/PayloadExtractor.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 22 Nov 2005 20:23:44 +0200" total_classes="7" referenced_classes="49" total_bugs="11" total_size="481" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="15.92" clock_seconds="8.21" peak_mbytes="63.37" alloc_mbytes="763.88" gc_seconds="0.14" priority_2="4" priority_1="7">
+    <PackageStats package="org.osjava.payload" total_bugs="11" total_types="7" total_size="481" priority_2="4" priority_1="7">
+      <ClassStats class="org.osjava.payload.IOUtils" sourceFile="IOUtils.java" interface="false" size="36" bugs="1" priority_1="1"/>
+      <ClassStats class="org.osjava.payload.Interpolation" sourceFile="Interpolation.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.osjava.payload.Paylet" sourceFile="Paylet.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.osjava.payload.PayletExecutor" sourceFile="PayletExecutor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.osjava.payload.PayloadConfiguration" sourceFile="PayloadConfiguration.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.osjava.payload.PayloadContractor" sourceFile="PayloadContractor.java" interface="false" size="121" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.osjava.payload.PayloadExtractor" sourceFile="PayloadExtractor.java" interface="false" size="159" bugs="7" priority_2="2" priority_1="5"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="766" invocations="73" avgMicrosecondsPerInvocation="10494" maxMicrosecondsPerInvocation="42588" standardDeviationMircosecondsPerInvocation="8717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="653" invocations="421" avgMicrosecondsPerInvocation="1551" maxMicrosecondsPerInvocation="50510" standardDeviationMircosecondsPerInvocation="3826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="650" invocations="34" avgMicrosecondsPerInvocation="19146" maxMicrosecondsPerInvocation="162730" standardDeviationMircosecondsPerInvocation="38714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="540" invocations="34" avgMicrosecondsPerInvocation="15905" maxMicrosecondsPerInvocation="160778" standardDeviationMircosecondsPerInvocation="33295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="494" invocations="49" avgMicrosecondsPerInvocation="10093" maxMicrosecondsPerInvocation="114335" standardDeviationMircosecondsPerInvocation="18148"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="379" invocations="26" avgMicrosecondsPerInvocation="14610" maxMicrosecondsPerInvocation="193692" standardDeviationMircosecondsPerInvocation="37809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="375" invocations="49" avgMicrosecondsPerInvocation="7665" maxMicrosecondsPerInvocation="60760" standardDeviationMircosecondsPerInvocation="11293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="341" invocations="31" avgMicrosecondsPerInvocation="11009" maxMicrosecondsPerInvocation="131573" standardDeviationMircosecondsPerInvocation="24542"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="283" invocations="31" avgMicrosecondsPerInvocation="9132" maxMicrosecondsPerInvocation="79012" standardDeviationMircosecondsPerInvocation="16938"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="220" invocations="155" avgMicrosecondsPerInvocation="1422" maxMicrosecondsPerInvocation="29173" standardDeviationMircosecondsPerInvocation="3368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="214" invocations="31" avgMicrosecondsPerInvocation="6913" maxMicrosecondsPerInvocation="50739" standardDeviationMircosecondsPerInvocation="11966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="203" invocations="31" avgMicrosecondsPerInvocation="6550" maxMicrosecondsPerInvocation="73406" standardDeviationMircosecondsPerInvocation="15332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="187" invocations="49" avgMicrosecondsPerInvocation="3833" maxMicrosecondsPerInvocation="20424" standardDeviationMircosecondsPerInvocation="5057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="131" invocations="7" avgMicrosecondsPerInvocation="18758" maxMicrosecondsPerInvocation="69163" standardDeviationMircosecondsPerInvocation="23598"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

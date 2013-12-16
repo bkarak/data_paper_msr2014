@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1213013030000" analysisTimestamp="1360868614234" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/servicemix/kernel/org.apache.servicemix.kernel.spring/1.0.0-rc1/org.apache.servicemix.kernel.spring-1.0.0-rc1.jar</Jar>
+  </Project>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.servicemix.kernel.spring.SpringDeploymentListener">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringDeploymentListener" start="48" end="90" sourcefile="SpringDeploymentListener.java" sourcepath="org/apache/servicemix/kernel/spring/SpringDeploymentListener.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.kernel.spring.SpringDeploymentListener" name="handle" signature="(Ljava/io/File;Ljava/io/File;)Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringDeploymentListener" start="73" end="80" startBytecode="0" endBytecode="198" sourcefile="SpringDeploymentListener.java" sourcepath="org/apache/servicemix/kernel/spring/SpringDeploymentListener.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.servicemix.kernel.spring.SpringDeploymentListener" start="74" end="74" startBytecode="36" endBytecode="36" sourcefile="SpringDeploymentListener.java" sourcepath="org/apache/servicemix/kernel/spring/SpringDeploymentListener.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.apache.servicemix.kernel.spring.SpringDeploymentListener" start="75" end="75" startBytecode="41" endBytecode="41" sourcefile="SpringDeploymentListener.java" sourcepath="org/apache/servicemix/kernel/spring/SpringDeploymentListener.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.servicemix.kernel.spring.SpringDeploymentListener" start="78" end="78" startBytecode="57" endBytecode="57" sourcefile="SpringDeploymentListener.java" sourcepath="org/apache/servicemix/kernel/spring/SpringDeploymentListener.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.servicemix.kernel.spring.SpringDeploymentListener" start="79" end="79" startBytecode="58" endBytecode="58" sourcefile="SpringDeploymentListener.java" sourcepath="org/apache/servicemix/kernel/spring/SpringDeploymentListener.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="AM_CREATES_EMPTY_JAR_FILE_ENTRY" priority="2" abbrev="AM" category="BAD_PRACTICE">
+    <Class classname="org.apache.servicemix.kernel.spring.SpringTransformer">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="47" end="218" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.kernel.spring.SpringTransformer" name="transform" signature="(Ljava/net/URL;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="54" end="91" startBytecode="0" endBytecode="568" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="83" end="83" startBytecode="228" endBytecode="228" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.servicemix.kernel.spring.SpringTransformer">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="47" end="218" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.kernel.spring.SpringTransformer" name="transform" signature="(Ljava/net/URL;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="54" end="91" startBytecode="0" endBytecode="136" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+    </Method>
+    <LocalVariable name="doc" register="2" pc="5" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="54" end="54" startBytecode="4" endBytecode="4" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="doc"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.servicemix.kernel.spring.SpringTransformer">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="47" end="218" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.kernel.spring.SpringTransformer" name="analyze" signature="(Ljava/io/InputStream;)Ljava/util/Set;" isStatic="true">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="155" end="188" startBytecode="0" endBytecode="497" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="171" end="171" startBytecode="105" endBytecode="105" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_UPDATE_STATIC" priority="2" abbrev="LI" category="MT_CORRECTNESS">
+    <Class classname="org.apache.servicemix.kernel.spring.SpringTransformer">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="47" end="218" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.kernel.spring.SpringTransformer" name="parse" signature="(Ljava/net/URL;)Lorg/w3c/dom/Document;" isStatic="true">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="203" end="208" startBytecode="0" endBytecode="14" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+    </Method>
+    <Field classname="org.apache.servicemix.kernel.spring.SpringTransformer" name="dbf" signature="Ljavax/xml/parsers/DocumentBuilderFactory;" isStatic="true" role="FIELD_ON">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+    </Field>
+    <SourceLine classname="org.apache.servicemix.kernel.spring.SpringTransformer" start="203" end="204" startBytecode="0" endBytecode="9" sourcefile="SpringTransformer.java" sourcepath="org/apache/servicemix/kernel/spring/SpringTransformer.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1" start="86" end="89" sourcefile="SpringURLHandler.java" sourcepath="org/apache/servicemix/kernel/spring/SpringURLHandler.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1" name="&lt;init&gt;" signature="(Lorg/apache/servicemix/kernel/spring/SpringURLHandler$Connection;Ljava/io/File;Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1" start="86" end="86" startBytecode="0" endBytecode="67" sourcefile="SpringURLHandler.java" sourcepath="org/apache/servicemix/kernel/spring/SpringURLHandler.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1" start="86" end="86" startBytecode="12" endBytecode="12" sourcefile="SpringURLHandler.java" sourcepath="org/apache/servicemix/kernel/spring/SpringURLHandler.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1" start="86" end="89" sourcefile="SpringURLHandler.java" sourcepath="org/apache/servicemix/kernel/spring/SpringURLHandler.java"/>
+    </Class>
+    <Method classname="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1" start="87" end="89" startBytecode="0" endBytecode="62" sourcefile="SpringURLHandler.java" sourcepath="org/apache/servicemix/kernel/spring/SpringURLHandler.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1" start="88" end="88" startBytecode="8" endBytecode="8" sourcefile="SpringURLHandler.java" sourcepath="org/apache/servicemix/kernel/spring/SpringURLHandler.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.osgi.service.url.AbstractURLStreamHandlerService</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 9 Jun 2008 15:03:50 +0300" total_classes="5" referenced_classes="84" total_bugs="7" total_size="212" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="12.59" clock_seconds="10.89" peak_mbytes="59.41" alloc_mbytes="763.88" gc_seconds="0.16" priority_2="6" priority_1="1">
+    <PackageStats package="org.apache.servicemix.kernel.spring" total_bugs="7" total_types="5" total_size="212" priority_2="6" priority_1="1">
+      <ClassStats class="org.apache.servicemix.kernel.spring.SpringDeploymentListener" sourceFile="SpringDeploymentListener.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.servicemix.kernel.spring.SpringTransformer" sourceFile="SpringTransformer.java" interface="false" size="134" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="org.apache.servicemix.kernel.spring.SpringURLHandler" sourceFile="SpringURLHandler.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection" sourceFile="SpringURLHandler.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.servicemix.kernel.spring.SpringURLHandler$Connection$1" sourceFile="SpringURLHandler.java" interface="false" size="9" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1384" invocations="647" avgMicrosecondsPerInvocation="2139" maxMicrosecondsPerInvocation="81558" standardDeviationMircosecondsPerInvocation="8303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="849" invocations="84" avgMicrosecondsPerInvocation="10113" maxMicrosecondsPerInvocation="136711" standardDeviationMircosecondsPerInvocation="21433"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="635" invocations="84" avgMicrosecondsPerInvocation="7571" maxMicrosecondsPerInvocation="95451" standardDeviationMircosecondsPerInvocation="15699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="445" invocations="25" avgMicrosecondsPerInvocation="17825" maxMicrosecondsPerInvocation="268103" standardDeviationMircosecondsPerInvocation="52749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="426" invocations="238" avgMicrosecondsPerInvocation="1790" maxMicrosecondsPerInvocation="61871" standardDeviationMircosecondsPerInvocation="6836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="334" invocations="84" avgMicrosecondsPerInvocation="3982" maxMicrosecondsPerInvocation="47596" standardDeviationMircosecondsPerInvocation="8197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="280" invocations="25" avgMicrosecondsPerInvocation="11213" maxMicrosecondsPerInvocation="124243" standardDeviationMircosecondsPerInvocation="27005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="255" invocations="25" avgMicrosecondsPerInvocation="10233" maxMicrosecondsPerInvocation="77214" standardDeviationMircosecondsPerInvocation="19877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="235" invocations="11" avgMicrosecondsPerInvocation="21442" maxMicrosecondsPerInvocation="91156" standardDeviationMircosecondsPerInvocation="25678"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="229" invocations="602" avgMicrosecondsPerInvocation="380" maxMicrosecondsPerInvocation="34825" standardDeviationMircosecondsPerInvocation="2274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="227" invocations="84" avgMicrosecondsPerInvocation="2703" maxMicrosecondsPerInvocation="56537" standardDeviationMircosecondsPerInvocation="7547"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="226" invocations="21" avgMicrosecondsPerInvocation="10788" maxMicrosecondsPerInvocation="57845" standardDeviationMircosecondsPerInvocation="16859"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="224" invocations="650" avgMicrosecondsPerInvocation="345" maxMicrosecondsPerInvocation="32548" standardDeviationMircosecondsPerInvocation="2210"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="214" invocations="25" avgMicrosecondsPerInvocation="8592" maxMicrosecondsPerInvocation="52124" standardDeviationMircosecondsPerInvocation="15015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="214" invocations="84" avgMicrosecondsPerInvocation="2548" maxMicrosecondsPerInvocation="60092" standardDeviationMircosecondsPerInvocation="7901"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="200" invocations="84" avgMicrosecondsPerInvocation="2385" maxMicrosecondsPerInvocation="30925" standardDeviationMircosecondsPerInvocation="5032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="194" invocations="84" avgMicrosecondsPerInvocation="2315" maxMicrosecondsPerInvocation="81021" standardDeviationMircosecondsPerInvocation="9316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="186" invocations="25" avgMicrosecondsPerInvocation="7469" maxMicrosecondsPerInvocation="125135" standardDeviationMircosecondsPerInvocation="25010"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

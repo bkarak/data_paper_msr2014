@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1304801235000" analysisTimestamp="1360502986959" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/wicket/wicket-util/1.5-RC4.2/wicket-util-1.5-RC4.2.jar</Jar>
+  </Project>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.wicket.util.LongEncoder">
+      <SourceLine classname="org.apache.wicket.util.LongEncoder" start="37" end="115" sourcefile="LongEncoder.java" sourcepath="org/apache/wicket/util/LongEncoder.java"/>
+    </Class>
+    <Field classname="org.apache.wicket.util.LongEncoder" name="DEFAULT" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.LongEncoder" sourcefile="LongEncoder.java" sourcepath="org/apache/wicket/util/LongEncoder.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.LongEncoder" start="37" end="37" startBytecode="2" endBytecode="2" sourcefile="LongEncoder.java" sourcepath="org/apache/wicket/util/LongEncoder.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="2" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="org.apache.wicket.util.collections.IntHashMap">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="41" end="1171" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.collections.IntHashMap" name="clear" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="549" end="556" startBytecode="0" endBytecode="152" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Method>
+    <Field classname="org.apache.wicket.util.collections.IntHashMap" name="modCount" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="549" end="549" startBytecode="7" endBytecode="7" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="2" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="org.apache.wicket.util.collections.IntHashMap">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="41" end="1171" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.collections.IntHashMap" name="put" signature="(ILjava/lang/Object;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="290" end="304" startBytecode="0" endBytecode="252" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Method>
+    <Field classname="org.apache.wicket.util.collections.IntHashMap" name="modCount" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="302" end="302" startBytecode="65" endBytecode="65" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="2" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="org.apache.wicket.util.collections.IntHashMap">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="41" end="1171" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.collections.IntHashMap" name="removeEntryForKey" signature="(I)Lorg/apache/wicket/util/collections/IntHashMap$Entry;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="472" end="497" startBytecode="0" endBytecode="299" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Method>
+    <Field classname="org.apache.wicket.util.collections.IntHashMap" name="modCount" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="481" end="481" startBytecode="48" endBytecode="48" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="2" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="org.apache.wicket.util.collections.IntHashMap">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="41" end="1171" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.collections.IntHashMap" name="removeMapping" signature="(Ljava/lang/Object;)Lorg/apache/wicket/util/collections/IntHashMap$Entry;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="509" end="541" startBytecode="0" endBytecode="381" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Method>
+    <Field classname="org.apache.wicket.util.collections.IntHashMap" name="modCount" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.collections.IntHashMap" start="525" end="525" startBytecode="80" endBytecode="80" sourcefile="IntHashMap.java" sourcepath="org/apache/wicket/util/collections/IntHashMap.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.wicket.util.convert.converter.DateConverter">
+      <SourceLine classname="org.apache.wicket.util.convert.converter.DateConverter" start="30" end="84" sourcefile="DateConverter.java" sourcepath="org/apache/wicket/util/convert/converter/DateConverter.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.convert.converter.DateConverter" name="convertToString" signature="(Ljava/util/Date;Ljava/util/Locale;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.convert.converter.DateConverter" start="55" end="60" startBytecode="0" endBytecode="104" sourcefile="DateConverter.java" sourcepath="org/apache/wicket/util/convert/converter/DateConverter.java"/>
+    </Method>
+    <LocalVariable name="dateFormat" register="3" pc="6" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.wicket.util.convert.converter.DateConverter" name="getDateFormat" signature="(Ljava/util/Locale;)Ljava/text/DateFormat;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.wicket.util.convert.converter.DateConverter" start="70" end="75" startBytecode="0" endBytecode="73" sourcefile="DateConverter.java" sourcepath="org/apache/wicket/util/convert/converter/DateConverter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.convert.converter.DateConverter" start="56" end="56" startBytecode="7" endBytecode="7" sourcefile="DateConverter.java" sourcepath="org/apache/wicket/util/convert/converter/DateConverter.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.wicket.util.convert.converter.SqlDateConverter">
+      <SourceLine classname="org.apache.wicket.util.convert.converter.SqlDateConverter" start="28" end="80" sourcefile="SqlDateConverter.java" sourcepath="org/apache/wicket/util/convert/converter/SqlDateConverter.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.convert.converter.SqlDateConverter" name="convertToString" signature="(Ljava/sql/Date;Ljava/util/Locale;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.convert.converter.SqlDateConverter" start="54" end="59" startBytecode="0" endBytecode="104" sourcefile="SqlDateConverter.java" sourcepath="org/apache/wicket/util/convert/converter/SqlDateConverter.java"/>
+    </Method>
+    <LocalVariable name="dateFormat" register="3" pc="6" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.wicket.util.convert.converter.SqlDateConverter" name="getDateFormat" signature="(Ljava/util/Locale;)Ljava/text/DateFormat;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.wicket.util.convert.converter.SqlDateConverter" start="69" end="74" startBytecode="0" endBytecode="73" sourcefile="SqlDateConverter.java" sourcepath="org/apache/wicket/util/convert/converter/SqlDateConverter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.convert.converter.SqlDateConverter" start="55" end="55" startBytecode="7" endBytecode="7" sourcefile="SqlDateConverter.java" sourcepath="org/apache/wicket/util/convert/converter/SqlDateConverter.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.crypt.AbstractCrypt">
+      <SourceLine classname="org.apache.wicket.util.crypt.AbstractCrypt" start="42" end="172" sourcefile="AbstractCrypt.java" sourcepath="org/apache/wicket/util/crypt/AbstractCrypt.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.crypt.AbstractCrypt" name="decryptByteArray" signature="([B)[B" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.crypt.AbstractCrypt" start="146" end="150" startBytecode="0" endBytecode="125" sourcefile="AbstractCrypt.java" sourcepath="org/apache/wicket/util/crypt/AbstractCrypt.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.crypt.AbstractCrypt" start="150" end="150" startBytecode="29" endBytecode="29" sourcefile="AbstractCrypt.java" sourcepath="org/apache/wicket/util/crypt/AbstractCrypt.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.wicket.util.crypt.Base64">
+      <SourceLine classname="org.apache.wicket.util.crypt.Base64" start="69" end="1104" sourcefile="Base64.java" sourcepath="org/apache/wicket/util/crypt/Base64.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.crypt.Base64" name="decode" signature="([BII)V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.crypt.Base64" start="580" end="639" startBytecode="0" endBytecode="600" sourcefile="Base64.java" sourcepath="org/apache/wicket/util/crypt/Base64.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.crypt.Base64" start="627" end="635" startBytecode="258" endBytecode="381" sourcefile="Base64.java" sourcepath="org/apache/wicket/util/crypt/Base64.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.wicket.util.crypt.Base64">
+      <SourceLine classname="org.apache.wicket.util.crypt.Base64" start="69" end="1104" sourcefile="Base64.java" sourcepath="org/apache/wicket/util/crypt/Base64.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.crypt.Base64" name="encode" signature="([BII)V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.crypt.Base64" start="477" end="551" startBytecode="0" endBytecode="894" sourcefile="Base64.java" sourcepath="org/apache/wicket/util/crypt/Base64.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.crypt.Base64" start="490" end="510" startBytecode="49" endBytecode="303" sourcefile="Base64.java" sourcepath="org/apache/wicket/util/crypt/Base64.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.apache.wicket.util.crypt.ClassCryptFactory">
+      <SourceLine classname="org.apache.wicket.util.crypt.ClassCryptFactory" start="34" end="95" sourcefile="ClassCryptFactory.java" sourcepath="org/apache/wicket/util/crypt/ClassCryptFactory.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.crypt.ClassCryptFactory" name="newCrypt" signature="()Lorg/apache/wicket/util/crypt/ICrypt;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.crypt.ClassCryptFactory" start="67" end="95" startBytecode="0" endBytecode="422" sourcefile="ClassCryptFactory.java" sourcepath="org/apache/wicket/util/crypt/ClassCryptFactory.java"/>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="10" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.apache.wicket.util.crypt.ClassCryptFactory" start="67" end="67" startBytecode="10" endBytecode="10" sourcefile="ClassCryptFactory.java" sourcepath="org/apache/wicket/util/crypt/ClassCryptFactory.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.wicket.util.crypt.ClassCryptFactory" start="67" end="67" startBytecode="4" endBytecode="4" sourcefile="ClassCryptFactory.java" sourcepath="org/apache/wicket/util/crypt/ClassCryptFactory.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_IN_CATCH_BLOCKS" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.wicket.util.diff.Diff">
+      <SourceLine classname="org.apache.wicket.util.diff.Diff" start="105" end="386" sourcefile="Diff.java" sourcepath="org/apache/wicket/util/diff/Diff.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.diff.Diff" name="&lt;init&gt;" signature="([Ljava/lang/Object;Lorg/apache/wicket/util/diff/DiffAlgorithm;)V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.diff.Diff" start="136" end="151" startBytecode="0" endBytecode="131" sourcefile="Diff.java" sourcepath="org/apache/wicket/util/diff/Diff.java"/>
+    </Method>
+    <Field classname="org.apache.wicket.util.diff.Diff" name="orig" signature="[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.diff.Diff" sourcefile="Diff.java" sourcepath="org/apache/wicket/util/diff/Diff.java"/>
+    </Field>
+    <LocalVariable name="original" register="1" pc="18" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.wicket.util.diff.Diff" start="142" end="142" startBytecode="18" endBytecode="18" sourcefile="Diff.java" sourcepath="org/apache/wicket/util/diff/Diff.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.file.File">
+      <SourceLine classname="org.apache.wicket.util.file.File" start="60" end="319" sourcefile="File.java" sourcepath="org/apache/wicket/util/file/File.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.file.File" name="write" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.file.File" start="310" end="319" startBytecode="0" endBytecode="126" sourcefile="File.java" sourcepath="org/apache/wicket/util/file/File.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.file.File" start="310" end="310" startBytecode="5" endBytecode="5" sourcefile="File.java" sourcepath="org/apache/wicket/util/file/File.java"/>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" priority="1" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.apache.wicket.util.file.File">
+      <SourceLine classname="org.apache.wicket.util.file.File" start="60" end="319" sourcefile="File.java" sourcepath="org/apache/wicket/util/file/File.java"/>
+    </Class>
+    <Class classname="java.io.File">
+      <SourceLine classname="java.io.File" start="120" end="1934" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.wicket.util.file.File">
+      <SourceLine classname="org.apache.wicket.util.file.File" start="60" end="319" sourcefile="File.java" sourcepath="org/apache/wicket/util/file/File.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.file.File" name="readObject" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.file.File" start="218" end="218" startBytecode="0" endBytecode="6" sourcefile="File.java" sourcepath="org/apache/wicket/util/file/File.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.apache.wicket.util.file.File" start="218" end="218" startBytecode="0" endBytecode="0" sourcefile="File.java" sourcepath="org/apache/wicket/util/file/File.java"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.wicket.util.file.File">
+      <SourceLine classname="org.apache.wicket.util.file.File" start="60" end="319" sourcefile="File.java" sourcepath="org/apache/wicket/util/file/File.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.file.File" name="writeObject" signature="(Ljava/io/Serializable;)V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.file.File" start="228" end="229" startBytecode="0" endBytecode="7" sourcefile="File.java" sourcepath="org/apache/wicket/util/file/File.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/OutputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Type>
+    <SourceLine classname="org.apache.wicket.util.file.File" start="228" end="228" startBytecode="0" endBytecode="0" sourcefile="File.java" sourcepath="org/apache/wicket/util/file/File.java"/>
+  </BugInstance>
+  <BugInstance type="DM_GC" priority="1" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.apache.wicket.util.file.Files">
+      <SourceLine classname="org.apache.wicket.util.file.Files" start="43" end="244" sourcefile="Files.java" sourcepath="org/apache/wicket/util/file/Files.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.file.Files" name="remove" signature="(Ljava/io/File;)Z" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.file.Files" start="104" end="121" startBytecode="0" endBytecode="110" sourcefile="Files.java" sourcepath="org/apache/wicket/util/file/Files.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.file.Files" start="109" end="109" startBytecode="7" endBytecode="7" sourcefile="Files.java" sourcepath="org/apache/wicket/util/file/Files.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.io.ByteArrayOutputStream">
+      <SourceLine classname="org.apache.wicket.util.io.ByteArrayOutputStream" start="45" end="260" sourcefile="ByteArrayOutputStream.java" sourcepath="org/apache/wicket/util/io/ByteArrayOutputStream.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.io.ByteArrayOutputStream" name="toString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.io.ByteArrayOutputStream" start="143" end="143" startBytecode="0" endBytecode="53" sourcefile="ByteArrayOutputStream.java" sourcepath="org/apache/wicket/util/io/ByteArrayOutputStream.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.io.ByteArrayOutputStream" start="143" end="143" startBytecode="8" endBytecode="8" sourcefile="ByteArrayOutputStream.java" sourcepath="org/apache/wicket/util/io/ByteArrayOutputStream.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.wicket.util.io.DeferredFileOutputStream">
+      <SourceLine classname="org.apache.wicket.util.io.DeferredFileOutputStream" start="72" end="169" sourcefile="DeferredFileOutputStream.java" sourcepath="org/apache/wicket/util/io/DeferredFileOutputStream.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.io.DeferredFileOutputStream" name="thresholdReached" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.io.DeferredFileOutputStream" start="160" end="169" startBytecode="0" endBytecode="145" sourcefile="DeferredFileOutputStream.java" sourcepath="org/apache/wicket/util/io/DeferredFileOutputStream.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.wicket.util.io.DeferredFileOutputStream" start="165" end="165" startBytecode="36" endBytecode="36" sourcefile="DeferredFileOutputStream.java" sourcepath="org/apache/wicket/util/io/DeferredFileOutputStream.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.apache.wicket.util.io.DeferredFileOutputStream" start="166" end="166" startBytecode="40" endBytecode="40" sourcefile="DeferredFileOutputStream.java" sourcepath="org/apache/wicket/util/io/DeferredFileOutputStream.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.io.IOUtils">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="75" end="978" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.io.IOUtils" name="copy" signature="(Ljava/io/InputStream;Ljava/io/Writer;)V" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="725" end="727" startBytecode="0" endBytecode="85" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="725" end="725" startBytecode="5" endBytecode="5" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.io.IOUtils">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="75" end="978" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.io.IOUtils" name="copy" signature="(Ljava/io/Reader;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="820" end="823" startBytecode="0" endBytecode="93" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="820" end="820" startBytecode="5" endBytecode="5" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.io.IOUtils">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="75" end="978" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.io.IOUtils" name="write" signature="(Ljava/lang/String;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="548" end="552" startBytecode="0" endBytecode="72" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="550" end="550" startBytecode="6" endBytecode="6" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.io.IOUtils">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="75" end="978" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.io.IOUtils" name="write" signature="(Ljava/lang/StringBuilder;Ljava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="631" end="635" startBytecode="0" endBytecode="75" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="633" end="633" startBytecode="9" endBytecode="9" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.io.IOUtils">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="75" end="978" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.io.IOUtils" name="write" signature="([BLjava/io/Writer;)V" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="384" end="388" startBytecode="0" endBytecode="76" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="386" end="386" startBytecode="10" endBytecode="10" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.io.IOUtils">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="75" end="978" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.io.IOUtils" name="write" signature="([CLjava/io/OutputStream;)V" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="466" end="470" startBytecode="0" endBytecode="79" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.io.IOUtils" start="468" end="468" startBytecode="13" endBytecode="13" sourcefile="IOUtils.java" sourcepath="org/apache/wicket/util/io/IOUtils.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.io.Streams">
+      <SourceLine classname="org.apache.wicket.util.io.Streams" start="50" end="190" sourcefile="Streams.java" sourcepath="org/apache/wicket/util/io/Streams.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.io.Streams" name="readString" signature="(Ljava/io/InputStream;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.io.Streams" start="145" end="145" startBytecode="0" endBytecode="60" sourcefile="Streams.java" sourcepath="org/apache/wicket/util/io/Streams.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.io.Streams" start="145" end="145" startBytecode="9" endBytecode="9" sourcefile="Streams.java" sourcepath="org/apache/wicket/util/io/Streams.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.io.XmlReader">
+      <SourceLine classname="org.apache.wicket.util.io.XmlReader" start="40" end="254" sourcefile="XmlReader.java" sourcepath="org/apache/wicket/util/io/XmlReader.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.io.XmlReader" name="init" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.io.XmlReader" start="117" end="142" startBytecode="0" endBytecode="175" sourcefile="XmlReader.java" sourcepath="org/apache/wicket/util/io/XmlReader.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.io.XmlReader" start="135" end="135" startBytecode="63" endBytecode="63" sourcefile="XmlReader.java" sourcepath="org/apache/wicket/util/io/XmlReader.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.apache.wicket.util.lang.PackageName">
+      <SourceLine classname="org.apache.wicket.util.lang.PackageName" start="41" end="92" sourcefile="PackageName.java" sourcepath="org/apache/wicket/util/lang/PackageName.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.lang.PackageName" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.lang.PackageName" start="71" end="75" startBytecode="0" endBytecode="83" sourcefile="PackageName.java" sourcepath="org/apache/wicket/util/lang/PackageName.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.license.AbstractLicenseHeaderHandler">
+      <SourceLine classname="org.apache.wicket.util.license.AbstractLicenseHeaderHandler" start="35" end="161" sourcefile="AbstractLicenseHeaderHandler.java" sourcepath="org/apache/wicket/util/license/AbstractLicenseHeaderHandler.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.license.AbstractLicenseHeaderHandler" name="extractLicenseHeader" signature="(Ljava/io/File;II)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.license.AbstractLicenseHeaderHandler" start="109" end="139" startBytecode="0" endBytecode="463" sourcefile="AbstractLicenseHeaderHandler.java" sourcepath="org/apache/wicket/util/license/AbstractLicenseHeaderHandler.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.license.AbstractLicenseHeaderHandler" start="114" end="114" startBytecode="17" endBytecode="17" sourcefile="AbstractLicenseHeaderHandler.java" sourcepath="org/apache/wicket/util/license/AbstractLicenseHeaderHandler.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.license.AbstractLicenseHeaderHandler">
+      <SourceLine classname="org.apache.wicket.util.license.AbstractLicenseHeaderHandler" start="35" end="161" sourcefile="AbstractLicenseHeaderHandler.java" sourcepath="org/apache/wicket/util/license/AbstractLicenseHeaderHandler.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.license.AbstractLicenseHeaderHandler" name="getLicenseHeader" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.license.AbstractLicenseHeaderHandler" start="69" end="104" startBytecode="0" endBytecode="406" sourcefile="AbstractLicenseHeaderHandler.java" sourcepath="org/apache/wicket/util/license/AbstractLicenseHeaderHandler.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.license.AbstractLicenseHeaderHandler" start="78" end="78" startBytecode="32" endBytecode="32" sourcefile="AbstractLicenseHeaderHandler.java" sourcepath="org/apache/wicket/util/license/AbstractLicenseHeaderHandler.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.resource.AbstractStringResourceStream">
+      <SourceLine classname="org.apache.wicket.util.resource.AbstractStringResourceStream" start="55" end="200" sourcefile="AbstractStringResourceStream.java" sourcepath="org/apache/wicket/util/resource/AbstractStringResourceStream.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.resource.AbstractStringResourceStream" name="asString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.resource.AbstractStringResourceStream" start="84" end="108" startBytecode="0" endBytecode="241" sourcefile="AbstractStringResourceStream.java" sourcepath="org/apache/wicket/util/resource/AbstractStringResourceStream.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.resource.AbstractStringResourceStream" start="89" end="89" startBytecode="17" endBytecode="17" sourcefile="AbstractStringResourceStream.java" sourcepath="org/apache/wicket/util/resource/AbstractStringResourceStream.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.resource.AbstractStringResourceStream">
+      <SourceLine classname="org.apache.wicket.util.resource.AbstractStringResourceStream" start="55" end="200" sourcefile="AbstractStringResourceStream.java" sourcepath="org/apache/wicket/util/resource/AbstractStringResourceStream.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.resource.AbstractStringResourceStream" name="getInputStream" signature="()Ljava/io/InputStream;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.resource.AbstractStringResourceStream" start="155" end="170" startBytecode="0" endBytecode="147" sourcefile="AbstractStringResourceStream.java" sourcepath="org/apache/wicket/util/resource/AbstractStringResourceStream.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.resource.AbstractStringResourceStream" start="168" end="168" startBytecode="41" endBytecode="41" sourcefile="AbstractStringResourceStream.java" sourcepath="org/apache/wicket/util/resource/AbstractStringResourceStream.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.wicket.util.string.AppendingStringBuffer">
+      <SourceLine classname="org.apache.wicket.util.string.AppendingStringBuffer" start="38" end="1693" sourcefile="AppendingStringBuffer.java" sourcepath="org/apache/wicket/util/string/AppendingStringBuffer.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.string.AppendingStringBuffer" name="getValue" signature="()[C" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.string.AppendingStringBuffer" start="1578" end="1578" startBytecode="0" endBytecode="46" sourcefile="AppendingStringBuffer.java" sourcepath="org/apache/wicket/util/string/AppendingStringBuffer.java"/>
+    </Method>
+    <Field classname="org.apache.wicket.util.string.AppendingStringBuffer" name="value" signature="[C" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.string.AppendingStringBuffer" sourcefile="AppendingStringBuffer.java" sourcepath="org/apache/wicket/util/string/AppendingStringBuffer.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.string.AppendingStringBuffer" start="1578" end="1578" startBytecode="4" endBytecode="4" sourcefile="AppendingStringBuffer.java" sourcepath="org/apache/wicket/util/string/AppendingStringBuffer.java"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.apache.wicket.util.string.AppendingStringBuffer">
+      <SourceLine classname="org.apache.wicket.util.string.AppendingStringBuffer" start="38" end="1693" sourcefile="AppendingStringBuffer.java" sourcepath="org/apache/wicket/util/string/AppendingStringBuffer.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.string.AppendingStringBuffer" name="append" signature="(Ljava/lang/String;)Lorg/apache/wicket/util/string/AppendingStringBuffer;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.string.AppendingStringBuffer" start="365" end="378" startBytecode="0" endBytecode="33" sourcefile="AppendingStringBuffer.java" sourcepath="org/apache/wicket/util/string/AppendingStringBuffer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.string.AppendingStringBuffer" start="367" end="367" startBytecode="4" endBytecode="4" sourcefile="AppendingStringBuffer.java" sourcepath="org/apache/wicket/util/string/AppendingStringBuffer.java"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.apache.wicket.util.string.AppendingStringBuffer">
+      <SourceLine classname="org.apache.wicket.util.string.AppendingStringBuffer" start="38" end="1693" sourcefile="AppendingStringBuffer.java" sourcepath="org/apache/wicket/util/string/AppendingStringBuffer.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.string.AppendingStringBuffer" name="insert" signature="(ILjava/lang/String;)Lorg/apache/wicket/util/string/AppendingStringBuffer;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.string.AppendingStringBuffer" start="989" end="1007" startBytecode="0" endBytecode="55" sourcefile="AppendingStringBuffer.java" sourcepath="org/apache/wicket/util/string/AppendingStringBuffer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.string.AppendingStringBuffer" start="996" end="996" startBytecode="24" endBytecode="24" sourcefile="AppendingStringBuffer.java" sourcepath="org/apache/wicket/util/string/AppendingStringBuffer.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.wicket.util.string.Entities$MapIntMap">
+      <SourceLine classname="org.apache.wicket.util.string.Entities$MapIntMap" start="513" end="545" sourcefile="Entities.java" sourcepath="org/apache/wicket/util/string/Entities.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.string.Entities$MapIntMap" name="add" signature="(Ljava/lang/String;I)V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.string.Entities$MapIntMap" start="523" end="525" startBytecode="0" endBytecode="108" sourcefile="Entities.java" sourcepath="org/apache/wicket/util/string/Entities.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.string.Entities$MapIntMap" start="523" end="523" startBytecode="10" endBytecode="10" sourcefile="Entities.java" sourcepath="org/apache/wicket/util/string/Entities.java"/>
+    <SourceLine classname="org.apache.wicket.util.string.Entities$MapIntMap" start="524" end="524" startBytecode="28" endBytecode="28" sourcefile="Entities.java" sourcepath="org/apache/wicket/util/string/Entities.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.wicket.util.string.Entities$MapIntMap">
+      <SourceLine classname="org.apache.wicket.util.string.Entities$MapIntMap" start="513" end="545" sourcefile="Entities.java" sourcepath="org/apache/wicket/util/string/Entities.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.string.Entities$MapIntMap" name="name" signature="(I)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.string.Entities$MapIntMap" start="532" end="532" startBytecode="0" endBytecode="72" sourcefile="Entities.java" sourcepath="org/apache/wicket/util/string/Entities.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.string.Entities$MapIntMap" start="532" end="532" startBytecode="9" endBytecode="9" sourcefile="Entities.java" sourcepath="org/apache/wicket/util/string/Entities.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.wicket.util.string.Entities$PrimitiveEntityMap">
+      <SourceLine classname="org.apache.wicket.util.string.Entities$PrimitiveEntityMap" start="460" end="494" sourcefile="Entities.java" sourcepath="org/apache/wicket/util/string/Entities.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.string.Entities$PrimitiveEntityMap" name="add" signature="(Ljava/lang/String;I)V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.string.Entities$PrimitiveEntityMap" start="472" end="474" startBytecode="0" endBytecode="99" sourcefile="Entities.java" sourcepath="org/apache/wicket/util/string/Entities.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.string.Entities$PrimitiveEntityMap" start="472" end="472" startBytecode="10" endBytecode="10" sourcefile="Entities.java" sourcepath="org/apache/wicket/util/string/Entities.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.string.Strings">
+      <SourceLine classname="org.apache.wicket.util.string.Strings" start="58" end="1362" sourcefile="Strings.java" sourcepath="org/apache/wicket/util/string/Strings.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.string.Strings" name="lengthInBytes" signature="(Ljava/lang/String;Ljava/nio/charset/Charset;)I" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.string.Strings" start="1296" end="1314" startBytecode="0" endBytecode="158" sourcefile="Strings.java" sourcepath="org/apache/wicket/util/string/Strings.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.string.Strings" start="1314" end="1314" startBytecode="60" endBytecode="60" sourcefile="Strings.java" sourcepath="org/apache/wicket/util/string/Strings.java"/>
+  </BugInstance>
+  <BugInstance type="UG_SYNC_SET_UNSYNC_GET" priority="2" abbrev="UG" category="MT_CORRECTNESS">
+    <Class classname="org.apache.wicket.util.thread.Task">
+      <SourceLine classname="org.apache.wicket.util.thread.Task" start="42" end="280" sourcefile="Task.java" sourcepath="org/apache/wicket/util/thread/Task.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.thread.Task" name="getLog" signature="()Lorg/slf4j/Logger;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.thread.Task" start="228" end="232" startBytecode="0" endBytecode="71" sourcefile="Task.java" sourcepath="org/apache/wicket/util/thread/Task.java"/>
+    </Method>
+    <Method classname="org.apache.wicket.util.thread.Task" name="setLog" signature="(Lorg/slf4j/Logger;)V" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.thread.Task" start="188" end="189" startBytecode="0" endBytecode="61" sourcefile="Task.java" sourcepath="org/apache/wicket/util/thread/Task.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.upload.DiskFileItem">
+      <SourceLine classname="org.apache.wicket.util.upload.DiskFileItem" start="76" end="764" sourcefile="DiskFileItem.java" sourcepath="org/apache/wicket/util/upload/DiskFileItem.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.upload.DiskFileItem" name="getString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.upload.DiskFileItem" start="361" end="373" startBytecode="0" endBytecode="140" sourcefile="DiskFileItem.java" sourcepath="org/apache/wicket/util/upload/DiskFileItem.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.upload.DiskFileItem" start="373" end="373" startBytecode="33" endBytecode="33" sourcefile="DiskFileItem.java" sourcepath="org/apache/wicket/util/upload/DiskFileItem.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.wicket.util.upload.DiskFileItem">
+      <SourceLine classname="org.apache.wicket.util.upload.DiskFileItem" start="76" end="764" sourcefile="DiskFileItem.java" sourcepath="org/apache/wicket/util/upload/DiskFileItem.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.upload.DiskFileItem" name="get" signature="()[B" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.upload.DiskFileItem" start="311" end="329" startBytecode="0" endBytecode="178" sourcefile="DiskFileItem.java" sourcepath="org/apache/wicket/util/upload/DiskFileItem.java"/>
+    </Method>
+    <Field classname="org.apache.wicket.util.upload.DiskFileItem" name="cachedContent" signature="[B" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.upload.DiskFileItem" sourcefile="DiskFileItem.java" sourcepath="org/apache/wicket/util/upload/DiskFileItem.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.upload.DiskFileItem" start="317" end="317" startBytecode="29" endBytecode="29" sourcefile="DiskFileItem.java" sourcepath="org/apache/wicket/util/upload/DiskFileItem.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.upload.FileUploadBase">
+      <SourceLine classname="org.apache.wicket.util.upload.FileUploadBase" start="57" end="1252" sourcefile="FileUploadBase.java" sourcepath="org/apache/wicket/util/upload/FileUploadBase.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.upload.FileUploadBase" name="getBoundary" signature="(Ljava/lang/String;)[B" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.upload.FileUploadBase" start="349" end="368" startBytecode="0" endBytecode="243" sourcefile="FileUploadBase.java" sourcepath="org/apache/wicket/util/upload/FileUploadBase.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.upload.FileUploadBase" start="366" end="366" startBytecode="68" endBytecode="68" sourcefile="FileUploadBase.java" sourcepath="org/apache/wicket/util/upload/FileUploadBase.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.upload.MultipartFormInputStream">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="90" end="823" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.upload.MultipartFormInputStream" name="readHeaders" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="561" end="611" startBytecode="0" endBytecode="345" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Method>
+    <Method classname="java.io.ByteArrayOutputStream" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.ByteArrayOutputStream" start="163" end="163" startBytecode="0" endBytecode="40" sourcefile="ByteArrayOutputStream.java" sourcepath="java/io/ByteArrayOutputStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="603" end="603" startBytecode="113" endBytecode="113" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.wicket.util.upload.MultipartFormInputStream">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="90" end="823" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.upload.MultipartFormInputStream" name="readHeaders" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="561" end="611" startBytecode="0" endBytecode="345" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Method>
+    <Method classname="java.io.ByteArrayOutputStream" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.ByteArrayOutputStream" start="163" end="163" startBytecode="0" endBytecode="40" sourcefile="ByteArrayOutputStream.java" sourcepath="java/io/ByteArrayOutputStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="608" end="608" startBytecode="122" endBytecode="122" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.wicket.util.upload.MultipartFormInputStream">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="90" end="823" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Class>
+    <Field classname="org.apache.wicket.util.upload.MultipartFormInputStream" name="BOUNDARY_PREFIX" signature="[B" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="223" end="223" startBytecode="90" endBytecode="90" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.wicket.util.upload.MultipartFormInputStream">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="90" end="823" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Class>
+    <Field classname="org.apache.wicket.util.upload.MultipartFormInputStream" name="FIELD_SEPARATOR" signature="[B" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="210" end="210" startBytecode="48" endBytecode="48" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.wicket.util.upload.MultipartFormInputStream">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="90" end="823" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Class>
+    <Field classname="org.apache.wicket.util.upload.MultipartFormInputStream" name="HEADER_SEPARATOR" signature="[B" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="203" end="203" startBytecode="32" endBytecode="32" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.wicket.util.upload.MultipartFormInputStream">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="90" end="823" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Class>
+    <Field classname="org.apache.wicket.util.upload.MultipartFormInputStream" name="STREAM_TERMINATOR" signature="[B" isStatic="true">
+      <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+    </Field>
+    <SourceLine classname="org.apache.wicket.util.upload.MultipartFormInputStream" start="217" end="217" startBytecode="64" endBytecode="64" sourcefile="MultipartFormInputStream.java" sourcepath="org/apache/wicket/util/upload/MultipartFormInputStream.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.wicket.util.upload.ParameterParser">
+      <SourceLine classname="org.apache.wicket.util.upload.ParameterParser" start="39" end="362" sourcefile="ParameterParser.java" sourcepath="org/apache/wicket/util/upload/ParameterParser.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.upload.ParameterParser" name="parse" signature="([CIIC)Ljava/util/Map;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.upload.ParameterParser" start="329" end="362" startBytecode="0" endBytecode="395" sourcefile="ParameterParser.java" sourcepath="org/apache/wicket/util/upload/ParameterParser.java"/>
+    </Method>
+    <Field classname="org.apache.wicket.util.upload.ParameterParser" name="chars" signature="[C" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.upload.ParameterParser" sourcefile="ParameterParser.java" sourcepath="org/apache/wicket/util/upload/ParameterParser.java"/>
+    </Field>
+    <LocalVariable name="chars" register="1" pc="23" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.wicket.util.upload.ParameterParser" start="334" end="334" startBytecode="23" endBytecode="23" sourcefile="ParameterParser.java" sourcepath="org/apache/wicket/util/upload/ParameterParser.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.apache.wicket.util.value.CopyOnWriteValueMap">
+      <SourceLine classname="org.apache.wicket.util.value.CopyOnWriteValueMap" start="39" end="453" sourcefile="CopyOnWriteValueMap.java" sourcepath="org/apache/wicket/util/value/CopyOnWriteValueMap.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.value.CopyOnWriteValueMap" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.value.CopyOnWriteValueMap" start="110" end="110" startBytecode="0" endBytecode="60" sourcefile="CopyOnWriteValueMap.java" sourcepath="org/apache/wicket/util/value/CopyOnWriteValueMap.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="BC_VACUOUS_INSTANCEOF" priority="2" abbrev="BC" category="STYLE">
+    <Class classname="org.apache.wicket.util.value.ValueMap">
+      <SourceLine classname="org.apache.wicket.util.value.ValueMap" start="60" end="867" sourcefile="ValueMap.java" sourcepath="org/apache/wicket/util/value/ValueMap.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.value.ValueMap" name="getKey" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.value.ValueMap" start="513" end="524" startBytecode="0" endBytecode="25" sourcefile="ValueMap.java" sourcepath="org/apache/wicket/util/value/ValueMap.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <SourceLine classname="org.apache.wicket.util.value.ValueMap" start="515" end="515" startBytecode="30" endBytecode="30" sourcefile="ValueMap.java" sourcepath="org/apache/wicket/util/value/ValueMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_BOOLEAN_RETURN_NULL" priority="2" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="org.apache.wicket.util.value.ValueMap">
+      <SourceLine classname="org.apache.wicket.util.value.ValueMap" start="60" end="867" sourcefile="ValueMap.java" sourcepath="org/apache/wicket/util/value/ValueMap.java"/>
+    </Class>
+    <Method classname="org.apache.wicket.util.value.ValueMap" name="getAsBoolean" signature="(Ljava/lang/String;)Ljava/lang/Boolean;" isStatic="false">
+      <SourceLine classname="org.apache.wicket.util.value.ValueMap" start="588" end="599" startBytecode="0" endBytecode="107" sourcefile="ValueMap.java" sourcepath="org/apache/wicket/util/value/ValueMap.java"/>
+    </Method>
+    <SourceLine classname="org.apache.wicket.util.value.ValueMap" start="590" end="590" startBytecode="9" endBytecode="9" sourcefile="ValueMap.java" sourcepath="org/apache/wicket/util/value/ValueMap.java"/>
+    <SourceLine classname="org.apache.wicket.util.value.ValueMap" start="599" end="599" startBytecode="21" endBytecode="21" sourcefile="ValueMap.java" sourcepath="org/apache/wicket/util/value/ValueMap.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="7">
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>junit.framework.Assert</MissingClass>
+    <MissingClass>junit.framework.TestCase</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 7 May 2011 23:47:15 +0300" total_classes="285" referenced_classes="518" total_bugs="53" total_size="9414" num_packages="25" vm_version="20.4-b02-402" cpu_seconds="44.65" clock_seconds="24.14" peak_mbytes="104.26" alloc_mbytes="763.88" gc_seconds="1.11" priority_2="28" priority_1="25">
+    <PackageStats package="org.apache.wicket" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="org.apache.wicket.IClusterable" sourceFile="IClusterable.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util" total_bugs="1" total_types="7" total_size="66" priority_1="1">
+      <ClassStats class="org.apache.wicket.util.ClassProvider" sourceFile="ClassProvider.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.IContextProvider" sourceFile="IContextProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.IHierarchical" sourceFile="IHierarchical.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.IProvider" sourceFile="IProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.LongEncoder" sourceFile="LongEncoder.java" interface="false" size="33" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.util.NullProvider" sourceFile="NullProvider.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.ValueProvider" sourceFile="ValueProvider.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.collections" total_bugs="4" total_types="30" total_size="914" priority_2="4">
+      <ClassStats class="org.apache.wicket.util.collections.ArrayListStack" sourceFile="ArrayListStack.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.ClassMetaCache" sourceFile="ClassMetaCache.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.ConcurrentHashSet" sourceFile="ConcurrentHashSet.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.IntHashMap" sourceFile="IntHashMap.java" interface="false" size="257" bugs="4" priority_2="4"/>
+      <ClassStats class="org.apache.wicket.util.collections.IntHashMap$1" sourceFile="IntHashMap.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.IntHashMap$Entry" sourceFile="IntHashMap.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.IntHashMap$EntryIterator" sourceFile="IntHashMap.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.IntHashMap$EntrySet" sourceFile="IntHashMap.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.IntHashMap$HashIterator" sourceFile="IntHashMap.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.IntHashMap$KeyIterator" sourceFile="IntHashMap.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.IntHashMap$KeySet" sourceFile="IntHashMap.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.IntHashMap$ValueIterator" sourceFile="IntHashMap.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.IntHashMap$Values" sourceFile="IntHashMap.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MicroMap" sourceFile="MicroMap.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MicroMap$1" sourceFile="MicroMap.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MicroMap$1$1" sourceFile="MicroMap.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MicroMap$2" sourceFile="MicroMap.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MicroMap$3" sourceFile="MicroMap.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MicroMap$3$1" sourceFile="MicroMap.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MicroMap$3$1$1" sourceFile="MicroMap.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MiniMap" sourceFile="MiniMap.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MiniMap$1" sourceFile="MiniMap.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MiniMap$1$1" sourceFile="MiniMap.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MiniMap$2" sourceFile="MiniMap.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MiniMap$3" sourceFile="MiniMap.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MiniMap$3$1" sourceFile="MiniMap.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MiniMap$3$1$1" sourceFile="MiniMap.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MostRecentlyUsedMap" sourceFile="MostRecentlyUsedMap.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.MultiMap" sourceFile="MultiMap.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.collections.ReadOnlyIterator" sourceFile="ReadOnlyIterator.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.convert" total_bugs="0" total_types="3" total_size="89">
+      <ClassStats class="org.apache.wicket.util.convert.ConversionException" sourceFile="ConversionException.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.IConverter" sourceFile="IConverter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.MaskConverter" sourceFile="MaskConverter.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.convert.converter" total_bugs="2" total_types="19" total_size="377" priority_2="2">
+      <ClassStats class="org.apache.wicket.util.convert.converter.AbstractConverter" sourceFile="AbstractConverter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.AbstractDecimalConverter" sourceFile="AbstractDecimalConverter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.AbstractIntegerConverter" sourceFile="AbstractIntegerConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.AbstractNumberConverter" sourceFile="AbstractNumberConverter.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.BigDecimalConverter" sourceFile="BigDecimalConverter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.BooleanConverter" sourceFile="BooleanConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.ByteConverter" sourceFile="ByteConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.CalendarConverter" sourceFile="CalendarConverter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.CharacterConverter" sourceFile="CharacterConverter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.DateConverter" sourceFile="DateConverter.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.DoubleConverter" sourceFile="DoubleConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.FloatConverter" sourceFile="FloatConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.IntegerConverter" sourceFile="IntegerConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.LongConverter" sourceFile="LongConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.ShortConverter" sourceFile="ShortConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.SqlDateConverter" sourceFile="SqlDateConverter.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.SqlTimeConverter" sourceFile="SqlTimeConverter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.SqlTimestampConverter" sourceFile="SqlTimestampConverter.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.convert.converter.ZeroPaddingIntegerConverter" sourceFile="ZeroPaddingIntegerConverter.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.crypt" total_bugs="4" total_types="13" total_size="475" priority_2="3" priority_1="1">
+      <ClassStats class="org.apache.wicket.util.crypt.AbstractCrypt" sourceFile="AbstractCrypt.java" interface="false" size="40" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.util.crypt.Base64" sourceFile="Base64.java" interface="false" size="274" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.wicket.util.crypt.CachingSunJceCryptFactory" sourceFile="CachingSunJceCryptFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.crypt.CharEncoding" sourceFile="CharEncoding.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.crypt.ClassCryptFactory" sourceFile="ClassCryptFactory.java" interface="false" size="35" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.wicket.util.crypt.CryptFactoryCachingDecorator" sourceFile="CryptFactoryCachingDecorator.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.crypt.ICrypt" sourceFile="ICrypt.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.crypt.ICryptFactory" sourceFile="ICryptFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.crypt.NoCrypt" sourceFile="NoCrypt.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.crypt.NoCryptFactory" sourceFile="NoCryptFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.crypt.StringUtils" sourceFile="StringUtils.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.crypt.SunJceCrypt" sourceFile="SunJceCrypt.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.crypt.TrivialCrypt" sourceFile="TrivialCrypt.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.diff" total_bugs="1" total_types="13" total_size="444" priority_2="1">
+      <ClassStats class="org.apache.wicket.util.diff.AddDelta" sourceFile="AddDelta.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.ChangeDelta" sourceFile="ChangeDelta.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.Chunk" sourceFile="Chunk.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.DeleteDelta" sourceFile="DeleteDelta.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.Delta" sourceFile="Delta.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.Diff" sourceFile="Diff.java" interface="false" size="76" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.wicket.util.diff.DiffAlgorithm" sourceFile="DiffAlgorithm.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.DiffException" sourceFile="DiffException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.DifferentiationFailedException" sourceFile="DifferentiationFailedException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.PatchFailedException" sourceFile="PatchFailedException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.Revision" sourceFile="Revision.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.RevisionVisitor" sourceFile="RevisionVisitor.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.ToString" sourceFile="ToString.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.diff.myers" total_bugs="0" total_types="4" total_size="110">
+      <ClassStats class="org.apache.wicket.util.diff.myers.DiffNode" sourceFile="DiffNode.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.myers.MyersDiff" sourceFile="MyersDiff.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.myers.PathNode" sourceFile="PathNode.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.diff.myers.Snake" sourceFile="Snake.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.file" total_bugs="5" total_types="19" total_size="468" priority_2="2" priority_1="3">
+      <ClassStats class="org.apache.wicket.util.file.File" sourceFile="File.java" interface="false" size="70" bugs="4" priority_2="2" priority_1="2"/>
+      <ClassStats class="org.apache.wicket.util.file.FileCleaningTracker" sourceFile="FileCleaningTracker.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.FileCleaningTracker$Reaper" sourceFile="FileCleaningTracker.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.FileCleaningTracker$Tracker" sourceFile="FileCleaningTracker.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.FileDeleteStrategy" sourceFile="FileDeleteStrategy.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.FileUploadCleaner" sourceFile="FileUploadCleaner.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.Files" sourceFile="Files.java" interface="false" size="52" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.util.file.Folder" sourceFile="Folder.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.Folder$1" sourceFile="Folder.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.Folder$2" sourceFile="Folder.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.Folder$3" sourceFile="Folder.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.Folder$FileFilter" sourceFile="Folder.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.Folder$FileFilter$1" sourceFile="Folder.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.Folder$FolderFilter" sourceFile="Folder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.IFileUploadCleaner" sourceFile="IFileUploadCleaner.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.IResourceFinder" sourceFile="IResourceFinder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.IResourcePath" sourceFile="IResourcePath.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.Path" sourceFile="Path.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.file.WebXmlFile" sourceFile="WebXmlFile.java" interface="false" size="88" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.io" total_bugs="10" total_types="12" total_size="643" priority_2="1" priority_1="9">
+      <ClassStats class="org.apache.wicket.util.io.ByteArrayOutputStream" sourceFile="ByteArrayOutputStream.java" interface="false" size="90" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.util.io.ByteCountingOutputStream" sourceFile="ByteCountingOutputStream.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.io.Connections" sourceFile="Connections.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.io.DeferredFileOutputStream" sourceFile="DeferredFileOutputStream.java" interface="false" size="37" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.wicket.util.io.DeferredFileOutputStream$FileFactory" sourceFile="DeferredFileOutputStream.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.io.FullyBufferedReader" sourceFile="FullyBufferedReader.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.io.HandleArrayListStack" sourceFile="HandleArrayListStack.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.io.IOUtils" sourceFile="IOUtils.java" interface="false" size="183" bugs="6" priority_1="6"/>
+      <ClassStats class="org.apache.wicket.util.io.Streams" sourceFile="Streams.java" interface="false" size="38" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.util.io.StringBufferWriter" sourceFile="StringBufferWriter.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.io.ThresholdingOutputStream" sourceFile="ThresholdingOutputStream.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.io.XmlReader" sourceFile="XmlReader.java" interface="false" size="63" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.lang" total_bugs="1" total_types="15" total_size="555" priority_1="1">
+      <ClassStats class="org.apache.wicket.util.lang.Args" sourceFile="Args.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Arrays" sourceFile="Arrays.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Bytes" sourceFile="Bytes.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Checks" sourceFile="Checks.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Classes" sourceFile="Classes.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.EnumeratedType" sourceFile="EnumeratedType.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Exceptions" sourceFile="Exceptions.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Exceptions$1" sourceFile="Exceptions.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Exceptions$IThrowableVisitor" sourceFile="Exceptions.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Exceptions$Visit" sourceFile="Exceptions.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Generics" sourceFile="Generics.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Objects" sourceFile="Objects.java" interface="false" size="245" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.PackageName" sourceFile="PackageName.java" interface="false" size="19" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.util.lang.Packages" sourceFile="Packages.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.lang.Primitives" sourceFile="Primitives.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.license" total_bugs="2" total_types="15" total_size="418" priority_1="2">
+      <ClassStats class="org.apache.wicket.util.license.AbstractLicenseHeaderHandler" sourceFile="AbstractLicenseHeaderHandler.java" interface="false" size="65" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.wicket.util.license.ApacheLicenseHeaderTestCase" sourceFile="ApacheLicenseHeaderTestCase.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$1" sourceFile="ApacheLicenseHeaderTestCase.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$DirectoryFileFilter" sourceFile="ApacheLicenseHeaderTestCase.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$FileVisitor" sourceFile="ApacheLicenseHeaderTestCase.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$SuffixAndIgnoreFileFilter" sourceFile="ApacheLicenseHeaderTestCase.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.CssLicenseHeaderHandler" sourceFile="CssLicenseHeaderHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.HtmlLicenseHeaderHandler" sourceFile="HtmlLicenseHeaderHandler.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.ILicenseHeaderHandler" sourceFile="ILicenseHeaderHandler.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.JavaLicenseHeaderHandler" sourceFile="JavaLicenseHeaderHandler.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.JavaScriptLicenseHeaderHandler" sourceFile="JavaScriptLicenseHeaderHandler.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.PropertiesLicenseHeaderHandler" sourceFile="PropertiesLicenseHeaderHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.VelocityLicenseHeaderHandler" sourceFile="VelocityLicenseHeaderHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.XmlLicenseHeaderHandler" sourceFile="XmlLicenseHeaderHandler.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.license.XmlPrologHeaderHandler" sourceFile="XmlPrologHeaderHandler.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.listener" total_bugs="0" total_types="5" total_size="67">
+      <ClassStats class="org.apache.wicket.util.listener.ChangeListenerSet" sourceFile="ChangeListenerSet.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.listener.ChangeListenerSet$1" sourceFile="ChangeListenerSet.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.listener.IChangeListener" sourceFile="IChangeListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.listener.ListenerCollection" sourceFile="ListenerCollection.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.listener.ListenerCollection$INotifier" sourceFile="ListenerCollection.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.parse.metapattern" total_bugs="0" total_types="8" total_size="244">
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.BooleanGroup" sourceFile="BooleanGroup.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.FloatingPointGroup" sourceFile="FloatingPointGroup.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.Group" sourceFile="Group.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.GroupAlreadyBoundException" sourceFile="GroupAlreadyBoundException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.GroupNotBoundException" sourceFile="GroupNotBoundException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.IntegerGroup" sourceFile="IntegerGroup.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.MetaPattern" sourceFile="MetaPattern.java" interface="false" size="152" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.OptionalMetaPattern" sourceFile="OptionalMetaPattern.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.parse.metapattern.parsers" total_bugs="0" total_types="7" total_size="123">
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.parsers.CommaSeparatedVariableParser" sourceFile="CommaSeparatedVariableParser.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.parsers.IntegerVariableAssignmentParser" sourceFile="IntegerVariableAssignmentParser.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.parsers.ListParser" sourceFile="ListParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.parsers.MetaPatternParser" sourceFile="MetaPatternParser.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.parsers.TagNameParser" sourceFile="TagNameParser.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.parsers.VariableAssignmentParser" sourceFile="VariableAssignmentParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.parse.metapattern.parsers.WordParser" sourceFile="WordParser.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.resource" total_bugs="2" total_types="13" total_size="329" priority_1="2">
+      <ClassStats class="org.apache.wicket.util.resource.AbstractResourceStream" sourceFile="AbstractResourceStream.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.AbstractStringResourceStream" sourceFile="AbstractStringResourceStream.java" interface="false" size="53" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.wicket.util.resource.FileResourceStream" sourceFile="FileResourceStream.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.IFixedLocationResourceStream" sourceFile="IFixedLocationResourceStream.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.IResourceStream" sourceFile="IResourceStream.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.IStringResourceStream" sourceFile="IStringResourceStream.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.ResourceStreamNotFoundException" sourceFile="ResourceStreamNotFoundException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.ResourceUtils" sourceFile="ResourceUtils.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.ResourceUtils$PathLocale" sourceFile="ResourceUtils.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.StringBufferResourceStream" sourceFile="StringBufferResourceStream.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.StringResourceStream" sourceFile="StringResourceStream.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.XSLTResourceStream" sourceFile="XSLTResourceStream.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.resource.ZipResourceStream" sourceFile="ZipResourceStream.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.string" total_bugs="7" total_types="21" total_size="1522" priority_2="6" priority_1="1">
+      <ClassStats class="org.apache.wicket.util.string.AbstractStringList" sourceFile="AbstractStringList.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.AppendingStringBuffer" sourceFile="AppendingStringBuffer.java" interface="false" size="388" bugs="3" priority_2="3"/>
+      <ClassStats class="org.apache.wicket.util.string.Entities" sourceFile="Entities.java" interface="false" size="133" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.Entities$ArrayEntityMap" sourceFile="Entities.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.Entities$BinaryEntityMap" sourceFile="Entities.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.Entities$EntityMap" sourceFile="Entities.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.Entities$HashEntityMap" sourceFile="Entities.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.Entities$LookupEntityMap" sourceFile="Entities.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.Entities$MapIntMap" sourceFile="Entities.java" interface="false" size="19" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.wicket.util.string.Entities$PrimitiveEntityMap" sourceFile="Entities.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.wicket.util.string.Entities$TreeEntityMap" sourceFile="Entities.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.IStringIterator" sourceFile="IStringIterator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.IStringSequence" sourceFile="IStringSequence.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.PrependingStringBuffer" sourceFile="PrependingStringBuffer.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.StringEscapeUtils" sourceFile="StringEscapeUtils.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.StringList" sourceFile="StringList.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.StringList$1" sourceFile="StringList.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.StringValue" sourceFile="StringValue.java" interface="false" size="152" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.StringValueConversionException" sourceFile="StringValueConversionException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.Strings" sourceFile="Strings.java" interface="false" size="429" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.util.string.Strings$1" sourceFile="Strings.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.string.interpolator" total_bugs="0" total_types="3" total_size="66">
+      <ClassStats class="org.apache.wicket.util.string.interpolator.MapVariableInterpolator" sourceFile="MapVariableInterpolator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.interpolator.SystemVariableInterpolator" sourceFile="SystemVariableInterpolator.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.string.interpolator.VariableInterpolator" sourceFile="VariableInterpolator.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.thread" total_bugs="1" total_types="4" total_size="98" priority_2="1">
+      <ClassStats class="org.apache.wicket.util.thread.ICode" sourceFile="ICode.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.thread.Lock" sourceFile="Lock.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.thread.Task" sourceFile="Task.java" interface="false" size="67" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.wicket.util.thread.Task$1" sourceFile="Task.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.time" total_bugs="0" total_types="10" total_size="425">
+      <ClassStats class="org.apache.wicket.util.time.AbstractTime" sourceFile="AbstractTime.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.time.AbstractTimeValue" sourceFile="AbstractTimeValue.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.time.Duration" sourceFile="Duration.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.time.ITimeFrameSource" sourceFile="ITimeFrameSource.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.time.Time" sourceFile="Time.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.time.TimeFrame" sourceFile="TimeFrame.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.time.TimeFrame$1" sourceFile="TimeFrame.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.time.TimeMap" sourceFile="TimeMap.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.time.TimeOfDay" sourceFile="TimeOfDay.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.time.TimeOfDay$Meridian" sourceFile="TimeOfDay.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.upload" total_bugs="10" total_types="38" total_size="1214" priority_2="6" priority_1="4">
+      <ClassStats class="org.apache.wicket.util.upload.Closeable" sourceFile="Closeable.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.DiskFileItem" sourceFile="DiskFileItem.java" interface="false" size="185" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.util.upload.DiskFileItem$1" sourceFile="DiskFileItem.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.DiskFileItemFactory" sourceFile="DiskFileItemFactory.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileItem" sourceFile="FileItem.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileItemFactory" sourceFile="FileItemFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileItemHeaders" sourceFile="FileItemHeaders.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileItemHeadersImpl" sourceFile="FileItemHeadersImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileItemHeadersSupport" sourceFile="FileItemHeadersSupport.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileItemIterator" sourceFile="FileItemIterator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileItemStream" sourceFile="FileItemStream.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileItemStream$ItemSkippedException" sourceFile="FileItemStream.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUpload" sourceFile="FileUpload.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase" sourceFile="FileUploadBase.java" interface="false" size="161" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase$FileItemIteratorImpl" sourceFile="FileUploadBase.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase$FileItemIteratorImpl$1" sourceFile="FileUploadBase.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase$FileItemIteratorImpl$FileItemStreamImpl" sourceFile="FileUploadBase.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase$FileItemIteratorImpl$FileItemStreamImpl$1" sourceFile="FileUploadBase.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase$FileSizeLimitExceededException" sourceFile="FileUploadBase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase$FileUploadIOException" sourceFile="FileUploadBase.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase$IOFileUploadException" sourceFile="FileUploadBase.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase$InvalidContentTypeException" sourceFile="FileUploadBase.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase$SizeException" sourceFile="FileUploadBase.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadBase$SizeLimitExceededException" sourceFile="FileUploadBase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.FileUploadException" sourceFile="FileUploadException.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.LimitedInputStream" sourceFile="LimitedInputStream.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.MultipartFormInputStream" sourceFile="MultipartFormInputStream.java" interface="false" size="177" bugs="6" priority_2="4" priority_1="2"/>
+      <ClassStats class="org.apache.wicket.util.upload.MultipartFormInputStream$1" sourceFile="MultipartFormInputStream.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.MultipartFormInputStream$IllegalBoundaryException" sourceFile="MultipartFormInputStream.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.MultipartFormInputStream$ItemInputStream" sourceFile="MultipartFormInputStream.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.MultipartFormInputStream$MalformedStreamException" sourceFile="MultipartFormInputStream.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.MultipartFormInputStream$NoopOutputStream" sourceFile="MultipartFormInputStream.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.MultipartFormInputStream$ProgressNotifier" sourceFile="MultipartFormInputStream.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.ParameterParser" sourceFile="ParameterParser.java" interface="false" size="111" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.wicket.util.upload.ProgressListener" sourceFile="ProgressListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.RequestContext" sourceFile="RequestContext.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.ServletFileUpload" sourceFile="ServletFileUpload.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.upload.ServletRequestContext" sourceFile="ServletRequestContext.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.value" total_bugs="3" total_types="6" total_size="506" priority_2="2" priority_1="1">
+      <ClassStats class="org.apache.wicket.util.value.AttributeMap" sourceFile="AttributeMap.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.value.CopyOnWriteValueMap" sourceFile="CopyOnWriteValueMap.java" interface="false" size="113" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.wicket.util.value.IValueMap" sourceFile="IValueMap.java" interface="true" size="33" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.value.IntValue" sourceFile="IntValue.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.value.LongValue" sourceFile="LongValue.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.value.ValueMap" sourceFile="ValueMap.java" interface="false" size="268" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.visit" total_bugs="0" total_types="9" total_size="124">
+      <ClassStats class="org.apache.wicket.util.visit.ClassVisitFilter" sourceFile="ClassVisitFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.visit.IVisit" sourceFile="IVisit.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.visit.IVisitFilter" sourceFile="IVisitFilter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.visit.IVisitFilter$1" sourceFile="IVisitFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.visit.IVisitor" sourceFile="IVisitor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.visit.Visit" sourceFile="Visit.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.visit.Visit$Action" sourceFile="Visit.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.visit.Visits" sourceFile="Visits.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.visit.Visits$SingletonIterable" sourceFile="Visits.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.watch" total_bugs="0" total_types="5" total_size="73">
+      <ClassStats class="org.apache.wicket.util.watch.IModifiable" sourceFile="IModifiable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.watch.IModificationWatcher" sourceFile="IModificationWatcher.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.watch.ModificationWatcher" sourceFile="ModificationWatcher.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.watch.ModificationWatcher$1" sourceFile="ModificationWatcher.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.watch.ModificationWatcher$Entry" sourceFile="ModificationWatcher.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.wicket.util.xml" total_bugs="0" total_types="5" total_size="63">
+      <ClassStats class="org.apache.wicket.util.xml.CustomEntityResolver" sourceFile="CustomEntityResolver.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.xml.CustomEntityResolver$1" sourceFile="CustomEntityResolver.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.xml.CustomEntityResolver$EntityKey" sourceFile="CustomEntityResolver.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.xml.CustomEntityResolver$EntityLocator" sourceFile="CustomEntityResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.wicket.util.xml.CustomEntityResolver$ServletApiEntityLocator" sourceFile="CustomEntityResolver.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1581" invocations="1230" avgMicrosecondsPerInvocation="1285" maxMicrosecondsPerInvocation="42393" standardDeviationMircosecondsPerInvocation="3779"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1343" invocations="1803" avgMicrosecondsPerInvocation="745" maxMicrosecondsPerInvocation="77857" standardDeviationMircosecondsPerInvocation="3732"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1240" invocations="1837" avgMicrosecondsPerInvocation="675" maxMicrosecondsPerInvocation="107971" standardDeviationMircosecondsPerInvocation="3420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1234" invocations="1831" avgMicrosecondsPerInvocation="674" maxMicrosecondsPerInvocation="77416" standardDeviationMircosecondsPerInvocation="3464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1212" invocations="518" avgMicrosecondsPerInvocation="2340" maxMicrosecondsPerInvocation="70123" standardDeviationMircosecondsPerInvocation="6960"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1176" invocations="1870" avgMicrosecondsPerInvocation="629" maxMicrosecondsPerInvocation="138211" standardDeviationMircosecondsPerInvocation="4414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1138" invocations="1875" avgMicrosecondsPerInvocation="607" maxMicrosecondsPerInvocation="73955" standardDeviationMircosecondsPerInvocation="3502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="956" invocations="518" avgMicrosecondsPerInvocation="1846" maxMicrosecondsPerInvocation="64437" standardDeviationMircosecondsPerInvocation="5392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="642" invocations="1838" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="40580" standardDeviationMircosecondsPerInvocation="1366"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="593" invocations="2583" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="28790" standardDeviationMircosecondsPerInvocation="1283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="569" invocations="1547" avgMicrosecondsPerInvocation="368" maxMicrosecondsPerInvocation="45266" standardDeviationMircosecondsPerInvocation="1797"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="531" invocations="518" avgMicrosecondsPerInvocation="1026" maxMicrosecondsPerInvocation="54266" standardDeviationMircosecondsPerInvocation="3925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="378" invocations="1837" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="60501" standardDeviationMircosecondsPerInvocation="1824"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="367" invocations="1170" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="53356" standardDeviationMircosecondsPerInvocation="2339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="351" invocations="1750" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="73743" standardDeviationMircosecondsPerInvocation="2652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="344" invocations="24287" avgMicrosecondsPerInvocation="14" maxMicrosecondsPerInvocation="38310" standardDeviationMircosecondsPerInvocation="410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="331" invocations="1989" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="50742" standardDeviationMircosecondsPerInvocation="1654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="301" invocations="518" avgMicrosecondsPerInvocation="582" maxMicrosecondsPerInvocation="30908" standardDeviationMircosecondsPerInvocation="2058"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="278" invocations="518" avgMicrosecondsPerInvocation="538" maxMicrosecondsPerInvocation="25308" standardDeviationMircosecondsPerInvocation="2023"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="278" invocations="285" avgMicrosecondsPerInvocation="978" maxMicrosecondsPerInvocation="90035" standardDeviationMircosecondsPerInvocation="5491"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="247" invocations="595" avgMicrosecondsPerInvocation="416" maxMicrosecondsPerInvocation="50973" standardDeviationMircosecondsPerInvocation="2830"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="233" invocations="285" avgMicrosecondsPerInvocation="817" maxMicrosecondsPerInvocation="34178" standardDeviationMircosecondsPerInvocation="2981"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="221" invocations="284" avgMicrosecondsPerInvocation="779" maxMicrosecondsPerInvocation="78483" standardDeviationMircosecondsPerInvocation="5320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="206" invocations="518" avgMicrosecondsPerInvocation="397" maxMicrosecondsPerInvocation="19917" standardDeviationMircosecondsPerInvocation="1446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="193" invocations="1235" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="21754" standardDeviationMircosecondsPerInvocation="932"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="185" invocations="285" avgMicrosecondsPerInvocation="652" maxMicrosecondsPerInvocation="50727" standardDeviationMircosecondsPerInvocation="3213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="185" invocations="285" avgMicrosecondsPerInvocation="649" maxMicrosecondsPerInvocation="22418" standardDeviationMircosecondsPerInvocation="2243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="181" invocations="285" avgMicrosecondsPerInvocation="637" maxMicrosecondsPerInvocation="19226" standardDeviationMircosecondsPerInvocation="1962"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="178" invocations="282" avgMicrosecondsPerInvocation="631" maxMicrosecondsPerInvocation="30135" standardDeviationMircosecondsPerInvocation="2566"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="177" invocations="285" avgMicrosecondsPerInvocation="621" maxMicrosecondsPerInvocation="21661" standardDeviationMircosecondsPerInvocation="1982"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

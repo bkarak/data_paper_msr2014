@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1267823754000" analysisTimestamp="1360875944116" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/openwebbeans/openwebbeans-jsf/1.0.0-M4/openwebbeans-jsf-1.0.0-M4.jar</Jar>
+  </Project>
+  <BugInstance type="JLM_JSR166_UTILCONCURRENT_MONITORENTER" priority="2" abbrev="JLM" category="MT_CORRECTNESS">
+    <Class classname="org.apache.webbeans.jsf.scopes.ViewScopedContext">
+      <SourceLine classname="org.apache.webbeans.jsf.scopes.ViewScopedContext" start="45" end="211" sourcefile="ViewScopedContext.java" sourcepath="org/apache/webbeans/jsf/scopes/ViewScopedContext.java"/>
+    </Class>
+    <Method classname="org.apache.webbeans.jsf.scopes.ViewScopedContext" name="get" signature="(Ljavax/enterprise/context/spi/Contextual;Ljavax/enterprise/context/spi/CreationalContext;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.webbeans.jsf.scopes.ViewScopedContext" start="83" end="141" startBytecode="0" endBytecode="541" sourcefile="ViewScopedContext.java" sourcepath="org/apache/webbeans/jsf/scopes/ViewScopedContext.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="159" end="1280" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Type>
+    <LocalVariable name="componentInstanceMap" register="4" pc="113" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.webbeans.jsf.scopes.ViewScopedContext" start="120" end="120" startBytecode="115" endBytecode="115" sourcefile="ViewScopedContext.java" sourcepath="org/apache/webbeans/jsf/scopes/ViewScopedContext.java"/>
+  </BugInstance>
+  <BugInstance type="DMI_USELESS_SUBSTRING" priority="2" abbrev="DMI" category="STYLE">
+    <Class classname="org.apache.webbeans.util.JSFUtil">
+      <SourceLine classname="org.apache.webbeans.util.JSFUtil" start="28" end="173" sourcefile="JSFUtil.java" sourcepath="org/apache/webbeans/util/JSFUtil.java"/>
+    </Class>
+    <Method classname="org.apache.webbeans.util.JSFUtil" name="getRedirectViewIdWithCid" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.apache.webbeans.util.JSFUtil" start="97" end="142" startBytecode="0" endBytecode="157" sourcefile="JSFUtil.java" sourcepath="org/apache/webbeans/util/JSFUtil.java"/>
+    </Method>
+    <SourceLine classname="org.apache.webbeans.util.JSFUtil" start="123" end="123" startBytecode="177" endBytecode="177" sourcefile="JSFUtil.java" sourcepath="org/apache/webbeans/util/JSFUtil.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="34">
+    <MissingClass>javax.enterprise.context.BusyConversationException</MissingClass>
+    <MissingClass>javax.enterprise.context.ContextNotActiveException</MissingClass>
+    <MissingClass>javax.enterprise.context.Conversation</MissingClass>
+    <MissingClass>javax.enterprise.context.NonexistentConversationException</MissingClass>
+    <MissingClass>javax.enterprise.context.spi.Contextual</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.AfterBeanDiscovery</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.BeforeBeanDiscovery</MissingClass>
+    <MissingClass>javax.faces.application.Application</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.application.ViewHandler</MissingClass>
+    <MissingClass>javax.faces.application.ViewHandlerWrapper</MissingClass>
+    <MissingClass>javax.faces.component.UIViewRoot</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.faces.event.PhaseEvent</MissingClass>
+    <MissingClass>javax.faces.event.PhaseId</MissingClass>
+    <MissingClass>javax.faces.event.SystemEvent</MissingClass>
+    <MissingClass>javax.faces.render.RenderKit</MissingClass>
+    <MissingClass>javax.faces.render.ResponseStateManager</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponseWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.webbeans.annotation.DefaultLiteral</MissingClass>
+    <MissingClass>org.apache.webbeans.config.OpenWebBeansConfiguration</MissingClass>
+    <MissingClass>org.apache.webbeans.container.BeanManagerImpl</MissingClass>
+    <MissingClass>org.apache.webbeans.context.ContextFactory</MissingClass>
+    <MissingClass>org.apache.webbeans.conversation.ConversationImpl</MissingClass>
+    <MissingClass>org.apache.webbeans.conversation.ConversationManager</MissingClass>
+    <MissingClass>org.apache.webbeans.exception.WebBeansConfigurationException</MissingClass>
+    <MissingClass>org.apache.webbeans.logger.WebBeansLogger</MissingClass>
+    <MissingClass>org.apache.webbeans.plugins.AbstractOwbPlugin</MissingClass>
+    <MissingClass>org.apache.webbeans.util.Asserts</MissingClass>
+    <MissingClass>org.apache.webbeans.util.ClassUtil</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 5 Mar 2010 23:15:54 +0200" total_classes="9" referenced_classes="28" total_bugs="2" total_size="261" num_packages="5" vm_version="20.4-b02-402" cpu_seconds="11.03" clock_seconds="12.18" peak_mbytes="53.08" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="2">
+    <PackageStats package="org.apache.webbeans.jsf" total_bugs="0" total_types="4" total_size="82">
+      <ClassStats class="org.apache.webbeans.jsf.ConversationAwareViewHandler" sourceFile="ConversationAwareViewHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.webbeans.jsf.WebBeansJSFFilter" sourceFile="WebBeansJSFFilter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.webbeans.jsf.WebBeansJSFFilter$1" sourceFile="WebBeansJSFFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.webbeans.jsf.WebBeansPhaseListener" sourceFile="WebBeansPhaseListener.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.webbeans.jsf.plugin" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.apache.webbeans.jsf.plugin.OpenWebBeansJsfPlugin" sourceFile="OpenWebBeansJsfPlugin.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.webbeans.jsf.scopes" total_bugs="1" total_types="2" total_size="87" priority_2="1">
+      <ClassStats class="org.apache.webbeans.jsf.scopes.Jsf2ScopesExtension" sourceFile="Jsf2ScopesExtension.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.webbeans.jsf.scopes.ViewScopedContext" sourceFile="ViewScopedContext.java" interface="false" size="69" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.webbeans.spi.conversation.jsf" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="org.apache.webbeans.spi.conversation.jsf.DefaultConversationService" sourceFile="DefaultConversationService.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.webbeans.util" total_bugs="1" total_types="1" total_size="75" priority_2="1">
+      <ClassStats class="org.apache.webbeans.util.JSFUtil" sourceFile="JSFUtil.java" interface="false" size="75" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1406" invocations="375" avgMicrosecondsPerInvocation="3749" maxMicrosecondsPerInvocation="130116" standardDeviationMircosecondsPerInvocation="12377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="806" invocations="28" avgMicrosecondsPerInvocation="28814" maxMicrosecondsPerInvocation="332427" standardDeviationMircosecondsPerInvocation="71760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="625" invocations="28" avgMicrosecondsPerInvocation="22347" maxMicrosecondsPerInvocation="141885" standardDeviationMircosecondsPerInvocation="42101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="506" invocations="28" avgMicrosecondsPerInvocation="18075" maxMicrosecondsPerInvocation="213655" standardDeviationMircosecondsPerInvocation="47007"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="502" invocations="284" avgMicrosecondsPerInvocation="1768" maxMicrosecondsPerInvocation="187762" standardDeviationMircosecondsPerInvocation="13427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="441" invocations="73" avgMicrosecondsPerInvocation="6054" maxMicrosecondsPerInvocation="135794" standardDeviationMircosecondsPerInvocation="21156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="432" invocations="44" avgMicrosecondsPerInvocation="9827" maxMicrosecondsPerInvocation="151302" standardDeviationMircosecondsPerInvocation="28692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="274" invocations="44" avgMicrosecondsPerInvocation="6234" maxMicrosecondsPerInvocation="91802" standardDeviationMircosecondsPerInvocation="15475"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="271" invocations="28" avgMicrosecondsPerInvocation="9704" maxMicrosecondsPerInvocation="91712" standardDeviationMircosecondsPerInvocation="22658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="266" invocations="45" avgMicrosecondsPerInvocation="5913" maxMicrosecondsPerInvocation="66363" standardDeviationMircosecondsPerInvocation="13908"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="259" invocations="1064" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="94791" standardDeviationMircosecondsPerInvocation="4175"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="255" invocations="45" avgMicrosecondsPerInvocation="5675" maxMicrosecondsPerInvocation="65208" standardDeviationMircosecondsPerInvocation="11603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="215" invocations="28" avgMicrosecondsPerInvocation="7712" maxMicrosecondsPerInvocation="121066" standardDeviationMircosecondsPerInvocation="23636"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="212" invocations="45" avgMicrosecondsPerInvocation="4712" maxMicrosecondsPerInvocation="60929" standardDeviationMircosecondsPerInvocation="10386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="190" invocations="39" avgMicrosecondsPerInvocation="4872" maxMicrosecondsPerInvocation="60000" standardDeviationMircosecondsPerInvocation="13510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="188" invocations="45" avgMicrosecondsPerInvocation="4190" maxMicrosecondsPerInvocation="109999" standardDeviationMircosecondsPerInvocation="17283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="180" invocations="380" avgMicrosecondsPerInvocation="475" maxMicrosecondsPerInvocation="108295" standardDeviationMircosecondsPerInvocation="5609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="175" invocations="45" avgMicrosecondsPerInvocation="3897" maxMicrosecondsPerInvocation="45066" standardDeviationMircosecondsPerInvocation="10134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="170" invocations="9" avgMicrosecondsPerInvocation="18954" maxMicrosecondsPerInvocation="126239" standardDeviationMircosecondsPerInvocation="39719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="166" invocations="103" avgMicrosecondsPerInvocation="1620" maxMicrosecondsPerInvocation="31964" standardDeviationMircosecondsPerInvocation="4590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="148" invocations="9" avgMicrosecondsPerInvocation="16541" maxMicrosecondsPerInvocation="115053" standardDeviationMircosecondsPerInvocation="35488"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

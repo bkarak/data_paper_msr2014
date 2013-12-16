@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1195426499000" analysisTimestamp="1360930426955" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/net/sf/aislib/tools/entities/library/1.0/library-1.0.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="net.sf.aislib.tools.entities.library.Processor">
+      <SourceLine classname="net.sf.aislib.tools.entities.library.Processor" start="24" end="144" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java"/>
+    </Class>
+    <Method classname="net.sf.aislib.tools.entities.library.Processor" name="runVelocity" signature="(Ljava/io/File;Ljava/util/Map;)V" isStatic="false">
+      <SourceLine classname="net.sf.aislib.tools.entities.library.Processor" start="106" end="138" startBytecode="0" endBytecode="494" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="net.sf.aislib.tools.entities.library.Processor" start="120" end="120" startBytecode="61" endBytecode="61" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.sf.aislib.tools.entities.library.Processor">
+      <SourceLine classname="net.sf.aislib.tools.entities.library.Processor" start="24" end="144" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java"/>
+    </Class>
+    <Method classname="net.sf.aislib.tools.entities.library.Processor" name="runVelocity" signature="(Ljava/io/File;Ljava/util/Map;)V" isStatic="false">
+      <SourceLine classname="net.sf.aislib.tools.entities.library.Processor" start="106" end="138" startBytecode="0" endBytecode="494" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java"/>
+    </Method>
+    <Class classname="java.io.Writer" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.Writer" start="33" end="277" sourcefile="Writer.java" sourcepath="java/io/Writer.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.sf.aislib.tools.entities.library.Processor" start="120" end="120" startBytecode="61" endBytecode="61" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.sf.aislib.tools.entities.library.Processor" start="121" end="121" startBytecode="65" endBytecode="65" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Writer x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="net.sf.aislib.tools.entities.library.Processor">
+      <SourceLine classname="net.sf.aislib.tools.entities.library.Processor" start="24" end="144" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java"/>
+    </Class>
+    <Method classname="net.sf.aislib.tools.entities.library.Processor" name="process" signature="()V" isStatic="false">
+      <SourceLine classname="net.sf.aislib.tools.entities.library.Processor" start="71" end="85" startBytecode="0" endBytecode="250" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="net.sf.aislib.tools.entities.library.Processor" start="81" end="81" startBytecode="85" endBytecode="85" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="net.sf.aislib.tools.entities.library.Processor$ParseEntityException">
+      <SourceLine classname="net.sf.aislib.tools.entities.library.Processor$ParseEntityException" start="152" end="164" sourcefile="Processor.java" sourcepath="net/sf/aislib/tools/entities/library/Processor.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>com.wutka.dtd.DTDParser</MissingClass>
+    <MissingClass>org.apache.velocity.VelocityContext</MissingClass>
+    <MissingClass>org.apache.velocity.app.Velocity</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 19 Nov 2007 00:54:59 +0200" total_classes="3" referenced_classes="33" total_bugs="4" total_size="96" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="11.78" clock_seconds="9.66" peak_mbytes="52.88" alloc_mbytes="763.88" gc_seconds="0.08" priority_2="3" priority_1="1">
+    <PackageStats package="net.sf.aislib.tools.entities.library" total_bugs="4" total_types="3" total_size="96" priority_2="3" priority_1="1">
+      <ClassStats class="net.sf.aislib.tools.entities.library.DTDEntityParser" sourceFile="DTDEntityParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.sf.aislib.tools.entities.library.Processor" sourceFile="Processor.java" interface="false" size="74" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="net.sf.aislib.tools.entities.library.Processor$ParseEntityException" sourceFile="Processor.java" interface="false" size="10" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1238" invocations="377" avgMicrosecondsPerInvocation="3284" maxMicrosecondsPerInvocation="159568" standardDeviationMircosecondsPerInvocation="10981"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="763" invocations="33" avgMicrosecondsPerInvocation="23126" maxMicrosecondsPerInvocation="125525" standardDeviationMircosecondsPerInvocation="32552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="716" invocations="33" avgMicrosecondsPerInvocation="21709" maxMicrosecondsPerInvocation="104876" standardDeviationMircosecondsPerInvocation="27204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="587" invocations="33" avgMicrosecondsPerInvocation="17796" maxMicrosecondsPerInvocation="133175" standardDeviationMircosecondsPerInvocation="29587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="292" invocations="106" avgMicrosecondsPerInvocation="2755" maxMicrosecondsPerInvocation="109229" standardDeviationMircosecondsPerInvocation="10969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="186" invocations="33" avgMicrosecondsPerInvocation="5662" maxMicrosecondsPerInvocation="38862" standardDeviationMircosecondsPerInvocation="8077"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="178" invocations="380" avgMicrosecondsPerInvocation="469" maxMicrosecondsPerInvocation="23876" standardDeviationMircosecondsPerInvocation="2374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="177" invocations="329" avgMicrosecondsPerInvocation="540" maxMicrosecondsPerInvocation="32533" standardDeviationMircosecondsPerInvocation="2397"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="175" invocations="33" avgMicrosecondsPerInvocation="5303" maxMicrosecondsPerInvocation="48764" standardDeviationMircosecondsPerInvocation="10404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="167" invocations="9" avgMicrosecondsPerInvocation="18613" maxMicrosecondsPerInvocation="125284" standardDeviationMircosecondsPerInvocation="38541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="141" invocations="33" avgMicrosecondsPerInvocation="4286" maxMicrosecondsPerInvocation="29376" standardDeviationMircosecondsPerInvocation="7274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="116" invocations="9" avgMicrosecondsPerInvocation="12966" maxMicrosecondsPerInvocation="114296" standardDeviationMircosecondsPerInvocation="35825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="98" invocations="33" avgMicrosecondsPerInvocation="2980" maxMicrosecondsPerInvocation="22447" standardDeviationMircosecondsPerInvocation="4979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="92" invocations="15" avgMicrosecondsPerInvocation="6178" maxMicrosecondsPerInvocation="84506" standardDeviationMircosecondsPerInvocation="20970"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="91" invocations="42" avgMicrosecondsPerInvocation="2169" maxMicrosecondsPerInvocation="35844" standardDeviationMircosecondsPerInvocation="5668"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="88" invocations="33" avgMicrosecondsPerInvocation="2677" maxMicrosecondsPerInvocation="18942" standardDeviationMircosecondsPerInvocation="4636"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

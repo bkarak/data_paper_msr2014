@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1213005279000" analysisTimestamp="1360906112401" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/net/smartlab/config/smartconfig/1.1.0/smartconfig-1.1.0.jar</Jar>
+  </Project>
+  <BugInstance type="SC_START_IN_CTOR" priority="1" abbrev="SC" category="MT_CORRECTNESS">
+    <Class classname="net.smartlab.config.Configuration">
+      <SourceLine classname="net.smartlab.config.Configuration" start="55" end="338" sourcefile="Configuration.java" sourcepath="net/smartlab/config/Configuration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.Configuration" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.Configuration" start="68" end="70" startBytecode="0" endBytecode="96" sourcefile="Configuration.java" sourcepath="net/smartlab/config/Configuration.java"/>
+    </Method>
+    <Method classname="net.smartlab.config.Configuration$Monitor" name="start" signature="()V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="net.smartlab.config.Configuration$Monitor" sourcefile="Configuration.java" sourcepath="net/smartlab/config/Configuration.java"/>
+    </Method>
+    <Class classname="net.smartlab.config.SQLConfiguration" role="CLASS_SUBCLASS">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="74" end="298" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Class>
+    <Class classname="net.smartlab.config.XMLConfiguration" role="CLASS_SUBCLASS">
+      <SourceLine classname="net.smartlab.config.XMLConfiguration" start="85" end="355" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+    </Class>
+    <SourceLine classname="net.smartlab.config.Configuration" start="69" end="69" startBytecode="35" endBytecode="35" sourcefile="Configuration.java" sourcepath="net/smartlab/config/Configuration.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="net.smartlab.config.ConfigurationExceptionTest">
+      <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="33" end="79" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.ConfigurationExceptionTest" name="testConfigurationException" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="54" end="55" startBytecode="0" endBytecode="54" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+    </Method>
+    <Method classname="net.smartlab.config.ConfigurationException" name="&lt;init&gt;" signature="()V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="net.smartlab.config.ConfigurationException" start="40" end="41" startBytecode="0" endBytecode="50" sourcefile="ConfigurationException.java" sourcepath="net/smartlab/config/ConfigurationException.java"/>
+    </Method>
+    <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="54" end="54" startBytecode="4" endBytecode="4" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="net.smartlab.config.ConfigurationExceptionTest">
+      <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="33" end="79" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.ConfigurationExceptionTest" name="testConfigurationExceptionString" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="62" end="63" startBytecode="0" endBytecode="56" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+    </Method>
+    <Method classname="net.smartlab.config.ConfigurationException" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="net.smartlab.config.ConfigurationException" start="49" end="50" startBytecode="0" endBytecode="61" sourcefile="ConfigurationException.java" sourcepath="net/smartlab/config/ConfigurationException.java"/>
+    </Method>
+    <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="62" end="62" startBytecode="6" endBytecode="6" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="net.smartlab.config.ConfigurationExceptionTest">
+      <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="33" end="79" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.ConfigurationExceptionTest" name="testConfigurationExceptionStringThrowable" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="78" end="79" startBytecode="0" endBytecode="65" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+    </Method>
+    <Method classname="net.smartlab.config.ConfigurationException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/Throwable;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="net.smartlab.config.ConfigurationException" start="68" end="69" startBytecode="0" endBytecode="72" sourcefile="ConfigurationException.java" sourcepath="net/smartlab/config/ConfigurationException.java"/>
+    </Method>
+    <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="78" end="78" startBytecode="15" endBytecode="15" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="net.smartlab.config.ConfigurationExceptionTest">
+      <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="33" end="79" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.ConfigurationExceptionTest" name="testConfigurationExceptionThrowable" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="70" end="71" startBytecode="0" endBytecode="63" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+    </Method>
+    <Method classname="net.smartlab.config.ConfigurationException" name="&lt;init&gt;" signature="(Ljava/lang/Throwable;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="net.smartlab.config.ConfigurationException" start="58" end="59" startBytecode="0" endBytecode="61" sourcefile="ConfigurationException.java" sourcepath="net/smartlab/config/ConfigurationException.java"/>
+    </Method>
+    <SourceLine classname="net.smartlab.config.ConfigurationExceptionTest" start="70" end="70" startBytecode="13" endBytecode="13" sourcefile="ConfigurationExceptionTest.java" sourcepath="net/smartlab/config/ConfigurationExceptionTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="net.smartlab.config.ListenerTest">
+      <SourceLine classname="net.smartlab.config.ListenerTest" start="37" end="77" sourcefile="ListenerTest.java" sourcepath="net/smartlab/config/ListenerTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.ListenerTest" name="testMultipleListenerNotified" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.ListenerTest" start="56" end="66" startBytecode="0" endBytecode="164" sourcefile="ListenerTest.java" sourcepath="net/smartlab/config/ListenerTest.java"/>
+    </Method>
+    <Method classname="java.io.File" name="setLastModified" signature="(J)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1258" end="1263" startBytecode="0" endBytecode="80" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="net.smartlab.config.ListenerTest" start="63" end="63" startBytecode="51" endBytecode="51" sourcefile="ListenerTest.java" sourcepath="net/smartlab/config/ListenerTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="net.smartlab.config.ListenerTest">
+      <SourceLine classname="net.smartlab.config.ListenerTest" start="37" end="77" sourcefile="ListenerTest.java" sourcepath="net/smartlab/config/ListenerTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.ListenerTest" name="testOneListenerNotified" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.ListenerTest" start="45" end="53" startBytecode="0" endBytecode="140" sourcefile="ListenerTest.java" sourcepath="net/smartlab/config/ListenerTest.java"/>
+    </Method>
+    <Method classname="java.io.File" name="setLastModified" signature="(J)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1258" end="1263" startBytecode="0" endBytecode="80" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="net.smartlab.config.ListenerTest" start="50" end="50" startBytecode="35" endBytecode="35" sourcefile="ListenerTest.java" sourcepath="net/smartlab/config/ListenerTest.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.smartlab.config.SQLConfiguration">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="74" end="298" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfiguration" name="getLastUpdate" signature="(Z)J" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="135" end="159" startBytecode="0" endBytecode="594" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="140" end="140" startBytecode="22" endBytecode="22" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="141" end="141" startBytecode="29" endBytecode="29" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="143" end="143" startBytecode="84" endBytecode="84" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="144" end="144" startBytecode="88" endBytecode="88" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="145" end="145" startBytecode="93" endBytecode="93" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="146" end="146" startBytecode="99" endBytecode="99" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="154" end="154" startBytecode="103" endBytecode="103" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="159" end="159" startBytecode="109" endBytecode="109" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.smartlab.config.SQLConfiguration">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="74" end="298" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfiguration" name="getLastUpdate" signature="(Z)J" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="135" end="159" startBytecode="0" endBytecode="594" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="138" end="138" startBytecode="15" endBytecode="15" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="140" end="140" startBytecode="21" endBytecode="21" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="141" end="141" startBytecode="29" endBytecode="29" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="143" end="143" startBytecode="84" endBytecode="84" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="144" end="144" startBytecode="88" endBytecode="88" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="145" end="145" startBytecode="93" endBytecode="93" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="146" end="146" startBytecode="99" endBytecode="99" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="154" end="154" startBytecode="103" endBytecode="103" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="159" end="159" startBytecode="109" endBytecode="109" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.smartlab.config.SQLConfiguration">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="74" end="298" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfiguration" name="setLastUpdate" signature="(J)V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="171" end="192" startBytecode="0" endBytecode="458" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="175" end="175" startBytecode="42" endBytecode="42" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="180" end="180" startBytecode="53" endBytecode="53" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="185" end="185" startBytecode="94" endBytecode="94" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="190" end="190" startBytecode="100" endBytecode="100" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="192" end="192" startBytecode="172" endBytecode="172" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.smartlab.config.SQLConfiguration">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="74" end="298" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfiguration" name="update" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="99" end="122" startBytecode="0" endBytecode="463" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="104" end="104" startBytecode="22" endBytecode="22" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="105" end="105" startBytecode="28" endBytecode="28" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="110" end="110" startBytecode="67" endBytecode="67" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="115" end="115" startBytecode="76" endBytecode="76" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="120" end="120" startBytecode="82" endBytecode="82" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="122" end="122" startBytecode="149" endBytecode="149" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.smartlab.config.SQLConfiguration">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="74" end="298" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfiguration" name="update" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="99" end="122" startBytecode="0" endBytecode="463" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="102" end="102" startBytecode="15" endBytecode="15" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="104" end="104" startBytecode="21" endBytecode="21" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="105" end="105" startBytecode="28" endBytecode="28" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="110" end="110" startBytecode="67" endBytecode="67" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="115" end="115" startBytecode="76" endBytecode="76" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="120" end="120" startBytecode="82" endBytecode="82" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="122" end="122" startBytecode="149" endBytecode="149" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="ODR_OPEN_DATABASE_RESOURCE" priority="2" abbrev="ODR" category="BAD_PRACTICE">
+    <Class classname="net.smartlab.config.SQLConfiguration">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="74" end="298" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfiguration" name="getLastUpdate" signature="(Z)J" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="135" end="159" startBytecode="0" endBytecode="80" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Method>
+    <Type descriptor="Ljava/sql/PreparedStatement;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.sql.PreparedStatement" sourcefile="PreparedStatement.java" sourcepath="java/sql/PreparedStatement.java"/>
+    </Type>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="138" end="138" startBytecode="15" endBytecode="15" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+  </BugInstance>
+  <BugInstance type="ODR_OPEN_DATABASE_RESOURCE" priority="2" abbrev="ODR" category="BAD_PRACTICE">
+    <Class classname="net.smartlab.config.SQLConfiguration">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="74" end="298" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfiguration" name="setLastUpdate" signature="(J)V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="171" end="192" startBytecode="0" endBytecode="70" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Method>
+    <Type descriptor="Ljava/sql/PreparedStatement;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.sql.PreparedStatement" sourcefile="PreparedStatement.java" sourcepath="java/sql/PreparedStatement.java"/>
+    </Type>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="178" end="178" startBytecode="83" endBytecode="83" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="175" end="175" startBytecode="42" endBytecode="42" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="ODR_OPEN_DATABASE_RESOURCE" priority="2" abbrev="ODR" category="BAD_PRACTICE">
+    <Class classname="net.smartlab.config.SQLConfiguration">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="74" end="298" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfiguration" name="update" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfiguration" start="99" end="122" startBytecode="0" endBytecode="67" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+    </Method>
+    <Type descriptor="Ljava/sql/PreparedStatement;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.sql.PreparedStatement" sourcefile="PreparedStatement.java" sourcepath="java/sql/PreparedStatement.java"/>
+    </Type>
+    <SourceLine classname="net.smartlab.config.SQLConfiguration" start="102" end="102" startBytecode="15" endBytecode="15" sourcefile="SQLConfiguration.java" sourcepath="net/smartlab/config/SQLConfiguration.java"/>
+  </BugInstance>
+  <BugInstance type="DMI_EMPTY_DB_PASSWORD" priority="2" abbrev="Dm" category="SECURITY">
+    <Class classname="net.smartlab.config.SQLConfigurationTest">
+      <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="46" end="151" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfigurationTest" name="getConnection" signature="()Lorg/dbunit/database/IDatabaseConnection;" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="55" end="57" startBytecode="0" endBytecode="12" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+    </Method>
+    <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="56" end="56" startBytecode="12" endBytecode="12" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+  </BugInstance>
+  <BugInstance type="DMI_EMPTY_DB_PASSWORD" priority="2" abbrev="Dm" category="SECURITY">
+    <Class classname="net.smartlab.config.SQLConfigurationTest">
+      <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="46" end="151" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfigurationTest" name="testSQLConfigurationConnection" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="114" end="118" startBytecode="0" endBytecode="15" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+    </Method>
+    <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="115" end="115" startBytecode="12" endBytecode="12" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.smartlab.config.SQLConfigurationTest">
+      <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="46" end="151" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfigurationTest" name="testGetLastUpdate" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="139" end="151" startBytecode="0" endBytecode="216" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="142" end="142" startBytecode="51" endBytecode="51" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="145" end="145" startBytecode="64" endBytecode="64" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="146" end="146" startBytecode="79" endBytecode="79" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="149" end="149" startBytecode="82" endBytecode="82" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="150" end="150" startBytecode="86" endBytecode="86" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="151" end="151" startBytecode="110" endBytecode="110" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="ODR_OPEN_DATABASE_RESOURCE" priority="2" abbrev="ODR" category="BAD_PRACTICE">
+    <Class classname="net.smartlab.config.SQLConfigurationTest">
+      <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="46" end="151" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.SQLConfigurationTest" name="testGetLastUpdate" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="139" end="151" startBytecode="0" endBytecode="49" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+    </Method>
+    <Type descriptor="Ljava/sql/Statement;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Type>
+    <SourceLine classname="net.smartlab.config.SQLConfigurationTest" start="142" end="142" startBytecode="51" endBytecode="51" sourcefile="SQLConfigurationTest.java" sourcepath="net/smartlab/config/SQLConfigurationTest.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.smartlab.config.XMLConfiguration">
+      <SourceLine classname="net.smartlab.config.XMLConfiguration" start="85" end="355" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.XMLConfiguration" name="encrypt" signature="(Ljava/io/File;Ljava/io/File;Ljava/io/File;Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="net.smartlab.config.XMLConfiguration" start="335" end="355" startBytecode="0" endBytecode="438" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.smartlab.config.XMLConfiguration" start="348" end="348" startBytecode="109" endBytecode="109" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.smartlab.config.XMLConfiguration" start="349" end="349" startBytecode="114" endBytecode="114" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="net.smartlab.config.XMLConfiguration">
+      <SourceLine classname="net.smartlab.config.XMLConfiguration" start="85" end="355" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.XMLConfiguration" name="encrypt" signature="(Ljava/io/File;Ljava/io/File;Ljava/io/File;Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="net.smartlab.config.XMLConfiguration" start="335" end="355" startBytecode="0" endBytecode="83" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="net.smartlab.config.XMLConfiguration" start="337" end="337" startBytecode="3" endBytecode="3" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+    <SourceLine classname="net.smartlab.config.XMLConfiguration" start="348" end="348" startBytecode="104" endBytecode="104" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="net.smartlab.config.XMLConfiguration$XMLHandler">
+      <SourceLine classname="net.smartlab.config.XMLConfiguration$XMLHandler" start="247" end="314" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+    </Class>
+    <Field classname="net.smartlab.config.XMLConfiguration$XMLHandler" name="locator" signature="Lorg/xml/sax/Locator;" isStatic="false">
+      <SourceLine classname="net.smartlab.config.XMLConfiguration$XMLHandler" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+    </Field>
+    <SourceLine classname="net.smartlab.config.XMLConfiguration$XMLHandler" start="255" end="255" startBytecode="2" endBytecode="2" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="net.smartlab.config.XMLConfiguration$XMLHandler">
+      <SourceLine classname="net.smartlab.config.XMLConfiguration$XMLHandler" start="247" end="314" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+    </Class>
+    <Field classname="net.smartlab.config.XMLConfiguration$XMLHandler" name="reader" signature="Lorg/xml/sax/XMLReader;" isStatic="false">
+      <SourceLine classname="net.smartlab.config.XMLConfiguration$XMLHandler" sourcefile="XMLConfiguration.java" sourcepath="net/smartlab/config/XMLConfiguration.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="net.smartlab.config.XMLConfigurationTest">
+      <SourceLine classname="net.smartlab.config.XMLConfigurationTest" start="41" end="148" sourcefile="XMLConfigurationTest.java" sourcepath="net/smartlab/config/XMLConfigurationTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.XMLConfigurationTest" name="setUp" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.XMLConfigurationTest" start="54" end="60" startBytecode="0" endBytecode="30" sourcefile="XMLConfigurationTest.java" sourcepath="net/smartlab/config/XMLConfigurationTest.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="net.smartlab.config.XMLConfigurationTest" start="56" end="56" startBytecode="19" endBytecode="19" sourcefile="XMLConfigurationTest.java" sourcepath="net/smartlab/config/XMLConfigurationTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="net.smartlab.config.XMLConfigurationTest">
+      <SourceLine classname="net.smartlab.config.XMLConfigurationTest" start="41" end="148" sourcefile="XMLConfigurationTest.java" sourcepath="net/smartlab/config/XMLConfigurationTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.XMLConfigurationTest" name="testIsChanged" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.XMLConfigurationTest" start="66" end="72" startBytecode="0" endBytecode="115" sourcefile="XMLConfigurationTest.java" sourcepath="net/smartlab/config/XMLConfigurationTest.java"/>
+    </Method>
+    <Method classname="java.io.File" name="setLastModified" signature="(J)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1258" end="1263" startBytecode="0" endBytecode="80" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="net.smartlab.config.XMLConfigurationTest" start="70" end="70" startBytecode="29" endBytecode="29" sourcefile="XMLConfigurationTest.java" sourcepath="net/smartlab/config/XMLConfigurationTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="net.smartlab.config.XMLConfigurationTest">
+      <SourceLine classname="net.smartlab.config.XMLConfigurationTest" start="41" end="148" sourcefile="XMLConfigurationTest.java" sourcepath="net/smartlab/config/XMLConfigurationTest.java"/>
+    </Class>
+    <Method classname="net.smartlab.config.XMLConfigurationTest" name="testUpdate" signature="()V" isStatic="false">
+      <SourceLine classname="net.smartlab.config.XMLConfigurationTest" start="78" end="86" startBytecode="0" endBytecode="159" sourcefile="XMLConfigurationTest.java" sourcepath="net/smartlab/config/XMLConfigurationTest.java"/>
+    </Method>
+    <Method classname="java.io.File" name="setLastModified" signature="(J)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1258" end="1263" startBytecode="0" endBytecode="80" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="net.smartlab.config.XMLConfigurationTest" start="83" end="83" startBytecode="48" endBytecode="48" sourcefile="XMLConfigurationTest.java" sourcepath="net/smartlab/config/XMLConfigurationTest.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="11">
+    <MissingClass>junit.framework.TestCase</MissingClass>
+    <MissingClass>junitx.framework.ArrayAssert</MissingClass>
+    <MissingClass>org.apache.commons.dbcp.BasicDataSource</MissingClass>
+    <MissingClass>org.dbunit.IDatabaseTester</MissingClass>
+    <MissingClass>org.dbunit.JdbcDatabaseTester</MissingClass>
+    <MissingClass>org.dbunit.database.DatabaseConnection</MissingClass>
+    <MissingClass>org.dbunit.database.IDatabaseConnection</MissingClass>
+    <MissingClass>org.dbunit.dataset.xml.FlatXmlDataSet</MissingClass>
+    <MissingClass>org.dbunit.operation.DatabaseOperation</MissingClass>
+    <MissingClass>org.jmock.Expectations</MissingClass>
+    <MissingClass>org.jmock.Mockery</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 9 Jun 2008 12:54:39 +0300" total_classes="31" referenced_classes="138" total_bugs="26" total_size="1333" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="32.49" clock_seconds="16.62" peak_mbytes="75.52" alloc_mbytes="763.88" gc_seconds="0.25" priority_2="21" priority_1="5">
+    <PackageStats package="net.smartlab.config" total_bugs="26" total_types="31" total_size="1333" priority_2="21" priority_1="5">
+      <ClassStats class="net.smartlab.config.AbstractConfigurationTest" sourceFile="AbstractConfigurationTest.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="net.smartlab.config.AbstractConfigurationTest$1" sourceFile="AbstractConfigurationTest.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.smartlab.config.AbstractConfigurationTest$2" sourceFile="AbstractConfigurationTest.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.smartlab.config.Configuration" sourceFile="Configuration.java" interface="false" size="86" bugs="1" priority_1="1"/>
+      <ClassStats class="net.smartlab.config.Configuration$1" sourceFile="Configuration.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="net.smartlab.config.Configuration$Monitor" sourceFile="Configuration.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ConfigurationException" sourceFile="ConfigurationException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ConfigurationExceptionTest" sourceFile="ConfigurationExceptionTest.java" interface="false" size="21" bugs="4" priority_1="4"/>
+      <ClassStats class="net.smartlab.config.ConfigurationTest" sourceFile="ConfigurationTest.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ConfigurationTest$1" sourceFile="ConfigurationTest.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ConfigurationTest$2" sourceFile="ConfigurationTest.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ConfigurationTest$3" sourceFile="ConfigurationTest.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ConfigurationTest$4" sourceFile="ConfigurationTest.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ConfigurationTest$5" sourceFile="ConfigurationTest.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ConfigurationTest$6" sourceFile="ConfigurationTest.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.smartlab.config.Element" sourceFile="Element.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ElementTest" sourceFile="ElementTest.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="net.smartlab.config.Listener" sourceFile="Listener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ListenerTest" sourceFile="ListenerTest.java" interface="false" size="33" bugs="2" priority_2="2"/>
+      <ClassStats class="net.smartlab.config.ListenerTest$1" sourceFile="ListenerTest.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.smartlab.config.Node" sourceFile="Node.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="net.smartlab.config.NodeTest" sourceFile="NodeTest.java" interface="false" size="112" bugs="0"/>
+      <ClassStats class="net.smartlab.config.Reference" sourceFile="Reference.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="net.smartlab.config.ReferenceTest" sourceFile="ReferenceTest.java" interface="false" size="104" bugs="0"/>
+      <ClassStats class="net.smartlab.config.SQLConfiguration" sourceFile="SQLConfiguration.java" interface="false" size="138" bugs="8" priority_2="8"/>
+      <ClassStats class="net.smartlab.config.SQLConfiguration$SimpleDataSource" sourceFile="SQLConfiguration.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.smartlab.config.SQLConfiguration$SimpleDataSource$ConnectionWrapper" sourceFile="SQLConfiguration.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="net.smartlab.config.SQLConfigurationTest" sourceFile="SQLConfigurationTest.java" interface="false" size="61" bugs="4" priority_2="4"/>
+      <ClassStats class="net.smartlab.config.XMLConfiguration" sourceFile="XMLConfiguration.java" interface="false" size="78" bugs="2" priority_2="2"/>
+      <ClassStats class="net.smartlab.config.XMLConfiguration$XMLHandler" sourceFile="XMLConfiguration.java" interface="false" size="40" bugs="2" priority_2="2"/>
+      <ClassStats class="net.smartlab.config.XMLConfigurationTest" sourceFile="XMLConfigurationTest.java" interface="false" size="58" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1265" invocations="670" avgMicrosecondsPerInvocation="1888" maxMicrosecondsPerInvocation="104865" standardDeviationMircosecondsPerInvocation="7347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1049" invocations="243" avgMicrosecondsPerInvocation="4320" maxMicrosecondsPerInvocation="203409" standardDeviationMircosecondsPerInvocation="14727"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="980" invocations="138" avgMicrosecondsPerInvocation="7107" maxMicrosecondsPerInvocation="151625" standardDeviationMircosecondsPerInvocation="17777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="966" invocations="226" avgMicrosecondsPerInvocation="4276" maxMicrosecondsPerInvocation="73881" standardDeviationMircosecondsPerInvocation="9046"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="829" invocations="248" avgMicrosecondsPerInvocation="3345" maxMicrosecondsPerInvocation="89832" standardDeviationMircosecondsPerInvocation="7424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="727" invocations="138" avgMicrosecondsPerInvocation="5271" maxMicrosecondsPerInvocation="55103" standardDeviationMircosecondsPerInvocation="9224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="670" invocations="226" avgMicrosecondsPerInvocation="2968" maxMicrosecondsPerInvocation="41200" standardDeviationMircosecondsPerInvocation="4425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="645" invocations="226" avgMicrosecondsPerInvocation="2856" maxMicrosecondsPerInvocation="28324" standardDeviationMircosecondsPerInvocation="4292"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="492" invocations="226" avgMicrosecondsPerInvocation="2181" maxMicrosecondsPerInvocation="42073" standardDeviationMircosecondsPerInvocation="4021"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="469" invocations="209" avgMicrosecondsPerInvocation="2245" maxMicrosecondsPerInvocation="53362" standardDeviationMircosecondsPerInvocation="4521"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="413" invocations="138" avgMicrosecondsPerInvocation="2994" maxMicrosecondsPerInvocation="29234" standardDeviationMircosecondsPerInvocation="5407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="390" invocations="138" avgMicrosecondsPerInvocation="2826" maxMicrosecondsPerInvocation="94744" standardDeviationMircosecondsPerInvocation="8775"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="375" invocations="461" avgMicrosecondsPerInvocation="815" maxMicrosecondsPerInvocation="51262" standardDeviationMircosecondsPerInvocation="2983"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="276" invocations="226" avgMicrosecondsPerInvocation="1222" maxMicrosecondsPerInvocation="27072" standardDeviationMircosecondsPerInvocation="2762"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="264" invocations="673" avgMicrosecondsPerInvocation="392" maxMicrosecondsPerInvocation="178870" standardDeviationMircosecondsPerInvocation="6926"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="192" invocations="138" avgMicrosecondsPerInvocation="1393" maxMicrosecondsPerInvocation="33130" standardDeviationMircosecondsPerInvocation="3646"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="175" invocations="226" avgMicrosecondsPerInvocation="774" maxMicrosecondsPerInvocation="8639" standardDeviationMircosecondsPerInvocation="1226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="152" invocations="611" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="29723" standardDeviationMircosecondsPerInvocation="1306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="149" invocations="138" avgMicrosecondsPerInvocation="1080" maxMicrosecondsPerInvocation="14447" standardDeviationMircosecondsPerInvocation="2240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="131" invocations="31" avgMicrosecondsPerInvocation="4228" maxMicrosecondsPerInvocation="18849" standardDeviationMircosecondsPerInvocation="4818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="127" invocations="226" avgMicrosecondsPerInvocation="565" maxMicrosecondsPerInvocation="4955" standardDeviationMircosecondsPerInvocation="687"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="125" invocations="31" avgMicrosecondsPerInvocation="4060" maxMicrosecondsPerInvocation="30435" standardDeviationMircosecondsPerInvocation="5962"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="121" invocations="164" avgMicrosecondsPerInvocation="740" maxMicrosecondsPerInvocation="16223" standardDeviationMircosecondsPerInvocation="1838"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="117" invocations="138" avgMicrosecondsPerInvocation="851" maxMicrosecondsPerInvocation="9713" standardDeviationMircosecondsPerInvocation="1648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="117" invocations="31" avgMicrosecondsPerInvocation="3788" maxMicrosecondsPerInvocation="41878" standardDeviationMircosecondsPerInvocation="8965"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="116" invocations="31" avgMicrosecondsPerInvocation="3769" maxMicrosecondsPerInvocation="15607" standardDeviationMircosecondsPerInvocation="4102"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

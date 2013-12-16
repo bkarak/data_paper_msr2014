@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1258519230000" analysisTimestamp="1360931740139" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-mina/1.6.2/camel-mina-1.6.2.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED" priority="2" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.apache.camel.component.mina.MinaProducer">
+      <SourceLine classname="org.apache.camel.component.mina.MinaProducer" start="43" end="169" sourcefile="MinaProducer.java" sourcepath="org/apache/camel/component/mina/MinaProducer.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.mina.MinaProducer" name="process" signature="(Lorg/apache/camel/Exchange;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.mina.MinaProducer" start="62" end="125" startBytecode="0" endBytecode="615" sourcefile="MinaProducer.java" sourcepath="org/apache/camel/component/mina/MinaProducer.java"/>
+    </Method>
+    <Method classname="java.util.concurrent.CountDownLatch" name="await" signature="(JLjava/util/concurrent/TimeUnit;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.CountDownLatch" start="253" end="253" startBytecode="0" endBytecode="37" sourcefile="CountDownLatch.java" sourcepath="java/util/concurrent/CountDownLatch.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.component.mina.MinaProducer" start="104" end="104" startBytecode="260" endBytecode="260" sourcefile="MinaProducer.java" sourcepath="org/apache/camel/component/mina/MinaProducer.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED" priority="2" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.apache.camel.component.mina.MinaSocketProducer$MinaProducerWorker">
+      <SourceLine classname="org.apache.camel.component.mina.MinaSocketProducer$MinaProducerWorker" start="111" end="185" sourcefile="MinaSocketProducer.java" sourcepath="org/apache/camel/component/mina/MinaSocketProducer.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.mina.MinaSocketProducer$MinaProducerWorker" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.mina.MinaSocketProducer$MinaProducerWorker" start="122" end="185" startBytecode="0" endBytecode="712" sourcefile="MinaSocketProducer.java" sourcepath="org/apache/camel/component/mina/MinaSocketProducer.java"/>
+    </Method>
+    <Method classname="java.util.concurrent.CountDownLatch" name="await" signature="(JLjava/util/concurrent/TimeUnit;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.CountDownLatch" start="253" end="253" startBytecode="0" endBytecode="37" sourcefile="CountDownLatch.java" sourcepath="java/util/concurrent/CountDownLatch.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.component.mina.MinaSocketProducer$MinaProducerWorker" start="158" end="158" startBytecode="242" endBytecode="242" sourcefile="MinaSocketProducer.java" sourcepath="org/apache/camel/component/mina/MinaSocketProducer.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="55">
+    <MissingClass>org.apache.camel.CamelContext</MissingClass>
+    <MissingClass>org.apache.camel.CamelException</MissingClass>
+    <MissingClass>org.apache.camel.CamelExchangeException</MissingClass>
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.ExchangePattern</MissingClass>
+    <MissingClass>org.apache.camel.ExchangeTimedOutException</MissingClass>
+    <MissingClass>org.apache.camel.Message</MissingClass>
+    <MissingClass>org.apache.camel.Processor</MissingClass>
+    <MissingClass>org.apache.camel.RuntimeCamelException</MissingClass>
+    <MissingClass>org.apache.camel.TypeConverter</MissingClass>
+    <MissingClass>org.apache.camel.converter.IOConverter</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultComponent</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultConsumer</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultEndpoint</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultExchange</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultProducer</MissingClass>
+    <MissingClass>org.apache.camel.impl.converter.DefaultTypeConverter</MissingClass>
+    <MissingClass>org.apache.camel.spi.Registry</MissingClass>
+    <MissingClass>org.apache.camel.util.ExchangeHelper</MissingClass>
+    <MissingClass>org.apache.camel.util.ObjectHelper</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.mina.common.ByteBuffer</MissingClass>
+    <MissingClass>org.apache.mina.common.ConnectFuture</MissingClass>
+    <MissingClass>org.apache.mina.common.DefaultIoFilterChainBuilder</MissingClass>
+    <MissingClass>org.apache.mina.common.IoAcceptor</MissingClass>
+    <MissingClass>org.apache.mina.common.IoConnector</MissingClass>
+    <MissingClass>org.apache.mina.common.IoHandlerAdapter</MissingClass>
+    <MissingClass>org.apache.mina.common.IoServiceConfig</MissingClass>
+    <MissingClass>org.apache.mina.common.IoSession</MissingClass>
+    <MissingClass>org.apache.mina.common.ThreadModel</MissingClass>
+    <MissingClass>org.apache.mina.common.WriteFuture</MissingClass>
+    <MissingClass>org.apache.mina.filter.LoggingFilter</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.ProtocolCodecFactory</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.ProtocolCodecFilter</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.ProtocolDecoder</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.ProtocolDecoderOutput</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.ProtocolEncoder</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.ProtocolEncoderOutput</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.serialization.ObjectSerializationCodecFactory</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.textline.LineDelimiter</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.textline.TextLineDecoder</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.textline.TextLineEncoder</MissingClass>
+    <MissingClass>org.apache.mina.filter.executor.ExecutorFilter</MissingClass>
+    <MissingClass>org.apache.mina.transport.socket.nio.DatagramAcceptor</MissingClass>
+    <MissingClass>org.apache.mina.transport.socket.nio.DatagramAcceptorConfig</MissingClass>
+    <MissingClass>org.apache.mina.transport.socket.nio.DatagramConnector</MissingClass>
+    <MissingClass>org.apache.mina.transport.socket.nio.DatagramConnectorConfig</MissingClass>
+    <MissingClass>org.apache.mina.transport.socket.nio.SocketAcceptor</MissingClass>
+    <MissingClass>org.apache.mina.transport.socket.nio.SocketAcceptorConfig</MissingClass>
+    <MissingClass>org.apache.mina.transport.socket.nio.SocketConnector</MissingClass>
+    <MissingClass>org.apache.mina.transport.socket.nio.SocketConnectorConfig</MissingClass>
+    <MissingClass>org.apache.mina.transport.vmpipe.VmPipeAcceptor</MissingClass>
+    <MissingClass>org.apache.mina.transport.vmpipe.VmPipeAddress</MissingClass>
+    <MissingClass>org.apache.mina.transport.vmpipe.VmPipeConnector</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 18 Nov 2009 06:40:30 +0200" total_classes="24" referenced_classes="72" total_bugs="2" total_size="907" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="19.41" clock_seconds="10.63" peak_mbytes="65.47" alloc_mbytes="763.88" gc_seconds="0.16" priority_2="2">
+    <PackageStats package="org.apache.camel.component.mina" total_bugs="2" total_types="24" total_size="907" priority_2="2">
+      <ClassStats class="org.apache.camel.component.mina.MinaComponent" sourceFile="MinaComponent.java" interface="false" size="183" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaComponent$1" sourceFile="MinaComponent.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaConfiguration" sourceFile="MinaConfiguration.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaConsumer" sourceFile="MinaConsumer.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaConsumer$1" sourceFile="MinaConsumer.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaConsumer$ReceiveHandler" sourceFile="MinaConsumer.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaConverter" sourceFile="MinaConverter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaEndpoint" sourceFile="MinaEndpoint.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaExchange" sourceFile="MinaExchange.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaHelper" sourceFile="MinaHelper.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaPayloadHelper" sourceFile="MinaPayloadHelper.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaPayloadHolder" sourceFile="MinaPayloadHolder.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaProducer" sourceFile="MinaProducer.java" interface="false" size="83" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaProducer$1" sourceFile="MinaProducer.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaProducer$ResponseHandler" sourceFile="MinaProducer.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaSocketProducer" sourceFile="MinaSocketProducer.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaSocketProducer$1" sourceFile="MinaSocketProducer.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaSocketProducer$MinaProducerWorker" sourceFile="MinaSocketProducer.java" interface="false" size="48" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaSocketProducer$ResponseHandler" sourceFile="MinaSocketProducer.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaUdpProtocolCodecFactory" sourceFile="MinaUdpProtocolCodecFactory.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaUdpProtocolCodecFactory$1" sourceFile="MinaUdpProtocolCodecFactory.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.MinaUdpProtocolCodecFactory$2" sourceFile="MinaUdpProtocolCodecFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.TextLineCodecFactory" sourceFile="TextLineCodecFactory.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.mina.TextLineDelimiter" sourceFile="TextLineDelimiter.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="872" invocations="478" avgMicrosecondsPerInvocation="1825" maxMicrosecondsPerInvocation="164719" standardDeviationMircosecondsPerInvocation="9116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="538" invocations="165" avgMicrosecondsPerInvocation="3260" maxMicrosecondsPerInvocation="97486" standardDeviationMircosecondsPerInvocation="8840"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="522" invocations="165" avgMicrosecondsPerInvocation="3168" maxMicrosecondsPerInvocation="45202" standardDeviationMircosecondsPerInvocation="6979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="487" invocations="164" avgMicrosecondsPerInvocation="2970" maxMicrosecondsPerInvocation="22682" standardDeviationMircosecondsPerInvocation="4657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="463" invocations="72" avgMicrosecondsPerInvocation="6441" maxMicrosecondsPerInvocation="111122" standardDeviationMircosecondsPerInvocation="17323"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="417" invocations="165" avgMicrosecondsPerInvocation="2529" maxMicrosecondsPerInvocation="32013" standardDeviationMircosecondsPerInvocation="4661"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="371" invocations="165" avgMicrosecondsPerInvocation="2253" maxMicrosecondsPerInvocation="86069" standardDeviationMircosecondsPerInvocation="7542"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="369" invocations="72" avgMicrosecondsPerInvocation="5126" maxMicrosecondsPerInvocation="65155" standardDeviationMircosecondsPerInvocation="11969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="349" invocations="167" avgMicrosecondsPerInvocation="2093" maxMicrosecondsPerInvocation="22822" standardDeviationMircosecondsPerInvocation="3831"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="278" invocations="72" avgMicrosecondsPerInvocation="3869" maxMicrosecondsPerInvocation="111076" standardDeviationMircosecondsPerInvocation="13827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="278" invocations="257" avgMicrosecondsPerInvocation="1082" maxMicrosecondsPerInvocation="58613" standardDeviationMircosecondsPerInvocation="4970"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="241" invocations="95" avgMicrosecondsPerInvocation="2541" maxMicrosecondsPerInvocation="18776" standardDeviationMircosecondsPerInvocation="3878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="168" invocations="372" avgMicrosecondsPerInvocation="453" maxMicrosecondsPerInvocation="67504" standardDeviationMircosecondsPerInvocation="3601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="166" invocations="165" avgMicrosecondsPerInvocation="1011" maxMicrosecondsPerInvocation="28214" standardDeviationMircosecondsPerInvocation="2587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="142" invocations="72" avgMicrosecondsPerInvocation="1985" maxMicrosecondsPerInvocation="54992" standardDeviationMircosecondsPerInvocation="6787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="129" invocations="72" avgMicrosecondsPerInvocation="1796" maxMicrosecondsPerInvocation="23962" standardDeviationMircosecondsPerInvocation="4777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="122" invocations="1924" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="46317" standardDeviationMircosecondsPerInvocation="1218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.AppendingToAnObjectOutputStream" totalMilliseconds="113" invocations="24" avgMicrosecondsPerInvocation="4718" maxMicrosecondsPerInvocation="96841" standardDeviationMircosecondsPerInvocation="19230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="112" invocations="145" avgMicrosecondsPerInvocation="779" maxMicrosecondsPerInvocation="43222" standardDeviationMircosecondsPerInvocation="3593"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="101" invocations="164" avgMicrosecondsPerInvocation="617" maxMicrosecondsPerInvocation="25314" standardDeviationMircosecondsPerInvocation="2390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="98" invocations="127" avgMicrosecondsPerInvocation="779" maxMicrosecondsPerInvocation="31428" standardDeviationMircosecondsPerInvocation="3327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="96" invocations="481" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="12424" standardDeviationMircosecondsPerInvocation="1047"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="94" invocations="24" avgMicrosecondsPerInvocation="3940" maxMicrosecondsPerInvocation="45251" standardDeviationMircosecondsPerInvocation="9208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="90" invocations="24" avgMicrosecondsPerInvocation="3781" maxMicrosecondsPerInvocation="19011" standardDeviationMircosecondsPerInvocation="5058"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="81" invocations="165" avgMicrosecondsPerInvocation="493" maxMicrosecondsPerInvocation="45834" standardDeviationMircosecondsPerInvocation="3630"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

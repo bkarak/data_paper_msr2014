@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1308036443000" analysisTimestamp="1360917074817" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jasmine/monitoring/alarm-snmp-jar/1.3.2/alarm-snmp-jar-1.3.2.jar</Jar>
+  </Project>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.jasmine.interfaces.snmp.alarms.SNMPAlarm">
+      <SourceLine classname="org.ow2.jasmine.interfaces.snmp.alarms.SNMPAlarm" start="48" end="109" sourcefile="SNMPAlarm.java" sourcepath="org/ow2/jasmine/interfaces/snmp/alarms/SNMPAlarm.java"/>
+    </Class>
+    <Field classname="org.ow2.jasmine.interfaces.snmp.alarms.SNMPAlarm" name="COLUMN_COUT" signature="I" isStatic="true">
+      <SourceLine classname="org.ow2.jasmine.interfaces.snmp.alarms.SNMPAlarm" sourcefile="SNMPAlarm.java" sourcepath="org/ow2/jasmine/interfaces/snmp/alarms/SNMPAlarm.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jasmine.interfaces.snmp.alarms.SNMPAlarm" start="48" end="48" startBytecode="1" endBytecode="1" sourcefile="SNMPAlarm.java" sourcepath="org/ow2/jasmine/interfaces/snmp/alarms/SNMPAlarm.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="27">
+    <MissingClass>org.objectweb.jasmine.rules.logs.beans.LogInterfaceLocal</MissingClass>
+    <MissingClass>org.objectweb.jasmine.rules.logs.util.AlarmLog</MissingClass>
+    <MissingClass>org.snmp4j.agent.BaseAgent</MissingClass>
+    <MissingClass>org.snmp4j.agent.CommandProcessor</MissingClass>
+    <MissingClass>org.snmp4j.agent.DefaultMOServer</MissingClass>
+    <MissingClass>org.snmp4j.agent.DuplicateRegistrationException</MissingClass>
+    <MissingClass>org.snmp4j.agent.MOGroup</MissingClass>
+    <MissingClass>org.snmp4j.agent.MOServer</MissingClass>
+    <MissingClass>org.snmp4j.agent.NotificationOriginator</MissingClass>
+    <MissingClass>org.snmp4j.agent.mo.DefaultMOFactory</MissingClass>
+    <MissingClass>org.snmp4j.agent.mo.MOAccessImpl</MissingClass>
+    <MissingClass>org.snmp4j.agent.mo.MOFactory</MissingClass>
+    <MissingClass>org.snmp4j.agent.mo.MOTable</MissingClass>
+    <MissingClass>org.snmp4j.agent.mo.snmp.SnmpCommunityMIB</MissingClass>
+    <MissingClass>org.snmp4j.agent.mo.snmp.SnmpNotificationMIB</MissingClass>
+    <MissingClass>org.snmp4j.agent.mo.snmp.SnmpTargetMIB</MissingClass>
+    <MissingClass>org.snmp4j.agent.mo.snmp.TransportDomains</MissingClass>
+    <MissingClass>org.snmp4j.agent.mo.snmp.VacmMIB</MissingClass>
+    <MissingClass>org.snmp4j.mp.MPv3</MissingClass>
+    <MissingClass>org.snmp4j.smi.Gauge32</MissingClass>
+    <MissingClass>org.snmp4j.smi.GenericAddress</MissingClass>
+    <MissingClass>org.snmp4j.smi.Integer32</MissingClass>
+    <MissingClass>org.snmp4j.smi.OID</MissingClass>
+    <MissingClass>org.snmp4j.smi.OctetString</MissingClass>
+    <MissingClass>org.snmp4j.smi.UdpAddress</MissingClass>
+    <MissingClass>org.snmp4j.smi.VariableBinding</MissingClass>
+    <MissingClass>org.snmp4j.transport.TransportMappings</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 14 Jun 2011 10:27:23 +0300" total_classes="3" referenced_classes="22" total_bugs="1" total_size="175" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="13.23" clock_seconds="7.96" peak_mbytes="54.22" alloc_mbytes="763.88" gc_seconds="0.10" priority_1="1">
+    <PackageStats package="org.ow2.jasmine.interfaces.snmp" total_bugs="0" total_types="1" total_size="90">
+      <ClassStats class="org.ow2.jasmine.interfaces.snmp.SNMPAgent" sourceFile="SNMPAgent.java" interface="false" size="90" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jasmine.interfaces.snmp.alarms" total_bugs="1" total_types="2" total_size="85" priority_1="1">
+      <ClassStats class="org.ow2.jasmine.interfaces.snmp.alarms.SNMPAlarm" sourceFile="SNMPAlarm.java" interface="false" size="27" bugs="1" priority_1="1"/>
+      <ClassStats class="org.ow2.jasmine.interfaces.snmp.alarms.SNMPAlarmMIB" sourceFile="SNMPAlarmMIB.java" interface="false" size="58" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="945" invocations="400" avgMicrosecondsPerInvocation="2363" maxMicrosecondsPerInvocation="40715" standardDeviationMircosecondsPerInvocation="6142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="624" invocations="22" avgMicrosecondsPerInvocation="28398" maxMicrosecondsPerInvocation="112385" standardDeviationMircosecondsPerInvocation="34979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="440" invocations="22" avgMicrosecondsPerInvocation="20009" maxMicrosecondsPerInvocation="84991" standardDeviationMircosecondsPerInvocation="24166"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="245" invocations="22" avgMicrosecondsPerInvocation="11145" maxMicrosecondsPerInvocation="45857" standardDeviationMircosecondsPerInvocation="12574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="210" invocations="32" avgMicrosecondsPerInvocation="6563" maxMicrosecondsPerInvocation="45783" standardDeviationMircosecondsPerInvocation="10953"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="208" invocations="32" avgMicrosecondsPerInvocation="6517" maxMicrosecondsPerInvocation="40765" standardDeviationMircosecondsPerInvocation="10912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="195" invocations="22" avgMicrosecondsPerInvocation="8895" maxMicrosecondsPerInvocation="51405" standardDeviationMircosecondsPerInvocation="13026"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="193" invocations="96" avgMicrosecondsPerInvocation="2010" maxMicrosecondsPerInvocation="74786" standardDeviationMircosecondsPerInvocation="7768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="192" invocations="32" avgMicrosecondsPerInvocation="6000" maxMicrosecondsPerInvocation="49306" standardDeviationMircosecondsPerInvocation="12039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="174" invocations="324" avgMicrosecondsPerInvocation="539" maxMicrosecondsPerInvocation="24499" standardDeviationMircosecondsPerInvocation="2149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="157" invocations="34" avgMicrosecondsPerInvocation="4645" maxMicrosecondsPerInvocation="48145" standardDeviationMircosecondsPerInvocation="9868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="140" invocations="33" avgMicrosecondsPerInvocation="4248" maxMicrosecondsPerInvocation="44971" standardDeviationMircosecondsPerInvocation="8867"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="124" invocations="23" avgMicrosecondsPerInvocation="5393" maxMicrosecondsPerInvocation="30776" standardDeviationMircosecondsPerInvocation="8483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="121" invocations="32" avgMicrosecondsPerInvocation="3801" maxMicrosecondsPerInvocation="109927" standardDeviationMircosecondsPerInvocation="19076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="110" invocations="32" avgMicrosecondsPerInvocation="3464" maxMicrosecondsPerInvocation="25476" standardDeviationMircosecondsPerInvocation="5401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="107" invocations="22" avgMicrosecondsPerInvocation="4899" maxMicrosecondsPerInvocation="26714" standardDeviationMircosecondsPerInvocation="6049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="97" invocations="22" avgMicrosecondsPerInvocation="4422" maxMicrosecondsPerInvocation="13307" standardDeviationMircosecondsPerInvocation="4452"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

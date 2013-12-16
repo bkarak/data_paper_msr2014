@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1244793718000" analysisTimestamp="1360917086962" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-jetty/2.0-M2/camel-jetty-2.0-M2.jar</Jar>
+  </Project>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.apache.camel.component.jetty.JettyHttpComponent">
+      <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="53" end="316" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java"/>
+    </Class>
+    <Field classname="org.apache.camel.component.jetty.JettyHttpComponent" name="sslKeystore" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java"/>
+    </Field>
+    <Int value="50" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="238" end="238" startBytecode="2" endBytecode="2" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="242" end="242" startBytecode="1" endBytecode="1" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="252" end="252" startBytecode="41" endBytecode="41" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="253" end="253" startBytecode="52" endBytecode="52" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.apache.camel.component.jetty.JettyHttpComponent">
+      <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="53" end="316" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java"/>
+    </Class>
+    <Field classname="org.apache.camel.component.jetty.JettyHttpComponent" name="sslSocketConnector" signature="Lorg/mortbay/jetty/security/SslSocketConnector;" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java"/>
+    </Field>
+    <Int value="87" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="267" end="267" startBytecode="2" endBytecode="2" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="246" end="246" startBytecode="1" endBytecode="1" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="263" end="263" startBytecode="80" endBytecode="80" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="247" end="247" startBytecode="15" endBytecode="15" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="250" end="250" startBytecode="19" endBytecode="19" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="251" end="251" startBytecode="30" endBytecode="30" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="253" end="253" startBytecode="48" endBytecode="48" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent" start="259" end="259" startBytecode="72" endBytecode="72" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.camel.component.jetty.JettyHttpComponent$ConnectorRef">
+      <SourceLine classname="org.apache.camel.component.jetty.JettyHttpComponent$ConnectorRef" start="62" end="73" sourcefile="JettyHttpComponent.java" sourcepath="org/apache/camel/component/jetty/JettyHttpComponent.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="25">
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.camel.component.http.CamelServlet</MissingClass>
+    <MissingClass>org.apache.camel.component.http.HttpBinding</MissingClass>
+    <MissingClass>org.apache.camel.component.http.HttpComponent</MissingClass>
+    <MissingClass>org.apache.camel.component.http.HttpConsumer</MissingClass>
+    <MissingClass>org.apache.camel.component.http.HttpEndpoint</MissingClass>
+    <MissingClass>org.apache.camel.component.http.HttpPollingConsumer</MissingClass>
+    <MissingClass>org.apache.camel.util.CamelContextHelper</MissingClass>
+    <MissingClass>org.apache.camel.util.IntrospectionSupport</MissingClass>
+    <MissingClass>org.apache.camel.util.URISupport</MissingClass>
+    <MissingClass>org.apache.camel.util.UnsafeUriCharactersEncoder</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpClientParams</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.mortbay.jetty.Connector</MissingClass>
+    <MissingClass>org.mortbay.jetty.Server</MissingClass>
+    <MissingClass>org.mortbay.jetty.handler.ContextHandlerCollection</MissingClass>
+    <MissingClass>org.mortbay.jetty.nio.SelectChannelConnector</MissingClass>
+    <MissingClass>org.mortbay.jetty.security.SslSocketConnector</MissingClass>
+    <MissingClass>org.mortbay.jetty.servlet.Context</MissingClass>
+    <MissingClass>org.mortbay.jetty.servlet.ServletHolder</MissingClass>
+    <MissingClass>org.mortbay.jetty.servlet.SessionHandler</MissingClass>
+    <MissingClass>org.mortbay.util.ajax.Continuation</MissingClass>
+    <MissingClass>org.mortbay.util.ajax.ContinuationSupport</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 12 Jun 2009 11:01:58 +0300" total_classes="4" referenced_classes="24" total_bugs="3" total_size="209" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="9.34" clock_seconds="5.68" peak_mbytes="54.59" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="3">
+    <PackageStats package="org.apache.camel.component.jetty" total_bugs="3" total_types="4" total_size="209" priority_2="3">
+      <ClassStats class="org.apache.camel.component.jetty.CamelContinuationServlet" sourceFile="CamelContinuationServlet.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.jetty.JettyHttpComponent" sourceFile="JettyHttpComponent.java" interface="false" size="147" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.camel.component.jetty.JettyHttpComponent$ConnectorRef" sourceFile="JettyHttpComponent.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.component.jetty.JettyHttpEndpoint" sourceFile="JettyHttpEndpoint.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="660" invocations="392" avgMicrosecondsPerInvocation="1685" maxMicrosecondsPerInvocation="119221" standardDeviationMircosecondsPerInvocation="7921"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="288" invocations="24" avgMicrosecondsPerInvocation="12003" maxMicrosecondsPerInvocation="69267" standardDeviationMircosecondsPerInvocation="19286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="244" invocations="24" avgMicrosecondsPerInvocation="10185" maxMicrosecondsPerInvocation="52051" standardDeviationMircosecondsPerInvocation="14538"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="190" invocations="24" avgMicrosecondsPerInvocation="7919" maxMicrosecondsPerInvocation="70519" standardDeviationMircosecondsPerInvocation="16461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="167" invocations="24" avgMicrosecondsPerInvocation="6959" maxMicrosecondsPerInvocation="31132" standardDeviationMircosecondsPerInvocation="9734"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="152" invocations="34" avgMicrosecondsPerInvocation="4494" maxMicrosecondsPerInvocation="38027" standardDeviationMircosecondsPerInvocation="9145"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="134" invocations="24" avgMicrosecondsPerInvocation="5599" maxMicrosecondsPerInvocation="40586" standardDeviationMircosecondsPerInvocation="9957"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="132" invocations="34" avgMicrosecondsPerInvocation="3897" maxMicrosecondsPerInvocation="26218" standardDeviationMircosecondsPerInvocation="6990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="118" invocations="126" avgMicrosecondsPerInvocation="942" maxMicrosecondsPerInvocation="15236" standardDeviationMircosecondsPerInvocation="2291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="109" invocations="317" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="14231" standardDeviationMircosecondsPerInvocation="1292"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="96" invocations="34" avgMicrosecondsPerInvocation="2848" maxMicrosecondsPerInvocation="49288" standardDeviationMircosecondsPerInvocation="8533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="86" invocations="34" avgMicrosecondsPerInvocation="2551" maxMicrosecondsPerInvocation="22206" standardDeviationMircosecondsPerInvocation="4611"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="68" invocations="34" avgMicrosecondsPerInvocation="2014" maxMicrosecondsPerInvocation="11763" standardDeviationMircosecondsPerInvocation="3298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="67" invocations="24" avgMicrosecondsPerInvocation="2798" maxMicrosecondsPerInvocation="29155" standardDeviationMircosecondsPerInvocation="6106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="66" invocations="34" avgMicrosecondsPerInvocation="1969" maxMicrosecondsPerInvocation="47905" standardDeviationMircosecondsPerInvocation="8241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="66" invocations="19" avgMicrosecondsPerInvocation="3511" maxMicrosecondsPerInvocation="19711" standardDeviationMircosecondsPerInvocation="4857"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="64" invocations="36" avgMicrosecondsPerInvocation="1789" maxMicrosecondsPerInvocation="15346" standardDeviationMircosecondsPerInvocation="3240"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

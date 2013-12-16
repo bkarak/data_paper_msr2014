@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1292596756000" analysisTimestamp="1360517748329" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/openengsb/core/openengsb-core-common/1.0.3.RELEASE/openengsb-core-common-1.0.3.RELEASE.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.openengsb.core.common.context.ContextPath">
+      <SourceLine classname="org.openengsb.core.common.context.ContextPath" start="24" end="62" sourcefile="ContextPath.java" sourcepath="org/openengsb/core/common/context/ContextPath.java"/>
+    </Class>
+    <Method classname="org.openengsb.core.common.context.ContextPath" name="getElements" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.openengsb.core.common.context.ContextPath" start="53" end="53" startBytecode="0" endBytecode="46" sourcefile="ContextPath.java" sourcepath="org/openengsb/core/common/context/ContextPath.java"/>
+    </Method>
+    <Field classname="org.openengsb.core.common.context.ContextPath" name="elements" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.openengsb.core.common.context.ContextPath" sourcefile="ContextPath.java" sourcepath="org/openengsb/core/common/context/ContextPath.java"/>
+    </Field>
+    <SourceLine classname="org.openengsb.core.common.context.ContextPath" start="53" end="53" startBytecode="4" endBytecode="4" sourcefile="ContextPath.java" sourcepath="org/openengsb/core/common/context/ContextPath.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="19">
+    <MissingClass>com.google.common.base.Preconditions</MissingClass>
+    <MissingClass>org.apache.commons.lang.LocaleUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.ObjectUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.wicket.Application</MissingClass>
+    <MissingClass>org.apache.wicket.MetaDataKey</MissingClass>
+    <MissingClass>org.apache.wicket.WicketRuntimeException</MissingClass>
+    <MissingClass>org.apache.wicket.injection.ComponentInjector</MissingClass>
+    <MissingClass>org.apache.wicket.injection.ConfigurableInjector</MissingClass>
+    <MissingClass>org.apache.wicket.injection.web.InjectorHolder</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.WebApplication</MissingClass>
+    <MissingClass>org.apache.wicket.proxy.LazyInitProxyFactory</MissingClass>
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceReference</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceRegistration</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.osgi.context.BundleContextAware</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 17 Dec 2010 16:39:16 +0200" total_classes="72" referenced_classes="140" total_bugs="1" total_size="1393" num_packages="15" vm_version="20.4-b02-402" cpu_seconds="23.99" clock_seconds="13.19" peak_mbytes="72.08" alloc_mbytes="763.88" gc_seconds="0.21" priority_2="1">
+    <PackageStats package="org.openengsb.core.common" total_bugs="0" total_types="15" total_size="322">
+      <ClassStats class="org.openengsb.core.common.AbstractDomainProvider" sourceFile="AbstractDomainProvider.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.AbstractServiceManager" sourceFile="AbstractServiceManager.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.AbstractServiceManager$1" sourceFile="AbstractServiceManager.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.AbstractServiceManager$DomainRepresentation" sourceFile="AbstractServiceManager.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.AbstractServiceManagerParent" sourceFile="AbstractServiceManagerParent.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.DefaultDomainProxyFactoryBean" sourceFile="DefaultDomainProxyFactoryBean.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.Domain" sourceFile="Domain.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.DomainEvents" sourceFile="DomainEvents.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.DomainMethodExecutionException" sourceFile="DomainMethodExecutionException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.DomainProvider" sourceFile="DomainProvider.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.Event" sourceFile="Event.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.ForwardHandler" sourceFile="ForwardHandler.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.Raises" sourceFile="Raises.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.ServiceInstanceFactory" sourceFile="ServiceInstanceFactory.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.ServiceManager" sourceFile="ServiceManager.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.connectorsetupstore" total_bugs="0" total_types="4" total_size="93">
+      <ClassStats class="org.openengsb.core.common.connectorsetupstore.ConnectorDomainPair" sourceFile="ConnectorDomainPair.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.connectorsetupstore.ConnectorSetupBean" sourceFile="ConnectorSetupBean.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.connectorsetupstore.ConnectorSetupStore" sourceFile="ConnectorSetupStore.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.connectorsetupstore.PersistenceConnectorSetupStore" sourceFile="PersistenceConnectorSetupStore.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.context" total_bugs="1" total_types="5" total_size="96" priority_2="1">
+      <ClassStats class="org.openengsb.core.common.context.Context" sourceFile="Context.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.context.ContextCurrentService" sourceFile="ContextCurrentService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.context.ContextPath" sourceFile="ContextPath.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openengsb.core.common.context.ContextService" sourceFile="ContextService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.context.ContextStorageBean" sourceFile="ContextStorageBean.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.descriptor" total_bugs="0" total_types="7" total_size="217">
+      <ClassStats class="org.openengsb.core.common.descriptor.AttributeDefinition" sourceFile="AttributeDefinition.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.descriptor.AttributeDefinition$1" sourceFile="AttributeDefinition.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.descriptor.AttributeDefinition$AllValidValidator" sourceFile="AttributeDefinition.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.descriptor.AttributeDefinition$Builder" sourceFile="AttributeDefinition.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.descriptor.AttributeDefinition$Option" sourceFile="AttributeDefinition.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.descriptor.ServiceDescriptor" sourceFile="ServiceDescriptor.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.descriptor.ServiceDescriptor$Builder" sourceFile="ServiceDescriptor.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.internal" total_bugs="0" total_types="1" total_size="92">
+      <ClassStats class="org.openengsb.core.common.internal.ContextServiceImpl" sourceFile="ContextServiceImpl.java" interface="false" size="92" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.l10n" total_bugs="0" total_types="6" total_size="101">
+      <ClassStats class="org.openengsb.core.common.l10n.BundleStrings" sourceFile="BundleStrings.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.l10n.BundleStrings$1" sourceFile="BundleStrings.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.l10n.LocalizableString" sourceFile="LocalizableString.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.l10n.PassThroughLocalizableString" sourceFile="PassThroughLocalizableString.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.l10n.PassThroughStringLocalizer" sourceFile="PassThroughStringLocalizer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.l10n.StringLocalizer" sourceFile="StringLocalizer.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.persistence" total_bugs="0" total_types="3" total_size="24">
+      <ClassStats class="org.openengsb.core.common.persistence.PersistenceException" sourceFile="PersistenceException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.persistence.PersistenceManager" sourceFile="PersistenceManager.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.persistence.PersistenceService" sourceFile="PersistenceService.java" interface="true" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.proxy" total_bugs="0" total_types="3" total_size="63">
+      <ClassStats class="org.openengsb.core.common.proxy.InvocationHandlerFactory" sourceFile="InvocationHandlerFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.proxy.ProxyConnector" sourceFile="ProxyConnector.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.proxy.ProxyServiceManager" sourceFile="ProxyServiceManager.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.service" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.openengsb.core.common.service.DomainService" sourceFile="DomainService.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.service.impl" total_bugs="0" total_types="1" total_size="56">
+      <ClassStats class="org.openengsb.core.common.service.impl.OsgiDomainService" sourceFile="OsgiDomainService.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.util" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="org.openengsb.core.common.util.AliveState" sourceFile="AliveState.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.validation" total_bugs="0" total_types="7" total_size="43">
+      <ClassStats class="org.openengsb.core.common.validation.AbstractValidator" sourceFile="AbstractValidator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.validation.FieldValidator" sourceFile="FieldValidator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.validation.FormValidator" sourceFile="FormValidator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.validation.MultipleAttributeValidationResult" sourceFile="MultipleAttributeValidationResult.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.validation.MultipleAttributeValidationResultImpl" sourceFile="MultipleAttributeValidationResultImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.validation.SingleAttributeValidationResult" sourceFile="SingleAttributeValidationResult.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.validation.ValidationResultImpl" sourceFile="ValidationResultImpl.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.wicket.inject" total_bugs="0" total_types="11" total_size="118">
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiAnnotationProxyFieldValueFactory" sourceFile="OsgiAnnotationProxyFieldValueFactory.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiAnnotationProxyFieldValueFactory$ProxyTargetLocator" sourceFile="OsgiAnnotationProxyFieldValueFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiAnnotationSpringInjector" sourceFile="OsgiAnnotationSpringInjector.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiBundleContextSpringBeanReceiver" sourceFile="OsgiBundleContextSpringBeanReceiver.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiSpringBean" sourceFile="OsgiSpringBean.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiSpringBeanReceiver" sourceFile="OsgiSpringBeanReceiver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiSpringBeanReceiverLocator" sourceFile="OsgiSpringBeanReceiverLocator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiSpringComponentInjector" sourceFile="OsgiSpringComponentInjector.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiSpringComponentInjector$1" sourceFile="OsgiSpringComponentInjector.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiSpringComponentInjector$SpringBeanReceiverHolder" sourceFile="OsgiSpringComponentInjector.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.wicket.inject.OsgiSpringComponentInjector$SpringBeanReceiverLocatorImpl" sourceFile="OsgiSpringComponentInjector.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.workflow" total_bugs="0" total_types="4" total_size="44">
+      <ClassStats class="org.openengsb.core.common.workflow.RuleBaseException" sourceFile="RuleBaseException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.workflow.RuleManager" sourceFile="RuleManager.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.workflow.WorkflowException" sourceFile="WorkflowException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.workflow.WorkflowService" sourceFile="WorkflowService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openengsb.core.common.workflow.model" total_bugs="0" total_types="3" total_size="102">
+      <ClassStats class="org.openengsb.core.common.workflow.model.RuleBaseElementId" sourceFile="RuleBaseElementId.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.workflow.model.RuleBaseElementType" sourceFile="RuleBaseElementType.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.openengsb.core.common.workflow.model.Value" sourceFile="Value.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="913" invocations="641" avgMicrosecondsPerInvocation="1424" maxMicrosecondsPerInvocation="118202" standardDeviationMircosecondsPerInvocation="6673"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="826" invocations="304" avgMicrosecondsPerInvocation="2719" maxMicrosecondsPerInvocation="67668" standardDeviationMircosecondsPerInvocation="6113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="685" invocations="311" avgMicrosecondsPerInvocation="2202" maxMicrosecondsPerInvocation="69501" standardDeviationMircosecondsPerInvocation="6630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="602" invocations="305" avgMicrosecondsPerInvocation="1976" maxMicrosecondsPerInvocation="48794" standardDeviationMircosecondsPerInvocation="4578"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="587" invocations="309" avgMicrosecondsPerInvocation="1900" maxMicrosecondsPerInvocation="48814" standardDeviationMircosecondsPerInvocation="4489"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="553" invocations="304" avgMicrosecondsPerInvocation="1822" maxMicrosecondsPerInvocation="27247" standardDeviationMircosecondsPerInvocation="3503"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="547" invocations="140" avgMicrosecondsPerInvocation="3912" maxMicrosecondsPerInvocation="96978" standardDeviationMircosecondsPerInvocation="11238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="458" invocations="140" avgMicrosecondsPerInvocation="3273" maxMicrosecondsPerInvocation="67604" standardDeviationMircosecondsPerInvocation="9163"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="407" invocations="305" avgMicrosecondsPerInvocation="1335" maxMicrosecondsPerInvocation="93798" standardDeviationMircosecondsPerInvocation="5700"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="394" invocations="204" avgMicrosecondsPerInvocation="1932" maxMicrosecondsPerInvocation="85612" standardDeviationMircosecondsPerInvocation="6427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="266" invocations="577" avgMicrosecondsPerInvocation="461" maxMicrosecondsPerInvocation="21418" standardDeviationMircosecondsPerInvocation="1550"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="247" invocations="140" avgMicrosecondsPerInvocation="1765" maxMicrosecondsPerInvocation="47827" standardDeviationMircosecondsPerInvocation="5225"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="221" invocations="570" avgMicrosecondsPerInvocation="388" maxMicrosecondsPerInvocation="90288" standardDeviationMircosecondsPerInvocation="3946"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="207" invocations="305" avgMicrosecondsPerInvocation="680" maxMicrosecondsPerInvocation="20559" standardDeviationMircosecondsPerInvocation="1736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="205" invocations="140" avgMicrosecondsPerInvocation="1465" maxMicrosecondsPerInvocation="34671" standardDeviationMircosecondsPerInvocation="4243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="183" invocations="3297" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="75741" standardDeviationMircosecondsPerInvocation="1367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="180" invocations="645" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="41501" standardDeviationMircosecondsPerInvocation="2199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="147" invocations="72" avgMicrosecondsPerInvocation="2044" maxMicrosecondsPerInvocation="106124" standardDeviationMircosecondsPerInvocation="12389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="141" invocations="385" avgMicrosecondsPerInvocation="368" maxMicrosecondsPerInvocation="82682" standardDeviationMircosecondsPerInvocation="4316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="137" invocations="190" avgMicrosecondsPerInvocation="721" maxMicrosecondsPerInvocation="48973" standardDeviationMircosecondsPerInvocation="3844"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="124" invocations="8344" avgMicrosecondsPerInvocation="14" maxMicrosecondsPerInvocation="12393" standardDeviationMircosecondsPerInvocation="173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="117" invocations="72" avgMicrosecondsPerInvocation="1634" maxMicrosecondsPerInvocation="42433" standardDeviationMircosecondsPerInvocation="5027"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="112" invocations="72" avgMicrosecondsPerInvocation="1565" maxMicrosecondsPerInvocation="16866" standardDeviationMircosecondsPerInvocation="2991"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="108" invocations="304" avgMicrosecondsPerInvocation="357" maxMicrosecondsPerInvocation="12303" standardDeviationMircosecondsPerInvocation="982"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="104" invocations="274" avgMicrosecondsPerInvocation="383" maxMicrosecondsPerInvocation="4692" standardDeviationMircosecondsPerInvocation="567"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="103" invocations="72" avgMicrosecondsPerInvocation="1438" maxMicrosecondsPerInvocation="40785" standardDeviationMircosecondsPerInvocation="4966"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

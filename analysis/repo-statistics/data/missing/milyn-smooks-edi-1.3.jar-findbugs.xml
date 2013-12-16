@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1267353574000" analysisTimestamp="1360508252560" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/milyn/milyn-smooks-edi/1.3/milyn-smooks-edi-1.3.jar</Jar>
+  </Project>
+  <BugInstance type="NP_NULL_PARAM_DEREF" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.milyn.smooks.edi.EDIReader">
+      <SourceLine classname="org.milyn.smooks.edi.EDIReader" start="58" end="181" sourcefile="EDIReader.java" sourcepath="org/milyn/smooks/edi/EDIReader.java"/>
+    </Class>
+    <Method classname="org.milyn.smooks.edi.EDIReader" name="getMappingModel" signature="()Lorg/milyn/edisax/model/EdifactModel;" isStatic="false">
+      <SourceLine classname="org.milyn.smooks.edi.EDIReader" start="128" end="161" startBytecode="0" endBytecode="727" sourcefile="EDIReader.java" sourcepath="org/milyn/smooks/edi/EDIReader.java"/>
+    </Method>
+    <Method classname="java.util.Hashtable" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Hashtable" start="393" end="422" startBytecode="0" endBytecode="266" sourcefile="Hashtable.java" sourcepath="java/util/Hashtable.java"/>
+    </Method>
+    <Int value="2" role="INT_MAYBE_NULL_ARG"/>
+    <LocalVariable name="edifactModel" register="1" pc="305" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.milyn.smooks.edi.EDIReader" start="154" end="154" startBytecode="306" endBytecode="306" sourcefile="EDIReader.java" sourcepath="org/milyn/smooks/edi/EDIReader.java" role="SOURCE_LINE_INVOKED"/>
+    <SourceLine classname="org.milyn.smooks.edi.EDIReader" start="142" end="142" startBytecode="81" endBytecode="81" sourcefile="EDIReader.java" sourcepath="org/milyn/smooks/edi/EDIReader.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.milyn.smooks.edi.EDIReader" start="143" end="143" startBytecode="84" endBytecode="84" sourcefile="EDIReader.java" sourcepath="org/milyn/smooks/edi/EDIReader.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="12">
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.milyn.GenericReaderConfigurator</MissingClass>
+    <MissingClass>org.milyn.assertion.AssertArgument</MissingClass>
+    <MissingClass>org.milyn.cdr.SmooksResourceConfiguration</MissingClass>
+    <MissingClass>org.milyn.container.ApplicationContext</MissingClass>
+    <MissingClass>org.milyn.edisax.EDIParser</MissingClass>
+    <MissingClass>org.milyn.edisax.model.EdifactModel</MissingClass>
+    <MissingClass>org.milyn.edisax.model.internal.Description</MissingClass>
+    <MissingClass>org.milyn.edisax.model.internal.Edimap</MissingClass>
+    <MissingClass>org.milyn.resource.ContainerResourceLocator</MissingClass>
+    <MissingClass>org.milyn.resource.URIResourceLocator</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 28 Feb 2010 12:39:34 +0200" total_classes="4" referenced_classes="26" total_bugs="1" total_size="82" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="10.17" clock_seconds="5.86" peak_mbytes="52.41" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="1">
+    <PackageStats package="org.milyn.smooks.edi" total_bugs="1" total_types="4" total_size="82" priority_2="1">
+      <ClassStats class="org.milyn.smooks.edi.EDIReader" sourceFile="EDIReader.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="org.milyn.smooks.edi.EDIReaderConfigurator" sourceFile="EDIReaderConfigurator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.milyn.smooks.edi.SmooksEDIParser" sourceFile="SmooksEDIParser.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.milyn.smooks.edi.SmooksEDIReader" sourceFile="SmooksEDIReader.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="677" invocations="360" avgMicrosecondsPerInvocation="1880" maxMicrosecondsPerInvocation="42000" standardDeviationMircosecondsPerInvocation="4685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="517" invocations="26" avgMicrosecondsPerInvocation="19900" maxMicrosecondsPerInvocation="102612" standardDeviationMircosecondsPerInvocation="30842"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="464" invocations="26" avgMicrosecondsPerInvocation="17850" maxMicrosecondsPerInvocation="118179" standardDeviationMircosecondsPerInvocation="29602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="269" invocations="168" avgMicrosecondsPerInvocation="1605" maxMicrosecondsPerInvocation="32809" standardDeviationMircosecondsPerInvocation="3713"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="212" invocations="26" avgMicrosecondsPerInvocation="8189" maxMicrosecondsPerInvocation="52698" standardDeviationMircosecondsPerInvocation="13560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="189" invocations="14" avgMicrosecondsPerInvocation="13519" maxMicrosecondsPerInvocation="118426" standardDeviationMircosecondsPerInvocation="31646"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="175" invocations="14" avgMicrosecondsPerInvocation="12556" maxMicrosecondsPerInvocation="73414" standardDeviationMircosecondsPerInvocation="22376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="157" invocations="301" avgMicrosecondsPerInvocation="522" maxMicrosecondsPerInvocation="46034" standardDeviationMircosecondsPerInvocation="3297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="140" invocations="26" avgMicrosecondsPerInvocation="5396" maxMicrosecondsPerInvocation="68395" standardDeviationMircosecondsPerInvocation="13116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="130" invocations="26" avgMicrosecondsPerInvocation="5036" maxMicrosecondsPerInvocation="61529" standardDeviationMircosecondsPerInvocation="12742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="108" invocations="26" avgMicrosecondsPerInvocation="4187" maxMicrosecondsPerInvocation="46130" standardDeviationMircosecondsPerInvocation="9452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="104" invocations="13" avgMicrosecondsPerInvocation="8070" maxMicrosecondsPerInvocation="90629" standardDeviationMircosecondsPerInvocation="23852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="103" invocations="13" avgMicrosecondsPerInvocation="7978" maxMicrosecondsPerInvocation="78434" standardDeviationMircosecondsPerInvocation="20531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="102" invocations="47" avgMicrosecondsPerInvocation="2190" maxMicrosecondsPerInvocation="34855" standardDeviationMircosecondsPerInvocation="6249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="102" invocations="13" avgMicrosecondsPerInvocation="7884" maxMicrosecondsPerInvocation="69754" standardDeviationMircosecondsPerInvocation="18366"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="96" invocations="4" avgMicrosecondsPerInvocation="24194" maxMicrosecondsPerInvocation="83512" standardDeviationMircosecondsPerInvocation="34655"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="94" invocations="364" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="15928" standardDeviationMircosecondsPerInvocation="1254"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

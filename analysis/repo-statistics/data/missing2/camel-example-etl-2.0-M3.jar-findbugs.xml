@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1248056324000" analysisTimestamp="1360931241551" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-example-etl/2.0-M3/camel-example-etl-2.0-M3.jar</Jar>
+  </Project>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" priority="1" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="org.apache.camel.example.etl.Main">
+      <SourceLine classname="org.apache.camel.example.etl.Main" start="24" end="27" sourcefile="Main.java" sourcepath="org/apache/camel/example/etl/Main.java"/>
+    </Class>
+    <Class classname="org.apache.camel.spring.Main">
+      <SourceLine classname="org.apache.camel.spring.Main"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.Message</MissingClass>
+    <MissingClass>org.apache.camel.language.juel.JuelExpression</MissingClass>
+    <MissingClass>org.apache.camel.model.ProcessorDefinition</MissingClass>
+    <MissingClass>org.apache.camel.model.RouteDefinition</MissingClass>
+    <MissingClass>org.apache.camel.spring.Main</MissingClass>
+    <MissingClass>org.apache.camel.spring.SpringRouteBuilder</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTemplate</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 20 Jul 2009 05:18:44 +0300" total_classes="5" referenced_classes="22" total_bugs="1" total_size="118" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="8.74" clock_seconds="4.76" peak_mbytes="51.01" alloc_mbytes="763.88" gc_seconds="0.07" priority_1="1">
+    <PackageStats package="org.apache.camel.example.etl" total_bugs="1" total_types="5" total_size="118" priority_1="1">
+      <ClassStats class="org.apache.camel.example.etl.CustomerEntity" sourceFile="CustomerEntity.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.camel.example.etl.CustomerTransformer" sourceFile="CustomerTransformer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.camel.example.etl.EtlRoutes" sourceFile="EtlRoutes.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.camel.example.etl.Main" sourceFile="Main.java" interface="false" size="6" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.camel.example.etl.PersonDocument" sourceFile="PersonDocument.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="589" invocations="321" avgMicrosecondsPerInvocation="1836" maxMicrosecondsPerInvocation="34130" standardDeviationMircosecondsPerInvocation="4705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="274" invocations="22" avgMicrosecondsPerInvocation="12487" maxMicrosecondsPerInvocation="136029" standardDeviationMircosecondsPerInvocation="31792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="197" invocations="22" avgMicrosecondsPerInvocation="8958" maxMicrosecondsPerInvocation="83444" standardDeviationMircosecondsPerInvocation="20781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="188" invocations="266" avgMicrosecondsPerInvocation="706" maxMicrosecondsPerInvocation="23086" standardDeviationMircosecondsPerInvocation="2168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="127" invocations="22" avgMicrosecondsPerInvocation="5774" maxMicrosecondsPerInvocation="33890" standardDeviationMircosecondsPerInvocation="9857"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="119" invocations="22" avgMicrosecondsPerInvocation="5432" maxMicrosecondsPerInvocation="77844" standardDeviationMircosecondsPerInvocation="16277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="93" invocations="36" avgMicrosecondsPerInvocation="2587" maxMicrosecondsPerInvocation="87609" standardDeviationMircosecondsPerInvocation="14373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="70" invocations="89" avgMicrosecondsPerInvocation="797" maxMicrosecondsPerInvocation="10873" standardDeviationMircosecondsPerInvocation="1533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="66" invocations="36" avgMicrosecondsPerInvocation="1843" maxMicrosecondsPerInvocation="41118" standardDeviationMircosecondsPerInvocation="6738"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="64" invocations="22" avgMicrosecondsPerInvocation="2917" maxMicrosecondsPerInvocation="35753" standardDeviationMircosecondsPerInvocation="7512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="56" invocations="22" avgMicrosecondsPerInvocation="2581" maxMicrosecondsPerInvocation="20823" standardDeviationMircosecondsPerInvocation="4892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="48" invocations="36" avgMicrosecondsPerInvocation="1340" maxMicrosecondsPerInvocation="10261" standardDeviationMircosecondsPerInvocation="2506"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="45" invocations="325" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="12691" standardDeviationMircosecondsPerInvocation="700"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="38" invocations="36" avgMicrosecondsPerInvocation="1081" maxMicrosecondsPerInvocation="15831" standardDeviationMircosecondsPerInvocation="2758"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="22" avgMicrosecondsPerInvocation="1763" maxMicrosecondsPerInvocation="9901" standardDeviationMircosecondsPerInvocation="2860"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="37" invocations="36" avgMicrosecondsPerInvocation="1033" maxMicrosecondsPerInvocation="15192" standardDeviationMircosecondsPerInvocation="2572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="36" invocations="36" avgMicrosecondsPerInvocation="1006" maxMicrosecondsPerInvocation="14661" standardDeviationMircosecondsPerInvocation="2474"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

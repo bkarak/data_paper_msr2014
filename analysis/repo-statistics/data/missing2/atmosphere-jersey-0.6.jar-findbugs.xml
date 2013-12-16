@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1277402423000" analysisTimestamp="1360915408408" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/atmosphere/atmosphere-jersey/0.6/atmosphere-jersey-0.6.jar</Jar>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.atmosphere.jersey.AtmosphereFilter$Filter">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="117" end="515" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Class>
+    <Method classname="org.atmosphere.jersey.AtmosphereFilter$Filter" name="broadcast" signature="(Lcom/sun/jersey/spi/container/ContainerResponse;Lorg/atmosphere/cpr/AtmosphereResource;J)V" isStatic="false">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="356" end="396" startBytecode="0" endBytecode="94" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Method>
+    <LocalVariable name="t" register="10" pc="135" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="381" end="381" startBytecode="133" endBytecode="133" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="t"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.atmosphere.jersey.AtmosphereFilter$Filter">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="117" end="515" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Class>
+    <Method classname="org.atmosphere.jersey.AtmosphereFilter$Filter" name="resume" signature="(Lorg/atmosphere/cpr/AtmosphereResource;)V" isStatic="false">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="403" end="406" startBytecode="0" endBytecode="8" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Method>
+    <LocalVariable name="a" register="2" pc="16" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="403" end="403" startBytecode="15" endBytecode="15" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="a"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DMI_RANDOM_USED_ONLY_ONCE" priority="1" abbrev="DMI" category="BAD_PRACTICE">
+    <Class classname="org.atmosphere.jersey.AtmosphereFilter$Filter">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="117" end="515" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Class>
+    <Method classname="org.atmosphere.jersey.AtmosphereFilter$Filter" name="suspend" signature="(ZZZJLcom/sun/jersey/spi/container/ContainerRequest;Lcom/sun/jersey/spi/container/ContainerResponse;Lorg/atmosphere/cpr/Broadcaster;Lorg/atmosphere/cpr/AtmosphereResource;)V" isStatic="false">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="421" end="515" startBytecode="0" endBytecode="1418" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Method>
+    <Method classname="java.util.Random" name="nextInt" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Random" start="189" end="189" startBytecode="0" endBytecode="30" sourcefile="Random.java" sourcepath="java/util/Random.java"/>
+    </Method>
+    <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="460" end="460" startBytecode="368" endBytecode="368" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOOLEAN_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.atmosphere.jersey.AtmosphereFilter$Filter">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="117" end="515" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Class>
+    <Method classname="org.atmosphere.jersey.AtmosphereFilter$Filter" name="configureResumeOnBroadcast" signature="(Lorg/atmosphere/cpr/Broadcaster;)V" isStatic="false">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="311" end="316" startBytecode="0" endBytecode="183" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Method>
+    <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="314" end="314" startBytecode="47" endBytecode="47" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOOLEAN_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.atmosphere.jersey.AtmosphereFilter$Filter">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="117" end="515" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Class>
+    <Method classname="org.atmosphere.jersey.AtmosphereFilter$Filter" name="suspend" signature="(ZZZJLcom/sun/jersey/spi/container/ContainerRequest;Lcom/sun/jersey/spi/container/ContainerResponse;Lorg/atmosphere/cpr/Broadcaster;Lorg/atmosphere/cpr/AtmosphereResource;)V" isStatic="false">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="421" end="515" startBytecode="0" endBytecode="1418" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Method>
+    <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="484" end="484" startBytecode="555" endBytecode="555" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.atmosphere.jersey.AtmosphereFilter$Filter">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="117" end="515" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Class>
+    <Method classname="org.atmosphere.jersey.AtmosphereFilter$Filter" name="filter" signature="(Lcom/sun/jersey/spi/container/ContainerRequest;Lcom/sun/jersey/spi/container/ContainerResponse;)Lcom/sun/jersey/spi/container/ContainerResponse;" isStatic="false">
+      <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="195" end="307" startBytecode="0" endBytecode="1629" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+    </Method>
+    <SourceLine classname="org.atmosphere.jersey.AtmosphereFilter$Filter" start="206" end="303" startBytecode="61" endBytecode="755" sourcefile="AtmosphereFilter.java" sourcepath="org/atmosphere/jersey/AtmosphereFilter.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="40">
+    <MissingClass>com.sun.jersey.api.JResponse</MissingClass>
+    <MissingClass>com.sun.jersey.api.JResponse$AJResponseBuilder</MissingClass>
+    <MissingClass>com.sun.jersey.api.JResponseAsResponse</MissingClass>
+    <MissingClass>com.sun.jersey.api.core.ResourceConfig</MissingClass>
+    <MissingClass>com.sun.jersey.api.model.AbstractMethod</MissingClass>
+    <MissingClass>com.sun.jersey.core.spi.component.ComponentScope</MissingClass>
+    <MissingClass>com.sun.jersey.spi.MessageBodyWorkers</MissingClass>
+    <MissingClass>com.sun.jersey.spi.StringReader</MissingClass>
+    <MissingClass>com.sun.jersey.spi.container.ContainerRequest</MissingClass>
+    <MissingClass>com.sun.jersey.spi.container.ContainerResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.ws.rs.WebApplicationException</MissingClass>
+    <MissingClass>javax.ws.rs.core.MediaType</MissingClass>
+    <MissingClass>javax.ws.rs.core.MultivaluedMap</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriInfo</MissingClass>
+    <MissingClass>org.atmosphere.annotation.Broadcast</MissingClass>
+    <MissingClass>org.atmosphere.annotation.Cluster</MissingClass>
+    <MissingClass>org.atmosphere.annotation.Resume</MissingClass>
+    <MissingClass>org.atmosphere.annotation.Schedule</MissingClass>
+    <MissingClass>org.atmosphere.annotation.Suspend</MissingClass>
+    <MissingClass>org.atmosphere.annotation.Suspend$SCOPE</MissingClass>
+    <MissingClass>org.atmosphere.cpr.AtmosphereEventLifecycle</MissingClass>
+    <MissingClass>org.atmosphere.cpr.AtmosphereResource</MissingClass>
+    <MissingClass>org.atmosphere.cpr.AtmosphereResourceEvent</MissingClass>
+    <MissingClass>org.atmosphere.cpr.AtmosphereResourceEventImpl</MissingClass>
+    <MissingClass>org.atmosphere.cpr.AtmosphereServlet</MissingClass>
+    <MissingClass>org.atmosphere.cpr.AtmosphereServlet$AtmosphereConfig</MissingClass>
+    <MissingClass>org.atmosphere.cpr.Broadcaster</MissingClass>
+    <MissingClass>org.atmosphere.cpr.Broadcaster$SCOPE</MissingClass>
+    <MissingClass>org.atmosphere.cpr.BroadcasterConfig</MissingClass>
+    <MissingClass>org.atmosphere.cpr.BroadcasterFactory</MissingClass>
+    <MissingClass>org.atmosphere.cpr.ClusterBroadcastFilter</MissingClass>
+    <MissingClass>org.atmosphere.cpr.DefaultBroadcaster</MissingClass>
+    <MissingClass>org.atmosphere.util.LoggerUtils</MissingClass>
+    <MissingClass>org.atmosphere.util.SimpleBroadcaster</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 24 Jun 2010 21:00:23 +0300" total_classes="21" referenced_classes="65" total_bugs="6" total_size="640" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="16.75" clock_seconds="11.04" peak_mbytes="65.61" alloc_mbytes="763.88" gc_seconds="0.16" priority_2="5" priority_1="1">
+    <PackageStats package="org.atmosphere.jersey" total_bugs="6" total_types="19" total_size="586" priority_2="5" priority_1="1">
+      <ClassStats class="org.atmosphere.jersey.AtmosphereFilter" sourceFile="AtmosphereFilter.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.AtmosphereFilter$1" sourceFile="AtmosphereFilter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.AtmosphereFilter$Action" sourceFile="AtmosphereFilter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.AtmosphereFilter$Filter" sourceFile="AtmosphereFilter.java" interface="false" size="237" bugs="6" priority_2="5" priority_1="1"/>
+      <ClassStats class="org.atmosphere.jersey.AtmosphereProviders" sourceFile="AtmosphereProviders.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.AtmosphereProviders$BroadcasterProvider" sourceFile="AtmosphereProviders.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.AtmosphereProviders$BroadcasterProvider$1" sourceFile="AtmosphereProviders.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.AtmosphereResourceConfigurator" sourceFile="AtmosphereResourceConfigurator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.AtmosphereResourceInjector" sourceFile="AtmosphereResourceInjector.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.AtmosphereResourceInjector$1" sourceFile="AtmosphereResourceInjector.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.Broadcastable" sourceFile="Broadcastable.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.BroadcasterFactoryInjector" sourceFile="BroadcasterFactoryInjector.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.BroadcasterFactoryInjector$1" sourceFile="BroadcasterFactoryInjector.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.BroadcasterInjector" sourceFile="BroadcasterInjector.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.BroadcasterInjector$1" sourceFile="BroadcasterInjector.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.JerseyBroadcaster" sourceFile="JerseyBroadcaster.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.SuspendResponse" sourceFile="SuspendResponse.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.SuspendResponse$SuspendResponseBuilder" sourceFile="SuspendResponse.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.SuspendResponse$TimeSpan" sourceFile="SuspendResponse.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.atmosphere.jersey.util" total_bugs="0" total_types="2" total_size="54">
+      <ClassStats class="org.atmosphere.jersey.util.JerseyBroadcasterUtil" sourceFile="JerseyBroadcasterUtil.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.atmosphere.jersey.util.JerseySimpleBroadcaster" sourceFile="JerseySimpleBroadcaster.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="735" invocations="491" avgMicrosecondsPerInvocation="1497" maxMicrosecondsPerInvocation="125223" standardDeviationMircosecondsPerInvocation="7418"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="583" invocations="93" avgMicrosecondsPerInvocation="6269" maxMicrosecondsPerInvocation="173318" standardDeviationMircosecondsPerInvocation="24496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="548" invocations="100" avgMicrosecondsPerInvocation="5480" maxMicrosecondsPerInvocation="93621" standardDeviationMircosecondsPerInvocation="15717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="537" invocations="100" avgMicrosecondsPerInvocation="5376" maxMicrosecondsPerInvocation="130414" standardDeviationMircosecondsPerInvocation="18071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="496" invocations="99" avgMicrosecondsPerInvocation="5016" maxMicrosecondsPerInvocation="114613" standardDeviationMircosecondsPerInvocation="15439"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="475" invocations="96" avgMicrosecondsPerInvocation="4949" maxMicrosecondsPerInvocation="88416" standardDeviationMircosecondsPerInvocation="14128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="334" invocations="65" avgMicrosecondsPerInvocation="5151" maxMicrosecondsPerInvocation="60418" standardDeviationMircosecondsPerInvocation="10915"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="334" invocations="99" avgMicrosecondsPerInvocation="3381" maxMicrosecondsPerInvocation="46384" standardDeviationMircosecondsPerInvocation="8804"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="303" invocations="65" avgMicrosecondsPerInvocation="4668" maxMicrosecondsPerInvocation="64425" standardDeviationMircosecondsPerInvocation="10363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="284" invocations="74" avgMicrosecondsPerInvocation="3850" maxMicrosecondsPerInvocation="108744" standardDeviationMircosecondsPerInvocation="13628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="284" invocations="99" avgMicrosecondsPerInvocation="2873" maxMicrosecondsPerInvocation="89336" standardDeviationMircosecondsPerInvocation="11193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="232" invocations="65" avgMicrosecondsPerInvocation="3581" maxMicrosecondsPerInvocation="56715" standardDeviationMircosecondsPerInvocation="8445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="160" invocations="99" avgMicrosecondsPerInvocation="1623" maxMicrosecondsPerInvocation="119886" standardDeviationMircosecondsPerInvocation="12145"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="146" invocations="21" avgMicrosecondsPerInvocation="6969" maxMicrosecondsPerInvocation="86282" standardDeviationMircosecondsPerInvocation="20099"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="145" invocations="21" avgMicrosecondsPerInvocation="6906" maxMicrosecondsPerInvocation="107558" standardDeviationMircosecondsPerInvocation="22920"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="139" invocations="111" avgMicrosecondsPerInvocation="1259" maxMicrosecondsPerInvocation="56379" standardDeviationMircosecondsPerInvocation="5891"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="126" invocations="21" avgMicrosecondsPerInvocation="6031" maxMicrosecondsPerInvocation="76179" standardDeviationMircosecondsPerInvocation="16498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="124" invocations="21" avgMicrosecondsPerInvocation="5923" maxMicrosecondsPerInvocation="87881" standardDeviationMircosecondsPerInvocation="18560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="118" invocations="86" avgMicrosecondsPerInvocation="1380" maxMicrosecondsPerInvocation="77193" standardDeviationMircosecondsPerInvocation="8292"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="116" invocations="2482" avgMicrosecondsPerInvocation="46" maxMicrosecondsPerInvocation="34388" standardDeviationMircosecondsPerInvocation="919"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="114" invocations="21" avgMicrosecondsPerInvocation="5473" maxMicrosecondsPerInvocation="93581" standardDeviationMircosecondsPerInvocation="19892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="109" invocations="238" avgMicrosecondsPerInvocation="460" maxMicrosecondsPerInvocation="3774" standardDeviationMircosecondsPerInvocation="629"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="104" invocations="65" avgMicrosecondsPerInvocation="1607" maxMicrosecondsPerInvocation="19033" standardDeviationMircosecondsPerInvocation="3623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="104" invocations="21" avgMicrosecondsPerInvocation="4969" maxMicrosecondsPerInvocation="33423" standardDeviationMircosecondsPerInvocation="8490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="95" invocations="65" avgMicrosecondsPerInvocation="1470" maxMicrosecondsPerInvocation="41598" standardDeviationMircosecondsPerInvocation="5293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="91" invocations="65" avgMicrosecondsPerInvocation="1415" maxMicrosecondsPerInvocation="36704" standardDeviationMircosecondsPerInvocation="4679"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="91" invocations="21" avgMicrosecondsPerInvocation="4370" maxMicrosecondsPerInvocation="89758" standardDeviationMircosecondsPerInvocation="19095"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

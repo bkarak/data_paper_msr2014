@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1259195269000" analysisTimestamp="1360903237277" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/fabric3/fabric3-maven-extension/1.3/fabric3-maven-extension-1.3.jar</Jar>
+  </Project>
+  <BugInstance type="DMI_COLLECTION_OF_URLS" priority="1" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.fabric3.runtime.maven.archive.Artifact">
+      <SourceLine classname="org.fabric3.runtime.maven.archive.Artifact" start="55" end="219" sourcefile="Artifact.java" sourcepath="org/fabric3/runtime/maven/archive/Artifact.java"/>
+    </Class>
+    <Method classname="org.fabric3.runtime.maven.archive.Artifact" name="getUrls" signature="()Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.fabric3.runtime.maven.archive.Artifact" start="94" end="101" startBytecode="0" endBytecode="169" sourcefile="Artifact.java" sourcepath="org/fabric3/runtime/maven/archive/Artifact.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DMI_COLLECTION_OF_URLS" priority="1" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.fabric3.runtime.maven.archive.Artifact">
+      <SourceLine classname="org.fabric3.runtime.maven.archive.Artifact" start="55" end="219" sourcefile="Artifact.java" sourcepath="org/fabric3/runtime/maven/archive/Artifact.java"/>
+    </Class>
+    <Method classname="org.fabric3.runtime.maven.archive.Artifact" name="getUrls" signature="()Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.fabric3.runtime.maven.archive.Artifact" start="94" end="101" startBytecode="0" endBytecode="169" sourcefile="Artifact.java" sourcepath="org/fabric3/runtime/maven/archive/Artifact.java"/>
+    </Method>
+    <Method classname="java.util.HashSet" name="add" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.HashSet" start="200" end="200" startBytecode="0" endBytecode="43" sourcefile="HashSet.java" sourcepath="java/util/HashSet.java"/>
+    </Method>
+    <SourceLine classname="org.fabric3.runtime.maven.archive.Artifact" start="97" end="97" startBytecode="42" endBytecode="42" sourcefile="Artifact.java" sourcepath="org/fabric3/runtime/maven/archive/Artifact.java"/>
+    <SourceLine classname="org.fabric3.runtime.maven.archive.Artifact" start="99" end="99" startBytecode="56" endBytecode="56" sourcefile="Artifact.java" sourcepath="org/fabric3/runtime/maven/archive/Artifact.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DMI_BLOCKING_METHODS_ON_URL" priority="1" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.fabric3.runtime.maven.contribution.CompositeQNameServiceImpl">
+      <SourceLine classname="org.fabric3.runtime.maven.contribution.CompositeQNameServiceImpl" start="71" end="134" sourcefile="CompositeQNameServiceImpl.java" sourcepath="org/fabric3/runtime/maven/contribution/CompositeQNameServiceImpl.java"/>
+    </Class>
+    <Method classname="org.fabric3.runtime.maven.contribution.CompositeQNameServiceImpl" name="getQName" signature="(Ljava/net/URI;Ljava/net/URL;)Ljavax/xml/namespace/QName;" isStatic="false">
+      <SourceLine classname="org.fabric3.runtime.maven.contribution.CompositeQNameServiceImpl" start="77" end="134" startBytecode="0" endBytecode="1047" sourcefile="CompositeQNameServiceImpl.java" sourcepath="org/fabric3/runtime/maven/contribution/CompositeQNameServiceImpl.java"/>
+    </Method>
+    <Method classname="java.net.URL" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.net.URL" start="838" end="842" startBytecode="0" endBytecode="59" sourcefile="URL.java" sourcepath="java/net/URL.java"/>
+    </Method>
+    <SourceLine classname="org.fabric3.runtime.maven.contribution.CompositeQNameServiceImpl" start="121" end="121" startBytecode="382" endBytecode="382" sourcefile="CompositeQNameServiceImpl.java" sourcepath="org/fabric3/runtime/maven/contribution/CompositeQNameServiceImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="52">
+    <MissingClass>org.apache.maven.artifact.Artifact</MissingClass>
+    <MissingClass>org.apache.maven.artifact.factory.ArtifactFactory</MissingClass>
+    <MissingClass>org.apache.maven.artifact.metadata.ArtifactMetadataSource</MissingClass>
+    <MissingClass>org.apache.maven.artifact.metadata.ResolutionGroup</MissingClass>
+    <MissingClass>org.apache.maven.artifact.repository.ArtifactRepositoryFactory</MissingClass>
+    <MissingClass>org.apache.maven.artifact.repository.ArtifactRepositoryPolicy</MissingClass>
+    <MissingClass>org.apache.maven.artifact.repository.layout.ArtifactRepositoryLayout</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.ArtifactResolutionResult</MissingClass>
+    <MissingClass>org.apache.maven.artifact.resolver.ArtifactResolver</MissingClass>
+    <MissingClass>org.apache.maven.settings.MavenSettingsBuilder</MissingClass>
+    <MissingClass>org.apache.maven.settings.Mirror</MissingClass>
+    <MissingClass>org.apache.maven.settings.Profile</MissingClass>
+    <MissingClass>org.apache.maven.settings.Repository</MissingClass>
+    <MissingClass>org.apache.maven.settings.Settings</MissingClass>
+    <MissingClass>org.apache.maven.surefire.report.PojoStackTraceWriter</MissingClass>
+    <MissingClass>org.apache.maven.surefire.report.ReportEntry</MissingClass>
+    <MissingClass>org.apache.maven.surefire.report.ReporterManager</MissingClass>
+    <MissingClass>org.apache.maven.surefire.testset.TestSetFailedException</MissingClass>
+    <MissingClass>org.codehaus.classworlds.ClassWorld</MissingClass>
+    <MissingClass>org.codehaus.plexus.embed.Embedder</MissingClass>
+    <MissingClass>org.fabric3.host.Fabric3RuntimeException</MissingClass>
+    <MissingClass>org.fabric3.host.contribution.ContributionNotFoundException</MissingClass>
+    <MissingClass>org.fabric3.host.contribution.InstallException</MissingClass>
+    <MissingClass>org.fabric3.host.contribution.ValidationFailure</MissingClass>
+    <MissingClass>org.fabric3.runtime.maven.InvalidResourceException</MissingClass>
+    <MissingClass>org.fabric3.runtime.maven.MavenHostInfo</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.ContentTypeResolver</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.Contribution</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.MetaDataStore</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.ProcessorRegistry</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.Resource</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.ResourceElement</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.Symbol</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.archive.Action</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.archive.ClasspathProcessorRegistry</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.manifest.QNameSymbol</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.DefaultIntrospectionContext</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.IntrospectionContext</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.xml.Loader</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.xml.LoaderException</MissingClass>
+    <MissingClass>org.fabric3.spi.invocation.CallFrame</MissingClass>
+    <MissingClass>org.fabric3.spi.invocation.Message</MissingClass>
+    <MissingClass>org.fabric3.spi.invocation.MessageImpl</MissingClass>
+    <MissingClass>org.fabric3.spi.invocation.WorkContext</MissingClass>
+    <MissingClass>org.fabric3.spi.model.physical.PhysicalOperationDefinition</MissingClass>
+    <MissingClass>org.fabric3.spi.repository.RepositoryException</MissingClass>
+    <MissingClass>org.fabric3.spi.wire.Interceptor</MissingClass>
+    <MissingClass>org.fabric3.spi.wire.InvocationChain</MissingClass>
+    <MissingClass>org.fabric3.spi.wire.Wire</MissingClass>
+    <MissingClass>org.fabric3.spi.xml.XMLFactory</MissingClass>
+    <MissingClass>org.fabric3.test.spi.TestWireHolder</MissingClass>
+    <MissingClass>org.fabric3.util.io.FileHelper</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 26 Nov 2009 02:27:49 +0200" total_classes="13" referenced_classes="59" total_bugs="3" total_size="530" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="16.61" clock_seconds="8.55" peak_mbytes="60.98" alloc_mbytes="763.88" gc_seconds="0.13" priority_1="3">
+    <PackageStats package="org.fabric3.runtime.maven.archive" total_bugs="2" total_types="4" total_size="262" priority_1="2">
+      <ClassStats class="org.fabric3.runtime.maven.archive.Artifact" sourceFile="Artifact.java" interface="false" size="54" bugs="2" priority_1="2"/>
+      <ClassStats class="org.fabric3.runtime.maven.archive.Fabric3DependencyException" sourceFile="Fabric3DependencyException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.fabric3.runtime.maven.archive.MavenHelper" sourceFile="MavenHelper.java" interface="false" size="158" bugs="0"/>
+      <ClassStats class="org.fabric3.runtime.maven.archive.MavenRepository" sourceFile="MavenRepository.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.runtime.maven.contribution" total_bugs="1" total_types="5" total_size="175" priority_1="1">
+      <ClassStats class="org.fabric3.runtime.maven.contribution.CompositeQNameServiceImpl" sourceFile="CompositeQNameServiceImpl.java" interface="false" size="53" bugs="1" priority_1="1"/>
+      <ClassStats class="org.fabric3.runtime.maven.contribution.ContributionIndexingFailure" sourceFile="ContributionIndexingFailure.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.fabric3.runtime.maven.contribution.ModuleClasspathProcessor" sourceFile="ModuleClasspathProcessor.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.fabric3.runtime.maven.contribution.ModuleContributionProcessor" sourceFile="ModuleContributionProcessor.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.fabric3.runtime.maven.contribution.ModuleContributionProcessor$1" sourceFile="ModuleContributionProcessor.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.runtime.maven.test" total_bugs="0" total_types="4" total_size="93">
+      <ClassStats class="org.fabric3.runtime.maven.test.SCATestSet" sourceFile="SCATestSet.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.fabric3.runtime.maven.test.SCATestSuite" sourceFile="SCATestSuite.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.fabric3.runtime.maven.test.TestSuiteFactoryImpl" sourceFile="TestSuiteFactoryImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.fabric3.runtime.maven.test.WireHolderImpl" sourceFile="WireHolderImpl.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="655" invocations="84" avgMicrosecondsPerInvocation="7801" maxMicrosecondsPerInvocation="164009" standardDeviationMircosecondsPerInvocation="25633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="605" invocations="534" avgMicrosecondsPerInvocation="1133" maxMicrosecondsPerInvocation="102742" standardDeviationMircosecondsPerInvocation="5615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="492" invocations="60" avgMicrosecondsPerInvocation="8204" maxMicrosecondsPerInvocation="153766" standardDeviationMircosecondsPerInvocation="24444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="454" invocations="59" avgMicrosecondsPerInvocation="7702" maxMicrosecondsPerInvocation="133478" standardDeviationMircosecondsPerInvocation="19347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="368" invocations="81" avgMicrosecondsPerInvocation="4549" maxMicrosecondsPerInvocation="59605" standardDeviationMircosecondsPerInvocation="10227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="359" invocations="85" avgMicrosecondsPerInvocation="4232" maxMicrosecondsPerInvocation="55568" standardDeviationMircosecondsPerInvocation="9430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="336" invocations="81" avgMicrosecondsPerInvocation="4156" maxMicrosecondsPerInvocation="116905" standardDeviationMircosecondsPerInvocation="14731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="328" invocations="59" avgMicrosecondsPerInvocation="5560" maxMicrosecondsPerInvocation="67607" standardDeviationMircosecondsPerInvocation="11182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="321" invocations="81" avgMicrosecondsPerInvocation="3964" maxMicrosecondsPerInvocation="40884" standardDeviationMircosecondsPerInvocation="7307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="308" invocations="81" avgMicrosecondsPerInvocation="3805" maxMicrosecondsPerInvocation="63149" standardDeviationMircosecondsPerInvocation="8281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="282" invocations="59" avgMicrosecondsPerInvocation="4795" maxMicrosecondsPerInvocation="94115" standardDeviationMircosecondsPerInvocation="13892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="266" invocations="417" avgMicrosecondsPerInvocation="638" maxMicrosecondsPerInvocation="56093" standardDeviationMircosecondsPerInvocation="4364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="263" invocations="294" avgMicrosecondsPerInvocation="894" maxMicrosecondsPerInvocation="53430" standardDeviationMircosecondsPerInvocation="3517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="202" invocations="59" avgMicrosecondsPerInvocation="3438" maxMicrosecondsPerInvocation="58107" standardDeviationMircosecondsPerInvocation="9663"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="155" invocations="109" avgMicrosecondsPerInvocation="1428" maxMicrosecondsPerInvocation="98719" standardDeviationMircosecondsPerInvocation="9501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="154" invocations="81" avgMicrosecondsPerInvocation="1907" maxMicrosecondsPerInvocation="23506" standardDeviationMircosecondsPerInvocation="4243"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

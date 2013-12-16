@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1190062243000" analysisTimestamp="1360510788364" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/enunciate/enunciate-xfire-tools/1.4/enunciate-xfire-tools-1.4.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo">
+      <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" start="347" end="376" sourcefile="EnunciatedJAXWSOperationBinding.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSOperationBinding.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" name="getPropertyOrder" signature="()[Ljava/beans/PropertyDescriptor;" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" start="376" end="376" startBytecode="0" endBytecode="46" sourcefile="EnunciatedJAXWSOperationBinding.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSOperationBinding.java"/>
+    </Method>
+    <Field classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" name="propertyOrder" signature="[Ljava/beans/PropertyDescriptor;" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" sourcefile="EnunciatedJAXWSOperationBinding.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSOperationBinding.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" start="376" end="376" startBytecode="4" endBytecode="4" sourcefile="EnunciatedJAXWSOperationBinding.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSOperationBinding.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo">
+      <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" start="347" end="376" sourcefile="EnunciatedJAXWSOperationBinding.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSOperationBinding.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" name="&lt;init&gt;" signature="(Ljava/lang/Class;[Ljava/beans/PropertyDescriptor;)V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" start="347" end="350" startBytecode="0" endBytecode="88" sourcefile="EnunciatedJAXWSOperationBinding.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSOperationBinding.java"/>
+    </Method>
+    <Field classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" name="propertyOrder" signature="[Ljava/beans/PropertyDescriptor;" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" sourcefile="EnunciatedJAXWSOperationBinding.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSOperationBinding.java"/>
+    </Field>
+    <LocalVariable name="properties" register="2" pc="11" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" start="349" end="349" startBytecode="11" endBytecode="11" sourcefile="EnunciatedJAXWSOperationBinding.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSOperationBinding.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSServiceFactory">
+      <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSServiceFactory" start="61" end="411" sourcefile="EnunciatedJAXWSServiceFactory.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSServiceFactory.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSServiceFactory" name="calculateNamespaceURI" signature="(Ljava/lang/Class;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSServiceFactory" start="401" end="411" startBytecode="0" endBytecode="239" sourcefile="EnunciatedJAXWSServiceFactory.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSServiceFactory.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSServiceFactory" start="407" end="407" startBytecode="59" endBytecode="59" sourcefile="EnunciatedJAXWSServiceFactory.java" sourcepath="org/codehaus/enunciate/modules/xfire/EnunciatedJAXWSServiceFactory.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="47">
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.aopalliance.aop.Advice</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.codehaus.enunciate.service.DefaultEnunciateServiceFactory</MissingClass>
+    <MissingClass>org.codehaus.enunciate.service.EnunciateServiceFactory</MissingClass>
+    <MissingClass>org.codehaus.xfire.MessageContext</MissingClass>
+    <MissingClass>org.codehaus.xfire.XFire</MissingClass>
+    <MissingClass>org.codehaus.xfire.XFireFactory</MissingClass>
+    <MissingClass>org.codehaus.xfire.XFireRuntimeException</MissingClass>
+    <MissingClass>org.codehaus.xfire.annotations.AnnotationException</MissingClass>
+    <MissingClass>org.codehaus.xfire.annotations.AnnotationServiceFactory</MissingClass>
+    <MissingClass>org.codehaus.xfire.annotations.WebAnnotations</MissingClass>
+    <MissingClass>org.codehaus.xfire.annotations.WebServiceAnnotation</MissingClass>
+    <MissingClass>org.codehaus.xfire.annotations.jsr181.Jsr181WebAnnotations</MissingClass>
+    <MissingClass>org.codehaus.xfire.exchange.AbstractMessage</MissingClass>
+    <MissingClass>org.codehaus.xfire.exchange.InMessage</MissingClass>
+    <MissingClass>org.codehaus.xfire.exchange.MessageExchange</MissingClass>
+    <MissingClass>org.codehaus.xfire.exchange.OutMessage</MissingClass>
+    <MissingClass>org.codehaus.xfire.fault.FaultSender</MissingClass>
+    <MissingClass>org.codehaus.xfire.fault.XFireFault</MissingClass>
+    <MissingClass>org.codehaus.xfire.handler.CustomFaultHandler</MissingClass>
+    <MissingClass>org.codehaus.xfire.handler.HandlerSupport</MissingClass>
+    <MissingClass>org.codehaus.xfire.handler.OutMessageSender</MissingClass>
+    <MissingClass>org.codehaus.xfire.jaxb2.AttachmentMarshaller</MissingClass>
+    <MissingClass>org.codehaus.xfire.jaxb2.AttachmentUnmarshaller</MissingClass>
+    <MissingClass>org.codehaus.xfire.service.MessageInfo</MissingClass>
+    <MissingClass>org.codehaus.xfire.service.OperationInfo</MissingClass>
+    <MissingClass>org.codehaus.xfire.service.Service</MissingClass>
+    <MissingClass>org.codehaus.xfire.service.ServiceFactory</MissingClass>
+    <MissingClass>org.codehaus.xfire.service.ServiceInfo</MissingClass>
+    <MissingClass>org.codehaus.xfire.service.binding.PostInvocationHandler</MissingClass>
+    <MissingClass>org.codehaus.xfire.service.binding.ServiceInvocationHandler</MissingClass>
+    <MissingClass>org.codehaus.xfire.spring.remoting.XFireExporter</MissingClass>
+    <MissingClass>org.codehaus.xfire.spring.remoting.XFireServletControllerAdapter</MissingClass>
+    <MissingClass>org.codehaus.xfire.util.ClassLoaderUtils</MissingClass>
+    <MissingClass>org.codehaus.xfire.util.STAXUtils</MissingClass>
+    <MissingClass>org.codehaus.xfire.util.stax.DepthXMLStreamReader</MissingClass>
+    <MissingClass>org.codehaus.xfire.util.stax.JDOMStreamWriter</MissingClass>
+    <MissingClass>org.springframework.aop.Advisor</MissingClass>
+    <MissingClass>org.springframework.aop.framework.ProxyFactory</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextException</MissingClass>
+    <MissingClass>org.springframework.context.support.ApplicationObjectSupport</MissingClass>
+    <MissingClass>org.springframework.core.Ordered</MissingClass>
+    <MissingClass>org.springframework.web.servlet.View</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 17 Sep 2007 23:50:43 +0300" total_classes="12" referenced_classes="70" total_bugs="3" total_size="636" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="18.26" clock_seconds="10.68" peak_mbytes="64.10" alloc_mbytes="763.88" gc_seconds="0.18" priority_2="3">
+    <PackageStats package="org.codehaus.enunciate.modules.xfire" total_bugs="3" total_types="12" total_size="636" priority_2="3">
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.EnunciateGlobalInterceptorProcessor" sourceFile="EnunciateGlobalInterceptorProcessor.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.EnunciateServiceAdvice" sourceFile="EnunciateServiceAdvice.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.EnunciateServiceAdvisor" sourceFile="EnunciateServiceAdvisor.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSMessageBinding" sourceFile="EnunciatedJAXWSMessageBinding.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding" sourceFile="EnunciatedJAXWSOperationBinding.java" interface="false" size="156" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSOperationBinding$OperationBeanInfo" sourceFile="EnunciatedJAXWSOperationBinding.java" interface="false" size="14" bugs="2" priority_2="2"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSServiceFactory" sourceFile="EnunciatedJAXWSServiceFactory.java" interface="false" size="161" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.EnunciatedJAXWSWebFaultHandler" sourceFile="EnunciatedJAXWSWebFaultHandler.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.EnunciatedXFireExporter" sourceFile="EnunciatedXFireExporter.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.EnunciatedXFireServletController" sourceFile="EnunciatedXFireServletController.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.HTTPRequestContext" sourceFile="HTTPRequestContext.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.xfire.HTTPRequestContextInterceptor" sourceFile="HTTPRequestContextInterceptor.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="937" invocations="533" avgMicrosecondsPerInvocation="1758" maxMicrosecondsPerInvocation="42351" standardDeviationMircosecondsPerInvocation="4740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="781" invocations="70" avgMicrosecondsPerInvocation="11165" maxMicrosecondsPerInvocation="102949" standardDeviationMircosecondsPerInvocation="23118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="604" invocations="70" avgMicrosecondsPerInvocation="8636" maxMicrosecondsPerInvocation="98791" standardDeviationMircosecondsPerInvocation="18513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="518" invocations="67" avgMicrosecondsPerInvocation="7742" maxMicrosecondsPerInvocation="102432" standardDeviationMircosecondsPerInvocation="15674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="456" invocations="67" avgMicrosecondsPerInvocation="6817" maxMicrosecondsPerInvocation="120920" standardDeviationMircosecondsPerInvocation="17222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="431" invocations="67" avgMicrosecondsPerInvocation="6445" maxMicrosecondsPerInvocation="48613" standardDeviationMircosecondsPerInvocation="10944"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="404" invocations="70" avgMicrosecondsPerInvocation="5780" maxMicrosecondsPerInvocation="111740" standardDeviationMircosecondsPerInvocation="14586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="333" invocations="71" avgMicrosecondsPerInvocation="4701" maxMicrosecondsPerInvocation="83384" standardDeviationMircosecondsPerInvocation="10961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="320" invocations="57" avgMicrosecondsPerInvocation="5628" maxMicrosecondsPerInvocation="152993" standardDeviationMircosecondsPerInvocation="20157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="318" invocations="198" avgMicrosecondsPerInvocation="1606" maxMicrosecondsPerInvocation="28838" standardDeviationMircosecondsPerInvocation="3445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="317" invocations="70" avgMicrosecondsPerInvocation="4533" maxMicrosecondsPerInvocation="46671" standardDeviationMircosecondsPerInvocation="9220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="224" invocations="67" avgMicrosecondsPerInvocation="3356" maxMicrosecondsPerInvocation="65966" standardDeviationMircosecondsPerInvocation="9289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="206" invocations="70" avgMicrosecondsPerInvocation="2945" maxMicrosecondsPerInvocation="32684" standardDeviationMircosecondsPerInvocation="5746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="201" invocations="433" avgMicrosecondsPerInvocation="466" maxMicrosecondsPerInvocation="30351" standardDeviationMircosecondsPerInvocation="2181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="194" invocations="70" avgMicrosecondsPerInvocation="2774" maxMicrosecondsPerInvocation="53814" standardDeviationMircosecondsPerInvocation="7745"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="162" invocations="127" avgMicrosecondsPerInvocation="1281" maxMicrosecondsPerInvocation="36028" standardDeviationMircosecondsPerInvocation="4712"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="155" invocations="70" avgMicrosecondsPerInvocation="2221" maxMicrosecondsPerInvocation="33034" standardDeviationMircosecondsPerInvocation="5740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="143" invocations="70" avgMicrosecondsPerInvocation="2046" maxMicrosecondsPerInvocation="29249" standardDeviationMircosecondsPerInvocation="4626"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="128" invocations="70" avgMicrosecondsPerInvocation="1832" maxMicrosecondsPerInvocation="53383" standardDeviationMircosecondsPerInvocation="7084"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="128" invocations="67" avgMicrosecondsPerInvocation="1910" maxMicrosecondsPerInvocation="52161" standardDeviationMircosecondsPerInvocation="6541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="117" invocations="12" avgMicrosecondsPerInvocation="9752" maxMicrosecondsPerInvocation="53251" standardDeviationMircosecondsPerInvocation="15935"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="111" invocations="12" avgMicrosecondsPerInvocation="9276" maxMicrosecondsPerInvocation="106014" standardDeviationMircosecondsPerInvocation="29196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="108" invocations="12" avgMicrosecondsPerInvocation="9048" maxMicrosecondsPerInvocation="85558" standardDeviationMircosecondsPerInvocation="23309"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

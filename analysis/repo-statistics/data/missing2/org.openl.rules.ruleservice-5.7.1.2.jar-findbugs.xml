@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1282039514000" analysisTimestamp="1360914652787" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/openl/rules/org.openl.rules.ruleservice/5.7.1.2/org.openl.rules.ruleservice-5.7.1.2.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.openl.rules.ruleservice.PeriodicalExecutor">
+      <SourceLine classname="org.openl.rules.ruleservice.PeriodicalExecutor" start="22" end="64" sourcefile="PeriodicalExecutor.java" sourcepath="org/openl/rules/ruleservice/PeriodicalExecutor.java"/>
+    </Class>
+    <Method classname="org.openl.rules.ruleservice.PeriodicalExecutor" name="signal" signature="()V" isStatic="false">
+      <SourceLine classname="org.openl.rules.ruleservice.PeriodicalExecutor" start="63" end="64" startBytecode="0" endBytecode="63" sourcefile="PeriodicalExecutor.java" sourcepath="org/openl/rules/ruleservice/PeriodicalExecutor.java"/>
+    </Method>
+    <Method classname="java.util.concurrent.BlockingQueue" name="offer" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.BlockingQueue" sourcefile="BlockingQueue.java" sourcepath="java/util/concurrent/BlockingQueue.java"/>
+    </Method>
+    <SourceLine classname="org.openl.rules.ruleservice.PeriodicalExecutor" start="63" end="63" startBytecode="11" endBytecode="11" sourcefile="PeriodicalExecutor.java" sourcepath="org/openl/rules/ruleservice/PeriodicalExecutor.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.openl.rules.ruleservice.loader.JcrRulesLoader">
+      <SourceLine classname="org.openl.rules.ruleservice.loader.JcrRulesLoader" start="24" end="206" sourcefile="JcrRulesLoader.java" sourcepath="org/openl/rules/ruleservice/loader/JcrRulesLoader.java"/>
+    </Class>
+    <Method classname="org.openl.rules.ruleservice.loader.JcrRulesLoader" name="getFolderToLoadDeploymentsIn" signature="()Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.openl.rules.ruleservice.loader.JcrRulesLoader" start="163" end="176" startBytecode="0" endBytecode="131" sourcefile="JcrRulesLoader.java" sourcepath="org/openl/rules/ruleservice/loader/JcrRulesLoader.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.openl.rules.ruleservice.loader.JcrRulesLoader" start="170" end="170" startBytecode="41" endBytecode="41" sourcefile="JcrRulesLoader.java" sourcepath="org/openl/rules/ruleservice/loader/JcrRulesLoader.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="22">
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.openl.CompiledOpenClass</MissingClass>
+    <MissingClass>org.openl.SmartProps</MissingClass>
+    <MissingClass>org.openl.main.OpenLWrapper</MissingClass>
+    <MissingClass>org.openl.rules.project.instantiation.ReloadType</MissingClass>
+    <MissingClass>org.openl.rules.project.instantiation.RulesInstantiationStrategy</MissingClass>
+    <MissingClass>org.openl.rules.project.instantiation.RulesInstantiationStrategyFactory</MissingClass>
+    <MissingClass>org.openl.rules.project.model.Module</MissingClass>
+    <MissingClass>org.openl.rules.project.model.ProjectDescriptor</MissingClass>
+    <MissingClass>org.openl.rules.project.resolving.RulesProjectResolver</MissingClass>
+    <MissingClass>org.openl.rules.repository.CommonVersion</MissingClass>
+    <MissingClass>org.openl.rules.repository.CommonVersionImpl</MissingClass>
+    <MissingClass>org.openl.rules.repository.exceptions.RRepositoryException</MissingClass>
+    <MissingClass>org.openl.rules.workspace.deploy.DeployID</MissingClass>
+    <MissingClass>org.openl.rules.workspace.lw.impl.FolderHelper</MissingClass>
+    <MissingClass>org.openl.rules.workspace.production.client.JcrRulesClient</MissingClass>
+    <MissingClass>org.openl.types.IOpenClass</MissingClass>
+    <MissingClass>org.openl.types.IOpenField</MissingClass>
+    <MissingClass>org.openl.types.IOpenMethod</MissingClass>
+    <MissingClass>org.openl.types.java.JavaOpenClass</MissingClass>
+    <MissingClass>org.openl.vm.SimpleVM</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 17 Aug 2010 13:05:14 +0300" total_classes="22" referenced_classes="51" total_bugs="2" total_size="488" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="11.79" clock_seconds="6.16" peak_mbytes="58.61" alloc_mbytes="763.88" gc_seconds="0.11" priority_2="2">
+    <PackageStats package="org.openl.rules.ruleservice" total_bugs="1" total_types="4" total_size="62" priority_2="1">
+      <ClassStats class="org.openl.rules.ruleservice.PeriodicalExecutor" sourceFile="PeriodicalExecutor.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.rules.ruleservice.PeriodicalExecutor$1" sourceFile="PeriodicalExecutor.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.RuleService" sourceFile="RuleService.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.RuleService$1" sourceFile="RuleService.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.rules.ruleservice.loader" total_bugs="1" total_types="8" total_size="223" priority_2="1">
+      <ClassStats class="org.openl.rules.ruleservice.loader.DeploymentInfo" sourceFile="DeploymentInfo.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.loader.DeploymentsToLoadManager" sourceFile="DeploymentsToLoadManager.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.loader.JcrRulesLoader" sourceFile="JcrRulesLoader.java" interface="false" size="110" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openl.rules.ruleservice.loader.JcrRulesLoader$1" sourceFile="JcrRulesLoader.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.loader.LatestDeploymentsToLoadManager" sourceFile="LatestDeploymentsToLoadManager.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.loader.LoadingEventObject" sourceFile="LoadingEventObject.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.loader.LoadingListener" sourceFile="LoadingListener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.loader.RulesLoader" sourceFile="RulesLoader.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.rules.ruleservice.publish" total_bugs="0" total_types="7" total_size="113">
+      <ClassStats class="org.openl.rules.ruleservice.publish.DeploymentAdmin" sourceFile="DeploymentAdmin.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.publish.DeploymentListener" sourceFile="DeploymentListener.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.publish.JavaClassDeploymentAdmin" sourceFile="JavaClassDeploymentAdmin.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.publish.RulesPublisher" sourceFile="RulesPublisher.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.publish.ServiceNameBuilder" sourceFile="ServiceNameBuilder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.publish.SimpleServiceNameBuilder" sourceFile="SimpleServiceNameBuilder.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.publish.VersionServiceNameBuilder" sourceFile="VersionServiceNameBuilder.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openl.rules.ruleservice.simple" total_bugs="0" total_types="3" total_size="90">
+      <ClassStats class="org.openl.rules.ruleservice.simple.RulesFrontend" sourceFile="RulesFrontend.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.simple.RulesFrontendImpl" sourceFile="RulesFrontendImpl.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.openl.rules.ruleservice.simple.RulesFrontendImpl$1" sourceFile="RulesFrontendImpl.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="461" invocations="392" avgMicrosecondsPerInvocation="1177" maxMicrosecondsPerInvocation="52193" standardDeviationMircosecondsPerInvocation="4709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="263" invocations="97" avgMicrosecondsPerInvocation="2719" maxMicrosecondsPerInvocation="31178" standardDeviationMircosecondsPerInvocation="4791"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="229" invocations="51" avgMicrosecondsPerInvocation="4490" maxMicrosecondsPerInvocation="46571" standardDeviationMircosecondsPerInvocation="9954"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="197" invocations="51" avgMicrosecondsPerInvocation="3871" maxMicrosecondsPerInvocation="65903" standardDeviationMircosecondsPerInvocation="10074"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="190" invocations="97" avgMicrosecondsPerInvocation="1967" maxMicrosecondsPerInvocation="16839" standardDeviationMircosecondsPerInvocation="2855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="186" invocations="97" avgMicrosecondsPerInvocation="1921" maxMicrosecondsPerInvocation="13635" standardDeviationMircosecondsPerInvocation="2393"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="186" invocations="98" avgMicrosecondsPerInvocation="1901" maxMicrosecondsPerInvocation="18341" standardDeviationMircosecondsPerInvocation="3138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="172" invocations="98" avgMicrosecondsPerInvocation="1763" maxMicrosecondsPerInvocation="14160" standardDeviationMircosecondsPerInvocation="2689"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="153" invocations="51" avgMicrosecondsPerInvocation="3018" maxMicrosecondsPerInvocation="106750" standardDeviationMircosecondsPerInvocation="14930"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="116" invocations="51" avgMicrosecondsPerInvocation="2293" maxMicrosecondsPerInvocation="31732" standardDeviationMircosecondsPerInvocation="5279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="115" invocations="75" avgMicrosecondsPerInvocation="1540" maxMicrosecondsPerInvocation="12839" standardDeviationMircosecondsPerInvocation="1976"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="105" invocations="97" avgMicrosecondsPerInvocation="1092" maxMicrosecondsPerInvocation="17611" standardDeviationMircosecondsPerInvocation="2129"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="101" invocations="395" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="48760" standardDeviationMircosecondsPerInvocation="2526"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="82" invocations="205" avgMicrosecondsPerInvocation="403" maxMicrosecondsPerInvocation="10641" standardDeviationMircosecondsPerInvocation="791"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="77" invocations="115" avgMicrosecondsPerInvocation="677" maxMicrosecondsPerInvocation="65520" standardDeviationMircosecondsPerInvocation="6074"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="77" invocations="329" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="12289" standardDeviationMircosecondsPerInvocation="935"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="71" invocations="97" avgMicrosecondsPerInvocation="736" maxMicrosecondsPerInvocation="5988" standardDeviationMircosecondsPerInvocation="924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="64" invocations="51" avgMicrosecondsPerInvocation="1272" maxMicrosecondsPerInvocation="29073" standardDeviationMircosecondsPerInvocation="4229"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="64" invocations="22" avgMicrosecondsPerInvocation="2927" maxMicrosecondsPerInvocation="45426" standardDeviationMircosecondsPerInvocation="9353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNonShortCircuit" totalMilliseconds="60" invocations="22" avgMicrosecondsPerInvocation="2743" maxMicrosecondsPerInvocation="49168" standardDeviationMircosecondsPerInvocation="10155"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="55" invocations="22" avgMicrosecondsPerInvocation="2510" maxMicrosecondsPerInvocation="33594" standardDeviationMircosecondsPerInvocation="6868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="52" invocations="93" avgMicrosecondsPerInvocation="563" maxMicrosecondsPerInvocation="6507" standardDeviationMircosecondsPerInvocation="821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="51" invocations="22" avgMicrosecondsPerInvocation="2332" maxMicrosecondsPerInvocation="33866" standardDeviationMircosecondsPerInvocation="6951"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="50" invocations="51" avgMicrosecondsPerInvocation="988" maxMicrosecondsPerInvocation="15207" standardDeviationMircosecondsPerInvocation="2354"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

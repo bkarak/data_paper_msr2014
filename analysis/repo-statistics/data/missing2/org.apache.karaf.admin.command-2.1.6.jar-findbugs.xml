@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1310657248000" analysisTimestamp="1360868839061" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/karaf/admin/org.apache.karaf.admin.command/2.1.6/org.apache.karaf.admin.command-2.1.6.jar</Jar>
+  </Project>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.apache.karaf.admin.command.ListCommand">
+      <SourceLine classname="org.apache.karaf.admin.command.ListCommand" start="27" end="67" sourcefile="ListCommand.java" sourcepath="org/apache/karaf/admin/command/ListCommand.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.admin.command.ListCommand" name="doExecute" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.karaf.admin.command.ListCommand" start="33" end="67" startBytecode="0" endBytecode="558" sourcefile="ListCommand.java" sourcepath="org/apache/karaf/admin/command/ListCommand.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.admin.command.ListCommand" start="50" end="50" startBytecode="150" endBytecode="150" sourcefile="ListCommand.java" sourcepath="org/apache/karaf/admin/command/ListCommand.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="org.apache.karaf.admin.main.Execute">
+      <SourceLine classname="org.apache.karaf.admin.main.Execute" start="39" end="126" sourcefile="Execute.java" sourcepath="org/apache/karaf/admin/main/Execute.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.admin.main.Execute" name="listCommands" signature="()V" isStatic="true">
+      <SourceLine classname="org.apache.karaf.admin.main.Execute" start="111" end="118" startBytecode="0" endBytecode="206" sourcefile="Execute.java" sourcepath="org/apache/karaf/admin/main/Execute.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="printf" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="821" end="821" startBytecode="0" endBytecode="30" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <String value="  %s - %s\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="org.apache.karaf.admin.main.Execute" start="114" end="114" startBytecode="87" endBytecode="87" sourcefile="Execute.java" sourcepath="org/apache/karaf/admin/main/Execute.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>org.apache.felix.gogo.commands.Command</MissingClass>
+    <MissingClass>org.apache.felix.gogo.commands.basic.DefaultActionPreparator</MissingClass>
+    <MissingClass>org.apache.karaf.admin.AdminService</MissingClass>
+    <MissingClass>org.apache.karaf.admin.Instance</MissingClass>
+    <MissingClass>org.apache.karaf.admin.InstanceSettings</MissingClass>
+    <MissingClass>org.apache.karaf.admin.internal.AdminServiceImpl</MissingClass>
+    <MissingClass>org.apache.karaf.shell.console.OsgiCommandSupport</MissingClass>
+    <MissingClass>org.apache.karaf.shell.console.completer.StringsCompleter</MissingClass>
+    <MissingClass>org.fusesource.jansi.AnsiConsole</MissingClass>
+    <MissingClass>org.osgi.service.command.CommandSession</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 14 Jul 2011 18:27:28 +0300" total_classes="10" referenced_classes="36" total_bugs="2" total_size="183" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="10.12" clock_seconds="9.63" peak_mbytes="54.73" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="2">
+    <PackageStats package="org.apache.karaf.admin.command" total_bugs="1" total_types="8" total_size="108" priority_2="1">
+      <ClassStats class="org.apache.karaf.admin.command.AdminCommandSupport" sourceFile="AdminCommandSupport.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.karaf.admin.command.ChangePortCommand" sourceFile="ChangePortCommand.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.karaf.admin.command.ConnectCommand" sourceFile="ConnectCommand.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.karaf.admin.command.CreateCommand" sourceFile="CreateCommand.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.karaf.admin.command.DestroyCommand" sourceFile="DestroyCommand.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.karaf.admin.command.ListCommand" sourceFile="ListCommand.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.karaf.admin.command.StartCommand" sourceFile="StartCommand.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.karaf.admin.command.StopCommand" sourceFile="StopCommand.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.karaf.admin.command.completers" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="org.apache.karaf.admin.command.completers.InstanceCompleter" sourceFile="InstanceCompleter.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.karaf.admin.main" total_bugs="1" total_types="1" total_size="63" priority_2="1">
+      <ClassStats class="org.apache.karaf.admin.main.Execute" sourceFile="Execute.java" interface="false" size="63" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1357" invocations="377" avgMicrosecondsPerInvocation="3600" maxMicrosecondsPerInvocation="113341" standardDeviationMircosecondsPerInvocation="12588"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="776" invocations="36" avgMicrosecondsPerInvocation="21578" maxMicrosecondsPerInvocation="289034" standardDeviationMircosecondsPerInvocation="57577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="495" invocations="36" avgMicrosecondsPerInvocation="13757" maxMicrosecondsPerInvocation="183723" standardDeviationMircosecondsPerInvocation="34940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="438" invocations="29" avgMicrosecondsPerInvocation="15106" maxMicrosecondsPerInvocation="345609" standardDeviationMircosecondsPerInvocation="62638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="375" invocations="174" avgMicrosecondsPerInvocation="2159" maxMicrosecondsPerInvocation="68898" standardDeviationMircosecondsPerInvocation="8477"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="369" invocations="36" avgMicrosecondsPerInvocation="10250" maxMicrosecondsPerInvocation="180169" standardDeviationMircosecondsPerInvocation="30864"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="266" invocations="381" avgMicrosecondsPerInvocation="700" maxMicrosecondsPerInvocation="132808" standardDeviationMircosecondsPerInvocation="7215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="264" invocations="36" avgMicrosecondsPerInvocation="7349" maxMicrosecondsPerInvocation="70502" standardDeviationMircosecondsPerInvocation="17244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="260" invocations="36" avgMicrosecondsPerInvocation="7229" maxMicrosecondsPerInvocation="65651" standardDeviationMircosecondsPerInvocation="17647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="256" invocations="27" avgMicrosecondsPerInvocation="9514" maxMicrosecondsPerInvocation="156655" standardDeviationMircosecondsPerInvocation="30024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="240" invocations="24" avgMicrosecondsPerInvocation="10002" maxMicrosecondsPerInvocation="165263" standardDeviationMircosecondsPerInvocation="33196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="238" invocations="27" avgMicrosecondsPerInvocation="8821" maxMicrosecondsPerInvocation="87302" standardDeviationMircosecondsPerInvocation="18663"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="225" invocations="27" avgMicrosecondsPerInvocation="8337" maxMicrosecondsPerInvocation="95838" standardDeviationMircosecondsPerInvocation="18835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="223" invocations="15" avgMicrosecondsPerInvocation="14923" maxMicrosecondsPerInvocation="222946" standardDeviationMircosecondsPerInvocation="55596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="217" invocations="27" avgMicrosecondsPerInvocation="8047" maxMicrosecondsPerInvocation="170281" standardDeviationMircosecondsPerInvocation="32525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="188" invocations="27" avgMicrosecondsPerInvocation="6978" maxMicrosecondsPerInvocation="68858" standardDeviationMircosecondsPerInvocation="14769"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

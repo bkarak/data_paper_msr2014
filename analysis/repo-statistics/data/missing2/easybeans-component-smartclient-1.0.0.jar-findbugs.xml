@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1210094258000" analysisTimestamp="1360916613696" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/easybeans/easybeans-component-smartclient/1.0.0/easybeans-component-smartclient-1.0.0.jar</Jar>
+  </Project>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="55" end="477" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" name="findResource" signature="(Ljava/lang/String;)Ljava/net/URL;" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="369" end="444" startBytecode="0" endBytecode="899" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="437" end="437" startBytecode="395" endBytecode="395" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="55" end="477" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" name="findResource" signature="(Ljava/lang/String;)Ljava/net/URL;" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="369" end="444" startBytecode="0" endBytecode="899" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdir" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1153" end="1157" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="406" end="406" startBytecode="199" endBytecode="199" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="422" end="422" startBytecode="310" endBytecode="310" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="55" end="477" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" name="getProviderURL" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="300" end="327" startBytecode="0" endBytecode="318" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Method>
+    <Field classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" name="timeToDownload" signature="J" isStatic="true">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="312" end="312" startBytecode="45" endBytecode="45" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.ow2.easybeans.component.smartclient.message.AbsMessage">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsMessage" start="43" end="128" sourcefile="AbsMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsMessage.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.message.AbsMessage" name="encode" signature="(Ljava/lang/String;)Ljava/nio/ByteBuffer;" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsMessage" start="100" end="109" startBytecode="0" endBytecode="148" sourcefile="AbsMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsMessage.java"/>
+    </Method>
+    <LocalVariable name="bytes" register="2" pc="9" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsMessage" start="107" end="107" startBytecode="18" endBytecode="18" sourcefile="AbsMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsMessage.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsMessage" start="100" end="100" startBytecode="0" endBytecode="0" sourcefile="AbsMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsMessage.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsMessage" start="103" end="103" startBytecode="12" endBytecode="12" sourcefile="AbsMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsMessage.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsMessage" start="105" end="105" startBytecode="14" endBytecode="14" sourcefile="AbsMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsMessage.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" start="39" end="132" sourcefile="AbsNameBytesMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsNameBytesMessage.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" name="getBytes" signature="()[B" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" start="132" end="132" startBytecode="0" endBytecode="46" sourcefile="AbsNameBytesMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsNameBytesMessage.java"/>
+    </Method>
+    <Field classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" name="bytes" signature="[B" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" sourcefile="AbsNameBytesMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsNameBytesMessage.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" start="132" end="132" startBytecode="4" endBytecode="4" sourcefile="AbsNameBytesMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsNameBytesMessage.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" start="39" end="132" sourcefile="AbsNameBytesMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsNameBytesMessage.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" name="&lt;init&gt;" signature="(Ljava/lang/String;[B)V" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" start="52" end="55" startBytecode="0" endBytecode="106" sourcefile="AbsNameBytesMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsNameBytesMessage.java"/>
+    </Method>
+    <Field classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" name="bytes" signature="[B" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" sourcefile="AbsNameBytesMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsNameBytesMessage.java"/>
+    </Field>
+    <LocalVariable name="bytes" register="2" pc="21" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" start="54" end="54" startBytecode="21" endBytecode="21" sourcefile="AbsNameBytesMessage.java" sourcepath="org/ow2/easybeans/component/smartclient/message/AbsNameBytesMessage.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap" start="59" end="252" sourcefile="SmartBootstrap.java" sourcepath="org/ow2/easybeans/component/smartclient/spi/SmartBootstrap.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap" name="analyzeArgs" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap" start="180" end="212" startBytecode="0" endBytecode="377" sourcefile="SmartBootstrap.java" sourcepath="org/ow2/easybeans/component/smartclient/spi/SmartBootstrap.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap" start="201" end="201" startBytecode="140" endBytecode="140" sourcefile="SmartBootstrap.java" sourcepath="org/ow2/easybeans/component/smartclient/spi/SmartBootstrap.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap" start="59" end="252" sourcefile="SmartBootstrap.java" sourcepath="org/ow2/easybeans/component/smartclient/spi/SmartBootstrap.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap" name="start" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap" start="117" end="173" startBytecode="0" endBytecode="772" sourcefile="SmartBootstrap.java" sourcepath="org/ow2/easybeans/component/smartclient/spi/SmartBootstrap.java"/>
+    </Method>
+    <Class classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="55" end="477" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap" start="134" end="134" startBytecode="68" endBytecode="68" sourcefile="SmartBootstrap.java" sourcepath="org/ow2/easybeans/component/smartclient/spi/SmartBootstrap.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.ow2.easybeans.component.smartclient.spi.SmartContextFactory">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.spi.SmartContextFactory" start="54" end="313" sourcefile="SmartContextFactory.java" sourcepath="org/ow2/easybeans/component/smartclient/spi/SmartContextFactory.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.spi.SmartContextFactory" name="checkInit" signature="(Ljava/util/Hashtable;)Lorg/ow2/easybeans/component/smartclient/spi/SmartContextFactoryInfo;" isStatic="true">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.spi.SmartContextFactory" start="171" end="237" startBytecode="0" endBytecode="580" sourcefile="SmartContextFactory.java" sourcepath="org/ow2/easybeans/component/smartclient/spi/SmartContextFactory.java"/>
+    </Method>
+    <Class classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="55" end="477" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.spi.SmartContextFactory" start="209" end="209" startBytecode="151" endBytecode="151" sourcefile="SmartContextFactory.java" sourcepath="org/ow2/easybeans/component/smartclient/spi/SmartContextFactory.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 6 May 2008 20:17:38 +0300" total_classes="21" referenced_classes="157" total_bugs="9" total_size="878" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="21.43" clock_seconds="12.82" peak_mbytes="71.58" alloc_mbytes="763.88" gc_seconds="0.21" priority_2="9">
+    <PackageStats package="org.ow2.easybeans.component.smartclient.api" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="org.ow2.easybeans.component.smartclient.api.Message" sourceFile="Message.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.api.ProtocolConstants" sourceFile="ProtocolConstants.java" interface="true" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.easybeans.component.smartclient.client" total_bugs="3" total_types="2" total_size="202" priority_2="3">
+      <ClassStats class="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" sourceFile="AskingClassLoader.java" interface="false" size="195" bugs="3" priority_2="3"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.client.AskingClassLoader$ShutdownHook" sourceFile="AskingClassLoader.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.easybeans.component.smartclient.message" total_bugs="3" total_types="12" total_size="186" priority_2="3">
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.AbsMessage" sourceFile="AbsMessage.java" interface="false" size="38" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" sourceFile="AbsNameBytesMessage.java" interface="false" size="37" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.AbsNameMessage" sourceFile="AbsNameMessage.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ChannelAttachment" sourceFile="ChannelAttachment.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ClassAnswer" sourceFile="ClassAnswer.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ClassNotFound" sourceFile="ClassNotFound.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ClassRequest" sourceFile="ClassRequest.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ProviderURLAnswer" sourceFile="ProviderURLAnswer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ProviderURLRequest" sourceFile="ProviderURLRequest.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ResourceAnswer" sourceFile="ResourceAnswer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ResourceNotFound" sourceFile="ResourceNotFound.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ResourceRequest" sourceFile="ResourceRequest.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.easybeans.component.smartclient.spi" total_bugs="3" total_types="5" total_size="474" priority_2="3">
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.ProDelegate" sourceFile="ProDelegate.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap" sourceFile="SmartBootstrap.java" interface="false" size="101" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.SmartContext" sourceFile="SmartContext.java" interface="false" size="175" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.SmartContextFactory" sourceFile="SmartContextFactory.java" interface="false" size="102" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.SmartContextFactoryInfo" sourceFile="SmartContextFactoryInfo.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1234" invocations="157" avgMicrosecondsPerInvocation="7860" maxMicrosecondsPerInvocation="115419" standardDeviationMircosecondsPerInvocation="15432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1120" invocations="157" avgMicrosecondsPerInvocation="7137" maxMicrosecondsPerInvocation="91904" standardDeviationMircosecondsPerInvocation="13837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1045" invocations="681" avgMicrosecondsPerInvocation="1535" maxMicrosecondsPerInvocation="58685" standardDeviationMircosecondsPerInvocation="4497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="591" invocations="157" avgMicrosecondsPerInvocation="3767" maxMicrosecondsPerInvocation="46791" standardDeviationMircosecondsPerInvocation="7436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="505" invocations="131" avgMicrosecondsPerInvocation="3861" maxMicrosecondsPerInvocation="44533" standardDeviationMircosecondsPerInvocation="7165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="498" invocations="428" avgMicrosecondsPerInvocation="1164" maxMicrosecondsPerInvocation="38220" standardDeviationMircosecondsPerInvocation="3154"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="403" invocations="123" avgMicrosecondsPerInvocation="3279" maxMicrosecondsPerInvocation="45485" standardDeviationMircosecondsPerInvocation="6744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="393" invocations="123" avgMicrosecondsPerInvocation="3199" maxMicrosecondsPerInvocation="32353" standardDeviationMircosecondsPerInvocation="5827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="363" invocations="123" avgMicrosecondsPerInvocation="2952" maxMicrosecondsPerInvocation="30157" standardDeviationMircosecondsPerInvocation="4791"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="345" invocations="131" avgMicrosecondsPerInvocation="2637" maxMicrosecondsPerInvocation="55508" standardDeviationMircosecondsPerInvocation="5978"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="334" invocations="157" avgMicrosecondsPerInvocation="2133" maxMicrosecondsPerInvocation="52956" standardDeviationMircosecondsPerInvocation="5737"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="311" invocations="123" avgMicrosecondsPerInvocation="2536" maxMicrosecondsPerInvocation="35623" standardDeviationMircosecondsPerInvocation="5513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="288" invocations="157" avgMicrosecondsPerInvocation="1839" maxMicrosecondsPerInvocation="38767" standardDeviationMircosecondsPerInvocation="5361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="243" invocations="633" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="33405" standardDeviationMircosecondsPerInvocation="2164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="214" invocations="187" avgMicrosecondsPerInvocation="1144" maxMicrosecondsPerInvocation="16312" standardDeviationMircosecondsPerInvocation="2974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="204" invocations="157" avgMicrosecondsPerInvocation="1300" maxMicrosecondsPerInvocation="21871" standardDeviationMircosecondsPerInvocation="3215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="176" invocations="157" avgMicrosecondsPerInvocation="1125" maxMicrosecondsPerInvocation="22239" standardDeviationMircosecondsPerInvocation="2525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="171" invocations="99" avgMicrosecondsPerInvocation="1736" maxMicrosecondsPerInvocation="31933" standardDeviationMircosecondsPerInvocation="3974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="149" invocations="157" avgMicrosecondsPerInvocation="954" maxMicrosecondsPerInvocation="29150" standardDeviationMircosecondsPerInvocation="3059"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

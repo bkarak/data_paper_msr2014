@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1299510025000" analysisTimestamp="1360917794175" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/easybeans/easybeans-component-jca-workmanager/1.2.0-M4/easybeans-component-jca-workmanager-1.2.0-M4.jar</Jar>
+  </Project>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent">
+      <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" start="78" end="560" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java"/>
+    </Class>
+    <Field classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" name="stopped" signature="Z" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java"/>
+    </Field>
+    <Int value="50" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" start="467" end="467" startBytecode="37" endBytecode="37" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" start="498" end="498" startBytecode="2" endBytecode="2" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent">
+      <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" start="78" end="560" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" start="139" end="142" startBytecode="0" endBytecode="134" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java"/>
+    </Method>
+    <Field classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" name="poolnumber" signature="I" isStatic="true">
+      <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" start="141" end="141" startBytecode="53" endBytecode="53" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent">
+      <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" start="78" end="560" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" name="start" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" start="519" end="534" startBytecode="0" endBytecode="235" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java"/>
+    </Method>
+    <Field classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" name="threadnumber" signature="I" isStatic="true">
+      <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" start="528" end="528" startBytecode="62" endBytecode="62" sourcefile="ResourceWorkManagerComponent.java" sourcepath="org/ow2/easybeans/component/jca/workmanager/ResourceWorkManagerComponent.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>javax.resource.spi.work.ExecutionContext</MissingClass>
+    <MissingClass>javax.resource.spi.work.Work</MissingClass>
+    <MissingClass>javax.resource.spi.work.WorkCompletedException</MissingClass>
+    <MissingClass>javax.resource.spi.work.WorkEvent</MissingClass>
+    <MissingClass>javax.resource.spi.work.WorkException</MissingClass>
+    <MissingClass>javax.resource.spi.work.WorkListener</MissingClass>
+    <MissingClass>javax.resource.spi.work.WorkRejectedException</MissingClass>
+    <MissingClass>org.ow2.easybeans.component.itf.TMComponent</MissingClass>
+    <MissingClass>org.ow2.util.log.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 7 Mar 2011 17:00:25 +0200" total_classes="4" referenced_classes="49" total_bugs="3" total_size="266" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="15.10" clock_seconds="12.32" peak_mbytes="56.28" alloc_mbytes="763.88" gc_seconds="0.13" priority_2="3">
+    <PackageStats package="org.ow2.easybeans.component.jca.workmanager" total_bugs="3" total_types="4" total_size="266" priority_2="3">
+      <ClassStats class="org.ow2.easybeans.component.jca.workmanager.ResourceWork" sourceFile="ResourceWork.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerComponent" sourceFile="ResourceWorkManagerComponent.java" interface="false" size="196" bugs="3" priority_2="3"/>
+      <ClassStats class="org.ow2.easybeans.component.jca.workmanager.ResourceWorkManagerStoppedException" sourceFile="ResourceWorkManagerStoppedException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.jca.workmanager.ResourceWorkThread" sourceFile="ResourceWorkThread.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1211" invocations="442" avgMicrosecondsPerInvocation="2739" maxMicrosecondsPerInvocation="65409" standardDeviationMircosecondsPerInvocation="6730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1060" invocations="49" avgMicrosecondsPerInvocation="21651" maxMicrosecondsPerInvocation="187154" standardDeviationMircosecondsPerInvocation="37839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1013" invocations="49" avgMicrosecondsPerInvocation="20677" maxMicrosecondsPerInvocation="105360" standardDeviationMircosecondsPerInvocation="28951"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="626" invocations="49" avgMicrosecondsPerInvocation="12787" maxMicrosecondsPerInvocation="148840" standardDeviationMircosecondsPerInvocation="27718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="558" invocations="39" avgMicrosecondsPerInvocation="14321" maxMicrosecondsPerInvocation="191531" standardDeviationMircosecondsPerInvocation="37502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="448" invocations="38" avgMicrosecondsPerInvocation="11796" maxMicrosecondsPerInvocation="114131" standardDeviationMircosecondsPerInvocation="25169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="354" invocations="49" avgMicrosecondsPerInvocation="7236" maxMicrosecondsPerInvocation="204359" standardDeviationMircosecondsPerInvocation="28961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="329" invocations="38" avgMicrosecondsPerInvocation="8670" maxMicrosecondsPerInvocation="88875" standardDeviationMircosecondsPerInvocation="19598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="315" invocations="49" avgMicrosecondsPerInvocation="6444" maxMicrosecondsPerInvocation="90654" standardDeviationMircosecondsPerInvocation="15443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="308" invocations="170" avgMicrosecondsPerInvocation="1811" maxMicrosecondsPerInvocation="30416" standardDeviationMircosecondsPerInvocation="3425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="293" invocations="49" avgMicrosecondsPerInvocation="5996" maxMicrosecondsPerInvocation="116490" standardDeviationMircosecondsPerInvocation="17274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="269" invocations="66" avgMicrosecondsPerInvocation="4082" maxMicrosecondsPerInvocation="77847" standardDeviationMircosecondsPerInvocation="11871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="257" invocations="49" avgMicrosecondsPerInvocation="5252" maxMicrosecondsPerInvocation="78030" standardDeviationMircosecondsPerInvocation="15089"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="254" invocations="21" avgMicrosecondsPerInvocation="12125" maxMicrosecondsPerInvocation="83346" standardDeviationMircosecondsPerInvocation="21290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="231" invocations="38" avgMicrosecondsPerInvocation="6079" maxMicrosecondsPerInvocation="69281" standardDeviationMircosecondsPerInvocation="13304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="221" invocations="38" avgMicrosecondsPerInvocation="5827" maxMicrosecondsPerInvocation="45711" standardDeviationMircosecondsPerInvocation="10651"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="194" invocations="387" avgMicrosecondsPerInvocation="502" maxMicrosecondsPerInvocation="26213" standardDeviationMircosecondsPerInvocation="2155"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1308672356000" analysisTimestamp="1360903069435" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/tools/maven/maven-wsgen-plugin/5.3.0-M3/maven-wsgen-plugin-5.3.0-M3.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.tool.maven.wsgen.plugin.WsGenMojo">
+      <SourceLine classname="org.ow2.jonas.tool.maven.wsgen.plugin.WsGenMojo" start="43" end="127" sourcefile="WsGenMojo.java" sourcepath="org/ow2/jonas/tool/maven/wsgen/plugin/WsGenMojo.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.tool.maven.wsgen.plugin.WsGenMojo" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.tool.maven.wsgen.plugin.WsGenMojo" start="85" end="127" startBytecode="0" endBytecode="452" sourcefile="WsGenMojo.java" sourcepath="org/ow2/jonas/tool/maven/wsgen/plugin/WsGenMojo.java"/>
+    </Method>
+    <Method classname="java.io.File" name="renameTo" signature="(Ljava/io/File;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1223" end="1228" startBytecode="0" endBytecode="72" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.tool.maven.wsgen.plugin.WsGenMojo" start="117" end="117" startBytecode="186" endBytecode="186" sourcefile="WsGenMojo.java" sourcepath="org/ow2/jonas/tool/maven/wsgen/plugin/WsGenMojo.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="8">
+    <MissingClass>org.apache.maven.artifact.Artifact</MissingClass>
+    <MissingClass>org.apache.maven.artifact.handler.ArtifactHandler</MissingClass>
+    <MissingClass>org.apache.maven.plugin.AbstractMojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProjectHelper</MissingClass>
+    <MissingClass>org.ow2.jonas.generators.wsgen.WsGen</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 21 Jun 2011 19:05:56 +0300" total_classes="1" referenced_classes="7" total_bugs="1" total_size="30" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="6.67" clock_seconds="3.55" peak_mbytes="49.40" alloc_mbytes="763.88" gc_seconds="0.05" priority_2="1">
+    <PackageStats package="org.ow2.jonas.tool.maven.wsgen.plugin" total_bugs="1" total_types="1" total_size="30" priority_2="1">
+      <ClassStats class="org.ow2.jonas.tool.maven.wsgen.plugin.WsGenMojo" sourceFile="WsGenMojo.java" interface="false" size="30" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="758" invocations="246" avgMicrosecondsPerInvocation="3081" maxMicrosecondsPerInvocation="99464" standardDeviationMircosecondsPerInvocation="10176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="191" invocations="201" avgMicrosecondsPerInvocation="951" maxMicrosecondsPerInvocation="68036" standardDeviationMircosecondsPerInvocation="5003"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="80" invocations="7" avgMicrosecondsPerInvocation="11512" maxMicrosecondsPerInvocation="47593" standardDeviationMircosecondsPerInvocation="16159"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="75" invocations="7" avgMicrosecondsPerInvocation="10761" maxMicrosecondsPerInvocation="39628" standardDeviationMircosecondsPerInvocation="14152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="55" invocations="2" avgMicrosecondsPerInvocation="27524" maxMicrosecondsPerInvocation="53080" standardDeviationMircosecondsPerInvocation="25556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="51" invocations="1" avgMicrosecondsPerInvocation="51574" maxMicrosecondsPerInvocation="51574" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="51" invocations="7" avgMicrosecondsPerInvocation="7326" maxMicrosecondsPerInvocation="23127" standardDeviationMircosecondsPerInvocation="8378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="31" invocations="7" avgMicrosecondsPerInvocation="4553" maxMicrosecondsPerInvocation="19801" standardDeviationMircosecondsPerInvocation="6687"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="30" invocations="7" avgMicrosecondsPerInvocation="4323" maxMicrosecondsPerInvocation="14849" standardDeviationMircosecondsPerInvocation="5297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="19" avgMicrosecondsPerInvocation="1578" maxMicrosecondsPerInvocation="15299" standardDeviationMircosecondsPerInvocation="3526"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="26" invocations="2" avgMicrosecondsPerInvocation="13408" maxMicrosecondsPerInvocation="26373" standardDeviationMircosecondsPerInvocation="12965"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="25" invocations="2" avgMicrosecondsPerInvocation="12948" maxMicrosecondsPerInvocation="15727" standardDeviationMircosecondsPerInvocation="2779"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

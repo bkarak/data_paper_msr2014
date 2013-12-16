@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1238500732000" analysisTimestamp="1360502965389" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/milyn/milyn-commons/1.1.2/milyn-commons-1.1.2.jar</Jar>
+  </Project>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.milyn.classpath.Scanner">
+      <SourceLine classname="org.milyn.classpath.Scanner" start="40" end="124" sourcefile="Scanner.java" sourcepath="org/milyn/classpath/Scanner.java"/>
+    </Class>
+    <Method classname="org.milyn.classpath.Scanner" name="handleArchive" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.milyn.classpath.Scanner" start="84" end="102" startBytecode="0" endBytecode="57" sourcefile="Scanner.java" sourcepath="org/milyn/classpath/Scanner.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/zip/ZipFile;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.util.zip.ZipFile" start="31" end="427" sourcefile="ZipFile.java" sourcepath="java/util/zip/ZipFile.java"/>
+    </Type>
+    <SourceLine classname="org.milyn.classpath.Scanner" start="94" end="94" startBytecode="96" endBytecode="96" sourcefile="Scanner.java" sourcepath="org/milyn/classpath/Scanner.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.milyn.io.StreamUtils">
+      <SourceLine classname="org.milyn.io.StreamUtils" start="28" end="198" sourcefile="StreamUtils.java" sourcepath="org/milyn/io/StreamUtils.java"/>
+    </Class>
+    <Method classname="org.milyn.io.StreamUtils" name="readStreamAsString" signature="(Ljava/io/InputStream;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.milyn.io.StreamUtils" start="63" end="65" startBytecode="0" endBytecode="63" sourcefile="StreamUtils.java" sourcepath="org/milyn/io/StreamUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.milyn.io.StreamUtils" start="65" end="65" startBytecode="14" endBytecode="14" sourcefile="StreamUtils.java" sourcepath="org/milyn/io/StreamUtils.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="org.milyn.profile.DefaultProfileStore">
+      <SourceLine classname="org.milyn.profile.DefaultProfileStore" start="31" end="158" sourcefile="DefaultProfileStore.java" sourcepath="org/milyn/profile/DefaultProfileStore.java"/>
+    </Class>
+    <Method classname="org.milyn.profile.DefaultProfileStore" name="addProfileSet" signature="(Lorg/milyn/profile/ProfileSet;)V" isStatic="false">
+      <SourceLine classname="org.milyn.profile.DefaultProfileStore" start="66" end="80" startBytecode="0" endBytecode="156" sourcefile="DefaultProfileStore.java" sourcepath="org/milyn/profile/DefaultProfileStore.java"/>
+    </Method>
+    <LocalVariable name="profileSet" register="1" pc="16" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.milyn.profile.DefaultProfileStore" start="68" end="68" startBytecode="8" endBytecode="8" sourcefile="DefaultProfileStore.java" sourcepath="org/milyn/profile/DefaultProfileStore.java"/>
+    <SourceLine classname="org.milyn.profile.DefaultProfileStore" start="69" end="69" startBytecode="17" endBytecode="17" sourcefile="DefaultProfileStore.java" sourcepath="org/milyn/profile/DefaultProfileStore.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.milyn.profile.HttpAcceptHeaderProfile">
+      <SourceLine classname="org.milyn.profile.HttpAcceptHeaderProfile" start="53" end="103" sourcefile="HttpAcceptHeaderProfile.java" sourcepath="org/milyn/profile/HttpAcceptHeaderProfile.java"/>
+    </Class>
+    <Method classname="org.milyn.profile.HttpAcceptHeaderProfile" name="&lt;init&gt;" signature="(Ljava/lang/String;[Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.milyn.profile.HttpAcceptHeaderProfile" start="53" end="60" startBytecode="0" endBytecode="143" sourcefile="HttpAcceptHeaderProfile.java" sourcepath="org/milyn/profile/HttpAcceptHeaderProfile.java"/>
+    </Method>
+    <Field classname="org.milyn.profile.HttpAcceptHeaderProfile" name="params" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.milyn.profile.HttpAcceptHeaderProfile" sourcefile="HttpAcceptHeaderProfile.java" sourcepath="org/milyn/profile/HttpAcceptHeaderProfile.java"/>
+    </Field>
+    <LocalVariable name="params" register="2" pc="48" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.milyn.profile.HttpAcceptHeaderProfile" start="59" end="59" startBytecode="48" endBytecode="48" sourcefile="HttpAcceptHeaderProfile.java" sourcepath="org/milyn/profile/HttpAcceptHeaderProfile.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.milyn.reflect.MethodCall">
+      <SourceLine classname="org.milyn.reflect.MethodCall" start="36" end="57" sourcefile="MethodCall.java" sourcepath="org/milyn/reflect/MethodCall.java"/>
+    </Class>
+    <Method classname="org.milyn.reflect.MethodCall" name="getCallArgs" signature="()[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.milyn.reflect.MethodCall" start="57" end="57" startBytecode="0" endBytecode="46" sourcefile="MethodCall.java" sourcepath="org/milyn/reflect/MethodCall.java"/>
+    </Method>
+    <Field classname="org.milyn.reflect.MethodCall" name="callArgs" signature="[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.milyn.reflect.MethodCall" sourcefile="MethodCall.java" sourcepath="org/milyn/reflect/MethodCall.java"/>
+    </Field>
+    <SourceLine classname="org.milyn.reflect.MethodCall" start="57" end="57" startBytecode="4" endBytecode="4" sourcefile="MethodCall.java" sourcepath="org/milyn/reflect/MethodCall.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.milyn.reflect.MethodCall">
+      <SourceLine classname="org.milyn.reflect.MethodCall" start="36" end="57" sourcefile="MethodCall.java" sourcepath="org/milyn/reflect/MethodCall.java"/>
+    </Class>
+    <Method classname="org.milyn.reflect.MethodCall" name="&lt;init&gt;" signature="(ILjava/lang/Exception;[Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.milyn.reflect.MethodCall" start="36" end="40" startBytecode="0" endBytecode="107" sourcefile="MethodCall.java" sourcepath="org/milyn/reflect/MethodCall.java"/>
+    </Method>
+    <Field classname="org.milyn.reflect.MethodCall" name="callArgs" signature="[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.milyn.reflect.MethodCall" sourcefile="MethodCall.java" sourcepath="org/milyn/reflect/MethodCall.java"/>
+    </Field>
+    <LocalVariable name="callArgs" register="3" pc="16" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.milyn.reflect.MethodCall" start="39" end="39" startBytecode="16" endBytecode="16" sourcefile="MethodCall.java" sourcepath="org/milyn/reflect/MethodCall.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.milyn.resource.URIResourceLocator">
+      <SourceLine classname="org.milyn.resource.URIResourceLocator" start="55" end="178" sourcefile="URIResourceLocator.java" sourcepath="org/milyn/resource/URIResourceLocator.java"/>
+    </Class>
+    <Field classname="org.milyn.resource.URIResourceLocator" name="SCHEME_CLASSPATH" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.milyn.resource.URIResourceLocator" sourcefile="URIResourceLocator.java" sourcepath="org/milyn/resource/URIResourceLocator.java"/>
+    </Field>
+    <SourceLine classname="org.milyn.resource.URIResourceLocator" start="65" end="65" startBytecode="11" endBytecode="11" sourcefile="URIResourceLocator.java" sourcepath="org/milyn/resource/URIResourceLocator.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.milyn.util.ClassUtil">
+      <SourceLine classname="org.milyn.util.ClassUtil" start="38" end="313" sourcefile="ClassUtil.java" sourcepath="org/milyn/util/ClassUtil.java"/>
+    </Class>
+    <Method classname="org.milyn.util.ClassUtil" name="addClasses" signature="(Ljava/net/URL;Ljava/lang/Class;Ljava/util/List;)V" isStatic="true">
+      <SourceLine classname="org.milyn.util.ClassUtil" start="232" end="285" startBytecode="0" endBytecode="680" sourcefile="ClassUtil.java" sourcepath="org/milyn/util/ClassUtil.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.milyn.util.ClassUtil" start="245" end="245" startBytecode="35" endBytecode="35" sourcefile="ClassUtil.java" sourcepath="org/milyn/util/ClassUtil.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.milyn.util.HsqlServer">
+      <SourceLine classname="org.milyn.util.HsqlServer" start="21" end="96" sourcefile="HsqlServer.java" sourcepath="org/milyn/util/HsqlServer.java"/>
+    </Class>
+    <Method classname="org.milyn.util.HsqlServer" name="execScript" signature="(Ljava/io/InputStream;)Z" isStatic="false">
+      <SourceLine classname="org.milyn.util.HsqlServer" start="71" end="79" startBytecode="0" endBytecode="193" sourcefile="HsqlServer.java" sourcepath="org/milyn/util/HsqlServer.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.milyn.util.HsqlServer" start="71" end="71" startBytecode="5" endBytecode="5" sourcefile="HsqlServer.java" sourcepath="org/milyn/util/HsqlServer.java"/>
+  </BugInstance>
+  <BugInstance type="SC_START_IN_CTOR" priority="2" abbrev="SC" category="MT_CORRECTNESS">
+    <Class classname="org.milyn.util.HsqlServer">
+      <SourceLine classname="org.milyn.util.HsqlServer" start="21" end="96" sourcefile="HsqlServer.java" sourcepath="org/milyn/util/HsqlServer.java"/>
+    </Class>
+    <Method classname="org.milyn.util.HsqlServer" name="&lt;init&gt;" signature="(I)V" isStatic="false">
+      <SourceLine classname="org.milyn.util.HsqlServer" start="33" end="58" startBytecode="0" endBytecode="267" sourcefile="HsqlServer.java" sourcepath="org/milyn/util/HsqlServer.java"/>
+    </Method>
+    <Method classname="org.milyn.util.HsqlServer$1" name="start" signature="()V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.milyn.util.HsqlServer$1" sourcefile="HsqlServer.java" sourcepath="org/milyn/util/HsqlServer.java"/>
+    </Method>
+    <SourceLine classname="org.milyn.util.HsqlServer" start="38" end="38" startBytecode="113" endBytecode="113" sourcefile="HsqlServer.java" sourcepath="org/milyn/util/HsqlServer.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.milyn.xml.HTMLEntityLookup">
+      <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="31" end="159" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+    </Class>
+    <Method classname="org.milyn.xml.HTMLEntityLookup" name="&lt;clinit&gt;" signature="()V" isStatic="true">
+      <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="36" end="111" startBytecode="0" endBytecode="652" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="62" end="62" startBytecode="42" endBytecode="42" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.milyn.xml.HTMLEntityLookup">
+      <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="31" end="159" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+    </Class>
+    <Method classname="org.milyn.xml.HTMLEntityLookup" name="defineEntity" signature="(Ljava/lang/String;C)V" isStatic="true">
+      <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="132" end="136" startBytecode="0" endBytecode="106" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="&lt;init&gt;" signature="(C)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Character" start="2056" end="2058" startBytecode="0" endBytecode="41" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="valueOf" signature="(C)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Character" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="133" end="133" startBytecode="19" endBytecode="19" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+    <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="134" end="134" startBytecode="34" endBytecode="34" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.milyn.xml.HTMLEntityLookup">
+      <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="31" end="159" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+    </Class>
+    <Method classname="org.milyn.xml.HTMLEntityLookup" name="getEntityRef" signature="(C)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="159" end="159" startBytecode="0" endBytecode="59" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="&lt;init&gt;" signature="(C)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Character" start="2056" end="2058" startBytecode="0" endBytecode="41" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="valueOf" signature="(C)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Character" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="159" end="159" startBytecode="8" endBytecode="8" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.milyn.xml.HTMLEntityLookup">
+      <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="31" end="159" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+    </Class>
+    <Method classname="org.milyn.xml.HTMLEntityLookup" name="&lt;clinit&gt;" signature="()V" isStatic="true">
+      <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="36" end="111" startBytecode="0" endBytecode="139" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/Reader;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.Reader" start="49" end="232" sourcefile="Reader.java" sourcepath="java/io/Reader.java"/>
+    </Type>
+    <SourceLine classname="org.milyn.xml.HTMLEntityLookup" start="62" end="62" startBytecode="33" endBytecode="33" sourcefile="HTMLEntityLookup.java" sourcepath="org/milyn/xml/HTMLEntityLookup.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.milyn.xml.LocalXSDEntityResolver">
+      <SourceLine classname="org.milyn.xml.LocalXSDEntityResolver" start="45" end="59" sourcefile="LocalXSDEntityResolver.java" sourcepath="org/milyn/xml/LocalXSDEntityResolver.java"/>
+    </Class>
+    <Method classname="org.milyn.xml.LocalXSDEntityResolver" name="getSchemaSources" signature="()[Ljavax/xml/transform/Source;" isStatic="false">
+      <SourceLine classname="org.milyn.xml.LocalXSDEntityResolver" start="59" end="59" startBytecode="0" endBytecode="46" sourcefile="LocalXSDEntityResolver.java" sourcepath="org/milyn/xml/LocalXSDEntityResolver.java"/>
+    </Method>
+    <Field classname="org.milyn.xml.LocalXSDEntityResolver" name="schemaSources" signature="[Ljavax/xml/transform/Source;" isStatic="false">
+      <SourceLine classname="org.milyn.xml.LocalXSDEntityResolver" sourcefile="LocalXSDEntityResolver.java" sourcepath="org/milyn/xml/LocalXSDEntityResolver.java"/>
+    </Field>
+    <SourceLine classname="org.milyn.xml.LocalXSDEntityResolver" start="59" end="59" startBytecode="4" endBytecode="4" sourcefile="LocalXSDEntityResolver.java" sourcepath="org/milyn/xml/LocalXSDEntityResolver.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.milyn.xml.LocalXSDEntityResolver">
+      <SourceLine classname="org.milyn.xml.LocalXSDEntityResolver" start="45" end="59" sourcefile="LocalXSDEntityResolver.java" sourcepath="org/milyn/xml/LocalXSDEntityResolver.java"/>
+    </Class>
+    <Method classname="org.milyn.xml.LocalXSDEntityResolver" name="&lt;init&gt;" signature="([Ljavax/xml/transform/Source;)V" isStatic="false">
+      <SourceLine classname="org.milyn.xml.LocalXSDEntityResolver" start="45" end="52" startBytecode="0" endBytecode="120" sourcefile="LocalXSDEntityResolver.java" sourcepath="org/milyn/xml/LocalXSDEntityResolver.java"/>
+    </Method>
+    <Field classname="org.milyn.xml.LocalXSDEntityResolver" name="schemaSources" signature="[Ljavax/xml/transform/Source;" isStatic="false">
+      <SourceLine classname="org.milyn.xml.LocalXSDEntityResolver" sourcefile="LocalXSDEntityResolver.java" sourcepath="org/milyn/xml/LocalXSDEntityResolver.java"/>
+    </Field>
+    <LocalVariable name="schemaSources" register="1" pc="29" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.milyn.xml.LocalXSDEntityResolver" start="50" end="50" startBytecode="29" endBytecode="29" sourcefile="LocalXSDEntityResolver.java" sourcepath="org/milyn/xml/LocalXSDEntityResolver.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.milyn.xml.XmlUtil">
+      <SourceLine classname="org.milyn.xml.XmlUtil" start="62" end="610" sourcefile="XmlUtil.java" sourcepath="org/milyn/xml/XmlUtil.java"/>
+    </Class>
+    <Method classname="org.milyn.xml.XmlUtil" name="parseStream" signature="(Ljava/io/InputStream;)Lorg/w3c/dom/Document;" isStatic="true">
+      <SourceLine classname="org.milyn.xml.XmlUtil" start="355" end="355" startBytecode="0" endBytecode="53" sourcefile="XmlUtil.java" sourcepath="org/milyn/xml/XmlUtil.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.milyn.xml.XmlUtil" start="355" end="355" startBytecode="5" endBytecode="5" sourcefile="XmlUtil.java" sourcepath="org/milyn/xml/XmlUtil.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.milyn.xml.XmlUtil">
+      <SourceLine classname="org.milyn.xml.XmlUtil" start="62" end="610" sourcefile="XmlUtil.java" sourcepath="org/milyn/xml/XmlUtil.java"/>
+    </Class>
+    <Method classname="org.milyn.xml.XmlUtil" name="parseStream" signature="(Ljava/io/InputStream;Lorg/xml/sax/EntityResolver;Lorg/milyn/xml/XmlUtil$VALIDATION_TYPE;Z)Lorg/w3c/dom/Document;" isStatic="true">
+      <SourceLine classname="org.milyn.xml.XmlUtil" start="296" end="296" startBytecode="0" endBytecode="86" sourcefile="XmlUtil.java" sourcepath="org/milyn/xml/XmlUtil.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.milyn.xml.XmlUtil" start="296" end="296" startBytecode="5" endBytecode="5" sourcefile="XmlUtil.java" sourcepath="org/milyn/xml/XmlUtil.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.milyn.xml.XmlUtil">
+      <SourceLine classname="org.milyn.xml.XmlUtil" start="62" end="610" sourcefile="XmlUtil.java" sourcepath="org/milyn/xml/XmlUtil.java"/>
+    </Class>
+    <Method classname="org.milyn.xml.XmlUtil" name="serialize" signature="(Lorg/w3c/dom/NodeList;ZLjava/io/Writer;)V" isStatic="true">
+      <SourceLine classname="org.milyn.xml.XmlUtil" start="540" end="585" startBytecode="0" endBytecode="488" sourcefile="XmlUtil.java" sourcepath="org/milyn/xml/XmlUtil.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.milyn.xml.XmlUtil" start="551" end="551" startBytecode="30" endBytecode="30" sourcefile="XmlUtil.java" sourcepath="org/milyn/xml/XmlUtil.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="8">
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.hsqldb.Server</MissingClass>
+    <MissingClass>org.hsqldb.jdbcDriver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 31 Mar 2009 14:58:52 +0300" total_classes="55" referenced_classes="217" total_bugs="19" total_size="1548" num_packages="12" vm_version="20.4-b02-402" cpu_seconds="32.94" clock_seconds="17.87" peak_mbytes="76.39" alloc_mbytes="763.88" gc_seconds="0.33" priority_2="12" priority_1="7">
+    <PackageStats package="org.milyn.assertion" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="org.milyn.assertion.AssertArgument" sourceFile="AssertArgument.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.classpath" total_bugs="1" total_types="6" total_size="170" priority_2="1">
+      <ClassStats class="org.milyn.classpath.AbstractFilter" sourceFile="AbstractFilter.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.milyn.classpath.ClasspathUtils" sourceFile="ClasspathUtils.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.milyn.classpath.Filter" sourceFile="Filter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.milyn.classpath.InstanceOfFilter" sourceFile="InstanceOfFilter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.milyn.classpath.IsAnnotationPresentFilter" sourceFile="IsAnnotationPresentFilter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.milyn.classpath.Scanner" sourceFile="Scanner.java" interface="false" size="60" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.io" total_bugs="1" total_types="3" total_size="105" priority_1="1">
+      <ClassStats class="org.milyn.io.NullReader" sourceFile="NullReader.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.milyn.io.NullWriter" sourceFile="NullWriter.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.milyn.io.StreamUtils" sourceFile="StreamUtils.java" interface="false" size="60" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.net" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="org.milyn.net.URIUtil" sourceFile="URIUtil.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.profile" total_bugs="2" total_types="11" total_size="219" priority_2="2">
+      <ClassStats class="org.milyn.profile.BasicProfile" sourceFile="BasicProfile.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.milyn.profile.DefaultProfileConfigDigester" sourceFile="DefaultProfileConfigDigester.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.milyn.profile.DefaultProfileSet" sourceFile="DefaultProfileSet.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.milyn.profile.DefaultProfileStore" sourceFile="DefaultProfileStore.java" interface="false" size="55" bugs="1" priority_2="1"/>
+      <ClassStats class="org.milyn.profile.DefaultProfileStore$UnitTest" sourceFile="DefaultProfileStore.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.milyn.profile.HttpAcceptHeaderProfile" sourceFile="HttpAcceptHeaderProfile.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="org.milyn.profile.Profile" sourceFile="Profile.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.milyn.profile.ProfileConfigDigester" sourceFile="ProfileConfigDigester.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.milyn.profile.ProfileSet" sourceFile="ProfileSet.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.milyn.profile.ProfileStore" sourceFile="ProfileStore.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.milyn.profile.UnknownProfileMemberException" sourceFile="UnknownProfileMemberException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.reflect" total_bugs="2" total_types="2" total_size="49" priority_2="2">
+      <ClassStats class="org.milyn.reflect.MethodCall" sourceFile="MethodCall.java" interface="false" size="16" bugs="2" priority_2="2"/>
+      <ClassStats class="org.milyn.reflect.MethodInvocationProxyHandler" sourceFile="MethodInvocationProxyHandler.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.resource" total_bugs="1" total_types="7" total_size="122" priority_1="1">
+      <ClassStats class="org.milyn.resource.ClasspathResourceLocator" sourceFile="ClasspathResourceLocator.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.milyn.resource.ContainerResourceLocator" sourceFile="ContainerResourceLocator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.milyn.resource.ExternalResourceLocator" sourceFile="ExternalResourceLocator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.milyn.resource.ServletResourceLocator" sourceFile="ServletResourceLocator.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.milyn.resource.URIResourceLocator" sourceFile="URIResourceLocator.java" interface="false" size="59" bugs="1" priority_1="1"/>
+      <ClassStats class="org.milyn.resource.URIResourceLocator$1" sourceFile="URIResourceLocator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.milyn.resource.URIResourceLocator$ResolvedURI" sourceFile="URIResourceLocator.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.servlet" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="org.milyn.servlet.ServletContainerTimingFilter" sourceFile="ServletContainerTimingFilter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.milyn.servlet.ServletParamUtils" sourceFile="ServletParamUtils.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.useragent" total_bugs="0" total_types="4" total_size="40">
+      <ClassStats class="org.milyn.useragent.MockUAContext" sourceFile="MockUAContext.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.milyn.useragent.UAContext" sourceFile="UAContext.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.milyn.useragent.UAContextUtil" sourceFile="UAContextUtil.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.milyn.useragent.UnknownUseragentException" sourceFile="UnknownUseragentException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.useragent.request" total_bugs="0" total_types="3" total_size="34">
+      <ClassStats class="org.milyn.useragent.request.HttpRequest" sourceFile="HttpRequest.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.milyn.useragent.request.MockHttpRequest" sourceFile="MockHttpRequest.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.milyn.useragent.request.Request" sourceFile="Request.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.util" total_bugs="3" total_types="6" total_size="305" priority_2="1" priority_1="2">
+      <ClassStats class="org.milyn.util.ClassUtil" sourceFile="ClassUtil.java" interface="false" size="146" bugs="1" priority_1="1"/>
+      <ClassStats class="org.milyn.util.DollarBraceDecoder" sourceFile="DollarBraceDecoder.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.milyn.util.HsqlServer" sourceFile="HsqlServer.java" interface="false" size="45" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.milyn.util.HsqlServer$1" sourceFile="HsqlServer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.milyn.util.IteratorEnumeration" sourceFile="IteratorEnumeration.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.milyn.util.StdoutToLog4jFilter" sourceFile="StdoutToLog4jFilter.java" interface="false" size="64" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.xml" total_bugs="9" total_types="9" total_size="444" priority_2="6" priority_1="3">
+      <ClassStats class="org.milyn.xml.HTMLEntityLookup" sourceFile="HTMLEntityLookup.java" interface="false" size="50" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="org.milyn.xml.LocalDTDEntityResolver" sourceFile="LocalDTDEntityResolver.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.milyn.xml.LocalEntityResolver" sourceFile="LocalEntityResolver.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.milyn.xml.LocalXSDEntityResolver" sourceFile="LocalXSDEntityResolver.java" interface="false" size="13" bugs="2" priority_2="2"/>
+      <ClassStats class="org.milyn.xml.XmlUtil" sourceFile="XmlUtil.java" interface="false" size="216" bugs="3" priority_2="1" priority_1="2"/>
+      <ClassStats class="org.milyn.xml.XmlUtil$1" sourceFile="XmlUtil.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.milyn.xml.XmlUtil$VALIDATION_TYPE" sourceFile="XmlUtil.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.milyn.xml.XmlUtil$XMLParseErrorHandler" sourceFile="XmlUtil.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.milyn.xml.XsdDOMValidator" sourceFile="XsdDOMValidator.java" interface="false" size="62" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1632" invocations="797" avgMicrosecondsPerInvocation="2048" maxMicrosecondsPerInvocation="87697" standardDeviationMircosecondsPerInvocation="6714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1151" invocations="241" avgMicrosecondsPerInvocation="4779" maxMicrosecondsPerInvocation="107506" standardDeviationMircosecondsPerInvocation="12919"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1066" invocations="257" avgMicrosecondsPerInvocation="4147" maxMicrosecondsPerInvocation="137420" standardDeviationMircosecondsPerInvocation="11916"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="992" invocations="240" avgMicrosecondsPerInvocation="4136" maxMicrosecondsPerInvocation="108436" standardDeviationMircosecondsPerInvocation="12673"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="951" invocations="217" avgMicrosecondsPerInvocation="4383" maxMicrosecondsPerInvocation="53871" standardDeviationMircosecondsPerInvocation="9576"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="870" invocations="217" avgMicrosecondsPerInvocation="4011" maxMicrosecondsPerInvocation="71477" standardDeviationMircosecondsPerInvocation="9887"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="859" invocations="256" avgMicrosecondsPerInvocation="3357" maxMicrosecondsPerInvocation="92444" standardDeviationMircosecondsPerInvocation="9806"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="815" invocations="238" avgMicrosecondsPerInvocation="3425" maxMicrosecondsPerInvocation="63481" standardDeviationMircosecondsPerInvocation="6933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="553" invocations="217" avgMicrosecondsPerInvocation="2552" maxMicrosecondsPerInvocation="59969" standardDeviationMircosecondsPerInvocation="7380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="510" invocations="198" avgMicrosecondsPerInvocation="2579" maxMicrosecondsPerInvocation="54782" standardDeviationMircosecondsPerInvocation="6664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="393" invocations="241" avgMicrosecondsPerInvocation="1634" maxMicrosecondsPerInvocation="28236" standardDeviationMircosecondsPerInvocation="3280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="323" invocations="540" avgMicrosecondsPerInvocation="598" maxMicrosecondsPerInvocation="22144" standardDeviationMircosecondsPerInvocation="1622"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="270" invocations="241" avgMicrosecondsPerInvocation="1124" maxMicrosecondsPerInvocation="21863" standardDeviationMircosecondsPerInvocation="2637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="269" invocations="217" avgMicrosecondsPerInvocation="1244" maxMicrosecondsPerInvocation="23644" standardDeviationMircosecondsPerInvocation="2638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="225" invocations="217" avgMicrosecondsPerInvocation="1041" maxMicrosecondsPerInvocation="27248" standardDeviationMircosecondsPerInvocation="3392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="223" invocations="737" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="52892" standardDeviationMircosecondsPerInvocation="2109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="199" invocations="217" avgMicrosecondsPerInvocation="919" maxMicrosecondsPerInvocation="22787" standardDeviationMircosecondsPerInvocation="2738"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="190" invocations="800" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="34116" standardDeviationMircosecondsPerInvocation="1485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="181" invocations="55" avgMicrosecondsPerInvocation="3296" maxMicrosecondsPerInvocation="59348" standardDeviationMircosecondsPerInvocation="10182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="175" invocations="233" avgMicrosecondsPerInvocation="754" maxMicrosecondsPerInvocation="23119" standardDeviationMircosecondsPerInvocation="2188"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="173" invocations="261" avgMicrosecondsPerInvocation="663" maxMicrosecondsPerInvocation="76192" standardDeviationMircosecondsPerInvocation="5377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="163" invocations="217" avgMicrosecondsPerInvocation="755" maxMicrosecondsPerInvocation="16462" standardDeviationMircosecondsPerInvocation="2065"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="163" invocations="259" avgMicrosecondsPerInvocation="629" maxMicrosecondsPerInvocation="29246" standardDeviationMircosecondsPerInvocation="2402"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1223373544000" analysisTimestamp="1360931195347" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/jonas-generators-base/5.0.5/jonas-generators-base-5.0.5.jar</Jar>
+  </Project>
+  <BugInstance type="UWF_NULL_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.ow2.jonas.generators.genbase.archive.Application">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.Application" start="73" end="577" sourcefile="Application.java" sourcepath="org/ow2/jonas/generators/genbase/archive/Application.java"/>
+    </Class>
+    <Field classname="org.ow2.jonas.generators.genbase.archive.Application" name="commonCL" signature="Ljava/net/URLClassLoader;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.Application" sourcefile="Application.java" sourcepath="org/ow2/jonas/generators/genbase/archive/Application.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.Application" start="552" end="552" startBytecode="26" endBytecode="26" sourcefile="Application.java" sourcepath="org/ow2/jonas/generators/genbase/archive/Application.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.ow2.jonas.generators.genbase.archive.DummyApplication">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" start="61" end="132" sourcefile="DummyApplication.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyApplication.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" name="createFileArchive" signature="()Lorg/ow2/jonas/generators/genbase/archive/Archive;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" start="74" end="106" startBytecode="0" endBytecode="398" sourcefile="DummyApplication.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyApplication.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" start="86" end="86" startBytecode="67" endBytecode="67" sourcefile="DummyApplication.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyApplication.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" start="87" end="87" startBytecode="72" endBytecode="72" sourcefile="DummyApplication.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyApplication.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" start="103" end="103" startBytecode="147" endBytecode="147" sourcefile="DummyApplication.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyApplication.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" start="104" end="104" startBytecode="148" endBytecode="148" sourcefile="DummyApplication.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyApplication.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.generators.genbase.archive.DummyApplication">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" start="61" end="132" sourcefile="DummyApplication.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyApplication.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" name="createFileArchive" signature="()Lorg/ow2/jonas/generators/genbase/archive/Archive;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" start="74" end="106" startBytecode="0" endBytecode="398" sourcefile="DummyApplication.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyApplication.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyApplication" start="79" end="79" startBytecode="21" endBytecode="21" sourcefile="DummyApplication.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyApplication.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" start="60" end="138" sourcefile="DummyWebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyWebApp.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" name="createFileArchive" signature="()Lorg/ow2/jonas/generators/genbase/archive/Archive;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" start="72" end="130" startBytecode="0" endBytecode="620" sourcefile="DummyWebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyWebApp.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" start="87" end="87" startBytecode="85" endBytecode="85" sourcefile="DummyWebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyWebApp.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" start="88" end="88" startBytecode="90" endBytecode="90" sourcefile="DummyWebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyWebApp.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" start="127" end="127" startBytecode="263" endBytecode="263" sourcefile="DummyWebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyWebApp.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" start="128" end="128" startBytecode="264" endBytecode="264" sourcefile="DummyWebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyWebApp.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" start="60" end="138" sourcefile="DummyWebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyWebApp.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" name="createFileArchive" signature="()Lorg/ow2/jonas/generators/genbase/archive/Archive;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" start="72" end="130" startBytecode="0" endBytecode="620" sourcefile="DummyWebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyWebApp.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" start="77" end="77" startBytecode="21" endBytecode="21" sourcefile="DummyWebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyWebApp.java"/>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.DummyWebApp" start="80" end="80" startBytecode="37" endBytecode="37" sourcefile="DummyWebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/DummyWebApp.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="UI_INHERITANCE_UNSAFE_GETRESOURCE" priority="2" abbrev="UI" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.generators.genbase.archive.WebApp">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.WebApp" start="64" end="643" sourcefile="WebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/WebApp.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.generators.genbase.archive.WebApp" name="loadXMLDescriptorAsResource" signature="(Ljava/lang/String;Ljava/lang/String;Z)Lorg/w3c/dom/Document;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.archive.WebApp" start="380" end="390" startBytecode="0" endBytecode="196" sourcefile="WebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/WebApp.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.archive.WebApp" start="382" end="382" startBytecode="8" endBytecode="8" sourcefile="WebApp.java" sourcepath="org/ow2/jonas/generators/genbase/archive/WebApp.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.generators.genbase.utils.ArchiveStorer">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.utils.ArchiveStorer" start="58" end="197" sourcefile="ArchiveStorer.java" sourcepath="org/ow2/jonas/generators/genbase/utils/ArchiveStorer.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.generators.genbase.utils.ArchiveStorer" name="store" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.utils.ArchiveStorer" start="142" end="177" startBytecode="0" endBytecode="537" sourcefile="ArchiveStorer.java" sourcepath="org/ow2/jonas/generators/genbase/utils/ArchiveStorer.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.utils.ArchiveStorer" start="168" end="168" startBytecode="210" endBytecode="210" sourcefile="ArchiveStorer.java" sourcepath="org/ow2/jonas/generators/genbase/utils/ArchiveStorer.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOOLEAN_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.generators.genbase.utils.XMLUtils">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.utils.XMLUtils" start="69" end="565" sourcefile="XMLUtils.java" sourcepath="org/ow2/jonas/generators/genbase/utils/XMLUtils.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.generators.genbase.utils.XMLUtils" name="setFactoryValidation" signature="(Ljavax/xml/parsers/DocumentBuilderFactory;Z)V" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.generators.genbase.utils.XMLUtils" start="158" end="162" startBytecode="0" endBytecode="88" sourcefile="XMLUtils.java" sourcepath="org/ow2/jonas/generators/genbase/utils/XMLUtils.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.generators.genbase.utils.XMLUtils" start="161" end="161" startBytecode="18" endBytecode="18" sourcefile="XMLUtils.java" sourcepath="org/ow2/jonas/generators/genbase/utils/XMLUtils.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="36">
+    <MissingClass>org.objectweb.util.monolog.api.BasicLevel</MissingClass>
+    <MissingClass>org.objectweb.util.monolog.api.Logger</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.client.ClientContainerDeploymentDesc</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.client.JonasAppClientDTDs</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.client.JonasAppClientSchemas</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.client.lib.ClientDeploymentDescManager</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.common.lib.JEntityResolver</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ear.EarDTDs</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ear.EarDeploymentDesc</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ear.EarSchemas</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ear.lib.EarDeploymentDescManager</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ear.xml.Web</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ejb.BeanDesc</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ejb.DeploymentDesc</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ejb.JonasEjbjarDTDs</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ejb.JonasEjbjarSchemas</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ejb.lib.EjbDeploymentDescManager</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.web.JonasWebAppDTDs</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.web.JonasWebAppSchemas</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.web.WebAppDTDs</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.web.WebAppSchemas</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.web.WebContainerDeploymentDesc</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.web.lib.WebDeploymentDescManager</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ws.JonasWsSchemas</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ws.WSDeploymentDesc</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ws.WsSchemas</MissingClass>
+    <MissingClass>org.ow2.jonas.deployment.ws.lib.WSDeploymentDescManager</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.bootstrap.loader.JClassLoader</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.loader.ClientClassLoader</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.loader.EjbJarClassLoader</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.loader.WebappClassLoader</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.Env</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.I18n</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.Log</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.XMLSerializer</MissingClass>
+    <MissingClass>org.ow2.util.file.FileUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 7 Oct 2008 12:59:04 +0300" total_classes="31" referenced_classes="90" total_bugs="8" total_size="1719" num_packages="5" vm_version="20.4-b02-402" cpu_seconds="26.43" clock_seconds="14.95" peak_mbytes="78.29" alloc_mbytes="763.88" gc_seconds="0.29" priority_2="8">
+    <PackageStats package="org.ow2.jonas.generators.genbase" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="org.ow2.jonas.generators.genbase.GenBaseException" sourceFile="GenBaseException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.NoJ2EEWebservicesException" sourceFile="NoJ2EEWebservicesException.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.generators.genbase.archive" total_bugs="6" total_types="15" total_size="1016" priority_2="6">
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.AbsArchive" sourceFile="AbsArchive.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.Application" sourceFile="Application.java" interface="false" size="220" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.Archive" sourceFile="Archive.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.Client" sourceFile="Client.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.DummyApplication" sourceFile="DummyApplication.java" interface="false" size="39" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.DummyWebApp" sourceFile="DummyWebApp.java" interface="false" size="45" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.Ejb" sourceFile="Ejb.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.EjbJar" sourceFile="EjbJar.java" interface="false" size="125" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.EjbRefModule" sourceFile="EjbRefModule.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.FileArchive" sourceFile="FileArchive.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.J2EEArchive" sourceFile="J2EEArchive.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.JarArchive" sourceFile="JarArchive.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.WebApp" sourceFile="WebApp.java" interface="false" size="221" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.WsClient" sourceFile="WsClient.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.archive.WsEndpoint" sourceFile="WsEndpoint.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.generators.genbase.generator" total_bugs="0" total_types="6" total_size="214">
+      <ClassStats class="org.ow2.jonas.generators.genbase.generator.AbsGenerator" sourceFile="AbsGenerator.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.generator.AbsGenerator$1" sourceFile="AbsGenerator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.generator.AbsGenerator$2" sourceFile="AbsGenerator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.generator.Config" sourceFile="Config.java" interface="false" size="145" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.generator.GeneratorFactories" sourceFile="GeneratorFactories.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.generator.GeneratorFactory" sourceFile="GeneratorFactory.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.generators.genbase.modifier" total_bugs="0" total_types="3" total_size="96">
+      <ClassStats class="org.ow2.jonas.generators.genbase.modifier.AbsApplicationModifier" sourceFile="AbsApplicationModifier.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.modifier.AbsModifierFactory" sourceFile="AbsModifierFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.modifier.ArchiveModifier" sourceFile="ArchiveModifier.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.generators.genbase.utils" total_bugs="2" total_types="5" total_size="367" priority_2="2">
+      <ClassStats class="org.ow2.jonas.generators.genbase.utils.ArchiveStorer" sourceFile="ArchiveStorer.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.utils.DirStorer" sourceFile="DirStorer.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.utils.JarStorer" sourceFile="JarStorer.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.utils.TempRepository" sourceFile="TempRepository.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.generators.genbase.utils.XMLUtils" sourceFile="XMLUtils.java" interface="false" size="197" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1277" invocations="574" avgMicrosecondsPerInvocation="2226" maxMicrosecondsPerInvocation="115650" standardDeviationMircosecondsPerInvocation="7207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="873" invocations="266" avgMicrosecondsPerInvocation="3282" maxMicrosecondsPerInvocation="71402" standardDeviationMircosecondsPerInvocation="8028"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="859" invocations="90" avgMicrosecondsPerInvocation="9550" maxMicrosecondsPerInvocation="97008" standardDeviationMircosecondsPerInvocation="17338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="720" invocations="266" avgMicrosecondsPerInvocation="2709" maxMicrosecondsPerInvocation="57949" standardDeviationMircosecondsPerInvocation="6858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="709" invocations="291" avgMicrosecondsPerInvocation="2437" maxMicrosecondsPerInvocation="61300" standardDeviationMircosecondsPerInvocation="6175"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="706" invocations="90" avgMicrosecondsPerInvocation="7848" maxMicrosecondsPerInvocation="125042" standardDeviationMircosecondsPerInvocation="16808"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="656" invocations="266" avgMicrosecondsPerInvocation="2468" maxMicrosecondsPerInvocation="50265" standardDeviationMircosecondsPerInvocation="5900"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="638" invocations="286" avgMicrosecondsPerInvocation="2231" maxMicrosecondsPerInvocation="73331" standardDeviationMircosecondsPerInvocation="6617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="397" invocations="266" avgMicrosecondsPerInvocation="1493" maxMicrosecondsPerInvocation="61276" standardDeviationMircosecondsPerInvocation="4641"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="358" invocations="160" avgMicrosecondsPerInvocation="2237" maxMicrosecondsPerInvocation="53763" standardDeviationMircosecondsPerInvocation="5645"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="356" invocations="90" avgMicrosecondsPerInvocation="3957" maxMicrosecondsPerInvocation="36143" standardDeviationMircosecondsPerInvocation="6972"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="320" invocations="411" avgMicrosecondsPerInvocation="778" maxMicrosecondsPerInvocation="91940" standardDeviationMircosecondsPerInvocation="4667"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="281" invocations="90" avgMicrosecondsPerInvocation="3125" maxMicrosecondsPerInvocation="75827" standardDeviationMircosecondsPerInvocation="9002"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="246" invocations="295" avgMicrosecondsPerInvocation="834" maxMicrosecondsPerInvocation="97885" standardDeviationMircosecondsPerInvocation="7083"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="211" invocations="266" avgMicrosecondsPerInvocation="794" maxMicrosecondsPerInvocation="31985" standardDeviationMircosecondsPerInvocation="2590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="185" invocations="90" avgMicrosecondsPerInvocation="2056" maxMicrosecondsPerInvocation="35451" standardDeviationMircosecondsPerInvocation="5675"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="172" invocations="90" avgMicrosecondsPerInvocation="1917" maxMicrosecondsPerInvocation="33837" standardDeviationMircosecondsPerInvocation="5359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="155" invocations="31" avgMicrosecondsPerInvocation="5015" maxMicrosecondsPerInvocation="37438" standardDeviationMircosecondsPerInvocation="8894"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="149" invocations="90" avgMicrosecondsPerInvocation="1661" maxMicrosecondsPerInvocation="16981" standardDeviationMircosecondsPerInvocation="3398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="148" invocations="266" avgMicrosecondsPerInvocation="559" maxMicrosecondsPerInvocation="22292" standardDeviationMircosecondsPerInvocation="2239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="148" invocations="490" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="16582" standardDeviationMircosecondsPerInvocation="1204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="136" invocations="143" avgMicrosecondsPerInvocation="955" maxMicrosecondsPerInvocation="22925" standardDeviationMircosecondsPerInvocation="2898"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="131" invocations="90" avgMicrosecondsPerInvocation="1466" maxMicrosecondsPerInvocation="25945" standardDeviationMircosecondsPerInvocation="3788"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

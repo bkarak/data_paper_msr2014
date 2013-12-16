@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1274558467000" analysisTimestamp="1360881049322" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-hl7/2.3.0/camel-hl7-2.3.0.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.camel.component.hl7.HL7DataFormat">
+      <SourceLine classname="org.apache.camel.component.hl7.HL7DataFormat" start="63" end="99" sourcefile="HL7DataFormat.java" sourcepath="org/apache/camel/component/hl7/HL7DataFormat.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.hl7.HL7DataFormat" name="marshal" signature="(Lorg/apache/camel/Exchange;Ljava/lang/Object;Ljava/io/OutputStream;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.hl7.HL7DataFormat" start="68" end="71" startBytecode="0" endBytecode="137" sourcefile="HL7DataFormat.java" sourcepath="org/apache/camel/component/hl7/HL7DataFormat.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.component.hl7.HL7DataFormat" start="70" end="70" startBytecode="27" endBytecode="27" sourcefile="HL7DataFormat.java" sourcepath="org/apache/camel/component/hl7/HL7DataFormat.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.camel.component.hl7.HL7MLLPEncoder">
+      <SourceLine classname="org.apache.camel.component.hl7.HL7MLLPEncoder" start="35" end="95" sourcefile="HL7MLLPEncoder.java" sourcepath="org/apache/camel/component/hl7/HL7MLLPEncoder.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.hl7.HL7MLLPEncoder" name="encode" signature="(Lorg/apache/mina/common/IoSession;Ljava/lang/Object;Lorg/apache/mina/filter/codec/ProtocolEncoderOutput;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.hl7.HL7MLLPEncoder" start="51" end="95" startBytecode="0" endBytecode="558" sourcefile="HL7MLLPEncoder.java" sourcepath="org/apache/camel/component/hl7/HL7MLLPEncoder.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.component.hl7.HL7MLLPEncoder" start="71" end="71" startBytecode="129" endBytecode="129" sourcefile="HL7MLLPEncoder.java" sourcepath="org/apache/camel/component/hl7/HL7MLLPEncoder.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="15">
+    <MissingClass>ca.uhn.hl7v2.model.Message</MissingClass>
+    <MissingClass>ca.uhn.hl7v2.parser.Parser</MissingClass>
+    <MissingClass>ca.uhn.hl7v2.parser.PipeParser</MissingClass>
+    <MissingClass>ca.uhn.hl7v2.util.Terser</MissingClass>
+    <MissingClass>ca.uhn.hl7v2.validation.impl.NoValidation</MissingClass>
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.Message</MissingClass>
+    <MissingClass>org.apache.camel.util.ExchangeHelper</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.mina.common.ByteBuffer</MissingClass>
+    <MissingClass>org.apache.mina.common.IoSession</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.CumulativeProtocolDecoder</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.ProtocolDecoderOutput</MissingClass>
+    <MissingClass>org.apache.mina.filter.codec.ProtocolEncoderOutput</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 22 May 2010 23:01:07 +0300" total_classes="9" referenced_classes="26" total_bugs="2" total_size="285" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="10.66" clock_seconds="10.21" peak_mbytes="54.94" alloc_mbytes="763.88" gc_seconds="0.09" priority_1="2">
+    <PackageStats package="org.apache.camel.component.hl7" total_bugs="2" total_types="9" total_size="285" priority_1="2">
+      <ClassStats class="org.apache.camel.component.hl7.HL7Constants" sourceFile="HL7Constants.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.hl7.HL7Converter" sourceFile="HL7Converter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.hl7.HL7DataFormat" sourceFile="HL7DataFormat.java" interface="false" size="31" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.camel.component.hl7.HL7MLLPCodec" sourceFile="HL7MLLPCodec.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.hl7.HL7MLLPConfig" sourceFile="HL7MLLPConfig.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.hl7.HL7MLLPDecoder" sourceFile="HL7MLLPDecoder.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.hl7.HL7MLLPDecoder$1" sourceFile="HL7MLLPDecoder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.hl7.HL7MLLPDecoder$DecoderState" sourceFile="HL7MLLPDecoder.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.hl7.HL7MLLPEncoder" sourceFile="HL7MLLPEncoder.java" interface="false" size="42" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1297" invocations="354" avgMicrosecondsPerInvocation="3664" maxMicrosecondsPerInvocation="126481" standardDeviationMircosecondsPerInvocation="10745"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="522" invocations="26" avgMicrosecondsPerInvocation="20110" maxMicrosecondsPerInvocation="208036" standardDeviationMircosecondsPerInvocation="42759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="487" invocations="26" avgMicrosecondsPerInvocation="18736" maxMicrosecondsPerInvocation="152068" standardDeviationMircosecondsPerInvocation="37815"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="446" invocations="26" avgMicrosecondsPerInvocation="17179" maxMicrosecondsPerInvocation="196930" standardDeviationMircosecondsPerInvocation="41460"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="403" invocations="56" avgMicrosecondsPerInvocation="7212" maxMicrosecondsPerInvocation="333023" standardDeviationMircosecondsPerInvocation="44428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="333" invocations="114" avgMicrosecondsPerInvocation="2928" maxMicrosecondsPerInvocation="128352" standardDeviationMircosecondsPerInvocation="12631"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="297" invocations="56" avgMicrosecondsPerInvocation="5319" maxMicrosecondsPerInvocation="83593" standardDeviationMircosecondsPerInvocation="14667"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="255" invocations="293" avgMicrosecondsPerInvocation="870" maxMicrosecondsPerInvocation="58067" standardDeviationMircosecondsPerInvocation="4527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="249" invocations="9" avgMicrosecondsPerInvocation="27676" maxMicrosecondsPerInvocation="121479" standardDeviationMircosecondsPerInvocation="40598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="236" invocations="56" avgMicrosecondsPerInvocation="4217" maxMicrosecondsPerInvocation="67480" standardDeviationMircosecondsPerInvocation="12363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="220" invocations="40" avgMicrosecondsPerInvocation="5508" maxMicrosecondsPerInvocation="82546" standardDeviationMircosecondsPerInvocation="17212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="180" invocations="26" avgMicrosecondsPerInvocation="6939" maxMicrosecondsPerInvocation="84324" standardDeviationMircosecondsPerInvocation="17642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="180" invocations="26" avgMicrosecondsPerInvocation="6937" maxMicrosecondsPerInvocation="51222" standardDeviationMircosecondsPerInvocation="15290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="177" invocations="56" avgMicrosecondsPerInvocation="3178" maxMicrosecondsPerInvocation="89648" standardDeviationMircosecondsPerInvocation="12404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="169" invocations="57" avgMicrosecondsPerInvocation="2964" maxMicrosecondsPerInvocation="53807" standardDeviationMircosecondsPerInvocation="9018"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="167" invocations="57" avgMicrosecondsPerInvocation="2944" maxMicrosecondsPerInvocation="62432" standardDeviationMircosecondsPerInvocation="9208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="160" invocations="55" avgMicrosecondsPerInvocation="2926" maxMicrosecondsPerInvocation="64255" standardDeviationMircosecondsPerInvocation="10810"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="156" invocations="26" avgMicrosecondsPerInvocation="6010" maxMicrosecondsPerInvocation="45063" standardDeviationMircosecondsPerInvocation="12841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="147" invocations="56" avgMicrosecondsPerInvocation="2625" maxMicrosecondsPerInvocation="67714" standardDeviationMircosecondsPerInvocation="9507"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="129" invocations="358" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="42237" standardDeviationMircosecondsPerInvocation="2615"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1251499109000" analysisTimestamp="1360876611207" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jasmine/monitoring/eventswitch-core/1.2.1-M3/eventswitch-core-1.2.1-M3.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdDispatcher">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdDispatcher" start="38" end="128" sourcefile="MBeanCmdDispatcher.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/endpoints/MBeanCmdDispatcher.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdDispatcher" name="receivedMBeanCmdMessage" signature="([B)Lorg/ow2/jasmine/event/messages/JasmineEvent;" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdDispatcher" start="128" end="128" startBytecode="0" endBytecode="64" sourcefile="MBeanCmdDispatcher.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/endpoints/MBeanCmdDispatcher.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdDispatcher" start="128" end="128" startBytecode="6" endBytecode="6" sourcefile="MBeanCmdDispatcher.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/endpoints/MBeanCmdDispatcher.java"/>
+  </BugInstance>
+  <BugInstance type="ML_SYNC_ON_UPDATED_FIELD" priority="2" abbrev="ML" category="MT_CORRECTNESS">
+    <Class classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdWrapper">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdWrapper" start="46" end="207" sourcefile="MBeanCmdWrapper.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/endpoints/MBeanCmdWrapper.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdWrapper" name="start" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdWrapper" start="149" end="198" startBytecode="0" endBytecode="454" sourcefile="MBeanCmdWrapper.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/endpoints/MBeanCmdWrapper.java"/>
+    </Method>
+    <Field classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdWrapper" name="manager" signature="Lorg/ow2/jasmine/monitoring/eventswitch/manager/EventSwitchManager;" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdWrapper" sourcefile="MBeanCmdWrapper.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/endpoints/MBeanCmdWrapper.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdWrapper" start="152" end="152" startBytecode="13" endBytecode="13" sourcefile="MBeanCmdWrapper.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/endpoints/MBeanCmdWrapper.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToCSV">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToCSV" start="47" end="87" sourcefile="JasmineEventNotificationToCSV.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/transformers/JasmineEventNotificationToCSV.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToCSV" name="doTransform" signature="(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToCSV" start="63" end="87" startBytecode="0" endBytecode="424" sourcefile="JasmineEventNotificationToCSV.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/transformers/JasmineEventNotificationToCSV.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToCSV" start="79" end="79" startBytecode="172" endBytecode="172" sourcefile="JasmineEventNotificationToCSV.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/transformers/JasmineEventNotificationToCSV.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToString">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToString" start="45" end="87" sourcefile="JasmineEventNotificationToString.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/transformers/JasmineEventNotificationToString.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToString" name="doTransform" signature="(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToString" start="62" end="87" startBytecode="0" endBytecode="446" sourcefile="JasmineEventNotificationToString.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/transformers/JasmineEventNotificationToString.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToString" start="77" end="77" startBytecode="175" endBytecode="175" sourcefile="JasmineEventNotificationToString.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/transformers/JasmineEventNotificationToString.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventToString">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventToString" start="44" end="81" sourcefile="JasmineEventToString.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/transformers/JasmineEventToString.java"/>
+    </Class>
+    <Method classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventToString" name="doTransform" signature="(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventToString" start="61" end="81" startBytecode="0" endBytecode="504" sourcefile="JasmineEventToString.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/transformers/JasmineEventToString.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventToString" start="66" end="66" startBytecode="107" endBytecode="107" sourcefile="JasmineEventToString.java" sourcepath="org/ow2/jasmine/monitoring/eventswitch/transformers/JasmineEventToString.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="22">
+    <MissingClass>javax.jms.TextMessage</MissingClass>
+    <MissingClass>javax.mail.Message</MissingClass>
+    <MissingClass>javax.mail.Message$RecipientType</MissingClass>
+    <MissingClass>javax.mail.MessagingException</MissingClass>
+    <MissingClass>javax.mail.Transport</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>org.mule.transformers.AbstractTransformer</MissingClass>
+    <MissingClass>org.mule.umo.endpoint.EndpointException</MissingClass>
+    <MissingClass>org.mule.umo.transformer.TransformerException</MissingClass>
+    <MissingClass>org.ow2.jasmine.event.beans.JasmineEventEB</MissingClass>
+    <MissingClass>org.ow2.jasmine.event.beans.JasmineEventNotification</MissingClass>
+    <MissingClass>org.ow2.jasmine.event.beans.JasmineEventNotificationDetail</MissingClass>
+    <MissingClass>org.ow2.jasmine.event.messages.JasmineEvent</MissingClass>
+    <MissingClass>org.ow2.jasmine.event.messages.JasmineEventDetails</MissingClass>
+    <MissingClass>org.ow2.jasmine.event.messages.JasmineEventNotificationMail</MissingClass>
+    <MissingClass>org.ow2.jasmine.monitoring.eventswitch.beans.JasmineEventNotificationSLBRemote</MissingClass>
+    <MissingClass>org.ow2.jasmine.monitoring.eventswitch.beans.JasmineEventSFBRemote</MissingClass>
+    <MissingClass>org.ow2.jasmine.monitoring.eventswitch.beans.JasmineEventSLBRemote</MissingClass>
+    <MissingClass>org.ow2.jasmine.monitoring.eventswitch.beans.JasmineEventWildCATRemote</MissingClass>
+    <MissingClass>org.ow2.jasmine.monitoring.eventswitch.connectors.EJB3Connector</MissingClass>
+    <MissingClass>org.ow2.jasmine.monitoring.mbeancmd.CommandDispatcher</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 29 Aug 2009 01:38:29 +0300" total_classes="20" referenced_classes="79" total_bugs="5" total_size="476" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="26.34" clock_seconds="25.16" peak_mbytes="65.93" alloc_mbytes="763.88" gc_seconds="0.19" priority_2="4" priority_1="1">
+    <PackageStats package="org.ow2.jasmine.monitoring.eventswitch.endpoints" total_bugs="2" total_types="12" total_size="259" priority_2="1" priority_1="1">
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.DroolsUMOComponent" sourceFile="DroolsUMOComponent.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.JasmineEventDispatcher" sourceFile="JasmineEventDispatcher.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.JasmineEventEJB3Wrapper" sourceFile="JasmineEventEJB3Wrapper.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.JasmineEventNotificationDispatcher" sourceFile="JasmineEventNotificationDispatcher.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.JasmineEventNotificationEJB3Wrapper" sourceFile="JasmineEventNotificationEJB3Wrapper.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.JasmineEventNotificationMailComponent" sourceFile="JasmineEventNotificationMailComponent.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdDispatcher" sourceFile="MBeanCmdDispatcher.java" interface="false" size="37" bugs="1" priority_1="1"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdWrapper" sourceFile="MBeanCmdWrapper.java" interface="false" size="58" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.MBeanCmdWrapper$1" sourceFile="MBeanCmdWrapper.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.MailSenderWrapper" sourceFile="MailSenderWrapper.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.MuleEJB3Wrapper" sourceFile="MuleEJB3Wrapper.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.endpoints.WildCATUMOComponent" sourceFile="WildCATUMOComponent.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jasmine.monitoring.eventswitch.manager" total_bugs="0" total_types="3" total_size="71">
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.manager.EventSwitchManager" sourceFile="EventSwitchManager.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.manager.EventSwitchManager$1" sourceFile="EventSwitchManager.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.manager.EventSwitchManagerMBean" sourceFile="EventSwitchManagerMBean.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jasmine.monitoring.eventswitch.transformers" total_bugs="3" total_types="5" total_size="146" priority_2="3">
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.transformers.JMSTextMessageToJasmineEvent" sourceFile="JMSTextMessageToJasmineEvent.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToCSV" sourceFile="JasmineEventNotificationToCSV.java" interface="false" size="19" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventNotificationToString" sourceFile="JasmineEventNotificationToString.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventToCSV" sourceFile="JasmineEventToCSV.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.ow2.jasmine.monitoring.eventswitch.transformers.JasmineEventToString" sourceFile="JasmineEventToString.java" interface="false" size="19" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2099" invocations="613" avgMicrosecondsPerInvocation="3424" maxMicrosecondsPerInvocation="185280" standardDeviationMircosecondsPerInvocation="11416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1949" invocations="79" avgMicrosecondsPerInvocation="24683" maxMicrosecondsPerInvocation="273193" standardDeviationMircosecondsPerInvocation="51943"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1919" invocations="79" avgMicrosecondsPerInvocation="24303" maxMicrosecondsPerInvocation="195816" standardDeviationMircosecondsPerInvocation="44555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1569" invocations="70" avgMicrosecondsPerInvocation="22420" maxMicrosecondsPerInvocation="265624" standardDeviationMircosecondsPerInvocation="45544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1349" invocations="71" avgMicrosecondsPerInvocation="19002" maxMicrosecondsPerInvocation="194898" standardDeviationMircosecondsPerInvocation="36445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="965" invocations="64" avgMicrosecondsPerInvocation="15089" maxMicrosecondsPerInvocation="119262" standardDeviationMircosecondsPerInvocation="27057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="905" invocations="64" avgMicrosecondsPerInvocation="14140" maxMicrosecondsPerInvocation="136627" standardDeviationMircosecondsPerInvocation="27326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="892" invocations="79" avgMicrosecondsPerInvocation="11301" maxMicrosecondsPerInvocation="103487" standardDeviationMircosecondsPerInvocation="23212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="877" invocations="52" avgMicrosecondsPerInvocation="16874" maxMicrosecondsPerInvocation="196897" standardDeviationMircosecondsPerInvocation="35845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="851" invocations="64" avgMicrosecondsPerInvocation="13304" maxMicrosecondsPerInvocation="176053" standardDeviationMircosecondsPerInvocation="32122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="726" invocations="282" avgMicrosecondsPerInvocation="2577" maxMicrosecondsPerInvocation="128240" standardDeviationMircosecondsPerInvocation="9245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="639" invocations="79" avgMicrosecondsPerInvocation="8098" maxMicrosecondsPerInvocation="168168" standardDeviationMircosecondsPerInvocation="22442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="593" invocations="79" avgMicrosecondsPerInvocation="7508" maxMicrosecondsPerInvocation="195890" standardDeviationMircosecondsPerInvocation="25262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="582" invocations="79" avgMicrosecondsPerInvocation="7367" maxMicrosecondsPerInvocation="132185" standardDeviationMircosecondsPerInvocation="22091"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="518" invocations="64" avgMicrosecondsPerInvocation="8096" maxMicrosecondsPerInvocation="128560" standardDeviationMircosecondsPerInvocation="20837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="478" invocations="64" avgMicrosecondsPerInvocation="7476" maxMicrosecondsPerInvocation="84275" standardDeviationMircosecondsPerInvocation="15448"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="391" invocations="110" avgMicrosecondsPerInvocation="3563" maxMicrosecondsPerInvocation="84026" standardDeviationMircosecondsPerInvocation="12529"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

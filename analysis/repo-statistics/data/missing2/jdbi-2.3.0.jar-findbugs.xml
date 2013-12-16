@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1238780904000" analysisTimestamp="1360903627855" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/jdbi/jdbi/2.3.0/jdbi-2.3.0.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.ANTLRHashString">
+      <SourceLine classname="org.skife.jdbi.antlr.ANTLRHashString" start="23" end="106" sourcefile="ANTLRHashString.java" sourcepath="org/skife/jdbi/antlr/ANTLRHashString.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.ANTLRHashString" name="setBuffer" signature="([CI)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ANTLRHashString" start="98" end="101" startBytecode="0" endBytecode="51" sourcefile="ANTLRHashString.java" sourcepath="org/skife/jdbi/antlr/ANTLRHashString.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.ANTLRHashString" name="buf" signature="[C" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ANTLRHashString" sourcefile="ANTLRHashString.java" sourcepath="org/skife/jdbi/antlr/ANTLRHashString.java"/>
+    </Field>
+    <LocalVariable name="?" register="1" pc="2" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.ANTLRHashString" start="98" end="98" startBytecode="2" endBytecode="2" sourcefile="ANTLRHashString.java" sourcepath="org/skife/jdbi/antlr/ANTLRHashString.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" priority="1" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.skife.jdbi.antlr.ANTLRHashString">
+      <SourceLine classname="org.skife.jdbi.antlr.ANTLRHashString" start="23" end="106" sourcefile="ANTLRHashString.java" sourcepath="org/skife/jdbi/antlr/ANTLRHashString.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.ANTLRHashString" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ANTLRHashString" start="44" end="73" startBytecode="0" endBytecode="243" sourcefile="ANTLRHashString.java" sourcepath="org/skife/jdbi/antlr/ANTLRHashString.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <SourceLine classname="org.skife.jdbi.antlr.ANTLRHashString" start="44" end="44" startBytecode="8" endBytecode="8" sourcefile="ANTLRHashString.java" sourcepath="org/skife/jdbi/antlr/ANTLRHashString.java"/>
+    <SourceLine classname="org.skife.jdbi.antlr.ANTLRHashString" start="49" end="49" startBytecode="17" endBytecode="17" sourcefile="ANTLRHashString.java" sourcepath="org/skife/jdbi/antlr/ANTLRHashString.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.skife.jdbi.antlr.ANTLRHashString" start="50" end="50" startBytecode="28" endBytecode="28" sourcefile="ANTLRHashString.java" sourcepath="org/skife/jdbi/antlr/ANTLRHashString.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.ANTLRLexer">
+      <SourceLine classname="org.skife.jdbi.antlr.ANTLRLexer" start="35" end="1466" sourcefile="ANTLRLexer.java" sourcepath="org/skife/jdbi/antlr/ANTLRLexer.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.ANTLRLexer" name="mACTION" signature="(Z)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ANTLRLexer" start="1106" end="1138" startBytecode="0" endBytecode="296" sourcefile="ANTLRLexer.java" sourcepath="org/skife/jdbi/antlr/ANTLRLexer.java"/>
+    </Method>
+    <LocalVariable name="?" register="3" pc="150" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.skife.jdbi.antlr.CommonToken" name="&lt;init&gt;" signature="(ILjava/lang/String;)V" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.skife.jdbi.antlr.CommonToken" start="19" end="22" startBytecode="0" endBytecode="59" sourcefile="CommonToken.java" sourcepath="org/skife/jdbi/antlr/CommonToken.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.ANTLRLexer" start="1133" end="1133" startBytecode="151" endBytecode="151" sourcefile="ANTLRLexer.java" sourcepath="org/skife/jdbi/antlr/ANTLRLexer.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.ANTLRStringBuffer">
+      <SourceLine classname="org.skife.jdbi.antlr.ANTLRStringBuffer" start="14" end="80" sourcefile="ANTLRStringBuffer.java" sourcepath="org/skife/jdbi/antlr/ANTLRStringBuffer.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.ANTLRStringBuffer" name="getBuffer" signature="()[C" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ANTLRStringBuffer" start="57" end="57" startBytecode="0" endBytecode="28" sourcefile="ANTLRStringBuffer.java" sourcepath="org/skife/jdbi/antlr/ANTLRStringBuffer.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.ANTLRStringBuffer" name="buffer" signature="[C" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ANTLRStringBuffer" sourcefile="ANTLRStringBuffer.java" sourcepath="org/skife/jdbi/antlr/ANTLRStringBuffer.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.ANTLRStringBuffer" start="57" end="57" startBytecode="4" endBytecode="4" sourcefile="ANTLRStringBuffer.java" sourcepath="org/skife/jdbi/antlr/ANTLRStringBuffer.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_NULL_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.skife.jdbi.antlr.ActionTransInfo">
+      <SourceLine classname="org.skife.jdbi.antlr.ActionTransInfo" start="14" end="20" sourcefile="ActionTransInfo.java" sourcepath="org/skife/jdbi/antlr/ActionTransInfo.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.ActionTransInfo" name="followSetName" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ActionTransInfo" sourcefile="ActionTransInfo.java" sourcepath="org/skife/jdbi/antlr/ActionTransInfo.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UWF_NULL_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.skife.jdbi.antlr.Alternative">
+      <SourceLine classname="org.skife.jdbi.antlr.Alternative" start="34" end="72" sourcefile="Alternative.java" sourcepath="org/skife/jdbi/antlr/Alternative.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Alternative" name="treeSpecifier" signature="Lorg/skife/jdbi/antlr/Token;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Alternative" sourcefile="Alternative.java" sourcepath="org/skife/jdbi/antlr/Alternative.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Alternative">
+      <SourceLine classname="org.skife.jdbi.antlr.Alternative" start="34" end="72" sourcefile="Alternative.java" sourcepath="org/skife/jdbi/antlr/Alternative.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Alternative" name="exceptionSpec" signature="Lorg/skife/jdbi/antlr/ExceptionSpec;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Alternative" sourcefile="Alternative.java" sourcepath="org/skife/jdbi/antlr/Alternative.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.LLkAnalyzer" start="1074" end="1074" startBytecode="73" endBytecode="73" sourcefile="LLkAnalyzer.java" sourcepath="org/skife/jdbi/antlr/LLkAnalyzer.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Alternative">
+      <SourceLine classname="org.skife.jdbi.antlr.Alternative" start="34" end="72" sourcefile="Alternative.java" sourcepath="org/skife/jdbi/antlr/Alternative.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Alternative" name="semPred" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Alternative" sourcefile="Alternative.java" sourcepath="org/skife/jdbi/antlr/Alternative.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="210" end="210" startBytecode="243" endBytecode="243" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Alternative">
+      <SourceLine classname="org.skife.jdbi.antlr.Alternative" start="34" end="72" sourcefile="Alternative.java" sourcepath="org/skife/jdbi/antlr/Alternative.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Alternative" name="synPred" signature="Lorg/skife/jdbi/antlr/SynPredBlock;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Alternative" sourcefile="Alternative.java" sourcepath="org/skife/jdbi/antlr/Alternative.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.LLkAnalyzer" start="135" end="135" startBytecode="588" endBytecode="588" sourcefile="LLkAnalyzer.java" sourcepath="org/skife/jdbi/antlr/LLkAnalyzer.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.AlternativeBlock">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="14" end="223" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.AlternativeBlock" name="toString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="186" end="223" startBytecode="0" endBytecode="502" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="204" end="204" startBytecode="189" endBytecode="189" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.AlternativeBlock">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="14" end="223" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.AlternativeBlock" name="ID" signature="I" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="26" end="26" startBytecode="22" endBytecode="22" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.AlternativeBlock">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="14" end="223" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.AlternativeBlock" name="altj" signature="I" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.LLkAnalyzer" start="87" end="87" startBytecode="204" endBytecode="204" sourcefile="LLkAnalyzer.java" sourcepath="org/skife/jdbi/antlr/LLkAnalyzer.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.AlternativeBlock">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="14" end="223" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.AlternativeBlock" name="hasASynPred" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="24" end="24" startBytecode="17" endBytecode="17" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.AlternativeBlock">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="14" end="223" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.AlternativeBlock" name="hasAnAction" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.AlternativeBlock" start="23" end="23" startBytecode="12" endBytecode="12" sourcefile="AlternativeBlock.java" sourcepath="org/skife/jdbi/antlr/AlternativeBlock.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UuF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.AlternativeElement">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeElement" start="12" end="42" sourcefile="AlternativeElement.java" sourcepath="org/skife/jdbi/antlr/AlternativeElement.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.AlternativeElement" name="enclosingRuleName" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.AlternativeElement" sourcefile="AlternativeElement.java" sourcepath="org/skife/jdbi/antlr/AlternativeElement.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="NP_UNWRITTEN_FIELD" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.skife.jdbi.antlr.BlockContext">
+      <SourceLine classname="org.skife.jdbi.antlr.BlockContext" start="15" end="30" sourcefile="BlockContext.java" sourcepath="org/skife/jdbi/antlr/BlockContext.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.BlockContext" name="currentAlt" signature="()Lorg/skife/jdbi/antlr/Alternative;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.BlockContext" start="26" end="26" startBytecode="0" endBytecode="41" sourcefile="BlockContext.java" sourcepath="org/skife/jdbi/antlr/BlockContext.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.BlockContext" name="block" signature="Lorg/skife/jdbi/antlr/AlternativeBlock;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.BlockContext" sourcefile="BlockContext.java" sourcepath="org/skife/jdbi/antlr/BlockContext.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.BlockContext" start="26" end="26" startBytecode="4" endBytecode="4" sourcefile="BlockContext.java" sourcepath="org/skife/jdbi/antlr/BlockContext.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.BlockContext">
+      <SourceLine classname="org.skife.jdbi.antlr.BlockContext" start="15" end="30" sourcefile="BlockContext.java" sourcepath="org/skife/jdbi/antlr/BlockContext.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.BlockContext" name="blockEnd" signature="Lorg/skife/jdbi/antlr/BlockEndElement;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.BlockContext" sourcefile="BlockContext.java" sourcepath="org/skife/jdbi/antlr/BlockContext.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.skife.jdbi.antlr.BlockContext">
+      <SourceLine classname="org.skife.jdbi.antlr.BlockContext" start="15" end="30" sourcefile="BlockContext.java" sourcepath="org/skife/jdbi/antlr/BlockContext.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.BlockContext" name="block" signature="Lorg/skife/jdbi/antlr/AlternativeBlock;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.BlockContext" sourcefile="BlockContext.java" sourcepath="org/skife/jdbi/antlr/BlockContext.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.BlockContext" start="26" end="26" startBytecode="1" endBytecode="1" sourcefile="BlockContext.java" sourcepath="org/skife/jdbi/antlr/BlockContext.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UwF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.BlockEndElement">
+      <SourceLine classname="org.skife.jdbi.antlr.BlockEndElement" start="19" end="29" sourcefile="BlockEndElement.java" sourcepath="org/skife/jdbi/antlr/BlockEndElement.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.BlockEndElement" name="block" signature="Lorg/skife/jdbi/antlr/AlternativeBlock;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.BlockEndElement" sourcefile="BlockEndElement.java" sourcepath="org/skife/jdbi/antlr/BlockEndElement.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.LLkAnalyzer" start="567" end="567" startBytecode="34" endBytecode="34" sourcefile="LLkAnalyzer.java" sourcepath="org/skife/jdbi/antlr/LLkAnalyzer.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.ExceptionHandler">
+      <SourceLine classname="org.skife.jdbi.antlr.ExceptionHandler" start="18" end="21" sourcefile="ExceptionHandler.java" sourcepath="org/skife/jdbi/antlr/ExceptionHandler.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.ExceptionHandler" name="action" signature="Lorg/skife/jdbi/antlr/Token;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ExceptionHandler" sourcefile="ExceptionHandler.java" sourcepath="org/skife/jdbi/antlr/ExceptionHandler.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.ExceptionHandler" start="20" end="20" startBytecode="11" endBytecode="11" sourcefile="ExceptionHandler.java" sourcepath="org/skife/jdbi/antlr/ExceptionHandler.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.ExceptionHandler">
+      <SourceLine classname="org.skife.jdbi.antlr.ExceptionHandler" start="18" end="21" sourcefile="ExceptionHandler.java" sourcepath="org/skife/jdbi/antlr/ExceptionHandler.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.ExceptionHandler" name="exceptionTypeAndName" signature="Lorg/skife/jdbi/antlr/Token;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ExceptionHandler" sourcefile="ExceptionHandler.java" sourcepath="org/skife/jdbi/antlr/ExceptionHandler.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.ExceptionHandler" start="19" end="19" startBytecode="6" endBytecode="6" sourcefile="ExceptionHandler.java" sourcepath="org/skife/jdbi/antlr/ExceptionHandler.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.ExceptionSpec">
+      <SourceLine classname="org.skife.jdbi.antlr.ExceptionSpec" start="21" end="28" sourcefile="ExceptionSpec.java" sourcepath="org/skife/jdbi/antlr/ExceptionSpec.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.ExceptionSpec" name="label" signature="Lorg/skife/jdbi/antlr/Token;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ExceptionSpec" sourcefile="ExceptionSpec.java" sourcepath="org/skife/jdbi/antlr/ExceptionSpec.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.ExceptionSpec" start="22" end="22" startBytecode="6" endBytecode="6" sourcefile="ExceptionSpec.java" sourcepath="org/skife/jdbi/antlr/ExceptionSpec.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.Grammar" name="setOption" signature="(Ljava/lang/String;Lorg/skife/jdbi/antlr/Token;)Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="175" end="267" startBytecode="0" endBytecode="245" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Method>
+    <LocalVariable name="?" register="5" pc="97" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="197" end="197" startBytecode="160" endBytecode="160" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="206" end="206" startBytecode="205" endBytecode="205" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.EXCEPTION_HANDLER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="buildAST" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="26" startBytecode="6" endBytecode="6" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="classMemberAction" signature="Lorg/skife/jdbi/antlr/Token;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="55" end="55" startBytecode="69" endBytecode="69" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="comment" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="67" end="67" startBytecode="104" endBytecode="104" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="exportVocab" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="41" end="41" startBytecode="26" endBytecode="26" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="hasSyntacticPredicate" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="56" end="56" startBytecode="74" endBytecode="74" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="hasUserErrorHandling" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="57" end="57" startBytecode="79" endBytecode="79" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="importVocab" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="45" end="45" startBytecode="31" endBytecode="31" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="interactive" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="28" end="28" startBytecode="16" endBytecode="16" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="preambleAction" signature="Lorg/skife/jdbi/antlr/Token;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="52" end="52" startBytecode="45" endBytecode="45" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="superClass" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="29" end="29" startBytecode="21" endBytecode="21" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.Grammar">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="26" end="285" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Grammar" name="traceRules" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.Grammar" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Grammar" start="63" end="63" startBytecode="89" endBytecode="89" sourcefile="Grammar.java" sourcepath="org/skife/jdbi/antlr/Grammar.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.skife.jdbi.antlr.ImportVocabTokenManager">
+      <SourceLine classname="org.skife.jdbi.antlr.ImportVocabTokenManager" start="25" end="99" sourcefile="ImportVocabTokenManager.java" sourcepath="org/skife/jdbi/antlr/ImportVocabTokenManager.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.ImportVocabTokenManager" name="&lt;init&gt;" signature="(Lorg/skife/jdbi/antlr/Grammar;Ljava/lang/String;Ljava/lang/String;Lorg/skife/jdbi/antlr/Tool;)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.ImportVocabTokenManager" start="25" end="63" startBytecode="0" endBytecode="438" sourcefile="ImportVocabTokenManager.java" sourcepath="org/skife/jdbi/antlr/ImportVocabTokenManager.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.ImportVocabTokenManager" start="47" end="47" startBytecode="115" endBytecode="115" sourcefile="ImportVocabTokenManager.java" sourcepath="org/skife/jdbi/antlr/ImportVocabTokenManager.java"/>
+  </BugInstance>
+  <BugInstance type="SA_FIELD_DOUBLE_ASSIGNMENT" priority="2" abbrev="SA" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="22" end="33" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="22" end="26" startBytecode="0" endBytecode="64" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" name="generatedSwitch" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Field>
+    <Field classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" name="generatedAnIf" signature="Z" isStatic="false" role="FIELD_DID_YOU_MEAN">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="24" end="24" startBytecode="16" endBytecode="16" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="22" end="33" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" name="generatedAnIf" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="31" end="31" startBytecode="16" endBytecode="16" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="22" end="33" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" name="generatedSwitch" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="24" end="24" startBytecode="13" endBytecode="13" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="22" end="33" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" name="needAnErrorClause" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="25" end="25" startBytecode="21" endBytecode="21" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="22" end="33" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" name="postscript" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.JavaBlockFinishingInfo" start="23" end="23" startBytecode="6" endBytecode="6" sourcefile="JavaBlockFinishingInfo.java" sourcepath="org/skife/jdbi/antlr/JavaBlockFinishingInfo.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_VOID_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.JavaCharFormatter">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaCharFormatter" start="10" end="85" sourcefile="JavaCharFormatter.java" sourcepath="org/skife/jdbi/antlr/JavaCharFormatter.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.JavaCharFormatter" name="escapeString" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaCharFormatter" start="62" end="66" startBytecode="0" endBytecode="93" sourcefile="JavaCharFormatter.java" sourcepath="org/skife/jdbi/antlr/JavaCharFormatter.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.JavaCharFormatter" start="62" end="62" startBytecode="4" endBytecode="4" sourcefile="JavaCharFormatter.java" sourcepath="org/skife/jdbi/antlr/JavaCharFormatter.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.JavaCharFormatter">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaCharFormatter" start="10" end="85" sourcefile="JavaCharFormatter.java" sourcepath="org/skife/jdbi/antlr/JavaCharFormatter.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.JavaCharFormatter" name="escapeString" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.JavaCharFormatter" start="62" end="66" startBytecode="0" endBytecode="93" sourcefile="JavaCharFormatter.java" sourcepath="org/skife/jdbi/antlr/JavaCharFormatter.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.JavaCharFormatter" start="64" end="64" startBytecode="18" endBytecode="18" sourcefile="JavaCharFormatter.java" sourcepath="org/skife/jdbi/antlr/JavaCharFormatter.java"/>
+  </BugInstance>
+  <BugInstance type="NP_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.LLkAnalyzer">
+      <SourceLine classname="org.skife.jdbi.antlr.LLkAnalyzer" start="23" end="1093" sourcefile="LLkAnalyzer.java" sourcepath="org/skife/jdbi/antlr/LLkAnalyzer.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.LLkAnalyzer" name="look" signature="(ILorg/skife/jdbi/antlr/BlockEndElement;)Lorg/skife/jdbi/antlr/Lookahead;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.LLkAnalyzer" start="567" end="618" startBytecode="0" endBytecode="271" sourcefile="LLkAnalyzer.java" sourcepath="org/skife/jdbi/antlr/LLkAnalyzer.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.BlockEndElement" name="block" signature="Lorg/skife/jdbi/antlr/AlternativeBlock;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.BlockEndElement" sourcefile="BlockEndElement.java" sourcepath="org/skife/jdbi/antlr/BlockEndElement.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.LLkAnalyzer" start="614" end="614" startBytecode="175" endBytecode="175" sourcefile="LLkAnalyzer.java" sourcepath="org/skife/jdbi/antlr/LLkAnalyzer.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.LexerGrammar">
+      <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" start="22" end="176" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.LexerGrammar" name="caseSensitive" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" start="26" end="26" startBytecode="19" endBytecode="19" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.LexerGrammar">
+      <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" start="22" end="176" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.LexerGrammar" name="caseSensitiveLiterals" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" start="24" end="24" startBytecode="14" endBytecode="14" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.LexerGrammar">
+      <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" start="22" end="176" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.LexerGrammar" name="filterMode" signature="Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" start="28" end="28" startBytecode="24" endBytecode="24" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.LexerGrammar">
+      <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" start="22" end="176" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.LexerGrammar" name="filterRule" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.LexerGrammar" start="34" end="34" startBytecode="29" endBytecode="29" sourcefile="LexerGrammar.java" sourcepath="org/skife/jdbi/antlr/LexerGrammar.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.MismatchedTokenException">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="21" end="169" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.MismatchedTokenException" name="&lt;init&gt;" signature="([Ljava/lang/String;Lorg/skife/jdbi/antlr/Token;IIZLjava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="95" end="102" startBytecode="0" endBytecode="120" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.MismatchedTokenException" name="tokenNames" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Field>
+    <LocalVariable name="?" register="1" pc="23" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="96" end="96" startBytecode="23" endBytecode="23" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.MismatchedTokenException">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="21" end="169" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.MismatchedTokenException" name="&lt;init&gt;" signature="([Ljava/lang/String;Lorg/skife/jdbi/antlr/Token;IZLjava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="106" end="112" startBytecode="0" endBytecode="110" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.MismatchedTokenException" name="tokenNames" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Field>
+    <LocalVariable name="?" register="1" pc="23" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="107" end="107" startBytecode="23" endBytecode="23" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.MismatchedTokenException">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="21" end="169" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.MismatchedTokenException" name="&lt;init&gt;" signature="([Ljava/lang/String;Lorg/skife/jdbi/antlr/Token;Lorg/skife/jdbi/antlr/collections/impl/BitSet;ZLjava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="116" end="122" startBytecode="0" endBytecode="111" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.MismatchedTokenException" name="tokenNames" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Field>
+    <LocalVariable name="?" register="1" pc="23" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="117" end="117" startBytecode="23" endBytecode="23" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.MismatchedTokenException">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="21" end="169" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.MismatchedTokenException" name="&lt;init&gt;" signature="([Ljava/lang/String;Lorg/skife/jdbi/antlr/collections/AST;IIZ)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="49" end="61" startBytecode="0" endBytecode="161" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.MismatchedTokenException" name="tokenNames" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Field>
+    <LocalVariable name="?" register="1" pc="43" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="50" end="50" startBytecode="43" endBytecode="43" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.MismatchedTokenException">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="21" end="169" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.MismatchedTokenException" name="&lt;init&gt;" signature="([Ljava/lang/String;Lorg/skife/jdbi/antlr/collections/AST;IZ)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="65" end="76" startBytecode="0" endBytecode="151" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.MismatchedTokenException" name="tokenNames" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Field>
+    <LocalVariable name="?" register="1" pc="43" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="66" end="66" startBytecode="43" endBytecode="43" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.MismatchedTokenException">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="21" end="169" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.MismatchedTokenException" name="&lt;init&gt;" signature="([Ljava/lang/String;Lorg/skife/jdbi/antlr/collections/AST;Lorg/skife/jdbi/antlr/collections/impl/BitSet;Z)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="80" end="91" startBytecode="0" endBytecode="152" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.MismatchedTokenException" name="tokenNames" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+    </Field>
+    <LocalVariable name="?" register="1" pc="43" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.MismatchedTokenException" start="81" end="81" startBytecode="43" endBytecode="43" sourcefile="MismatchedTokenException.java" sourcepath="org/skife/jdbi/antlr/MismatchedTokenException.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.NameSpace">
+      <SourceLine classname="org.skife.jdbi.antlr.NameSpace" start="22" end="63" sourcefile="NameSpace.java" sourcepath="org/skife/jdbi/antlr/NameSpace.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.NameSpace" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.NameSpace" start="25" end="28" startBytecode="0" endBytecode="72" sourcefile="NameSpace.java" sourcepath="org/skife/jdbi/antlr/NameSpace.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.NameSpace" start="26" end="26" startBytecode="21" endBytecode="21" sourcefile="NameSpace.java" sourcepath="org/skife/jdbi/antlr/NameSpace.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.skife.jdbi.antlr.PreservingFileWriter">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="24" end="137" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.PreservingFileWriter" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="56" end="137" startBytecode="0" endBytecode="572" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="73" end="73" startBytecode="51" endBytecode="51" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.skife.jdbi.antlr.PreservingFileWriter">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="24" end="137" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.PreservingFileWriter" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="56" end="137" startBytecode="0" endBytecode="572" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="74" end="74" startBytecode="70" endBytecode="70" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.skife.jdbi.antlr.PreservingFileWriter">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="24" end="137" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.PreservingFileWriter" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="56" end="137" startBytecode="0" endBytecode="572" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="108" end="108" startBytecode="201" endBytecode="201" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.skife.jdbi.antlr.PreservingFileWriter">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="24" end="137" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.PreservingFileWriter" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="56" end="137" startBytecode="0" endBytecode="572" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="109" end="109" startBytecode="220" endBytecode="220" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.skife.jdbi.antlr.PreservingFileWriter">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="24" end="137" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.PreservingFileWriter" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="24" end="49" startBytecode="0" endBytecode="288" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Method>
+    <Class classname="java.io.Writer" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.Writer" start="33" end="277" sourcefile="Writer.java" sourcepath="java/io/Writer.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="24" end="24" startBytecode="20" endBytecode="20" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="27" end="27" startBytecode="23" endBytecode="23" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="29" end="29" startBytecode="35" endBytecode="35" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="30" end="30" startBytecode="43" endBytecode="43" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="39" end="39" startBytecode="134" endBytecode="134" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="43" end="43" startBytecode="186" endBytecode="186" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="49" end="49" startBytecode="216" endBytecode="216" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Writer x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.skife.jdbi.antlr.PreservingFileWriter">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="24" end="137" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.PreservingFileWriter" name="close" signature="()V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="56" end="137" startBytecode="0" endBytecode="572" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.PreservingFileWriter" start="133" end="133" startBytecode="321" endBytecode="321" sourcefile="PreservingFileWriter.java" sourcepath="org/skife/jdbi/antlr/PreservingFileWriter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_VOID_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.StringLiteralElement">
+      <SourceLine classname="org.skife.jdbi.antlr.StringLiteralElement" start="16" end="63" sourcefile="StringLiteralElement.java" sourcepath="org/skife/jdbi/antlr/StringLiteralElement.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.StringLiteralElement" name="&lt;init&gt;" signature="(Lorg/skife/jdbi/antlr/Grammar;Lorg/skife/jdbi/antlr/Token;I)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.StringLiteralElement" start="16" end="56" startBytecode="0" endBytecode="401" sourcefile="StringLiteralElement.java" sourcepath="org/skife/jdbi/antlr/StringLiteralElement.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.StringLiteralElement" start="31" end="31" startBytecode="106" endBytecode="106" sourcefile="StringLiteralElement.java" sourcepath="org/skife/jdbi/antlr/StringLiteralElement.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.StringLiteralElement">
+      <SourceLine classname="org.skife.jdbi.antlr.StringLiteralElement" start="16" end="63" sourcefile="StringLiteralElement.java" sourcepath="org/skife/jdbi/antlr/StringLiteralElement.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.StringLiteralElement" name="&lt;init&gt;" signature="(Lorg/skife/jdbi/antlr/Grammar;Lorg/skife/jdbi/antlr/Token;I)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.StringLiteralElement" start="16" end="56" startBytecode="0" endBytecode="401" sourcefile="StringLiteralElement.java" sourcepath="org/skife/jdbi/antlr/StringLiteralElement.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.StringLiteralElement" start="38" end="46" startBytecode="179" endBytecode="229" sourcefile="StringLiteralElement.java" sourcepath="org/skife/jdbi/antlr/StringLiteralElement.java"/>
+  </BugInstance>
+  <BugInstance type="CN_IDIOM" priority="2" abbrev="CN" category="BAD_PRACTICE">
+    <Class classname="org.skife.jdbi.antlr.Token">
+      <SourceLine classname="org.skife.jdbi.antlr.Token" start="22" end="76" sourcefile="Token.java" sourcepath="org/skife/jdbi/antlr/Token.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.Token">
+      <SourceLine classname="org.skife.jdbi.antlr.Token" start="22" end="76" sourcefile="Token.java" sourcepath="org/skife/jdbi/antlr/Token.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.Token" name="badToken" signature="Lorg/skife/jdbi/antlr/Token;" isStatic="true">
+      <SourceLine classname="org.skife.jdbi.antlr.Token" sourcefile="Token.java" sourcepath="org/skife/jdbi/antlr/Token.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.Token" start="25" end="25" startBytecode="10" endBytecode="10" sourcefile="Token.java" sourcepath="org/skife/jdbi/antlr/Token.java"/>
+  </BugInstance>
+  <BugInstance type="MF_CLASS_MASKS_FIELD" priority="1" abbrev="MF" category="CORRECTNESS">
+    <Class classname="org.skife.jdbi.antlr.WildcardElement">
+      <SourceLine classname="org.skife.jdbi.antlr.WildcardElement" start="14" end="37" sourcefile="WildcardElement.java" sourcepath="org/skife/jdbi/antlr/WildcardElement.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.WildcardElement" name="label" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKING">
+      <SourceLine classname="org.skife.jdbi.antlr.WildcardElement" sourcefile="WildcardElement.java" sourcepath="org/skife/jdbi/antlr/WildcardElement.java"/>
+    </Field>
+    <Field classname="org.skife.jdbi.antlr.GrammarAtom" name="label" signature="Ljava/lang/String;" isStatic="false" role="FIELD_MASKED">
+      <SourceLine classname="org.skife.jdbi.antlr.GrammarAtom" sourcefile="GrammarAtom.java" sourcepath="org/skife/jdbi/antlr/GrammarAtom.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.actions.java.ActionLexer">
+      <SourceLine classname="org.skife.jdbi.antlr.actions.java.ActionLexer" start="59" end="2468" sourcefile="ActionLexer.java" sourcepath="org/skife/jdbi/antlr/actions/java/ActionLexer.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.actions.java.ActionLexer" name="mTREE" signature="(Z)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.actions.java.ActionLexer" start="657" end="808" startBytecode="0" endBytecode="256" sourcefile="ActionLexer.java" sourcepath="org/skife/jdbi/antlr/actions/java/ActionLexer.java"/>
+    </Method>
+    <LocalVariable name="?" register="8" pc="29" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.actions.java.ActionLexer" start="663" end="663" startBytecode="27" endBytecode="27" sourcefile="ActionLexer.java" sourcepath="org/skife/jdbi/antlr/actions/java/ActionLexer.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.actions.java.ActionLexer">
+      <SourceLine classname="org.skife.jdbi.antlr.actions.java.ActionLexer" start="59" end="2468" sourcefile="ActionLexer.java" sourcepath="org/skife/jdbi/antlr/actions/java/ActionLexer.java"/>
+    </Class>
+    <Field classname="org.skife.jdbi.antlr.actions.java.ActionLexer" name="lineOffset" signature="I" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.actions.java.ActionLexer" sourcefile="ActionLexer.java" sourcepath="org/skife/jdbi/antlr/actions/java/ActionLexer.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.actions.java.ActionLexer" start="59" end="59" startBytecode="7" endBytecode="7" sourcefile="ActionLexer.java" sourcepath="org/skife/jdbi/antlr/actions/java/ActionLexer.java"/>
+  </BugInstance>
+  <BugInstance type="BC_VACUOUS_INSTANCEOF" priority="2" abbrev="BC" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="subset" signature="(Lorg/skife/jdbi/antlr/collections/impl/BitSet;)Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="311" end="312" startBytecode="0" endBytecode="12" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <Type descriptor="Lorg/skife/jdbi/antlr/collections/impl/BitSet;" role="TYPE_FOUND">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Type>
+    <Type descriptor="Lorg/skife/jdbi/antlr/collections/impl/BitSet;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Type>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="311" end="311" startBytecode="5" endBytecode="5" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="getRanges" signature="([I)Lorg/skife/jdbi/antlr/collections/impl/Vector;" isStatic="true">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="170" end="196" startBytecode="0" endBytecode="85" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <LocalVariable name="?" register="1" pc="11" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="173" end="173" startBytecode="10" endBytecode="10" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="174" end="174" startBytecode="17" endBytecode="17" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_VOID_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="toStringOfHalfWords" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="417" end="428" startBytecode="0" endBytecode="215" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="417" end="417" startBytecode="4" endBytecode="4" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_VOID_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="toStringOfWords" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="436" end="441" startBytecode="0" endBytecode="123" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="436" end="436" startBytecode="4" endBytecode="4" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="toPackedArray" signature="()[J" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="338" end="338" startBytecode="0" endBytecode="28" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="bits" signature="[J" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Field>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="338" end="338" startBytecode="4" endBytecode="4" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="&lt;init&gt;" signature="([J)V" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="48" end="50" startBytecode="0" endBytecode="41" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <Field classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="bits" signature="[J" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Field>
+    <LocalVariable name="?" register="1" pc="6" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="49" end="49" startBytecode="6" endBytecode="6" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="137" end="162" startBytecode="0" endBytecode="232" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="toString" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="350" end="359" startBytecode="0" endBytecode="129" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="356" end="356" startBytecode="51" endBytecode="51" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="toString" signature="(Ljava/lang/String;Lorg/skife/jdbi/antlr/CharFormatter;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="368" end="378" startBytecode="0" endBytecode="139" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="375" end="375" startBytecode="54" endBytecode="54" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="toString" signature="(Ljava/lang/String;Lorg/skife/jdbi/antlr/collections/impl/Vector;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="388" end="408" startBytecode="0" endBytecode="258" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="404" end="404" startBytecode="148" endBytecode="148" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="toStringOfHalfWords" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="417" end="428" startBytecode="0" endBytecode="215" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="426" end="426" startBytecode="116" endBytecode="116" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="toStringOfWords" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="436" end="441" startBytecode="0" endBytecode="123" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="439" end="439" startBytecode="43" endBytecode="43" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.skife.jdbi.antlr.collections.impl.BitSet">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="44" end="481" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.antlr.collections.impl.BitSet" name="toStringWithRanges" signature="(Ljava/lang/String;Lorg/skife/jdbi/antlr/CharFormatter;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="446" end="477" startBytecode="0" endBytecode="340" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.antlr.collections.impl.BitSet" start="473" end="473" startBytecode="196" endBytecode="196" sourcefile="BitSet.java" sourcepath="org/skife/jdbi/antlr/collections/impl/BitSet.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.skife.jdbi.v2.Batch">
+      <SourceLine classname="org.skife.jdbi.v2.Batch" start="36" end="125" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.v2.Batch" name="execute" signature="()[I" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.v2.Batch" start="80" end="125" startBytecode="0" endBytecode="505" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.skife.jdbi.v2.Batch" start="88" end="88" startBytecode="30" endBytecode="30" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.skife.jdbi.v2.Batch" start="93" end="93" startBytecode="36" endBytecode="36" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.Batch" start="95" end="95" startBytecode="49" endBytecode="49" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.Batch" start="98" end="98" startBytecode="59" endBytecode="59" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.Batch" start="108" end="108" startBytecode="134" endBytecode="134" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.Batch" start="112" end="112" startBytecode="151" endBytecode="151" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.Batch" start="113" end="113" startBytecode="156" endBytecode="156" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.Batch" start="114" end="114" startBytecode="164" endBytecode="164" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.Batch" start="115" end="115" startBytecode="176" endBytecode="176" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.Batch" start="125" end="125" startBytecode="180" endBytecode="180" sourcefile="Batch.java" sourcepath="org/skife/jdbi/v2/Batch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="SQL_BAD_RESULTSET_ACCESS" priority="2" abbrev="SQL" category="CORRECTNESS">
+    <Class classname="org.skife.jdbi.v2.CaseInsensitiveMapResultSetMapper">
+      <SourceLine classname="org.skife.jdbi.v2.CaseInsensitiveMapResultSetMapper" start="28" end="62" sourcefile="CaseInsensitiveMapResultSetMapper.java" sourcepath="org/skife/jdbi/v2/CaseInsensitiveMapResultSetMapper.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.v2.CaseInsensitiveMapResultSetMapper" name="map" signature="(ILjava/sql/ResultSet;Lorg/skife/jdbi/v2/StatementContext;)Ljava/util/Map;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.v2.CaseInsensitiveMapResultSetMapper" start="33" end="59" startBytecode="0" endBytecode="381" sourcefile="CaseInsensitiveMapResultSetMapper.java" sourcepath="org/skife/jdbi/v2/CaseInsensitiveMapResultSetMapper.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.v2.CaseInsensitiveMapResultSetMapper" start="50" end="50" startBytecode="75" endBytecode="75" sourcefile="CaseInsensitiveMapResultSetMapper.java" sourcepath="org/skife/jdbi/v2/CaseInsensitiveMapResultSetMapper.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.skife.jdbi.v2.ClasspathStatementLocator">
+      <SourceLine classname="org.skife.jdbi.v2.ClasspathStatementLocator" start="30" end="120" sourcefile="ClasspathStatementLocator.java" sourcepath="org/skife/jdbi/v2/ClasspathStatementLocator.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.v2.ClasspathStatementLocator" name="locate" signature="(Ljava/lang/String;Lorg/skife/jdbi/v2/StatementContext;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.v2.ClasspathStatementLocator" start="64" end="98" startBytecode="0" endBytecode="354" sourcefile="ClasspathStatementLocator.java" sourcepath="org/skife/jdbi/v2/ClasspathStatementLocator.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.v2.ClasspathStatementLocator" start="78" end="78" startBytecode="67" endBytecode="67" sourcefile="ClasspathStatementLocator.java" sourcepath="org/skife/jdbi/v2/ClasspathStatementLocator.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.skife.jdbi.v2.ColonPrefixNamedParamStatementRewriter">
+      <SourceLine classname="org.skife.jdbi.v2.ColonPrefixNamedParamStatementRewriter" start="40" end="160" sourcefile="ColonPrefixNamedParamStatementRewriter.java" sourcepath="org/skife/jdbi/v2/ColonPrefixNamedParamStatementRewriter.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.v2.ColonPrefixNamedParamStatementRewriter" name="rewrite" signature="(Ljava/lang/String;Lorg/skife/jdbi/v2/Binding;Lorg/skife/jdbi/v2/StatementContext;)Lorg/skife/jdbi/v2/tweak/RewrittenStatement;" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.v2.ColonPrefixNamedParamStatementRewriter" start="54" end="86" startBytecode="0" endBytecode="436" sourcefile="ColonPrefixNamedParamStatementRewriter.java" sourcepath="org/skife/jdbi/v2/ColonPrefixNamedParamStatementRewriter.java"/>
+    </Method>
+    <SourceLine classname="org.skife.jdbi.v2.ColonPrefixNamedParamStatementRewriter" start="60" end="76" startBytecode="57" endBytecode="179" sourcefile="ColonPrefixNamedParamStatementRewriter.java" sourcepath="org/skife/jdbi/v2/ColonPrefixNamedParamStatementRewriter.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.skife.jdbi.v2.PreparedBatch">
+      <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="42" end="190" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java"/>
+    </Class>
+    <Method classname="org.skife.jdbi.v2.PreparedBatch" name="execute" signature="()[I" isStatic="false">
+      <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="87" end="130" startBytecode="0" endBytecode="631" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="102" end="102" startBytecode="109" endBytecode="109" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="106" end="106" startBytecode="116" endBytecode="116" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="109" end="109" startBytecode="131" endBytecode="131" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="116" end="116" startBytecode="187" endBytecode="187" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="119" end="119" startBytecode="204" endBytecode="204" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="120" end="120" startBytecode="209" endBytecode="209" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="121" end="121" startBytecode="218" endBytecode="218" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="122" end="122" startBytecode="248" endBytecode="248" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="129" end="129" startBytecode="252" endBytecode="252" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.skife.jdbi.v2.PreparedBatch" start="130" end="130" startBytecode="264" endBytecode="264" sourcefile="PreparedBatch.java" sourcepath="org/skife/jdbi/v2/PreparedBatch.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>org.antlr.stringtemplate.StringTemplate</MissingClass>
+    <MissingClass>org.antlr.stringtemplate.StringTemplateErrorListener</MissingClass>
+    <MissingClass>org.antlr.stringtemplate.StringTemplateGroup</MissingClass>
+    <MissingClass>org.antlr.stringtemplate.StringTemplateGroupInterface</MissingClass>
+    <MissingClass>org.antlr.stringtemplate.StringTemplateGroupLoader</MissingClass>
+    <MissingClass>org.apache.log4j.Level</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.ANTLRTokdefParser</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.ANTLRTokdefParserTokenTypes</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.ASdebug.ASDebugStream</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.ASdebug.IASDebugStream</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.CodeGenerator</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.RuleBlock</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.RuleEndElement</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.RuleRefElement</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.RuleSymbol</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.Tool</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.TreeElement</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.TreeParser</MissingClass>
+    <MissingClass>org.skife.jdbi.antlr.collections.AST</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DataSourceUtils</MissingClass>
+    <MissingClass>org.springframework.transaction.support.TransactionSynchronizationAdapter</MissingClass>
+    <MissingClass>org.springframework.transaction.support.TransactionSynchronizationManager</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 3 Apr 2009 20:48:24 +0300" total_classes="257" referenced_classes="396" total_bugs="85" total_size="8775" num_packages="16" vm_version="20.4-b02-402" cpu_seconds="54.42" clock_seconds="27.65" peak_mbytes="115.31" alloc_mbytes="763.88" gc_seconds="1.07" priority_2="74" priority_1="11">
+    <PackageStats package="org.skife.jdbi.antlr" total_bugs="65" total_types="80" total_size="4111" priority_2="57" priority_1="8">
+      <ClassStats class="org.skife.jdbi.antlr.ANTLRError" sourceFile="ANTLRError.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.ANTLRException" sourceFile="ANTLRException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.ANTLRHashString" sourceFile="ANTLRHashString.java" interface="false" size="59" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.ANTLRLexer" sourceFile="ANTLRLexer.java" interface="false" size="776" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.ANTLRStringBuffer" sourceFile="ANTLRStringBuffer.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.ANTLRTokdefLexer" sourceFile="ANTLRTokdefLexer.java" interface="false" size="303" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.ANTLRTokenTypes" sourceFile="ANTLRTokenTypes.java" interface="true" size="63" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.ActionElement" sourceFile="ActionElement.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.ActionTransInfo" sourceFile="ActionTransInfo.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.Alternative" sourceFile="Alternative.java" interface="false" size="33" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.AlternativeBlock" sourceFile="AlternativeBlock.java" interface="false" size="142" bugs="5" priority_2="5"/>
+      <ClassStats class="org.skife.jdbi.antlr.AlternativeElement" sourceFile="AlternativeElement.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.BlockContext" sourceFile="BlockContext.java" interface="false" size="13" bugs="3" priority_2="3"/>
+      <ClassStats class="org.skife.jdbi.antlr.BlockEndElement" sourceFile="BlockEndElement.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.BlockWithImpliedExitPath" sourceFile="BlockWithImpliedExitPath.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.ByteBuffer" sourceFile="ByteBuffer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.CharBuffer" sourceFile="CharBuffer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.CharFormatter" sourceFile="CharFormatter.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.CharLiteralElement" sourceFile="CharLiteralElement.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.CharQueue" sourceFile="CharQueue.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.CharRangeElement" sourceFile="CharRangeElement.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.CharScanner" sourceFile="CharScanner.java" interface="false" size="231" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.CharStreamException" sourceFile="CharStreamException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.CharStreamIOException" sourceFile="CharStreamIOException.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.CommonHiddenStreamToken" sourceFile="CommonHiddenStreamToken.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.CommonToken" sourceFile="CommonToken.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.DefaultFileLineFormatter" sourceFile="DefaultFileLineFormatter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.ExceptionHandler" sourceFile="ExceptionHandler.java" interface="false" size="8" bugs="2" priority_2="2"/>
+      <ClassStats class="org.skife.jdbi.antlr.ExceptionSpec" sourceFile="ExceptionSpec.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.FileCopyException" sourceFile="FileCopyException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.FileLineFormatter" sourceFile="FileLineFormatter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.Grammar" sourceFile="Grammar.java" interface="false" size="158" bugs="12" priority_2="12"/>
+      <ClassStats class="org.skife.jdbi.antlr.GrammarAnalyzer" sourceFile="GrammarAnalyzer.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.GrammarAtom" sourceFile="GrammarAtom.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.GrammarElement" sourceFile="GrammarElement.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.GrammarSymbol" sourceFile="GrammarSymbol.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.ImportVocabTokenManager" sourceFile="ImportVocabTokenManager.java" interface="false" size="48" bugs="1" priority_1="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.InputBuffer" sourceFile="InputBuffer.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.JavaBlockFinishingInfo" sourceFile="JavaBlockFinishingInfo.java" interface="false" size="18" bugs="5" priority_2="5"/>
+      <ClassStats class="org.skife.jdbi.antlr.JavaCharFormatter" sourceFile="JavaCharFormatter.java" interface="false" size="29" bugs="2" priority_2="2"/>
+      <ClassStats class="org.skife.jdbi.antlr.LLkAnalyzer" sourceFile="LLkAnalyzer.java" interface="false" size="450" bugs="5" priority_2="5"/>
+      <ClassStats class="org.skife.jdbi.antlr.LLkGrammarAnalyzer" sourceFile="LLkGrammarAnalyzer.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.LexerGrammar" sourceFile="LexerGrammar.java" interface="false" size="97" bugs="4" priority_2="4"/>
+      <ClassStats class="org.skife.jdbi.antlr.LexerSharedInputState" sourceFile="LexerSharedInputState.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.Lookahead" sourceFile="Lookahead.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.MismatchedCharException" sourceFile="MismatchedCharException.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.MismatchedTokenException" sourceFile="MismatchedTokenException.java" interface="false" size="101" bugs="6" priority_2="6"/>
+      <ClassStats class="org.skife.jdbi.antlr.NameSpace" sourceFile="NameSpace.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.NoViableAltException" sourceFile="NoViableAltException.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.NoViableAltForCharException" sourceFile="NoViableAltForCharException.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.OneOrMoreBlock" sourceFile="OneOrMoreBlock.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.PreservingFileWriter" sourceFile="PreservingFileWriter.java" interface="false" size="62" bugs="6" priority_2="2" priority_1="4"/>
+      <ClassStats class="org.skife.jdbi.antlr.RecognitionException" sourceFile="RecognitionException.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.SemanticException" sourceFile="SemanticException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.SimpleTokenManager" sourceFile="SimpleTokenManager.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.StringLiteralElement" sourceFile="StringLiteralElement.java" interface="false" size="32" bugs="2" priority_2="2"/>
+      <ClassStats class="org.skife.jdbi.antlr.StringLiteralSymbol" sourceFile="StringLiteralSymbol.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.StringUtils" sourceFile="StringUtils.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.SynPredBlock" sourceFile="SynPredBlock.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.Token" sourceFile="Token.java" interface="false" size="46" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenBuffer" sourceFile="TokenBuffer.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenManager" sourceFile="TokenManager.java" interface="true" size="17" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenQueue" sourceFile="TokenQueue.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenRangeElement" sourceFile="TokenRangeElement.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenRefElement" sourceFile="TokenRefElement.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenStream" sourceFile="TokenStream.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenStreamBasicFilter" sourceFile="TokenStreamBasicFilter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenStreamException" sourceFile="TokenStreamException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenStreamHiddenTokenFilter" sourceFile="TokenStreamHiddenTokenFilter.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenStreamIOException" sourceFile="TokenStreamIOException.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenStreamRecognitionException" sourceFile="TokenStreamRecognitionException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenStreamRetryException" sourceFile="TokenStreamRetryException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenStreamSelector" sourceFile="TokenStreamSelector.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenSymbol" sourceFile="TokenSymbol.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.TokenWithIndex" sourceFile="TokenWithIndex.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.ToolErrorHandler" sourceFile="ToolErrorHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.Utils" sourceFile="Utils.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.Version" sourceFile="Version.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.WildcardElement" sourceFile="WildcardElement.java" interface="false" size="20" bugs="1" priority_1="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.ZeroOrMoreBlock" sourceFile="ZeroOrMoreBlock.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.antlr.actions.java" total_bugs="2" total_types="2" total_size="1124" priority_2="1" priority_1="1">
+      <ClassStats class="org.skife.jdbi.antlr.actions.java.ActionLexer" sourceFile="ActionLexer.java" interface="false" size="1096" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.actions.java.ActionLexerTokenTypes" sourceFile="ActionLexerTokenTypes.java" interface="true" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.antlr.collections" total_bugs="0" total_types="3" total_size="16">
+      <ClassStats class="org.skife.jdbi.antlr.collections.Enumerator" sourceFile="Enumerator.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.collections.List" sourceFile="List.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.collections.Stack" sourceFile="Stack.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.antlr.collections.impl" total_bugs="13" total_types="9" total_size="477" priority_2="12" priority_1="1">
+      <ClassStats class="org.skife.jdbi.antlr.collections.impl.BitSet" sourceFile="BitSet.java" interface="false" size="253" bugs="13" priority_2="12" priority_1="1"/>
+      <ClassStats class="org.skife.jdbi.antlr.collections.impl.IndexedVector" sourceFile="IndexedVector.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.collections.impl.IntRange" sourceFile="IntRange.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.collections.impl.LLCell" sourceFile="LLCell.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.collections.impl.LLEnumeration" sourceFile="LLEnumeration.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.collections.impl.LList" sourceFile="LList.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.collections.impl.Vector" sourceFile="Vector.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.collections.impl.VectorEnumeration" sourceFile="VectorEnumeration.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.antlr.collections.impl.VectorEnumerator" sourceFile="VectorEnumerator.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.rewriter.colon" total_bugs="0" total_types="2" total_size="219">
+      <ClassStats class="org.skife.jdbi.rewriter.colon.ColonStatementLexer" sourceFile="ColonStatementLexer.java" interface="false" size="210" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.rewriter.colon.ColonStatementLexerTokenTypes" sourceFile="ColonStatementLexerTokenTypes.java" interface="true" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.rewriter.printf" total_bugs="0" total_types="2" total_size="146">
+      <ClassStats class="org.skife.jdbi.rewriter.printf.FormattedStatementLexer" sourceFile="FormattedStatementLexer.java" interface="false" size="139" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.rewriter.printf.FormattedStatementLexerTokenTypes" sourceFile="FormattedStatementLexerTokenTypes.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.v2" total_bugs="5" total_types="97" total_size="1834" priority_2="4" priority_1="1">
+      <ClassStats class="org.skife.jdbi.v2.BaseResultSetMapper" sourceFile="BaseResultSetMapper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.BasicHandle" sourceFile="BasicHandle.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.BasicHandle$1" sourceFile="BasicHandle.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Batch" sourceFile="Batch.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.v2.BeanMapper" sourceFile="BeanMapper.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.BeanPropertyArguments" sourceFile="BeanPropertyArguments.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.BigDecimalArgument" sourceFile="BigDecimalArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Binding" sourceFile="Binding.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.BlobArgument" sourceFile="BlobArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.BooleanArgument" sourceFile="BooleanArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.ByteArgument" sourceFile="ByteArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.ByteArrayArgument" sourceFile="ByteArrayArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.CachingStatementBuilder" sourceFile="CachingStatementBuilder.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.CachingStatementBuilderFactory" sourceFile="CachingStatementBuilderFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Call" sourceFile="Call.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Call$1" sourceFile="Call.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Call$OutParamArgument" sourceFile="Call.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.CallableStatementMapper" sourceFile="CallableStatementMapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.CaseInsensitiveMapResultSetMapper" sourceFile="CaseInsensitiveMapResultSetMapper.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.v2.CaseInsensitiveMapResultSetMapper$1" sourceFile="CaseInsensitiveMapResultSetMapper.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.CaseInsensitiveMapResultSetMapper$CaseInsensitiveMap" sourceFile="CaseInsensitiveMapResultSetMapper.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.CharacterArgument" sourceFile="CharacterArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.CharacterStreamArgument" sourceFile="CharacterStreamArgument.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.ClasspathStatementLocator" sourceFile="ClasspathStatementLocator.java" interface="false" size="33" bugs="1" priority_1="1"/>
+      <ClassStats class="org.skife.jdbi.v2.ClobArgument" sourceFile="ClobArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.ColonPrefixNamedParamStatementRewriter" sourceFile="ColonPrefixNamedParamStatementRewriter.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.v2.ColonPrefixNamedParamStatementRewriter$1" sourceFile="ColonPrefixNamedParamStatementRewriter.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.ColonPrefixNamedParamStatementRewriter$MyRewrittenStatement" sourceFile="ColonPrefixNamedParamStatementRewriter.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.ColonPrefixNamedParamStatementRewriter$ParsedStatement" sourceFile="ColonPrefixNamedParamStatementRewriter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DBI" sourceFile="DBI.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DBI$1" sourceFile="DBI.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DBI$2" sourceFile="DBI.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DBI$3" sourceFile="DBI.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DBI$4" sourceFile="DBI.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DBI$5" sourceFile="DBI.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DataSourceConnectionFactory" sourceFile="DataSourceConnectionFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DefaultMapper" sourceFile="DefaultMapper.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DefaultMapper$1" sourceFile="DefaultMapper.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DefaultMapper$DefaultResultMap" sourceFile="DefaultMapper.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DefaultStatementBuilder" sourceFile="DefaultStatementBuilder.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DefaultStatementBuilderFactory" sourceFile="DefaultStatementBuilderFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.DoubleArgument" sourceFile="DoubleArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.FloatArgument" sourceFile="FloatArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Folder" sourceFile="Folder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Folder2" sourceFile="Folder2.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Handle" sourceFile="Handle.java" interface="true" size="26" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.IDBI" sourceFile="IDBI.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.InputStreamArgument" sourceFile="InputStreamArgument.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.IntegerArgument" sourceFile="IntegerArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.JavaDateArgument" sourceFile="JavaDateArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.LazyArguments" sourceFile="LazyArguments.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.LongArgument" sourceFile="LongArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.MapArguments" sourceFile="MapArguments.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.NoOpStatementRewriter" sourceFile="NoOpStatementRewriter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.NoOpStatementRewriter$NoOpRewrittenStatement" sourceFile="NoOpStatementRewriter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.NullArgument" sourceFile="NullArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.ObjectArgument" sourceFile="ObjectArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.OutParameters" sourceFile="OutParameters.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Pair" sourceFile="Pair.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.ParsedStatement" sourceFile="ParsedStatement.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.PreparedBatch" sourceFile="PreparedBatch.java" interface="false" size="69" bugs="1" priority_2="1"/>
+      <ClassStats class="org.skife.jdbi.v2.PreparedBatchPart" sourceFile="PreparedBatchPart.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query" sourceFile="Query.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$1" sourceFile="Query.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$10" sourceFile="Query.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$11" sourceFile="Query.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$12" sourceFile="Query.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$2" sourceFile="Query.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$3" sourceFile="Query.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$4" sourceFile="Query.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$5" sourceFile="Query.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$6" sourceFile="Query.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$7" sourceFile="Query.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$8" sourceFile="Query.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Query$9" sourceFile="Query.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.QueryPostMungeCleanup" sourceFile="QueryPostMungeCleanup.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.QueryPostMungeCleanup$1" sourceFile="QueryPostMungeCleanup.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.QueryPostMungeCleanup$2" sourceFile="QueryPostMungeCleanup.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.QueryPreperator" sourceFile="QueryPreperator.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.QueryPreperator$1" sourceFile="QueryPreperator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.QueryPreperator$2" sourceFile="QueryPreperator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.QueryResultMunger" sourceFile="QueryResultMunger.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.ResultIterator" sourceFile="ResultIterator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.ResultSetResultIterator" sourceFile="ResultSetResultIterator.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.SQLStatement" sourceFile="SQLStatement.java" interface="false" size="210" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Script" sourceFile="Script.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.SqlDateArgument" sourceFile="SqlDateArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.SqlTypeArgument" sourceFile="SqlTypeArgument.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.StatementContext" sourceFile="StatementContext.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.StringArgument" sourceFile="StringArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.TimeArgument" sourceFile="TimeArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.TimestampArgument" sourceFile="TimestampArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.TransactionCallback" sourceFile="TransactionCallback.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.TransactionStatus" sourceFile="TransactionStatus.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.URLArgument" sourceFile="URLArgument.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Update" sourceFile="Update.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.Update$1" sourceFile="Update.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.v2.exceptions" total_bugs="0" total_types="9" total_size="66">
+      <ClassStats class="org.skife.jdbi.v2.exceptions.CallbackFailedException" sourceFile="CallbackFailedException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.exceptions.DBIException" sourceFile="DBIException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.exceptions.ResultSetException" sourceFile="ResultSetException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.exceptions.TransactionException" sourceFile="TransactionException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.exceptions.TransactionFailedException" sourceFile="TransactionFailedException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.exceptions.UnableToCloseResourceException" sourceFile="UnableToCloseResourceException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.exceptions.UnableToCreateStatementException" sourceFile="UnableToCreateStatementException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.exceptions.UnableToExecuteStatementException" sourceFile="UnableToExecuteStatementException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.exceptions.UnableToObtainConnectionException" sourceFile="UnableToObtainConnectionException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.v2.logging" total_bugs="0" total_types="6" total_size="133">
+      <ClassStats class="org.skife.jdbi.v2.logging.FormattedLog" sourceFile="FormattedLog.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.logging.FormattedLog$1" sourceFile="FormattedLog.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.logging.Log4JLog" sourceFile="Log4JLog.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.logging.NoOpLog" sourceFile="NoOpLog.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.logging.NoOpLog$1" sourceFile="NoOpLog.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.logging.PrintStreamLog" sourceFile="PrintStreamLog.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.v2.spring" total_bugs="0" total_types="4" total_size="78">
+      <ClassStats class="org.skife.jdbi.v2.spring.DBIFactoryBean" sourceFile="DBIFactoryBean.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.spring.DBIUtil" sourceFile="DBIUtil.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.spring.DBIUtil$Adapter" sourceFile="DBIUtil.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.spring.SpringDataSourceConnectionFactory" sourceFile="SpringDataSourceConnectionFactory.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.v2.tweak" total_bugs="0" total_types="14" total_size="55">
+      <ClassStats class="org.skife.jdbi.v2.tweak.Argument" sourceFile="Argument.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.BaseStatementCustomizer" sourceFile="BaseStatementCustomizer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.ConnectionFactory" sourceFile="ConnectionFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.HandleCallback" sourceFile="HandleCallback.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.ResultSetMapper" sourceFile="ResultSetMapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.RewrittenStatement" sourceFile="RewrittenStatement.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.SQLLog" sourceFile="SQLLog.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.SQLLog$BatchLogger" sourceFile="SQLLog.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.StatementBuilder" sourceFile="StatementBuilder.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.StatementBuilderFactory" sourceFile="StatementBuilderFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.StatementCustomizer" sourceFile="StatementCustomizer.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.StatementLocator" sourceFile="StatementLocator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.StatementRewriter" sourceFile="StatementRewriter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.TransactionHandler" sourceFile="TransactionHandler.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.v2.tweak.transactions" total_bugs="0" total_types="3" total_size="99">
+      <ClassStats class="org.skife.jdbi.v2.tweak.transactions.CMTTransactionHandler" sourceFile="CMTTransactionHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.transactions.LocalTransactionHandler" sourceFile="LocalTransactionHandler.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.tweak.transactions.LocalTransactionHandler$LocalStuff" sourceFile="LocalTransactionHandler.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.v2.unstable.eod" total_bugs="0" total_types="13" total_size="118">
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.BindBy" sourceFile="BindBy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.BindType" sourceFile="BindType.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.DataAccessHandler" sourceFile="DataAccessHandler.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.DataAccessHandler$1" sourceFile="DataAccessHandler.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.DataAccessHandler$2" sourceFile="DataAccessHandler.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.DataAccessHandler$3" sourceFile="DataAccessHandler.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.DataAccessHandler$Foo" sourceFile="DataAccessHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.DataAccessor" sourceFile="DataAccessor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.Delete" sourceFile="Delete.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.Insert" sourceFile="Insert.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.QueryObjectFactory" sourceFile="QueryObjectFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.Select" sourceFile="Select.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.eod.Update" sourceFile="Update.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.v2.unstable.oracle" total_bugs="0" total_types="1" total_size="56">
+      <ClassStats class="org.skife.jdbi.v2.unstable.oracle.OracleReturning" sourceFile="OracleReturning.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.v2.unstable.stringtemplate" total_bugs="0" total_types="4" total_size="108">
+      <ClassStats class="org.skife.jdbi.v2.unstable.stringtemplate.ClasspathGroupLoader" sourceFile="ClasspathGroupLoader.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.stringtemplate.ClasspathGroupLoader$1" sourceFile="ClasspathGroupLoader.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.stringtemplate.ClasspathGroupLoader$ExplodingStringTemplateErrorListener" sourceFile="ClasspathGroupLoader.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.unstable.stringtemplate.StringTemplateStatementLocator" sourceFile="StringTemplateStatementLocator.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.skife.jdbi.v2.util" total_bugs="0" total_types="8" total_size="135">
+      <ClassStats class="org.skife.jdbi.v2.util.BooleanMapper" sourceFile="BooleanMapper.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.util.IntegerMapper" sourceFile="IntegerMapper.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.util.LongMapper" sourceFile="LongMapper.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.util.StringMapper" sourceFile="StringMapper.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.util.TimestampMapper" sourceFile="TimestampMapper.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.util.TypedMapper" sourceFile="TypedMapper.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.util.TypedMapper$IndexMapper" sourceFile="TypedMapper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.skife.jdbi.v2.util.TypedMapper$StringMapper" sourceFile="TypedMapper.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="2125" invocations="1377" avgMicrosecondsPerInvocation="1543" maxMicrosecondsPerInvocation="167654" standardDeviationMircosecondsPerInvocation="8931"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="2002" invocations="1314" avgMicrosecondsPerInvocation="1523" maxMicrosecondsPerInvocation="108224" standardDeviationMircosecondsPerInvocation="6312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1920" invocations="1293" avgMicrosecondsPerInvocation="1485" maxMicrosecondsPerInvocation="172153" standardDeviationMircosecondsPerInvocation="6125"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1810" invocations="1313" avgMicrosecondsPerInvocation="1379" maxMicrosecondsPerInvocation="95821" standardDeviationMircosecondsPerInvocation="5428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1521" invocations="396" avgMicrosecondsPerInvocation="3841" maxMicrosecondsPerInvocation="131143" standardDeviationMircosecondsPerInvocation="12228"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1388" invocations="963" avgMicrosecondsPerInvocation="1442" maxMicrosecondsPerInvocation="165427" standardDeviationMircosecondsPerInvocation="6789"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1378" invocations="1373" avgMicrosecondsPerInvocation="1003" maxMicrosecondsPerInvocation="126888" standardDeviationMircosecondsPerInvocation="4526"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1308" invocations="396" avgMicrosecondsPerInvocation="3303" maxMicrosecondsPerInvocation="121982" standardDeviationMircosecondsPerInvocation="9855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="857" invocations="1026" avgMicrosecondsPerInvocation="835" maxMicrosecondsPerInvocation="146440" standardDeviationMircosecondsPerInvocation="5084"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="803" invocations="1727" avgMicrosecondsPerInvocation="465" maxMicrosecondsPerInvocation="75723" standardDeviationMircosecondsPerInvocation="2623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="690" invocations="1314" avgMicrosecondsPerInvocation="525" maxMicrosecondsPerInvocation="27547" standardDeviationMircosecondsPerInvocation="1517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="418" invocations="396" avgMicrosecondsPerInvocation="1055" maxMicrosecondsPerInvocation="44819" standardDeviationMircosecondsPerInvocation="3707"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="416" invocations="1314" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="29331" standardDeviationMircosecondsPerInvocation="1111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="375" invocations="257" avgMicrosecondsPerInvocation="1462" maxMicrosecondsPerInvocation="122751" standardDeviationMircosecondsPerInvocation="9541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="330" invocations="396" avgMicrosecondsPerInvocation="834" maxMicrosecondsPerInvocation="13036" standardDeviationMircosecondsPerInvocation="1527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="315" invocations="396" avgMicrosecondsPerInvocation="797" maxMicrosecondsPerInvocation="109717" standardDeviationMircosecondsPerInvocation="5742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="252" invocations="396" avgMicrosecondsPerInvocation="637" maxMicrosecondsPerInvocation="30988" standardDeviationMircosecondsPerInvocation="2335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="241" invocations="1282" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="15965" standardDeviationMircosecondsPerInvocation="804"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="233" invocations="257" avgMicrosecondsPerInvocation="909" maxMicrosecondsPerInvocation="39501" standardDeviationMircosecondsPerInvocation="4089"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="232" invocations="513" avgMicrosecondsPerInvocation="452" maxMicrosecondsPerInvocation="25708" standardDeviationMircosecondsPerInvocation="1612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="224" invocations="1465" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="54983" standardDeviationMircosecondsPerInvocation="1558"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="221" invocations="99" avgMicrosecondsPerInvocation="2239" maxMicrosecondsPerInvocation="12433" standardDeviationMircosecondsPerInvocation="2484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="214" invocations="447" avgMicrosecondsPerInvocation="478" maxMicrosecondsPerInvocation="42413" standardDeviationMircosecondsPerInvocation="2441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="211" invocations="257" avgMicrosecondsPerInvocation="822" maxMicrosecondsPerInvocation="59863" standardDeviationMircosecondsPerInvocation="4254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="202" invocations="257" avgMicrosecondsPerInvocation="788" maxMicrosecondsPerInvocation="18705" standardDeviationMircosecondsPerInvocation="1789"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

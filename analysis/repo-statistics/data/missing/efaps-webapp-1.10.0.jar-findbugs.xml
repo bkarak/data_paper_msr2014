@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1294193427000" analysisTimestamp="1360518456193" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/efaps/efaps-webapp/1.10.0/efaps-webapp-1.10.0.jar</Jar>
+  </Project>
+  <BugInstance type="NP_GUARANTEED_DEREF_ON_EXCEPTION_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.efaps.ui.filter.AbstractAuthenticationFilter">
+      <SourceLine classname="org.efaps.ui.filter.AbstractAuthenticationFilter" start="41" end="183" sourcefile="AbstractAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/AbstractAuthenticationFilter.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.filter.AbstractAuthenticationFilter" name="checkLogin" signature="(Ljava/lang/String;Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="org.efaps.ui.filter.AbstractAuthenticationFilter" start="150" end="183" startBytecode="0" endBytecode="555" sourcefile="AbstractAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/AbstractAuthenticationFilter.java"/>
+    </Method>
+    <LocalVariable name="context" register="4" pc="5" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.efaps.ui.filter.AbstractAuthenticationFilter" start="181" end="181" startBytecode="228" endBytecode="228" sourcefile="AbstractAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/AbstractAuthenticationFilter.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.efaps.ui.filter.AbstractAuthenticationFilter" start="181" end="181" startBytecode="218" endBytecode="218" sourcefile="AbstractAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/AbstractAuthenticationFilter.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.efaps.ui.filter.AbstractAuthenticationFilter" start="152" end="152" startBytecode="2" endBytecode="2" sourcefile="AbstractAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/AbstractAuthenticationFilter.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.efaps.ui.filter.AbstractAuthenticationFilter" start="154" end="154" startBytecode="5" endBytecode="5" sourcefile="AbstractAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/AbstractAuthenticationFilter.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_ARE_CLONED" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.efaps.ui.filter.BasicAuthenticationFilter">
+      <SourceLine classname="org.efaps.ui.filter.BasicAuthenticationFilter" start="40" end="127" sourcefile="BasicAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/BasicAuthenticationFilter.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.filter.BasicAuthenticationFilter" name="doAuthenticate" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.filter.BasicAuthenticationFilter" start="109" end="127" startBytecode="0" endBytecode="443" sourcefile="BasicAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/BasicAuthenticationFilter.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.filter.BasicAuthenticationFilter" start="116" end="116" startBytecode="90" endBytecode="90" sourcefile="BasicAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/BasicAuthenticationFilter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.efaps.ui.filter.BasicAuthenticationFilter">
+      <SourceLine classname="org.efaps.ui.filter.BasicAuthenticationFilter" start="40" end="127" sourcefile="BasicAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/BasicAuthenticationFilter.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.filter.BasicAuthenticationFilter" name="doAuthenticate" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.filter.BasicAuthenticationFilter" start="109" end="127" startBytecode="0" endBytecode="443" sourcefile="BasicAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/BasicAuthenticationFilter.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.filter.BasicAuthenticationFilter" start="116" end="116" startBytecode="84" endBytecode="84" sourcefile="BasicAuthenticationFilter.java" sourcepath="org/efaps/ui/filter/BasicAuthenticationFilter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.efaps.ui.servlet.HelpServlet">
+      <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="55" end="281" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.servlet.HelpServlet" name="doGet" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="84" end="192" startBytecode="0" endBytecode="1815" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="174" end="174" startBytecode="818" endBytecode="818" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.efaps.ui.servlet.HelpServlet">
+      <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="55" end="281" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.servlet.HelpServlet" name="doGet" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="84" end="192" startBytecode="0" endBytecode="1815" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="185" end="185" startBytecode="892" endBytecode="892" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.efaps.ui.servlet.HelpServlet">
+      <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="55" end="281" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.servlet.HelpServlet" name="doGet" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="84" end="192" startBytecode="0" endBytecode="394" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/Reader;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.Reader" start="49" end="232" sourcefile="Reader.java" sourcepath="java/io/Reader.java"/>
+    </Type>
+    <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="174" end="174" startBytecode="805" endBytecode="805" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.servlet.HelpServlet">
+      <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="55" end="281" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.servlet.HelpServlet" name="getMenu" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="203" end="229" startBytecode="0" endBytecode="508" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.servlet.HelpServlet" start="219" end="219" startBytecode="151" endBytecode="151" sourcefile="HelpServlet.java" sourcepath="org/efaps/ui/servlet/HelpServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.EFapsApplication$EFapsFormBasedAuthorizationStartegy">
+      <SourceLine classname="org.efaps.ui.wicket.EFapsApplication$EFapsFormBasedAuthorizationStartegy" start="133" end="174" sourcefile="EFapsApplication.java" sourcepath="org/efaps/ui/wicket/EFapsApplication.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.EFapsSession$FileParameter">
+      <SourceLine classname="org.efaps.ui.wicket.EFapsSession$FileParameter" start="565" end="626" sourcefile="EFapsSession.java" sourcepath="org/efaps/ui/wicket/EFapsSession.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="DMI_RANDOM_USED_ONLY_ONCE" priority="1" abbrev="DMI" category="BAD_PRACTICE">
+    <Class classname="org.efaps.ui.wicket.Opener">
+      <SourceLine classname="org.efaps.ui.wicket.Opener" start="88" end="212" sourcefile="Opener.java" sourcepath="org/efaps/ui/wicket/Opener.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.Opener" name="&lt;init&gt;" signature="(Lorg/apache/wicket/model/IModel;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.Opener" start="98" end="102" startBytecode="0" endBytecode="139" sourcefile="Opener.java" sourcepath="org/efaps/ui/wicket/Opener.java"/>
+    </Method>
+    <Method classname="java.util.Random" name="nextLong" signature="()J" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Random" start="284" end="284" startBytecode="0" endBytecode="42" sourcefile="Random.java" sourcepath="java/util/Random.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.wicket.Opener" start="99" end="99" startBytecode="17" endBytecode="17" sourcefile="Opener.java" sourcepath="org/efaps/ui/wicket/Opener.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.behaviors.AjaxFieldUpdateBehavior">
+      <SourceLine classname="org.efaps.ui.wicket.behaviors.AjaxFieldUpdateBehavior" start="51" end="176" sourcefile="AjaxFieldUpdateBehavior.java" sourcepath="org/efaps/ui/wicket/behaviors/AjaxFieldUpdateBehavior.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.behaviors.AjaxFieldUpdateBehavior" name="onSubmit" signature="(Lorg/apache/wicket/ajax/AjaxRequestTarget;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.behaviors.AjaxFieldUpdateBehavior" start="112" end="152" startBytecode="0" endBytecode="944" sourcefile="AjaxFieldUpdateBehavior.java" sourcepath="org/efaps/ui/wicket/behaviors/AjaxFieldUpdateBehavior.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.wicket.behaviors.AjaxFieldUpdateBehavior" start="139" end="139" startBytecode="265" endBytecode="265" sourcefile="AjaxFieldUpdateBehavior.java" sourcepath="org/efaps/ui/wicket/behaviors/AjaxFieldUpdateBehavior.java"/>
+  </BugInstance>
+  <BugInstance type="DB_DUPLICATE_BRANCHES" priority="2" abbrev="DB" category="STYLE">
+    <Class classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer">
+      <SourceLine classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer" start="38" end="159" sourcefile="AutoCompleteRenderer.java" sourcepath="org/efaps/ui/wicket/components/autocomplete/AutoCompleteRenderer.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer" name="getTextValue" signature="(Ljava/util/Map;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer" start="72" end="72" startBytecode="0" endBytecode="139" sourcefile="AutoCompleteRenderer.java" sourcepath="org/efaps/ui/wicket/components/autocomplete/AutoCompleteRenderer.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer" start="72" end="72" startBytecode="9" endBytecode="18" sourcefile="AutoCompleteRenderer.java" sourcepath="org/efaps/ui/wicket/components/autocomplete/AutoCompleteRenderer.java"/>
+    <SourceLine classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer" start="72" end="72" startBytecode="21" endBytecode="27" sourcefile="AutoCompleteRenderer.java" sourcepath="org/efaps/ui/wicket/components/autocomplete/AutoCompleteRenderer.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer">
+      <SourceLine classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer" start="38" end="159" sourcefile="AutoCompleteRenderer.java" sourcepath="org/efaps/ui/wicket/components/autocomplete/AutoCompleteRenderer.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer" name="getOnSelectJavascriptExpression" signature="(Ljava/util/Map;)Ljava/lang/CharSequence;" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer" start="106" end="138" startBytecode="0" endBytecode="688" sourcefile="AutoCompleteRenderer.java" sourcepath="org/efaps/ui/wicket/components/autocomplete/AutoCompleteRenderer.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer" start="121" end="121" startBytecode="204" endBytecode="204" sourcefile="AutoCompleteRenderer.java" sourcepath="org/efaps/ui/wicket/components/autocomplete/AutoCompleteRenderer.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.button.Button$ButtonImage">
+      <SourceLine classname="org.efaps.ui.wicket.components.button.Button$ButtonImage" start="140" end="173" sourcefile="Button.java" sourcepath="org/efaps/ui/wicket/components/button/Button.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$UpdateCallback">
+      <SourceLine classname="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$UpdateCallback" start="261" end="347" sourcefile="ClassificationPathPanel.java" sourcepath="org/efaps/ui/wicket/components/classification/ClassificationPathPanel.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$UpdateCallback" name="onClose" signature="(Lorg/apache/wicket/ajax/AjaxRequestTarget;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$UpdateCallback" start="277" end="314" startBytecode="0" endBytecode="646" sourcefile="ClassificationPathPanel.java" sourcepath="org/efaps/ui/wicket/components/classification/ClassificationPathPanel.java"/>
+    </Method>
+    <LocalVariable name="form" register="5" pc="37" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$UpdateCallback" start="289" end="289" startBytecode="80" endBytecode="80" sourcefile="ClassificationPathPanel.java" sourcepath="org/efaps/ui/wicket/components/classification/ClassificationPathPanel.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$UpdateCallback" start="281" end="281" startBytecode="32" endBytecode="32" sourcefile="ClassificationPathPanel.java" sourcepath="org/efaps/ui/wicket/components/classification/ClassificationPathPanel.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$UpdateCallback" start="282" end="282" startBytecode="42" endBytecode="42" sourcefile="ClassificationPathPanel.java" sourcepath="org/efaps/ui/wicket/components/classification/ClassificationPathPanel.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.classification.ClassificationTree$AjaxSubmitCloseLink">
+      <SourceLine classname="org.efaps.ui.wicket.components.classification.ClassificationTree$AjaxSubmitCloseLink" start="189" end="203" sourcefile="ClassificationTree.java" sourcepath="org/efaps/ui/wicket/components/classification/ClassificationTree.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.classification.ClassificationTreeLabelPanel$AjaxCheckBoxClickBehavior">
+      <SourceLine classname="org.efaps.ui.wicket.components.classification.ClassificationTreeLabelPanel$AjaxCheckBoxClickBehavior" start="119" end="188" sourcefile="ClassificationTreeLabelPanel.java" sourcepath="org/efaps/ui/wicket/components/classification/ClassificationTreeLabelPanel.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="org.efaps.ui.wicket.components.form.set.ValuePanel">
+      <SourceLine classname="org.efaps.ui.wicket.components.form.set.ValuePanel" start="70" end="137" sourcefile="ValuePanel.java" sourcepath="org/efaps/ui/wicket/components/form/set/ValuePanel.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.components.form.set.ValuePanel" name="&lt;init&gt;" signature="(Ljava/lang/String;Lorg/efaps/ui/wicket/models/cell/UIFormCellSet;Ljava/lang/Integer;Ljava/util/Map;Lorg/efaps/ui/wicket/models/objects/UIForm;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.components.form.set.ValuePanel" start="70" end="137" startBytecode="0" endBytecode="1204" sourcefile="ValuePanel.java" sourcepath="org/efaps/ui/wicket/components/form/set/ValuePanel.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="substring" signature="(II)Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1930" end="1939" startBytecode="0" endBytecode="130" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.wicket.components.form.set.ValuePanel" start="123" end="123" startBytecode="431" endBytecode="431" sourcefile="ValuePanel.java" sourcepath="org/efaps/ui/wicket/components/form/set/ValuePanel.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.form.set.ValuePanel$AjaxRemove">
+      <SourceLine classname="org.efaps.ui.wicket.components.form.set.ValuePanel$AjaxRemove" start="170" end="201" sourcefile="ValuePanel.java" sourcepath="org/efaps/ui/wicket/components/form/set/ValuePanel.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.efaps.ui.wicket.components.menu.FileRequestTarget">
+      <SourceLine classname="org.efaps.ui.wicket.components.menu.FileRequestTarget" start="58" end="103" sourcefile="FileRequestTarget.java" sourcepath="org/efaps/ui/wicket/components/menu/FileRequestTarget.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.components.menu.FileRequestTarget" name="respond" signature="(Lorg/apache/wicket/RequestCycle;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.components.menu.FileRequestTarget" start="94" end="103" startBytecode="0" endBytecode="208" sourcefile="FileRequestTarget.java" sourcepath="org/efaps/ui/wicket/components/menu/FileRequestTarget.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.efaps.ui.wicket.components.menu.FileRequestTarget" start="94" end="94" startBytecode="8" endBytecode="8" sourcefile="FileRequestTarget.java" sourcepath="org/efaps/ui/wicket/components/menu/FileRequestTarget.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.efaps.ui.wicket.components.menu.FileRequestTarget" start="95" end="95" startBytecode="12" endBytecode="12" sourcefile="FileRequestTarget.java" sourcepath="org/efaps/ui/wicket/components/menu/FileRequestTarget.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.menutree.MenuTree$Indentation">
+      <SourceLine classname="org.efaps.ui.wicket.components.menutree.MenuTree$Indentation" start="464" end="485" sourcefile="MenuTree.java" sourcepath="org/efaps/ui/wicket/components/menutree/MenuTree.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.efaps.ui.wicket.components.modalwindow.UpdateParentCallback">
+      <SourceLine classname="org.efaps.ui.wicket.components.modalwindow.UpdateParentCallback" start="80" end="130" sourcefile="UpdateParentCallback.java" sourcepath="org/efaps/ui/wicket/components/modalwindow/UpdateParentCallback.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.components.modalwindow.UpdateParentCallback" name="onClose" signature="(Lorg/apache/wicket/ajax/AjaxRequestTarget;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.components.modalwindow.UpdateParentCallback" start="108" end="130" startBytecode="0" endBytecode="313" sourcefile="UpdateParentCallback.java" sourcepath="org/efaps/ui/wicket/components/modalwindow/UpdateParentCallback.java"/>
+    </Method>
+    <LocalVariable name="page" register="3" pc="67" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.efaps.ui.wicket.components.modalwindow.UpdateParentCallback" start="124" end="124" startBytecode="106" endBytecode="106" sourcefile="UpdateParentCallback.java" sourcepath="org/efaps/ui/wicket/components/modalwindow/UpdateParentCallback.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.efaps.ui.wicket.components.modalwindow.UpdateParentCallback" start="116" end="116" startBytecode="35" endBytecode="35" sourcefile="UpdateParentCallback.java" sourcepath="org/efaps/ui/wicket/components/modalwindow/UpdateParentCallback.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.efaps.ui.wicket.components.modalwindow.UpdateParentCallback" start="120" end="120" startBytecode="70" endBytecode="70" sourcefile="UpdateParentCallback.java" sourcepath="org/efaps/ui/wicket/components/modalwindow/UpdateParentCallback.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.picker.PickerCallBack">
+      <SourceLine classname="org.efaps.ui.wicket.components.picker.PickerCallBack" start="63" end="130" sourcefile="PickerCallBack.java" sourcepath="org/efaps/ui/wicket/components/picker/PickerCallBack.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.components.picker.PickerCallBack" name="onClose" signature="(Lorg/apache/wicket/ajax/AjaxRequestTarget;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.components.picker.PickerCallBack" start="75" end="110" startBytecode="0" endBytecode="703" sourcefile="PickerCallBack.java" sourcepath="org/efaps/ui/wicket/components/picker/PickerCallBack.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.wicket.components.picker.PickerCallBack" start="92" end="92" startBytecode="180" endBytecode="180" sourcefile="PickerCallBack.java" sourcepath="org/efaps/ui/wicket/components/picker/PickerCallBack.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.table.AjaxAddRemoveRowPanel$InsertRow">
+      <SourceLine classname="org.efaps.ui.wicket.components.table.AjaxAddRemoveRowPanel$InsertRow" start="324" end="347" sourcefile="AjaxAddRemoveRowPanel.java" sourcepath="org/efaps/ui/wicket/components/table/AjaxAddRemoveRowPanel.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.table.AjaxAddRemoveRowPanel$RemoveRow">
+      <SourceLine classname="org.efaps.ui.wicket.components.table.AjaxAddRemoveRowPanel$RemoveRow" start="277" end="295" sourcefile="AjaxAddRemoveRowPanel.java" sourcepath="org/efaps/ui/wicket/components/table/AjaxAddRemoveRowPanel.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.table.cell.AjaxLinkContainer$AjaxParentCallBackBehavior">
+      <SourceLine classname="org.efaps.ui.wicket.components.table.cell.AjaxLinkContainer$AjaxParentCallBackBehavior" start="104" end="139" sourcefile="AjaxLinkContainer.java" sourcepath="org/efaps/ui/wicket/components/table/cell/AjaxLinkContainer.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.table.cell.AjaxLinkContainer$AjaxSelfCallBackBehavior">
+      <SourceLine classname="org.efaps.ui.wicket.components.table.cell.AjaxLinkContainer$AjaxSelfCallBackBehavior" start="159" end="220" sourcefile="AjaxLinkContainer.java" sourcepath="org/efaps/ui/wicket/components/table/cell/AjaxLinkContainer.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.table.filter.PickerPanel$ValueCheckBox">
+      <SourceLine classname="org.efaps.ui.wicket.components.table.filter.PickerPanel$ValueCheckBox" start="123" end="133" sourcefile="PickerPanel.java" sourcepath="org/efaps/ui/wicket/components/table/filter/PickerPanel.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.table.header.AjaxFilterLink$FilterPageCreator">
+      <SourceLine classname="org.efaps.ui.wicket.components.table.header.AjaxFilterLink$FilterPageCreator" start="112" end="124" sourcefile="AjaxFilterLink.java" sourcepath="org/efaps/ui/wicket/components/table/header/AjaxFilterLink.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.table.header.HeaderCellPanel$Checkbox">
+      <SourceLine classname="org.efaps.ui.wicket.components.table.header.HeaderCellPanel$Checkbox" start="213" end="238" sourcefile="HeaderCellPanel.java" sourcepath="org/efaps/ui/wicket/components/table/header/HeaderCellPanel.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment">
+      <SourceLine classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment" start="325" end="472" sourcefile="StructurBrowserTreeTable.java" sourcepath="org/efaps/ui/wicket/components/tree/StructurBrowserTreeTable.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment" name="&lt;init&gt;" signature="(Lorg/efaps/ui/wicket/components/tree/StructurBrowserTreeTable;Ljava/lang/String;Ljavax/swing/tree/TreeNode;ILorg/apache/wicket/extensions/markup/html/tree/table/TreeTable$IRenderNodeCallback;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment" start="325" end="472" startBytecode="0" endBytecode="1102" sourcefile="StructurBrowserTreeTable.java" sourcepath="org/efaps/ui/wicket/components/tree/StructurBrowserTreeTable.java"/>
+    </Method>
+    <LocalVariable name="uiStru" register="6" pc="151" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="javax.swing.tree.DefaultMutableTreeNode" name="getUserObject" signature="()Ljava/lang/Object;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="javax.swing.tree.DefaultMutableTreeNode" start="332" end="332" startBytecode="0" endBytecode="28" sourcefile="DefaultMutableTreeNode.java" sourcepath="javax/swing/tree/DefaultMutableTreeNode.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment" start="331" end="331" startBytecode="46" endBytecode="46" sourcefile="StructurBrowserTreeTable.java" sourcepath="org/efaps/ui/wicket/components/tree/StructurBrowserTreeTable.java"/>
+    <SourceLine classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment" start="354" end="354" startBytecode="153" endBytecode="153" sourcefile="StructurBrowserTreeTable.java" sourcepath="org/efaps/ui/wicket/components/tree/StructurBrowserTreeTable.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$EditColumn">
+      <SourceLine classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$EditColumn" start="370" end="406" sourcefile="StructurBrowserTreeTablePanel.java" sourcepath="org/efaps/ui/wicket/components/tree/StructurBrowserTreeTablePanel.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$SelectColumn">
+      <SourceLine classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$SelectColumn" start="301" end="342" sourcefile="StructurBrowserTreeTablePanel.java" sourcepath="org/efaps/ui/wicket/components/tree/StructurBrowserTreeTablePanel.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$TreeColumn">
+      <SourceLine classname="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$TreeColumn" start="134" end="170" sourcefile="StructurBrowserTreeTablePanel.java" sourcepath="org/efaps/ui/wicket/components/tree/StructurBrowserTreeTablePanel.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="1" abbrev="RCN" category="CORRECTNESS">
+    <Class classname="org.efaps.ui.wicket.models.objects.UIForm">
+      <SourceLine classname="org.efaps.ui.wicket.models.objects.UIForm" start="101" end="832" sourcefile="UIForm.java" sourcepath="org/efaps/ui/wicket/models/objects/UIForm.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.models.objects.UIForm" name="evaluateFieldSet" signature="(Lorg/efaps/ui/wicket/models/objects/UIForm$FormRow;Lorg/efaps/db/PrintQuery;Lorg/efaps/admin/ui/field/Field;Lorg/efaps/db/Instance;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.models.objects.UIForm" start="462" end="521" startBytecode="0" endBytecode="1187" sourcefile="UIForm.java" sourcepath="org/efaps/ui/wicket/models/objects/UIForm.java"/>
+    </Method>
+    <LocalVariable name="child" register="17" pc="399" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.efaps.admin.datamodel.AttributeSet" name="getAttribute" signature="(Ljava/lang/String;)Lorg/efaps/admin/datamodel/Attribute;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.efaps.admin.datamodel.AttributeSet"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.wicket.models.objects.UIForm" start="495" end="495" startBytecode="294" endBytecode="294" sourcefile="UIForm.java" sourcepath="org/efaps/ui/wicket/models/objects/UIForm.java"/>
+    <SourceLine classname="org.efaps.ui.wicket.models.objects.UIForm" start="505" end="505" startBytecode="401" endBytecode="401" sourcefile="UIForm.java" sourcepath="org/efaps/ui/wicket/models/objects/UIForm.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.models.objects.UIForm$Element">
+      <SourceLine classname="org.efaps.ui.wicket.models.objects.UIForm$Element" start="1009" end="1031" sourcefile="UIForm.java" sourcepath="org/efaps/ui/wicket/models/objects/UIForm.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.models.objects.UIForm$FormElement">
+      <SourceLine classname="org.efaps.ui.wicket.models.objects.UIForm$FormElement" start="910" end="976" sourcefile="UIForm.java" sourcepath="org/efaps/ui/wicket/models/objects/UIForm.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.models.objects.UIForm$FormRow">
+      <SourceLine classname="org.efaps.ui.wicket.models.objects.UIForm$FormRow" start="838" end="903" sourcefile="UIForm.java" sourcepath="org/efaps/ui/wicket/models/objects/UIForm.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="BX_UNBOXING_IMMEDIATELY_REBOXED" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.models.objects.UIStructurBrowser">
+      <SourceLine classname="org.efaps.ui.wicket.models.objects.UIStructurBrowser" start="132" end="1343" sourcefile="UIStructurBrowser.java" sourcepath="org/efaps/ui/wicket/models/objects/UIStructurBrowser.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.models.objects.UIStructurBrowser" name="expand" signature="(Z)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.models.objects.UIStructurBrowser" start="589" end="618" startBytecode="0" endBytecode="586" sourcefile="UIStructurBrowser.java" sourcepath="org/efaps/ui/wicket/models/objects/UIStructurBrowser.java"/>
+    </Method>
+    <Method classname="java.lang.Boolean" name="valueOf" signature="(Z)Ljava/lang/Boolean;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Boolean" start="132" end="132" startBytecode="0" endBytecode="37" sourcefile="Boolean.java" sourcepath="java/lang/Boolean.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.wicket.models.objects.UIStructurBrowser" start="595" end="595" startBytecode="132" endBytecode="132" sourcefile="UIStructurBrowser.java" sourcepath="org/efaps/ui/wicket/models/objects/UIStructurBrowser.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.models.objects.UIStructurBrowser$BogusNode">
+      <SourceLine classname="org.efaps.ui.wicket.models.objects.UIStructurBrowser$BogusNode" start="1353" end="1353" sourcefile="UIStructurBrowser.java" sourcepath="org/efaps/ui/wicket/models/objects/UIStructurBrowser.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.models.objects.UITable$Filter">
+      <SourceLine classname="org.efaps.ui.wicket.models.objects.UITable$Filter" start="1244" end="1405" sourcefile="UITable.java" sourcepath="org/efaps/ui/wicket/models/objects/UITable.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.pages.company.CompanyPage$CompanyObject">
+      <SourceLine classname="org.efaps.ui.wicket.pages.company.CompanyPage$CompanyObject" start="176" end="201" sourcefile="CompanyPage.java" sourcepath="org/efaps/ui/wicket/pages/company/CompanyPage.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.efaps.ui.wicket.pages.contentcontainer.ContentContainerPage$1">
+      <SourceLine classname="org.efaps.ui.wicket.pages.contentcontainer.ContentContainerPage$1" start="259" end="283" sourcefile="ContentContainerPage.java" sourcepath="org/efaps/ui/wicket/pages/contentcontainer/ContentContainerPage.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.pages.contentcontainer.ContentContainerPage$1" name="getPage" signature="()Lorg/apache/wicket/Page;" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.pages.contentcontainer.ContentContainerPage$1" start="265" end="278" startBytecode="0" endBytecode="227" sourcefile="ContentContainerPage.java" sourcepath="org/efaps/ui/wicket/pages/contentcontainer/ContentContainerPage.java"/>
+    </Method>
+    <LocalVariable name="page" register="2" pc="49" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.efaps.ui.wicket.pages.contentcontainer.ContentContainerPage$1" start="276" end="276" startBytecode="70" endBytecode="70" sourcefile="ContentContainerPage.java" sourcepath="org/efaps/ui/wicket/pages/contentcontainer/ContentContainerPage.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.efaps.ui.wicket.pages.contentcontainer.ContentContainerPage$1" start="266" end="266" startBytecode="2" endBytecode="2" sourcefile="ContentContainerPage.java" sourcepath="org/efaps/ui/wicket/pages/contentcontainer/ContentContainerPage.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.efaps.ui.wicket.pages.contentcontainer.ContentContainerPage$1" start="273" end="273" startBytecode="52" endBytecode="52" sourcefile="ContentContainerPage.java" sourcepath="org/efaps/ui/wicket/pages/contentcontainer/ContentContainerPage.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <SourceLine classname="org.efaps.ui.wicket.pages.contentcontainer.ContentContainerPage$1" start="274" end="274" startBytecode="58" endBytecode="58" sourcefile="ContentContainerPage.java" sourcepath="org/efaps/ui/wicket/pages/contentcontainer/ContentContainerPage.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.efaps.ui.wicket.pages.error.ErrorPage">
+      <SourceLine classname="org.efaps.ui.wicket.pages.error.ErrorPage" start="58" end="182" sourcefile="ErrorPage.java" sourcepath="org/efaps/ui/wicket/pages/error/ErrorPage.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.wicket.pages.error.ErrorPage" name="&lt;init&gt;" signature="(Ljava/lang/Exception;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.wicket.pages.error.ErrorPage" start="73" end="163" startBytecode="0" endBytecode="996" sourcefile="ErrorPage.java" sourcepath="org/efaps/ui/wicket/pages/error/ErrorPage.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.wicket.pages.error.ErrorPage" start="103" end="103" startBytecode="240" endBytecode="240" sourcefile="ErrorPage.java" sourcepath="org/efaps/ui/wicket/pages/error/ErrorPage.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.efaps.ui.xml.XMLExport">
+      <SourceLine classname="org.efaps.ui.xml.XMLExport" start="109" end="506" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.xml.XMLExport" name="generateDocument" signature="(Lorg/efaps/ui/wicket/util/MimeTypes;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.xml.XMLExport" start="168" end="217" startBytecode="0" endBytecode="983" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java"/>
+    </Method>
+    <LocalVariable name="out" register="4" pc="4" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.efaps.ui.xml.XMLExport" start="212" end="212" startBytecode="379" endBytecode="379" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.efaps.ui.xml.XMLExport" start="168" end="168" startBytecode="0" endBytecode="0" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.efaps.ui.xml.XMLExport" start="170" end="170" startBytecode="5" endBytecode="5" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_ARE_CLONED" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.efaps.ui.xml.XMLExport">
+      <SourceLine classname="org.efaps.ui.xml.XMLExport" start="109" end="506" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.xml.XMLExport" name="getSessionFolder" signature="(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;" isStatic="true">
+      <SourceLine classname="org.efaps.ui.xml.XMLExport" start="491" end="496" startBytecode="0" endBytecode="162" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.xml.XMLExport" start="494" end="494" startBytecode="52" endBytecode="52" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.efaps.ui.xml.XMLExport">
+      <SourceLine classname="org.efaps.ui.xml.XMLExport" start="109" end="506" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java"/>
+    </Class>
+    <Method classname="org.efaps.ui.xml.XMLExport" name="initialise" signature="(Lorg/efaps/ui/wicket/models/objects/AbstractUIPageObject;)V" isStatic="false">
+      <SourceLine classname="org.efaps.ui.xml.XMLExport" start="227" end="243" startBytecode="0" endBytecode="177" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.efaps.ui.xml.XMLExport" start="242" end="242" startBytecode="81" endBytecode="81" sourcefile="XMLExport.java" sourcepath="org/efaps/ui/xml/XMLExport.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="220">
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringEscapeUtils</MissingClass>
+    <MissingClass>org.apache.fop.apps.Fop</MissingClass>
+    <MissingClass>org.apache.fop.apps.FopFactory</MissingClass>
+    <MissingClass>org.apache.wicket.Application</MissingClass>
+    <MissingClass>org.apache.wicket.AttributeModifier</MissingClass>
+    <MissingClass>org.apache.wicket.Component</MissingClass>
+    <MissingClass>org.apache.wicket.IClusterable</MissingClass>
+    <MissingClass>org.apache.wicket.MarkupContainer</MissingClass>
+    <MissingClass>org.apache.wicket.Page</MissingClass>
+    <MissingClass>org.apache.wicket.PageMap</MissingClass>
+    <MissingClass>org.apache.wicket.PageParameters</MissingClass>
+    <MissingClass>org.apache.wicket.Request</MissingClass>
+    <MissingClass>org.apache.wicket.RequestCycle</MissingClass>
+    <MissingClass>org.apache.wicket.ResourceReference</MissingClass>
+    <MissingClass>org.apache.wicket.Response</MissingClass>
+    <MissingClass>org.apache.wicket.RestartResponseAtInterceptPageException</MissingClass>
+    <MissingClass>org.apache.wicket.RestartResponseException</MissingClass>
+    <MissingClass>org.apache.wicket.Session</MissingClass>
+    <MissingClass>org.apache.wicket.SharedResources</MissingClass>
+    <MissingClass>org.apache.wicket.WicketRuntimeException</MissingClass>
+    <MissingClass>org.apache.wicket.ajax.AbstractDefaultAjaxBehavior</MissingClass>
+    <MissingClass>org.apache.wicket.ajax.AjaxEventBehavior</MissingClass>
+    <MissingClass>org.apache.wicket.ajax.AjaxRequestTarget</MissingClass>
+    <MissingClass>org.apache.wicket.ajax.IAjaxIndicatorAware</MissingClass>
+    <MissingClass>org.apache.wicket.ajax.calldecorator.AjaxCallThrottlingDecorator</MissingClass>
+    <MissingClass>org.apache.wicket.ajax.form.AjaxFormSubmitBehavior</MissingClass>
+    <MissingClass>org.apache.wicket.ajax.markup.html.AjaxLink</MissingClass>
+    <MissingClass>org.apache.wicket.ajax.markup.html.form.AjaxButton</MissingClass>
+    <MissingClass>org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink</MissingClass>
+    <MissingClass>org.apache.wicket.authorization.AuthorizationException</MissingClass>
+    <MissingClass>org.apache.wicket.behavior.AbstractBehavior</MissingClass>
+    <MissingClass>org.apache.wicket.behavior.AttributeAppender</MissingClass>
+    <MissingClass>org.apache.wicket.behavior.HeaderContributor</MissingClass>
+    <MissingClass>org.apache.wicket.behavior.IBehavior</MissingClass>
+    <MissingClass>org.apache.wicket.behavior.IBehaviorListener</MissingClass>
+    <MissingClass>org.apache.wicket.behavior.SimpleAttributeModifier</MissingClass>
+    <MissingClass>org.apache.wicket.behavior.StringHeaderContributor</MissingClass>
+    <MissingClass>org.apache.wicket.datetime.DateConverter</MissingClass>
+    <MissingClass>org.apache.wicket.datetime.StyleDateConverter</MissingClass>
+    <MissingClass>org.apache.wicket.datetime.markup.html.form.DateTextField</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.ajax.markup.html.autocomplete.AbstractAutoCompleteTextRenderer</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteBehavior</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteSettings</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteTextField</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow$PageCreator</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow$WindowClosedCallback</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.form.select.Select</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.form.select.SelectOptions</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.tree.DefaultAbstractTree</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.tree.DefaultAbstractTree$ILinkCallback</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.tree.table.AbstractColumn</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.tree.table.AbstractRenderableColumn</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.tree.table.AbstractTreeColumn</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.tree.table.ColumnLocation</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.tree.table.ColumnLocation$Alignment</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.tree.table.ColumnLocation$Unit</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.tree.table.IRenderable</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.markup.html.tree.table.TreeTable</MissingClass>
+    <MissingClass>org.apache.wicket.extensions.yui.calendar.DatePicker</MissingClass>
+    <MissingClass>org.apache.wicket.javascript.DefaultJavascriptCompressor</MissingClass>
+    <MissingClass>org.apache.wicket.markup.ComponentTag</MissingClass>
+    <MissingClass>org.apache.wicket.markup.MarkupStream</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.IHeaderContributor</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.IHeaderResponse</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.WebComponent</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.WebMarkupContainer</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.WebPage</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.WebResource</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.basic.Label</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.basic.MultiLineLabel</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.form.Button</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.form.Form</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.form.FormComponent</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.form.IFormSubmitListener</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.form.SubmitLink</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.form.TextField</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.link.ExternalLink</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.link.ILinkListener</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.link.IPageLink</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.link.InlineFrame</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.link.Link</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.link.PopupCloseLink</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.link.PopupSettings</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.list.ListItem</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.list.ListView</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.panel.Panel</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.resources.CompressedResourceReference</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.resources.JavascriptResourceReference</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.resources.StyleSheetReference</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.tree.AbstractTree</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.tree.BaseTree</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.tree.ITreeState</MissingClass>
+    <MissingClass>org.apache.wicket.markup.html.tree.WicketTreeModel</MissingClass>
+    <MissingClass>org.apache.wicket.markup.repeater.RepeatingView</MissingClass>
+    <MissingClass>org.apache.wicket.model.AbstractReadOnlyModel</MissingClass>
+    <MissingClass>org.apache.wicket.model.IModel</MissingClass>
+    <MissingClass>org.apache.wicket.model.Model</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.ClientProperties</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.IMultipartWebRequest</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.PageExpiredException</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.WebApplication</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.WebRequest</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.WebRequestCycle</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.WebResponse</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.WebSession</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.request.InvalidUrlException</MissingClass>
+    <MissingClass>org.apache.wicket.protocol.http.request.WebClientInfo</MissingClass>
+    <MissingClass>org.apache.wicket.request.ClientInfo</MissingClass>
+    <MissingClass>org.apache.wicket.session.ISessionStore</MissingClass>
+    <MissingClass>org.apache.wicket.settings.IApplicationSettings</MissingClass>
+    <MissingClass>org.apache.wicket.settings.IDebugSettings</MissingClass>
+    <MissingClass>org.apache.wicket.settings.IMarkupSettings</MissingClass>
+    <MissingClass>org.apache.wicket.settings.IPageSettings</MissingClass>
+    <MissingClass>org.apache.wicket.settings.IRequestCycleSettings</MissingClass>
+    <MissingClass>org.apache.wicket.settings.IRequestLoggerSettings</MissingClass>
+    <MissingClass>org.apache.wicket.settings.IResourceSettings</MissingClass>
+    <MissingClass>org.apache.wicket.settings.ISecuritySettings</MissingClass>
+    <MissingClass>org.apache.wicket.util.io.Streams</MissingClass>
+    <MissingClass>org.apache.wicket.util.resource.IResourceStream</MissingClass>
+    <MissingClass>org.apache.wicket.util.string.AppendingStringBuffer</MissingClass>
+    <MissingClass>org.apache.wicket.util.string.JavascriptUtils</MissingClass>
+    <MissingClass>org.apache.wicket.util.time.Duration</MissingClass>
+    <MissingClass>org.apache.wicket.util.time.Time</MissingClass>
+    <MissingClass>org.apache.wicket.util.upload.FileItem</MissingClass>
+    <MissingClass>org.apache.wicket.util.value.IValueMap</MissingClass>
+    <MissingClass>org.apache.xerces.jaxp.DocumentBuilderFactoryImpl</MissingClass>
+    <MissingClass>org.apache.xml.serialize.OutputFormat</MissingClass>
+    <MissingClass>org.apache.xml.serialize.XMLSerializer</MissingClass>
+    <MissingClass>org.efaps.admin.AbstractAdminObject</MissingClass>
+    <MissingClass>org.efaps.admin.access.AccessTypeEnums</MissingClass>
+    <MissingClass>org.efaps.admin.common.SystemConfiguration</MissingClass>
+    <MissingClass>org.efaps.admin.datamodel.Attribute</MissingClass>
+    <MissingClass>org.efaps.admin.datamodel.AttributeSet</MissingClass>
+    <MissingClass>org.efaps.admin.datamodel.AttributeType</MissingClass>
+    <MissingClass>org.efaps.admin.datamodel.Classification</MissingClass>
+    <MissingClass>org.efaps.admin.datamodel.Type</MissingClass>
+    <MissingClass>org.efaps.admin.datamodel.ui.FieldValue</MissingClass>
+    <MissingClass>org.efaps.admin.datamodel.ui.UIInterface</MissingClass>
+    <MissingClass>org.efaps.admin.dbproperty.DBProperties</MissingClass>
+    <MissingClass>org.efaps.admin.event.EventDefinition</MissingClass>
+    <MissingClass>org.efaps.admin.event.EventType</MissingClass>
+    <MissingClass>org.efaps.admin.event.Parameter</MissingClass>
+    <MissingClass>org.efaps.admin.event.Parameter$ParameterValues</MissingClass>
+    <MissingClass>org.efaps.admin.event.Return</MissingClass>
+    <MissingClass>org.efaps.admin.event.Return$ReturnValues</MissingClass>
+    <MissingClass>org.efaps.admin.program.bundle.BundleInterface</MissingClass>
+    <MissingClass>org.efaps.admin.program.bundle.BundleMaker</MissingClass>
+    <MissingClass>org.efaps.admin.program.bundle.TempFileBundle</MissingClass>
+    <MissingClass>org.efaps.admin.runlevel.RunLevel</MissingClass>
+    <MissingClass>org.efaps.admin.ui.AbstractCommand</MissingClass>
+    <MissingClass>org.efaps.admin.ui.AbstractCommand$SortDirection</MissingClass>
+    <MissingClass>org.efaps.admin.ui.AbstractCommand$Target</MissingClass>
+    <MissingClass>org.efaps.admin.ui.AbstractMenu</MissingClass>
+    <MissingClass>org.efaps.admin.ui.AbstractUserInterfaceObject$TargetMode</MissingClass>
+    <MissingClass>org.efaps.admin.ui.Command</MissingClass>
+    <MissingClass>org.efaps.admin.ui.Form</MissingClass>
+    <MissingClass>org.efaps.admin.ui.Image</MissingClass>
+    <MissingClass>org.efaps.admin.ui.Menu</MissingClass>
+    <MissingClass>org.efaps.admin.ui.Search</MissingClass>
+    <MissingClass>org.efaps.admin.ui.Table</MissingClass>
+    <MissingClass>org.efaps.admin.ui.field.Field</MissingClass>
+    <MissingClass>org.efaps.admin.ui.field.Field$Display</MissingClass>
+    <MissingClass>org.efaps.admin.ui.field.FieldClassification</MissingClass>
+    <MissingClass>org.efaps.admin.ui.field.FieldCommand</MissingClass>
+    <MissingClass>org.efaps.admin.ui.field.FieldGroup</MissingClass>
+    <MissingClass>org.efaps.admin.ui.field.FieldHeading</MissingClass>
+    <MissingClass>org.efaps.admin.ui.field.FieldPicker</MissingClass>
+    <MissingClass>org.efaps.admin.ui.field.FieldSet</MissingClass>
+    <MissingClass>org.efaps.admin.ui.field.FieldTable</MissingClass>
+    <MissingClass>org.efaps.admin.user.Company</MissingClass>
+    <MissingClass>org.efaps.admin.user.Person</MissingClass>
+    <MissingClass>org.efaps.admin.user.Role</MissingClass>
+    <MissingClass>org.efaps.admin.user.UserAttributesSet</MissingClass>
+    <MissingClass>org.efaps.beans.ValueList</MissingClass>
+    <MissingClass>org.efaps.beans.valueparser.ParseException</MissingClass>
+    <MissingClass>org.efaps.beans.valueparser.ValueParser</MissingClass>
+    <MissingClass>org.efaps.ci.CIAdminProgram</MissingClass>
+    <MissingClass>org.efaps.ci.CIAdminProgram$_StaticCompiled</MissingClass>
+    <MissingClass>org.efaps.ci.CIAdminProgram$_XSL</MissingClass>
+    <MissingClass>org.efaps.ci.CIAdminUserInterface</MissingClass>
+    <MissingClass>org.efaps.ci.CIAdminUserInterface$_Image</MissingClass>
+    <MissingClass>org.efaps.db.Checkout</MissingClass>
+    <MissingClass>org.efaps.db.Context</MissingClass>
+    <MissingClass>org.efaps.db.Instance</MissingClass>
+    <MissingClass>org.efaps.db.InstanceQuery</MissingClass>
+    <MissingClass>org.efaps.db.MultiPrintQuery</MissingClass>
+    <MissingClass>org.efaps.db.PrintQuery</MissingClass>
+    <MissingClass>org.efaps.db.QueryBuilder</MissingClass>
+    <MissingClass>org.efaps.jaas.AppAccessHandler</MissingClass>
+    <MissingClass>org.efaps.jaas.LoginHandler</MissingClass>
+    <MissingClass>org.efaps.message.MessageStatusHolder</MissingClass>
+    <MissingClass>org.efaps.util.DateTimeUtil</MissingClass>
+    <MissingClass>org.efaps.util.EFapsException</MissingClass>
+    <MissingClass>org.efaps.util.RequestHandler</MissingClass>
+    <MissingClass>org.efaps.util.cache.AutomaticCache</MissingClass>
+    <MissingClass>org.efaps.util.cache.CacheReloadException</MissingClass>
+    <MissingClass>org.joda.time.DateMidnight</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.joda.time.Interval</MissingClass>
+    <MissingClass>org.joda.time.MutableDateTime</MissingClass>
+    <MissingClass>org.joda.time.format.DateTimeFormat</MissingClass>
+    <MissingClass>org.joda.time.format.DateTimeFormatter</MissingClass>
+    <MissingClass>org.joda.time.format.ISODateTimeFormat</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 5 Jan 2011 04:10:27 +0200" total_classes="321" referenced_classes="428" total_bugs="47" total_size="10765" num_packages="52" vm_version="20.4-b02-402" cpu_seconds="65.83" clock_seconds="35.86" peak_mbytes="113.24" alloc_mbytes="763.88" gc_seconds="1.60" priority_2="40" priority_1="7">
+    <PackageStats package="org.efaps.ui.filter" total_bugs="3" total_types="4" total_size="168" priority_2="1" priority_1="2">
+      <ClassStats class="org.efaps.ui.filter.AbstractAuthenticationFilter" sourceFile="AbstractAuthenticationFilter.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.filter.AbstractFilter" sourceFile="AbstractFilter.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.efaps.ui.filter.BasicAuthenticationFilter" sourceFile="BasicAuthenticationFilter.java" interface="false" size="27" bugs="2" priority_1="2"/>
+      <ClassStats class="org.efaps.ui.filter.TransactionFilter" sourceFile="TransactionFilter.java" interface="false" size="57" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.servlet" total_bugs="4" total_types="11" total_size="369" priority_2="2" priority_1="2">
+      <ClassStats class="org.efaps.ui.servlet.CheckoutServlet" sourceFile="CheckoutServlet.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.efaps.ui.servlet.HelpServlet" sourceFile="HelpServlet.java" interface="false" size="123" bugs="4" priority_2="2" priority_1="2"/>
+      <ClassStats class="org.efaps.ui.servlet.ImageServlet" sourceFile="ImageServlet.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.efaps.ui.servlet.ImageServlet$1" sourceFile="ImageServlet.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.efaps.ui.servlet.ImageServlet$ImageCache" sourceFile="ImageServlet.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.efaps.ui.servlet.ImageServlet$ImageMapper" sourceFile="ImageServlet.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.efaps.ui.servlet.InitServlet" sourceFile="InitServlet.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.efaps.ui.servlet.StaticContentServlet" sourceFile="StaticContentServlet.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.efaps.ui.servlet.StaticContentServlet$1" sourceFile="StaticContentServlet.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.efaps.ui.servlet.StaticContentServlet$ContentMapper" sourceFile="StaticContentServlet.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.efaps.ui.servlet.StaticContentServlet$StaticContentCache" sourceFile="StaticContentServlet.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket" total_bugs="3" total_types="8" total_size="333" priority_2="2" priority_1="1">
+      <ClassStats class="org.efaps.ui.wicket.EFapsApplication" sourceFile="EFapsApplication.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.EFapsApplication$1" sourceFile="EFapsApplication.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.EFapsApplication$EFapsFormBasedAuthorizationStartegy" sourceFile="EFapsApplication.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.EFapsNoAuthorizationNeededInterface" sourceFile="EFapsNoAuthorizationNeededInterface.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.EFapsSession" sourceFile="EFapsSession.java" interface="false" size="173" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.EFapsSession$FileParameter" sourceFile="EFapsSession.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.EFapsWebRequestCycle" sourceFile="EFapsWebRequestCycle.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.Opener" sourceFile="Opener.java" interface="false" size="43" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.behaviors" total_bugs="1" total_types="8" total_size="165" priority_2="1">
+      <ClassStats class="org.efaps.ui.wicket.behaviors.AbstractAjaxCallBackBehavior" sourceFile="AbstractAjaxCallBackBehavior.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.AbstractAjaxCallBackBehavior$Target" sourceFile="AbstractAjaxCallBackBehavior.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.AjaxFieldUpdateBehavior" sourceFile="AjaxFieldUpdateBehavior.java" interface="false" size="49" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.ExpandTextareaBehavior" sourceFile="ExpandTextareaBehavior.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.RowSelectedInput" sourceFile="RowSelectedInput.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.SetMessageStatusContributor" sourceFile="SetMessageStatusContributor.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.SetSelectedRowBehavior" sourceFile="SetSelectedRowBehavior.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.ShowFileCallBackBehavior" sourceFile="ShowFileCallBackBehavior.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.behaviors.dojo" total_bugs="0" total_types="12" total_size="334">
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.AbstractDojoBehavior" sourceFile="AbstractDojoBehavior.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.BorderBehavior" sourceFile="BorderBehavior.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.BorderBehavior$Design" sourceFile="BorderBehavior.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.ContentPaneBehavior" sourceFile="ContentPaneBehavior.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.ContentPaneBehavior$Region" sourceFile="ContentPaneBehavior.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.DnDBehavior" sourceFile="DnDBehavior.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.DnDBehavior$BehaviorType" sourceFile="DnDBehavior.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.DojoReference" sourceFile="DojoReference.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.DojoReference$1" sourceFile="DojoReference.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.DojoReference$2" sourceFile="DojoReference.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.EditorBehavior" sourceFile="EditorBehavior.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.dojo.EditorBehavior$MenuCommands" sourceFile="EditorBehavior.java" interface="false" size="66" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.behaviors.update" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="org.efaps.ui.wicket.behaviors.update.AbstractAjaxUpdateBehavior" sourceFile="AbstractAjaxUpdateBehavior.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.behaviors.update.UpdateInterface" sourceFile="UpdateInterface.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components" total_bugs="0" total_types="6" total_size="127">
+      <ClassStats class="org.efaps.ui.wicket.components.AbstractParentMarkupContainer" sourceFile="AbstractParentMarkupContainer.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.ChildCallBackHeaderContributer" sourceFile="ChildCallBackHeaderContributer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.FormContainer" sourceFile="FormContainer.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.IFileUploadListener" sourceFile="IFileUploadListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.IRecent" sourceFile="IRecent.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.LabelComponent" sourceFile="LabelComponent.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.autocomplete" total_bugs="2" total_types="4" total_size="129" priority_2="2">
+      <ClassStats class="org.efaps.ui.wicket.components.autocomplete.AutoCompleteField" sourceFile="AutoCompleteField.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.autocomplete.AutoCompleteField$1" sourceFile="AutoCompleteField.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.autocomplete.AutoCompleteFieldBehavior" sourceFile="AutoCompleteFieldBehavior.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.autocomplete.AutoCompleteRenderer" sourceFile="AutoCompleteRenderer.java" interface="false" size="40" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.button" total_bugs="1" total_types="4" total_size="88" priority_2="1">
+      <ClassStats class="org.efaps.ui.wicket.components.button.Button" sourceFile="Button.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.button.Button$ButtonImage" sourceFile="Button.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.button.Button$ICON" sourceFile="Button.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.button.ButtonStyleBehavior" sourceFile="ButtonStyleBehavior.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.classification" total_bugs="3" total_types="11" total_size="291" priority_2="3">
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationPath" sourceFile="ClassificationPath.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationPathPanel" sourceFile="ClassificationPathPanel.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$1" sourceFile="ClassificationPathPanel.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$AjaxOpenClassTreeBehavior" sourceFile="ClassificationPathPanel.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$ClassTreeOpener" sourceFile="ClassificationPathPanel.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationPathPanel$UpdateCallback" sourceFile="ClassificationPathPanel.java" interface="false" size="49" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationTree" sourceFile="ClassificationTree.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationTree$AjaxSubmitCloseLink" sourceFile="ClassificationTree.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationTreeLabelPanel" sourceFile="ClassificationTreeLabelPanel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationTreeLabelPanel$AjaxCheckBox" sourceFile="ClassificationTreeLabelPanel.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.classification.ClassificationTreeLabelPanel$AjaxCheckBoxClickBehavior" sourceFile="ClassificationTreeLabelPanel.java" interface="false" size="47" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.date" total_bugs="0" total_types="6" total_size="110">
+      <ClassStats class="org.efaps.ui.wicket.components.date.DateTimePanel" sourceFile="DateTimePanel.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.date.DateTimePanel$1" sourceFile="DateTimePanel.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.date.DateTimePanel$2" sourceFile="DateTimePanel.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.date.DateTimePanel$3" sourceFile="DateTimePanel.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.date.DateTimePanel$4" sourceFile="DateTimePanel.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.date.DateTimePanel$5" sourceFile="DateTimePanel.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.editor" total_bugs="0" total_types="3" total_size="46">
+      <ClassStats class="org.efaps.ui.wicket.components.editor.EditorPanel" sourceFile="EditorPanel.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.editor.EditorPanel$1" sourceFile="EditorPanel.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.editor.EditorPanel$2" sourceFile="EditorPanel.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.efapscontent" total_bugs="0" total_types="1" total_size="30">
+      <ClassStats class="org.efaps.ui.wicket.components.efapscontent.StaticImageComponent" sourceFile="StaticImageComponent.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.footer" total_bugs="0" total_types="12" total_size="509">
+      <ClassStats class="org.efaps.ui.wicket.components.footer.AjaxCancelLink" sourceFile="AjaxCancelLink.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.AjaxReviseLink" sourceFile="AjaxReviseLink.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.AjaxSubmitCloseBehavior" sourceFile="AjaxSubmitCloseBehavior.java" interface="false" size="252" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.AjaxSubmitCloseBehavior$1" sourceFile="AjaxSubmitCloseBehavior.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.AjaxSubmitCloseBehavior$2" sourceFile="AjaxSubmitCloseBehavior.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.AjaxSubmitCloseLink" sourceFile="AjaxSubmitCloseLink.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.ClosePopUpLink" sourceFile="ClosePopUpLink.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.FooterPanel" sourceFile="FooterPanel.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.FooterPanel$1" sourceFile="FooterPanel.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.FooterPanel$1$1" sourceFile="FooterPanel.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.SearchSubmitLink" sourceFile="SearchSubmitLink.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.footer.UploadBehavior" sourceFile="UploadBehavior.java" interface="false" size="67" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.form" total_bugs="0" total_types="1" total_size="42">
+      <ClassStats class="org.efaps.ui.wicket.components.form.FormPanel" sourceFile="FormPanel.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.form.cell" total_bugs="0" total_types="1" total_size="59">
+      <ClassStats class="org.efaps.ui.wicket.components.form.cell.ValueCellPanel" sourceFile="ValueCellPanel.java" interface="false" size="59" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.form.command" total_bugs="0" total_types="4" total_size="130">
+      <ClassStats class="org.efaps.ui.wicket.components.form.command.AjaxCmdBehavior" sourceFile="AjaxCmdBehavior.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.form.command.AjaxExecuteLink" sourceFile="AjaxExecuteLink.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.form.command.CommandCellPanel" sourceFile="CommandCellPanel.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.form.command.EsjpAjaxComponent" sourceFile="EsjpAjaxComponent.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.form.row" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="org.efaps.ui.wicket.components.form.row.RowPanel" sourceFile="RowPanel.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.form.set" total_bugs="2" total_types="7" total_size="224" priority_2="1" priority_1="1">
+      <ClassStats class="org.efaps.ui.wicket.components.form.set.AjaxAddNew" sourceFile="AjaxAddNew.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.form.set.AjaxRemoveNew" sourceFile="AjaxRemoveNew.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.form.set.AjaxRemoveNew$AjaxRemoveNewBehavior" sourceFile="AjaxRemoveNew.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.form.set.ValuePanel" sourceFile="ValuePanel.java" interface="false" size="46" bugs="1" priority_1="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.form.set.ValuePanel$1" sourceFile="ValuePanel.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.form.set.ValuePanel$AjaxRemove" sourceFile="ValuePanel.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.form.set.YPanel" sourceFile="YPanel.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.heading" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="org.efaps.ui.wicket.components.heading.HeadingPanel" sourceFile="HeadingPanel.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.menu" total_bugs="1" total_types="22" total_size="576" priority_2="1">
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AbstractMenuItemAjaxComponent" sourceFile="AbstractMenuItemAjaxComponent.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AbstractMenuItemLink" sourceFile="AbstractMenuItemLink.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxOpenModalComponent" sourceFile="AjaxOpenModalComponent.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxOpenModalComponent$AjaxOpenModalBehavior" sourceFile="AjaxOpenModalComponent.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxOpenModalComponent$SubmitAndOpenModalBehavior" sourceFile="AjaxOpenModalComponent.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxOpenModalComponent$SubmitAndOpenModalBehavior$1" sourceFile="AjaxOpenModalComponent.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxSearchComponent" sourceFile="AjaxSearchComponent.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxSearchComponent$AjaxReloadSearchFormBehavior" sourceFile="AjaxSearchComponent.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxSetCompanyLink" sourceFile="AjaxSetCompanyLink.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxSetCompanyLink$OpenSetCompanyPageBehavior" sourceFile="AjaxSetCompanyLink.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxSetCompanyLink$OpenSetCompanyPageBehavior$1" sourceFile="AjaxSetCompanyLink.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxSetCompanyLink$OpenSetCompanyPageBehavior$2" sourceFile="AjaxSetCompanyLink.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxSubmitComponent" sourceFile="AjaxSubmitComponent.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxSubmitComponent$SubmitAndUpdateBehavior" sourceFile="AjaxSubmitComponent.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxSubmitComponent$SubmitAndUpdateBehavior$1" sourceFile="AjaxSubmitComponent.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.AjaxSubmitComponent$SubmitAndUpdateBehavior$2" sourceFile="AjaxSubmitComponent.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.FileRequestTarget" sourceFile="FileRequestTarget.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.LogOutLink" sourceFile="LogOutLink.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.MenuContainer" sourceFile="MenuContainer.java" interface="false" size="129" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.MenuContainer$1" sourceFile="MenuContainer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.MenuPanel" sourceFile="MenuPanel.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menu.StandardLink" sourceFile="StandardLink.java" interface="false" size="76" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.menutree" total_bugs="1" total_types="11" total_size="338" priority_2="1">
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.AjaxExpandLink" sourceFile="AjaxExpandLink.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.AjaxGoIntoLink" sourceFile="AjaxGoIntoLink.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.AjaxGoUpLink" sourceFile="AjaxGoUpLink.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.AjaxMenuTreeLink" sourceFile="AjaxMenuTreeLink.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.AjaxRemoveLink" sourceFile="AjaxRemoveLink.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.MenuTree" sourceFile="MenuTree.java" interface="false" size="154" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.MenuTree$1" sourceFile="MenuTree.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.MenuTree$2" sourceFile="MenuTree.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.MenuTree$3" sourceFile="MenuTree.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.MenuTree$AjaxUpdateBehavior" sourceFile="MenuTree.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.menutree.MenuTree$Indentation" sourceFile="MenuTree.java" interface="false" size="15" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.modalwindow" total_bugs="1" total_types="4" total_size="147" priority_2="1">
+      <ClassStats class="org.efaps.ui.wicket.components.modalwindow.ICmdUIObject" sourceFile="ICmdUIObject.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.modalwindow.ModalWindowAjaxPageCreator" sourceFile="ModalWindowAjaxPageCreator.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.modalwindow.ModalWindowContainer" sourceFile="ModalWindowContainer.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.modalwindow.UpdateParentCallback" sourceFile="UpdateParentCallback.java" interface="false" size="30" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.picker" total_bugs="1" total_types="3" total_size="84" priority_2="1">
+      <ClassStats class="org.efaps.ui.wicket.components.picker.AjaxPickerLink" sourceFile="AjaxPickerLink.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.picker.AjaxPickerLink$AjaxOpenPickerBehavior" sourceFile="AjaxPickerLink.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.picker.PickerCallBack" sourceFile="PickerCallBack.java" interface="false" size="35" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.split" total_bugs="0" total_types="2" total_size="82">
+      <ClassStats class="org.efaps.ui.wicket.components.split.ListOnlyPanel" sourceFile="ListOnlyPanel.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.split.StructBrowsSplitPanel" sourceFile="StructBrowsSplitPanel.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.split.header" total_bugs="0" total_types="8" total_size="266">
+      <ClassStats class="org.efaps.ui.wicket.components.split.header.AjaxStoreHorizontalPositionBehavior" sourceFile="AjaxStoreHorizontalPositionBehavior.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.split.header.AjaxStoreVerticalPositionBehavior" sourceFile="AjaxStoreVerticalPositionBehavior.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.split.header.RecentLink" sourceFile="RecentLink.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.split.header.SplitHeaderPanel" sourceFile="SplitHeaderPanel.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.split.header.SplitHeaderPanel$1" sourceFile="SplitHeaderPanel.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.split.header.SplitHeaderPanel$2" sourceFile="SplitHeaderPanel.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.split.header.SplitHeaderPanel$Css" sourceFile="SplitHeaderPanel.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.split.header.SplitHeaderPanel$PositionUserAttribute" sourceFile="SplitHeaderPanel.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.table" total_bugs="2" total_types="8" total_size="175" priority_2="2">
+      <ClassStats class="org.efaps.ui.wicket.components.table.AjaxAddRemoveRowPanel" sourceFile="AjaxAddRemoveRowPanel.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.AjaxAddRemoveRowPanel$1" sourceFile="AjaxAddRemoveRowPanel.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.AjaxAddRemoveRowPanel$AjaxAddRow" sourceFile="AjaxAddRemoveRowPanel.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.AjaxAddRemoveRowPanel$AjaxAddRow$1" sourceFile="AjaxAddRemoveRowPanel.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.AjaxAddRemoveRowPanel$InsertRow" sourceFile="AjaxAddRemoveRowPanel.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.AjaxAddRemoveRowPanel$RemoveRow" sourceFile="AjaxAddRemoveRowPanel.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.RowContainer" sourceFile="RowContainer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.TablePanel" sourceFile="TablePanel.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.table.cell" total_bugs="2" total_types="8" total_size="220" priority_2="2">
+      <ClassStats class="org.efaps.ui.wicket.components.table.cell.AjaxLinkContainer" sourceFile="AjaxLinkContainer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.cell.AjaxLinkContainer$AjaxParentCallBackBehavior" sourceFile="AjaxLinkContainer.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.cell.AjaxLinkContainer$AjaxSelfCallBackBehavior" sourceFile="AjaxLinkContainer.java" interface="false" size="34" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.cell.AjaxLoadInOpenerLink" sourceFile="AjaxLoadInOpenerLink.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.cell.CellPanel" sourceFile="CellPanel.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.cell.CheckBoxComponent" sourceFile="CheckBoxComponent.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.cell.CheckOutLink" sourceFile="CheckOutLink.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.cell.ContentContainerLink" sourceFile="ContentContainerLink.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.table.filter" total_bugs="1" total_types="4" total_size="103" priority_2="1">
+      <ClassStats class="org.efaps.ui.wicket.components.table.filter.FreeTextPanel" sourceFile="FreeTextPanel.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.filter.PickerPanel" sourceFile="PickerPanel.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.filter.PickerPanel$FilterListView" sourceFile="PickerPanel.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.filter.PickerPanel$ValueCheckBox" sourceFile="PickerPanel.java" interface="false" size="12" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.table.header" total_bugs="2" total_types="10" total_size="300" priority_2="2">
+      <ClassStats class="org.efaps.ui.wicket.components.table.header.AjaxFilterLink" sourceFile="AjaxFilterLink.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.header.AjaxFilterLink$FilterPageCreator" sourceFile="AjaxFilterLink.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.header.HeaderCellPanel" sourceFile="HeaderCellPanel.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.header.HeaderCellPanel$Checkbox" sourceFile="HeaderCellPanel.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.header.HeaderPanel" sourceFile="HeaderPanel.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.header.HeaderPanel$AjaxReloadTableBehavior" sourceFile="HeaderPanel.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.header.HeaderPanel$AjaxStoreColumnOrderBehavior" sourceFile="HeaderPanel.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.header.HeaderPanel$AjaxStoreColumnWidthBehavior" sourceFile="HeaderPanel.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.header.Seperator" sourceFile="Seperator.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.header.SortLink" sourceFile="SortLink.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.table.row" total_bugs="0" total_types="2" total_size="66">
+      <ClassStats class="org.efaps.ui.wicket.components.table.row.RowPanel" sourceFile="RowPanel.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.table.row.RowPanel$1" sourceFile="RowPanel.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.components.tree" total_bugs="4" total_types="37" total_size="802" priority_2="4">
+      <ClassStats class="org.efaps.ui.wicket.components.tree.AjaxEditRowPanel" sourceFile="AjaxEditRowPanel.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.AjaxEditRowPanel$InsertChildFolder" sourceFile="AjaxEditRowPanel.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.AjaxEditRowPanel$InsertChildRow" sourceFile="AjaxEditRowPanel.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.AjaxEditRowPanel$InsertRow" sourceFile="AjaxEditRowPanel.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.AjaxEditRowPanel$RemoveRow" sourceFile="AjaxEditRowPanel.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.AjaxEditRowPanel$RemoveRow$1" sourceFile="AjaxEditRowPanel.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.AsyncronTreeUpdateListener" sourceFile="AsyncronTreeUpdateListener.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.SortHeaderColumnLink" sourceFile="SortHeaderColumnLink.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTree" sourceFile="StructurBrowserTree.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTree$1" sourceFile="StructurBrowserTree.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTree$2" sourceFile="StructurBrowserTree.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTree$2$1" sourceFile="StructurBrowserTree.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTree$2$2" sourceFile="StructurBrowserTree.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTree$3" sourceFile="StructurBrowserTree.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTree$4" sourceFile="StructurBrowserTree.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTree$AjaxUpdateBehavior" sourceFile="StructurBrowserTree.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreePanel" sourceFile="StructurBrowserTreePanel.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable" sourceFile="StructurBrowserTreeTable.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$1" sourceFile="StructurBrowserTreeTable.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$2" sourceFile="StructurBrowserTreeTable.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$3" sourceFile="StructurBrowserTreeTable.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$AjaxParentCallBackBehavior" sourceFile="StructurBrowserTreeTable.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment" sourceFile="StructurBrowserTreeTable.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment$1" sourceFile="StructurBrowserTreeTable.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment$2" sourceFile="StructurBrowserTreeTable.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment$3" sourceFile="StructurBrowserTreeTable.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment$4" sourceFile="StructurBrowserTreeTable.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTable$StructurBrowserTreeFragment$5" sourceFile="StructurBrowserTreeTable.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel" sourceFile="StructurBrowserTreeTablePanel.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$EditColumn" sourceFile="StructurBrowserTreeTablePanel.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$SelectColumn" sourceFile="StructurBrowserTreeTablePanel.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$SelectColumn$1" sourceFile="StructurBrowserTreeTablePanel.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$SimpleColumn" sourceFile="StructurBrowserTreeTablePanel.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$SimpleColumn$1" sourceFile="StructurBrowserTreeTablePanel.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.StructurBrowserTreeTablePanel$TreeColumn" sourceFile="StructurBrowserTreeTablePanel.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.TreeCellPanel" sourceFile="TreeCellPanel.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.components.tree.TreeCellPanel$1" sourceFile="TreeCellPanel.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.models" total_bugs="0" total_types="5" total_size="61">
+      <ClassStats class="org.efaps.ui.wicket.models.AbstractInstanceObject" sourceFile="AbstractInstanceObject.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.AbstractModel" sourceFile="AbstractModel.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.FormModel" sourceFile="FormModel.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.TableModel" sourceFile="TableModel.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.UIModel" sourceFile="UIModel.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.models.cell" total_bugs="0" total_types="11" total_size="423">
+      <ClassStats class="org.efaps.ui.wicket.models.cell.AbstractUICell" sourceFile="AbstractUICell.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.cell.UIFormCell" sourceFile="UIFormCell.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.cell.UIFormCellCmd" sourceFile="UIFormCellCmd.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.cell.UIFormCellCmd$ExecutionStatus" sourceFile="UIFormCellCmd.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.cell.UIFormCellSet" sourceFile="UIFormCellSet.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.cell.UIHiddenCell" sourceFile="UIHiddenCell.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.cell.UIPicker" sourceFile="UIPicker.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.cell.UIStructurBrowserTableCell" sourceFile="UIStructurBrowserTableCell.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.cell.UITableCell" sourceFile="UITableCell.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.cell.XYModel" sourceFile="XYModel.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.cell.XYValue" sourceFile="XYValue.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.models.objects" total_bugs="7" total_types="28" total_size="2369" priority_2="6" priority_1="1">
+      <ClassStats class="org.efaps.ui.wicket.models.objects.AbstractUIObject" sourceFile="AbstractUIObject.java" interface="false" size="170" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.AbstractUIPageObject" sourceFile="AbstractUIPageObject.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.IEventUIObject" sourceFile="IEventUIObject.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.IFormElement" sourceFile="IFormElement.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIClassification" sourceFile="UIClassification.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIClassification$1" sourceFile="UIClassification.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIFieldForm" sourceFile="UIFieldForm.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIFieldStructurBrowser" sourceFile="UIFieldStructurBrowser.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIFieldTable" sourceFile="UIFieldTable.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIForm" sourceFile="UIForm.java" interface="false" size="385" bugs="1" priority_1="1"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIForm$Element" sourceFile="UIForm.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIForm$ElementType" sourceFile="UIForm.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIForm$FormElement" sourceFile="UIForm.java" interface="false" size="19" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIForm$FormRow" sourceFile="UIForm.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIHeading" sourceFile="UIHeading.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIMenuItem" sourceFile="UIMenuItem.java" interface="false" size="129" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIRow" sourceFile="UIRow.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UISearchItem" sourceFile="UISearchItem.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIStructurBrowser" sourceFile="UIStructurBrowser.java" interface="false" size="468" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIStructurBrowser$BogusNode" sourceFile="UIStructurBrowser.java" interface="false" size="5" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIStructurBrowser$ExecutionStatus" sourceFile="UIStructurBrowser.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UITable" sourceFile="UITable.java" interface="false" size="458" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UITable$1" sourceFile="UITable.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UITable$Filter" sourceFile="UITable.java" interface="false" size="90" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UITable$UserCacheKey" sourceFile="UITable.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UITableHeader" sourceFile="UITableHeader.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UITableHeader$FilterType" sourceFile="UITableHeader.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.models.objects.UIWizardObject" sourceFile="UIWizardObject.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages" total_bugs="0" total_types="1" total_size="79">
+      <ClassStats class="org.efaps.ui.wicket.pages.AbstractMergePage" sourceFile="AbstractMergePage.java" interface="false" size="79" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.classification" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="org.efaps.ui.wicket.pages.classification.ClassificationPage" sourceFile="ClassificationPage.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.company" total_bugs="1" total_types="7" total_size="112" priority_2="1">
+      <ClassStats class="org.efaps.ui.wicket.pages.company.CompanyPage" sourceFile="CompanyPage.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.company.CompanyPage$1" sourceFile="CompanyPage.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.company.CompanyPage$2" sourceFile="CompanyPage.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.company.CompanyPage$AjaxCloseLink" sourceFile="CompanyPage.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.company.CompanyPage$AjaxSubmitLink" sourceFile="CompanyPage.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.company.CompanyPage$AjaxSubmitLink$1" sourceFile="CompanyPage.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.company.CompanyPage$CompanyObject" sourceFile="CompanyPage.java" interface="false" size="14" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.content" total_bugs="0" total_types="2" total_size="78">
+      <ClassStats class="org.efaps.ui.wicket.pages.content.AbstractContentPage" sourceFile="AbstractContentPage.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.content.AbstractContentPage$1" sourceFile="AbstractContentPage.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.content.form" total_bugs="0" total_types="1" total_size="93">
+      <ClassStats class="org.efaps.ui.wicket.pages.content.form.FormPage" sourceFile="FormPage.java" interface="false" size="93" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.content.structurbrowser" total_bugs="0" total_types="1" total_size="32">
+      <ClassStats class="org.efaps.ui.wicket.pages.content.structurbrowser.StructurBrowserPage" sourceFile="StructurBrowserPage.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.content.table" total_bugs="0" total_types="1" total_size="39">
+      <ClassStats class="org.efaps.ui.wicket.pages.content.table.TablePage" sourceFile="TablePage.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.content.table.filter" total_bugs="0" total_types="4" total_size="97">
+      <ClassStats class="org.efaps.ui.wicket.pages.content.table.filter.FilterPage" sourceFile="FilterPage.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.content.table.filter.FilterPage$1" sourceFile="FilterPage.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.content.table.filter.FilterPage$2" sourceFile="FilterPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.content.table.filter.FilterPage$3" sourceFile="FilterPage.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.contentcontainer" total_bugs="1" total_types="2" total_size="109" priority_2="1">
+      <ClassStats class="org.efaps.ui.wicket.pages.contentcontainer.ContentContainerPage" sourceFile="ContentContainerPage.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.contentcontainer.ContentContainerPage$1" sourceFile="ContentContainerPage.java" interface="false" size="20" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.dialog" total_bugs="0" total_types="5" total_size="108">
+      <ClassStats class="org.efaps.ui.wicket.pages.dialog.DialogPage" sourceFile="DialogPage.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.dialog.DialogPage$AjaxCloseLink" sourceFile="DialogPage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.dialog.DialogPage$AjaxGoOnLink" sourceFile="DialogPage.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.dialog.DialogPage$AjaxSubmitLink" sourceFile="DialogPage.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.dialog.DialogPage$KeyListenerContributor" sourceFile="DialogPage.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.empty" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="org.efaps.ui.wicket.pages.empty.EmptyPage" sourceFile="EmptyPage.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.error" total_bugs="1" total_types="2" total_size="73" priority_2="1">
+      <ClassStats class="org.efaps.ui.wicket.pages.error.ErrorPage" sourceFile="ErrorPage.java" interface="false" size="53" bugs="1" priority_2="1"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.error.ErrorPage$1" sourceFile="ErrorPage.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.login" total_bugs="0" total_types="3" total_size="43">
+      <ClassStats class="org.efaps.ui.wicket.pages.login.LoginPage" sourceFile="LoginPage.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.login.LoginPage$1" sourceFile="LoginPage.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.login.LoginPage$2" sourceFile="LoginPage.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.pages.main" total_bugs="0" total_types="4" total_size="107">
+      <ClassStats class="org.efaps.ui.wicket.pages.main.MainPage" sourceFile="MainPage.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.main.MainPage$1" sourceFile="MainPage.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.main.MainPage$2" sourceFile="MainPage.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.pages.main.MainPage$ResizeEventBehavior" sourceFile="MainPage.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.resources" total_bugs="0" total_types="9" total_size="178">
+      <ClassStats class="org.efaps.ui.wicket.resources.AbstractEFapsResource" sourceFile="AbstractEFapsResource.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.resources.AbstractEFapsResource$AbstractEFapsResourceStream" sourceFile="AbstractEFapsResource.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.resources.EFapsContentReference" sourceFile="EFapsContentReference.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.resources.StaticHeaderContributor" sourceFile="StaticHeaderContributor.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.resources.StaticHeaderContributor$1" sourceFile="StaticHeaderContributor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.resources.StaticHeaderContributor$2" sourceFile="StaticHeaderContributor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.resources.StaticHeaderContributor$HeaderType" sourceFile="StaticHeaderContributor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.resources.XSLResource" sourceFile="XSLResource.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.resources.XSLResource$XSLResourceStream" sourceFile="XSLResource.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.wicket.util" total_bugs="0" total_types="4" total_size="86">
+      <ClassStats class="org.efaps.ui.wicket.util.DateUtil" sourceFile="DateUtil.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.util.EFapsKey" sourceFile="EFapsKey.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.util.MimeTypes" sourceFile="MimeTypes.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.efaps.ui.wicket.util.MimeTypes$Mapper" sourceFile="MimeTypes.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.efaps.ui.xml" total_bugs="3" total_types="3" total_size="266" priority_2="3">
+      <ClassStats class="org.efaps.ui.xml.TAG" sourceFile="TAG.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.efaps.ui.xml.XMLExport" sourceFile="XMLExport.java" interface="false" size="213" bugs="3" priority_2="3"/>
+      <ClassStats class="org.efaps.ui.xml.XMLExport$XML" sourceFile="XMLExport.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="2210" invocations="1483" avgMicrosecondsPerInvocation="1490" maxMicrosecondsPerInvocation="57995" standardDeviationMircosecondsPerInvocation="5109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="2176" invocations="1470" avgMicrosecondsPerInvocation="1480" maxMicrosecondsPerInvocation="64388" standardDeviationMircosecondsPerInvocation="5025"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="2145" invocations="1479" avgMicrosecondsPerInvocation="1450" maxMicrosecondsPerInvocation="95466" standardDeviationMircosecondsPerInvocation="5781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="2121" invocations="1485" avgMicrosecondsPerInvocation="1428" maxMicrosecondsPerInvocation="127697" standardDeviationMircosecondsPerInvocation="6181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="2013" invocations="1525" avgMicrosecondsPerInvocation="1320" maxMicrosecondsPerInvocation="127243" standardDeviationMircosecondsPerInvocation="6239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1841" invocations="1331" avgMicrosecondsPerInvocation="1383" maxMicrosecondsPerInvocation="63333" standardDeviationMircosecondsPerInvocation="4531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1711" invocations="1074" avgMicrosecondsPerInvocation="1593" maxMicrosecondsPerInvocation="89337" standardDeviationMircosecondsPerInvocation="5885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1674" invocations="428" avgMicrosecondsPerInvocation="3912" maxMicrosecondsPerInvocation="89718" standardDeviationMircosecondsPerInvocation="10417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1291" invocations="428" avgMicrosecondsPerInvocation="3018" maxMicrosecondsPerInvocation="138534" standardDeviationMircosecondsPerInvocation="9705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="1089" invocations="1483" avgMicrosecondsPerInvocation="734" maxMicrosecondsPerInvocation="42851" standardDeviationMircosecondsPerInvocation="3029"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="691" invocations="1866" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="29046" standardDeviationMircosecondsPerInvocation="1521"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="616" invocations="428" avgMicrosecondsPerInvocation="1439" maxMicrosecondsPerInvocation="34682" standardDeviationMircosecondsPerInvocation="4066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="533" invocations="1482" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="37511" standardDeviationMircosecondsPerInvocation="1808"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="451" invocations="321" avgMicrosecondsPerInvocation="1406" maxMicrosecondsPerInvocation="66876" standardDeviationMircosecondsPerInvocation="4793"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="415" invocations="428" avgMicrosecondsPerInvocation="970" maxMicrosecondsPerInvocation="42989" standardDeviationMircosecondsPerInvocation="3265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="410" invocations="428" avgMicrosecondsPerInvocation="960" maxMicrosecondsPerInvocation="44941" standardDeviationMircosecondsPerInvocation="4115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="358" invocations="1470" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="32960" standardDeviationMircosecondsPerInvocation="1469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="340" invocations="1415" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="30219" standardDeviationMircosecondsPerInvocation="1327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="298" invocations="319" avgMicrosecondsPerInvocation="934" maxMicrosecondsPerInvocation="38567" standardDeviationMircosecondsPerInvocation="3052"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="295" invocations="1502" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="83325" standardDeviationMircosecondsPerInvocation="2427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="286" invocations="428" avgMicrosecondsPerInvocation="669" maxMicrosecondsPerInvocation="36188" standardDeviationMircosecondsPerInvocation="2841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="283" invocations="31427" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="47478" standardDeviationMircosecondsPerInvocation="298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="268" invocations="724" avgMicrosecondsPerInvocation="371" maxMicrosecondsPerInvocation="33048" standardDeviationMircosecondsPerInvocation="2103"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="265" invocations="320" avgMicrosecondsPerInvocation="828" maxMicrosecondsPerInvocation="18009" standardDeviationMircosecondsPerInvocation="2275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="257" invocations="321" avgMicrosecondsPerInvocation="801" maxMicrosecondsPerInvocation="63480" standardDeviationMircosecondsPerInvocation="3880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="253" invocations="321" avgMicrosecondsPerInvocation="788" maxMicrosecondsPerInvocation="63144" standardDeviationMircosecondsPerInvocation="4042"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="244" invocations="428" avgMicrosecondsPerInvocation="572" maxMicrosecondsPerInvocation="34561" standardDeviationMircosecondsPerInvocation="2412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="243" invocations="321" avgMicrosecondsPerInvocation="759" maxMicrosecondsPerInvocation="43402" standardDeviationMircosecondsPerInvocation="3214"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="227" invocations="321" avgMicrosecondsPerInvocation="707" maxMicrosecondsPerInvocation="16835" standardDeviationMircosecondsPerInvocation="1730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="211" invocations="321" avgMicrosecondsPerInvocation="657" maxMicrosecondsPerInvocation="70888" standardDeviationMircosecondsPerInvocation="4188"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

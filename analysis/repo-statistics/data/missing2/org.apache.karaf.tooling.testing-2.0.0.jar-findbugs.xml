@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1279552771000" analysisTimestamp="1360903601263" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/karaf/tooling/org.apache.karaf.tooling.testing/2.0.0/org.apache.karaf.tooling.testing-2.0.0.jar</Jar>
+  </Project>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.apache.karaf.testing.Helper">
+      <SourceLine classname="org.apache.karaf.testing.Helper" start="67" end="549" sourcefile="Helper.java" sourcepath="org/apache/karaf/testing/Helper.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.testing.Helper" name="getDefaultConfigOptions" signature="(Ljava/util/Properties;Ljava/net/URL;[Lorg/ops4j/pax/exam/options/SystemPropertyOption;)[Lorg/ops4j/pax/exam/Option;" isStatic="true">
+      <SourceLine classname="org.apache.karaf.testing.Helper" start="180" end="226" startBytecode="0" endBytecode="847" sourcefile="Helper.java" sourcepath="org/apache/karaf/testing/Helper.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.testing.Helper" start="209" end="209" startBytecode="313" endBytecode="313" sourcefile="Helper.java" sourcepath="org/apache/karaf/testing/Helper.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="11">
+    <MissingClass>org.ops4j.pax.exam.CoreOptions</MissingClass>
+    <MissingClass>org.ops4j.pax.exam.Option</MissingClass>
+    <MissingClass>org.ops4j.pax.exam.OptionUtils</MissingClass>
+    <MissingClass>org.ops4j.pax.exam.container.def.PaxRunnerOptions</MissingClass>
+    <MissingClass>org.ops4j.pax.exam.options.BootClasspathLibraryOption</MissingClass>
+    <MissingClass>org.ops4j.pax.exam.options.MavenArtifactProvisionOption</MissingClass>
+    <MissingClass>org.ops4j.pax.exam.options.SystemPropertyOption</MissingClass>
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.FrameworkUtil</MissingClass>
+    <MissingClass>org.osgi.util.tracker.ServiceTracker</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 19 Jul 2010 18:19:31 +0300" total_classes="2" referenced_classes="35" total_bugs="1" total_size="278" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="19.03" clock_seconds="9.76" peak_mbytes="58.66" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="1">
+    <PackageStats package="org.apache.karaf.testing" total_bugs="1" total_types="2" total_size="278" priority_2="1">
+      <ClassStats class="org.apache.karaf.testing.AbstractIntegrationTest" sourceFile="AbstractIntegrationTest.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.karaf.testing.Helper" sourceFile="Helper.java" interface="false" size="221" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1044" invocations="436" avgMicrosecondsPerInvocation="2395" maxMicrosecondsPerInvocation="104054" standardDeviationMircosecondsPerInvocation="7749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="496" invocations="28" avgMicrosecondsPerInvocation="17732" maxMicrosecondsPerInvocation="160112" standardDeviationMircosecondsPerInvocation="34649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="476" invocations="35" avgMicrosecondsPerInvocation="13620" maxMicrosecondsPerInvocation="69471" standardDeviationMircosecondsPerInvocation="16427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="467" invocations="35" avgMicrosecondsPerInvocation="13359" maxMicrosecondsPerInvocation="58124" standardDeviationMircosecondsPerInvocation="15900"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="447" invocations="28" avgMicrosecondsPerInvocation="15972" maxMicrosecondsPerInvocation="77249" standardDeviationMircosecondsPerInvocation="23583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="383" invocations="26" avgMicrosecondsPerInvocation="14749" maxMicrosecondsPerInvocation="107404" standardDeviationMircosecondsPerInvocation="25269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="347" invocations="35" avgMicrosecondsPerInvocation="9929" maxMicrosecondsPerInvocation="103675" standardDeviationMircosecondsPerInvocation="18205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="334" invocations="26" avgMicrosecondsPerInvocation="12853" maxMicrosecondsPerInvocation="67064" standardDeviationMircosecondsPerInvocation="18854"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="329" invocations="26" avgMicrosecondsPerInvocation="12667" maxMicrosecondsPerInvocation="162588" standardDeviationMircosecondsPerInvocation="31528"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="279" invocations="26" avgMicrosecondsPerInvocation="10762" maxMicrosecondsPerInvocation="62032" standardDeviationMircosecondsPerInvocation="15664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="251" invocations="26" avgMicrosecondsPerInvocation="9686" maxMicrosecondsPerInvocation="136750" standardDeviationMircosecondsPerInvocation="26194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="243" invocations="26" avgMicrosecondsPerInvocation="9364" maxMicrosecondsPerInvocation="64411" standardDeviationMircosecondsPerInvocation="16021"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="211" invocations="375" avgMicrosecondsPerInvocation="564" maxMicrosecondsPerInvocation="71647" standardDeviationMircosecondsPerInvocation="3882"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="207" invocations="158" avgMicrosecondsPerInvocation="1313" maxMicrosecondsPerInvocation="20193" standardDeviationMircosecondsPerInvocation="1847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="180" invocations="35" avgMicrosecondsPerInvocation="5159" maxMicrosecondsPerInvocation="38847" standardDeviationMircosecondsPerInvocation="8265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="160" invocations="2" avgMicrosecondsPerInvocation="80279" maxMicrosecondsPerInvocation="104236" standardDeviationMircosecondsPerInvocation="23958"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="154" invocations="26" avgMicrosecondsPerInvocation="5929" maxMicrosecondsPerInvocation="40568" standardDeviationMircosecondsPerInvocation="9624"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="118" invocations="4" avgMicrosecondsPerInvocation="29693" maxMicrosecondsPerInvocation="49566" standardDeviationMircosecondsPerInvocation="16892"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

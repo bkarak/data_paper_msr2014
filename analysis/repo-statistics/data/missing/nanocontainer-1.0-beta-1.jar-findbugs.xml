@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1132683496000" analysisTimestamp="1360508527241" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/nanocontainer/nanocontainer/1.0-beta-1/nanocontainer-1.0-beta-1.jar</Jar>
+  </Project>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.nanocontainer.DefaultNanoContainer">
+      <SourceLine classname="org.nanocontainer.DefaultNanoContainer" start="38" end="201" sourcefile="DefaultNanoContainer.java" sourcepath="org/nanocontainer/DefaultNanoContainer.java"/>
+    </Class>
+    <Method classname="org.nanocontainer.DefaultNanoContainer" name="getComponentClassLoader" signature="()Ljava/lang/ClassLoader;" isStatic="false">
+      <SourceLine classname="org.nanocontainer.DefaultNanoContainer" start="140" end="145" startBytecode="0" endBytecode="125" sourcefile="DefaultNanoContainer.java" sourcepath="org/nanocontainer/DefaultNanoContainer.java"/>
+    </Method>
+    <Class classname="org.nanocontainer.DefaultNanoContainer$URLPrintingClassLoader">
+      <SourceLine classname="org.nanocontainer.DefaultNanoContainer$URLPrintingClassLoader" start="154" end="191" sourcefile="DefaultNanoContainer.java" sourcepath="org/nanocontainer/DefaultNanoContainer.java"/>
+    </Class>
+    <SourceLine classname="org.nanocontainer.DefaultNanoContainer" start="143" end="143" startBytecode="38" endBytecode="38" sourcefile="DefaultNanoContainer.java" sourcepath="org/nanocontainer/DefaultNanoContainer.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="org.nanocontainer.DefaultNanoContainer$URLPrintingClassLoader">
+      <SourceLine classname="org.nanocontainer.DefaultNanoContainer$URLPrintingClassLoader" start="154" end="191" sourcefile="DefaultNanoContainer.java" sourcepath="org/nanocontainer/DefaultNanoContainer.java"/>
+    </Class>
+    <Method classname="org.nanocontainer.DefaultNanoContainer$URLPrintingClassLoader" name="toString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.nanocontainer.DefaultNanoContainer$URLPrintingClassLoader" start="184" end="191" startBytecode="0" endBytecode="164" sourcefile="DefaultNanoContainer.java" sourcepath="org/nanocontainer/DefaultNanoContainer.java"/>
+    </Method>
+    <SourceLine classname="org.nanocontainer.DefaultNanoContainer$URLPrintingClassLoader" start="188" end="188" startBytecode="23" endBytecode="23" sourcefile="DefaultNanoContainer.java" sourcepath="org/nanocontainer/DefaultNanoContainer.java"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="1" abbrev="SnVI" category="BAD_PRACTICE">
+    <Class classname="org.nanocontainer.reflection.DefaultContainerRecorder">
+      <SourceLine classname="org.nanocontainer.reflection.DefaultContainerRecorder" start="36" end="65" sourcefile="DefaultContainerRecorder.java" sourcepath="org/nanocontainer/reflection/DefaultContainerRecorder.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_TRANSIENT_FIELD_NOT_RESTORED" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.nanocontainer.reflection.DefaultContainerRecorder">
+      <SourceLine classname="org.nanocontainer.reflection.DefaultContainerRecorder" start="36" end="65" sourcefile="DefaultContainerRecorder.java" sourcepath="org/nanocontainer/reflection/DefaultContainerRecorder.java"/>
+    </Class>
+    <Field classname="org.nanocontainer.reflection.DefaultContainerRecorder" name="container" signature="Lorg/picocontainer/MutablePicoContainer;" isStatic="false">
+      <SourceLine classname="org.nanocontainer.reflection.DefaultContainerRecorder" sourcefile="DefaultContainerRecorder.java" sourcepath="org/nanocontainer/reflection/DefaultContainerRecorder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="2" abbrev="SnVI" category="BAD_PRACTICE">
+    <Class classname="org.nanocontainer.reflection.DefaultContainerRecorder$Invocation">
+      <SourceLine classname="org.nanocontainer.reflection.DefaultContainerRecorder$Invocation" start="71" end="105" sourcefile="DefaultContainerRecorder.java" sourcepath="org/nanocontainer/reflection/DefaultContainerRecorder.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.nanocontainer.reflection.DefaultContainerRecorder$Invocation">
+      <SourceLine classname="org.nanocontainer.reflection.DefaultContainerRecorder$Invocation" start="71" end="105" sourcefile="DefaultContainerRecorder.java" sourcepath="org/nanocontainer/reflection/DefaultContainerRecorder.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_INNER_CLASS" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.nanocontainer.reflection.DefaultContainerRecorder$InvocationRecorder">
+      <SourceLine classname="org.nanocontainer.reflection.DefaultContainerRecorder$InvocationRecorder" start="108" end="114" sourcefile="DefaultContainerRecorder.java" sourcepath="org/nanocontainer/reflection/DefaultContainerRecorder.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="2" abbrev="SnVI" category="BAD_PRACTICE">
+    <Class classname="org.nanocontainer.reflection.DefaultNanoPicoContainer">
+      <SourceLine classname="org.nanocontainer.reflection.DefaultNanoPicoContainer" start="35" end="65" sourcefile="DefaultNanoPicoContainer.java" sourcepath="org/nanocontainer/reflection/DefaultNanoPicoContainer.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="2" abbrev="SnVI" category="BAD_PRACTICE">
+    <Class classname="org.nanocontainer.reflection.ImplementationHidingNanoPicoContainer">
+      <SourceLine classname="org.nanocontainer.reflection.ImplementationHidingNanoPicoContainer" start="40" end="64" sourcefile="ImplementationHidingNanoPicoContainer.java" sourcepath="org/nanocontainer/reflection/ImplementationHidingNanoPicoContainer.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" abbrev="DE" category="BAD_PRACTICE">
+    <Class classname="org.nanocontainer.script.ScriptedContainerBuilder">
+      <SourceLine classname="org.nanocontainer.script.ScriptedContainerBuilder" start="31" end="66" sourcefile="ScriptedContainerBuilder.java" sourcepath="org/nanocontainer/script/ScriptedContainerBuilder.java"/>
+    </Class>
+    <Method classname="org.nanocontainer.script.ScriptedContainerBuilder" name="createContainer" signature="(Lorg/picocontainer/PicoContainer;Ljava/lang/Object;)Lorg/picocontainer/PicoContainer;" isStatic="false">
+      <SourceLine classname="org.nanocontainer.script.ScriptedContainerBuilder" start="50" end="57" startBytecode="0" endBytecode="162" sourcefile="ScriptedContainerBuilder.java" sourcepath="org/nanocontainer/script/ScriptedContainerBuilder.java"/>
+    </Method>
+    <Class classname="java.io.IOException" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.io.IOException" start="30" end="83" sourcefile="IOException.java" sourcepath="java/io/IOException.java"/>
+    </Class>
+    <SourceLine classname="org.nanocontainer.script.ScriptedContainerBuilder" start="56" end="56" startBytecode="39" endBytecode="39" sourcefile="ScriptedContainerBuilder.java" sourcepath="org/nanocontainer/script/ScriptedContainerBuilder.java"/>
+    <SourceLine classname="org.nanocontainer.script.ScriptedContainerBuilder" start="56" end="56" startBytecode="39" endBytecode="39" sourcefile="ScriptedContainerBuilder.java" sourcepath="org/nanocontainer/script/ScriptedContainerBuilder.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.nanocontainer.script.ScriptedContainerBuilderFactory">
+      <SourceLine classname="org.nanocontainer.script.ScriptedContainerBuilderFactory" start="50" end="135" sourcefile="ScriptedContainerBuilderFactory.java" sourcepath="org/nanocontainer/script/ScriptedContainerBuilderFactory.java"/>
+    </Class>
+    <Method classname="org.nanocontainer.script.ScriptedContainerBuilderFactory" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.nanocontainer.script.ScriptedContainerBuilderFactory" start="67" end="68" startBytecode="0" endBytecode="81" sourcefile="ScriptedContainerBuilderFactory.java" sourcepath="org/nanocontainer/script/ScriptedContainerBuilderFactory.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.nanocontainer.script.ScriptedContainerBuilderFactory" start="67" end="67" startBytecode="9" endBytecode="9" sourcefile="ScriptedContainerBuilderFactory.java" sourcepath="org/nanocontainer/script/ScriptedContainerBuilderFactory.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.nanocontainer.script.ScriptedContainerBuilderFactory">
+      <SourceLine classname="org.nanocontainer.script.ScriptedContainerBuilderFactory" start="50" end="135" sourcefile="ScriptedContainerBuilderFactory.java" sourcepath="org/nanocontainer/script/ScriptedContainerBuilderFactory.java"/>
+    </Class>
+    <Method classname="org.nanocontainer.script.ScriptedContainerBuilderFactory" name="&lt;init&gt;" signature="(Ljava/io/File;Ljava/lang/ClassLoader;)V" isStatic="false">
+      <SourceLine classname="org.nanocontainer.script.ScriptedContainerBuilderFactory" start="63" end="64" startBytecode="0" endBytecode="86" sourcefile="ScriptedContainerBuilderFactory.java" sourcepath="org/nanocontainer/script/ScriptedContainerBuilderFactory.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.nanocontainer.script.ScriptedContainerBuilderFactory" start="63" end="63" startBytecode="9" endBytecode="9" sourcefile="ScriptedContainerBuilderFactory.java" sourcepath="org/nanocontainer/script/ScriptedContainerBuilderFactory.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter">
+      <SourceLine classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter" start="56" end="102" sourcefile="BeanShellComponentAdapter.java" sourcepath="org/nanocontainer/script/bsh/BeanShellComponentAdapter.java"/>
+    </Class>
+    <Method classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter" name="getComponentInstance" signature="(Lorg/picocontainer/PicoContainer;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter" start="66" end="98" startBytecode="0" endBytecode="490" sourcefile="BeanShellComponentAdapter.java" sourcepath="org/nanocontainer/script/bsh/BeanShellComponentAdapter.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter" start="85" end="85" startBytecode="199" endBytecode="199" sourcefile="BeanShellComponentAdapter.java" sourcepath="org/nanocontainer/script/bsh/BeanShellComponentAdapter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter">
+      <SourceLine classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter" start="56" end="102" sourcefile="BeanShellComponentAdapter.java" sourcepath="org/nanocontainer/script/bsh/BeanShellComponentAdapter.java"/>
+    </Class>
+    <Method classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter" name="&lt;init&gt;" signature="(Ljava/lang/Object;Ljava/lang/Class;[Lorg/picocontainer/Parameter;)V" isStatic="false">
+      <SourceLine classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter" start="59" end="61" startBytecode="0" endBytecode="100" sourcefile="BeanShellComponentAdapter.java" sourcepath="org/nanocontainer/script/bsh/BeanShellComponentAdapter.java"/>
+    </Method>
+    <Field classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter" name="parameters" signature="[Lorg/picocontainer/Parameter;" isStatic="false">
+      <SourceLine classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter" sourcefile="BeanShellComponentAdapter.java" sourcepath="org/nanocontainer/script/bsh/BeanShellComponentAdapter.java"/>
+    </Field>
+    <LocalVariable name="parameters" register="3" pc="13" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.nanocontainer.script.bsh.BeanShellComponentAdapter" start="60" end="60" startBytecode="13" endBytecode="13" sourcefile="BeanShellComponentAdapter.java" sourcepath="org/nanocontainer/script/bsh/BeanShellComponentAdapter.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="67">
+    <MissingClass>bsh.Interpreter</MissingClass>
+    <MissingClass>com.thoughtworks.proxy.toys.multicast.ClassHierarchyIntrospector</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.XStream</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.converters.reflection.PureJavaReflectionProvider</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.io.xml.DomDriver</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.io.xml.DomReader</MissingClass>
+    <MissingClass>dynaop.Aspects</MissingClass>
+    <MissingClass>dynaop.ClassPointcut</MissingClass>
+    <MissingClass>dynaop.Interceptor</MissingClass>
+    <MissingClass>dynaop.InterceptorFactory</MissingClass>
+    <MissingClass>dynaop.Invocation</MissingClass>
+    <MissingClass>dynaop.MethodPointcut</MissingClass>
+    <MissingClass>dynaop.MixinFactory</MissingClass>
+    <MissingClass>dynaop.Pointcuts</MissingClass>
+    <MissingClass>dynaop.Proxy</MissingClass>
+    <MissingClass>dynaop.ProxyContext</MissingClass>
+    <MissingClass>dynaop.ProxyFactory</MissingClass>
+    <MissingClass>dynaop.util.Classes</MissingClass>
+    <MissingClass>groovy.lang.Binding</MissingClass>
+    <MissingClass>groovy.lang.Closure</MissingClass>
+    <MissingClass>groovy.lang.GroovyClassLoader</MissingClass>
+    <MissingClass>groovy.lang.GroovyObject</MissingClass>
+    <MissingClass>groovy.lang.Script</MissingClass>
+    <MissingClass>groovy.util.BuilderSupport</MissingClass>
+    <MissingClass>org.aopalliance.intercept.MethodInterceptor</MissingClass>
+    <MissingClass>org.apache.commons.cli.CommandLine</MissingClass>
+    <MissingClass>org.apache.commons.cli.CommandLineParser</MissingClass>
+    <MissingClass>org.apache.commons.cli.Options</MissingClass>
+    <MissingClass>org.apache.commons.cli.ParseException</MissingClass>
+    <MissingClass>org.apache.commons.cli.PosixParser</MissingClass>
+    <MissingClass>org.apache.oro.text.regex.Perl5Compiler</MissingClass>
+    <MissingClass>org.apache.oro.text.regex.Perl5Matcher</MissingClass>
+    <MissingClass>org.codehaus.groovy.control.CompilationFailedException</MissingClass>
+    <MissingClass>org.codehaus.groovy.control.ProcessingUnit</MissingClass>
+    <MissingClass>org.codehaus.groovy.control.messages.ExceptionMessage</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.InvokerHelper</MissingClass>
+    <MissingClass>org.mozilla.javascript.Context</MissingClass>
+    <MissingClass>org.mozilla.javascript.DefiningClassLoader</MissingClass>
+    <MissingClass>org.mozilla.javascript.ImporterTopLevel</MissingClass>
+    <MissingClass>org.mozilla.javascript.JavaScriptException</MissingClass>
+    <MissingClass>org.mozilla.javascript.NativeJavaObject</MissingClass>
+    <MissingClass>org.mozilla.javascript.NativeJavaPackage</MissingClass>
+    <MissingClass>org.mozilla.javascript.Script</MissingClass>
+    <MissingClass>org.mozilla.javascript.Scriptable</MissingClass>
+    <MissingClass>org.picocontainer.ComponentAdapter</MissingClass>
+    <MissingClass>org.picocontainer.MutablePicoContainer</MissingClass>
+    <MissingClass>org.picocontainer.Parameter</MissingClass>
+    <MissingClass>org.picocontainer.PicoContainer</MissingClass>
+    <MissingClass>org.picocontainer.PicoException</MissingClass>
+    <MissingClass>org.picocontainer.PicoInitializationException</MissingClass>
+    <MissingClass>org.picocontainer.PicoIntrospectionException</MissingClass>
+    <MissingClass>org.picocontainer.alternatives.AbstractDelegatingMutablePicoContainer</MissingClass>
+    <MissingClass>org.picocontainer.alternatives.ImplementationHidingPicoContainer</MissingClass>
+    <MissingClass>org.picocontainer.defaults.AbstractComponentAdapter</MissingClass>
+    <MissingClass>org.picocontainer.defaults.BeanPropertyComponentAdapter</MissingClass>
+    <MissingClass>org.picocontainer.defaults.CachingComponentAdapter</MissingClass>
+    <MissingClass>org.picocontainer.defaults.ComponentAdapterFactory</MissingClass>
+    <MissingClass>org.picocontainer.defaults.ComponentParameter</MissingClass>
+    <MissingClass>org.picocontainer.defaults.ConstantParameter</MissingClass>
+    <MissingClass>org.picocontainer.defaults.ConstructorInjectionComponentAdapter</MissingClass>
+    <MissingClass>org.picocontainer.defaults.DecoratingComponentAdapter</MissingClass>
+    <MissingClass>org.picocontainer.defaults.DecoratingComponentAdapterFactory</MissingClass>
+    <MissingClass>org.picocontainer.defaults.DefaultComponentAdapterFactory</MissingClass>
+    <MissingClass>org.picocontainer.defaults.DefaultPicoContainer</MissingClass>
+    <MissingClass>org.picocontainer.defaults.ObjectReference</MissingClass>
+    <MissingClass>org.picocontainer.defaults.SimpleReference</MissingClass>
+    <MissingClass>org.python.util.PythonInterpreter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 22 Nov 2005 20:18:16 +0200" total_classes="100" referenced_classes="228" total_bugs="14" total_size="2139" num_packages="13" vm_version="20.4-b02-402" cpu_seconds="30.80" clock_seconds="17.16" peak_mbytes="76.19" alloc_mbytes="763.88" gc_seconds="0.35" priority_2="10" priority_1="4">
+    <PackageStats package="org.nanocontainer" total_bugs="2" total_types="7" total_size="242" priority_2="2">
+      <ClassStats class="org.nanocontainer.DefaultNanoContainer" sourceFile="DefaultNanoContainer.java" interface="false" size="92" bugs="1" priority_2="1"/>
+      <ClassStats class="org.nanocontainer.DefaultNanoContainer$URLPrintingClassLoader" sourceFile="DefaultNanoContainer.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="org.nanocontainer.NanoContainer" sourceFile="NanoContainer.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.nanocontainer.NanoPicoContainer" sourceFile="NanoPicoContainer.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.nanocontainer.SoftCompositionPicoContainer" sourceFile="SoftCompositionPicoContainer.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.nanocontainer.Standalone" sourceFile="Standalone.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.nanocontainer.Standalone$1" sourceFile="Standalone.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.aop" total_bugs="0" total_types="10" total_size="57">
+      <ClassStats class="org.nanocontainer.aop.AspectablePicoContainer" sourceFile="AspectablePicoContainer.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.AspectablePicoContainerFactory" sourceFile="AspectablePicoContainerFactory.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.AspectsApplicator" sourceFile="AspectsApplicator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.AspectsContainer" sourceFile="AspectsContainer.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.AspectsManager" sourceFile="AspectsManager.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.ClassPointcut" sourceFile="ClassPointcut.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.ComponentPointcut" sourceFile="ComponentPointcut.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.MalformedRegularExpressionException" sourceFile="MalformedRegularExpressionException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.MethodPointcut" sourceFile="MethodPointcut.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.PointcutsFactory" sourceFile="PointcutsFactory.java" interface="true" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.aop.defaults" total_bugs="0" total_types="6" total_size="149">
+      <ClassStats class="org.nanocontainer.aop.defaults.AbstractPointcutsFactory" sourceFile="AbstractPointcutsFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.defaults.AopDecorationDelegate" sourceFile="AopDecorationDelegate.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.defaults.AspectsComponentAdapter" sourceFile="AspectsComponentAdapter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.defaults.AspectsComponentAdapterFactory" sourceFile="AspectsComponentAdapterFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.defaults.KeyEqualsComponentPointcut" sourceFile="KeyEqualsComponentPointcut.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.defaults.NameMatchesComponentPointcut" sourceFile="NameMatchesComponentPointcut.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.aop.dynaop" total_bugs="0" total_types="22" total_size="394">
+      <ClassStats class="org.nanocontainer.aop.dynaop.ComponentAspect" sourceFile="ComponentAspect.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.ComponentAspectsCollection" sourceFile="ComponentAspectsCollection.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.ContainerLoader" sourceFile="ContainerLoader.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.ContainerSuppliedInterceptorFactory" sourceFile="ContainerSuppliedInterceptorFactory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.ContainerSuppliedMixinFactory" sourceFile="ContainerSuppliedMixinFactory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.DynaopAspectablePicoContainerFactory" sourceFile="DynaopAspectablePicoContainerFactory.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.DynaopAspectsManager" sourceFile="DynaopAspectsManager.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.DynaopAspectsManager$1" sourceFile="DynaopAspectsManager.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.DynaopAspectsManager$2" sourceFile="DynaopAspectsManager.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.DynaopClassPointcut" sourceFile="DynaopClassPointcut.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.DynaopMethodPointcut" sourceFile="DynaopMethodPointcut.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.DynaopNanoContainerBuilder" sourceFile="DynaopNanoContainerBuilder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.DynaopPointcutsFactory" sourceFile="DynaopPointcutsFactory.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.DynaopPointcutsFactory$1" sourceFile="DynaopPointcutsFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.DynaopPointcutsFactory$2" sourceFile="DynaopPointcutsFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.InstanceMixinFactory" sourceFile="InstanceMixinFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.InterceptorComponentAspect" sourceFile="InterceptorComponentAspect.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.InterfacesComponentAspect" sourceFile="InterfacesComponentAspect.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.InvocationAdapter" sourceFile="InvocationAdapter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.MethodInterceptorAdapter" sourceFile="MethodInterceptorAdapter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.MixinComponentAspect" sourceFile="MixinComponentAspect.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.nanocontainer.aop.dynaop.PicoContainerProxy" sourceFile="PicoContainerProxy.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.concurrent" total_bugs="0" total_types="4" total_size="45">
+      <ClassStats class="org.nanocontainer.concurrent.ThreadLocalComponentAdapter" sourceFile="ThreadLocalComponentAdapter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.nanocontainer.concurrent.ThreadLocalComponentAdapter$1" sourceFile="ThreadLocalComponentAdapter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.nanocontainer.concurrent.ThreadLocalComponentAdapterFactory" sourceFile="ThreadLocalComponentAdapterFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.nanocontainer.concurrent.ThreadLocalReference" sourceFile="ThreadLocalReference.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.integrationkit" total_bugs="0" total_types="7" total_size="74">
+      <ClassStats class="org.nanocontainer.integrationkit.ContainerBuilder" sourceFile="ContainerBuilder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.nanocontainer.integrationkit.ContainerComposer" sourceFile="ContainerComposer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.nanocontainer.integrationkit.ContainerPopulator" sourceFile="ContainerPopulator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.nanocontainer.integrationkit.ContainerRecorder" sourceFile="ContainerRecorder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.nanocontainer.integrationkit.DefaultLifecycleContainerBuilder" sourceFile="DefaultLifecycleContainerBuilder.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.nanocontainer.integrationkit.LifecycleContainerBuilder" sourceFile="LifecycleContainerBuilder.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.nanocontainer.integrationkit.PicoCompositionException" sourceFile="PicoCompositionException.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.reflection" total_bugs="7" total_types="18" total_size="315" priority_2="6" priority_1="1">
+      <ClassStats class="org.nanocontainer.reflection.AbstractNanoPicoContainer" sourceFile="AbstractNanoPicoContainer.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.AbstractSoftCompositionPicoContainer" sourceFile="AbstractSoftCompositionPicoContainer.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.Converter" sourceFile="Converter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.DefaultContainerRecorder" sourceFile="DefaultContainerRecorder.java" interface="false" size="28" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.nanocontainer.reflection.DefaultContainerRecorder$1" sourceFile="DefaultContainerRecorder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.DefaultContainerRecorder$2" sourceFile="DefaultContainerRecorder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.DefaultContainerRecorder$Invocation" sourceFile="DefaultContainerRecorder.java" interface="false" size="34" bugs="2" priority_2="2"/>
+      <ClassStats class="org.nanocontainer.reflection.DefaultContainerRecorder$InvocationRecorder" sourceFile="DefaultContainerRecorder.java" interface="false" size="8" bugs="1" priority_2="1"/>
+      <ClassStats class="org.nanocontainer.reflection.DefaultNanoPicoContainer" sourceFile="DefaultNanoPicoContainer.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="org.nanocontainer.reflection.DefaultSoftCompositionPicoContainer" sourceFile="DefaultSoftCompositionPicoContainer.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.ImplementationHidingNanoPicoContainer" sourceFile="ImplementationHidingNanoPicoContainer.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="org.nanocontainer.reflection.ImplementationHidingSoftCompositionPicoContainer" sourceFile="ImplementationHidingSoftCompositionPicoContainer.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.InvalidConversionException" sourceFile="InvalidConversionException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.StringToObjectConverter" sourceFile="StringToObjectConverter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.StringToObjectConverter$1" sourceFile="StringToObjectConverter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.StringToObjectConverter$2" sourceFile="StringToObjectConverter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.StringToObjectConverter$3" sourceFile="StringToObjectConverter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.nanocontainer.reflection.StringToObjectConverter$4" sourceFile="StringToObjectConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.script" total_bugs="3" total_types="5" total_size="118" priority_2="1" priority_1="2">
+      <ClassStats class="org.nanocontainer.script.NanoContainerBuilderDecorationDelegate" sourceFile="NanoContainerBuilderDecorationDelegate.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.NanoContainerMarkupException" sourceFile="NanoContainerMarkupException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.NullNanoContainerBuilderDecorationDelegate" sourceFile="NullNanoContainerBuilderDecorationDelegate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.ScriptedContainerBuilder" sourceFile="ScriptedContainerBuilder.java" interface="false" size="28" bugs="1" priority_2="1"/>
+      <ClassStats class="org.nanocontainer.script.ScriptedContainerBuilderFactory" sourceFile="ScriptedContainerBuilderFactory.java" interface="false" size="64" bugs="2" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.script.bsh" total_bugs="2" total_types="4" total_size="58" priority_2="1" priority_1="1">
+      <ClassStats class="org.nanocontainer.script.bsh.BeanShellComponentAdapter" sourceFile="BeanShellComponentAdapter.java" interface="false" size="34" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.nanocontainer.script.bsh.BeanShellComponentAdapterFactory" sourceFile="BeanShellComponentAdapterFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.bsh.BeanShellContainerBuilder" sourceFile="BeanShellContainerBuilder.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.bsh.BeanShellScriptInitializationException" sourceFile="BeanShellScriptInitializationException.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.script.groovy" total_bugs="0" total_types="5" total_size="227">
+      <ClassStats class="org.nanocontainer.script.groovy.GroovyContainerBuilder" sourceFile="GroovyContainerBuilder.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.groovy.GroovyContainerBuilder$1" sourceFile="GroovyContainerBuilder.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.groovy.GroovyScriptGenerator" sourceFile="GroovyScriptGenerator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.groovy.NanoContainerBuilder" sourceFile="NanoContainerBuilder.java" interface="false" size="149" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.groovy.NanoContainerGroovyCompilationException" sourceFile="NanoContainerGroovyCompilationException.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.script.jython" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="org.nanocontainer.script.jython.JythonContainerBuilder" sourceFile="JythonContainerBuilder.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.jython.JythonContainerBuilder$1" sourceFile="JythonContainerBuilder.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.script.rhino" total_bugs="0" total_types="2" total_size="43">
+      <ClassStats class="org.nanocontainer.script.rhino.JavascriptContainerBuilder" sourceFile="JavascriptContainerBuilder.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.rhino.JavascriptContainerBuilder$1" sourceFile="JavascriptContainerBuilder.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.nanocontainer.script.xml" total_bugs="0" total_types="8" total_size="392">
+      <ClassStats class="org.nanocontainer.script.xml.BeanComponentInstanceFactory" sourceFile="BeanComponentInstanceFactory.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.xml.EmptyCompositionException" sourceFile="EmptyCompositionException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.xml.PureJavaXStreamComponentInstanceFactory" sourceFile="PureJavaXStreamComponentInstanceFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.xml.XMLComponentInstanceFactory" sourceFile="XMLComponentInstanceFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.xml.XMLContainerBuilder" sourceFile="XMLContainerBuilder.java" interface="false" size="201" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.xml.XMLContainerBuilder$1" sourceFile="XMLContainerBuilder.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.xml.XStreamComponentInstanceFactory" sourceFile="XStreamComponentInstanceFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.nanocontainer.script.xml.XStreamContainerBuilder" sourceFile="XStreamContainerBuilder.java" interface="false" size="136" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1334" invocations="228" avgMicrosecondsPerInvocation="5853" maxMicrosecondsPerInvocation="88995" standardDeviationMircosecondsPerInvocation="11662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1137" invocations="228" avgMicrosecondsPerInvocation="4990" maxMicrosecondsPerInvocation="99115" standardDeviationMircosecondsPerInvocation="11640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1008" invocations="868" avgMicrosecondsPerInvocation="1162" maxMicrosecondsPerInvocation="63841" standardDeviationMircosecondsPerInvocation="4191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="908" invocations="376" avgMicrosecondsPerInvocation="2416" maxMicrosecondsPerInvocation="63785" standardDeviationMircosecondsPerInvocation="6567"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="806" invocations="376" avgMicrosecondsPerInvocation="2143" maxMicrosecondsPerInvocation="89126" standardDeviationMircosecondsPerInvocation="6736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="774" invocations="378" avgMicrosecondsPerInvocation="2048" maxMicrosecondsPerInvocation="90712" standardDeviationMircosecondsPerInvocation="7444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="704" invocations="376" avgMicrosecondsPerInvocation="1873" maxMicrosecondsPerInvocation="42206" standardDeviationMircosecondsPerInvocation="4469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="636" invocations="228" avgMicrosecondsPerInvocation="2790" maxMicrosecondsPerInvocation="39067" standardDeviationMircosecondsPerInvocation="6101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="607" invocations="378" avgMicrosecondsPerInvocation="1607" maxMicrosecondsPerInvocation="82667" standardDeviationMircosecondsPerInvocation="5703"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="580" invocations="376" avgMicrosecondsPerInvocation="1543" maxMicrosecondsPerInvocation="60946" standardDeviationMircosecondsPerInvocation="5566"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="480" invocations="730" avgMicrosecondsPerInvocation="657" maxMicrosecondsPerInvocation="30010" standardDeviationMircosecondsPerInvocation="2105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="453" invocations="355" avgMicrosecondsPerInvocation="1278" maxMicrosecondsPerInvocation="73516" standardDeviationMircosecondsPerInvocation="5328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="324" invocations="228" avgMicrosecondsPerInvocation="1423" maxMicrosecondsPerInvocation="18637" standardDeviationMircosecondsPerInvocation="2816"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="281" invocations="376" avgMicrosecondsPerInvocation="749" maxMicrosecondsPerInvocation="59488" standardDeviationMircosecondsPerInvocation="3739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="253" invocations="228" avgMicrosecondsPerInvocation="1111" maxMicrosecondsPerInvocation="34194" standardDeviationMircosecondsPerInvocation="3943"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="235" invocations="228" avgMicrosecondsPerInvocation="1034" maxMicrosecondsPerInvocation="30246" standardDeviationMircosecondsPerInvocation="3235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="202" invocations="325" avgMicrosecondsPerInvocation="623" maxMicrosecondsPerInvocation="15692" standardDeviationMircosecondsPerInvocation="1951"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="168" invocations="376" avgMicrosecondsPerInvocation="447" maxMicrosecondsPerInvocation="12326" standardDeviationMircosecondsPerInvocation="1540"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="162" invocations="228" avgMicrosecondsPerInvocation="711" maxMicrosecondsPerInvocation="14710" standardDeviationMircosecondsPerInvocation="1786"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="139" invocations="100" avgMicrosecondsPerInvocation="1397" maxMicrosecondsPerInvocation="17677" standardDeviationMircosecondsPerInvocation="2901"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="133" invocations="448" avgMicrosecondsPerInvocation="297" maxMicrosecondsPerInvocation="71285" standardDeviationMircosecondsPerInvocation="3389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="132" invocations="228" avgMicrosecondsPerInvocation="580" maxMicrosecondsPerInvocation="22296" standardDeviationMircosecondsPerInvocation="2075"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="132" invocations="228" avgMicrosecondsPerInvocation="580" maxMicrosecondsPerInvocation="15463" standardDeviationMircosecondsPerInvocation="1697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="121" invocations="871" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="10401" standardDeviationMircosecondsPerInvocation="615"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

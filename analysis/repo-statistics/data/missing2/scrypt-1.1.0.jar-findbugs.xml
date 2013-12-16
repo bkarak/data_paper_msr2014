@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1302796258000" analysisTimestamp="1360880923346" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/com/lambdaworks/scrypt/1.1.0/scrypt-1.1.0.jar</Jar>
+  </Project>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="com.lambdaworks.jni.JarLibraryLoader">
+      <SourceLine classname="com.lambdaworks.jni.JarLibraryLoader" start="29" end="142" sourcefile="JarLibraryLoader.java" sourcepath="com/lambdaworks/jni/JarLibraryLoader.java"/>
+    </Class>
+    <Method classname="com.lambdaworks.jni.JarLibraryLoader" name="load" signature="(Ljava/lang/String;Z)Z" isStatic="false">
+      <SourceLine classname="com.lambdaworks.jni.JarLibraryLoader" start="56" end="79" startBytecode="0" endBytecode="393" sourcefile="JarLibraryLoader.java" sourcepath="com/lambdaworks/jni/JarLibraryLoader.java"/>
+    </Method>
+    <SourceLine classname="com.lambdaworks.jni.JarLibraryLoader" start="75" end="75" startBytecode="126" endBytecode="126" sourcefile="JarLibraryLoader.java" sourcepath="com/lambdaworks/jni/JarLibraryLoader.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="com.lambdaworks.jni.JarLibraryLoader">
+      <SourceLine classname="com.lambdaworks.jni.JarLibraryLoader" start="29" end="142" sourcefile="JarLibraryLoader.java" sourcepath="com/lambdaworks/jni/JarLibraryLoader.java"/>
+    </Class>
+    <Method classname="com.lambdaworks.jni.JarLibraryLoader" name="extract" signature="(Ljava/lang/String;Ljava/io/InputStream;)Ljava/io/File;" isStatic="true">
+      <SourceLine classname="com.lambdaworks.jni.JarLibraryLoader" start="93" end="111" startBytecode="0" endBytecode="370" sourcefile="JarLibraryLoader.java" sourcepath="com/lambdaworks/jni/JarLibraryLoader.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="com.lambdaworks.jni.JarLibraryLoader" start="104" end="104" startBytecode="62" endBytecode="62" sourcefile="JarLibraryLoader.java" sourcepath="com/lambdaworks/jni/JarLibraryLoader.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="com.lambdaworks.jni.JarLibraryLoader">
+      <SourceLine classname="com.lambdaworks.jni.JarLibraryLoader" start="29" end="142" sourcefile="JarLibraryLoader.java" sourcepath="com/lambdaworks/jni/JarLibraryLoader.java"/>
+    </Class>
+    <Method classname="com.lambdaworks.jni.JarLibraryLoader" name="load" signature="(Ljava/lang/String;Z)Z" isStatic="false">
+      <SourceLine classname="com.lambdaworks.jni.JarLibraryLoader" start="56" end="79" startBytecode="0" endBytecode="393" sourcefile="JarLibraryLoader.java" sourcepath="com/lambdaworks/jni/JarLibraryLoader.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="com.lambdaworks.jni.JarLibraryLoader" start="67" end="67" startBytecode="96" endBytecode="96" sourcefile="JarLibraryLoader.java" sourcepath="com/lambdaworks/jni/JarLibraryLoader.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 14 Apr 2011 18:50:58 +0300" total_classes="10" referenced_classes="61" total_bugs="3" total_size="540" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="16.89" clock_seconds="15.46" peak_mbytes="65.59" alloc_mbytes="763.88" gc_seconds="0.16" priority_2="3">
+    <PackageStats package="com.lambdaworks.crypto" total_bugs="0" total_types="4" total_size="426">
+      <ClassStats class="com.lambdaworks.crypto.Base64" sourceFile="Base64.java" interface="false" size="250" bugs="0"/>
+      <ClassStats class="com.lambdaworks.crypto.PBKDF" sourceFile="PBKDF.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.lambdaworks.crypto.SCrypt" sourceFile="SCrypt.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="com.lambdaworks.crypto.SCryptUtil" sourceFile="SCryptUtil.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lambdaworks.jni" total_bugs="3" total_types="6" total_size="114" priority_2="3">
+      <ClassStats class="com.lambdaworks.jni.JarLibraryLoader" sourceFile="JarLibraryLoader.java" interface="false" size="56" bugs="3" priority_2="3"/>
+      <ClassStats class="com.lambdaworks.jni.JarLibraryLoader$1" sourceFile="JarLibraryLoader.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lambdaworks.jni.Platform" sourceFile="Platform.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.lambdaworks.jni.Platform$Arch" sourceFile="Platform.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lambdaworks.jni.Platform$OS" sourceFile="Platform.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lambdaworks.jni.UnsupportedPlatformException" sourceFile="UnsupportedPlatformException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1760" invocations="546" avgMicrosecondsPerInvocation="3223" maxMicrosecondsPerInvocation="121158" standardDeviationMircosecondsPerInvocation="12057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1164" invocations="45" avgMicrosecondsPerInvocation="25866" maxMicrosecondsPerInvocation="331881" standardDeviationMircosecondsPerInvocation="55872"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1155" invocations="47" avgMicrosecondsPerInvocation="24581" maxMicrosecondsPerInvocation="210838" standardDeviationMircosecondsPerInvocation="46916"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="921" invocations="45" avgMicrosecondsPerInvocation="20485" maxMicrosecondsPerInvocation="139677" standardDeviationMircosecondsPerInvocation="31516"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="900" invocations="61" avgMicrosecondsPerInvocation="14754" maxMicrosecondsPerInvocation="237653" standardDeviationMircosecondsPerInvocation="34698"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="828" invocations="61" avgMicrosecondsPerInvocation="13581" maxMicrosecondsPerInvocation="169819" standardDeviationMircosecondsPerInvocation="29131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="774" invocations="45" avgMicrosecondsPerInvocation="17201" maxMicrosecondsPerInvocation="161735" standardDeviationMircosecondsPerInvocation="31352"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="537" invocations="47" avgMicrosecondsPerInvocation="11443" maxMicrosecondsPerInvocation="73062" standardDeviationMircosecondsPerInvocation="19750"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="439" invocations="259" avgMicrosecondsPerInvocation="1697" maxMicrosecondsPerInvocation="81650" standardDeviationMircosecondsPerInvocation="7420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="436" invocations="45" avgMicrosecondsPerInvocation="9689" maxMicrosecondsPerInvocation="119090" standardDeviationMircosecondsPerInvocation="23195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="350" invocations="61" avgMicrosecondsPerInvocation="5744" maxMicrosecondsPerInvocation="74981" standardDeviationMircosecondsPerInvocation="14772"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="321" invocations="61" avgMicrosecondsPerInvocation="5273" maxMicrosecondsPerInvocation="92045" standardDeviationMircosecondsPerInvocation="18743"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="295" invocations="45" avgMicrosecondsPerInvocation="6574" maxMicrosecondsPerInvocation="56837" standardDeviationMircosecondsPerInvocation="12415"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

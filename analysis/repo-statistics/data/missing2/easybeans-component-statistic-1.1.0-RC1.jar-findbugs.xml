@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1236860515000" analysisTimestamp="1360876309456" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/easybeans/osgi/easybeans-component-statistic/1.1.0-RC1/easybeans-component-statistic-1.1.0-RC1.jar</Jar>
+  </Project>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.jci.ReloadingClassLoader">
+      <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="39" end="122" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.ReloadingClassLoader" name="&lt;init&gt;" signature="(Ljava/lang/ClassLoader;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="46" end="50" startBytecode="0" endBytecode="137" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+    </Method>
+    <Class classname="org.apache.commons.jci.stores.ResourceStoreClassLoader">
+      <SourceLine classname="org.apache.commons.jci.stores.ResourceStoreClassLoader" start="31" end="94" sourcefile="ResourceStoreClassLoader.java" sourcepath="org/apache/commons/jci/stores/ResourceStoreClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="49" end="49" startBytecode="47" endBytecode="47" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.jci.ReloadingClassLoader">
+      <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="39" end="122" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.ReloadingClassLoader" name="addResourceStore" signature="(Lorg/apache/commons/jci/stores/ResourceStore;)Z" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="54" end="64" startBytecode="0" endBytecode="210" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+    </Method>
+    <Class classname="org.apache.commons.jci.stores.ResourceStoreClassLoader">
+      <SourceLine classname="org.apache.commons.jci.stores.ResourceStoreClassLoader" start="31" end="94" sourcefile="ResourceStoreClassLoader.java" sourcepath="org/apache/commons/jci/stores/ResourceStoreClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="59" end="59" startBytecode="34" endBytecode="34" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.jci.ReloadingClassLoader">
+      <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="39" end="122" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.ReloadingClassLoader" name="handleNotification" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="98" end="100" startBytecode="0" endBytecode="80" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+    </Method>
+    <Class classname="org.apache.commons.jci.stores.ResourceStoreClassLoader">
+      <SourceLine classname="org.apache.commons.jci.stores.ResourceStoreClassLoader" start="31" end="94" sourcefile="ResourceStoreClassLoader.java" sourcepath="org/apache/commons/jci/stores/ResourceStoreClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="99" end="99" startBytecode="12" endBytecode="12" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.jci.ReloadingClassLoader">
+      <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="39" end="122" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.ReloadingClassLoader" name="removeResourceStore" signature="(Lorg/apache/commons/jci/stores/ResourceStore;)Z" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="69" end="94" startBytecode="0" endBytecode="249" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+    </Method>
+    <Class classname="org.apache.commons.jci.stores.ResourceStoreClassLoader">
+      <SourceLine classname="org.apache.commons.jci.stores.ResourceStoreClassLoader" start="31" end="94" sourcefile="ResourceStoreClassLoader.java" sourcepath="org/apache/commons/jci/stores/ResourceStoreClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.apache.commons.jci.ReloadingClassLoader" start="93" end="93" startBytecode="92" endBytecode="92" sourcefile="ReloadingClassLoader.java" sourcepath="org/apache/commons/jci/ReloadingClassLoader.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.commons.jci.compilers.AbstractJavaCompiler">
+      <SourceLine classname="org.apache.commons.jci.compilers.AbstractJavaCompiler" start="31" end="51" sourcefile="AbstractJavaCompiler.java" sourcepath="org/apache/commons/jci/compilers/AbstractJavaCompiler.java"/>
+    </Class>
+    <Field classname="org.apache.commons.jci.compilers.AbstractJavaCompiler" name="problemHandler" signature="Lorg/apache/commons/jci/problems/CompilationProblemHandler;" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.compilers.AbstractJavaCompiler" sourcefile="AbstractJavaCompiler.java" sourcepath="org/apache/commons/jci/compilers/AbstractJavaCompiler.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.jci.compilers.AbstractJavaCompiler" start="36" end="36" startBytecode="2" endBytecode="2" sourcefile="AbstractJavaCompiler.java" sourcepath="org/apache/commons/jci/compilers/AbstractJavaCompiler.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.jci.compilers.CompilationResult">
+      <SourceLine classname="org.apache.commons.jci.compilers.CompilationResult" start="37" end="62" sourcefile="CompilationResult.java" sourcepath="org/apache/commons/jci/compilers/CompilationResult.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.compilers.CompilationResult" name="getErrors" signature="()[Lorg/apache/commons/jci/problems/CompilationProblem;" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.compilers.CompilationResult" start="58" end="58" startBytecode="0" endBytecode="46" sourcefile="CompilationResult.java" sourcepath="org/apache/commons/jci/compilers/CompilationResult.java"/>
+    </Method>
+    <Field classname="org.apache.commons.jci.compilers.CompilationResult" name="errors" signature="[Lorg/apache/commons/jci/problems/CompilationProblem;" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.compilers.CompilationResult" sourcefile="CompilationResult.java" sourcepath="org/apache/commons/jci/compilers/CompilationResult.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.jci.compilers.CompilationResult" start="58" end="58" startBytecode="4" endBytecode="4" sourcefile="CompilationResult.java" sourcepath="org/apache/commons/jci/compilers/CompilationResult.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.jci.compilers.CompilationResult">
+      <SourceLine classname="org.apache.commons.jci.compilers.CompilationResult" start="37" end="62" sourcefile="CompilationResult.java" sourcepath="org/apache/commons/jci/compilers/CompilationResult.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.compilers.CompilationResult" name="getWarnings" signature="()[Lorg/apache/commons/jci/problems/CompilationProblem;" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.compilers.CompilationResult" start="62" end="62" startBytecode="0" endBytecode="46" sourcefile="CompilationResult.java" sourcepath="org/apache/commons/jci/compilers/CompilationResult.java"/>
+    </Method>
+    <Field classname="org.apache.commons.jci.compilers.CompilationResult" name="warnings" signature="[Lorg/apache/commons/jci/problems/CompilationProblem;" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.compilers.CompilationResult" sourcefile="CompilationResult.java" sourcepath="org/apache/commons/jci/compilers/CompilationResult.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.jci.compilers.CompilationResult" start="62" end="62" startBytecode="4" endBytecode="4" sourcefile="CompilationResult.java" sourcepath="org/apache/commons/jci/compilers/CompilationResult.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.jci.compilers.JavacJavaCompiler">
+      <SourceLine classname="org.apache.commons.jci.compilers.JavacJavaCompiler" start="48" end="195" sourcefile="JavacJavaCompiler.java" sourcepath="org/apache/commons/jci/compilers/JavacJavaCompiler.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.compilers.JavacJavaCompiler" name="compile" signature="([Ljava/lang/String;Lorg/apache/commons/jci/readers/ResourceReader;Lorg/apache/commons/jci/stores/ResourceStore;Ljava/lang/ClassLoader;Lorg/apache/commons/jci/compilers/JavaCompilerSettings;)Lorg/apache/commons/jci/compilers/CompilationResult;" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.compilers.JavacJavaCompiler" start="66" end="92" startBytecode="0" endBytecode="628" sourcefile="JavacJavaCompiler.java" sourcepath="org/apache/commons/jci/compilers/JavacJavaCompiler.java"/>
+    </Method>
+    <Class classname="org.apache.commons.jci.compilers.JavacClassLoader">
+      <SourceLine classname="org.apache.commons.jci.compilers.JavacClassLoader" start="49" end="152" sourcefile="JavacClassLoader.java" sourcepath="org/apache/commons/jci/compilers/JavacClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.apache.commons.jci.compilers.JavacJavaCompiler" start="66" end="66" startBytecode="0" endBytecode="0" sourcefile="JavacJavaCompiler.java" sourcepath="org/apache/commons/jci/compilers/JavacJavaCompiler.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.commons.jci.listeners.AbstractFilesystemAlterationListener">
+      <SourceLine classname="org.apache.commons.jci.listeners.AbstractFilesystemAlterationListener" start="34" end="197" sourcefile="AbstractFilesystemAlterationListener.java" sourcepath="org/apache/commons/jci/listeners/AbstractFilesystemAlterationListener.java"/>
+    </Class>
+    <Field classname="org.apache.commons.jci.listeners.AbstractFilesystemAlterationListener" name="observer" signature="Lorg/apache/commons/jci/monitor/FilesystemAlterationObserver;" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.listeners.AbstractFilesystemAlterationListener" sourcefile="AbstractFilesystemAlterationListener.java" sourcepath="org/apache/commons/jci/listeners/AbstractFilesystemAlterationListener.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.jci.listeners.AbstractFilesystemAlterationListener" start="122" end="122" startBytecode="2" endBytecode="2" sourcefile="AbstractFilesystemAlterationListener.java" sourcepath="org/apache/commons/jci/listeners/AbstractFilesystemAlterationListener.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl">
+      <SourceLine classname="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl" start="35" end="372" sourcefile="FilesystemAlterationObserverImpl.java" sourcepath="org/apache/commons/jci/monitor/FilesystemAlterationObserverImpl.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl" name="getListeners" signature="()[Lorg/apache/commons/jci/monitor/FilesystemAlterationListener;" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl" start="360" end="360" startBytecode="0" endBytecode="46" sourcefile="FilesystemAlterationObserverImpl.java" sourcepath="org/apache/commons/jci/monitor/FilesystemAlterationObserverImpl.java"/>
+    </Method>
+    <Field classname="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl" name="listeners" signature="[Lorg/apache/commons/jci/monitor/FilesystemAlterationListener;" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl" sourcefile="FilesystemAlterationObserverImpl.java" sourcepath="org/apache/commons/jci/monitor/FilesystemAlterationObserverImpl.java"/>
+    </Field>
+    <SourceLine classname="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl" start="360" end="360" startBytecode="4" endBytecode="4" sourcefile="FilesystemAlterationObserverImpl.java" sourcepath="org/apache/commons/jci/monitor/FilesystemAlterationObserverImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.commons.jci.readers.FileResourceReader">
+      <SourceLine classname="org.apache.commons.jci.readers.FileResourceReader" start="35" end="72" sourcefile="FileResourceReader.java" sourcepath="org/apache/commons/jci/readers/FileResourceReader.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.readers.FileResourceReader" name="getBytes" signature="(Ljava/lang/String;)[B" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.readers.FileResourceReader" start="45" end="47" startBytecode="0" endBytecode="101" sourcefile="FileResourceReader.java" sourcepath="org/apache/commons/jci/readers/FileResourceReader.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="986" end="986" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.jci.readers.FileResourceReader" start="45" end="45" startBytecode="17" endBytecode="17" sourcefile="FileResourceReader.java" sourcepath="org/apache/commons/jci/readers/FileResourceReader.java"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.apache.commons.jci.stores.FileResourceStore">
+      <SourceLine classname="org.apache.commons.jci.stores.FileResourceStore" start="41" end="110" sourcefile="FileResourceStore.java" sourcepath="org/apache/commons/jci/stores/FileResourceStore.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.stores.FileResourceStore" name="write" signature="(Ljava/lang/String;[B)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.stores.FileResourceStore" start="59" end="75" startBytecode="0" endBytecode="294" sourcefile="FileResourceStore.java" sourcepath="org/apache/commons/jci/stores/FileResourceStore.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.jci.stores.FileResourceStore" start="70" end="70" startBytecode="82" endBytecode="82" sourcefile="FileResourceStore.java" sourcepath="org/apache/commons/jci/stores/FileResourceStore.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.commons.jci.stores.FileResourceStore">
+      <SourceLine classname="org.apache.commons.jci.stores.FileResourceStore" start="41" end="110" sourcefile="FileResourceStore.java" sourcepath="org/apache/commons/jci/stores/FileResourceStore.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.stores.FileResourceStore" name="remove" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.stores.FileResourceStore" start="78" end="79" startBytecode="0" endBytecode="65" sourcefile="FileResourceStore.java" sourcepath="org/apache/commons/jci/stores/FileResourceStore.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.commons.jci.stores.FileResourceStore" start="78" end="78" startBytecode="5" endBytecode="5" sourcefile="FileResourceStore.java" sourcepath="org/apache/commons/jci/stores/FileResourceStore.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.commons.jci.stores.ResourceStoreClassLoader">
+      <SourceLine classname="org.apache.commons.jci.stores.ResourceStoreClassLoader" start="31" end="94" sourcefile="ResourceStoreClassLoader.java" sourcepath="org/apache/commons/jci/stores/ResourceStoreClassLoader.java"/>
+    </Class>
+    <Method classname="org.apache.commons.jci.stores.ResourceStoreClassLoader" name="&lt;init&gt;" signature="(Ljava/lang/ClassLoader;[Lorg/apache/commons/jci/stores/ResourceStore;)V" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.stores.ResourceStoreClassLoader" start="36" end="38" startBytecode="0" endBytecode="112" sourcefile="ResourceStoreClassLoader.java" sourcepath="org/apache/commons/jci/stores/ResourceStoreClassLoader.java"/>
+    </Method>
+    <Field classname="org.apache.commons.jci.stores.ResourceStoreClassLoader" name="stores" signature="[Lorg/apache/commons/jci/stores/ResourceStore;" isStatic="false">
+      <SourceLine classname="org.apache.commons.jci.stores.ResourceStoreClassLoader" sourcefile="ResourceStoreClassLoader.java" sourcepath="org/apache/commons/jci/stores/ResourceStoreClassLoader.java"/>
+    </Field>
+    <LocalVariable name="pStores" register="2" pc="35" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.commons.jci.stores.ResourceStoreClassLoader" start="37" end="37" startBytecode="35" endBytecode="35" sourcefile="ResourceStoreClassLoader.java" sourcepath="org/apache/commons/jci/stores/ResourceStoreClassLoader.java"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory">
+      <SourceLine classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" start="40" end="127" sourcefile="StatisticComponentServiceFactory.java" sourcepath="org/ow2/easybeans/osgi/component/statistic/StatisticComponentServiceFactory.java"/>
+    </Class>
+    <Field classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" name="eventComponent" signature="Lorg/ow2/easybeans/component/itf/EZBEventComponent;" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" sourcefile="StatisticComponentServiceFactory.java" sourcepath="org/ow2/easybeans/osgi/component/statistic/StatisticComponentServiceFactory.java"/>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" start="125" end="125" startBytecode="12" endBytecode="12" sourcefile="StatisticComponentServiceFactory.java" sourcepath="org/ow2/easybeans/osgi/component/statistic/StatisticComponentServiceFactory.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" start="86" end="86" startBytecode="2" endBytecode="2" sourcefile="StatisticComponentServiceFactory.java" sourcepath="org/ow2/easybeans/osgi/component/statistic/StatisticComponentServiceFactory.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" start="94" end="94" startBytecode="2" endBytecode="2" sourcefile="StatisticComponentServiceFactory.java" sourcepath="org/ow2/easybeans/osgi/component/statistic/StatisticComponentServiceFactory.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory">
+      <SourceLine classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" start="40" end="127" sourcefile="StatisticComponentServiceFactory.java" sourcepath="org/ow2/easybeans/osgi/component/statistic/StatisticComponentServiceFactory.java"/>
+    </Class>
+    <Field classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" name="jmxComponent" signature="Lorg/ow2/easybeans/component/itf/EZBJmxComponent;" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" sourcefile="StatisticComponentServiceFactory.java" sourcepath="org/ow2/easybeans/osgi/component/statistic/StatisticComponentServiceFactory.java"/>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" start="126" end="126" startBytecode="20" endBytecode="20" sourcefile="StatisticComponentServiceFactory.java" sourcepath="org/ow2/easybeans/osgi/component/statistic/StatisticComponentServiceFactory.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" start="110" end="110" startBytecode="2" endBytecode="2" sourcefile="StatisticComponentServiceFactory.java" sourcepath="org/ow2/easybeans/osgi/component/statistic/StatisticComponentServiceFactory.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" start="102" end="102" startBytecode="2" endBytecode="2" sourcefile="StatisticComponentServiceFactory.java" sourcepath="org/ow2/easybeans/osgi/component/statistic/StatisticComponentServiceFactory.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="26">
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.objectweb.asm.ClassReader</MissingClass>
+    <MissingClass>org.objectweb.asm.ClassWriter</MissingClass>
+    <MissingClass>org.objectweb.asm.util.CheckClassAdapter</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.EZBContainer</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.EZBJ2EEManagedObject</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.EZBServer</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.Factory</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.statistic.EZBStatistic</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.statistic.EZBStatisticFactory</MissingClass>
+    <MissingClass>org.ow2.easybeans.api.statistic.EZBStatisticProvider</MissingClass>
+    <MissingClass>org.ow2.easybeans.component.api.EZBComponentException</MissingClass>
+    <MissingClass>org.ow2.easybeans.component.itf.EZBStatisticComponent$STATISTIC_FACTORY_MODE</MissingClass>
+    <MissingClass>org.ow2.easybeans.component.itf.EZBStatisticComponent$STATISTIC_MODE</MissingClass>
+    <MissingClass>org.ow2.easybeans.component.itf.EZBStatisticComponent$STATISTIC_PROVIDER_MODE</MissingClass>
+    <MissingClass>org.ow2.easybeans.jmx.MBeansHelper</MissingClass>
+    <MissingClass>org.ow2.easybeans.naming.J2EEManagedObjectNamingHelper</MissingClass>
+    <MissingClass>org.ow2.easybeans.osgi.component.EZBComponentServiceFactory</MissingClass>
+    <MissingClass>org.ow2.easybeans.statistic.CallCountStatisticFactory</MissingClass>
+    <MissingClass>org.ow2.easybeans.statistic.MeanCallTimeStatisticFactory</MissingClass>
+    <MissingClass>org.ow2.easybeans.statistic.TotalCallTimeStatisticFactory</MissingClass>
+    <MissingClass>org.vafer.dependency.asm.RenamingVisitor</MissingClass>
+    <MissingClass>org.vafer.dependency.utils.ResourceRenamer</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 12 Mar 2009 14:21:55 +0200" total_classes="48" referenced_classes="167" total_bugs="16" total_size="1894" num_packages="10" vm_version="20.4-b02-402" cpu_seconds="29.04" clock_seconds="27.53" peak_mbytes="77.24" alloc_mbytes="763.88" gc_seconds="0.36" priority_2="15" priority_1="1">
+    <PackageStats package="org.apache.commons.jci" total_bugs="4" total_types="1" total_size="63" priority_2="4">
+      <ClassStats class="org.apache.commons.jci.ReloadingClassLoader" sourceFile="ReloadingClassLoader.java" interface="false" size="63" bugs="4" priority_2="4"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.jci.compilers" total_bugs="4" total_types="12" total_size="437" priority_2="4">
+      <ClassStats class="org.apache.commons.jci.compilers.AbstractJavaCompiler" sourceFile="AbstractJavaCompiler.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.jci.compilers.CompilationResult" sourceFile="CompilationResult.java" interface="false" size="22" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.commons.jci.compilers.FileInputStreamProxy" sourceFile="FileInputStreamProxy.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.compilers.FileOutputStreamProxy" sourceFile="FileOutputStreamProxy.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.compilers.JavaCompiler" sourceFile="JavaCompiler.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.compilers.JavaCompilerFactory" sourceFile="JavaCompilerFactory.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.compilers.JavaCompilerSettings" sourceFile="JavaCompilerSettings.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.compilers.JavacClassLoader" sourceFile="JavacClassLoader.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.compilers.JavacClassLoader$1" sourceFile="JavacClassLoader.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.compilers.JavacCompilationProblem" sourceFile="JavacCompilationProblem.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.compilers.JavacJavaCompiler" sourceFile="JavacJavaCompiler.java" interface="false" size="95" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.jci.compilers.JavacJavaCompilerSettings" sourceFile="JavacJavaCompilerSettings.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.jci.listeners" total_bugs="1" total_types="7" total_size="324" priority_2="1">
+      <ClassStats class="org.apache.commons.jci.listeners.AbstractFilesystemAlterationListener" sourceFile="AbstractFilesystemAlterationListener.java" interface="false" size="116" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.jci.listeners.AbstractFilesystemAlterationListener$1" sourceFile="AbstractFilesystemAlterationListener.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.listeners.AbstractFilesystemAlterationListener$Signal" sourceFile="AbstractFilesystemAlterationListener.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.listeners.CompilingListener" sourceFile="CompilingListener.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.listeners.FileChangeListener" sourceFile="FileChangeListener.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.listeners.ReloadNotificationListener" sourceFile="ReloadNotificationListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.listeners.ReloadingListener" sourceFile="ReloadingListener.java" interface="false" size="86" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.jci.monitor" total_bugs="1" total_types="7" total_size="306" priority_2="1">
+      <ClassStats class="org.apache.commons.jci.monitor.FilesystemAlterationListener" sourceFile="FilesystemAlterationListener.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.monitor.FilesystemAlterationMonitor" sourceFile="FilesystemAlterationMonitor.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.monitor.FilesystemAlterationObserver" sourceFile="FilesystemAlterationObserver.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl" sourceFile="FilesystemAlterationObserverImpl.java" interface="false" size="106" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl$Entry" sourceFile="FilesystemAlterationObserverImpl.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl$MonitorFile" sourceFile="FilesystemAlterationObserverImpl.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.monitor.FilesystemAlterationObserverImpl$MonitorFileImpl" sourceFile="FilesystemAlterationObserverImpl.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.jci.problems" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="org.apache.commons.jci.problems.CompilationProblem" sourceFile="CompilationProblem.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.problems.CompilationProblemHandler" sourceFile="CompilationProblemHandler.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.jci.readers" total_bugs="1" total_types="3" total_size="50" priority_1="1">
+      <ClassStats class="org.apache.commons.jci.readers.FileResourceReader" sourceFile="FileResourceReader.java" interface="false" size="24" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.commons.jci.readers.MemoryResourceReader" sourceFile="MemoryResourceReader.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.readers.ResourceReader" sourceFile="ResourceReader.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.jci.stores" total_bugs="3" total_types="6" total_size="147" priority_2="3">
+      <ClassStats class="org.apache.commons.jci.stores.FileResourceStore" sourceFile="FileResourceStore.java" interface="false" size="48" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.commons.jci.stores.MemoryResourceStore" sourceFile="MemoryResourceStore.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.stores.ResourceStore" sourceFile="ResourceStore.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.stores.ResourceStoreClassLoader" sourceFile="ResourceStoreClassLoader.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.commons.jci.stores.Transactional" sourceFile="Transactional.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.commons.jci.stores.TransactionalResourceStore" sourceFile="TransactionalResourceStore.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.jci.utils" total_bugs="0" total_types="1" total_size="26">
+      <ClassStats class="org.apache.commons.jci.utils.ConversionUtils" sourceFile="ConversionUtils.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.easybeans.component.statistic" total_bugs="0" total_types="8" total_size="501">
+      <ClassStats class="org.ow2.easybeans.component.statistic.ManagedStatistic" sourceFile="ManagedStatistic.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.statistic.ManagedStatisticFactory" sourceFile="ManagedStatisticFactory.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.statistic.ManagedStatisticProvider" sourceFile="ManagedStatisticProvider.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.statistic.StatisticComponent" sourceFile="StatisticComponent.java" interface="false" size="230" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.statistic.StatisticComponent$1" sourceFile="StatisticComponent.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.statistic.StatisticComponent$2" sourceFile="StatisticComponent.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.statistic.StatisticComponent$3" sourceFile="StatisticComponent.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.statistic.StatisticComponent$4" sourceFile="StatisticComponent.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.easybeans.osgi.component.statistic" total_bugs="2" total_types="1" total_size="30" priority_2="2">
+      <ClassStats class="org.ow2.easybeans.osgi.component.statistic.StatisticComponentServiceFactory" sourceFile="StatisticComponentServiceFactory.java" interface="false" size="30" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2609" invocations="739" avgMicrosecondsPerInvocation="3531" maxMicrosecondsPerInvocation="123199" standardDeviationMircosecondsPerInvocation="11165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1674" invocations="167" avgMicrosecondsPerInvocation="10026" maxMicrosecondsPerInvocation="152202" standardDeviationMircosecondsPerInvocation="21545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1636" invocations="334" avgMicrosecondsPerInvocation="4898" maxMicrosecondsPerInvocation="278220" standardDeviationMircosecondsPerInvocation="20368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1465" invocations="167" avgMicrosecondsPerInvocation="8777" maxMicrosecondsPerInvocation="154979" standardDeviationMircosecondsPerInvocation="18823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="1316" invocations="167" avgMicrosecondsPerInvocation="7881" maxMicrosecondsPerInvocation="184178" standardDeviationMircosecondsPerInvocation="20867"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1298" invocations="334" avgMicrosecondsPerInvocation="3887" maxMicrosecondsPerInvocation="295358" standardDeviationMircosecondsPerInvocation="18998"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="991" invocations="334" avgMicrosecondsPerInvocation="2969" maxMicrosecondsPerInvocation="227724" standardDeviationMircosecondsPerInvocation="14136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="957" invocations="349" avgMicrosecondsPerInvocation="2743" maxMicrosecondsPerInvocation="216935" standardDeviationMircosecondsPerInvocation="13792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="924" invocations="340" avgMicrosecondsPerInvocation="2719" maxMicrosecondsPerInvocation="184730" standardDeviationMircosecondsPerInvocation="12485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="784" invocations="253" avgMicrosecondsPerInvocation="3100" maxMicrosecondsPerInvocation="278955" standardDeviationMircosecondsPerInvocation="18449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="709" invocations="334" avgMicrosecondsPerInvocation="2124" maxMicrosecondsPerInvocation="58526" standardDeviationMircosecondsPerInvocation="6864"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="615" invocations="640" avgMicrosecondsPerInvocation="962" maxMicrosecondsPerInvocation="47676" standardDeviationMircosecondsPerInvocation="3928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="567" invocations="167" avgMicrosecondsPerInvocation="3395" maxMicrosecondsPerInvocation="92011" standardDeviationMircosecondsPerInvocation="10792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="458" invocations="167" avgMicrosecondsPerInvocation="2745" maxMicrosecondsPerInvocation="169244" standardDeviationMircosecondsPerInvocation="15904"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="426" invocations="658" avgMicrosecondsPerInvocation="648" maxMicrosecondsPerInvocation="60882" standardDeviationMircosecondsPerInvocation="3875"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="409" invocations="219" avgMicrosecondsPerInvocation="1867" maxMicrosecondsPerInvocation="50166" standardDeviationMircosecondsPerInvocation="6641"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="361" invocations="167" avgMicrosecondsPerInvocation="2162" maxMicrosecondsPerInvocation="32630" standardDeviationMircosecondsPerInvocation="5129"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="348" invocations="167" avgMicrosecondsPerInvocation="2086" maxMicrosecondsPerInvocation="45155" standardDeviationMircosecondsPerInvocation="6019"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="329" invocations="743" avgMicrosecondsPerInvocation="443" maxMicrosecondsPerInvocation="40560" standardDeviationMircosecondsPerInvocation="3057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="308" invocations="372" avgMicrosecondsPerInvocation="830" maxMicrosecondsPerInvocation="117603" standardDeviationMircosecondsPerInvocation="7542"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

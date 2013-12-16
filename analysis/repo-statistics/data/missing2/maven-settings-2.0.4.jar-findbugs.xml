@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1147041071000" analysisTimestamp="1360895581754" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/maven/maven-settings/2.0.4/maven-settings-2.0.4.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.maven.settings.DefaultMavenSettingsBuilder">
+      <SourceLine classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" start="40" end="256" sourcefile="DefaultMavenSettingsBuilder.java" sourcepath="org/apache/maven/settings/DefaultMavenSettingsBuilder.java"/>
+    </Class>
+    <Method classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" name="readSettings" signature="(Ljava/io/File;)Lorg/apache/maven/settings/Settings;" isStatic="false">
+      <SourceLine classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" start="86" end="132" startBytecode="0" endBytecode="435" sourcefile="DefaultMavenSettingsBuilder.java" sourcepath="org/apache/maven/settings/DefaultMavenSettingsBuilder.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="55" end="56" startBytecode="0" endBytecode="40" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" start="93" end="93" startBytecode="23" endBytecode="23" sourcefile="DefaultMavenSettingsBuilder.java" sourcepath="org/apache/maven/settings/DefaultMavenSettingsBuilder.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.maven.settings.DefaultMavenSettingsBuilder">
+      <SourceLine classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" start="40" end="256" sourcefile="DefaultMavenSettingsBuilder.java" sourcepath="org/apache/maven/settings/DefaultMavenSettingsBuilder.java"/>
+    </Class>
+    <Field classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" name="globalSettingsPath" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" sourcefile="DefaultMavenSettingsBuilder.java" sourcepath="org/apache/maven/settings/DefaultMavenSettingsBuilder.java"/>
+    </Field>
+    <SourceLine classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" start="71" end="71" startBytecode="19" endBytecode="19" sourcefile="DefaultMavenSettingsBuilder.java" sourcepath="org/apache/maven/settings/DefaultMavenSettingsBuilder.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.maven.settings.DefaultMavenSettingsBuilder">
+      <SourceLine classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" start="40" end="256" sourcefile="DefaultMavenSettingsBuilder.java" sourcepath="org/apache/maven/settings/DefaultMavenSettingsBuilder.java"/>
+    </Class>
+    <Field classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" name="userSettingsPath" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" sourcefile="DefaultMavenSettingsBuilder.java" sourcepath="org/apache/maven/settings/DefaultMavenSettingsBuilder.java"/>
+    </Field>
+    <SourceLine classname="org.apache.maven.settings.DefaultMavenSettingsBuilder" start="68" end="68" startBytecode="3" endBytecode="3" sourcefile="DefaultMavenSettingsBuilder.java" sourcepath="org/apache/maven/settings/DefaultMavenSettingsBuilder.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.apache.maven.settings.Repository">
+      <SourceLine classname="org.apache.maven.settings.Repository" start="15" end="93" sourcefile="Repository.java" sourcepath="org/apache/maven/settings/Repository.java"/>
+    </Class>
+    <Method classname="org.apache.maven.settings.Repository" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.maven.settings.Repository" start="81" end="81" startBytecode="0" endBytecode="57" sourcefile="Repository.java" sourcepath="org/apache/maven/settings/Repository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" priority="2" abbrev="BC" category="BAD_PRACTICE">
+    <Class classname="org.apache.maven.settings.RepositoryBase">
+      <SourceLine classname="org.apache.maven.settings.RepositoryBase" start="15" end="159" sourcefile="RepositoryBase.java" sourcepath="org/apache/maven/settings/RepositoryBase.java"/>
+    </Class>
+    <Method classname="org.apache.maven.settings.RepositoryBase" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.maven.settings.RepositoryBase" start="138" end="147" startBytecode="0" endBytecode="115" sourcefile="RepositoryBase.java" sourcepath="org/apache/maven/settings/RepositoryBase.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.settings.RepositoryBase" start="138" end="138" startBytecode="1" endBytecode="1" sourcefile="RepositoryBase.java" sourcepath="org/apache/maven/settings/RepositoryBase.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.apache.maven.settings.RepositoryBase">
+      <SourceLine classname="org.apache.maven.settings.RepositoryBase" start="15" end="159" sourcefile="RepositoryBase.java" sourcepath="org/apache/maven/settings/RepositoryBase.java"/>
+    </Class>
+    <Method classname="org.apache.maven.settings.RepositoryBase" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.apache.maven.settings.RepositoryBase" start="138" end="147" startBytecode="0" endBytecode="115" sourcefile="RepositoryBase.java" sourcepath="org/apache/maven/settings/RepositoryBase.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.apache.maven.settings.Settings">
+      <SourceLine classname="org.apache.maven.settings.Settings" start="12" end="577" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java"/>
+    </Class>
+    <Field classname="org.apache.maven.settings.Settings" name="activeProxy" signature="Lorg/apache/maven/settings/Proxy;" isStatic="false">
+      <SourceLine classname="org.apache.maven.settings.Settings" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java"/>
+    </Field>
+    <Int value="80" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.apache.maven.settings.Settings" start="454" end="454" startBytecode="2" endBytecode="2" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.apache.maven.settings.Settings" start="459" end="459" startBytecode="1" endBytecode="1" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.maven.settings.Settings" start="484" end="484" startBytecode="97" endBytecode="97" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.maven.settings.Settings" start="479" end="479" startBytecode="93" endBytecode="93" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.apache.maven.settings.Settings" start="471" end="471" startBytecode="70" endBytecode="70" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="1" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.apache.maven.settings.Settings">
+      <SourceLine classname="org.apache.maven.settings.Settings" start="12" end="577" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java"/>
+    </Class>
+    <Field classname="org.apache.maven.settings.Settings" name="runtimeInfo" signature="Lorg/apache/maven/settings/RuntimeInfo;" isStatic="false">
+      <SourceLine classname="org.apache.maven.settings.Settings" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java"/>
+    </Field>
+    <Type descriptor="Lorg/apache/maven/settings/RuntimeInfo;" role="TYPE_FOUND">
+      <SourceLine classname="org.apache.maven.settings.RuntimeInfo" start="39" end="127" sourcefile="RuntimeInfo.java" sourcepath="org/apache/maven/settings/RuntimeInfo.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.maven.settings.SettingsUtils">
+      <SourceLine classname="org.apache.maven.settings.SettingsUtils" start="31" end="246" sourcefile="SettingsUtils.java" sourcepath="org/apache/maven/settings/SettingsUtils.java"/>
+    </Class>
+    <Method classname="org.apache.maven.settings.SettingsUtils" name="merge" signature="(Lorg/apache/maven/settings/Settings;Lorg/apache/maven/settings/Settings;Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.maven.settings.SettingsUtils" start="37" end="104" startBytecode="0" endBytecode="558" sourcefile="SettingsUtils.java" sourcepath="org/apache/maven/settings/SettingsUtils.java"/>
+    </Method>
+    <LocalVariable name="dominantActiveProfiles" register="3" pc="30" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.maven.settings.Settings" name="getActiveProfiles" signature="()Ljava/util/List;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.maven.settings.Settings" start="141" end="146" startBytecode="0" endBytecode="72" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.settings.SettingsUtils" start="49" end="49" startBytecode="31" endBytecode="31" sourcefile="SettingsUtils.java" sourcepath="org/apache/maven/settings/SettingsUtils.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.maven.settings.SettingsUtils">
+      <SourceLine classname="org.apache.maven.settings.SettingsUtils" start="31" end="246" sourcefile="SettingsUtils.java" sourcepath="org/apache/maven/settings/SettingsUtils.java"/>
+    </Class>
+    <Method classname="org.apache.maven.settings.SettingsUtils" name="merge" signature="(Lorg/apache/maven/settings/Settings;Lorg/apache/maven/settings/Settings;Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.maven.settings.SettingsUtils" start="37" end="104" startBytecode="0" endBytecode="558" sourcefile="SettingsUtils.java" sourcepath="org/apache/maven/settings/SettingsUtils.java"/>
+    </Method>
+    <LocalVariable name="dominantPluginGroupIds" register="5" pc="128" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.maven.settings.Settings" name="getPluginGroups" signature="()Ljava/util/List;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.maven.settings.Settings" start="175" end="180" startBytecode="0" endBytecode="72" sourcefile="Settings.java" sourcepath="org/apache/maven/settings/Settings.java"/>
+    </Method>
+    <SourceLine classname="org.apache.maven.settings.SettingsUtils" start="73" end="73" startBytecode="130" endBytecode="130" sourcefile="SettingsUtils.java" sourcepath="org/apache/maven/settings/SettingsUtils.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.maven.settings.io.xpp3.SettingsXpp3Reader">
+      <SourceLine classname="org.apache.maven.settings.io.xpp3.SettingsXpp3Reader" start="46" end="1659" sourcefile="SettingsXpp3Reader.java" sourcepath="org/apache/maven/settings/io/xpp3/SettingsXpp3Reader.java"/>
+    </Class>
+    <Method classname="org.apache.maven.settings.io.xpp3.SettingsXpp3Reader" name="parseTrackableBase" signature="(Ljava/lang/String;Lorg/codehaus/plexus/util/xml/pull/XmlPullParser;ZLjava/lang/String;)Lorg/apache/maven/settings/TrackableBase;" isStatic="false">
+      <SourceLine classname="org.apache.maven.settings.io.xpp3.SettingsXpp3Reader" start="1341" end="1351" startBytecode="0" endBytecode="35" sourcefile="SettingsXpp3Reader.java" sourcepath="org/apache/maven/settings/io/xpp3/SettingsXpp3Reader.java"/>
+    </Method>
+    <LocalVariable name="parsed" register="6" pc="25" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.maven.settings.io.xpp3.SettingsXpp3Reader" start="1343" end="1343" startBytecode="23" endBytecode="23" sourcefile="SettingsXpp3Reader.java" sourcepath="org/apache/maven/settings/io/xpp3/SettingsXpp3Reader.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="parsed"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="org.apache.maven.settings.io.xpp3.SettingsXpp3Writer">
+      <SourceLine classname="org.apache.maven.settings.io.xpp3.SettingsXpp3Writer" start="35" end="614" sourcefile="SettingsXpp3Writer.java" sourcepath="org/apache/maven/settings/io/xpp3/SettingsXpp3Writer.java"/>
+    </Class>
+    <Field classname="org.apache.maven.settings.io.xpp3.SettingsXpp3Writer" name="NAMESPACE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.maven.settings.io.xpp3.SettingsXpp3Writer" sourcefile="SettingsXpp3Writer.java" sourcepath="org/apache/maven/settings/io/xpp3/SettingsXpp3Writer.java"/>
+    </Field>
+    <SourceLine classname="org.apache.maven.settings.io.xpp3.SettingsXpp3Writer" start="87" end="87" startBytecode="6" endBytecode="6" sourcefile="SettingsXpp3Writer.java" sourcepath="org/apache/maven/settings/io/xpp3/SettingsXpp3Writer.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="22">
+    <MissingClass>org.apache.maven.model.Activation</MissingClass>
+    <MissingClass>org.apache.maven.model.ActivationFile</MissingClass>
+    <MissingClass>org.apache.maven.model.ActivationOS</MissingClass>
+    <MissingClass>org.apache.maven.model.ActivationProperty</MissingClass>
+    <MissingClass>org.apache.maven.model.ModelBase</MissingClass>
+    <MissingClass>org.apache.maven.model.Profile</MissingClass>
+    <MissingClass>org.apache.maven.model.Repository</MissingClass>
+    <MissingClass>org.apache.maven.model.RepositoryBase</MissingClass>
+    <MissingClass>org.apache.maven.model.RepositoryPolicy</MissingClass>
+    <MissingClass>org.codehaus.plexus.logging.AbstractLogEnabled</MissingClass>
+    <MissingClass>org.codehaus.plexus.logging.Logger</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.IOUtil</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.StringUtils</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.interpolation.EnvarBasedValueSource</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.interpolation.RegexBasedInterpolator</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.Xpp3Dom</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.Xpp3DomBuilder</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.pull.MXParser</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.pull.MXSerializer</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.pull.XmlPullParser</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.pull.XmlPullParserException</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.pull.XmlSerializer</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 8 May 2006 01:31:11 +0300" total_classes="21" referenced_classes="62" total_bugs="12" total_size="1925" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="26.31" clock_seconds="13.48" peak_mbytes="79.03" alloc_mbytes="763.88" gc_seconds="0.30" priority_2="7" priority_1="5">
+    <PackageStats package="org.apache.maven.settings" total_bugs="10" total_types="19" total_size="884" priority_2="6" priority_1="4">
+      <ClassStats class="org.apache.maven.settings.Activation" sourceFile="Activation.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.ActivationFile" sourceFile="ActivationFile.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.ActivationOS" sourceFile="ActivationOS.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.ActivationProperty" sourceFile="ActivationProperty.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.DefaultMavenSettingsBuilder" sourceFile="DefaultMavenSettingsBuilder.java" interface="false" size="89" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.apache.maven.settings.IdentifiableBase" sourceFile="IdentifiableBase.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.MavenSettingsBuilder" sourceFile="MavenSettingsBuilder.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.MavenSettingsBuilder$1" sourceFile="MavenSettingsBuilder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.Mirror" sourceFile="Mirror.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.Profile" sourceFile="Profile.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.Proxy" sourceFile="Proxy.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.Repository" sourceFile="Repository.java" interface="false" size="24" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.maven.settings.RepositoryBase" sourceFile="RepositoryBase.java" interface="false" size="41" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.maven.settings.RepositoryPolicy" sourceFile="RepositoryPolicy.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.RuntimeInfo" sourceFile="RuntimeInfo.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.Server" sourceFile="Server.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.apache.maven.settings.Settings" sourceFile="Settings.java" interface="false" size="177" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.maven.settings.SettingsUtils" sourceFile="SettingsUtils.java" interface="false" size="109" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.maven.settings.TrackableBase" sourceFile="TrackableBase.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.settings.io.xpp3" total_bugs="2" total_types="2" total_size="1041" priority_2="1" priority_1="1">
+      <ClassStats class="org.apache.maven.settings.io.xpp3.SettingsXpp3Reader" sourceFile="SettingsXpp3Reader.java" interface="false" size="796" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.maven.settings.io.xpp3.SettingsXpp3Writer" sourceFile="SettingsXpp3Writer.java" interface="false" size="245" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1253" invocations="256" avgMicrosecondsPerInvocation="4898" maxMicrosecondsPerInvocation="247639" standardDeviationMircosecondsPerInvocation="22480"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1030" invocations="256" avgMicrosecondsPerInvocation="4026" maxMicrosecondsPerInvocation="160658" standardDeviationMircosecondsPerInvocation="14298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="917" invocations="439" avgMicrosecondsPerInvocation="2089" maxMicrosecondsPerInvocation="104017" standardDeviationMircosecondsPerInvocation="7262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="822" invocations="256" avgMicrosecondsPerInvocation="3213" maxMicrosecondsPerInvocation="89297" standardDeviationMircosecondsPerInvocation="10301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="806" invocations="256" avgMicrosecondsPerInvocation="3149" maxMicrosecondsPerInvocation="91223" standardDeviationMircosecondsPerInvocation="9210"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="725" invocations="256" avgMicrosecondsPerInvocation="2835" maxMicrosecondsPerInvocation="71799" standardDeviationMircosecondsPerInvocation="8674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="584" invocations="62" avgMicrosecondsPerInvocation="9434" maxMicrosecondsPerInvocation="114264" standardDeviationMircosecondsPerInvocation="20076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="573" invocations="62" avgMicrosecondsPerInvocation="9246" maxMicrosecondsPerInvocation="156873" standardDeviationMircosecondsPerInvocation="22504"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="445" invocations="391" avgMicrosecondsPerInvocation="1138" maxMicrosecondsPerInvocation="93275" standardDeviationMircosecondsPerInvocation="5704"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="410" invocations="256" avgMicrosecondsPerInvocation="1605" maxMicrosecondsPerInvocation="38951" standardDeviationMircosecondsPerInvocation="4582"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="249" invocations="114" avgMicrosecondsPerInvocation="2186" maxMicrosecondsPerInvocation="29068" standardDeviationMircosecondsPerInvocation="4185"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="235" invocations="21" avgMicrosecondsPerInvocation="11195" maxMicrosecondsPerInvocation="154292" standardDeviationMircosecondsPerInvocation="35618"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="204" invocations="62" avgMicrosecondsPerInvocation="3295" maxMicrosecondsPerInvocation="34416" standardDeviationMircosecondsPerInvocation="6497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="168" invocations="256" avgMicrosecondsPerInvocation="658" maxMicrosecondsPerInvocation="18664" standardDeviationMircosecondsPerInvocation="1606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="155" invocations="62" avgMicrosecondsPerInvocation="2509" maxMicrosecondsPerInvocation="64449" standardDeviationMircosecondsPerInvocation="8472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="155" invocations="62" avgMicrosecondsPerInvocation="2506" maxMicrosecondsPerInvocation="20542" standardDeviationMircosecondsPerInvocation="3519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="155" invocations="256" avgMicrosecondsPerInvocation="606" maxMicrosecondsPerInvocation="24280" standardDeviationMircosecondsPerInvocation="1847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="152" invocations="376" avgMicrosecondsPerInvocation="406" maxMicrosecondsPerInvocation="40948" standardDeviationMircosecondsPerInvocation="2296"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

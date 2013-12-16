@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1301496643000" analysisTimestamp="1360915463845" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/lucene/lucene-lucli/3.1.0/lucene-lucli-3.1.0.jar</Jar>
+  </Project>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="lucli.LuceneMethods">
+      <SourceLine classname="lucli.LuceneMethods" start="75" end="391" sourcefile="LuceneMethods.java" sourcepath="lucli/LuceneMethods.java"/>
+    </Class>
+    <Method classname="lucli.LuceneMethods" name="terms" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="lucli.LuceneMethods" start="343" end="361" startBytecode="0" endBytecode="413" sourcefile="LuceneMethods.java" sourcepath="lucli/LuceneMethods.java"/>
+    </Method>
+    <SourceLine classname="lucli.LuceneMethods" start="357" end="357" startBytecode="147" endBytecode="147" sourcefile="LuceneMethods.java" sourcepath="lucli/LuceneMethods.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="lucli.Lucli">
+      <SourceLine classname="lucli.Lucli" start="64" end="298" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+    </Class>
+    <Method classname="lucli.Lucli" name="parseArgs" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="lucli.Lucli" start="289" end="293" startBytecode="0" endBytecode="77" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+    </Method>
+    <SourceLine classname="lucli.Lucli" start="291" end="291" startBytecode="10" endBytecode="10" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="lucli.Lucli">
+      <SourceLine classname="lucli.Lucli" start="64" end="298" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+    </Class>
+    <Method classname="lucli.Lucli" name="handleCommand" signature="(Ljava/lang/String;Ljline/ConsoleReader;)V" isStatic="false">
+      <SourceLine classname="lucli.Lucli" start="145" end="214" startBytecode="0" endBytecode="847" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+    </Method>
+    <SourceLine classname="lucli.Lucli" start="158" end="158" startBytecode="128" endBytecode="128" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="lucli.Lucli">
+      <SourceLine classname="lucli.Lucli" start="64" end="298" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+    </Class>
+    <Method classname="lucli.Lucli" name="handleCommand" signature="(Ljava/lang/String;Ljline/ConsoleReader;)V" isStatic="false">
+      <SourceLine classname="lucli.Lucli" start="145" end="214" startBytecode="0" endBytecode="847" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+    </Method>
+    <SourceLine classname="lucli.Lucli" start="152" end="211" startBytecode="40" endBytecode="496" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="lucli.Lucli">
+      <SourceLine classname="lucli.Lucli" start="64" end="298" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+    </Class>
+    <Field classname="lucli.Lucli" name="enableReadline" signature="Z" isStatic="false">
+      <SourceLine classname="lucli.Lucli" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="lucli.Lucli$Command">
+      <SourceLine classname="lucli.Lucli$Command" start="306" end="317" sourcefile="Lucli.java" sourcepath="lucli/Lucli.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="30">
+    <MissingClass>jline.ArgumentCompletor</MissingClass>
+    <MissingClass>jline.ConsoleReader</MissingClass>
+    <MissingClass>jline.FileNameCompletor</MissingClass>
+    <MissingClass>jline.History</MissingClass>
+    <MissingClass>jline.SimpleCompletor</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.Analyzer</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.TokenStream</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.standard.StandardAnalyzer</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.tokenattributes.CharTermAttribute</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute</MissingClass>
+    <MissingClass>org.apache.lucene.document.Document</MissingClass>
+    <MissingClass>org.apache.lucene.document.Fieldable</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexReader</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexReader$FieldOption</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexWriter</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexWriterConfig</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexWriterConfig$OpenMode</MissingClass>
+    <MissingClass>org.apache.lucene.index.Term</MissingClass>
+    <MissingClass>org.apache.lucene.index.TermEnum</MissingClass>
+    <MissingClass>org.apache.lucene.queryParser.MultiFieldQueryParser</MissingClass>
+    <MissingClass>org.apache.lucene.queryParser.ParseException</MissingClass>
+    <MissingClass>org.apache.lucene.search.Collector</MissingClass>
+    <MissingClass>org.apache.lucene.search.Explanation</MissingClass>
+    <MissingClass>org.apache.lucene.search.IndexSearcher</MissingClass>
+    <MissingClass>org.apache.lucene.search.Query</MissingClass>
+    <MissingClass>org.apache.lucene.search.ScoreDoc</MissingClass>
+    <MissingClass>org.apache.lucene.search.Searcher</MissingClass>
+    <MissingClass>org.apache.lucene.search.TopDocs</MissingClass>
+    <MissingClass>org.apache.lucene.store.FSDirectory</MissingClass>
+    <MissingClass>org.apache.lucene.util.Version</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 30 Mar 2011 17:50:43 +0300" total_classes="5" referenced_classes="38" total_bugs="6" total_size="394" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="18.54" clock_seconds="10.44" peak_mbytes="60.15" alloc_mbytes="763.88" gc_seconds="0.14" priority_2="6">
+    <PackageStats package="lucli" total_bugs="6" total_types="5" total_size="394" priority_2="6">
+      <ClassStats class="lucli.LuceneMethods" sourceFile="LuceneMethods.java" interface="false" size="194" bugs="1" priority_2="1"/>
+      <ClassStats class="lucli.LuceneMethods$1" sourceFile="LuceneMethods.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="lucli.LuceneMethods$CountingCollector" sourceFile="LuceneMethods.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="lucli.Lucli" sourceFile="Lucli.java" interface="false" size="163" bugs="4" priority_2="4"/>
+      <ClassStats class="lucli.Lucli$Command" sourceFile="Lucli.java" interface="false" size="15" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1139" invocations="410" avgMicrosecondsPerInvocation="2779" maxMicrosecondsPerInvocation="186037" standardDeviationMircosecondsPerInvocation="12741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="759" invocations="41" avgMicrosecondsPerInvocation="18528" maxMicrosecondsPerInvocation="134555" standardDeviationMircosecondsPerInvocation="28626"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="564" invocations="38" avgMicrosecondsPerInvocation="14857" maxMicrosecondsPerInvocation="105753" standardDeviationMircosecondsPerInvocation="25223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="466" invocations="46" avgMicrosecondsPerInvocation="10131" maxMicrosecondsPerInvocation="115956" standardDeviationMircosecondsPerInvocation="20650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="420" invocations="44" avgMicrosecondsPerInvocation="9563" maxMicrosecondsPerInvocation="83580" standardDeviationMircosecondsPerInvocation="15836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="408" invocations="41" avgMicrosecondsPerInvocation="9959" maxMicrosecondsPerInvocation="92257" standardDeviationMircosecondsPerInvocation="20227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="402" invocations="40" avgMicrosecondsPerInvocation="10056" maxMicrosecondsPerInvocation="69683" standardDeviationMircosecondsPerInvocation="16261"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="357" invocations="38" avgMicrosecondsPerInvocation="9402" maxMicrosecondsPerInvocation="63174" standardDeviationMircosecondsPerInvocation="15367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="282" invocations="38" avgMicrosecondsPerInvocation="7431" maxMicrosecondsPerInvocation="71062" standardDeviationMircosecondsPerInvocation="14496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="236" invocations="219" avgMicrosecondsPerInvocation="1078" maxMicrosecondsPerInvocation="42741" standardDeviationMircosecondsPerInvocation="3332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="227" invocations="37" avgMicrosecondsPerInvocation="6161" maxMicrosecondsPerInvocation="45379" standardDeviationMircosecondsPerInvocation="9901"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="212" invocations="5" avgMicrosecondsPerInvocation="42460" maxMicrosecondsPerInvocation="185961" standardDeviationMircosecondsPerInvocation="72467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="173" invocations="41" avgMicrosecondsPerInvocation="4233" maxMicrosecondsPerInvocation="43808" standardDeviationMircosecondsPerInvocation="9084"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="165" invocations="38" avgMicrosecondsPerInvocation="4360" maxMicrosecondsPerInvocation="34821" standardDeviationMircosecondsPerInvocation="7696"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="163" invocations="336" avgMicrosecondsPerInvocation="486" maxMicrosecondsPerInvocation="36110" standardDeviationMircosecondsPerInvocation="2624"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="151" invocations="41" avgMicrosecondsPerInvocation="3706" maxMicrosecondsPerInvocation="17038" standardDeviationMircosecondsPerInvocation="4577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="140" invocations="41" avgMicrosecondsPerInvocation="3435" maxMicrosecondsPerInvocation="95667" standardDeviationMircosecondsPerInvocation="15383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="130" invocations="5" avgMicrosecondsPerInvocation="26075" maxMicrosecondsPerInvocation="95127" standardDeviationMircosecondsPerInvocation="36816"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

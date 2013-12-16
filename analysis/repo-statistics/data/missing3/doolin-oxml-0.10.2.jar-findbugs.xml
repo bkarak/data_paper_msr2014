@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1301929442000" analysisTimestamp="1361256624539" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/net/sf/doolin/doolin-oxml/0.10.2/doolin-oxml-0.10.2.jar</Jar>
+  </Project>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="net.sf.doolin.oxml.OXMLContext">
+      <SourceLine classname="net.sf.doolin.oxml.OXMLContext" start="39" end="422" sourcefile="OXMLContext.java" sourcepath="net/sf/doolin/oxml/OXMLContext.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.oxml.OXMLContext" name="checkUsed" signature="(Lorg/w3c/dom/Node;Lnet/sf/doolin/oxml/OXMLReaderOutput;)V" isStatic="false">
+      <SourceLine classname="net.sf.doolin.oxml.OXMLContext" start="73" end="95" startBytecode="0" endBytecode="383" sourcefile="OXMLContext.java" sourcepath="net/sf/doolin/oxml/OXMLContext.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.oxml.OXMLContext" start="87" end="90" startBytecode="100" endBytecode="134" sourcefile="OXMLContext.java" sourcepath="net/sf/doolin/oxml/OXMLContext.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="net.sf.doolin.oxml.OXMLUtils">
+      <SourceLine classname="net.sf.doolin.oxml.OXMLUtils" start="21" end="78" sourcefile="OXMLUtils.java" sourcepath="net/sf/doolin/oxml/OXMLUtils.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.oxml.OXMLUtils" name="writeCollections" signature="(Ljava/io/File;Ljava/util/Map;)V" isStatic="true">
+      <SourceLine classname="net.sf.doolin.oxml.OXMLUtils" start="57" end="78" startBytecode="0" endBytecode="545" sourcefile="OXMLUtils.java" sourcepath="net/sf/doolin/oxml/OXMLUtils.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="73" end="74" startBytecode="0" endBytecode="40" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.oxml.OXMLUtils" start="60" end="60" startBytecode="23" endBytecode="23" sourcefile="OXMLUtils.java" sourcepath="net/sf/doolin/oxml/OXMLUtils.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="net.sf.doolin.oxml.OXMLUtils">
+      <SourceLine classname="net.sf.doolin.oxml.OXMLUtils" start="21" end="78" sourcefile="OXMLUtils.java" sourcepath="net/sf/doolin/oxml/OXMLUtils.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.oxml.OXMLUtils" name="writeCollections" signature="(Ljava/io/File;Ljava/util/Map;)V" isStatic="true">
+      <SourceLine classname="net.sf.doolin.oxml.OXMLUtils" start="57" end="78" startBytecode="0" endBytecode="545" sourcefile="OXMLUtils.java" sourcepath="net/sf/doolin/oxml/OXMLUtils.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="net.sf.doolin.oxml.OXMLUtils" start="58" end="58" startBytecode="6" endBytecode="6" sourcefile="OXMLUtils.java" sourcepath="net/sf/doolin/oxml/OXMLUtils.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="net.sf.doolin.oxml.action.CreateOXMLAction">
+      <SourceLine classname="net.sf.doolin.oxml.action.CreateOXMLAction" start="65" end="275" sourcefile="CreateOXMLAction.java" sourcepath="net/sf/doolin/oxml/action/CreateOXMLAction.java"/>
+    </Class>
+    <Method classname="net.sf.doolin.oxml.action.CreateOXMLAction" name="collect" signature="(Ljava/lang/Object;Lnet/sf/doolin/oxml/OXMLContext;)V" isStatic="false">
+      <SourceLine classname="net.sf.doolin.oxml.action.CreateOXMLAction" start="142" end="181" startBytecode="0" endBytecode="660" sourcefile="CreateOXMLAction.java" sourcepath="net/sf/doolin/oxml/action/CreateOXMLAction.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2769" end="2769" startBytecode="0" endBytecode="39" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <String value="Cannot get %2$s property on the %1$s instance.\n%3$s" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="net.sf.doolin.oxml.action.CreateOXMLAction" start="168" end="168" startBytecode="183" endBytecode="183" sourcefile="CreateOXMLAction.java" sourcepath="net/sf/doolin/oxml/action/CreateOXMLAction.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="9">
+    <MissingClass>net.sf.doolin.util.Utils</MissingClass>
+    <MissingClass>net.sf.doolin.util.xml.DOMUtils</MissingClass>
+    <MissingClass>net.sf.doolin.util.xml.XPathUtils</MissingClass>
+    <MissingClass>net.sf.jstring.LocalizableException</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.BeanUtils</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.MethodUtils</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.PropertyUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.ObjectUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 4 Apr 2011 18:04:02 +0300" total_classes="38" referenced_classes="94" total_bugs="4" total_size="762" num_packages="6" vm_version="20.4-b02-402" cpu_seconds="18.71" clock_seconds="11.72" peak_mbytes="63.88" alloc_mbytes="4091.88" gc_seconds="0.18" priority_2="3" priority_1="1">
+    <PackageStats package="net.sf.doolin.oxml" total_bugs="3" total_types="9" total_size="256" priority_2="2" priority_1="1">
+      <ClassStats class="net.sf.doolin.oxml.OXML" sourceFile="OXML.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.OXMLConfig" sourceFile="OXMLConfig.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.OXMLContext" sourceFile="OXMLContext.java" interface="false" size="136" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.oxml.OXMLContextConfig" sourceFile="OXMLContextConfig.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.OXMLFactory" sourceFile="OXMLFactory.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.OXMLReader" sourceFile="OXMLReader.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.OXMLReaderOutput" sourceFile="OXMLReaderOutput.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.OXMLSource" sourceFile="OXMLSource.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.OXMLUtils" sourceFile="OXMLUtils.java" interface="false" size="31" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.oxml.action" total_bugs="1" total_types="13" total_size="338" priority_2="1">
+      <ClassStats class="net.sf.doolin.oxml.action.AbstractOXMLAction" sourceFile="AbstractOXMLAction.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.AbstractSequenceOXMLAction" sourceFile="AbstractSequenceOXMLAction.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.CheckOXMLAction" sourceFile="CheckOXMLAction.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.CreateDefOXMLAction" sourceFile="CreateDefOXMLAction.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.CreateOXMLAction" sourceFile="CreateOXMLAction.java" interface="false" size="101" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.doolin.oxml.action.ForOXMLAction" sourceFile="ForOXMLAction.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.IfOXMLAction" sourceFile="IfOXMLAction.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.IncludeOXMLAction" sourceFile="IncludeOXMLAction.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.OXMLAction" sourceFile="OXMLAction.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.OXMLActionFactory" sourceFile="OXMLActionFactory.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.PropertyOXMLAction" sourceFile="PropertyOXMLAction.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.RootOXMLAction" sourceFile="RootOXMLAction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.action.SequenceOXMLAction" sourceFile="SequenceOXMLAction.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.oxml.adapter" total_bugs="0" total_types="8" total_size="63">
+      <ClassStats class="net.sf.doolin.oxml.adapter.AbstractOXMLInstanceFactory" sourceFile="AbstractOXMLInstanceFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.adapter.AbstractSimpleOXMLAdapter" sourceFile="AbstractSimpleOXMLAdapter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.adapter.AbstractTextOXMLInstanceFactory" sourceFile="AbstractTextOXMLInstanceFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.adapter.DefaultOXMLAdapter" sourceFile="DefaultOXMLAdapter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.adapter.DimensionOXMLAdapter" sourceFile="DimensionOXMLAdapter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.adapter.EnumOXMLAdapter" sourceFile="EnumOXMLAdapter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.adapter.OXMLAdapter" sourceFile="OXMLAdapter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.adapter.OXMLInstanceFactory" sourceFile="OXMLInstanceFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.oxml.annotation" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="net.sf.doolin.oxml.annotation.Collection" sourceFile="Collection.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.oxml.config" total_bugs="0" total_types="2" total_size="46">
+      <ClassStats class="net.sf.doolin.oxml.config.AbstractOXMLConfig" sourceFile="AbstractOXMLConfig.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.config.XMLOXMLConfig" sourceFile="XMLOXMLConfig.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.sf.doolin.oxml.source" total_bugs="0" total_types="5" total_size="55">
+      <ClassStats class="net.sf.doolin.oxml.source.AbstractOXMLSource" sourceFile="AbstractOXMLSource.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.source.FileOXMLSource" sourceFile="FileOXMLSource.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.source.ResourceOXMLSource" sourceFile="ResourceOXMLSource.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.source.StreamOXMLSource" sourceFile="StreamOXMLSource.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.sf.doolin.oxml.source.URLOXMLSource" sourceFile="URLOXMLSource.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="749" invocations="94" avgMicrosecondsPerInvocation="7974" maxMicrosecondsPerInvocation="143442" standardDeviationMircosecondsPerInvocation="21804"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="655" invocations="497" avgMicrosecondsPerInvocation="1319" maxMicrosecondsPerInvocation="46331" standardDeviationMircosecondsPerInvocation="4012"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="583" invocations="94" avgMicrosecondsPerInvocation="6205" maxMicrosecondsPerInvocation="167267" standardDeviationMircosecondsPerInvocation="19705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="540" invocations="126" avgMicrosecondsPerInvocation="4286" maxMicrosecondsPerInvocation="56172" standardDeviationMircosecondsPerInvocation="8578"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="501" invocations="126" avgMicrosecondsPerInvocation="3978" maxMicrosecondsPerInvocation="50088" standardDeviationMircosecondsPerInvocation="7864"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="449" invocations="123" avgMicrosecondsPerInvocation="3650" maxMicrosecondsPerInvocation="60820" standardDeviationMircosecondsPerInvocation="7398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="399" invocations="130" avgMicrosecondsPerInvocation="3075" maxMicrosecondsPerInvocation="46680" standardDeviationMircosecondsPerInvocation="7374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="368" invocations="130" avgMicrosecondsPerInvocation="2833" maxMicrosecondsPerInvocation="38865" standardDeviationMircosecondsPerInvocation="6006"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="349" invocations="126" avgMicrosecondsPerInvocation="2772" maxMicrosecondsPerInvocation="78486" standardDeviationMircosecondsPerInvocation="8399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="317" invocations="246" avgMicrosecondsPerInvocation="1291" maxMicrosecondsPerInvocation="55320" standardDeviationMircosecondsPerInvocation="6069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="258" invocations="445" avgMicrosecondsPerInvocation="580" maxMicrosecondsPerInvocation="93671" standardDeviationMircosecondsPerInvocation="5195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="253" invocations="106" avgMicrosecondsPerInvocation="2393" maxMicrosecondsPerInvocation="54702" standardDeviationMircosecondsPerInvocation="6174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="230" invocations="94" avgMicrosecondsPerInvocation="2457" maxMicrosecondsPerInvocation="67554" standardDeviationMircosecondsPerInvocation="7972"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="192" invocations="94" avgMicrosecondsPerInvocation="2043" maxMicrosecondsPerInvocation="31024" standardDeviationMircosecondsPerInvocation="5070"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="151" invocations="38" avgMicrosecondsPerInvocation="3997" maxMicrosecondsPerInvocation="117482" standardDeviationMircosecondsPerInvocation="19008"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSqlInjection" totalMilliseconds="135" invocations="38" avgMicrosecondsPerInvocation="3578" maxMicrosecondsPerInvocation="120301" standardDeviationMircosecondsPerInvocation="19201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="133" invocations="94" avgMicrosecondsPerInvocation="1423" maxMicrosecondsPerInvocation="36691" standardDeviationMircosecondsPerInvocation="4950"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="124" invocations="94" avgMicrosecondsPerInvocation="1323" maxMicrosecondsPerInvocation="17023" standardDeviationMircosecondsPerInvocation="3469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="121" invocations="38" avgMicrosecondsPerInvocation="3187" maxMicrosecondsPerInvocation="73560" standardDeviationMircosecondsPerInvocation="12038"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="112" invocations="123" avgMicrosecondsPerInvocation="917" maxMicrosecondsPerInvocation="22712" standardDeviationMircosecondsPerInvocation="2845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="105" invocations="139" avgMicrosecondsPerInvocation="759" maxMicrosecondsPerInvocation="76871" standardDeviationMircosecondsPerInvocation="6523"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="104" invocations="500" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="26130" standardDeviationMircosecondsPerInvocation="1340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="98" invocations="126" avgMicrosecondsPerInvocation="778" maxMicrosecondsPerInvocation="7581" standardDeviationMircosecondsPerInvocation="1298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="88" invocations="123" avgMicrosecondsPerInvocation="718" maxMicrosecondsPerInvocation="17021" standardDeviationMircosecondsPerInvocation="2351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="82" invocations="123" avgMicrosecondsPerInvocation="669" maxMicrosecondsPerInvocation="24197" standardDeviationMircosecondsPerInvocation="2635"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="77" invocations="94" avgMicrosecondsPerInvocation="823" maxMicrosecondsPerInvocation="12023" standardDeviationMircosecondsPerInvocation="1885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="72" invocations="38" avgMicrosecondsPerInvocation="1914" maxMicrosecondsPerInvocation="57380" standardDeviationMircosecondsPerInvocation="9131"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

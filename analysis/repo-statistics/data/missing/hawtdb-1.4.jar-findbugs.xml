@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1284463138000" analysisTimestamp="1360502890632" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/fusesource/hawtdb/hawtdb/1.4/hawtdb-1.4.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.fusesource.hawtdb.internal.index.BTreeIndex">
+      <SourceLine classname="org.fusesource.hawtdb.internal.index.BTreeIndex" start="44" end="296" sourcefile="BTreeIndex.java" sourcepath="org/fusesource/hawtdb/internal/index/BTreeIndex.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.index.BTreeIndex" name="printStructure" signature="(Ljava/io/OutputStream;)V" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.index.BTreeIndex" start="125" end="128" startBytecode="0" endBytecode="119" sourcefile="BTreeIndex.java" sourcepath="org/fusesource/hawtdb/internal/index/BTreeIndex.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;Z)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="110" end="116" startBytecode="0" endBytecode="71" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="org.fusesource.hawtdb.internal.index.BTreeIndex" start="125" end="125" startBytecode="6" endBytecode="6" sourcefile="BTreeIndex.java" sourcepath="org/fusesource/hawtdb/internal/index/BTreeIndex.java"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.fusesource.hawtdb.internal.io.MemoryMappedFile$1">
+      <SourceLine classname="org.fusesource.hawtdb.internal.io.MemoryMappedFile$1" start="264" end="274" sourcefile="MemoryMappedFile.java" sourcepath="org/fusesource/hawtdb/internal/io/MemoryMappedFile.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.io.MemoryMappedFile$1" name="run" signature="()[Ljava/lang/reflect/Method;" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.io.MemoryMappedFile$1" start="267" end="274" startBytecode="0" endBytecode="203" sourcefile="MemoryMappedFile.java" sourcepath="org/fusesource/hawtdb/internal/io/MemoryMappedFile.java"/>
+    </Method>
+    <SourceLine classname="org.fusesource.hawtdb.internal.io.MemoryMappedFile$1" start="273" end="273" startBytecode="55" endBytecode="55" sourcefile="MemoryMappedFile.java" sourcepath="org/fusesource/hawtdb/internal/io/MemoryMappedFile.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.fusesource.hawtdb.internal.io.MemoryMappedFileFactory">
+      <SourceLine classname="org.fusesource.hawtdb.internal.io.MemoryMappedFileFactory" start="27" end="70" sourcefile="MemoryMappedFileFactory.java" sourcepath="org/fusesource/hawtdb/internal/io/MemoryMappedFileFactory.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.io.MemoryMappedFileFactory" name="open" signature="()V" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.io.MemoryMappedFileFactory" start="34" end="45" startBytecode="0" endBytecode="144" sourcefile="MemoryMappedFileFactory.java" sourcepath="org/fusesource/hawtdb/internal/io/MemoryMappedFileFactory.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.fusesource.hawtdb.internal.io.MemoryMappedFileFactory" start="42" end="42" startBytecode="51" endBytecode="51" sourcefile="MemoryMappedFileFactory.java" sourcepath="org/fusesource/hawtdb/internal/io/MemoryMappedFileFactory.java"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.journal.DataFile">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFile" start="31" end="98" sourcefile="DataFile.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFile.java"/>
+    </Class>
+    <Field classname="org.fusesource.hawtdb.internal.journal.DataFile" name="length" signature="I" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFile" sourcefile="DataFile.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFile.java"/>
+    </Field>
+    <Int value="75" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFile" start="56" end="56" startBytecode="2" endBytecode="2" sourcefile="DataFile.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFile.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFile" start="64" end="64" startBytecode="35" endBytecode="35" sourcefile="DataFile.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFile.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFile" start="60" end="60" startBytecode="2" endBytecode="2" sourcefile="DataFile.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFile.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFile" start="60" end="60" startBytecode="7" endBytecode="7" sourcefile="DataFile.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFile.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFile" start="52" end="52" startBytecode="1" endBytecode="1" sourcefile="DataFile.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFile.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" start="41" end="88" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java"/>
+    </Class>
+    <Field classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" name="openCounter" signature="I" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java"/>
+    </Field>
+    <Int value="60" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" start="58" end="58" startBytecode="67" endBytecode="67" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" start="58" end="58" startBytecode="72" endBytecode="72" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" start="88" end="88" startBytecode="1" endBytecode="1" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" start="63" end="63" startBytecode="2" endBytecode="2" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" start="63" end="63" startBytecode="7" endBytecode="7" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" start="41" end="88" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java"/>
+    </Class>
+    <Field classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" name="used" signature="Z" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java"/>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" start="57" end="57" startBytecode="62" endBytecode="62" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" start="76" end="76" startBytecode="1" endBytecode="1" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" start="72" end="72" startBytecode="2" endBytecode="2" sourcefile="DataFileAccessorPool.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAccessorPool.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.fusesource.hawtdb.internal.journal.DataFileAppender">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAppender" start="40" end="394" sourcefile="DataFileAppender.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAppender.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.journal.DataFileAppender" name="enqueue" signature="(Lorg/fusesource/hawtdb/internal/journal/DataFileAppender$WriteCommand;)Lorg/fusesource/hawtdb/internal/journal/DataFileAppender$WriteBatch;" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAppender" start="184" end="239" startBytecode="0" endBytecode="485" sourcefile="DataFileAppender.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAppender.java"/>
+    </Method>
+    <Field classname="org.fusesource.hawtdb.internal.journal.DataFileAppender" name="nextWriteBatch" signature="Lorg/fusesource/hawtdb/internal/journal/DataFileAppender$WriteBatch;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAppender" sourcefile="DataFileAppender.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAppender.java"/>
+    </Field>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAppender" start="223" end="223" startBytecode="184" endBytecode="184" sourcefile="DataFileAppender.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAppender.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.journal.Journal">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="43" end="659" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java"/>
+    </Class>
+    <Field classname="org.fusesource.hawtdb.internal.journal.Journal" name="accessorPool" signature="Lorg/fusesource/hawtdb/internal/journal/DataFileAccessorPool;" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java"/>
+    </Field>
+    <Int value="72" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="533" end="533" startBytecode="8" endBytecode="8" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="537" end="537" startBytecode="41" endBytecode="41" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="537" end="537" startBytecode="27" endBytecode="27" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="444" end="444" startBytecode="46" endBytecode="46" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="448" end="448" startBytecode="73" endBytecode="73" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="448" end="448" startBytecode="60" endBytecode="60" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="335" end="335" startBytecode="1" endBytecode="1" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="302" end="302" startBytecode="8" endBytecode="8" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="316" end="316" startBytecode="120" endBytecode="120" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="101" end="101" startBytecode="21" endBytecode="21" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="172" end="172" startBytecode="43" endBytecode="43" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="218" end="218" startBytecode="251" endBytecode="251" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="218" end="218" startBytecode="265" endBytecode="265" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="218" end="218" startBytecode="237" endBytecode="237" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="511" end="511" startBytecode="7" endBytecode="7" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="516" end="516" startBytecode="39" endBytecode="39" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="516" end="516" startBytecode="26" endBytecode="26" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="493" end="493" startBytecode="146" endBytecode="146" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="497" end="497" startBytecode="177" endBytecode="177" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="497" end="497" startBytecode="163" endBytecode="163" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="293" end="293" startBytecode="1" endBytecode="1" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="294" end="294" startBytecode="8" endBytecode="8" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.journal.Journal">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="43" end="659" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java"/>
+    </Class>
+    <Field classname="org.fusesource.hawtdb.internal.journal.Journal" name="dataFiles" signature="Lorg/fusesource/hawtdb/util/list/LinkedNodeList;" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java"/>
+    </Field>
+    <Int value="90" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.ReadOnlyJournal" start="115" end="115" startBytecode="1" endBytecode="1" sourcefile="ReadOnlyJournal.java" sourcepath="org/fusesource/hawtdb/internal/journal/ReadOnlyJournal.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.ReadOnlyJournal" start="119" end="119" startBytecode="13" endBytecode="13" sourcefile="ReadOnlyJournal.java" sourcepath="org/fusesource/hawtdb/internal/journal/ReadOnlyJournal.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="372" end="372" startBytecode="3" endBytecode="3" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="376" end="376" startBytecode="45" endBytecode="45" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="374" end="374" startBytecode="26" endBytecode="26" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="384" end="384" startBytecode="128" endBytecode="128" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="313" end="313" startBytecode="108" endBytecode="108" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="231" end="231" startBytecode="1" endBytecode="1" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="234" end="234" startBytecode="16" endBytecode="16" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="238" end="238" startBytecode="1" endBytecode="1" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="238" end="238" startBytecode="11" endBytecode="11" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="244" end="244" startBytecode="81" endBytecode="81" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="140" end="140" startBytecode="283" endBytecode="283" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="133" end="133" startBytecode="248" endBytecode="248" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="586" end="586" startBytecode="1" endBytecode="1" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="588" end="588" startBytecode="13" endBytecode="13" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="607" end="607" startBytecode="7" endBytecode="7" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="608" end="608" startBytecode="17" endBytecode="17" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="396" end="396" startBytecode="11" endBytecode="11" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.ReadOnlyJournal" start="78" end="78" startBytecode="258" endBytecode="258" sourcefile="ReadOnlyJournal.java" sourcepath="org/fusesource/hawtdb/internal/journal/ReadOnlyJournal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.journal.Journal">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="43" end="659" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java"/>
+    </Class>
+    <Field classname="org.fusesource.hawtdb.internal.journal.Journal" name="preferedFileLength" signature="I" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java"/>
+    </Field>
+    <Int value="55" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAppender" start="304" end="304" startBytecode="167" endBytecode="167" sourcefile="DataFileAppender.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAppender.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.DataFileAppender" start="305" end="305" startBytecode="180" endBytecode="180" sourcefile="DataFileAppender.java" sourcepath="org/fusesource/hawtdb/internal/journal/DataFileAppender.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="615" end="615" startBytecode="53" endBytecode="53" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="617" end="617" startBytecode="67" endBytecode="67" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="380" end="380" startBytecode="92" endBytecode="92" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="240" end="240" startBytecode="46" endBytecode="46" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="103" end="103" startBytecode="42" endBytecode="42" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="120" end="120" startBytecode="143" endBytecode="143" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.ReadOnlyJournal" start="65" end="65" startBytecode="162" endBytecode="162" sourcefile="ReadOnlyJournal.java" sourcepath="org/fusesource/hawtdb/internal/journal/ReadOnlyJournal.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.fusesource.hawtdb.internal.journal.Journal">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="43" end="659" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java"/>
+    </Class>
+    <Field classname="org.fusesource.hawtdb.internal.journal.Journal" name="BATCH_CONTROL_RECORD_MAGIC" signature="[B" isStatic="true">
+      <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java"/>
+    </Field>
+    <SourceLine classname="org.fusesource.hawtdb.internal.journal.Journal" start="53" end="53" startBytecode="5" endBytecode="5" sourcefile="Journal.java" sourcepath="org/fusesource/hawtdb/internal/journal/Journal.java"/>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" abbrev="AT" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.page.HawtTransaction">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="39" end="390" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.page.HawtTransaction" name="clear" signature="(Lorg/fusesource/hawtdb/api/PagedAccessor;I)V" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="182" end="200" startBytecode="0" endBytecode="333" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="159" end="1280" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="880" end="883" startBytecode="0" endBytecode="68" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Method>
+    <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="187" end="187" startBytecode="66" endBytecode="66" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" abbrev="AT" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.page.HawtTransaction">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="39" end="390" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.page.HawtTransaction" name="put" signature="(Lorg/fusesource/hawtdb/api/PagedAccessor;ILjava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="157" end="179" startBytecode="0" endBytecode="343" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="159" end="1280" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="880" end="883" startBytecode="0" endBytecode="68" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Method>
+    <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="165" end="165" startBytecode="50" endBytecode="50" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" abbrev="AT" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.page.HawtTransaction">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="39" end="390" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.page.HawtTransaction" name="slice" signature="(Lorg/fusesource/hawtdb/api/Paged$SliceType;II)Ljava/nio/ByteBuffer;" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="232" end="272" startBytecode="0" endBytecode="513" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="159" end="1280" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="880" end="883" startBytecode="0" endBytecode="68" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Method>
+    <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="250" end="250" startBytecode="141" endBytecode="141" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" abbrev="AT" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.page.HawtTransaction">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="39" end="390" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.page.HawtTransaction" name="slice" signature="(Lorg/fusesource/hawtdb/api/Paged$SliceType;II)Ljava/nio/ByteBuffer;" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="232" end="272" startBytecode="0" endBytecode="513" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="159" end="1280" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="880" end="883" startBytecode="0" endBytecode="68" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Method>
+    <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="266" end="266" startBytecode="249" endBytecode="249" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" abbrev="AT" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.page.HawtTransaction">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="39" end="390" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.page.HawtTransaction" name="write" signature="(ILorg/fusesource/hawtbuf/Buffer;)V" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="286" end="299" startBytecode="0" endBytecode="185" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="159" end="1280" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="880" end="883" startBytecode="0" endBytecode="68" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+    </Method>
+    <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTransaction" start="292" end="292" startBytecode="49" endBytecode="49" sourcefile="HawtTransaction.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTransaction.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.fusesource.hawtdb.internal.page.HawtTxPageFile">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTxPageFile" start="62" end="891" sourcefile="HawtTxPageFile.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTxPageFile.java"/>
+    </Class>
+    <Field classname="org.fusesource.hawtdb.internal.page.HawtTxPageFile" name="MAGIC" signature="[B" isStatic="true">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTxPageFile" sourcefile="HawtTxPageFile.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTxPageFile.java"/>
+    </Field>
+    <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTxPageFile" start="65" end="65" startBytecode="3" endBytecode="3" sourcefile="HawtTxPageFile.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTxPageFile.java"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.fusesource.hawtdb.internal.page.HawtTxPageFile">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTxPageFile" start="62" end="891" sourcefile="HawtTxPageFile.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTxPageFile.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.page.HawtTxPageFile" name="loadObject" signature="(I)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTxPageFile" start="878" end="884" startBytecode="0" endBytecode="26" sourcefile="HawtTxPageFile.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTxPageFile.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.fusesource.hawtdb.internal.page.HawtTxPageFile" start="879" end="879" startBytecode="13" endBytecode="13" sourcefile="HawtTxPageFile.java" sourcepath="org/fusesource/hawtdb/internal/page/HawtTxPageFile.java"/>
+  </BugInstance>
+  <BugInstance type="UG_SYNC_SET_UNSYNC_GET" priority="2" abbrev="UG" category="MT_CORRECTNESS">
+    <Class classname="org.fusesource.hawtdb.internal.page.SimpleAllocator">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.SimpleAllocator" start="35" end="105" sourcefile="SimpleAllocator.java" sourcepath="org/fusesource/hawtdb/internal/page/SimpleAllocator.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.page.SimpleAllocator" name="getFreeRanges" signature="()Lorg/fusesource/hawtdb/internal/util/Ranges;" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.SimpleAllocator" start="100" end="100" startBytecode="0" endBytecode="46" sourcefile="SimpleAllocator.java" sourcepath="org/fusesource/hawtdb/internal/page/SimpleAllocator.java"/>
+    </Method>
+    <Method classname="org.fusesource.hawtdb.internal.page.SimpleAllocator" name="setFreeRanges" signature="(Lorg/fusesource/hawtdb/internal/util/Ranges;)V" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.page.SimpleAllocator" start="88" end="89" startBytecode="0" endBytecode="64" sourcefile="SimpleAllocator.java" sourcepath="org/fusesource/hawtdb/internal/page/SimpleAllocator.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.fusesource.hawtdb.internal.util.Ranges$ValueIterator">
+      <SourceLine classname="org.fusesource.hawtdb.internal.util.Ranges$ValueIterator" start="282" end="325" sourcefile="Ranges.java" sourcepath="org/fusesource/hawtdb/internal/util/Ranges.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.internal.util.Ranges$ValueIterator" name="hasNext" signature="()Z" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.internal.util.Ranges$ValueIterator" start="293" end="308" startBytecode="0" endBytecode="188" sourcefile="Ranges.java" sourcepath="org/fusesource/hawtdb/internal/util/Ranges.java"/>
+    </Method>
+    <Field classname="org.fusesource.hawtdb.internal.util.Ranges$ValueIterator" name="next" signature="Ljava/lang/Integer;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.fusesource.hawtdb.internal.util.Ranges$ValueIterator" sourcefile="Ranges.java" sourcepath="org/fusesource/hawtdb/internal/util/Ranges.java"/>
+    </Field>
+    <SourceLine classname="org.fusesource.hawtdb.internal.util.Ranges$ValueIterator" start="308" end="308" startBytecode="102" endBytecode="102" sourcefile="Ranges.java" sourcepath="org/fusesource/hawtdb/internal/util/Ranges.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="org.fusesource.hawtdb.util.IOHelper">
+      <SourceLine classname="org.fusesource.hawtdb.util.IOHelper" start="33" end="242" sourcefile="IOHelper.java" sourcepath="org/fusesource/hawtdb/util/IOHelper.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.util.IOHelper" name="createIOStrategy" signature="()Lorg/fusesource/hawtdb/util/IOHelper$IOStrategy;" isStatic="true">
+      <SourceLine classname="org.fusesource.hawtdb.util.IOHelper" start="198" end="226" startBytecode="0" endBytecode="6" sourcefile="IOHelper.java" sourcepath="org/fusesource/hawtdb/util/IOHelper.java"/>
+    </Method>
+    <LocalVariable name="os" register="0" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.fusesource.hawtdb.util.IOHelper" start="198" end="198" startBytecode="5" endBytecode="5" sourcefile="IOHelper.java" sourcepath="org/fusesource/hawtdb/util/IOHelper.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="os"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.fusesource.hawtdb.util.IOHelper">
+      <SourceLine classname="org.fusesource.hawtdb.util.IOHelper" start="33" end="242" sourcefile="IOHelper.java" sourcepath="org/fusesource/hawtdb/util/IOHelper.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.util.IOHelper" name="copyFile" signature="(Ljava/io/File;Ljava/io/File;)V" isStatic="true">
+      <SourceLine classname="org.fusesource.hawtdb.util.IOHelper" start="152" end="155" startBytecode="0" endBytecode="107" sourcefile="IOHelper.java" sourcepath="org/fusesource/hawtdb/util/IOHelper.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.fusesource.hawtdb.util.IOHelper" start="152" end="152" startBytecode="5" endBytecode="5" sourcefile="IOHelper.java" sourcepath="org/fusesource/hawtdb/util/IOHelper.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.fusesource.hawtdb.util.IOHelper" start="153" end="153" startBytecode="9" endBytecode="9" sourcefile="IOHelper.java" sourcepath="org/fusesource/hawtdb/util/IOHelper.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="org.fusesource.hawtdb.util.list.LinkedNodeList">
+      <SourceLine classname="org.fusesource.hawtdb.util.list.LinkedNodeList" start="27" end="192" sourcefile="LinkedNodeList.java" sourcepath="org/fusesource/hawtdb/util/list/LinkedNodeList.java"/>
+    </Class>
+    <Method classname="org.fusesource.hawtdb.util.list.LinkedNodeList" name="toArray" signature="([Lorg/fusesource/hawtdb/util/list/LinkedNode;)[Lorg/fusesource/hawtdb/util/list/LinkedNode;" isStatic="false">
+      <SourceLine classname="org.fusesource.hawtdb.util.list.LinkedNodeList" start="164" end="172" startBytecode="0" endBytecode="23" sourcefile="LinkedNodeList.java" sourcepath="org/fusesource/hawtdb/util/list/LinkedNodeList.java"/>
+    </Method>
+    <LocalVariable name="rc" register="3" pc="14" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.fusesource.hawtdb.util.list.LinkedNodeList" start="165" end="165" startBytecode="13" endBytecode="13" sourcefile="LinkedNodeList.java" sourcepath="org/fusesource/hawtdb/util/list/LinkedNodeList.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="rc"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="8">
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.fusesource.hawtbuf.Buffer</MissingClass>
+    <MissingClass>org.fusesource.hawtbuf.DataByteArrayInputStream</MissingClass>
+    <MissingClass>org.fusesource.hawtbuf.DataByteArrayOutputStream</MissingClass>
+    <MissingClass>org.fusesource.hawtbuf.codec.Codec</MissingClass>
+    <MissingClass>org.fusesource.hawtbuf.codec.ObjectCodec</MissingClass>
+    <MissingClass>org.fusesource.hawtbuf.codec.VarIntegerCodec</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 14 Sep 2010 14:18:58 +0300" total_classes="134" referenced_classes="274" total_bugs="23" total_size="5986" num_packages="8" vm_version="20.4-b02-402" cpu_seconds="46.16" clock_seconds="25.86" peak_mbytes="105.28" alloc_mbytes="763.88" gc_seconds="0.83" priority_2="21" priority_1="2">
+    <PackageStats package="org.fusesource.hawtdb.api" total_bugs="0" total_types="37" total_size="671">
+      <ClassStats class="org.fusesource.hawtdb.api.AbstractStreamPagedAccessor" sourceFile="AbstractStreamPagedAccessor.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Allocator" sourceFile="Allocator.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.BTreeIndexFactory" sourceFile="BTreeIndexFactory.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.CodecPagedAccessor" sourceFile="CodecPagedAccessor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.HashIndexFactory" sourceFile="HashIndexFactory.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.IOPagingException" sourceFile="IOPagingException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Index" sourceFile="Index.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.IndexException" sourceFile="IndexException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.IndexFactory" sourceFile="IndexFactory.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.IndexVisitor" sourceFile="IndexVisitor.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.OptimisticUpdateException" sourceFile="OptimisticUpdateException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.OutOfSpaceException" sourceFile="OutOfSpaceException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.PageFile" sourceFile="PageFile.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.PageFileFactory" sourceFile="PageFileFactory.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Paged" sourceFile="Paged.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Paged$SliceType" sourceFile="Paged.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.PagedAccessor" sourceFile="PagedAccessor.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.PagingException" sourceFile="PagingException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicate" sourceFile="Predicate.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates" sourceFile="Predicates.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$AllPredicate" sourceFile="Predicates.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$AndPredicate" sourceFile="Predicates.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$BetweenPredicate" sourceFile="Predicates.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$ComparingPredicate" sourceFile="Predicates.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$GTEPredicate" sourceFile="Predicates.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$GTPredicate" sourceFile="Predicates.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$LTEPredicate" sourceFile="Predicates.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$LTPredicate" sourceFile="Predicates.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$NonePredicate" sourceFile="Predicates.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$OrPredicate" sourceFile="Predicates.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Predicates$PredicateVisitor" sourceFile="Predicates.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Prefixer" sourceFile="Prefixer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.SortedIndex" sourceFile="SortedIndex.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.StringPrefixer" sourceFile="StringPrefixer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.Transaction" sourceFile="Transaction.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.TxPageFile" sourceFile="TxPageFile.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.api.TxPageFileFactory" sourceFile="TxPageFileFactory.java" interface="false" size="78" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fusesource.hawtdb.internal.index" total_bugs="1" total_types="14" total_size="996" priority_1="1">
+      <ClassStats class="org.fusesource.hawtdb.internal.index.BTreeIndex" sourceFile="BTreeIndex.java" interface="false" size="143" bugs="1" priority_1="1"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.BTreeIndex$1" sourceFile="BTreeIndex.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.BTreeIndex$PageOverflowIOException" sourceFile="BTreeIndex.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.BTreeIterator" sourceFile="BTreeIterator.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.BTreeNode" sourceFile="BTreeNode.java" interface="false" size="431" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.BTreeNode$Data" sourceFile="BTreeNode.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.BTreeNode$DataPagedAccessor" sourceFile="BTreeNode.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.BTreePredicateIterator" sourceFile="BTreePredicateIterator.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.BTreePredicateIterator$Data" sourceFile="BTreePredicateIterator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.HashIndex" sourceFile="HashIndex.java" interface="false" size="144" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.HashIndex$1" sourceFile="HashIndex.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.HashIndex$Buckets" sourceFile="HashIndex.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.Logging" sourceFile="Logging.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.index.MapEntry" sourceFile="MapEntry.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fusesource.hawtdb.internal.io" total_bugs="2" total_types="7" total_size="229" priority_2="2">
+      <ClassStats class="org.fusesource.hawtdb.internal.io.MemoryMappedFile" sourceFile="MemoryMappedFile.java" interface="false" size="151" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.io.MemoryMappedFile$1" sourceFile="MemoryMappedFile.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.io.MemoryMappedFile$2" sourceFile="MemoryMappedFile.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.io.MemoryMappedFile$3" sourceFile="MemoryMappedFile.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.io.MemoryMappedFile$ByteBufferReleaser" sourceFile="MemoryMappedFile.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.io.MemoryMappedFile$ChannelTransfer" sourceFile="MemoryMappedFile.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.io.MemoryMappedFileFactory" sourceFile="MemoryMappedFileFactory.java" interface="false" size="33" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.fusesource.hawtdb.internal.journal" total_bugs="8" total_types="21" total_size="1076" priority_2="8">
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.DataFile" sourceFile="DataFile.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.DataFileAccessor" sourceFile="DataFileAccessor.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool" sourceFile="DataFileAccessorPool.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.DataFileAccessorPool$Pool" sourceFile="DataFileAccessorPool.java" interface="false" size="39" bugs="2" priority_2="2"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.DataFileAppender" sourceFile="DataFileAppender.java" interface="false" size="176" bugs="2" priority_2="2"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.DataFileAppender$1" sourceFile="DataFileAppender.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.DataFileAppender$2" sourceFile="DataFileAppender.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.DataFileAppender$WriteBatch" sourceFile="DataFileAppender.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.DataFileAppender$WriteCommand" sourceFile="DataFileAppender.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.Journal" sourceFile="Journal.java" interface="false" size="398" bugs="2" priority_2="2"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.Journal$1" sourceFile="Journal.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.Journal$2" sourceFile="Journal.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.JournalListener" sourceFile="JournalListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.JournalListener$Write" sourceFile="JournalListener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.Location" sourceFile="Location.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.LocationCodec" sourceFile="LocationCodec.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.Logging" sourceFile="Logging.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.ReadOnlyDataFile" sourceFile="ReadOnlyDataFile.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.ReadOnlyJournal" sourceFile="ReadOnlyJournal.java" interface="false" size="51" bugs="1" priority_2="1"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.ReadOnlyJournal$1" sourceFile="ReadOnlyJournal.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.journal.ReplicationTarget" sourceFile="ReplicationTarget.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fusesource.hawtdb.internal.page" total_bugs="8" total_types="23" total_size="1474" priority_2="8">
+      <ClassStats class="org.fusesource.hawtdb.internal.page.Batch" sourceFile="Batch.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.Batch$1" sourceFile="Batch.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.Commit" sourceFile="Commit.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.DeferredUpdate" sourceFile="DeferredUpdate.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.Extent" sourceFile="Extent.java" interface="false" size="160" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.ExtentInputStream" sourceFile="ExtentInputStream.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.ExtentOutputStream" sourceFile="ExtentOutputStream.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtPageFile" sourceFile="HawtPageFile.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtTransaction" sourceFile="HawtTransaction.java" interface="false" size="189" bugs="5" priority_2="5"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtTransaction$1" sourceFile="HawtTransaction.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtTxPageFile" sourceFile="HawtTxPageFile.java" interface="false" size="319" bugs="2" priority_2="2"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtTxPageFile$1" sourceFile="HawtTxPageFile.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtTxPageFile$2" sourceFile="HawtTxPageFile.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtTxPageFile$3" sourceFile="HawtTxPageFile.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtTxPageFile$HOUSE_KEEPING_MUTEX" sourceFile="HawtTxPageFile.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtTxPageFile$Header" sourceFile="HawtTxPageFile.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtTxPageFile$ReadCache" sourceFile="HawtTxPageFile.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.HawtTxPageFile$TRANSACTION_MUTEX" sourceFile="HawtTxPageFile.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.Logging" sourceFile="Logging.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.SimpleAllocator" sourceFile="SimpleAllocator.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.Snapshot" sourceFile="Snapshot.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.SnapshotTracker" sourceFile="SnapshotTracker.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.page.Update" sourceFile="Update.java" interface="false" size="70" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fusesource.hawtdb.internal.util" total_bugs="1" total_types="4" total_size="195" priority_2="1">
+      <ClassStats class="org.fusesource.hawtdb.internal.util.Ranges" sourceFile="Ranges.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.util.Ranges$1" sourceFile="Ranges.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.util.Ranges$Range" sourceFile="Ranges.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.internal.util.Ranges$ValueIterator" sourceFile="Ranges.java" interface="false" size="33" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.fusesource.hawtdb.util" total_bugs="2" total_types="19" total_size="720" priority_2="2">
+      <ClassStats class="org.fusesource.hawtdb.util.Comparators" sourceFile="Comparators.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.Comparators$1" sourceFile="Comparators.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.HexSupport" sourceFile="HexSupport.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.IOHelper" sourceFile="IOHelper.java" interface="false" size="94" bugs="2" priority_2="2"/>
+      <ClassStats class="org.fusesource.hawtdb.util.IOHelper$1" sourceFile="IOHelper.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.IOHelper$IOStrategy" sourceFile="IOHelper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.LRUCache" sourceFile="LRUCache.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.Scheduler" sourceFile="Scheduler.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.SchedulerTimerTask" sourceFile="SchedulerTimerTask.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.StringSupport" sourceFile="StringSupport.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.TreeMap" sourceFile="TreeMap.java" interface="false" size="376" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.TreeMap$1" sourceFile="TreeMap.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.TreeMap$2" sourceFile="TreeMap.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.TreeMap$3" sourceFile="TreeMap.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.TreeMap$AbstractEntryIterator" sourceFile="TreeMap.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.TreeMap$EntryIterator" sourceFile="TreeMap.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.TreeMap$KeyIterator" sourceFile="TreeMap.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.TreeMap$TreeEntry" sourceFile="TreeMap.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.TreeMap$ValueIterator" sourceFile="TreeMap.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fusesource.hawtdb.util.list" total_bugs="1" total_types="9" total_size="625" priority_1="1">
+      <ClassStats class="org.fusesource.hawtdb.util.list.LinkedNode" sourceFile="LinkedNode.java" interface="false" size="155" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.list.LinkedNodeList" sourceFile="LinkedNodeList.java" interface="false" size="103" bugs="1" priority_1="1"/>
+      <ClassStats class="org.fusesource.hawtdb.util.list.LinkedNodeList$1" sourceFile="LinkedNodeList.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.list.Sequence" sourceFile="Sequence.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.list.Sequence$Closure" sourceFile="Sequence.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.list.SequenceSet" sourceFile="SequenceSet.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.list.SequenceSet$1" sourceFile="SequenceSet.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.list.SortedLinkedList" sourceFile="SortedLinkedList.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.fusesource.hawtdb.util.list.SortedLinkedListNode" sourceFile="SortedLinkedListNode.java" interface="false" size="83" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1807" invocations="1042" avgMicrosecondsPerInvocation="1734" maxMicrosecondsPerInvocation="107928" standardDeviationMircosecondsPerInvocation="6430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1726" invocations="1098" avgMicrosecondsPerInvocation="1572" maxMicrosecondsPerInvocation="92084" standardDeviationMircosecondsPerInvocation="6191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1671" invocations="1033" avgMicrosecondsPerInvocation="1617" maxMicrosecondsPerInvocation="92252" standardDeviationMircosecondsPerInvocation="6754"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1562" invocations="1075" avgMicrosecondsPerInvocation="1453" maxMicrosecondsPerInvocation="71179" standardDeviationMircosecondsPerInvocation="5182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1500" invocations="1014" avgMicrosecondsPerInvocation="1479" maxMicrosecondsPerInvocation="118109" standardDeviationMircosecondsPerInvocation="5673"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1143" invocations="274" avgMicrosecondsPerInvocation="4175" maxMicrosecondsPerInvocation="83397" standardDeviationMircosecondsPerInvocation="9472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="884" invocations="811" avgMicrosecondsPerInvocation="1090" maxMicrosecondsPerInvocation="26512" standardDeviationMircosecondsPerInvocation="3143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="864" invocations="752" avgMicrosecondsPerInvocation="1150" maxMicrosecondsPerInvocation="32658" standardDeviationMircosecondsPerInvocation="2986"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="788" invocations="274" avgMicrosecondsPerInvocation="2877" maxMicrosecondsPerInvocation="38176" standardDeviationMircosecondsPerInvocation="5856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="759" invocations="1042" avgMicrosecondsPerInvocation="729" maxMicrosecondsPerInvocation="32856" standardDeviationMircosecondsPerInvocation="2513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="525" invocations="1042" avgMicrosecondsPerInvocation="504" maxMicrosecondsPerInvocation="40335" standardDeviationMircosecondsPerInvocation="2414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="440" invocations="274" avgMicrosecondsPerInvocation="1607" maxMicrosecondsPerInvocation="59841" standardDeviationMircosecondsPerInvocation="4581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="339" invocations="1497" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="9950" standardDeviationMircosecondsPerInvocation="597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="332" invocations="983" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="29030" standardDeviationMircosecondsPerInvocation="1764"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="289" invocations="274" avgMicrosecondsPerInvocation="1058" maxMicrosecondsPerInvocation="33895" standardDeviationMircosecondsPerInvocation="2953"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="257" invocations="15181" avgMicrosecondsPerInvocation="16" maxMicrosecondsPerInvocation="19154" standardDeviationMircosecondsPerInvocation="342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="257" invocations="134" avgMicrosecondsPerInvocation="1919" maxMicrosecondsPerInvocation="64332" standardDeviationMircosecondsPerInvocation="6290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="238" invocations="134" avgMicrosecondsPerInvocation="1779" maxMicrosecondsPerInvocation="23700" standardDeviationMircosecondsPerInvocation="3673"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="227" invocations="134" avgMicrosecondsPerInvocation="1696" maxMicrosecondsPerInvocation="54796" standardDeviationMircosecondsPerInvocation="6363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="226" invocations="1106" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="65376" standardDeviationMircosecondsPerInvocation="2218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="224" invocations="694" avgMicrosecondsPerInvocation="323" maxMicrosecondsPerInvocation="35896" standardDeviationMircosecondsPerInvocation="1997"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="197" invocations="134" avgMicrosecondsPerInvocation="1475" maxMicrosecondsPerInvocation="85810" standardDeviationMircosecondsPerInvocation="7675"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="196" invocations="274" avgMicrosecondsPerInvocation="717" maxMicrosecondsPerInvocation="20395" standardDeviationMircosecondsPerInvocation="2078"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="187" invocations="274" avgMicrosecondsPerInvocation="684" maxMicrosecondsPerInvocation="29645" standardDeviationMircosecondsPerInvocation="2437"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="183" invocations="134" avgMicrosecondsPerInvocation="1369" maxMicrosecondsPerInvocation="25702" standardDeviationMircosecondsPerInvocation="3759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="170" invocations="134" avgMicrosecondsPerInvocation="1274" maxMicrosecondsPerInvocation="24722" standardDeviationMircosecondsPerInvocation="3260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="167" invocations="134" avgMicrosecondsPerInvocation="1252" maxMicrosecondsPerInvocation="44500" standardDeviationMircosecondsPerInvocation="4351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.AtomicityProblem" totalMilliseconds="166" invocations="134" avgMicrosecondsPerInvocation="1244" maxMicrosecondsPerInvocation="62038" standardDeviationMircosecondsPerInvocation="5818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="163" invocations="1014" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="27445" standardDeviationMircosecondsPerInvocation="1089"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="159" invocations="134" avgMicrosecondsPerInvocation="1188" maxMicrosecondsPerInvocation="24531" standardDeviationMircosecondsPerInvocation="3327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="155" invocations="134" avgMicrosecondsPerInvocation="1163" maxMicrosecondsPerInvocation="47942" standardDeviationMircosecondsPerInvocation="5842"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="155" invocations="15471" avgMicrosecondsPerInvocation="10" maxMicrosecondsPerInvocation="11972" standardDeviationMircosecondsPerInvocation="212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="154" invocations="134" avgMicrosecondsPerInvocation="1155" maxMicrosecondsPerInvocation="23487" standardDeviationMircosecondsPerInvocation="2768"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

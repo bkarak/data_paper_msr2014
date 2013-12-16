@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1306818314000" analysisTimestamp="1360914668761" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-snmp/2.7.2/camel-snmp-2.7.2.jar</Jar>
+  </Project>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="org.apache.camel.component.snmp.SnmpTrapConsumer">
+      <SourceLine classname="org.apache.camel.component.snmp.SnmpTrapConsumer" start="38" end="115" sourcefile="SnmpTrapConsumer.java" sourcepath="org/apache/camel/component/snmp/SnmpTrapConsumer.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.snmp.SnmpTrapConsumer" name="processPdu" signature="(Lorg/snmp4j/CommandResponderEvent;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.snmp.SnmpTrapConsumer" start="96" end="103" startBytecode="0" endBytecode="19" sourcefile="SnmpTrapConsumer.java" sourcepath="org/apache/camel/component/snmp/SnmpTrapConsumer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.component.snmp.SnmpTrapConsumer" start="101" end="101" startBytecode="32" endBytecode="32" sourcefile="SnmpTrapConsumer.java" sourcepath="org/apache/camel/component/snmp/SnmpTrapConsumer.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="29">
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.ExchangePattern</MissingClass>
+    <MissingClass>org.apache.camel.Processor</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultComponent</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultConsumer</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultExchange</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultMessage</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultPollingEndpoint</MissingClass>
+    <MissingClass>org.apache.camel.impl.ScheduledPollConsumer</MissingClass>
+    <MissingClass>org.apache.camel.spi.ExceptionHandler</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.snmp4j.CommandResponderEvent</MissingClass>
+    <MissingClass>org.snmp4j.CommunityTarget</MissingClass>
+    <MissingClass>org.snmp4j.PDU</MissingClass>
+    <MissingClass>org.snmp4j.Snmp</MissingClass>
+    <MissingClass>org.snmp4j.TransportMapping</MissingClass>
+    <MissingClass>org.snmp4j.event.ResponseEvent</MissingClass>
+    <MissingClass>org.snmp4j.mp.MPv3</MissingClass>
+    <MissingClass>org.snmp4j.security.SecurityModels</MissingClass>
+    <MissingClass>org.snmp4j.security.SecurityProtocols</MissingClass>
+    <MissingClass>org.snmp4j.security.USM</MissingClass>
+    <MissingClass>org.snmp4j.smi.GenericAddress</MissingClass>
+    <MissingClass>org.snmp4j.smi.OID</MissingClass>
+    <MissingClass>org.snmp4j.smi.OctetString</MissingClass>
+    <MissingClass>org.snmp4j.smi.Variable</MissingClass>
+    <MissingClass>org.snmp4j.smi.VariableBinding</MissingClass>
+    <MissingClass>org.snmp4j.transport.DefaultTcpTransportMapping</MissingClass>
+    <MissingClass>org.snmp4j.transport.DefaultUdpTransportMapping</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 31 May 2011 08:05:14 +0300" total_classes="9" referenced_classes="67" total_bugs="1" total_size="329" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="13.87" clock_seconds="7.18" peak_mbytes="58.16" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="1">
+    <PackageStats package="org.apache.camel.component.snmp" total_bugs="1" total_types="9" total_size="329" priority_2="1">
+      <ClassStats class="org.apache.camel.component.snmp.OIDList" sourceFile="OIDList.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.snmp.OIDListEditor" sourceFile="OIDListEditor.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.snmp.SnmpActionType" sourceFile="SnmpActionType.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.snmp.SnmpComponent" sourceFile="SnmpComponent.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.snmp.SnmpConverters" sourceFile="SnmpConverters.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.snmp.SnmpEndpoint" sourceFile="SnmpEndpoint.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.snmp.SnmpMessage" sourceFile="SnmpMessage.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.snmp.SnmpOIDPoller" sourceFile="SnmpOIDPoller.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.snmp.SnmpTrapConsumer" sourceFile="SnmpTrapConsumer.java" interface="false" size="52" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="864" invocations="441" avgMicrosecondsPerInvocation="1959" maxMicrosecondsPerInvocation="91455" standardDeviationMircosecondsPerInvocation="7835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="591" invocations="67" avgMicrosecondsPerInvocation="8834" maxMicrosecondsPerInvocation="162367" standardDeviationMircosecondsPerInvocation="24958"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="575" invocations="67" avgMicrosecondsPerInvocation="8590" maxMicrosecondsPerInvocation="112283" standardDeviationMircosecondsPerInvocation="19938"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="349" invocations="62" avgMicrosecondsPerInvocation="5643" maxMicrosecondsPerInvocation="159247" standardDeviationMircosecondsPerInvocation="20709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="259" invocations="67" avgMicrosecondsPerInvocation="3873" maxMicrosecondsPerInvocation="59335" standardDeviationMircosecondsPerInvocation="9832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="236" invocations="60" avgMicrosecondsPerInvocation="3940" maxMicrosecondsPerInvocation="50234" standardDeviationMircosecondsPerInvocation="8715"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="202" invocations="63" avgMicrosecondsPerInvocation="3218" maxMicrosecondsPerInvocation="66679" standardDeviationMircosecondsPerInvocation="9024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="178" invocations="67" avgMicrosecondsPerInvocation="2662" maxMicrosecondsPerInvocation="51957" standardDeviationMircosecondsPerInvocation="6935"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="164" invocations="60" avgMicrosecondsPerInvocation="2745" maxMicrosecondsPerInvocation="34257" standardDeviationMircosecondsPerInvocation="5431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="164" invocations="250" avgMicrosecondsPerInvocation="657" maxMicrosecondsPerInvocation="12960" standardDeviationMircosecondsPerInvocation="1088"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="146" invocations="62" avgMicrosecondsPerInvocation="2366" maxMicrosecondsPerInvocation="33604" standardDeviationMircosecondsPerInvocation="4973"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="138" invocations="354" avgMicrosecondsPerInvocation="392" maxMicrosecondsPerInvocation="46907" standardDeviationMircosecondsPerInvocation="2648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="114" invocations="62" avgMicrosecondsPerInvocation="1844" maxMicrosecondsPerInvocation="14575" standardDeviationMircosecondsPerInvocation="3197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="104" invocations="67" avgMicrosecondsPerInvocation="1557" maxMicrosecondsPerInvocation="29933" standardDeviationMircosecondsPerInvocation="4358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="103" invocations="67" avgMicrosecondsPerInvocation="1545" maxMicrosecondsPerInvocation="47525" standardDeviationMircosecondsPerInvocation="6031"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="78" invocations="67" avgMicrosecondsPerInvocation="1165" maxMicrosecondsPerInvocation="16392" standardDeviationMircosecondsPerInvocation="2751"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="75" invocations="9" avgMicrosecondsPerInvocation="8367" maxMicrosecondsPerInvocation="56760" standardDeviationMircosecondsPerInvocation="17326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="70" invocations="40" avgMicrosecondsPerInvocation="1768" maxMicrosecondsPerInvocation="12366" standardDeviationMircosecondsPerInvocation="2632"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

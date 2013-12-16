@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1294959376000" analysisTimestamp="1360931304851" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/sonar/sonar-core-gwt/2.5/sonar-core-gwt-2.5.jar</Jar>
+  </Project>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.sonar.plugins.core.clouds.client.GwtClouds$SizeMetric">
+      <SourceLine classname="org.sonar.plugins.core.clouds.client.GwtClouds$SizeMetric" start="173" end="193" sourcefile="GwtClouds.java" sourcepath="org/sonar/plugins/core/clouds/client/GwtClouds.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.sonar.plugins.core.clouds.client.model.CloudElement">
+      <SourceLine classname="org.sonar.plugins.core.clouds.client.model.CloudElement" start="25" end="50" sourcefile="CloudElement.java" sourcepath="org/sonar/plugins/core/clouds/client/model/CloudElement.java"/>
+    </Class>
+    <Method classname="org.sonar.plugins.core.clouds.client.model.CloudElement" name="compareTo" signature="(Lorg/sonar/plugins/core/clouds/client/model/CloudElement;)I" isStatic="false">
+      <SourceLine classname="org.sonar.plugins.core.clouds.client.model.CloudElement" start="50" end="50" startBytecode="0" endBytecode="69" sourcefile="CloudElement.java" sourcepath="org/sonar/plugins/core/clouds/client/model/CloudElement.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_COMPARISON" priority="2" abbrev="SA" category="CORRECTNESS">
+    <Class classname="org.sonar.plugins.core.clouds.client.widget.ClassCloudsWidget">
+      <SourceLine classname="org.sonar.plugins.core.clouds.client.widget.ClassCloudsWidget" start="44" end="144" sourcefile="ClassCloudsWidget.java" sourcepath="org/sonar/plugins/core/clouds/client/widget/ClassCloudsWidget.java"/>
+    </Class>
+    <Method classname="org.sonar.plugins.core.clouds.client.widget.ClassCloudsWidget" name="generateCloud" signature="(Lorg/sonar/api/web/gwt/client/webservices/WSMetrics$Metric;)V" isStatic="false">
+      <SourceLine classname="org.sonar.plugins.core.clouds.client.widget.ClassCloudsWidget" start="62" end="70" startBytecode="0" endBytecode="30" sourcefile="ClassCloudsWidget.java" sourcepath="org/sonar/plugins/core/clouds/client/widget/ClassCloudsWidget.java"/>
+    </Method>
+    <LocalVariable name="colorMetric" register="1" pc="24" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.sonar.plugins.core.clouds.client.widget.ClassCloudsWidget" start="65" end="65" startBytecode="25" endBytecode="25" sourcefile="ClassCloudsWidget.java" sourcepath="org/sonar/plugins/core/clouds/client/widget/ClassCloudsWidget.java"/>
+  </BugInstance>
+  <BugInstance type="BX_UNBOXING_IMMEDIATELY_REBOXED" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.sonar.plugins.core.hotspots.client.widget.AbstractHotspot">
+      <SourceLine classname="org.sonar.plugins.core.hotspots.client.widget.AbstractHotspot" start="40" end="122" sourcefile="AbstractHotspot.java" sourcepath="org/sonar/plugins/core/hotspots/client/widget/AbstractHotspot.java"/>
+    </Class>
+    <Method classname="org.sonar.plugins.core.hotspots.client.widget.AbstractHotspot" name="renderGraphCell" signature="(Lcom/google/gwt/user/client/ui/Grid;Lorg/sonar/wsclient/services/Measure;Lorg/sonar/wsclient/services/Measure;II)V" isStatic="false">
+      <SourceLine classname="org.sonar.plugins.core.hotspots.client.widget.AbstractHotspot" start="106" end="112" startBytecode="0" endBytecode="272" sourcefile="AbstractHotspot.java" sourcepath="org/sonar/plugins/core/hotspots/client/widget/AbstractHotspot.java"/>
+    </Method>
+    <Method classname="java.lang.Double" name="valueOf" signature="(D)Ljava/lang/Double;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Double" start="492" end="492" startBytecode="0" endBytecode="32" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+    </Method>
+    <SourceLine classname="org.sonar.plugins.core.hotspots.client.widget.AbstractHotspot" start="106" end="106" startBytecode="7" endBytecode="7" sourcefile="AbstractHotspot.java" sourcepath="org/sonar/plugins/core/hotspots/client/widget/AbstractHotspot.java"/>
+    <SourceLine classname="org.sonar.plugins.core.hotspots.client.widget.AbstractHotspot" start="107" end="107" startBytecode="19" endBytecode="19" sourcefile="AbstractHotspot.java" sourcepath="org/sonar/plugins/core/hotspots/client/widget/AbstractHotspot.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="84">
+    <MissingClass>com.google.gwt.core.client.GWT</MissingClass>
+    <MissingClass>com.google.gwt.core.client.JavaScriptException</MissingClass>
+    <MissingClass>com.google.gwt.core.client.JavaScriptObject</MissingClass>
+    <MissingClass>com.google.gwt.dom.client.Element</MissingClass>
+    <MissingClass>com.google.gwt.event.dom.client.ChangeHandler</MissingClass>
+    <MissingClass>com.google.gwt.event.dom.client.ClickHandler</MissingClass>
+    <MissingClass>com.google.gwt.event.logical.shared.SelectionEvent</MissingClass>
+    <MissingClass>com.google.gwt.event.logical.shared.SelectionHandler</MissingClass>
+    <MissingClass>com.google.gwt.gen2.table.override.client.FlexTable</MissingClass>
+    <MissingClass>com.google.gwt.gen2.table.override.client.FlexTable$FlexCellFormatter</MissingClass>
+    <MissingClass>com.google.gwt.gen2.table.override.client.Grid</MissingClass>
+    <MissingClass>com.google.gwt.gen2.table.override.client.HTMLTable$CellFormatter</MissingClass>
+    <MissingClass>com.google.gwt.http.client.Request</MissingClass>
+    <MissingClass>com.google.gwt.http.client.RequestBuilder</MissingClass>
+    <MissingClass>com.google.gwt.http.client.RequestCallback</MissingClass>
+    <MissingClass>com.google.gwt.http.client.Response</MissingClass>
+    <MissingClass>com.google.gwt.http.client.URL</MissingClass>
+    <MissingClass>com.google.gwt.user.client.DOM</MissingClass>
+    <MissingClass>com.google.gwt.user.client.Element</MissingClass>
+    <MissingClass>com.google.gwt.user.client.Window$Location</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.AbstractImagePrototype</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.Anchor</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.CheckBox</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.Composite</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.FlowPanel</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.Grid</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.HTML</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.HTMLPanel</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.HTMLTable$CellFormatter</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.HTMLTable$ColumnFormatter</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.HasAlignment</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.HorizontalPanel</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.Hyperlink</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.Image</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.InlineLabel</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.Label</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.ListBox</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.Panel</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.RootPanel</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.SimplePanel</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.TabPanel</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.VerticalPanel</MissingClass>
+    <MissingClass>com.google.gwt.user.client.ui.Widget</MissingClass>
+    <MissingClass>com.google.gwt.xml.client.Document</MissingClass>
+    <MissingClass>com.google.gwt.xml.client.Element</MissingClass>
+    <MissingClass>com.google.gwt.xml.client.Node</MissingClass>
+    <MissingClass>com.google.gwt.xml.client.NodeList</MissingClass>
+    <MissingClass>com.google.gwt.xml.client.XMLParser</MissingClass>
+    <MissingClass>org.sonar.api.web.GwtPage</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.AbstractPage</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.ResourceDictionary</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.Utils</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.webservices.BaseQueryCallback</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.webservices.Measure</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.webservices.MetricsQuery</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.webservices.Resource</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.webservices.Resources</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.webservices.ResourcesQuery</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.webservices.SequentialQueries</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.webservices.WSMetrics</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.webservices.WSMetrics$Metric</MissingClass>
+    <MissingClass>org.sonar.api.web.gwt.client.widgets.LoadingLabel</MissingClass>
+    <MissingClass>org.sonar.gwt.Configuration</MissingClass>
+    <MissingClass>org.sonar.gwt.JsonUtils</MissingClass>
+    <MissingClass>org.sonar.gwt.Links</MissingClass>
+    <MissingClass>org.sonar.gwt.Utils</MissingClass>
+    <MissingClass>org.sonar.gwt.ui.DefaultSourcePanel</MissingClass>
+    <MissingClass>org.sonar.gwt.ui.ExpandCollapseLink</MissingClass>
+    <MissingClass>org.sonar.gwt.ui.Icons</MissingClass>
+    <MissingClass>org.sonar.gwt.ui.Loading</MissingClass>
+    <MissingClass>org.sonar.gwt.ui.Page</MissingClass>
+    <MissingClass>org.sonar.gwt.ui.SourcePanel</MissingClass>
+    <MissingClass>org.sonar.gwt.ui.SourcePanel$Row</MissingClass>
+    <MissingClass>org.sonar.gwt.ui.ViewerHeader</MissingClass>
+    <MissingClass>org.sonar.wsclient.gwt.AbstractCallback</MissingClass>
+    <MissingClass>org.sonar.wsclient.gwt.AbstractListCallback</MissingClass>
+    <MissingClass>org.sonar.wsclient.gwt.Callback</MissingClass>
+    <MissingClass>org.sonar.wsclient.gwt.Sonar</MissingClass>
+    <MissingClass>org.sonar.wsclient.services.Measure</MissingClass>
+    <MissingClass>org.sonar.wsclient.services.Model</MissingClass>
+    <MissingClass>org.sonar.wsclient.services.Resource</MissingClass>
+    <MissingClass>org.sonar.wsclient.services.ResourceQuery</MissingClass>
+    <MissingClass>org.sonar.wsclient.services.Violation</MissingClass>
+    <MissingClass>org.sonar.wsclient.services.ViolationQuery</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 14 Jan 2011 00:56:16 +0200" total_classes="77" referenced_classes="101" total_bugs="4" total_size="1779" num_packages="19" vm_version="20.4-b02-402" cpu_seconds="23.94" clock_seconds="13.41" peak_mbytes="75.11" alloc_mbytes="763.88" gc_seconds="0.30" priority_2="4">
+    <PackageStats package="org.sonar.plugins.core.clouds" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.sonar.plugins.core.clouds.Clouds" sourceFile="Clouds.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.clouds.client" total_bugs="1" total_types="8" total_size="204" priority_2="1">
+      <ClassStats class="org.sonar.plugins.core.clouds.client.Calculator" sourceFile="Calculator.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.GwtClouds" sourceFile="GwtClouds.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.GwtClouds$1" sourceFile="GwtClouds.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.GwtClouds$2" sourceFile="GwtClouds.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.GwtClouds$3" sourceFile="GwtClouds.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.GwtClouds$4" sourceFile="GwtClouds.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.GwtClouds$5" sourceFile="GwtClouds.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.GwtClouds$SizeMetric" sourceFile="GwtClouds.java" interface="false" size="18" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.clouds.client.model" total_bugs="1" total_types="2" total_size="38" priority_2="1">
+      <ClassStats class="org.sonar.plugins.core.clouds.client.model.CloudElement" sourceFile="CloudElement.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.model.Color" sourceFile="Color.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.clouds.client.widget" total_bugs="1" total_types="4" total_size="132" priority_2="1">
+      <ClassStats class="org.sonar.plugins.core.clouds.client.widget.ClassCloudsWidget" sourceFile="ClassCloudsWidget.java" interface="false" size="76" bugs="1" priority_2="1"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.widget.ClassCloudsWidget$1" sourceFile="ClassCloudsWidget.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.widget.TabWidget" sourceFile="TabWidget.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.clouds.client.widget.TabWidget$1" sourceFile="TabWidget.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.coverageviewer" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.sonar.plugins.core.coverageviewer.CoverageViewerDefinition" sourceFile="CoverageViewerDefinition.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.coverageviewer.client" total_bugs="0" total_types="4" total_size="96">
+      <ClassStats class="org.sonar.plugins.core.coverageviewer.client.CoveragePanel" sourceFile="CoveragePanel.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.coverageviewer.client.CoveragePanel$1" sourceFile="CoveragePanel.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.coverageviewer.client.CoverageViewer" sourceFile="CoverageViewer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.coverageviewer.client.CoverageViewer$CoverageHeader" sourceFile="CoverageViewer.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.defaultsourceviewer" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.sonar.plugins.core.defaultsourceviewer.DefaultSourceViewer" sourceFile="DefaultSourceViewer.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.defaultsourceviewer.client" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="org.sonar.plugins.core.defaultsourceviewer.client.GwtDefaultSourceViewer" sourceFile="GwtDefaultSourceViewer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.defaultsourceviewer.client.GwtDefaultSourceViewer$SimpleHeader" sourceFile="GwtDefaultSourceViewer.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.duplicationsviewer" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.sonar.plugins.core.duplicationsviewer.DuplicationsViewerDefinition" sourceFile="DuplicationsViewerDefinition.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.duplicationsviewer.client" total_bugs="0" total_types="4" total_size="130">
+      <ClassStats class="org.sonar.plugins.core.duplicationsviewer.client.DuplicationsPanel" sourceFile="DuplicationsPanel.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.duplicationsviewer.client.DuplicationsPanel$DuplicationCallback" sourceFile="DuplicationsPanel.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.duplicationsviewer.client.DuplicationsViewer" sourceFile="DuplicationsViewer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.duplicationsviewer.client.DuplicationsViewer$DuplicationsHeader" sourceFile="DuplicationsViewer.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.hotspots" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.sonar.plugins.core.hotspots.Hotspots" sourceFile="Hotspots.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.hotspots.client" total_bugs="0" total_types="2" total_size="43">
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.GwtHotspots" sourceFile="GwtHotspots.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.I18nConstants" sourceFile="I18nConstants.java" interface="true" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.hotspots.client.widget" total_bugs="1" total_types="18" total_size="387" priority_2="1">
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.AbstractHotspot" sourceFile="AbstractHotspot.java" interface="false" size="66" bugs="1" priority_2="1"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.AbstractHotspot$1" sourceFile="AbstractHotspot.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MetricHotspot" sourceFile="MetricHotspot.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MetricHotspot$1" sourceFile="MetricHotspot.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MetricHotspot$2" sourceFile="MetricHotspot.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MetricHotspot$HotspotMeasure" sourceFile="MetricHotspot.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostBadlyDesignedFiles" sourceFile="MostBadlyDesignedFiles.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostBadlyDesignedFiles$1" sourceFile="MostBadlyDesignedFiles.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostBadlyDesignedFiles$2" sourceFile="MostBadlyDesignedFiles.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostBadlyDesignedFiles$3" sourceFile="MostBadlyDesignedFiles.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostViolatedResources" sourceFile="MostViolatedResources.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostViolatedResources$1" sourceFile="MostViolatedResources.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostViolatedResources$2" sourceFile="MostViolatedResources.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostViolatedRules" sourceFile="MostViolatedRules.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostViolatedRules$1" sourceFile="MostViolatedRules.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostViolatedRules$2" sourceFile="MostViolatedRules.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostViolatedRules$3" sourceFile="MostViolatedRules.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.hotspots.client.widget.MostViolatedRules$4" sourceFile="MostViolatedRules.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.testdetailsviewer" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.sonar.plugins.core.testdetailsviewer.TestsViewerDefinition" sourceFile="TestsViewerDefinition.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.testdetailsviewer.client" total_bugs="0" total_types="4" total_size="136">
+      <ClassStats class="org.sonar.plugins.core.testdetailsviewer.client.TestsPanel" sourceFile="TestsPanel.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.testdetailsviewer.client.TestsPanel$TestDetailsMeasureHandler" sourceFile="TestsPanel.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.testdetailsviewer.client.TestsViewer" sourceFile="TestsViewer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.testdetailsviewer.client.TestsViewer$UnitTestsHeader" sourceFile="TestsViewer.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.ui.pageselector" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.GwtPageSelector" sourceFile="GwtPageSelector.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.ui.pageselector.client" total_bugs="0" total_types="11" total_size="225">
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.I18nConstants" sourceFile="I18nConstants.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.PageDef" sourceFile="PageDef.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.PagePanel" sourceFile="PagePanel.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.PagePanel$1" sourceFile="PagePanel.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.PageSelector" sourceFile="PageSelector.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.PageSelector$1" sourceFile="PageSelector.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.PageSelector$2" sourceFile="PageSelector.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.PageSelector$PageDefs" sourceFile="PageSelector.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.PageSelector$Title" sourceFile="PageSelector.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.PageSelector$Title$1" sourceFile="PageSelector.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.ui.pageselector.client.StringArray" sourceFile="PageDef.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.violationsviewer" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.ViolationsViewerDefinition" sourceFile="ViolationsViewerDefinition.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sonar.plugins.core.violationsviewer.client" total_bugs="0" total_types="10" total_size="309">
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.client.I18nConstants" sourceFile="I18nConstants.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.client.ViolationsPanel" sourceFile="ViolationsPanel.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.client.ViolationsPanel$1" sourceFile="ViolationsPanel.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.client.ViolationsPanel$ViolationRow" sourceFile="ViolationsPanel.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.client.ViolationsViewer" sourceFile="ViolationsViewer.java" interface="false" size="146" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.client.ViolationsViewer$1" sourceFile="ViolationsViewer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.client.ViolationsViewer$2" sourceFile="ViolationsViewer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.client.ViolationsViewer$3" sourceFile="ViolationsViewer.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.client.ViolationsViewer$4" sourceFile="ViolationsViewer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.sonar.plugins.core.violationsviewer.client.ViolationsViewer$5" sourceFile="ViolationsViewer.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1003" invocations="305" avgMicrosecondsPerInvocation="3290" maxMicrosecondsPerInvocation="48710" standardDeviationMircosecondsPerInvocation="7085"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="697" invocations="317" avgMicrosecondsPerInvocation="2199" maxMicrosecondsPerInvocation="32616" standardDeviationMircosecondsPerInvocation="4381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="685" invocations="317" avgMicrosecondsPerInvocation="2161" maxMicrosecondsPerInvocation="43760" standardDeviationMircosecondsPerInvocation="4940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="656" invocations="322" avgMicrosecondsPerInvocation="2039" maxMicrosecondsPerInvocation="38882" standardDeviationMircosecondsPerInvocation="5218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="621" invocations="566" avgMicrosecondsPerInvocation="1098" maxMicrosecondsPerInvocation="46379" standardDeviationMircosecondsPerInvocation="3933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="565" invocations="317" avgMicrosecondsPerInvocation="1782" maxMicrosecondsPerInvocation="36549" standardDeviationMircosecondsPerInvocation="4515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="421" invocations="317" avgMicrosecondsPerInvocation="1329" maxMicrosecondsPerInvocation="32637" standardDeviationMircosecondsPerInvocation="2908"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="373" invocations="101" avgMicrosecondsPerInvocation="3694" maxMicrosecondsPerInvocation="38760" standardDeviationMircosecondsPerInvocation="7451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="368" invocations="101" avgMicrosecondsPerInvocation="3643" maxMicrosecondsPerInvocation="50087" standardDeviationMircosecondsPerInvocation="8322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="351" invocations="259" avgMicrosecondsPerInvocation="1356" maxMicrosecondsPerInvocation="41746" standardDeviationMircosecondsPerInvocation="3809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="239" invocations="503" avgMicrosecondsPerInvocation="476" maxMicrosecondsPerInvocation="60902" standardDeviationMircosecondsPerInvocation="2837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="226" invocations="101" avgMicrosecondsPerInvocation="2241" maxMicrosecondsPerInvocation="46010" standardDeviationMircosecondsPerInvocation="6016"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="225" invocations="317" avgMicrosecondsPerInvocation="710" maxMicrosecondsPerInvocation="30271" standardDeviationMircosecondsPerInvocation="2382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="194" invocations="77" avgMicrosecondsPerInvocation="2528" maxMicrosecondsPerInvocation="30014" standardDeviationMircosecondsPerInvocation="5568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="173" invocations="77" avgMicrosecondsPerInvocation="2250" maxMicrosecondsPerInvocation="33993" standardDeviationMircosecondsPerInvocation="5102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="133" invocations="305" avgMicrosecondsPerInvocation="439" maxMicrosecondsPerInvocation="38647" standardDeviationMircosecondsPerInvocation="2433"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="125" invocations="415" avgMicrosecondsPerInvocation="303" maxMicrosecondsPerInvocation="17243" standardDeviationMircosecondsPerInvocation="1316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="120" invocations="101" avgMicrosecondsPerInvocation="1190" maxMicrosecondsPerInvocation="16121" standardDeviationMircosecondsPerInvocation="2480"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="117" invocations="77" avgMicrosecondsPerInvocation="1521" maxMicrosecondsPerInvocation="35194" standardDeviationMircosecondsPerInvocation="4452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="115" invocations="77" avgMicrosecondsPerInvocation="1506" maxMicrosecondsPerInvocation="16677" standardDeviationMircosecondsPerInvocation="2850"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="114" invocations="268" avgMicrosecondsPerInvocation="428" maxMicrosecondsPerInvocation="11170" standardDeviationMircosecondsPerInvocation="1210"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="106" invocations="8826" avgMicrosecondsPerInvocation="12" maxMicrosecondsPerInvocation="22994" standardDeviationMircosecondsPerInvocation="253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="103" invocations="101" avgMicrosecondsPerInvocation="1023" maxMicrosecondsPerInvocation="32651" standardDeviationMircosecondsPerInvocation="3520"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="101" invocations="101" avgMicrosecondsPerInvocation="1001" maxMicrosecondsPerInvocation="24054" standardDeviationMircosecondsPerInvocation="3008"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="99" invocations="77" avgMicrosecondsPerInvocation="1291" maxMicrosecondsPerInvocation="13530" standardDeviationMircosecondsPerInvocation="2551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="93" invocations="356" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="53303" standardDeviationMircosecondsPerInvocation="2817"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="90" invocations="77" avgMicrosecondsPerInvocation="1181" maxMicrosecondsPerInvocation="33157" standardDeviationMircosecondsPerInvocation="4553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="88" invocations="203" avgMicrosecondsPerInvocation="438" maxMicrosecondsPerInvocation="46287" standardDeviationMircosecondsPerInvocation="3262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="83" invocations="77" avgMicrosecondsPerInvocation="1082" maxMicrosecondsPerInvocation="19040" standardDeviationMircosecondsPerInvocation="2790"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="79" invocations="3957" avgMicrosecondsPerInvocation="20" maxMicrosecondsPerInvocation="20640" standardDeviationMircosecondsPerInvocation="359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="77" invocations="77" avgMicrosecondsPerInvocation="1008" maxMicrosecondsPerInvocation="11026" standardDeviationMircosecondsPerInvocation="1866"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

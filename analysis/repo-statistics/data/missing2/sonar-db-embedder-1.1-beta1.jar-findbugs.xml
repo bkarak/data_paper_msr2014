@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1201113560000" analysisTimestamp="1360901202057" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/sonar/sonar-db-embedder/1.1-beta1/sonar-db-embedder-1.1-beta1.jar</Jar>
+  </Project>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="ch.hortis.sonar.db.DatabaseEmbedder">
+      <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" start="32" end="129" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java"/>
+    </Class>
+    <Method classname="ch.hortis.sonar.db.DatabaseEmbedder" name="start" signature="()V" isStatic="false">
+      <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" start="55" end="74" startBytecode="0" endBytecode="348" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java"/>
+    </Method>
+    <Field classname="ch.hortis.sonar.db.DatabaseEmbedder" name="dbProps" signature="Ljava/util/Properties;" isStatic="false" role="FIELD_CONTAINS_VALUE">
+      <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java"/>
+    </Field>
+    <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" start="66" end="66" startBytecode="152" endBytecode="152" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" start="62" end="62" startBytecode="93" endBytecode="93" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="ch.hortis.sonar.db.DatabaseEmbedder">
+      <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" start="32" end="129" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java"/>
+    </Class>
+    <Method classname="ch.hortis.sonar.db.DatabaseEmbedder" name="start" signature="()V" isStatic="false">
+      <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" start="55" end="74" startBytecode="0" endBytecode="97" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/OutputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Type>
+    <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" start="64" end="64" startBytecode="133" endBytecode="133" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="ch.hortis.sonar.db.DatabaseEmbedder">
+      <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" start="32" end="129" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java"/>
+    </Class>
+    <Method classname="ch.hortis.sonar.db.DatabaseEmbedder" name="start" signature="()V" isStatic="false">
+      <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" start="55" end="74" startBytecode="0" endBytecode="348" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="ch.hortis.sonar.db.DatabaseEmbedder" start="59" end="59" startBytecode="72" endBytecode="72" sourcefile="DatabaseEmbedder.java" sourcepath="ch/hortis/sonar/db/DatabaseEmbedder.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="1">
+    <MissingClass>org.apache.derby.drda.NetworkServerControl</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 23 Jan 2008 20:39:20 +0200" total_classes="1" referenced_classes="19" total_bugs="3" total_size="77" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="8.85" clock_seconds="4.62" peak_mbytes="52.15" alloc_mbytes="763.88" gc_seconds="0.08" priority_2="3">
+    <PackageStats package="ch.hortis.sonar.db" total_bugs="3" total_types="1" total_size="77" priority_2="3">
+      <ClassStats class="ch.hortis.sonar.db.DatabaseEmbedder" sourceFile="DatabaseEmbedder.java" interface="false" size="77" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="738" invocations="371" avgMicrosecondsPerInvocation="1990" maxMicrosecondsPerInvocation="167609" standardDeviationMircosecondsPerInvocation="11408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="292" invocations="19" avgMicrosecondsPerInvocation="15400" maxMicrosecondsPerInvocation="61323" standardDeviationMircosecondsPerInvocation="16408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="279" invocations="19" avgMicrosecondsPerInvocation="14693" maxMicrosecondsPerInvocation="44760" standardDeviationMircosecondsPerInvocation="14907"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CrossSiteScripting" totalMilliseconds="219" invocations="1" avgMicrosecondsPerInvocation="219918" maxMicrosecondsPerInvocation="219918" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="175" invocations="19" avgMicrosecondsPerInvocation="9223" maxMicrosecondsPerInvocation="34439" standardDeviationMircosecondsPerInvocation="9253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="122" invocations="330" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="14410" standardDeviationMircosecondsPerInvocation="1014"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="111" invocations="83" avgMicrosecondsPerInvocation="1343" maxMicrosecondsPerInvocation="12134" standardDeviationMircosecondsPerInvocation="1731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="109" invocations="11" avgMicrosecondsPerInvocation="9994" maxMicrosecondsPerInvocation="106989" standardDeviationMircosecondsPerInvocation="30674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="105" invocations="19" avgMicrosecondsPerInvocation="5536" maxMicrosecondsPerInvocation="21866" standardDeviationMircosecondsPerInvocation="7001"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="85" invocations="11" avgMicrosecondsPerInvocation="7816" maxMicrosecondsPerInvocation="58699" standardDeviationMircosecondsPerInvocation="16508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="70" invocations="19" avgMicrosecondsPerInvocation="3689" maxMicrosecondsPerInvocation="11065" standardDeviationMircosecondsPerInvocation="3188"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="69" invocations="19" avgMicrosecondsPerInvocation="3655" maxMicrosecondsPerInvocation="20653" standardDeviationMircosecondsPerInvocation="4638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="55" invocations="11" avgMicrosecondsPerInvocation="5059" maxMicrosecondsPerInvocation="27213" standardDeviationMircosecondsPerInvocation="8302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="48" invocations="25" avgMicrosecondsPerInvocation="1920" maxMicrosecondsPerInvocation="16638" standardDeviationMircosecondsPerInvocation="3334"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

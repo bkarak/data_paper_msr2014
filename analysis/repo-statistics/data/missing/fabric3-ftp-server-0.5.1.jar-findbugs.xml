@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1216331989000" analysisTimestamp="1360502166803" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/fabric3/fabric3-ftp-server/0.5.1/fabric3-ftp-server-0.5.1.jar</Jar>
+  </Project>
+  <BugInstance type="BIT_IOR_OF_SIGNED_BYTE" priority="2" abbrev="BIT" category="CORRECTNESS">
+    <Class classname="org.apache.mina.common.AbstractIoBuffer">
+      <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="58" end="2054" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    </Class>
+    <Method classname="org.apache.mina.common.AbstractIoBuffer" name="fill" signature="(BI)Lorg/apache/mina/common/IoBuffer;" isStatic="false">
+      <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1703" end="1738" startBytecode="0" endBytecode="386" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1708" end="1708" startBytecode="26" endBytecode="26" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1722" end="1722" startBytecode="100" endBytecode="100" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1730" end="1730" startBytecode="140" endBytecode="140" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.mina.common.AbstractIoBuffer">
+      <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="58" end="2054" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    </Class>
+    <Method classname="org.apache.mina.common.AbstractIoBuffer" name="getObject" signature="(Ljava/lang/ClassLoader;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1549" end="1598" startBytecode="0" endBytecode="65" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="26" end="346" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Type>
+    <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1562" end="1562" startBytecode="69" endBytecode="69" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.apache.mina.common.AbstractIoBuffer">
+      <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="58" end="2054" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    </Class>
+    <Method classname="org.apache.mina.common.AbstractIoBuffer" name="putObject" signature="(Ljava/lang/Object;)Lorg/apache/mina/common/IoBuffer;" isStatic="false">
+      <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1604" end="1632" startBytecode="0" endBytecode="46" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/OutputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Type>
+    <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1607" end="1607" startBytecode="11" endBytecode="11" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.mina.common.AbstractIoBuffer">
+      <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="58" end="2054" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    </Class>
+    <Method classname="org.apache.mina.common.AbstractIoBuffer" name="getPrefixedString" signature="(ILjava/nio/charset/CharsetDecoder;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1353" end="1420" startBytecode="0" endBytecode="588" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1359" end="1367" startBytecode="19" endBytecode="68" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.mina.common.AbstractIoBuffer">
+      <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="58" end="2054" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    </Class>
+    <Method classname="org.apache.mina.common.AbstractIoBuffer" name="putPrefixedString" signature="(Ljava/lang/CharSequence;IIBLjava/nio/charset/CharsetEncoder;)Lorg/apache/mina/common/IoBuffer;" isStatic="false">
+      <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1445" end="1539" startBytecode="0" endBytecode="870" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1464" end="1472" startBytecode="112" endBytecode="167" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java"/>
+    <SourceLine classname="org.apache.mina.common.AbstractIoBuffer" start="1528" end="1536" startBytecode="421" endBytecode="492" sourcefile="AbstractIoBuffer.java" sourcepath="org/apache/mina/common/AbstractIoBuffer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE_BOOLEAN" priority="2" abbrev="RC" category="BAD_PRACTICE">
+    <Class classname="org.apache.mina.common.AbstractIoService$ServiceOperationFuture">
+      <SourceLine classname="org.apache.mina.common.AbstractIoService$ServiceOperationFuture" start="765" end="789" sourcefile="AbstractIoService.java" sourcepath="org/apache/mina/common/AbstractIoService.java"/>
+    </Class>
+    <Method classname="org.apache.mina.common.AbstractIoService$ServiceOperationFuture" name="isDone" signature="()Z" isStatic="false">
+      <SourceLine classname="org.apache.mina.common.AbstractIoService$ServiceOperationFuture" start="769" end="769" startBytecode="0" endBytecode="7" sourcefile="AbstractIoService.java" sourcepath="org/apache/mina/common/AbstractIoService.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/Boolean;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Boolean" start="26" end="245" sourcefile="Boolean.java" sourcepath="java/lang/Boolean.java"/>
+    </Type>
+    <Field classname="java.lang.Boolean" name="TRUE" signature="Ljava/lang/Boolean;" isStatic="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="java.lang.Boolean" sourcefile="Boolean.java" sourcepath="java/lang/Boolean.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.common.AbstractIoService$ServiceOperationFuture" start="769" end="769" startBytecode="7" endBytecode="7" sourcefile="AbstractIoService.java" sourcepath="org/apache/mina/common/AbstractIoService.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.mina.common.DefaultIoFilterChain$HeadFilter">
+      <SourceLine classname="org.apache.mina.common.DefaultIoFilterChain$HeadFilter" start="576" end="662" sourcefile="DefaultIoFilterChain.java" sourcepath="org/apache/mina/common/DefaultIoFilterChain.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.mina.common.ExpiringSessionRecycler$DefaultExpirationListener">
+      <SourceLine classname="org.apache.mina.common.ExpiringSessionRecycler$DefaultExpirationListener" start="109" end="113" sourcefile="ExpiringSessionRecycler.java" sourcepath="org/apache/mina/common/ExpiringSessionRecycler.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="1" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="org.apache.mina.common.IoServiceListenerSupport">
+      <SourceLine classname="org.apache.mina.common.IoServiceListenerSupport" start="46" end="253" sourcefile="IoServiceListenerSupport.java" sourcepath="org/apache/mina/common/IoServiceListenerSupport.java"/>
+    </Class>
+    <Method classname="org.apache.mina.common.IoServiceListenerSupport" name="fireSessionCreated" signature="(Lorg/apache/mina/common/IoSession;)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.common.IoServiceListenerSupport" start="164" end="195" startBytecode="0" endBytecode="340" sourcefile="IoServiceListenerSupport.java" sourcepath="org/apache/mina/common/IoServiceListenerSupport.java"/>
+    </Method>
+    <Field classname="org.apache.mina.common.IoServiceListenerSupport" name="cumulativeManagedSessionCount" signature="J" isStatic="false">
+      <SourceLine classname="org.apache.mina.common.IoServiceListenerSupport" sourcefile="IoServiceListenerSupport.java" sourcepath="org/apache/mina/common/IoServiceListenerSupport.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.common.IoServiceListenerSupport" start="189" end="189" startBytecode="117" endBytecode="117" sourcefile="IoServiceListenerSupport.java" sourcepath="org/apache/mina/common/IoServiceListenerSupport.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mina.filter.codec.demux.MessageDecoderResult">
+      <SourceLine classname="org.apache.mina.filter.codec.demux.MessageDecoderResult" start="40" end="66" sourcefile="MessageDecoderResult.java" sourcepath="org/apache/mina/filter/codec/demux/MessageDecoderResult.java"/>
+    </Class>
+    <Field classname="org.apache.mina.filter.codec.demux.MessageDecoderResult" name="NEED_DATA" signature="Lorg/apache/mina/filter/codec/demux/MessageDecoderResult;" isStatic="true">
+      <SourceLine classname="org.apache.mina.filter.codec.demux.MessageDecoderResult" sourcefile="MessageDecoderResult.java" sourcepath="org/apache/mina/filter/codec/demux/MessageDecoderResult.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.filter.codec.demux.MessageDecoder" start="52" end="52" startBytecode="6" endBytecode="6" sourcefile="MessageDecoder.java" sourcepath="org/apache/mina/filter/codec/demux/MessageDecoder.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mina.filter.codec.demux.MessageDecoderResult">
+      <SourceLine classname="org.apache.mina.filter.codec.demux.MessageDecoderResult" start="40" end="66" sourcefile="MessageDecoderResult.java" sourcepath="org/apache/mina/filter/codec/demux/MessageDecoderResult.java"/>
+    </Class>
+    <Field classname="org.apache.mina.filter.codec.demux.MessageDecoderResult" name="NOT_OK" signature="Lorg/apache/mina/filter/codec/demux/MessageDecoderResult;" isStatic="true">
+      <SourceLine classname="org.apache.mina.filter.codec.demux.MessageDecoderResult" sourcefile="MessageDecoderResult.java" sourcepath="org/apache/mina/filter/codec/demux/MessageDecoderResult.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.filter.codec.demux.MessageDecoder" start="59" end="59" startBytecode="12" endBytecode="12" sourcefile="MessageDecoder.java" sourcepath="org/apache/mina/filter/codec/demux/MessageDecoder.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mina.filter.codec.demux.MessageDecoderResult">
+      <SourceLine classname="org.apache.mina.filter.codec.demux.MessageDecoderResult" start="40" end="66" sourcefile="MessageDecoderResult.java" sourcepath="org/apache/mina/filter/codec/demux/MessageDecoderResult.java"/>
+    </Class>
+    <Field classname="org.apache.mina.filter.codec.demux.MessageDecoderResult" name="OK" signature="Lorg/apache/mina/filter/codec/demux/MessageDecoderResult;" isStatic="true">
+      <SourceLine classname="org.apache.mina.filter.codec.demux.MessageDecoderResult" sourcefile="MessageDecoderResult.java" sourcepath="org/apache/mina/filter/codec/demux/MessageDecoderResult.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.filter.codec.demux.MessageDecoder" start="45" end="45" startBytecode="0" endBytecode="0" sourcefile="MessageDecoder.java" sourcepath="org/apache/mina/filter/codec/demux/MessageDecoder.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mina.filter.codec.textline.LineDelimiter">
+      <SourceLine classname="org.apache.mina.filter.codec.textline.LineDelimiter" start="39" end="120" sourcefile="LineDelimiter.java" sourcepath="org/apache/mina/filter/codec/textline/LineDelimiter.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.codec.textline.LineDelimiter" name="&lt;clinit&gt;" signature="()V" isStatic="true">
+      <SourceLine classname="org.apache.mina.filter.codec.textline.LineDelimiter" start="39" end="72" startBytecode="0" endBytecode="186" sourcefile="LineDelimiter.java" sourcepath="org/apache/mina/filter/codec/textline/LineDelimiter.java"/>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="93" end="94" startBytecode="0" endBytecode="34" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.codec.textline.LineDelimiter" start="40" end="40" startBytecode="13" endBytecode="13" sourcefile="LineDelimiter.java" sourcepath="org/apache/mina/filter/codec/textline/LineDelimiter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.mina.filter.codec.textline.LineDelimiter">
+      <SourceLine classname="org.apache.mina.filter.codec.textline.LineDelimiter" start="39" end="120" sourcefile="LineDelimiter.java" sourcepath="org/apache/mina/filter/codec/textline/LineDelimiter.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.codec.textline.LineDelimiter" name="&lt;clinit&gt;" signature="()V" isStatic="true">
+      <SourceLine classname="org.apache.mina.filter.codec.textline.LineDelimiter" start="39" end="72" startBytecode="0" endBytecode="186" sourcefile="LineDelimiter.java" sourcepath="org/apache/mina/filter/codec/textline/LineDelimiter.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.codec.textline.LineDelimiter" start="42" end="42" startBytecode="33" endBytecode="33" sourcefile="LineDelimiter.java" sourcepath="org/apache/mina/filter/codec/textline/LineDelimiter.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor">
+      <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" start="52" end="455" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" name="execute" signature="(Ljava/lang/Runnable;)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" start="277" end="312" startBytecode="0" endBytecode="408" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+    </Method>
+    <Method classname="java.util.concurrent.BlockingQueue" name="offer" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.BlockingQueue" sourcefile="BlockingQueue.java" sourcepath="java/util/concurrent/BlockingQueue.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" start="304" end="304" startBytecode="128" endBytecode="128" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor">
+      <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" start="52" end="455" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" name="shutdown" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" start="236" end="247" startBytecode="0" endBytecode="163" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+    </Method>
+    <Method classname="java.util.concurrent.BlockingQueue" name="offer" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.BlockingQueue" sourcefile="BlockingQueue.java" sourcepath="java/util/concurrent/BlockingQueue.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" start="244" end="244" startBytecode="41" endBytecode="41" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor">
+      <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" start="52" end="455" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" name="shutdownNow" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" start="251" end="272" startBytecode="0" endBytecode="350" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+    </Method>
+    <Method classname="java.util.concurrent.BlockingQueue" name="offer" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.BlockingQueue" sourcefile="BlockingQueue.java" sourcepath="java/util/concurrent/BlockingQueue.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" start="257" end="257" startBytecode="43" endBytecode="43" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="1" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker">
+      <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker" start="463" end="564" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker" name="runTask" signature="(Ljava/lang/Runnable;)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker" start="552" end="564" startBytecode="0" endBytecode="184" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+    </Method>
+    <Field classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker" name="completedTaskCount" signature="J" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker" start="558" end="558" startBytecode="38" endBytecode="38" sourcefile="OrderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/OrderedThreadPoolExecutor.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor">
+      <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" start="54" end="403" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" name="execute" signature="(Ljava/lang/Runnable;)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" start="272" end="289" startBytecode="0" endBytecode="180" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+    </Method>
+    <Method classname="java.util.concurrent.BlockingQueue" name="offer" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.BlockingQueue" sourcefile="BlockingQueue.java" sourcepath="java/util/concurrent/BlockingQueue.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" start="281" end="281" startBytecode="43" endBytecode="43" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor">
+      <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" start="54" end="403" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" name="shutdown" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" start="237" end="248" startBytecode="0" endBytecode="163" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+    </Method>
+    <Method classname="java.util.concurrent.BlockingQueue" name="offer" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.BlockingQueue" sourcefile="BlockingQueue.java" sourcepath="java/util/concurrent/BlockingQueue.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" start="245" end="245" startBytecode="41" endBytecode="41" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor">
+      <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" start="54" end="403" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" name="shutdownNow" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" start="252" end="267" startBytecode="0" endBytecode="197" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+    </Method>
+    <Method classname="java.util.concurrent.BlockingQueue" name="offer" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.BlockingQueue" sourcefile="BlockingQueue.java" sourcepath="java/util/concurrent/BlockingQueue.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" start="258" end="258" startBytecode="43" endBytecode="43" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="1" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker">
+      <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker" start="405" end="489" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker" name="runTask" signature="(Ljava/lang/Runnable;)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker" start="477" end="489" startBytecode="0" endBytecode="184" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+    </Method>
+    <Field classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker" name="completedTaskCount" signature="J" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker" start="483" end="483" startBytecode="38" endBytecode="38" sourcefile="UnorderedThreadPoolExecutor.java" sourcepath="org/apache/mina/filter/executor/UnorderedThreadPoolExecutor.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.mina.filter.reqres.RequestResponseFilter">
+      <SourceLine classname="org.apache.mina.filter.reqres.RequestResponseFilter" start="47" end="330" sourcefile="RequestResponseFilter.java" sourcepath="org/apache/mina/filter/reqres/RequestResponseFilter.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.reqres.RequestResponseFilter" name="messageReceived" signature="(Lorg/apache/mina/common/IoFilter$NextFilter;Lorg/apache/mina/common/IoSession;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.reqres.RequestResponseFilter" start="118" end="181" startBytecode="0" endBytecode="742" sourcefile="RequestResponseFilter.java" sourcepath="org/apache/mina/filter/reqres/RequestResponseFilter.java"/>
+    </Method>
+    <LocalVariable name="type" register="6" pc="104" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.mina.filter.reqres.RequestResponseFilter" start="138" end="138" startBytecode="106" endBytecode="106" sourcefile="RequestResponseFilter.java" sourcepath="org/apache/mina/filter/reqres/RequestResponseFilter.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.mina.filter.reqres.RequestResponseFilter" start="129" end="129" startBytecode="51" endBytecode="51" sourcefile="RequestResponseFilter.java" sourcepath="org/apache/mina/filter/reqres/RequestResponseFilter.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="org.apache.mina.filter.reqres.RequestResponseFilter" start="130" end="130" startBytecode="54" endBytecode="54" sourcefile="RequestResponseFilter.java" sourcepath="org/apache/mina/filter/reqres/RequestResponseFilter.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mina.filter.ssl.SslFilter">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="91" end="660" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.ssl.SslFilter" name="getEnabledCipherSuites" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="312" end="312" startBytecode="0" endBytecode="46" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Method>
+    <Field classname="org.apache.mina.filter.ssl.SslFilter" name="enabledCipherSuites" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="312" end="312" startBytecode="4" endBytecode="4" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mina.filter.ssl.SslFilter">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="91" end="660" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.ssl.SslFilter" name="getEnabledProtocols" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="332" end="332" startBytecode="0" endBytecode="46" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Method>
+    <Field classname="org.apache.mina.filter.ssl.SslFilter" name="enabledProtocols" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="332" end="332" startBytecode="4" endBytecode="4" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mina.filter.ssl.SslFilter">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="91" end="660" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.ssl.SslFilter" name="setEnabledCipherSuites" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="322" end="323" startBytecode="0" endBytecode="61" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Method>
+    <Field classname="org.apache.mina.filter.ssl.SslFilter" name="enabledCipherSuites" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Field>
+    <LocalVariable name="cipherSuites" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="322" end="322" startBytecode="2" endBytecode="2" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.apache.mina.filter.ssl.SslFilter">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="91" end="660" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.ssl.SslFilter" name="setEnabledProtocols" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="342" end="343" startBytecode="0" endBytecode="61" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Method>
+    <Field classname="org.apache.mina.filter.ssl.SslFilter" name="enabledProtocols" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+    </Field>
+    <LocalVariable name="protocols" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.mina.filter.ssl.SslFilter" start="342" end="342" startBytecode="2" endBytecode="2" sourcefile="SslFilter.java" sourcepath="org/apache/mina/filter/ssl/SslFilter.java"/>
+  </BugInstance>
+  <BugInstance type="ICAST_IDIV_CAST_TO_DOUBLE" priority="2" abbrev="ICAST" category="STYLE">
+    <Class classname="org.apache.mina.filter.statistic.ProfilerTimerFilter$TimerWorker">
+      <SourceLine classname="org.apache.mina.filter.statistic.ProfilerTimerFilter$TimerWorker" start="389" end="473" sourcefile="ProfilerTimerFilter.java" sourcepath="org/apache/mina/filter/statistic/ProfilerTimerFilter.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.statistic.ProfilerTimerFilter$TimerWorker" name="getAverage" signature="()D" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.statistic.ProfilerTimerFilter$TimerWorker" start="433" end="433" startBytecode="0" endBytecode="58" sourcefile="ProfilerTimerFilter.java" sourcepath="org/apache/mina/filter/statistic/ProfilerTimerFilter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.statistic.ProfilerTimerFilter$TimerWorker" start="433" end="433" startBytecode="15" endBytecode="15" sourcefile="ProfilerTimerFilter.java" sourcepath="org/apache/mina/filter/statistic/ProfilerTimerFilter.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.mina.filter.statistic.ProfilerTimerFilter$TimerWorker">
+      <SourceLine classname="org.apache.mina.filter.statistic.ProfilerTimerFilter$TimerWorker" start="389" end="473" sourcefile="ProfilerTimerFilter.java" sourcepath="org/apache/mina/filter/statistic/ProfilerTimerFilter.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.mina.filter.traffic.ReadThrottleFilter">
+      <SourceLine classname="org.apache.mina.filter.traffic.ReadThrottleFilter" start="66" end="677" sourcefile="ReadThrottleFilter.java" sourcepath="org/apache/mina/filter/traffic/ReadThrottleFilter.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.traffic.ReadThrottleFilter" name="enter" signature="(Lorg/apache/mina/common/IoSession;I)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.traffic.ReadThrottleFilter" start="411" end="461" startBytecode="0" endBytecode="574" sourcefile="ReadThrottleFilter.java" sourcepath="org/apache/mina/filter/traffic/ReadThrottleFilter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.traffic.ReadThrottleFilter" start="430" end="433" startBytecode="114" endBytecode="145" sourcefile="ReadThrottleFilter.java" sourcepath="org/apache/mina/filter/traffic/ReadThrottleFilter.java"/>
+    <SourceLine classname="org.apache.mina.filter.traffic.ReadThrottleFilter" start="443" end="457" startBytecode="202" endBytecode="289" sourcefile="ReadThrottleFilter.java" sourcepath="org/apache/mina/filter/traffic/ReadThrottleFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.apache.mina.filter.traffic.WriteThrottleFilter">
+      <SourceLine classname="org.apache.mina.filter.traffic.WriteThrottleFilter" start="56" end="455" sourcefile="WriteThrottleFilter.java" sourcepath="org/apache/mina/filter/traffic/WriteThrottleFilter.java"/>
+    </Class>
+    <Method classname="org.apache.mina.filter.traffic.WriteThrottleFilter" name="filterWrite" signature="(Lorg/apache/mina/common/IoFilter$NextFilter;Lorg/apache/mina/common/IoSession;Lorg/apache/mina/common/WriteRequest;)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.filter.traffic.WriteThrottleFilter" start="272" end="292" startBytecode="0" endBytecode="226" sourcefile="WriteThrottleFilter.java" sourcepath="org/apache/mina/filter/traffic/WriteThrottleFilter.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.filter.traffic.WriteThrottleFilter" start="275" end="285" startBytecode="31" endBytecode="87" sourcefile="WriteThrottleFilter.java" sourcepath="org/apache/mina/filter/traffic/WriteThrottleFilter.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.apache.mina.handler.chain.IoHandlerChain">
+      <SourceLine classname="org.apache.mina.handler.chain.IoHandlerChain" start="36" end="281" sourcefile="IoHandlerChain.java" sourcepath="org/apache/mina/handler/chain/IoHandlerChain.java"/>
+    </Class>
+    <Method classname="org.apache.mina.handler.chain.IoHandlerChain" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.mina.handler.chain.IoHandlerChain" start="53" end="57" startBytecode="0" endBytecode="195" sourcefile="IoHandlerChain.java" sourcepath="org/apache/mina/handler/chain/IoHandlerChain.java"/>
+    </Method>
+    <Field classname="org.apache.mina.handler.chain.IoHandlerChain" name="nextId" signature="I" isStatic="true">
+      <SourceLine classname="org.apache.mina.handler.chain.IoHandlerChain" sourcefile="IoHandlerChain.java" sourcepath="org/apache/mina/handler/chain/IoHandlerChain.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.handler.chain.IoHandlerChain" start="39" end="39" startBytecode="11" endBytecode="11" sourcefile="IoHandlerChain.java" sourcepath="org/apache/mina/handler/chain/IoHandlerChain.java"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE">
+    <Class classname="org.apache.mina.transport.socket.DefaultSocketSessionConfig">
+      <SourceLine classname="org.apache.mina.transport.socket.DefaultSocketSessionConfig" start="43" end="304" sourcefile="DefaultSocketSessionConfig.java" sourcepath="org/apache/mina/transport/socket/DefaultSocketSessionConfig.java"/>
+    </Class>
+    <Method classname="org.apache.mina.transport.socket.DefaultSocketSessionConfig" name="initializeDefaultSocketParameters" signature="(Ljava/net/InetSocketAddress;Ljava/net/InetAddress;)Z" isStatic="true">
+      <SourceLine classname="org.apache.mina.transport.socket.DefaultSocketSessionConfig" start="132" end="163" startBytecode="0" endBytecode="582" sourcefile="DefaultSocketSessionConfig.java" sourcepath="org/apache/mina/transport/socket/DefaultSocketSessionConfig.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.transport.socket.DefaultSocketSessionConfig" start="147" end="147" startBytecode="96" endBytecode="96" sourcefile="DefaultSocketSessionConfig.java" sourcepath="org/apache/mina/transport/socket/DefaultSocketSessionConfig.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE">
+    <Class classname="org.apache.mina.transport.socket.nio.NioDatagramSession$SessionConfigImpl">
+      <SourceLine classname="org.apache.mina.transport.socket.nio.NioDatagramSession$SessionConfigImpl" start="153" end="245" sourcefile="NioDatagramSession.java" sourcepath="org/apache/mina/transport/socket/nio/NioDatagramSession.java"/>
+    </Class>
+    <Method classname="org.apache.mina.transport.socket.nio.NioDatagramSession$SessionConfigImpl" name="setReceiveBufferSize" signature="(I)V" isStatic="false">
+      <SourceLine classname="org.apache.mina.transport.socket.nio.NioDatagramSession$SessionConfigImpl" start="164" end="173" startBytecode="0" endBytecode="21" sourcefile="NioDatagramSession.java" sourcepath="org/apache/mina/transport/socket/nio/NioDatagramSession.java"/>
+    </Method>
+    <LocalVariable name="receiveBufferSize" register="1" pc="34" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.apache.mina.transport.socket.nio.NioDatagramSession$SessionConfigImpl" start="168" end="168" startBytecode="33" endBytecode="33" sourcefile="NioDatagramSession.java" sourcepath="org/apache/mina/transport/socket/nio/NioDatagramSession.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="receiveBufferSize"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="org.apache.mina.util.AvailablePortFinder">
+      <SourceLine classname="org.apache.mina.util.AvailablePortFinder" start="50" end="166" sourcefile="AvailablePortFinder.java" sourcepath="org/apache/mina/util/AvailablePortFinder.java"/>
+    </Class>
+    <Method classname="org.apache.mina.util.AvailablePortFinder" name="getAvailablePorts" signature="(II)Ljava/util/Set;" isStatic="true">
+      <SourceLine classname="org.apache.mina.util.AvailablePortFinder" start="140" end="166" startBytecode="0" endBytecode="452" sourcefile="AvailablePortFinder.java" sourcepath="org/apache/mina/util/AvailablePortFinder.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="org.apache.mina.util.AvailablePortFinder" start="153" end="153" startBytecode="86" endBytecode="86" sourcefile="AvailablePortFinder.java" sourcepath="org/apache/mina/util/AvailablePortFinder.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" abbrev="SS" category="PERFORMANCE">
+    <Class classname="org.apache.mina.util.Log4jXmlFormatter">
+      <SourceLine classname="org.apache.mina.util.Log4jXmlFormatter" start="26" end="145" sourcefile="Log4jXmlFormatter.java" sourcepath="org/apache/mina/util/Log4jXmlFormatter.java"/>
+    </Class>
+    <Field classname="org.apache.mina.util.Log4jXmlFormatter" name="DEFAULT_SIZE" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.mina.util.Log4jXmlFormatter" sourcefile="Log4jXmlFormatter.java" sourcepath="org/apache/mina/util/Log4jXmlFormatter.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.util.Log4jXmlFormatter" start="28" end="28" startBytecode="8" endBytecode="8" sourcefile="Log4jXmlFormatter.java" sourcepath="org/apache/mina/util/Log4jXmlFormatter.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" abbrev="SS" category="PERFORMANCE">
+    <Class classname="org.apache.mina.util.Log4jXmlFormatter">
+      <SourceLine classname="org.apache.mina.util.Log4jXmlFormatter" start="26" end="145" sourcefile="Log4jXmlFormatter.java" sourcepath="org/apache/mina/util/Log4jXmlFormatter.java"/>
+    </Class>
+    <Field classname="org.apache.mina.util.Log4jXmlFormatter" name="UPPER_LIMIT" signature="I" isStatic="false">
+      <SourceLine classname="org.apache.mina.util.Log4jXmlFormatter" sourcefile="Log4jXmlFormatter.java" sourcepath="org/apache/mina/util/Log4jXmlFormatter.java"/>
+    </Field>
+    <SourceLine classname="org.apache.mina.util.Log4jXmlFormatter" start="29" end="29" startBytecode="15" endBytecode="15" sourcefile="Log4jXmlFormatter.java" sourcepath="org/apache/mina/util/Log4jXmlFormatter.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.fabric3.ftp.server.codec.CodecFactory$ResponseEncoder">
+      <SourceLine classname="org.fabric3.ftp.server.codec.CodecFactory$ResponseEncoder" start="69" end="80" sourcefile="CodecFactory.java" sourcepath="org/fabric3/ftp/server/codec/CodecFactory.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="org.slf4j.helpers.BasicMarker">
+      <SourceLine classname="org.slf4j.helpers.BasicMarker" start="55" end="177" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java"/>
+    </Class>
+    <Field classname="org.slf4j.helpers.BasicMarker" name="children" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.slf4j.helpers.BasicMarker" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java"/>
+    </Field>
+    <Int value="75" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="121" end="121" startBytecode="32" endBytecode="32" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="122" end="122" startBytecode="44" endBytecode="44" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="144" end="144" startBytecode="38" endBytecode="38" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="145" end="145" startBytecode="50" endBytecode="50" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="87" end="87" startBytecode="1" endBytecode="1" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="88" end="88" startBytecode="8" endBytecode="8" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="68" end="68" startBytecode="15" endBytecode="15" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="73" end="73" startBytecode="33" endBytecode="33" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="69" end="69" startBytecode="29" endBytecode="29" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="77" end="77" startBytecode="47" endBytecode="47" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="83" end="83" startBytecode="1" endBytecode="1" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="83" end="83" startBytecode="8" endBytecode="8" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="95" end="95" startBytecode="1" endBytecode="1" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="99" end="99" startBytecode="10" endBytecode="10" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="101" end="101" startBytecode="27" endBytecode="27" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="org.slf4j.helpers.BasicMarker" start="103" end="103" startBytecode="48" endBytecode="48" sourcefile="BasicMarker.java" sourcepath="org/slf4j/helpers/BasicMarker.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>org.fabric3.ftp.api.FtpLet</MissingClass>
+    <MissingClass>org.fabric3.ftp.spi.FtpLetContainer</MissingClass>
+    <MissingClass>org.fabric3.spi.services.work.WorkScheduler</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 18 Jul 2008 00:59:49 +0300" total_classes="436" referenced_classes="724" total_bugs="39" total_size="17813" num_packages="39" vm_version="20.4-b02-402" cpu_seconds="64.11" clock_seconds="36.62" peak_mbytes="137.10" alloc_mbytes="763.88" gc_seconds="2.16" priority_2="29" priority_1="10">
+    <PackageStats package="org.apache.mina.common" total_bugs="9" total_types="141" total_size="7520" priority_2="8" priority_1="1">
+      <ClassStats class="org.apache.mina.common.AbstractIoAcceptor" sourceFile="AbstractIoAcceptor.java" interface="false" size="177" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoAcceptor$AcceptorOperationFuture" sourceFile="AbstractIoAcceptor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoBuffer" sourceFile="AbstractIoBuffer.java" interface="false" size="968" bugs="5" priority_2="5"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoBuffer$1" sourceFile="AbstractIoBuffer.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoBuffer$2" sourceFile="AbstractIoBuffer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoBuffer$3" sourceFile="AbstractIoBuffer.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoBuffer$4" sourceFile="AbstractIoBuffer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoConnector" sourceFile="AbstractIoConnector.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoConnector$1" sourceFile="AbstractIoConnector.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoConnector$2" sourceFile="AbstractIoConnector.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoService" sourceFile="AbstractIoService.java" interface="false" size="410" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoService$1" sourceFile="AbstractIoService.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoService$2" sourceFile="AbstractIoService.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoService$ServiceOperationFuture" sourceFile="AbstractIoService.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoSession" sourceFile="AbstractIoSession.java" interface="false" size="467" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoSession$1" sourceFile="AbstractIoSession.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoSession$2" sourceFile="AbstractIoSession.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoSession$CloseRequestAwareWriteRequestQueue" sourceFile="AbstractIoSession.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractIoSessionConfig" sourceFile="AbstractIoSessionConfig.java" interface="false" size="123" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingConnectionlessIoAcceptor" sourceFile="AbstractPollingConnectionlessIoAcceptor.java" interface="false" size="295" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingConnectionlessIoAcceptor$1" sourceFile="AbstractPollingConnectionlessIoAcceptor.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingConnectionlessIoAcceptor$ConnectionlessAcceptorProcessor" sourceFile="AbstractPollingConnectionlessIoAcceptor.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingConnectionlessIoAcceptor$Worker" sourceFile="AbstractPollingConnectionlessIoAcceptor.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoAcceptor" sourceFile="AbstractPollingIoAcceptor.java" interface="false" size="166" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoAcceptor$1" sourceFile="AbstractPollingIoAcceptor.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoAcceptor$Worker" sourceFile="AbstractPollingIoAcceptor.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoConnector" sourceFile="AbstractPollingIoConnector.java" interface="false" size="187" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoConnector$1" sourceFile="AbstractPollingIoConnector.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoConnector$ConnectionRequest" sourceFile="AbstractPollingIoConnector.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoConnector$Worker" sourceFile="AbstractPollingIoConnector.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoProcessor" sourceFile="AbstractPollingIoProcessor.java" interface="false" size="364" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoProcessor$1" sourceFile="AbstractPollingIoProcessor.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoProcessor$SessionState" sourceFile="AbstractPollingIoProcessor.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AbstractPollingIoProcessor$Worker" sourceFile="AbstractPollingIoProcessor.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.AttributeKey" sourceFile="AttributeKey.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.BufferDataException" sourceFile="BufferDataException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.CachedBufferAllocator" sourceFile="CachedBufferAllocator.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.CachedBufferAllocator$1" sourceFile="CachedBufferAllocator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.CachedBufferAllocator$2" sourceFile="CachedBufferAllocator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.CachedBufferAllocator$CachedBuffer" sourceFile="CachedBufferAllocator.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.CloseFuture" sourceFile="CloseFuture.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.CompositeIoFuture" sourceFile="CompositeIoFuture.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.CompositeIoFuture$1" sourceFile="CompositeIoFuture.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.CompositeIoFuture$NotifyingListener" sourceFile="CompositeIoFuture.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.ConnectFuture" sourceFile="ConnectFuture.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultCloseFuture" sourceFile="DefaultCloseFuture.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultConnectFuture" sourceFile="DefaultConnectFuture.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultExceptionMonitor" sourceFile="DefaultExceptionMonitor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultFileRegion" sourceFile="DefaultFileRegion.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoFilterChain" sourceFile="DefaultIoFilterChain.java" interface="false" size="350" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoFilterChain$1" sourceFile="DefaultIoFilterChain.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoFilterChain$EntryImpl" sourceFile="DefaultIoFilterChain.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoFilterChain$EntryImpl$1" sourceFile="DefaultIoFilterChain.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoFilterChain$HeadFilter" sourceFile="DefaultIoFilterChain.java" interface="false" size="49" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoFilterChain$TailFilter" sourceFile="DefaultIoFilterChain.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoFilterChainBuilder" sourceFile="DefaultIoFilterChainBuilder.java" interface="false" size="217" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoFilterChainBuilder$1" sourceFile="DefaultIoFilterChainBuilder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoFilterChainBuilder$EntryImpl" sourceFile="DefaultIoFilterChainBuilder.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoFuture" sourceFile="DefaultIoFuture.java" interface="false" size="153" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoSessionDataStructureFactory" sourceFile="DefaultIoSessionDataStructureFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoSessionDataStructureFactory$1" sourceFile="DefaultIoSessionDataStructureFactory.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoSessionDataStructureFactory$DefaultIoSessionAttributeMap" sourceFile="DefaultIoSessionDataStructureFactory.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultIoSessionDataStructureFactory$DefaultWriteRequestQueue" sourceFile="DefaultIoSessionDataStructureFactory.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultReadFuture" sourceFile="DefaultReadFuture.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultReadFuture$1" sourceFile="DefaultReadFuture.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultReadFuture$ExceptionHolder" sourceFile="DefaultReadFuture.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultTransportMetadata" sourceFile="DefaultTransportMetadata.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultWriteFuture" sourceFile="DefaultWriteFuture.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultWriteRequest" sourceFile="DefaultWriteRequest.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DefaultWriteRequest$1" sourceFile="DefaultWriteRequest.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DummySession" sourceFile="DummySession.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DummySession$1" sourceFile="DummySession.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DummySession$2" sourceFile="DummySession.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DummySession$3" sourceFile="DummySession.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DummySession$4" sourceFile="DummySession.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.DummySession$5" sourceFile="DummySession.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.ExceptionMonitor" sourceFile="ExceptionMonitor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.ExpiringSessionRecycler" sourceFile="ExpiringSessionRecycler.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.ExpiringSessionRecycler$1" sourceFile="ExpiringSessionRecycler.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.ExpiringSessionRecycler$DefaultExpirationListener" sourceFile="ExpiringSessionRecycler.java" interface="false" size="9" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mina.common.FileRegion" sourceFile="FileRegion.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IdleStatus" sourceFile="IdleStatus.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IdleStatusChecker" sourceFile="IdleStatusChecker.java" interface="false" size="123" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IdleStatusChecker$1" sourceFile="IdleStatusChecker.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IdleStatusChecker$NotifyingTask" sourceFile="IdleStatusChecker.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IdleStatusChecker$SessionCloseListener" sourceFile="IdleStatusChecker.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoAcceptor" sourceFile="IoAcceptor.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoBuffer" sourceFile="IoBuffer.java" interface="false" size="211" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoBufferAllocator" sourceFile="IoBufferAllocator.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoBufferHexDumper" sourceFile="IoBufferHexDumper.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoBufferWrapper" sourceFile="IoBufferWrapper.java" interface="false" size="379" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoConnector" sourceFile="IoConnector.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoEvent" sourceFile="IoEvent.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoEvent$1" sourceFile="IoEvent.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoEventType" sourceFile="IoEventType.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFilter" sourceFile="IoFilter.java" interface="true" size="17" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFilter$NextFilter" sourceFile="IoFilter.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFilterAdapter" sourceFile="IoFilterAdapter.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFilterChain" sourceFile="IoFilterChain.java" interface="true" size="36" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFilterChain$Entry" sourceFile="IoFilterChain.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFilterChainBuilder" sourceFile="IoFilterChainBuilder.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFilterChainBuilder$1" sourceFile="IoFilterChainBuilder.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFilterEvent" sourceFile="IoFilterEvent.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFilterEvent$1" sourceFile="IoFilterEvent.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFilterLifeCycleException" sourceFile="IoFilterLifeCycleException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFuture" sourceFile="IoFuture.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFutureListener" sourceFile="IoFutureListener.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoFutureListener$1" sourceFile="IoFutureListener.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoHandler" sourceFile="IoHandler.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoHandlerAdapter" sourceFile="IoHandlerAdapter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoProcessor" sourceFile="IoProcessor.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoService" sourceFile="IoService.java" interface="true" size="66" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoServiceListener" sourceFile="IoServiceListener.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoServiceListenerSupport" sourceFile="IoServiceListenerSupport.java" interface="false" size="108" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.mina.common.IoServiceListenerSupport$LockNotifyingListener" sourceFile="IoServiceListenerSupport.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoSession" sourceFile="IoSession.java" interface="true" size="61" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoSessionAttributeMap" sourceFile="IoSessionAttributeMap.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoSessionConfig" sourceFile="IoSessionConfig.java" interface="true" size="28" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoSessionDataStructureFactory" sourceFile="IoSessionDataStructureFactory.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoSessionInitializationException" sourceFile="IoSessionInitializationException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoSessionInitializer" sourceFile="IoSessionInitializer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoSessionRecycler" sourceFile="IoSessionRecycler.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoSessionRecycler$1" sourceFile="IoSessionRecycler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.IoUtil" sourceFile="IoUtil.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.NothingWrittenException" sourceFile="NothingWrittenException.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.ReadFuture" sourceFile="ReadFuture.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.RuntimeIoException" sourceFile="RuntimeIoException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.SimpleBufferAllocator" sourceFile="SimpleBufferAllocator.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.SimpleBufferAllocator$SimpleBuffer" sourceFile="SimpleBufferAllocator.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.SimpleIoProcessorPool" sourceFile="SimpleIoProcessorPool.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.TrafficMask" sourceFile="TrafficMask.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.TransportMetadata" sourceFile="TransportMetadata.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.UnderivableBuffer" sourceFile="UnderivableBuffer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.UnknownMessageTypeException" sourceFile="UnknownMessageTypeException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.WriteException" sourceFile="WriteException.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.WriteFuture" sourceFile="WriteFuture.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.WriteRequest" sourceFile="WriteRequest.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.WriteRequestQueue" sourceFile="WriteRequestQueue.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.WriteRequestWrapper" sourceFile="WriteRequestWrapper.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.WriteTimeoutException" sourceFile="WriteTimeoutException.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.mina.common.WriteToClosedSessionException" sourceFile="WriteToClosedSessionException.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.codec" total_bugs="0" total_types="26" total_size="528">
+      <ClassStats class="org.apache.mina.filter.codec.AbstractProtocolDecoderOutput" sourceFile="AbstractProtocolDecoderOutput.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.AbstractProtocolEncoderOutput" sourceFile="AbstractProtocolEncoderOutput.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.CumulativeProtocolDecoder" sourceFile="CumulativeProtocolDecoder.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecException" sourceFile="ProtocolCodecException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecFactory" sourceFile="ProtocolCodecFactory.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecFilter" sourceFile="ProtocolCodecFilter.java" interface="false" size="176" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecFilter$1" sourceFile="ProtocolCodecFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecFilter$2" sourceFile="ProtocolCodecFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecFilter$EncodedWriteRequest" sourceFile="ProtocolCodecFilter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecFilter$MessageWriteRequest" sourceFile="ProtocolCodecFilter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecFilter$ProtocolDecoderOutputImpl" sourceFile="ProtocolCodecFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecFilter$ProtocolEncoderOutputImpl" sourceFile="ProtocolCodecFilter.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecSession" sourceFile="ProtocolCodecSession.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecSession$1" sourceFile="ProtocolCodecSession.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolCodecSession$2" sourceFile="ProtocolCodecSession.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolDecoder" sourceFile="ProtocolDecoder.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolDecoderAdapter" sourceFile="ProtocolDecoderAdapter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolDecoderException" sourceFile="ProtocolDecoderException.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolDecoderOutput" sourceFile="ProtocolDecoderOutput.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolEncoder" sourceFile="ProtocolEncoder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolEncoderAdapter" sourceFile="ProtocolEncoderAdapter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolEncoderException" sourceFile="ProtocolEncoderException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.ProtocolEncoderOutput" sourceFile="ProtocolEncoderOutput.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.RecoverableProtocolDecoderException" sourceFile="RecoverableProtocolDecoderException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.SynchronizedProtocolDecoder" sourceFile="SynchronizedProtocolDecoder.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.SynchronizedProtocolEncoder" sourceFile="SynchronizedProtocolEncoder.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.codec.demux" total_bugs="3" total_types="17" total_size="359" priority_1="3">
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolCodecFactory" sourceFile="DemuxingProtocolCodecFactory.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolDecoder" sourceFile="DemuxingProtocolDecoder.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolDecoder$1" sourceFile="DemuxingProtocolDecoder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolDecoder$DefaultConstructorMessageDecoderFactory" sourceFile="DemuxingProtocolDecoder.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolDecoder$SingletonMessageDecoderFactory" sourceFile="DemuxingProtocolDecoder.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolDecoder$State" sourceFile="DemuxingProtocolDecoder.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolEncoder" sourceFile="DemuxingProtocolEncoder.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolEncoder$1" sourceFile="DemuxingProtocolEncoder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolEncoder$DefaultConstructorMessageEncoderFactory" sourceFile="DemuxingProtocolEncoder.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolEncoder$SingletonMessageEncoderFactory" sourceFile="DemuxingProtocolEncoder.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.DemuxingProtocolEncoder$State" sourceFile="DemuxingProtocolEncoder.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.MessageDecoder" sourceFile="MessageDecoder.java" interface="true" size="11" bugs="3" priority_1="3"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.MessageDecoderAdapter" sourceFile="MessageDecoderAdapter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.MessageDecoderFactory" sourceFile="MessageDecoderFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.MessageDecoderResult" sourceFile="MessageDecoderResult.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.MessageEncoder" sourceFile="MessageEncoder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.demux.MessageEncoderFactory" sourceFile="MessageEncoderFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.codec.prefixedstring" total_bugs="0" total_types="3" total_size="115">
+      <ClassStats class="org.apache.mina.filter.codec.prefixedstring.PrefixedStringCodecFactory" sourceFile="PrefixedStringCodecFactory.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.prefixedstring.PrefixedStringDecoder" sourceFile="PrefixedStringDecoder.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.prefixedstring.PrefixedStringEncoder" sourceFile="PrefixedStringEncoder.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.codec.serialization" total_bugs="0" total_types="5" total_size="223">
+      <ClassStats class="org.apache.mina.filter.codec.serialization.ObjectSerializationCodecFactory" sourceFile="ObjectSerializationCodecFactory.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.serialization.ObjectSerializationDecoder" sourceFile="ObjectSerializationDecoder.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.serialization.ObjectSerializationEncoder" sourceFile="ObjectSerializationEncoder.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.serialization.ObjectSerializationInputStream" sourceFile="ObjectSerializationInputStream.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.serialization.ObjectSerializationOutputStream" sourceFile="ObjectSerializationOutputStream.java" interface="false" size="76" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.codec.statemachine" total_bugs="0" total_types="16" total_size="422">
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.ConsumeToCrLfDecodingState" sourceFile="ConsumeToCrLfDecodingState.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.ConsumeToDynamicTerminatorDecodingState" sourceFile="ConsumeToDynamicTerminatorDecodingState.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.ConsumeToEndOfSessionDecodingState" sourceFile="ConsumeToEndOfSessionDecodingState.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.ConsumeToLinearWhitespaceDecodingState" sourceFile="ConsumeToLinearWhitespaceDecodingState.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.ConsumeToTerminatorDecodingState" sourceFile="ConsumeToTerminatorDecodingState.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.CrLfDecodingState" sourceFile="CrLfDecodingState.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.DecodingState" sourceFile="DecodingState.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.DecodingStateMachine" sourceFile="DecodingStateMachine.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.DecodingStateMachine$1" sourceFile="DecodingStateMachine.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.DecodingStateProtocolDecoder" sourceFile="DecodingStateProtocolDecoder.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.FixedLengthDecodingState" sourceFile="FixedLengthDecodingState.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.IntegerDecodingState" sourceFile="IntegerDecodingState.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.LinearWhitespaceSkippingState" sourceFile="LinearWhitespaceSkippingState.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.ShortIntegerDecodingState" sourceFile="ShortIntegerDecodingState.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.SingleByteDecodingState" sourceFile="SingleByteDecodingState.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.statemachine.SkippingState" sourceFile="SkippingState.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.codec.textline" total_bugs="2" total_types="6" total_size="321" priority_1="2">
+      <ClassStats class="org.apache.mina.filter.codec.textline.LineDelimiter" sourceFile="LineDelimiter.java" interface="false" size="42" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.mina.filter.codec.textline.TextLineCodecFactory" sourceFile="TextLineCodecFactory.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.textline.TextLineDecoder" sourceFile="TextLineDecoder.java" interface="false" size="141" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.textline.TextLineDecoder$1" sourceFile="TextLineDecoder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.textline.TextLineDecoder$Context" sourceFile="TextLineDecoder.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.codec.textline.TextLineEncoder" sourceFile="TextLineEncoder.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.errorgenerating" total_bugs="0" total_types="1" total_size="141">
+      <ClassStats class="org.apache.mina.filter.errorgenerating.ErrorGeneratingFilter" sourceFile="ErrorGeneratingFilter.java" interface="false" size="141" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.executor" total_bugs="8" total_types="13" total_size="899" priority_2="6" priority_1="2">
+      <ClassStats class="org.apache.mina.filter.executor.DefaultIoEventSizeEstimator" sourceFile="DefaultIoEventSizeEstimator.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.executor.ExecutorFilter" sourceFile="ExecutorFilter.java" interface="false" size="123" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.executor.IoEventQueueHandler" sourceFile="IoEventQueueHandler.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.executor.IoEventQueueThrottle" sourceFile="IoEventQueueThrottle.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.executor.IoEventSizeEstimator" sourceFile="IoEventSizeEstimator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" sourceFile="OrderedThreadPoolExecutor.java" interface="false" size="259" bugs="3" priority_2="3"/>
+      <ClassStats class="org.apache.mina.filter.executor.OrderedThreadPoolExecutor$1" sourceFile="OrderedThreadPoolExecutor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.executor.OrderedThreadPoolExecutor$SessionBuffer" sourceFile="OrderedThreadPoolExecutor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker" sourceFile="OrderedThreadPoolExecutor.java" interface="false" size="68" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor" sourceFile="UnorderedThreadPoolExecutor.java" interface="false" size="217" bugs="3" priority_2="3"/>
+      <ClassStats class="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$1" sourceFile="UnorderedThreadPoolExecutor.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$2" sourceFile="UnorderedThreadPoolExecutor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker" sourceFile="UnorderedThreadPoolExecutor.java" interface="false" size="58" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.firewall" total_bugs="0" total_types="2" total_size="113">
+      <ClassStats class="org.apache.mina.filter.firewall.BlacklistFilter" sourceFile="BlacklistFilter.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.firewall.ConnectionThrottleFilter" sourceFile="ConnectionThrottleFilter.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.keepalive" total_bugs="0" total_types="5" total_size="151">
+      <ClassStats class="org.apache.mina.filter.keepalive.KeepAliveFilter" sourceFile="KeepAliveFilter.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.keepalive.KeepAliveFilter$1" sourceFile="KeepAliveFilter.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.keepalive.KeepAliveMessageFactory" sourceFile="KeepAliveMessageFactory.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.keepalive.KeepAlivePolicy" sourceFile="KeepAlivePolicy.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.keepalive.KeepAliveTimeoutException" sourceFile="KeepAliveTimeoutException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.logging" total_bugs="0" total_types="12" total_size="301">
+      <ClassStats class="org.apache.mina.filter.logging.LogLevel" sourceFile="LogLevel.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.LogLevel$1" sourceFile="LogLevel.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.LogLevel$2" sourceFile="LogLevel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.LogLevel$3" sourceFile="LogLevel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.LogLevel$4" sourceFile="LogLevel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.LogLevel$5" sourceFile="LogLevel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.LogLevel$6" sourceFile="LogLevel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.LogLevel$LogLevelLogger" sourceFile="LogLevel.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.LoggingFilter" sourceFile="LoggingFilter.java" interface="false" size="104" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.MdcInjectionFilter" sourceFile="MdcInjectionFilter.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.MdcInjectionFilter$1" sourceFile="MdcInjectionFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.logging.MdcInjectionFilter$MdcKey" sourceFile="MdcInjectionFilter.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.reqres" total_bugs="1" total_types="10" total_size="375" priority_1="1">
+      <ClassStats class="org.apache.mina.filter.reqres.Request" sourceFile="Request.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.reqres.RequestResponseFilter" sourceFile="RequestResponseFilter.java" interface="false" size="140" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.mina.filter.reqres.RequestResponseFilter$1" sourceFile="RequestResponseFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.reqres.RequestResponseFilter$2" sourceFile="RequestResponseFilter.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.reqres.RequestResponseFilter$TimeoutTask" sourceFile="RequestResponseFilter.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.reqres.RequestTimeoutException" sourceFile="RequestTimeoutException.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.reqres.Response" sourceFile="Response.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.reqres.ResponseInspector" sourceFile="ResponseInspector.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.reqres.ResponseInspectorFactory" sourceFile="ResponseInspectorFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.reqres.ResponseType" sourceFile="ResponseType.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.ssl" total_bugs="4" total_types="11" total_size="812" priority_2="4">
+      <ClassStats class="org.apache.mina.filter.ssl.BogusTrustManagerFactory" sourceFile="BogusTrustManagerFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.ssl.BogusTrustManagerFactory$1" sourceFile="BogusTrustManagerFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.ssl.BogusTrustManagerFactory$2" sourceFile="BogusTrustManagerFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.ssl.BogusTrustManagerFactory$BogusTrustManagerFactorySpi" sourceFile="BogusTrustManagerFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.ssl.KeyStoreFactory" sourceFile="KeyStoreFactory.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.ssl.SslContextFactory" sourceFile="SslContextFactory.java" interface="false" size="145" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.ssl.SslFilter" sourceFile="SslFilter.java" interface="false" size="254" bugs="4" priority_2="4"/>
+      <ClassStats class="org.apache.mina.filter.ssl.SslFilter$1" sourceFile="SslFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.ssl.SslFilter$EncryptedWriteRequest" sourceFile="SslFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.ssl.SslFilter$SslFilterMessage" sourceFile="SslFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.ssl.SslHandler" sourceFile="SslHandler.java" interface="false" size="287" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.statistic" total_bugs="2" total_types="7" total_size="189" priority_2="2">
+      <ClassStats class="org.apache.mina.filter.statistic.ProfilerTimerFilter" sourceFile="ProfilerTimerFilter.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.statistic.ProfilerTimerFilter$1" sourceFile="ProfilerTimerFilter.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.statistic.ProfilerTimerFilter$ProfilerTimerUnit" sourceFile="ProfilerTimerFilter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.statistic.ProfilerTimerFilter$ProfilerTimerUnit$1" sourceFile="ProfilerTimerFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.statistic.ProfilerTimerFilter$ProfilerTimerUnit$2" sourceFile="ProfilerTimerFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.statistic.ProfilerTimerFilter$ProfilerTimerUnit$3" sourceFile="ProfilerTimerFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.statistic.ProfilerTimerFilter$TimerWorker" sourceFile="ProfilerTimerFilter.java" interface="false" size="35" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.stream" total_bugs="0" total_types="1" total_size="78">
+      <ClassStats class="org.apache.mina.filter.stream.StreamWriteFilter" sourceFile="StreamWriteFilter.java" interface="false" size="78" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.traffic" total_bugs="2" total_types="19" total_size="935" priority_2="2">
+      <ClassStats class="org.apache.mina.filter.traffic.DefaultMessageSizeEstimator" sourceFile="DefaultMessageSizeEstimator.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.IoFloodException" sourceFile="IoFloodException.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.MessageSizeEstimator" sourceFile="MessageSizeEstimator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.ReadFloodException" sourceFile="ReadFloodException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.ReadThrottleFilter" sourceFile="ReadThrottleFilter.java" interface="false" size="334" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mina.filter.traffic.ReadThrottleFilter$1" sourceFile="ReadThrottleFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.ReadThrottleFilter$2" sourceFile="ReadThrottleFilter.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.ReadThrottleFilter$EnterFilter" sourceFile="ReadThrottleFilter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.ReadThrottleFilter$State" sourceFile="ReadThrottleFilter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.ReadThrottlePolicy" sourceFile="ReadThrottlePolicy.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.TrafficShapingFilter" sourceFile="TrafficShapingFilter.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.TrafficShapingFilter$1" sourceFile="TrafficShapingFilter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.TrafficShapingFilter$2" sourceFile="TrafficShapingFilter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.TrafficShapingFilter$3" sourceFile="TrafficShapingFilter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.TrafficShapingFilter$State" sourceFile="TrafficShapingFilter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.WriteFloodException" sourceFile="WriteFloodException.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.WriteThrottleFilter" sourceFile="WriteThrottleFilter.java" interface="false" size="245" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mina.filter.traffic.WriteThrottleFilter$1" sourceFile="WriteThrottleFilter.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.traffic.WriteThrottlePolicy" sourceFile="WriteThrottlePolicy.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.filter.util" total_bugs="0" total_types="5" total_size="163">
+      <ClassStats class="org.apache.mina.filter.util.CommonEventFilter" sourceFile="CommonEventFilter.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.util.ReferenceCountingFilter" sourceFile="ReferenceCountingFilter.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.util.SessionAttributeInitializingFilter" sourceFile="SessionAttributeInitializingFilter.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.util.WriteRequestFilter" sourceFile="WriteRequestFilter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.mina.filter.util.WriteRequestFilter$FilteredWriteRequest" sourceFile="WriteRequestFilter.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.handler.chain" total_bugs="1" total_types="8" total_size="226" priority_2="1">
+      <ClassStats class="org.apache.mina.handler.chain.ChainedIoHandler" sourceFile="ChainedIoHandler.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.chain.IoHandlerChain" sourceFile="IoHandlerChain.java" interface="false" size="148" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mina.handler.chain.IoHandlerChain$1" sourceFile="IoHandlerChain.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.chain.IoHandlerChain$2" sourceFile="IoHandlerChain.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.chain.IoHandlerChain$Entry" sourceFile="IoHandlerChain.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.chain.IoHandlerChain$Entry$1" sourceFile="IoHandlerChain.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.chain.IoHandlerCommand" sourceFile="IoHandlerCommand.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.chain.IoHandlerCommand$NextCommand" sourceFile="IoHandlerCommand.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.handler.demux" total_bugs="0" total_types="6" total_size="124">
+      <ClassStats class="org.apache.mina.handler.demux.DemuxingIoHandler" sourceFile="DemuxingIoHandler.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.demux.ExceptionHandler" sourceFile="ExceptionHandler.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.demux.ExceptionHandler$1" sourceFile="ExceptionHandler.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.demux.ExceptionHandler$2" sourceFile="ExceptionHandler.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.demux.MessageHandler" sourceFile="MessageHandler.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.demux.MessageHandler$1" sourceFile="MessageHandler.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.handler.multiton" total_bugs="0" total_types="4" total_size="76">
+      <ClassStats class="org.apache.mina.handler.multiton.SingleSessionIoHandler" sourceFile="SingleSessionIoHandler.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.multiton.SingleSessionIoHandlerAdapter" sourceFile="SingleSessionIoHandlerAdapter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.multiton.SingleSessionIoHandlerDelegate" sourceFile="SingleSessionIoHandlerDelegate.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.multiton.SingleSessionIoHandlerFactory" sourceFile="SingleSessionIoHandlerFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.handler.stream" total_bugs="0" total_types="4" total_size="191">
+      <ClassStats class="org.apache.mina.handler.stream.IoSessionInputStream" sourceFile="IoSessionInputStream.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.stream.IoSessionOutputStream" sourceFile="IoSessionOutputStream.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.stream.StreamIoHandler" sourceFile="StreamIoHandler.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.mina.handler.stream.StreamIoHandler$StreamIoException" sourceFile="StreamIoHandler.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.transport.socket" total_bugs="1" total_types="14" total_size="358" priority_2="1">
+      <ClassStats class="org.apache.mina.transport.socket.AbstractDatagramSessionConfig" sourceFile="AbstractDatagramSessionConfig.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.AbstractSocketSessionConfig" sourceFile="AbstractSocketSessionConfig.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.DatagramAcceptor" sourceFile="DatagramAcceptor.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.DatagramConnector" sourceFile="DatagramConnector.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.DatagramService" sourceFile="DatagramService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.DatagramSession" sourceFile="DatagramSession.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.DatagramSessionConfig" sourceFile="DatagramSessionConfig.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.DefaultDatagramSessionConfig" sourceFile="DefaultDatagramSessionConfig.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.DefaultSocketSessionConfig" sourceFile="DefaultSocketSessionConfig.java" interface="false" size="170" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mina.transport.socket.SocketAcceptor" sourceFile="SocketAcceptor.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.SocketConnector" sourceFile="SocketConnector.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.SocketService" sourceFile="SocketService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.SocketSession" sourceFile="SocketSession.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.SocketSessionConfig" sourceFile="SocketSessionConfig.java" interface="true" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.transport.socket.nio" total_bugs="1" total_types="20" total_size="787" priority_1="1">
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioDatagramAcceptor" sourceFile="NioDatagramAcceptor.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioDatagramAcceptor$1" sourceFile="NioDatagramAcceptor.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioDatagramAcceptor$DatagramChannelIterator" sourceFile="NioDatagramAcceptor.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioDatagramConnector" sourceFile="NioDatagramConnector.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioDatagramSession" sourceFile="NioDatagramSession.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioDatagramSession$1" sourceFile="NioDatagramSession.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioDatagramSession$SessionConfigImpl" sourceFile="NioDatagramSession.java" interface="false" size="61" bugs="1" priority_1="1"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioProcessor" sourceFile="NioProcessor.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioProcessor$1" sourceFile="NioProcessor.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioProcessor$IoSessionIterator" sourceFile="NioProcessor.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioSession" sourceFile="NioSession.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioSocketAcceptor" sourceFile="NioSocketAcceptor.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioSocketAcceptor$1" sourceFile="NioSocketAcceptor.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioSocketAcceptor$ServerSocketChannelIterator" sourceFile="NioSocketAcceptor.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioSocketConnector" sourceFile="NioSocketConnector.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioSocketConnector$1" sourceFile="NioSocketConnector.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioSocketConnector$SocketChannelIterator" sourceFile="NioSocketConnector.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioSocketSession" sourceFile="NioSocketSession.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioSocketSession$1" sourceFile="NioSocketSession.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.socket.nio.NioSocketSession$SessionConfigImpl" sourceFile="NioSocketSession.java" interface="false" size="95" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.transport.vmpipe" total_bugs="0" total_types="13" total_size="428">
+      <ClassStats class="org.apache.mina.transport.vmpipe.DefaultVmPipeSessionConfig" sourceFile="DefaultVmPipeSessionConfig.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipe" sourceFile="VmPipe.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeAcceptor" sourceFile="VmPipeAcceptor.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeAddress" sourceFile="VmPipeAddress.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeConnector" sourceFile="VmPipeConnector.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeConnector$1" sourceFile="VmPipeConnector.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeConnector$LocalAddressReclaimer" sourceFile="VmPipeConnector.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeFilterChain" sourceFile="VmPipeFilterChain.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeFilterChain$1" sourceFile="VmPipeFilterChain.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeFilterChain$VmPipeIoProcessor" sourceFile="VmPipeFilterChain.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeSession" sourceFile="VmPipeSession.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeSessionConfig" sourceFile="VmPipeSessionConfig.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.apache.mina.transport.vmpipe.VmPipeSessionImpl" sourceFile="VmPipeSessionImpl.java" interface="false" size="71" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.mina.util" total_bugs="3" total_types="14" total_size="754" priority_2="3">
+      <ClassStats class="org.apache.mina.util.AvailablePortFinder" sourceFile="AvailablePortFinder.java" interface="false" size="49" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.mina.util.CircularQueue" sourceFile="CircularQueue.java" interface="false" size="179" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.ConcurrentHashSet" sourceFile="ConcurrentHashSet.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.CopyOnWriteMap" sourceFile="CopyOnWriteMap.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.ExpirationListener" sourceFile="ExpirationListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.ExpiringMap" sourceFile="ExpiringMap.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.ExpiringMap$Expirer" sourceFile="ExpiringMap.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.ExpiringMap$ExpiringObject" sourceFile="ExpiringMap.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.IdentityHashSet" sourceFile="IdentityHashSet.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.Log4jXmlFormatter" sourceFile="Log4jXmlFormatter.java" interface="false" size="73" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.mina.util.MapBackedSet" sourceFile="MapBackedSet.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.NamePreservingRunnable" sourceFile="NamePreservingRunnable.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.SynchronizedQueue" sourceFile="SynchronizedQueue.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.apache.mina.util.Transform" sourceFile="Transform.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.ftp.server.codec" total_bugs="1" total_types="3" total_size="31" priority_2="1">
+      <ClassStats class="org.fabric3.ftp.server.codec.CodecFactory" sourceFile="CodecFactory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.codec.CodecFactory$1" sourceFile="CodecFactory.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.codec.CodecFactory$ResponseEncoder" sourceFile="CodecFactory.java" interface="false" size="12" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.ftp.server.data" total_bugs="0" total_types="3" total_size="48">
+      <ClassStats class="org.fabric3.ftp.server.data.ActiveDataConnection" sourceFile="ActiveDataConnection.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.data.DataConnection" sourceFile="DataConnection.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.data.PassiveDataConnection" sourceFile="PassiveDataConnection.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.ftp.server.ftplet" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="org.fabric3.ftp.server.ftplet.DefaultFtpLetContainer" sourceFile="DefaultFtpLetContainer.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.ftp.server.handler" total_bugs="0" total_types="6" total_size="131">
+      <ClassStats class="org.fabric3.ftp.server.handler.PassRequestHandler" sourceFile="PassRequestHandler.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.handler.PasvRequestHandler" sourceFile="PasvRequestHandler.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.handler.QuitRequestHandler" sourceFile="QuitRequestHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.handler.StorRequestHandler" sourceFile="StorRequestHandler.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.handler.SystRequestHandler" sourceFile="SystRequestHandler.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.handler.UserRequestHandler" sourceFile="UserRequestHandler.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.ftp.server.host" total_bugs="0" total_types="5" total_size="117">
+      <ClassStats class="org.fabric3.ftp.server.host.F3ExecutorService" sourceFile="F3ExecutorService.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.host.F3FtpHost" sourceFile="F3FtpHost.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.host.FtpHandler" sourceFile="FtpHandler.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.host.FtpHost" sourceFile="FtpHost.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.host.FtpHostMonitor" sourceFile="FtpHostMonitor.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.ftp.server.monitor" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="org.fabric3.ftp.server.monitor.FtpMonitor" sourceFile="FtpMonitor.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.ftp.server.passive" total_bugs="0" total_types="2" total_size="28">
+      <ClassStats class="org.fabric3.ftp.server.passive.PassiveConnectionService" sourceFile="PassiveConnectionService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.passive.PassiveConnectionServiceImpl" sourceFile="PassiveConnectionServiceImpl.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.ftp.server.protocol" total_bugs="0" total_types="6" total_size="88">
+      <ClassStats class="org.fabric3.ftp.server.protocol.DefaultRequest" sourceFile="DefaultRequest.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.protocol.DefaultResponse" sourceFile="DefaultResponse.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.protocol.FtpSession" sourceFile="FtpSession.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.protocol.Request" sourceFile="Request.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.protocol.RequestHandler" sourceFile="RequestHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.protocol.Response" sourceFile="Response.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.ftp.server.security" total_bugs="0" total_types="3" total_size="29">
+      <ClassStats class="org.fabric3.ftp.server.security.FileSystemUserManager" sourceFile="FileSystemUserManager.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.security.User" sourceFile="User.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.fabric3.ftp.server.security.UserManager" sourceFile="UserManager.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.slf4j" total_bugs="0" total_types="7" total_size="169">
+      <ClassStats class="org.slf4j.ILoggerFactory" sourceFile="ILoggerFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.slf4j.IMarkerFactory" sourceFile="IMarkerFactory.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.slf4j.Logger" sourceFile="Logger.java" interface="true" size="63" bugs="0"/>
+      <ClassStats class="org.slf4j.LoggerFactory" sourceFile="LoggerFactory.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.slf4j.MDC" sourceFile="MDC.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.slf4j.Marker" sourceFile="Marker.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.slf4j.MarkerFactory" sourceFile="MarkerFactory.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.slf4j.helpers" total_bugs="1" total_types="7" total_size="301" priority_2="1">
+      <ClassStats class="org.slf4j.helpers.BasicMDCAdapter" sourceFile="BasicMDCAdapter.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.slf4j.helpers.BasicMarker" sourceFile="BasicMarker.java" interface="false" size="78" bugs="1" priority_2="1"/>
+      <ClassStats class="org.slf4j.helpers.BasicMarkerFactory" sourceFile="BasicMarkerFactory.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.slf4j.helpers.MarkerIgnoringBase" sourceFile="MarkerIgnoringBase.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.slf4j.helpers.MessageFormatter" sourceFile="MessageFormatter.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.slf4j.helpers.NOPMakerAdapter" sourceFile="NOPMakerAdapter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.slf4j.helpers.Util" sourceFile="Util.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.slf4j.impl" total_bugs="0" total_types="5" total_size="245">
+      <ClassStats class="org.slf4j.impl.JDK14LoggerAdapter" sourceFile="JDK14LoggerAdapter.java" interface="false" size="182" bugs="0"/>
+      <ClassStats class="org.slf4j.impl.JDK14LoggerFactory" sourceFile="JDK14LoggerFactory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.slf4j.impl.StaticLoggerBinder" sourceFile="StaticLoggerBinder.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.slf4j.impl.StaticMDCBinder" sourceFile="StaticMDCBinder.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.slf4j.impl.StaticMarkerBinder" sourceFile="StaticMarkerBinder.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.slf4j.spi" total_bugs="0" total_types="4" total_size="18">
+      <ClassStats class="org.slf4j.spi.LocationAwareLogger" sourceFile="LocationAwareLogger.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.slf4j.spi.LoggerFactoryBinder" sourceFile="LoggerFactoryBinder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.slf4j.spi.MDCAdapter" sourceFile="MDCAdapter.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.slf4j.spi.MarkerFactoryBinder" sourceFile="MarkerFactoryBinder.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="2580" invocations="3415" avgMicrosecondsPerInvocation="755" maxMicrosecondsPerInvocation="108478" standardDeviationMircosecondsPerInvocation="3763"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="2137" invocations="3298" avgMicrosecondsPerInvocation="647" maxMicrosecondsPerInvocation="50034" standardDeviationMircosecondsPerInvocation="2847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1930" invocations="3370" avgMicrosecondsPerInvocation="572" maxMicrosecondsPerInvocation="53411" standardDeviationMircosecondsPerInvocation="2677"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1903" invocations="3535" avgMicrosecondsPerInvocation="538" maxMicrosecondsPerInvocation="63590" standardDeviationMircosecondsPerInvocation="2919"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1514" invocations="3476" avgMicrosecondsPerInvocation="435" maxMicrosecondsPerInvocation="42669" standardDeviationMircosecondsPerInvocation="1987"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1392" invocations="724" avgMicrosecondsPerInvocation="1922" maxMicrosecondsPerInvocation="63888" standardDeviationMircosecondsPerInvocation="5649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1362" invocations="1382" avgMicrosecondsPerInvocation="986" maxMicrosecondsPerInvocation="78209" standardDeviationMircosecondsPerInvocation="4040"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1247" invocations="724" avgMicrosecondsPerInvocation="1722" maxMicrosecondsPerInvocation="39262" standardDeviationMircosecondsPerInvocation="4861"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1125" invocations="2731" avgMicrosecondsPerInvocation="412" maxMicrosecondsPerInvocation="52327" standardDeviationMircosecondsPerInvocation="2155"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="924" invocations="3415" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="58251" standardDeviationMircosecondsPerInvocation="1425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="789" invocations="720" avgMicrosecondsPerInvocation="1096" maxMicrosecondsPerInvocation="114567" standardDeviationMircosecondsPerInvocation="5919"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="651" invocations="3415" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="86578" standardDeviationMircosecondsPerInvocation="2256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="570" invocations="4211" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="32558" standardDeviationMircosecondsPerInvocation="805"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="536" invocations="1386" avgMicrosecondsPerInvocation="387" maxMicrosecondsPerInvocation="50356" standardDeviationMircosecondsPerInvocation="2343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="483" invocations="430" avgMicrosecondsPerInvocation="1123" maxMicrosecondsPerInvocation="104793" standardDeviationMircosecondsPerInvocation="6135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="440" invocations="41961" avgMicrosecondsPerInvocation="10" maxMicrosecondsPerInvocation="91328" standardDeviationMircosecondsPerInvocation="485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="414" invocations="4150" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="44142" standardDeviationMircosecondsPerInvocation="1055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="397" invocations="434" avgMicrosecondsPerInvocation="915" maxMicrosecondsPerInvocation="43584" standardDeviationMircosecondsPerInvocation="3757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="385" invocations="436" avgMicrosecondsPerInvocation="883" maxMicrosecondsPerInvocation="79485" standardDeviationMircosecondsPerInvocation="4507"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="378" invocations="435" avgMicrosecondsPerInvocation="869" maxMicrosecondsPerInvocation="216501" standardDeviationMircosecondsPerInvocation="10520"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="346" invocations="724" avgMicrosecondsPerInvocation="477" maxMicrosecondsPerInvocation="17913" standardDeviationMircosecondsPerInvocation="1570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="312" invocations="3298" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="26719" standardDeviationMircosecondsPerInvocation="835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="309" invocations="724" avgMicrosecondsPerInvocation="427" maxMicrosecondsPerInvocation="53571" standardDeviationMircosecondsPerInvocation="2714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="299" invocations="436" avgMicrosecondsPerInvocation="686" maxMicrosecondsPerInvocation="31981" standardDeviationMircosecondsPerInvocation="2413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="292" invocations="819" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="39958" standardDeviationMircosecondsPerInvocation="2169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="290" invocations="436" avgMicrosecondsPerInvocation="666" maxMicrosecondsPerInvocation="70667" standardDeviationMircosecondsPerInvocation="4183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="279" invocations="724" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="22760" standardDeviationMircosecondsPerInvocation="1730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnrelatedTypesInGenericContainer" totalMilliseconds="273" invocations="415" avgMicrosecondsPerInvocation="660" maxMicrosecondsPerInvocation="57920" standardDeviationMircosecondsPerInvocation="3709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="272" invocations="436" avgMicrosecondsPerInvocation="625" maxMicrosecondsPerInvocation="46006" standardDeviationMircosecondsPerInvocation="2810"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="269" invocations="434" avgMicrosecondsPerInvocation="621" maxMicrosecondsPerInvocation="42069" standardDeviationMircosecondsPerInvocation="2690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="267" invocations="436" avgMicrosecondsPerInvocation="612" maxMicrosecondsPerInvocation="28489" standardDeviationMircosecondsPerInvocation="2189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="260" invocations="724" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="28086" standardDeviationMircosecondsPerInvocation="1772"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="249" invocations="3075" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="25868" standardDeviationMircosecondsPerInvocation="607"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="243" invocations="724" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="108908" standardDeviationMircosecondsPerInvocation="4189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="240" invocations="1309" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="41462" standardDeviationMircosecondsPerInvocation="1424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="230" invocations="435" avgMicrosecondsPerInvocation="529" maxMicrosecondsPerInvocation="25112" standardDeviationMircosecondsPerInvocation="1988"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

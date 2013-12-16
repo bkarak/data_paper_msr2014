@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1308671718000" analysisTimestamp="1360878887594" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/jonas-services-datasource/5.3.0-M3/jonas-services-datasource-5.3.0-M3.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.jonas.datasource.deployer.impl.DatasourceDeployer">
+      <SourceLine classname="org.ow2.jonas.datasource.deployer.impl.DatasourceDeployer" start="66" end="416" sourcefile="DatasourceDeployer.java" sourcepath="org/ow2/jonas/datasource/deployer/impl/DatasourceDeployer.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.datasource.deployer.impl.DatasourceDeployer" name="initWorkingDirectory" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.datasource.deployer.impl.DatasourceDeployer" start="397" end="401" startBytecode="0" endBytecode="132" sourcefile="DatasourceDeployer.java" sourcepath="org/ow2/jonas/datasource/deployer/impl/DatasourceDeployer.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.datasource.deployer.impl.DatasourceDeployer" start="399" end="399" startBytecode="74" endBytecode="74" sourcefile="DatasourceDeployer.java" sourcepath="org/ow2/jonas/datasource/deployer/impl/DatasourceDeployer.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.ow2.jonas.datasource.reader.DatasourceValidator">
+      <SourceLine classname="org.ow2.jonas.datasource.reader.DatasourceValidator" start="51" end="84" sourcefile="DatasourceValidator.java" sourcepath="org/ow2/jonas/datasource/reader/DatasourceValidator.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.datasource.reader.DatasourceValidator" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.datasource.reader.DatasourceValidator" start="67" end="84" startBytecode="0" endBytecode="247" sourcefile="DatasourceValidator.java" sourcepath="org/ow2/jonas/datasource/reader/DatasourceValidator.java"/>
+    </Method>
+    <LocalVariable name="source" register="4" pc="42" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="javax.xml.transform.stream.StreamSource" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="javax.xml.transform.stream.StreamSource" start="80" end="82" startBytecode="0" endBytecode="41" sourcefile="StreamSource.java" sourcepath="javax/xml/transform/stream/StreamSource.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.datasource.reader.DatasourceValidator" start="75" end="75" startBytecode="44" endBytecode="44" sourcefile="DatasourceValidator.java" sourcepath="org/ow2/jonas/datasource/reader/DatasourceValidator.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="18">
+    <MissingClass>org.ow2.jonas.Version</MissingClass>
+    <MissingClass>org.ow2.jonas.generators.raconfig.RAConfig</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.work.AbsCleanTask</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.work.DeployerLog</MissingClass>
+    <MissingClass>org.ow2.jonas.properties.ServerProperties</MissingClass>
+    <MissingClass>org.ow2.jonas.workcleaner.LogEntry</MissingClass>
+    <MissingClass>org.ow2.jonas.workcleaner.WorkCleanerService</MissingClass>
+    <MissingClass>org.ow2.util.archive.api.IArchive</MissingClass>
+    <MissingClass>org.ow2.util.archive.impl.ArchiveManager</MissingClass>
+    <MissingClass>org.ow2.util.ee.deploy.api.deployable.IDeployable</MissingClass>
+    <MissingClass>org.ow2.util.ee.deploy.api.deployer.DeployerException</MissingClass>
+    <MissingClass>org.ow2.util.ee.deploy.api.deployer.IDeployerManager</MissingClass>
+    <MissingClass>org.ow2.util.ee.deploy.impl.deployable.AbsDeployable</MissingClass>
+    <MissingClass>org.ow2.util.ee.deploy.impl.helper.DeployableHelper</MissingClass>
+    <MissingClass>org.ow2.util.log.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+    <MissingClass>org.ow2.util.plan.deploy.deployable.api.factory.XmlFileDeployableFactory</MissingClass>
+    <MissingClass>org.ow2.util.url.URLUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 21 Jun 2011 18:55:18 +0300" total_classes="16" referenced_classes="60" total_bugs="2" total_size="520" num_packages="7" vm_version="20.4-b02-402" cpu_seconds="16.79" clock_seconds="14.40" peak_mbytes="60.58" alloc_mbytes="763.88" gc_seconds="0.14" priority_2="2">
+    <PackageStats package="org.ow2.jonas.datasource.binding" total_bugs="0" total_types="6" total_size="162">
+      <ClassStats class="org.ow2.jonas.datasource.binding.ConnectionManagerConfigurationType" sourceFile="ConnectionManagerConfigurationType.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.datasource.binding.DatasourceConfigurationType" sourceFile="DatasourceConfigurationType.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.datasource.binding.DatasourceType" sourceFile="DatasourceType.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.datasource.binding.Datasources" sourceFile="Datasources.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.datasource.binding.ObjectFactory" sourceFile="ObjectFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.datasource.binding.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.datasource.deploy.deployable.api" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="org.ow2.jonas.datasource.deploy.deployable.api.DatasourceDeployable" sourceFile="DatasourceDeployable.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.datasource.deploy.deployable.impl" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="org.ow2.jonas.datasource.deploy.deployable.impl.DatasourceDeployableImpl" sourceFile="DatasourceDeployableImpl.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.datasource.deployer" total_bugs="0" total_types="3" total_size="60">
+      <ClassStats class="org.ow2.jonas.datasource.deployer.DatasourceDeployableRegistration" sourceFile="DatasourceDeployableRegistration.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.datasource.deployer.JonasDatasourceCleanTask" sourceFile="JonasDatasourceCleanTask.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.datasource.deployer.JonasDatasourceDeployer" sourceFile="JonasDatasourceDeployer.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.datasource.deployer.api" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="org.ow2.jonas.datasource.deployer.api.IDatasourceDeployer" sourceFile="IDatasourceDeployer.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.datasource.deployer.impl" total_bugs="1" total_types="1" total_size="160" priority_2="1">
+      <ClassStats class="org.ow2.jonas.datasource.deployer.impl.DatasourceDeployer" sourceFile="DatasourceDeployer.java" interface="false" size="160" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.datasource.reader" total_bugs="1" total_types="3" total_size="119" priority_2="1">
+      <ClassStats class="org.ow2.jonas.datasource.reader.DatasourceValidator" sourceFile="DatasourceValidator.java" interface="false" size="19" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jonas.datasource.reader.DatasourceXmlReader" sourceFile="DatasourceXmlReader.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.datasource.reader.IDatasourceXmlReader" sourceFile="IDatasourceXmlReader.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1313" invocations="60" avgMicrosecondsPerInvocation="21886" maxMicrosecondsPerInvocation="323063" standardDeviationMircosecondsPerInvocation="50304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1237" invocations="470" avgMicrosecondsPerInvocation="2631" maxMicrosecondsPerInvocation="86872" standardDeviationMircosecondsPerInvocation="7775"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1052" invocations="60" avgMicrosecondsPerInvocation="17534" maxMicrosecondsPerInvocation="219857" standardDeviationMircosecondsPerInvocation="38581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="612" invocations="98" avgMicrosecondsPerInvocation="6245" maxMicrosecondsPerInvocation="137365" standardDeviationMircosecondsPerInvocation="19503"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="548" invocations="100" avgMicrosecondsPerInvocation="5483" maxMicrosecondsPerInvocation="186058" standardDeviationMircosecondsPerInvocation="21672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="517" invocations="60" avgMicrosecondsPerInvocation="8632" maxMicrosecondsPerInvocation="121291" standardDeviationMircosecondsPerInvocation="19293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="488" invocations="100" avgMicrosecondsPerInvocation="4880" maxMicrosecondsPerInvocation="160198" standardDeviationMircosecondsPerInvocation="19268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="481" invocations="260" avgMicrosecondsPerInvocation="1850" maxMicrosecondsPerInvocation="39253" standardDeviationMircosecondsPerInvocation="5344"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="413" invocations="99" avgMicrosecondsPerInvocation="4180" maxMicrosecondsPerInvocation="108737" standardDeviationMircosecondsPerInvocation="13028"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="371" invocations="100" avgMicrosecondsPerInvocation="3716" maxMicrosecondsPerInvocation="115772" standardDeviationMircosecondsPerInvocation="13079"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="351" invocations="100" avgMicrosecondsPerInvocation="3514" maxMicrosecondsPerInvocation="75378" standardDeviationMircosecondsPerInvocation="10946"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="334" invocations="60" avgMicrosecondsPerInvocation="5576" maxMicrosecondsPerInvocation="64175" standardDeviationMircosecondsPerInvocation="11493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="305" invocations="106" avgMicrosecondsPerInvocation="2878" maxMicrosecondsPerInvocation="222630" standardDeviationMircosecondsPerInvocation="22134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="298" invocations="60" avgMicrosecondsPerInvocation="4969" maxMicrosecondsPerInvocation="105509" standardDeviationMircosecondsPerInvocation="15359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="208" invocations="16" avgMicrosecondsPerInvocation="13012" maxMicrosecondsPerInvocation="107088" standardDeviationMircosecondsPerInvocation="29659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="203" invocations="474" avgMicrosecondsPerInvocation="429" maxMicrosecondsPerInvocation="70049" standardDeviationMircosecondsPerInvocation="3674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="201" invocations="400" avgMicrosecondsPerInvocation="502" maxMicrosecondsPerInvocation="46511" standardDeviationMircosecondsPerInvocation="3125"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="190" invocations="92" avgMicrosecondsPerInvocation="2071" maxMicrosecondsPerInvocation="38033" standardDeviationMircosecondsPerInvocation="6284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="178" invocations="48" avgMicrosecondsPerInvocation="3726" maxMicrosecondsPerInvocation="48725" standardDeviationMircosecondsPerInvocation="9100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="156" invocations="98" avgMicrosecondsPerInvocation="1599" maxMicrosecondsPerInvocation="42825" standardDeviationMircosecondsPerInvocation="6276"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="153" invocations="16" avgMicrosecondsPerInvocation="9590" maxMicrosecondsPerInvocation="52620" standardDeviationMircosecondsPerInvocation="18755"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

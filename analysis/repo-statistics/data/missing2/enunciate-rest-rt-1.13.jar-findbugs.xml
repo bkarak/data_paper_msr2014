@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1247685084000" analysisTimestamp="1360919114501" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/enunciate/enunciate-rest-rt/1.13/enunciate-rest-rt-1.13.jar</Jar>
+  </Project>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.codehaus.enunciate.modules.rest.ContentTypeSupport">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.ContentTypeSupport" start="34" end="106" sourcefile="ContentTypeSupport.java" sourcepath="org/codehaus/enunciate/modules/rest/ContentTypeSupport.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.rest.ContentTypeSupport" name="&lt;init&gt;" signature="(Ljava/util/Map;Ljava/util/Map;)V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.ContentTypeSupport" start="34" end="67" startBytecode="0" endBytecode="502" sourcefile="ContentTypeSupport.java" sourcepath="org/codehaus/enunciate/modules/rest/ContentTypeSupport.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.modules.rest.ContentTypeSupport" start="61" end="61" startBytecode="190" endBytecode="190" sourcefile="ContentTypeSupport.java" sourcepath="org/codehaus/enunciate/modules/rest/ContentTypeSupport.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.codehaus.enunciate.modules.rest.RESTResource">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.RESTResource" start="36" end="258" sourcefile="RESTResource.java" sourcepath="org/codehaus/enunciate/modules/rest/RESTResource.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.rest.RESTResource" name="compareTo" signature="(Lorg/codehaus/enunciate/modules/rest/RESTResource;)I" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.RESTResource" start="217" end="217" startBytecode="0" endBytecode="63" sourcefile="RESTResource.java" sourcepath="org/codehaus/enunciate/modules/rest/RESTResource.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" start="33" end="270" sourcefile="RESTResourceFactory.java" sourcepath="org/codehaus/enunciate/modules/rest/RESTResourceFactory.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" name="getEndpointClasses" signature="()[Ljava/lang/Class;" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" start="260" end="260" startBytecode="0" endBytecode="46" sourcefile="RESTResourceFactory.java" sourcepath="org/codehaus/enunciate/modules/rest/RESTResourceFactory.java"/>
+    </Method>
+    <Field classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" name="endpointClasses" signature="[Ljava/lang/Class;" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" sourcefile="RESTResourceFactory.java" sourcepath="org/codehaus/enunciate/modules/rest/RESTResourceFactory.java"/>
+    </Field>
+    <SourceLine classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" start="260" end="260" startBytecode="4" endBytecode="4" sourcefile="RESTResourceFactory.java" sourcepath="org/codehaus/enunciate/modules/rest/RESTResourceFactory.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" start="33" end="270" sourcefile="RESTResourceFactory.java" sourcepath="org/codehaus/enunciate/modules/rest/RESTResourceFactory.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" name="setEndpointClasses" signature="([Ljava/lang/Class;)V" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" start="269" end="270" startBytecode="0" endBytecode="61" sourcefile="RESTResourceFactory.java" sourcepath="org/codehaus/enunciate/modules/rest/RESTResourceFactory.java"/>
+    </Method>
+    <Field classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" name="endpointClasses" signature="[Ljava/lang/Class;" isStatic="false">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" sourcefile="RESTResourceFactory.java" sourcepath="org/codehaus/enunciate/modules/rest/RESTResourceFactory.java"/>
+    </Field>
+    <LocalVariable name="endpointClasses" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.codehaus.enunciate.modules.rest.RESTResourceFactory" start="269" end="269" startBytecode="2" endBytecode="2" sourcefile="RESTResourceFactory.java" sourcepath="org/codehaus/enunciate/modules/rest/RESTResourceFactory.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.codehaus.enunciate.modules.rest.json.JsonUtil">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.json.JsonUtil" start="40" end="115" sourcefile="JsonUtil.java" sourcepath="org/codehaus/enunciate/modules/rest/json/JsonUtil.java"/>
+    </Class>
+    <Method classname="org.codehaus.enunciate.modules.rest.json.JsonUtil" name="convertXMLStreamToJSON" signature="(Ljavax/xml/stream/XMLEventReader;Ljavax/xml/stream/XMLStreamWriter;)V" isStatic="true">
+      <SourceLine classname="org.codehaus.enunciate.modules.rest.json.JsonUtil" start="64" end="115" startBytecode="0" endBytecode="588" sourcefile="JsonUtil.java" sourcepath="org/codehaus/enunciate/modules/rest/json/JsonUtil.java"/>
+    </Method>
+    <SourceLine classname="org.codehaus.enunciate.modules.rest.json.JsonUtil" start="66" end="111" startBytecode="25" endBytecode="320" sourcefile="JsonUtil.java" sourcepath="org/codehaus/enunciate/modules/rest/json/JsonUtil.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="49">
+    <MissingClass>com.sun.xml.bind.marshaller.NamespacePrefixMapper</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.XStream</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.io.json.JsonHierarchicalStreamDriver</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.ConvertUtils</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.FileItemIterator</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.FileItemStream</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.ProgressListener</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.servlet.ServletFileUpload</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.MimeType</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.Adjective</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.ContentType</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.ContentTypeParameter</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.ContextParameter</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.JSONP</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.Noun</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.NounContext</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.NounValue</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.ProperNoun</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.RESTError</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.RESTSeeAlso</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.Verb</MissingClass>
+    <MissingClass>org.codehaus.enunciate.rest.annotations.VerbType</MissingClass>
+    <MissingClass>org.codehaus.jettison.badgerfish.BadgerFishXMLInputFactory</MissingClass>
+    <MissingClass>org.codehaus.jettison.badgerfish.BadgerFishXMLOutputFactory</MissingClass>
+    <MissingClass>org.codehaus.jettison.mapped.MappedXMLInputFactory</MissingClass>
+    <MissingClass>org.codehaus.jettison.mapped.MappedXMLOutputFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanFactoryUtils</MissingClass>
+    <MissingClass>org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextException</MissingClass>
+    <MissingClass>org.springframework.context.support.ApplicationObjectSupport</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+    <MissingClass>org.springframework.validation.BindException</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.validation.ObjectError</MissingClass>
+    <MissingClass>org.springframework.web.bind.ServletRequestDataBinder</MissingClass>
+    <MissingClass>org.springframework.web.context.ServletContextAware</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartHttpServletRequest</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.AbstractController</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 15 Jul 2009 22:11:24 +0300" total_classes="43" referenced_classes="147" total_bugs="5" total_size="1473" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="42.27" clock_seconds="23.04" peak_mbytes="76.82" alloc_mbytes="763.88" gc_seconds="0.32" priority_2="5">
+    <PackageStats package="org.codehaus.enunciate.modules.rest" total_bugs="4" total_types="30" total_size="1160" priority_2="4">
+      <ClassStats class="org.codehaus.enunciate.modules.rest.AbstractContentTypeHandler" sourceFile="AbstractContentTypeHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.ContentTypeSupport" sourceFile="ContentTypeSupport.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.ConverterSupport" sourceFile="ConverterSupport.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.DefaultConverter" sourceFile="DefaultConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.DefaultMultipartRequestHandler" sourceFile="DefaultMultipartRequestHandler.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.KeyParameterConversionException" sourceFile="KeyParameterConversionException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.MethodNotAllowedException" sourceFile="MethodNotAllowedException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.MissingParameterException" sourceFile="MissingParameterException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.MultipartFileDataSource" sourceFile="MultipartFileDataSource.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.MultipartProgressListenerFactory" sourceFile="MultipartProgressListenerFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.MultipartRequestHandler" sourceFile="MultipartRequestHandler.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.NamespacePrefixLookup" sourceFile="NamespacePrefixLookup.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.ParameterConversionException" sourceFile="ParameterConversionException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.RESTContentTypeRoutingController" sourceFile="RESTContentTypeRoutingController.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.RESTExceptionHandler" sourceFile="RESTExceptionHandler.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.RESTOperation" sourceFile="RESTOperation.java" interface="false" size="279" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.RESTRequestContentTypeHandler" sourceFile="RESTRequestContentTypeHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.RESTRequestDataSource" sourceFile="RESTRequestDataSource.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.RESTResource" sourceFile="RESTResource.java" interface="false" size="84" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.RESTResource$1" sourceFile="RESTResource.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.RESTResourceExceptionHandler" sourceFile="RESTResourceExceptionHandler.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.RESTResourceExporter" sourceFile="RESTResourceExporter.java" interface="false" size="191" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.RESTResourceFactory" sourceFile="RESTResourceFactory.java" interface="false" size="110" bugs="2" priority_2="2"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.StreamingFileItemDataSource" sourceFile="StreamingFileItemDataSource.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.StreamingMultipartException" sourceFile="StreamingMultipartException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.StreamingMultipartRequestHandler" sourceFile="StreamingMultipartRequestHandler.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.StreamingMultipartRequestHandler$StreamingMultipartCollection" sourceFile="StreamingMultipartRequestHandler.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.StreamingMultipartRequestHandler$StreamingMultipartCollection$StreamingMultipartIterator" sourceFile="StreamingMultipartRequestHandler.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.StreamingMultipartRequestHandler$StreamingMultipartCollection$StreamingMultipartIterator$FileItemStreamDataSource" sourceFile="StreamingMultipartRequestHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.StreamingMultipartRequestHandler$StreamingMultipartCollection$StreamingMultipartIterator$FileItemStreamDataSource$ProgressAwareInputStream" sourceFile="StreamingMultipartRequestHandler.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.codehaus.enunciate.modules.rest.json" total_bugs="1" total_types="9" total_size="184" priority_2="1">
+      <ClassStats class="org.codehaus.enunciate.modules.rest.json.JsonConfiguration" sourceFile="JsonConfiguration.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.json.JsonContentHandler" sourceFile="JsonContentHandler.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.json.JsonContentHandler$1" sourceFile="JsonContentHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.json.JsonContentHandler$2" sourceFile="JsonContentHandler.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.json.JsonPHandler" sourceFile="JsonPHandler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.json.JsonSerializable" sourceFile="JsonSerializable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.json.JsonSerializationMethod" sourceFile="JsonSerializationMethod.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.json.JsonUtil" sourceFile="JsonUtil.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.json.XStreamReferenceAction" sourceFile="XStreamReferenceAction.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.codehaus.enunciate.modules.rest.xml" total_bugs="0" total_types="4" total_size="129">
+      <ClassStats class="org.codehaus.enunciate.modules.rest.xml.JaxbXmlContentHandler" sourceFile="JaxbXmlContentHandler.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.xml.PrefixMapper" sourceFile="PrefixMapper.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.xml.RESTAttachmentMarshaller" sourceFile="RESTAttachmentMarshaller.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.codehaus.enunciate.modules.rest.xml.RESTAttachmentUnmarshaller" sourceFile="RESTAttachmentUnmarshaller.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="2658" invocations="232" avgMicrosecondsPerInvocation="11460" maxMicrosecondsPerInvocation="976112" standardDeviationMircosecondsPerInvocation="84648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="2038" invocations="230" avgMicrosecondsPerInvocation="8861" maxMicrosecondsPerInvocation="742666" standardDeviationMircosecondsPerInvocation="67427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1864" invocations="222" avgMicrosecondsPerInvocation="8397" maxMicrosecondsPerInvocation="980623" standardDeviationMircosecondsPerInvocation="66716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1731" invocations="223" avgMicrosecondsPerInvocation="7762" maxMicrosecondsPerInvocation="1046833" standardDeviationMircosecondsPerInvocation="70581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1211" invocations="717" avgMicrosecondsPerInvocation="1688" maxMicrosecondsPerInvocation="70895" standardDeviationMircosecondsPerInvocation="5701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1094" invocations="147" avgMicrosecondsPerInvocation="7447" maxMicrosecondsPerInvocation="222675" standardDeviationMircosecondsPerInvocation="23207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1012" invocations="147" avgMicrosecondsPerInvocation="6884" maxMicrosecondsPerInvocation="164782" standardDeviationMircosecondsPerInvocation="21386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="980" invocations="220" avgMicrosecondsPerInvocation="4457" maxMicrosecondsPerInvocation="453314" standardDeviationMircosecondsPerInvocation="30897"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="720" invocations="151" avgMicrosecondsPerInvocation="4773" maxMicrosecondsPerInvocation="439735" standardDeviationMircosecondsPerInvocation="36204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="574" invocations="223" avgMicrosecondsPerInvocation="2576" maxMicrosecondsPerInvocation="214493" standardDeviationMircosecondsPerInvocation="15360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="455" invocations="507" avgMicrosecondsPerInvocation="899" maxMicrosecondsPerInvocation="44480" standardDeviationMircosecondsPerInvocation="3377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="437" invocations="147" avgMicrosecondsPerInvocation="2976" maxMicrosecondsPerInvocation="55401" standardDeviationMircosecondsPerInvocation="8615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="392" invocations="147" avgMicrosecondsPerInvocation="2668" maxMicrosecondsPerInvocation="57168" standardDeviationMircosecondsPerInvocation="7774"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="349" invocations="223" avgMicrosecondsPerInvocation="1567" maxMicrosecondsPerInvocation="180781" standardDeviationMircosecondsPerInvocation="12465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="270" invocations="43" avgMicrosecondsPerInvocation="6282" maxMicrosecondsPerInvocation="234563" standardDeviationMircosecondsPerInvocation="35277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="243" invocations="215" avgMicrosecondsPerInvocation="1134" maxMicrosecondsPerInvocation="94822" standardDeviationMircosecondsPerInvocation="7036"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

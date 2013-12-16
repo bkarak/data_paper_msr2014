@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1225361917000" analysisTimestamp="1360893847773" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/bundles/util-plan-fetcher-impl-maven2/1.0.9/util-plan-fetcher-impl-maven2-1.0.9.jar</Jar>
+  </Project>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher">
+      <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="51" end="234" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java"/>
+    </Class>
+    <Method classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" name="resolveArtifact" signature="(Lorg/ow2/util/plan/bindings/repository/Repository;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="172" end="227" startBytecode="0" endBytecode="766" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java"/>
+    </Method>
+    <LocalVariable name="repositoryURL" register="7" pc="81" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="184" end="184" startBytecode="83" endBytecode="83" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="180" end="180" startBytecode="41" endBytecode="41" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher">
+      <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="51" end="234" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java"/>
+    </Class>
+    <Method classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" name="resolveArtifact" signature="(Lorg/ow2/util/plan/bindings/repository/Repository;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="172" end="227" startBytecode="0" endBytecode="766" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java"/>
+    </Method>
+    <LocalVariable name="repositoryURL" register="7" pc="16" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="184" end="184" startBytecode="83" endBytecode="83" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="172" end="172" startBytecode="0" endBytecode="0" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher">
+      <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="51" end="234" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java"/>
+    </Class>
+    <Method classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" name="resolveArtifact" signature="(Lorg/ow2/util/plan/bindings/repository/Repository;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="172" end="227" startBytecode="0" endBytecode="766" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1181" end="1195" startBytecode="0" endBytecode="138" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="197" end="197" startBytecode="222" endBytecode="222" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher">
+      <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="51" end="234" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java"/>
+    </Class>
+    <Method classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" name="resolveArtifact" signature="(Lorg/ow2/util/plan/bindings/repository/Repository;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="172" end="227" startBytecode="0" endBytecode="766" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java"/>
+    </Method>
+    <Method classname="java.io.File" name="setLastModified" signature="(J)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1258" end="1263" startBytecode="0" endBytecode="80" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" start="212" end="212" startBytecode="263" endBytecode="263" sourcefile="Maven2ResourceFetcher.java" sourcepath="org/ow2/util/plan/fetcher/impl/maven2/Maven2ResourceFetcher.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="18">
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceEvent</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceRegistration</MissingClass>
+    <MissingClass>org.ow2.util.file.FileUtils</MissingClass>
+    <MissingClass>org.ow2.util.log.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+    <MissingClass>org.ow2.util.plan.bindings.deploymentplan.DeploymentHelper</MissingClass>
+    <MissingClass>org.ow2.util.plan.bindings.deploymentplan.DeploymentPlanFragment</MissingClass>
+    <MissingClass>org.ow2.util.plan.bindings.deploymentplan.maven2.Maven2Deployment</MissingClass>
+    <MissingClass>org.ow2.util.plan.bindings.exceptions.InvalidDeploymentException</MissingClass>
+    <MissingClass>org.ow2.util.plan.bindings.repository.Repository</MissingClass>
+    <MissingClass>org.ow2.util.plan.bindings.repository.RepositoryKind</MissingClass>
+    <MissingClass>org.ow2.util.plan.fetcher.api.exceptions.FetcherException</MissingClass>
+    <MissingClass>org.ow2.util.plan.fetcher.api.exceptions.ResourceFetcherNotResolvedException</MissingClass>
+    <MissingClass>org.ow2.util.plan.fetcher.api.exceptions.ResourceNotFoundException</MissingClass>
+    <MissingClass>org.ow2.util.plan.fetcher.impl.AbsResourceFetcherFactoryImpl</MissingClass>
+    <MissingClass>org.ow2.util.plan.fetcher.impl.AbsResourceFetcherImpl</MissingClass>
+    <MissingClass>org.ow2.util.plan.repository.api.IRepositoryManager</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 30 Oct 2008 12:18:37 +0200" total_classes="4" referenced_classes="22" total_bugs="4" total_size="153" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="7.92" clock_seconds="4.18" peak_mbytes="54.95" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="4">
+    <PackageStats package="org.ow2.util.plan.fetcher.impl.maven2" total_bugs="4" total_types="3" total_size="114" priority_2="4">
+      <ClassStats class="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcher" sourceFile="Maven2ResourceFetcher.java" interface="false" size="86" bugs="4" priority_2="4"/>
+      <ClassStats class="org.ow2.util.plan.fetcher.impl.maven2.Maven2ResourceFetcherFactory" sourceFile="Maven2ResourceFetcherFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.ow2.util.plan.fetcher.impl.maven2.Maven2Utils" sourceFile="Maven2Utils.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.util.plan.fetcher.impl.maven2.activator" total_bugs="0" total_types="1" total_size="39">
+      <ClassStats class="org.ow2.util.plan.fetcher.impl.maven2.activator.Maven2FetcherActivator" sourceFile="Maven2FetcherActivator.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="515" invocations="366" avgMicrosecondsPerInvocation="1408" maxMicrosecondsPerInvocation="40993" standardDeviationMircosecondsPerInvocation="3521"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="237" invocations="22" avgMicrosecondsPerInvocation="10801" maxMicrosecondsPerInvocation="41613" standardDeviationMircosecondsPerInvocation="15194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="225" invocations="22" avgMicrosecondsPerInvocation="10252" maxMicrosecondsPerInvocation="50809" standardDeviationMircosecondsPerInvocation="14224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="139" invocations="23" avgMicrosecondsPerInvocation="6068" maxMicrosecondsPerInvocation="73067" standardDeviationMircosecondsPerInvocation="15196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="131" invocations="22" avgMicrosecondsPerInvocation="5985" maxMicrosecondsPerInvocation="24567" standardDeviationMircosecondsPerInvocation="7851"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="99" invocations="22" avgMicrosecondsPerInvocation="4539" maxMicrosecondsPerInvocation="46329" standardDeviationMircosecondsPerInvocation="10098"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="98" invocations="21" avgMicrosecondsPerInvocation="4713" maxMicrosecondsPerInvocation="43242" standardDeviationMircosecondsPerInvocation="10098"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="90" invocations="21" avgMicrosecondsPerInvocation="4301" maxMicrosecondsPerInvocation="26052" standardDeviationMircosecondsPerInvocation="7580"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="90" invocations="370" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="52754" standardDeviationMircosecondsPerInvocation="2734"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="87" invocations="21" avgMicrosecondsPerInvocation="4166" maxMicrosecondsPerInvocation="69835" standardDeviationMircosecondsPerInvocation="14862"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="85" invocations="21" avgMicrosecondsPerInvocation="4076" maxMicrosecondsPerInvocation="72245" standardDeviationMircosecondsPerInvocation="15294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="82" invocations="49" avgMicrosecondsPerInvocation="1687" maxMicrosecondsPerInvocation="53862" standardDeviationMircosecondsPerInvocation="7615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="80" invocations="84" avgMicrosecondsPerInvocation="953" maxMicrosecondsPerInvocation="3951" standardDeviationMircosecondsPerInvocation="900"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="78" invocations="21" avgMicrosecondsPerInvocation="3739" maxMicrosecondsPerInvocation="20816" standardDeviationMircosecondsPerInvocation="6534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="75" invocations="302" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="2587" standardDeviationMircosecondsPerInvocation="432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="75" invocations="21" avgMicrosecondsPerInvocation="3587" maxMicrosecondsPerInvocation="69146" standardDeviationMircosecondsPerInvocation="14662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="61" invocations="4" avgMicrosecondsPerInvocation="15482" maxMicrosecondsPerInvocation="51771" standardDeviationMircosecondsPerInvocation="21238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="60" invocations="21" avgMicrosecondsPerInvocation="2883" maxMicrosecondsPerInvocation="19433" standardDeviationMircosecondsPerInvocation="4994"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="52" invocations="22" avgMicrosecondsPerInvocation="2398" maxMicrosecondsPerInvocation="17481" standardDeviationMircosecondsPerInvocation="3927"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

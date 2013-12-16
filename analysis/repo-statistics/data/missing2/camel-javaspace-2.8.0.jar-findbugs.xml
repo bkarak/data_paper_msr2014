@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1311035672000" analysisTimestamp="1360917741999" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-javaspace/2.8.0/camel-javaspace-2.8.0.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.camel.component.javaspace.JavaSpaceConsumer">
+      <SourceLine classname="org.apache.camel.component.javaspace.JavaSpaceConsumer" start="57" end="103" sourcefile="JavaSpaceConsumer.java" sourcepath="org/apache/camel/component/javaspace/JavaSpaceConsumer.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.javaspace.JavaSpaceConsumer" name="doStart" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.javaspace.JavaSpaceConsumer" start="80" end="98" startBytecode="0" endBytecode="293" sourcefile="JavaSpaceConsumer.java" sourcepath="org/apache/camel/component/javaspace/JavaSpaceConsumer.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.component.javaspace.JavaSpaceConsumer" start="97" end="97" startBytecode="149" endBytecode="149" sourcefile="JavaSpaceConsumer.java" sourcepath="org/apache/camel/component/javaspace/JavaSpaceConsumer.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.camel.component.javaspace.JavaSpaceProducer">
+      <SourceLine classname="org.apache.camel.component.javaspace.JavaSpaceProducer" start="45" end="131" sourcefile="JavaSpaceProducer.java" sourcepath="org/apache/camel/component/javaspace/JavaSpaceProducer.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.javaspace.JavaSpaceProducer" name="doStart" signature="()V" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.javaspace.JavaSpaceProducer" start="120" end="127" startBytecode="0" endBytecode="142" sourcefile="JavaSpaceProducer.java" sourcepath="org/apache/camel/component/javaspace/JavaSpaceProducer.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.component.javaspace.JavaSpaceProducer" start="126" end="126" startBytecode="67" endBytecode="67" sourcefile="JavaSpaceProducer.java" sourcepath="org/apache/camel/component/javaspace/JavaSpaceProducer.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
+    <Class classname="org.apache.camel.component.javaspace.OutEntry">
+      <SourceLine classname="org.apache.camel.component.javaspace.OutEntry" start="36" end="40" sourcefile="OutEntry.java" sourcepath="org/apache/camel/component/javaspace/OutEntry.java"/>
+    </Class>
+    <Field classname="org.apache.camel.component.javaspace.OutEntry" name="correlationId" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.javaspace.OutEntry" sourcefile="OutEntry.java" sourcepath="org/apache/camel/component/javaspace/OutEntry.java"/>
+    </Field>
+    <SourceLine classname="org.apache.camel.component.javaspace.OutEntry" start="37" end="37" startBytecode="6" endBytecode="6" sourcefile="OutEntry.java" sourcepath="org/apache/camel/component/javaspace/OutEntry.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="org.apache.camel.component.javaspace.Utility">
+      <SourceLine classname="org.apache.camel.component.javaspace.Utility" start="30" end="53" sourcefile="Utility.java" sourcepath="org/apache/camel/component/javaspace/Utility.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.javaspace.Utility" name="setSecurityPolicy" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.apache.camel.component.javaspace.Utility" start="34" end="53" startBytecode="0" endBytecode="305" sourcefile="Utility.java" sourcepath="org/apache/camel/component/javaspace/Utility.java"/>
+    </Method>
+    <Class classname="java.io.OutputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.OutputStream" start="29" end="135" sourcefile="OutputStream.java" sourcepath="java/io/OutputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="org.apache.camel.component.javaspace.Utility" start="39" end="39" startBytecode="39" endBytecode="39" sourcefile="Utility.java" sourcepath="org/apache/camel/component/javaspace/Utility.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="org.apache.camel.component.javaspace.Utility" start="41" end="41" startBytecode="44" endBytecode="44" sourcefile="Utility.java" sourcepath="org/apache/camel/component/javaspace/Utility.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.camel.component.javaspace.Utility" start="42" end="42" startBytecode="51" endBytecode="51" sourcefile="Utility.java" sourcepath="org/apache/camel/component/javaspace/Utility.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="org.apache.camel.component.javaspace.Utility" start="44" end="44" startBytecode="54" endBytecode="54" sourcefile="Utility.java" sourcepath="org/apache/camel/component/javaspace/Utility.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{OutputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="26">
+    <MissingClass>net.jini.core.discovery.LookupLocator</MissingClass>
+    <MissingClass>net.jini.core.entry.Entry</MissingClass>
+    <MissingClass>net.jini.core.lookup.ServiceRegistrar</MissingClass>
+    <MissingClass>net.jini.core.lookup.ServiceTemplate</MissingClass>
+    <MissingClass>net.jini.core.transaction.Transaction</MissingClass>
+    <MissingClass>net.jini.core.transaction.Transaction$Created</MissingClass>
+    <MissingClass>net.jini.core.transaction.TransactionFactory</MissingClass>
+    <MissingClass>net.jini.lookup.entry.Name</MissingClass>
+    <MissingClass>net.jini.space.JavaSpace</MissingClass>
+    <MissingClass>org.apache.camel.CamelContext</MissingClass>
+    <MissingClass>org.apache.camel.Endpoint</MissingClass>
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.ExchangePattern</MissingClass>
+    <MissingClass>org.apache.camel.Message</MissingClass>
+    <MissingClass>org.apache.camel.Processor</MissingClass>
+    <MissingClass>org.apache.camel.RuntimeCamelException</MissingClass>
+    <MissingClass>org.apache.camel.component.bean.BeanInvocation</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultComponent</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultConsumer</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultEndpoint</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultExchange</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultProducer</MissingClass>
+    <MissingClass>org.apache.camel.spi.Registry</MissingClass>
+    <MissingClass>org.apache.camel.util.ExchangeHelper</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 19 Jul 2011 03:34:32 +0300" total_classes="10" referenced_classes="44" total_bugs="4" total_size="333" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="17.77" clock_seconds="14.54" peak_mbytes="59.13" alloc_mbytes="763.88" gc_seconds="0.13" priority_2="4">
+    <PackageStats package="org.apache.camel.component.javaspace" total_bugs="4" total_types="10" total_size="333" priority_2="4">
+      <ClassStats class="org.apache.camel.component.javaspace.InEntry" sourceFile="InEntry.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.javaspace.JavaSpaceComponent" sourceFile="JavaSpaceComponent.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.javaspace.JavaSpaceConsumer" sourceFile="JavaSpaceConsumer.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.component.javaspace.JavaSpaceEndpoint" sourceFile="JavaSpaceEndpoint.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.javaspace.JavaSpaceProducer" sourceFile="JavaSpaceProducer.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.component.javaspace.JiniSpaceAccessor" sourceFile="JiniSpaceAccessor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.javaspace.OutEntry" sourceFile="OutEntry.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.camel.component.javaspace.Task" sourceFile="JavaSpaceConsumer.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.javaspace.TransactionHelper" sourceFile="TransactionHelper.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.javaspace.Utility" sourceFile="Utility.java" interface="false" size="20" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1375" invocations="499" avgMicrosecondsPerInvocation="2756" maxMicrosecondsPerInvocation="88780" standardDeviationMircosecondsPerInvocation="9054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="797" invocations="44" avgMicrosecondsPerInvocation="18132" maxMicrosecondsPerInvocation="159710" standardDeviationMircosecondsPerInvocation="33309"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="775" invocations="44" avgMicrosecondsPerInvocation="17631" maxMicrosecondsPerInvocation="105032" standardDeviationMircosecondsPerInvocation="26382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="677" invocations="46" avgMicrosecondsPerInvocation="14727" maxMicrosecondsPerInvocation="148312" standardDeviationMircosecondsPerInvocation="31776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="591" invocations="43" avgMicrosecondsPerInvocation="13757" maxMicrosecondsPerInvocation="314001" standardDeviationMircosecondsPerInvocation="48519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="587" invocations="44" avgMicrosecondsPerInvocation="13361" maxMicrosecondsPerInvocation="331888" standardDeviationMircosecondsPerInvocation="50872"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="532" invocations="43" avgMicrosecondsPerInvocation="12387" maxMicrosecondsPerInvocation="243841" standardDeviationMircosecondsPerInvocation="39668"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="502" invocations="44" avgMicrosecondsPerInvocation="11423" maxMicrosecondsPerInvocation="165054" standardDeviationMircosecondsPerInvocation="29750"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="474" invocations="28" avgMicrosecondsPerInvocation="16937" maxMicrosecondsPerInvocation="165649" standardDeviationMircosecondsPerInvocation="39725"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="445" invocations="44" avgMicrosecondsPerInvocation="10121" maxMicrosecondsPerInvocation="80737" standardDeviationMircosecondsPerInvocation="17268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="394" invocations="142" avgMicrosecondsPerInvocation="2780" maxMicrosecondsPerInvocation="65624" standardDeviationMircosecondsPerInvocation="6975"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="309" invocations="44" avgMicrosecondsPerInvocation="7044" maxMicrosecondsPerInvocation="266115" standardDeviationMircosecondsPerInvocation="39773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="288" invocations="10" avgMicrosecondsPerInvocation="28885" maxMicrosecondsPerInvocation="216785" standardDeviationMircosecondsPerInvocation="64917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="285" invocations="44" avgMicrosecondsPerInvocation="6494" maxMicrosecondsPerInvocation="90378" standardDeviationMircosecondsPerInvocation="15156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="272" invocations="44" avgMicrosecondsPerInvocation="6184" maxMicrosecondsPerInvocation="83033" standardDeviationMircosecondsPerInvocation="14162"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="265" invocations="420" avgMicrosecondsPerInvocation="632" maxMicrosecondsPerInvocation="94655" standardDeviationMircosecondsPerInvocation="4843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="228" invocations="44" avgMicrosecondsPerInvocation="5186" maxMicrosecondsPerInvocation="50694" standardDeviationMircosecondsPerInvocation="9697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="196" invocations="44" avgMicrosecondsPerInvocation="4463" maxMicrosecondsPerInvocation="76573" standardDeviationMircosecondsPerInvocation="12108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="179" invocations="9" avgMicrosecondsPerInvocation="19928" maxMicrosecondsPerInvocation="47837" standardDeviationMircosecondsPerInvocation="12447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="160" invocations="44" avgMicrosecondsPerInvocation="3641" maxMicrosecondsPerInvocation="48084" standardDeviationMircosecondsPerInvocation="8378"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

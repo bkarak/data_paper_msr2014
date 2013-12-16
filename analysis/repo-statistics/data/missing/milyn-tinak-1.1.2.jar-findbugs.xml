@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1238500904000" analysisTimestamp="1360507785711" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/milyn/milyn-tinak/1.1.2/milyn-tinak-1.1.2.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.milyn.device.ident.DeviceIdent">
+      <SourceLine classname="org.milyn.device.ident.DeviceIdent" start="33" end="152" sourcefile="DeviceIdent.java" sourcepath="org/milyn/device/ident/DeviceIdent.java"/>
+    </Class>
+    <Method classname="org.milyn.device.ident.DeviceIdent" name="getDeviceNames" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.milyn.device.ident.DeviceIdent" start="149" end="152" startBytecode="0" endBytecode="71" sourcefile="DeviceIdent.java" sourcepath="org/milyn/device/ident/DeviceIdent.java"/>
+    </Method>
+    <Field classname="org.milyn.device.ident.DeviceIdent" name="deviceNames" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.milyn.device.ident.DeviceIdent" sourcefile="DeviceIdent.java" sourcepath="org/milyn/device/ident/DeviceIdent.java"/>
+    </Field>
+    <SourceLine classname="org.milyn.device.ident.DeviceIdent" start="152" end="152" startBytecode="21" endBytecode="21" sourcefile="DeviceIdent.java" sourcepath="org/milyn/device/ident/DeviceIdent.java"/>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" abbrev="DE" category="BAD_PRACTICE">
+    <Class classname="org.milyn.device.ident.HttpIdentUnit">
+      <SourceLine classname="org.milyn.device.ident.HttpIdentUnit" start="49" end="133" sourcefile="HttpIdentUnit.java" sourcepath="org/milyn/device/ident/HttpIdentUnit.java"/>
+    </Class>
+    <Method classname="org.milyn.device.ident.HttpIdentUnit" name="setValue" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.milyn.device.ident.HttpIdentUnit" start="78" end="85" startBytecode="0" endBytecode="126" sourcefile="HttpIdentUnit.java" sourcepath="org/milyn/device/ident/HttpIdentUnit.java"/>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="29" end="78" sourcefile="Exception.java" sourcepath="java/lang/Exception.java"/>
+    </Class>
+    <SourceLine classname="org.milyn.device.ident.HttpIdentUnit" start="82" end="82" startBytecode="39" endBytecode="39" sourcefile="HttpIdentUnit.java" sourcepath="org/milyn/device/ident/HttpIdentUnit.java"/>
+    <SourceLine classname="org.milyn.device.ident.HttpIdentUnit" start="82" end="82" startBytecode="39" endBytecode="39" sourcefile="HttpIdentUnit.java" sourcepath="org/milyn/device/ident/HttpIdentUnit.java"/>
+  </BugInstance>
+  <BugInstance type="HE_INHERITS_EQUALS_USE_HASHCODE" priority="2" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.milyn.device.ident.HttpIdentUnit">
+      <SourceLine classname="org.milyn.device.ident.HttpIdentUnit" start="49" end="133" sourcefile="HttpIdentUnit.java" sourcepath="org/milyn/device/ident/HttpIdentUnit.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="2" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.milyn.device.ident.HttpIdentUnit$UnitTest$1">
+      <SourceLine classname="org.milyn.device.ident.HttpIdentUnit$UnitTest$1" start="146" end="155" sourcefile="HttpIdentUnit.java" sourcepath="org/milyn/device/ident/HttpIdentUnit.java"/>
+    </Class>
+    <Method classname="org.milyn.device.ident.HttpIdentUnit$UnitTest$1" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.milyn.device.ident.HttpIdentUnit$UnitTest$1" start="147" end="155" startBytecode="0" endBytecode="109" sourcefile="HttpIdentUnit.java" sourcepath="org/milyn/device/ident/HttpIdentUnit.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.milyn.device.ident.IdentSet">
+      <SourceLine classname="org.milyn.device.ident.IdentSet" start="80" end="450" sourcefile="IdentSet.java" sourcepath="org/milyn/device/ident/IdentSet.java"/>
+    </Class>
+    <Method classname="org.milyn.device.ident.IdentSet" name="getComboIdMatrix" signature="()[[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.milyn.device.ident.IdentSet" start="282" end="282" startBytecode="0" endBytecode="46" sourcefile="IdentSet.java" sourcepath="org/milyn/device/ident/IdentSet.java"/>
+    </Method>
+    <Field classname="org.milyn.device.ident.IdentSet" name="matchComboIdMatrix" signature="[[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.milyn.device.ident.IdentSet" sourcefile="IdentSet.java" sourcepath="org/milyn/device/ident/IdentSet.java"/>
+    </Field>
+    <SourceLine classname="org.milyn.device.ident.IdentSet" start="282" end="282" startBytecode="4" endBytecode="4" sourcefile="IdentSet.java" sourcepath="org/milyn/device/ident/IdentSet.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.milyn.device.ident.IdentSet$IdentSetList">
+      <SourceLine classname="org.milyn.device.ident.IdentSet$IdentSetList" start="426" end="443" sourcefile="IdentSet.java" sourcepath="org/milyn/device/ident/IdentSet.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" priority="1" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.milyn.device.ident.IdentUnit">
+      <SourceLine classname="org.milyn.device.ident.IdentUnit" start="30" end="150" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+    </Class>
+    <Method classname="org.milyn.device.ident.IdentUnit" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.milyn.device.ident.IdentUnit" start="132" end="139" startBytecode="0" endBytecode="103" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <SourceLine classname="org.milyn.device.ident.IdentUnit" start="134" end="134" startBytecode="8" endBytecode="8" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+    <SourceLine classname="org.milyn.device.ident.IdentUnit" start="135" end="135" startBytecode="15" endBytecode="15" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="2" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.milyn.device.ident.IdentUnit">
+      <SourceLine classname="org.milyn.device.ident.IdentUnit" start="30" end="150" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+    </Class>
+    <Method classname="org.milyn.device.ident.IdentUnit" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.milyn.device.ident.IdentUnit" start="132" end="139" startBytecode="0" endBytecode="103" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" priority="1" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="org.milyn.device.ident.IdentUnit$UnitTest">
+      <SourceLine classname="org.milyn.device.ident.IdentUnit$UnitTest" start="151" end="188" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+    </Class>
+    <Method classname="org.milyn.device.ident.IdentUnit$UnitTest" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.milyn.device.ident.IdentUnit$UnitTest" start="188" end="188" startBytecode="0" endBytecode="60" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+    </Method>
+    <Type descriptor="Lorg/milyn/device/ident/IdentUnit;" role="TYPE_FOUND">
+      <SourceLine classname="org.milyn.device.ident.IdentUnit" start="30" end="150" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+    </Type>
+    <SourceLine classname="org.milyn.device.ident.IdentUnit$UnitTest" start="188" end="188" startBytecode="5" endBytecode="5" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="2" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="org.milyn.device.ident.IdentUnit$UnitTest">
+      <SourceLine classname="org.milyn.device.ident.IdentUnit$UnitTest" start="151" end="188" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+    </Class>
+    <Method classname="org.milyn.device.ident.IdentUnit$UnitTest" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="org.milyn.device.ident.IdentUnit$UnitTest" start="188" end="188" startBytecode="0" endBytecode="60" sourcefile="IdentUnit.java" sourcepath="org/milyn/device/ident/IdentUnit.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.milyn.tinak.UATag">
+      <SourceLine classname="org.milyn.tinak.UATag" start="39" end="253" sourcefile="UATag.java" sourcepath="org/milyn/tinak/UATag.java"/>
+    </Class>
+    <Method classname="org.milyn.tinak.UATag" name="doStartTag" signature="()I" isStatic="false">
+      <SourceLine classname="org.milyn.tinak.UATag" start="108" end="164" startBytecode="0" endBytecode="529" sourcefile="UATag.java" sourcepath="org/milyn/tinak/UATag.java"/>
+    </Method>
+    <Field classname="org.milyn.tinak.UATag" name="match" signature="Ljava/lang/String;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.milyn.tinak.UATag" sourcefile="UATag.java" sourcepath="org/milyn/tinak/UATag.java"/>
+    </Field>
+    <SourceLine classname="org.milyn.tinak.UATag" start="137" end="137" startBytecode="137" endBytecode="137" sourcefile="UATag.java" sourcepath="org/milyn/tinak/UATag.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="21">
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.servlet.jsp.JspException</MissingClass>
+    <MissingClass>javax.servlet.jsp.PageContext</MissingClass>
+    <MissingClass>javax.servlet.jsp.tagext.BodyContent</MissingClass>
+    <MissingClass>org.milyn.profile.HttpAcceptHeaderProfile</MissingClass>
+    <MissingClass>org.milyn.profile.ProfileConfigDigester</MissingClass>
+    <MissingClass>org.milyn.profile.ProfileSet</MissingClass>
+    <MissingClass>org.milyn.profile.ProfileStore</MissingClass>
+    <MissingClass>org.milyn.resource.ServletResourceLocator</MissingClass>
+    <MissingClass>org.milyn.resource.URIResourceLocator</MissingClass>
+    <MissingClass>org.milyn.servlet.ServletParamUtils</MissingClass>
+    <MissingClass>org.milyn.useragent.UAContext</MissingClass>
+    <MissingClass>org.milyn.useragent.UnknownUseragentException</MissingClass>
+    <MissingClass>org.milyn.useragent.request.HttpRequest</MissingClass>
+    <MissingClass>org.milyn.useragent.request.Request</MissingClass>
+    <MissingClass>org.milyn.xml.XmlUtil</MissingClass>
+    <MissingClass>org.milyn.xml.XmlUtil$VALIDATION_TYPE</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 31 Mar 2009 15:01:44 +0300" total_classes="24" referenced_classes="84" total_bugs="11" total_size="888" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="27.97" clock_seconds="16.52" peak_mbytes="66.95" alloc_mbytes="763.88" gc_seconds="0.20" priority_2="9" priority_1="2">
+    <PackageStats package="org.milyn.device.ident" total_bugs="10" total_types="11" total_size="460" priority_2="8" priority_1="2">
+      <ClassStats class="org.milyn.device.ident.DeviceIdent" sourceFile="DeviceIdent.java" interface="false" size="55" bugs="1" priority_2="1"/>
+      <ClassStats class="org.milyn.device.ident.HttpIdentUnit" sourceFile="HttpIdentUnit.java" interface="false" size="40" bugs="2" priority_2="2"/>
+      <ClassStats class="org.milyn.device.ident.HttpIdentUnit$UnitTest" sourceFile="HttpIdentUnit.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.milyn.device.ident.HttpIdentUnit$UnitTest$1" sourceFile="HttpIdentUnit.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="org.milyn.device.ident.IdentConfigDigester" sourceFile="IdentConfigDigester.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.milyn.device.ident.IdentSet" sourceFile="IdentSet.java" interface="false" size="149" bugs="1" priority_2="1"/>
+      <ClassStats class="org.milyn.device.ident.IdentSet$IdentSetList" sourceFile="IdentSet.java" interface="false" size="12" bugs="1" priority_2="1"/>
+      <ClassStats class="org.milyn.device.ident.IdentSet$UnitTest" sourceFile="IdentSet.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.milyn.device.ident.IdentUnit" sourceFile="IdentUnit.java" interface="false" size="48" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.milyn.device.ident.IdentUnit$UnitTest" sourceFile="IdentUnit.java" interface="false" size="27" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.milyn.device.ident.UnknownDeviceException" sourceFile="UnknownDeviceException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.servlet" total_bugs="0" total_types="7" total_size="176">
+      <ClassStats class="org.milyn.servlet.DeviceIdentifier" sourceFile="DeviceIdentifier.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.milyn.servlet.DeviceIdentifier$1" sourceFile="DeviceIdentifier.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.milyn.servlet.DeviceIdentifier$RequestAdapter" sourceFile="DeviceIdentifier.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.milyn.servlet.DeviceProfiler" sourceFile="DeviceProfiler.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.milyn.servlet.ServletUAContext" sourceFile="ServletUAContext.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.milyn.servlet.ServletUAContext$1" sourceFile="ServletUAContext.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.milyn.servlet.ServletUAContext$UnitTest" sourceFile="ServletUAContext.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.milyn.tinak" total_bugs="1" total_types="6" total_size="252" priority_2="1">
+      <ClassStats class="org.milyn.tinak.ContainerTag" sourceFile="ContainerTag.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.milyn.tinak.ProfilesTag" sourceFile="ProfilesTag.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.milyn.tinak.SelectTag" sourceFile="SelectTag.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.milyn.tinak.SetContentType" sourceFile="SetContentType.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.milyn.tinak.SetProfileTag" sourceFile="SetProfileTag.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.milyn.tinak.UATag" sourceFile="UATag.java" interface="false" size="96" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1087" invocations="550" avgMicrosecondsPerInvocation="1976" maxMicrosecondsPerInvocation="54592" standardDeviationMircosecondsPerInvocation="5579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="960" invocations="84" avgMicrosecondsPerInvocation="11438" maxMicrosecondsPerInvocation="110339" standardDeviationMircosecondsPerInvocation="22050"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="937" invocations="84" avgMicrosecondsPerInvocation="11166" maxMicrosecondsPerInvocation="117093" standardDeviationMircosecondsPerInvocation="21843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="896" invocations="151" avgMicrosecondsPerInvocation="5934" maxMicrosecondsPerInvocation="96708" standardDeviationMircosecondsPerInvocation="13003"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="809" invocations="151" avgMicrosecondsPerInvocation="5360" maxMicrosecondsPerInvocation="83541" standardDeviationMircosecondsPerInvocation="11757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="803" invocations="156" avgMicrosecondsPerInvocation="5151" maxMicrosecondsPerInvocation="79829" standardDeviationMircosecondsPerInvocation="11543"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="709" invocations="151" avgMicrosecondsPerInvocation="4696" maxMicrosecondsPerInvocation="56798" standardDeviationMircosecondsPerInvocation="9671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="681" invocations="84" avgMicrosecondsPerInvocation="8108" maxMicrosecondsPerInvocation="141303" standardDeviationMircosecondsPerInvocation="19485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="637" invocations="151" avgMicrosecondsPerInvocation="4219" maxMicrosecondsPerInvocation="62809" standardDeviationMircosecondsPerInvocation="9253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="485" invocations="107" avgMicrosecondsPerInvocation="4533" maxMicrosecondsPerInvocation="67672" standardDeviationMircosecondsPerInvocation="9253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="472" invocations="412" avgMicrosecondsPerInvocation="1147" maxMicrosecondsPerInvocation="30510" standardDeviationMircosecondsPerInvocation="2727"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="413" invocations="151" avgMicrosecondsPerInvocation="2741" maxMicrosecondsPerInvocation="26403" standardDeviationMircosecondsPerInvocation="4848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="357" invocations="84" avgMicrosecondsPerInvocation="4259" maxMicrosecondsPerInvocation="68322" standardDeviationMircosecondsPerInvocation="11493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="336" invocations="151" avgMicrosecondsPerInvocation="2230" maxMicrosecondsPerInvocation="44811" standardDeviationMircosecondsPerInvocation="5736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="246" invocations="84" avgMicrosecondsPerInvocation="2936" maxMicrosecondsPerInvocation="30474" standardDeviationMircosecondsPerInvocation="5830"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="235" invocations="84" avgMicrosecondsPerInvocation="2797" maxMicrosecondsPerInvocation="15952" standardDeviationMircosecondsPerInvocation="4110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="226" invocations="84" avgMicrosecondsPerInvocation="2702" maxMicrosecondsPerInvocation="26150" standardDeviationMircosecondsPerInvocation="5145"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="218" invocations="84" avgMicrosecondsPerInvocation="2598" maxMicrosecondsPerInvocation="83428" standardDeviationMircosecondsPerInvocation="9697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="214" invocations="146" avgMicrosecondsPerInvocation="1469" maxMicrosecondsPerInvocation="49859" standardDeviationMircosecondsPerInvocation="4826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="169" invocations="24" avgMicrosecondsPerInvocation="7060" maxMicrosecondsPerInvocation="65379" standardDeviationMircosecondsPerInvocation="15128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="165" invocations="112" avgMicrosecondsPerInvocation="1475" maxMicrosecondsPerInvocation="16996" standardDeviationMircosecondsPerInvocation="3436"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

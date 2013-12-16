@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1311036012000" analysisTimestamp="1360909200238" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-lucene/2.8.0/camel-lucene-2.8.0.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.camel.component.lucene.LuceneIndexer">
+      <SourceLine classname="org.apache.camel.component.lucene.LuceneIndexer" start="35" end="155" sourcefile="LuceneIndexer.java" sourcepath="org/apache/camel/component/lucene/LuceneIndexer.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.lucene.LuceneIndexer" name="add" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.lucene.LuceneIndexer" start="117" end="140" startBytecode="0" endBytecode="334" sourcefile="LuceneIndexer.java" sourcepath="org/apache/camel/component/lucene/LuceneIndexer.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="593" end="594" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.component.lucene.LuceneIndexer" start="131" end="131" startBytecode="116" endBytecode="116" sourcefile="LuceneIndexer.java" sourcepath="org/apache/camel/component/lucene/LuceneIndexer.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.apache.camel.component.lucene.LuceneIndexer">
+      <SourceLine classname="org.apache.camel.component.lucene.LuceneIndexer" start="35" end="155" sourcefile="LuceneIndexer.java" sourcepath="org/apache/camel/component/lucene/LuceneIndexer.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.lucene.LuceneIndexer" name="&lt;init&gt;" signature="(Ljava/io/File;Ljava/io/File;Lorg/apache/lucene/analysis/Analyzer;)V" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.lucene.LuceneIndexer" start="43" end="60" startBytecode="0" endBytecode="235" sourcefile="LuceneIndexer.java" sourcepath="org/apache/camel/component/lucene/LuceneIndexer.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdir" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1153" end="1157" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.apache.camel.component.lucene.LuceneIndexer" start="46" end="46" startBytecode="16" endBytecode="16" sourcefile="LuceneIndexer.java" sourcepath="org/apache/camel/component/lucene/LuceneIndexer.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="26">
+    <MissingClass>org.apache.camel.CamelContext</MissingClass>
+    <MissingClass>org.apache.camel.Endpoint</MissingClass>
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.Message</MissingClass>
+    <MissingClass>org.apache.camel.TypeConverter</MissingClass>
+    <MissingClass>org.apache.camel.converter.IOConverter</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultComponent</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultEndpoint</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultProducer</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.Analyzer</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.standard.StandardAnalyzer</MissingClass>
+    <MissingClass>org.apache.lucene.document.Document</MissingClass>
+    <MissingClass>org.apache.lucene.document.Field</MissingClass>
+    <MissingClass>org.apache.lucene.document.Field$Index</MissingClass>
+    <MissingClass>org.apache.lucene.document.Field$Store</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexWriter</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexWriter$MaxFieldLength</MissingClass>
+    <MissingClass>org.apache.lucene.queryParser.QueryParser</MissingClass>
+    <MissingClass>org.apache.lucene.search.IndexSearcher</MissingClass>
+    <MissingClass>org.apache.lucene.search.ScoreDoc</MissingClass>
+    <MissingClass>org.apache.lucene.search.TopDocs</MissingClass>
+    <MissingClass>org.apache.lucene.search.TopScoreDocCollector</MissingClass>
+    <MissingClass>org.apache.lucene.store.NIOFSDirectory</MissingClass>
+    <MissingClass>org.apache.lucene.util.Version</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 19 Jul 2011 03:40:12 +0300" total_classes="10" referenced_classes="34" total_bugs="2" total_size="429" num_packages="3" vm_version="20.4-b02-402" cpu_seconds="8.79" clock_seconds="4.62" peak_mbytes="56.31" alloc_mbytes="763.88" gc_seconds="0.10" priority_2="1" priority_1="1">
+    <PackageStats package="org.apache.camel.component.lucene" total_bugs="2" total_types="7" total_size="336" priority_2="1" priority_1="1">
+      <ClassStats class="org.apache.camel.component.lucene.LuceneComponent" sourceFile="LuceneComponent.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.lucene.LuceneConfiguration" sourceFile="LuceneConfiguration.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.lucene.LuceneEndpoint" sourceFile="LuceneEndpoint.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.lucene.LuceneIndexProducer" sourceFile="LuceneIndexProducer.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.lucene.LuceneIndexer" sourceFile="LuceneIndexer.java" interface="false" size="89" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.apache.camel.component.lucene.LuceneQueryProducer" sourceFile="LuceneQueryProducer.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.lucene.LuceneSearcher" sourceFile="LuceneSearcher.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.camel.processor.lucene" total_bugs="0" total_types="1" total_size="54">
+      <ClassStats class="org.apache.camel.processor.lucene.LuceneQueryProcessor" sourceFile="LuceneQueryProcessor.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.camel.processor.lucene.support" total_bugs="0" total_types="2" total_size="39">
+      <ClassStats class="org.apache.camel.processor.lucene.support.Hit" sourceFile="Hit.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.camel.processor.lucene.support.Hits" sourceFile="Hits.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="461" invocations="378" avgMicrosecondsPerInvocation="1220" maxMicrosecondsPerInvocation="36525" standardDeviationMircosecondsPerInvocation="3941"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="310" invocations="34" avgMicrosecondsPerInvocation="9146" maxMicrosecondsPerInvocation="161059" standardDeviationMircosecondsPerInvocation="27779"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="251" invocations="99" avgMicrosecondsPerInvocation="2542" maxMicrosecondsPerInvocation="109844" standardDeviationMircosecondsPerInvocation="11262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="158" invocations="34" avgMicrosecondsPerInvocation="4665" maxMicrosecondsPerInvocation="34133" standardDeviationMircosecondsPerInvocation="9137"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="145" invocations="99" avgMicrosecondsPerInvocation="1468" maxMicrosecondsPerInvocation="29879" standardDeviationMircosecondsPerInvocation="3634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="126" invocations="99" avgMicrosecondsPerInvocation="1282" maxMicrosecondsPerInvocation="18306" standardDeviationMircosecondsPerInvocation="2819"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="117" invocations="34" avgMicrosecondsPerInvocation="3464" maxMicrosecondsPerInvocation="26236" standardDeviationMircosecondsPerInvocation="6395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="108" invocations="34" avgMicrosecondsPerInvocation="3176" maxMicrosecondsPerInvocation="60953" standardDeviationMircosecondsPerInvocation="10535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="103" invocations="99" avgMicrosecondsPerInvocation="1043" maxMicrosecondsPerInvocation="16423" standardDeviationMircosecondsPerInvocation="2405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="99" invocations="304" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="24365" standardDeviationMircosecondsPerInvocation="1539"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="99" invocations="34" avgMicrosecondsPerInvocation="2912" maxMicrosecondsPerInvocation="37594" standardDeviationMircosecondsPerInvocation="6947"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="95" invocations="99" avgMicrosecondsPerInvocation="965" maxMicrosecondsPerInvocation="12656" standardDeviationMircosecondsPerInvocation="2100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="86" invocations="179" avgMicrosecondsPerInvocation="483" maxMicrosecondsPerInvocation="25919" standardDeviationMircosecondsPerInvocation="1947"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="78" invocations="44" avgMicrosecondsPerInvocation="1778" maxMicrosecondsPerInvocation="21968" standardDeviationMircosecondsPerInvocation="3947"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="77" invocations="99" avgMicrosecondsPerInvocation="781" maxMicrosecondsPerInvocation="12096" standardDeviationMircosecondsPerInvocation="1592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="67" invocations="99" avgMicrosecondsPerInvocation="681" maxMicrosecondsPerInvocation="18932" standardDeviationMircosecondsPerInvocation="2133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="59" invocations="99" avgMicrosecondsPerInvocation="603" maxMicrosecondsPerInvocation="48861" standardDeviationMircosecondsPerInvocation="4876"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="53" invocations="10" avgMicrosecondsPerInvocation="5369" maxMicrosecondsPerInvocation="36257" standardDeviationMircosecondsPerInvocation="10415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="53" invocations="64" avgMicrosecondsPerInvocation="838" maxMicrosecondsPerInvocation="21322" standardDeviationMircosecondsPerInvocation="2903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="46" invocations="10" avgMicrosecondsPerInvocation="4604" maxMicrosecondsPerInvocation="39531" standardDeviationMircosecondsPerInvocation="11649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="44" invocations="34" avgMicrosecondsPerInvocation="1315" maxMicrosecondsPerInvocation="9349" standardDeviationMircosecondsPerInvocation="2191"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

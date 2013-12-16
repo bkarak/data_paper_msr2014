@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1305165251000" analysisTimestamp="1360905771517" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/karaf/shell/org.apache.karaf.shell.ssh/2.2.1/org.apache.karaf.shell.ssh-2.2.1.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.karaf.shell.ssh.ShellCommandFactory$ShellCommand">
+      <SourceLine classname="org.apache.karaf.shell.ssh.ShellCommandFactory$ShellCommand" start="51" end="111" sourcefile="ShellCommandFactory.java" sourcepath="org/apache/karaf/shell/ssh/ShellCommandFactory.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.shell.ssh.ShellCommandFactory$ShellCommand" name="start" signature="(Lorg/apache/sshd/server/Environment;)V" isStatic="false">
+      <SourceLine classname="org.apache.karaf.shell.ssh.ShellCommandFactory$ShellCommand" start="86" end="108" startBytecode="0" endBytecode="390" sourcefile="ShellCommandFactory.java" sourcepath="org/apache/karaf/shell/ssh/ShellCommandFactory.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="62" end="63" startBytecode="0" endBytecode="34" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.shell.ssh.ShellCommandFactory$ShellCommand" start="86" end="86" startBytecode="19" endBytecode="19" sourcefile="ShellCommandFactory.java" sourcepath="org/apache/karaf/shell/ssh/ShellCommandFactory.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.karaf.shell.ssh.ShellFactoryImpl$LfToCrLfFilterOutputStream">
+      <SourceLine classname="org.apache.karaf.shell.ssh.ShellFactoryImpl$LfToCrLfFilterOutputStream" start="203" end="216" sourcefile="ShellFactoryImpl.java" sourcepath="org/apache/karaf/shell/ssh/ShellFactoryImpl.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl">
+      <SourceLine classname="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl" start="63" end="157" sourcefile="ShellFactoryImpl.java" sourcepath="org/apache/karaf/shell/ssh/ShellFactoryImpl.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl" name="start" signature="(Lorg/apache/sshd/server/Environment;)V" isStatic="false">
+      <SourceLine classname="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl" start="99" end="148" startBytecode="0" endBytecode="441" sourcefile="ShellFactoryImpl.java" sourcepath="org/apache/karaf/shell/ssh/ShellFactoryImpl.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;Z)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="99" end="101" startBytecode="0" endBytecode="50" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl" start="100" end="100" startBytecode="44" endBytecode="44" sourcefile="ShellFactoryImpl.java" sourcepath="org/apache/karaf/shell/ssh/ShellFactoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="UW_UNCOND_WAIT" priority="2" abbrev="UW" category="MT_CORRECTNESS">
+    <Class classname="org.apache.karaf.shell.ssh.SshServerAction">
+      <SourceLine classname="org.apache.karaf.shell.ssh.SshServerAction" start="36" end="81" sourcefile="SshServerAction.java" sourcepath="org/apache/karaf/shell/ssh/SshServerAction.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.shell.ssh.SshServerAction" name="doExecute" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.karaf.shell.ssh.SshServerAction" start="61" end="81" startBytecode="0" endBytecode="222" sourcefile="SshServerAction.java" sourcepath="org/apache/karaf/shell/ssh/SshServerAction.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.shell.ssh.SshServerAction" start="75" end="75" startBytecode="92" endBytecode="92" sourcefile="SshServerAction.java" sourcepath="org/apache/karaf/shell/ssh/SshServerAction.java"/>
+  </BugInstance>
+  <BugInstance type="WA_NOT_IN_LOOP" priority="2" abbrev="Wa" category="MT_CORRECTNESS">
+    <Class classname="org.apache.karaf.shell.ssh.SshServerAction">
+      <SourceLine classname="org.apache.karaf.shell.ssh.SshServerAction" start="36" end="81" sourcefile="SshServerAction.java" sourcepath="org/apache/karaf/shell/ssh/SshServerAction.java"/>
+    </Class>
+    <Method classname="org.apache.karaf.shell.ssh.SshServerAction" name="doExecute" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.apache.karaf.shell.ssh.SshServerAction" start="61" end="81" startBytecode="0" endBytecode="222" sourcefile="SshServerAction.java" sourcepath="org/apache/karaf/shell/ssh/SshServerAction.java"/>
+    </Method>
+    <SourceLine classname="org.apache.karaf.shell.ssh.SshServerAction" start="75" end="75" startBytecode="92" endBytecode="92" sourcefile="SshServerAction.java" sourcepath="org/apache/karaf/shell/ssh/SshServerAction.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="26">
+    <MissingClass>jline.Terminal</MissingClass>
+    <MissingClass>jline.TerminalSupport</MissingClass>
+    <MissingClass>jline.console.Key</MissingClass>
+    <MissingClass>jline.internal.ReplayPrefixOneCharInputStream</MissingClass>
+    <MissingClass>org.apache.felix.service.command.CommandProcessor</MissingClass>
+    <MissingClass>org.apache.felix.service.command.CommandSession</MissingClass>
+    <MissingClass>org.apache.felix.service.command.Function</MissingClass>
+    <MissingClass>org.apache.karaf.shell.console.OsgiCommandSupport</MissingClass>
+    <MissingClass>org.apache.karaf.shell.console.jline.Console</MissingClass>
+    <MissingClass>org.apache.sshd.ClientChannel</MissingClass>
+    <MissingClass>org.apache.sshd.ClientSession</MissingClass>
+    <MissingClass>org.apache.sshd.SshClient</MissingClass>
+    <MissingClass>org.apache.sshd.SshServer</MissingClass>
+    <MissingClass>org.apache.sshd.client.channel.ChannelShell</MissingClass>
+    <MissingClass>org.apache.sshd.client.future.ConnectFuture</MissingClass>
+    <MissingClass>org.apache.sshd.common.PtyMode</MissingClass>
+    <MissingClass>org.apache.sshd.common.Session$AttributeKey</MissingClass>
+    <MissingClass>org.apache.sshd.common.util.NoCloseInputStream</MissingClass>
+    <MissingClass>org.apache.sshd.common.util.NoCloseOutputStream</MissingClass>
+    <MissingClass>org.apache.sshd.server.Environment</MissingClass>
+    <MissingClass>org.apache.sshd.server.ExitCallback</MissingClass>
+    <MissingClass>org.apache.sshd.server.session.ServerSession</MissingClass>
+    <MissingClass>org.osgi.service.blueprint.container.BlueprintContainer</MissingClass>
+    <MissingClass>org.osgi.service.blueprint.container.ReifiedType</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 12 May 2011 04:54:11 +0300" total_classes="19" referenced_classes="93" total_bugs="7" total_size="524" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="14.17" clock_seconds="7.34" peak_mbytes="61.60" alloc_mbytes="763.88" gc_seconds="0.12" priority_2="3" priority_1="4">
+    <PackageStats package="org.apache.karaf.shell.ssh" total_bugs="7" total_types="19" total_size="524" priority_2="3" priority_1="4">
+      <ClassStats class="org.apache.karaf.shell.ssh.KarafJaasPasswordAuthenticator" sourceFile="KarafJaasPasswordAuthenticator.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.KarafJaasPasswordAuthenticator$1" sourceFile="KarafJaasPasswordAuthenticator.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellCommandFactory" sourceFile="ShellCommandFactory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellCommandFactory$ShellCommand" sourceFile="ShellCommandFactory.java" interface="false" size="46" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellCommandFactory$ShellCommand$1" sourceFile="ShellCommandFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellFactoryImpl" sourceFile="ShellFactoryImpl.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellFactoryImpl$Converter" sourceFile="ShellFactoryImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellFactoryImpl$LfToCrLfFilterOutputStream" sourceFile="ShellFactoryImpl.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl" sourceFile="ShellFactoryImpl.java" interface="false" size="48" bugs="2" priority_1="2"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl$1" sourceFile="ShellFactoryImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl$2" sourceFile="ShellFactoryImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl$3" sourceFile="ShellFactoryImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl$4" sourceFile="ShellFactoryImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.ShellFactoryImpl$ShellImpl$4$1" sourceFile="ShellFactoryImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.SshAction" sourceFile="SshAction.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.SshServerAction" sourceFile="SshServerAction.java" interface="false" size="34" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.SshServerFactory" sourceFile="SshServerFactory.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.SshTerminal" sourceFile="SshTerminal.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.apache.karaf.shell.ssh.SshTerminal$UnixKey" sourceFile="SshTerminal.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="532" invocations="93" avgMicrosecondsPerInvocation="5730" maxMicrosecondsPerInvocation="133140" standardDeviationMircosecondsPerInvocation="17269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="429" invocations="503" avgMicrosecondsPerInvocation="853" maxMicrosecondsPerInvocation="26520" standardDeviationMircosecondsPerInvocation="2233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="417" invocations="96" avgMicrosecondsPerInvocation="4345" maxMicrosecondsPerInvocation="166811" standardDeviationMircosecondsPerInvocation="20234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="366" invocations="88" avgMicrosecondsPerInvocation="4160" maxMicrosecondsPerInvocation="219311" standardDeviationMircosecondsPerInvocation="23401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="349" invocations="93" avgMicrosecondsPerInvocation="3762" maxMicrosecondsPerInvocation="68553" standardDeviationMircosecondsPerInvocation="9492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="314" invocations="93" avgMicrosecondsPerInvocation="3383" maxMicrosecondsPerInvocation="134336" standardDeviationMircosecondsPerInvocation="14871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="300" invocations="89" avgMicrosecondsPerInvocation="3373" maxMicrosecondsPerInvocation="160412" standardDeviationMircosecondsPerInvocation="17103"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="269" invocations="88" avgMicrosecondsPerInvocation="3060" maxMicrosecondsPerInvocation="105107" standardDeviationMircosecondsPerInvocation="12304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="257" invocations="93" avgMicrosecondsPerInvocation="2773" maxMicrosecondsPerInvocation="61914" standardDeviationMircosecondsPerInvocation="7765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="221" invocations="215" avgMicrosecondsPerInvocation="1030" maxMicrosecondsPerInvocation="44387" standardDeviationMircosecondsPerInvocation="3806"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="169" invocations="93" avgMicrosecondsPerInvocation="1824" maxMicrosecondsPerInvocation="35594" standardDeviationMircosecondsPerInvocation="5365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="163" invocations="40" avgMicrosecondsPerInvocation="4097" maxMicrosecondsPerInvocation="11887" standardDeviationMircosecondsPerInvocation="3806"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="141" invocations="93" avgMicrosecondsPerInvocation="1523" maxMicrosecondsPerInvocation="101578" standardDeviationMircosecondsPerInvocation="10460"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="129" invocations="89" avgMicrosecondsPerInvocation="1459" maxMicrosecondsPerInvocation="63618" standardDeviationMircosecondsPerInvocation="6832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="110" invocations="93" avgMicrosecondsPerInvocation="1192" maxMicrosecondsPerInvocation="33973" standardDeviationMircosecondsPerInvocation="4201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="104" invocations="93" avgMicrosecondsPerInvocation="1123" maxMicrosecondsPerInvocation="27499" standardDeviationMircosecondsPerInvocation="3553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="103" invocations="31" avgMicrosecondsPerInvocation="3342" maxMicrosecondsPerInvocation="100325" standardDeviationMircosecondsPerInvocation="17707"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="95" invocations="61" avgMicrosecondsPerInvocation="1572" maxMicrosecondsPerInvocation="23086" standardDeviationMircosecondsPerInvocation="3839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="94" invocations="93" avgMicrosecondsPerInvocation="1012" maxMicrosecondsPerInvocation="17775" standardDeviationMircosecondsPerInvocation="2642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="88" invocations="19" avgMicrosecondsPerInvocation="4680" maxMicrosecondsPerInvocation="46911" standardDeviationMircosecondsPerInvocation="11990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="88" invocations="421" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="6134" standardDeviationMircosecondsPerInvocation="607"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.AtomicityProblem" totalMilliseconds="68" invocations="19" avgMicrosecondsPerInvocation="3626" maxMicrosecondsPerInvocation="61307" standardDeviationMircosecondsPerInvocation="13602"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

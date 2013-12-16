@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1274558047000" analysisTimestamp="1360868232246" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/camel/camel-http/2.3.0/camel-http-2.3.0.jar</Jar>
+  </Project>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.camel.component.http.RequestEntityConverter">
+      <SourceLine classname="org.apache.camel.component.http.RequestEntityConverter" start="34" end="75" sourcefile="RequestEntityConverter.java" sourcepath="org/apache/camel/component/http/RequestEntityConverter.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.http.RequestEntityConverter" name="asRequestEntity" signature="(Ljava/io/InputStream;Lorg/apache/camel/Exchange;)Lorg/apache/commons/httpclient/methods/RequestEntity;" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.http.RequestEntityConverter" start="58" end="64" startBytecode="0" endBytecode="140" sourcefile="RequestEntityConverter.java" sourcepath="org/apache/camel/component/http/RequestEntityConverter.java"/>
+    </Method>
+    <LocalVariable name="exchange" register="2" pc="31" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.camel.component.http.RequestEntityConverter" start="60" end="60" startBytecode="32" endBytecode="32" sourcefile="RequestEntityConverter.java" sourcepath="org/apache/camel/component/http/RequestEntityConverter.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.camel.component.http.RequestEntityConverter" start="58" end="58" startBytecode="1" endBytecode="1" sourcefile="RequestEntityConverter.java" sourcepath="org/apache/camel/component/http/RequestEntityConverter.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="org.apache.camel.component.http.RequestEntityConverter">
+      <SourceLine classname="org.apache.camel.component.http.RequestEntityConverter" start="34" end="75" sourcefile="RequestEntityConverter.java" sourcepath="org/apache/camel/component/http/RequestEntityConverter.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.http.RequestEntityConverter" name="asRequestEntity" signature="([BLorg/apache/camel/Exchange;)Lorg/apache/commons/httpclient/methods/RequestEntity;" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.http.RequestEntityConverter" start="69" end="75" startBytecode="0" endBytecode="147" sourcefile="RequestEntityConverter.java" sourcepath="org/apache/camel/component/http/RequestEntityConverter.java"/>
+    </Method>
+    <LocalVariable name="exchange" register="2" pc="31" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="org.apache.camel.component.http.RequestEntityConverter" start="71" end="71" startBytecode="32" endBytecode="32" sourcefile="RequestEntityConverter.java" sourcepath="org/apache/camel/component/http/RequestEntityConverter.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="org.apache.camel.component.http.RequestEntityConverter" start="69" end="69" startBytecode="1" endBytecode="1" sourcefile="RequestEntityConverter.java" sourcepath="org/apache/camel/component/http/RequestEntityConverter.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.apache.camel.component.http.helper.LoadingByteArrayOutputStream">
+      <SourceLine classname="org.apache.camel.component.http.helper.LoadingByteArrayOutputStream" start="38" end="53" sourcefile="LoadingByteArrayOutputStream.java" sourcepath="org/apache/camel/component/http/helper/LoadingByteArrayOutputStream.java"/>
+    </Class>
+    <Method classname="org.apache.camel.component.http.helper.LoadingByteArrayOutputStream" name="toByteArray" signature="()[B" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.http.helper.LoadingByteArrayOutputStream" start="50" end="53" startBytecode="0" endBytecode="74" sourcefile="LoadingByteArrayOutputStream.java" sourcepath="org/apache/camel/component/http/helper/LoadingByteArrayOutputStream.java"/>
+    </Method>
+    <Field classname="org.apache.camel.component.http.helper.LoadingByteArrayOutputStream" name="buf" signature="[B" isStatic="false">
+      <SourceLine classname="org.apache.camel.component.http.helper.LoadingByteArrayOutputStream" sourcefile="LoadingByteArrayOutputStream.java" sourcepath="org/apache/camel/component/http/helper/LoadingByteArrayOutputStream.java"/>
+    </Field>
+    <SourceLine classname="org.apache.camel.component.http.helper.LoadingByteArrayOutputStream" start="53" end="53" startBytecode="24" endBytecode="24" sourcefile="LoadingByteArrayOutputStream.java" sourcepath="org/apache/camel/component/http/helper/LoadingByteArrayOutputStream.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="56">
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.camel.CamelContext</MissingClass>
+    <MissingClass>org.apache.camel.CamelException</MissingClass>
+    <MissingClass>org.apache.camel.Endpoint</MissingClass>
+    <MissingClass>org.apache.camel.Exchange</MissingClass>
+    <MissingClass>org.apache.camel.ExchangePattern</MissingClass>
+    <MissingClass>org.apache.camel.Expression</MissingClass>
+    <MissingClass>org.apache.camel.Message</MissingClass>
+    <MissingClass>org.apache.camel.Processor</MissingClass>
+    <MissingClass>org.apache.camel.ResolveEndpointFailedException</MissingClass>
+    <MissingClass>org.apache.camel.RuntimeCamelException</MissingClass>
+    <MissingClass>org.apache.camel.StreamCache</MissingClass>
+    <MissingClass>org.apache.camel.TypeConverter</MissingClass>
+    <MissingClass>org.apache.camel.builder.ExpressionBuilder</MissingClass>
+    <MissingClass>org.apache.camel.converter.stream.CachedOutputStream</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultConsumer</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultExchange</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultHeaderFilterStrategy</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultMessage</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultPollingEndpoint</MissingClass>
+    <MissingClass>org.apache.camel.impl.DefaultProducer</MissingClass>
+    <MissingClass>org.apache.camel.impl.HeaderFilterStrategyComponent</MissingClass>
+    <MissingClass>org.apache.camel.impl.PollingConsumerSupport</MissingClass>
+    <MissingClass>org.apache.camel.spi.HeaderFilterStrategy</MissingClass>
+    <MissingClass>org.apache.camel.util.CastUtils</MissingClass>
+    <MissingClass>org.apache.camel.util.CollectionHelper</MissingClass>
+    <MissingClass>org.apache.camel.util.ExchangeHelper</MissingClass>
+    <MissingClass>org.apache.camel.util.IOHelper</MissingClass>
+    <MissingClass>org.apache.camel.util.IntrospectionSupport</MissingClass>
+    <MissingClass>org.apache.camel.util.MessageHelper</MissingClass>
+    <MissingClass>org.apache.camel.util.ObjectHelper</MissingClass>
+    <MissingClass>org.apache.camel.util.URISupport</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.Header</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HostConfiguration</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpClient</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpState</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.MultiThreadedHttpConnectionManager</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.NTCredentials</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.StatusLine</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.URI</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.UsernamePasswordCredentials</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.auth.AuthScope</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.EntityEnclosingMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.GetMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.InputStreamRequestEntity</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.RequestEntity</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.StringRequestEntity</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpClientParams</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpMethodParams</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 22 May 2010 22:54:07 +0300" total_classes="23" referenced_classes="82" total_bugs="3" total_size="1208" num_packages="2" vm_version="20.4-b02-402" cpu_seconds="23.87" clock_seconds="19.69" peak_mbytes="71.61" alloc_mbytes="763.88" gc_seconds="0.24" priority_2="3">
+    <PackageStats package="org.apache.camel.component.http" total_bugs="2" total_types="20" total_size="1105" priority_2="2">
+      <ClassStats class="org.apache.camel.component.http.AuthMethod" sourceFile="AuthMethod.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.BasicAuthenticationHttpClientConfigurer" sourceFile="BasicAuthenticationHttpClientConfigurer.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.CamelServlet" sourceFile="CamelServlet.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.CompositeHttpConfigurer" sourceFile="CompositeHttpConfigurer.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.DefaultHttpBinding" sourceFile="DefaultHttpBinding.java" interface="false" size="185" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpBinding" sourceFile="HttpBinding.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpClientConfigurer" sourceFile="HttpClientConfigurer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpComponent" sourceFile="HttpComponent.java" interface="false" size="145" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpConfiguration" sourceFile="HttpConfiguration.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpConsumer" sourceFile="HttpConsumer.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpConverter" sourceFile="HttpConverter.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpEndpoint" sourceFile="HttpEndpoint.java" interface="false" size="170" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpHeaderFilterStrategy" sourceFile="HttpHeaderFilterStrategy.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpMessage" sourceFile="HttpMessage.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpMethods" sourceFile="HttpMethods.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpOperationFailedException" sourceFile="HttpOperationFailedException.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpPollingConsumer" sourceFile="HttpPollingConsumer.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.HttpProducer" sourceFile="HttpProducer.java" interface="false" size="136" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.NTLMAuthenticationHttpClientConfigurer" sourceFile="NTLMAuthenticationHttpClientConfigurer.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.RequestEntityConverter" sourceFile="RequestEntityConverter.java" interface="false" size="20" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.apache.camel.component.http.helper" total_bugs="1" total_types="3" total_size="103" priority_2="1">
+      <ClassStats class="org.apache.camel.component.http.helper.GZIPHelper" sourceFile="GZIPHelper.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.helper.HttpProducerHelper" sourceFile="HttpProducerHelper.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.camel.component.http.helper.LoadingByteArrayOutputStream" sourceFile="LoadingByteArrayOutputStream.java" interface="false" size="13" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1574" invocations="559" avgMicrosecondsPerInvocation="2816" maxMicrosecondsPerInvocation="123401" standardDeviationMircosecondsPerInvocation="9279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1450" invocations="82" avgMicrosecondsPerInvocation="17689" maxMicrosecondsPerInvocation="210962" standardDeviationMircosecondsPerInvocation="41260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1111" invocations="216" avgMicrosecondsPerInvocation="5143" maxMicrosecondsPerInvocation="141729" standardDeviationMircosecondsPerInvocation="15047"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1023" invocations="218" avgMicrosecondsPerInvocation="4694" maxMicrosecondsPerInvocation="124307" standardDeviationMircosecondsPerInvocation="12670"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="931" invocations="82" avgMicrosecondsPerInvocation="11360" maxMicrosecondsPerInvocation="131837" standardDeviationMircosecondsPerInvocation="25743"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="915" invocations="216" avgMicrosecondsPerInvocation="4237" maxMicrosecondsPerInvocation="108325" standardDeviationMircosecondsPerInvocation="11694"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="902" invocations="82" avgMicrosecondsPerInvocation="11000" maxMicrosecondsPerInvocation="172610" standardDeviationMircosecondsPerInvocation="29128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="744" invocations="219" avgMicrosecondsPerInvocation="3398" maxMicrosecondsPerInvocation="76967" standardDeviationMircosecondsPerInvocation="9463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="689" invocations="219" avgMicrosecondsPerInvocation="3147" maxMicrosecondsPerInvocation="125504" standardDeviationMircosecondsPerInvocation="11220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="679" invocations="437" avgMicrosecondsPerInvocation="1555" maxMicrosecondsPerInvocation="124241" standardDeviationMircosecondsPerInvocation="7202"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="529" invocations="121" avgMicrosecondsPerInvocation="4377" maxMicrosecondsPerInvocation="70790" standardDeviationMircosecondsPerInvocation="10920"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="447" invocations="218" avgMicrosecondsPerInvocation="2053" maxMicrosecondsPerInvocation="39114" standardDeviationMircosecondsPerInvocation="5095"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="409" invocations="218" avgMicrosecondsPerInvocation="1877" maxMicrosecondsPerInvocation="91834" standardDeviationMircosecondsPerInvocation="8334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="325" invocations="82" avgMicrosecondsPerInvocation="3971" maxMicrosecondsPerInvocation="121464" standardDeviationMircosecondsPerInvocation="14744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="323" invocations="82" avgMicrosecondsPerInvocation="3940" maxMicrosecondsPerInvocation="94981" standardDeviationMircosecondsPerInvocation="12637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="321" invocations="23" avgMicrosecondsPerInvocation="13975" maxMicrosecondsPerInvocation="128282" standardDeviationMircosecondsPerInvocation="30152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="297" invocations="82" avgMicrosecondsPerInvocation="3630" maxMicrosecondsPerInvocation="95562" standardDeviationMircosecondsPerInvocation="12330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="224" invocations="446" avgMicrosecondsPerInvocation="503" maxMicrosecondsPerInvocation="31067" standardDeviationMircosecondsPerInvocation="2570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="216" invocations="142" avgMicrosecondsPerInvocation="1523" maxMicrosecondsPerInvocation="69249" standardDeviationMircosecondsPerInvocation="6967"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="205" invocations="82" avgMicrosecondsPerInvocation="2500" maxMicrosecondsPerInvocation="72200" standardDeviationMircosecondsPerInvocation="8601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="188" invocations="23" avgMicrosecondsPerInvocation="8199" maxMicrosecondsPerInvocation="69655" standardDeviationMircosecondsPerInvocation="15222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="169" invocations="562" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="27748" standardDeviationMircosecondsPerInvocation="1803"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1220634415000" analysisTimestamp="1360918636875" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/cmi/cmi-core-client/2.0.9/cmi-core-client-2.0.9.jar</Jar>
+  </Project>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.cmi.controller.client.ClientClusterViewManagerImpl">
+      <SourceLine classname="org.ow2.cmi.controller.client.ClientClusterViewManagerImpl" start="80" end="1006" sourcefile="ClientClusterViewManagerImpl.java" sourcepath="org/ow2/cmi/controller/client/ClientClusterViewManagerImpl.java"/>
+    </Class>
+    <Method classname="org.ow2.cmi.controller.client.ClientClusterViewManagerImpl" name="stop" signature="()V" isStatic="false">
+      <SourceLine classname="org.ow2.cmi.controller.client.ClientClusterViewManagerImpl" start="430" end="447" startBytecode="0" endBytecode="218" sourcefile="ClientClusterViewManagerImpl.java" sourcepath="org/ow2/cmi/controller/client/ClientClusterViewManagerImpl.java"/>
+    </Method>
+    <Field classname="org.ow2.cmi.controller.client.ClientClusterViewManagerImpl" name="clientClusterViewProvider" signature="Lorg/ow2/cmi/controller/provider/ClientClusterViewProvider;" isStatic="true">
+      <SourceLine classname="org.ow2.cmi.controller.client.ClientClusterViewManagerImpl" sourcefile="ClientClusterViewManagerImpl.java" sourcepath="org/ow2/cmi/controller/client/ClientClusterViewManagerImpl.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.cmi.controller.client.ClientClusterViewManagerImpl" start="443" end="443" startBytecode="82" endBytecode="82" sourcefile="ClientClusterViewManagerImpl.java" sourcepath="org/ow2/cmi/controller/client/ClientClusterViewManagerImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>org.ow2.cmi.admin.MBeanUtils</MissingClass>
+    <MissingClass>org.ow2.cmi.config.CMIConfig</MissingClass>
+    <MissingClass>org.ow2.cmi.controller.client.ClientClusterViewManager</MissingClass>
+    <MissingClass>org.ow2.cmi.controller.client.ClientClusterViewManagerException</MissingClass>
+    <MissingClass>org.ow2.cmi.controller.client.IClientConfig</MissingClass>
+    <MissingClass>org.ow2.cmi.controller.common.AbsClusterViewManager</MissingClass>
+    <MissingClass>org.ow2.cmi.controller.common.CMIThreadFactory</MissingClass>
+    <MissingClass>org.ow2.cmi.controller.common.ClusterViewManager</MissingClass>
+    <MissingClass>org.ow2.cmi.controller.common.ClusterViewManager$State</MissingClass>
+    <MissingClass>org.ow2.cmi.controller.common.ImmutableClusteredObjectInfos</MissingClass>
+    <MissingClass>org.ow2.cmi.controller.provider.ClientClusterViewProvider</MissingClass>
+    <MissingClass>org.ow2.cmi.info.CMIInfoExtractor</MissingClass>
+    <MissingClass>org.ow2.cmi.info.ClusteredObjectInfo</MissingClass>
+    <MissingClass>org.ow2.cmi.lb.data.PolicyData</MissingClass>
+    <MissingClass>org.ow2.cmi.pool.StubOrProxyFactory</MissingClass>
+    <MissingClass>org.ow2.cmi.reference.CMIReference</MissingClass>
+    <MissingClass>org.ow2.cmi.reference.ObjectNotFoundException</MissingClass>
+    <MissingClass>org.ow2.cmi.reference.ServerRef</MissingClass>
+    <MissingClass>org.ow2.cmi.rpc.POJOInvocationHandler</MissingClass>
+    <MissingClass>org.ow2.util.log.Log</MissingClass>
+    <MissingClass>org.ow2.util.log.LogFactory</MissingClass>
+    <MissingClass>org.ow2.util.pool.api.Pool</MissingClass>
+    <MissingClass>org.ow2.util.pool.impl.JPool</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 5 Sep 2008 20:06:55 +0300" total_classes="6" referenced_classes="80" total_bugs="1" total_size="531" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="20.20" clock_seconds="12.72" peak_mbytes="65.16" alloc_mbytes="763.88" gc_seconds="0.20" priority_1="1">
+    <PackageStats package="org.ow2.cmi.controller.client" total_bugs="1" total_types="6" total_size="531" priority_1="1">
+      <ClassStats class="org.ow2.cmi.controller.client.CMIClientClassLoader" sourceFile="CMIClientClassLoader.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.ow2.cmi.controller.client.ClientClusterViewCache" sourceFile="ClientClusterViewCache.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.ow2.cmi.controller.client.ClientClusterViewManagerImpl" sourceFile="ClientClusterViewManagerImpl.java" interface="false" size="392" bugs="1" priority_1="1"/>
+      <ClassStats class="org.ow2.cmi.controller.client.ClientClusterViewManagerImpl$1" sourceFile="ClientClusterViewManagerImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.ow2.cmi.controller.client.ClientClusteredObjectView" sourceFile="ClientClusteredObjectView.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.ow2.cmi.controller.client.ClientConfig" sourceFile="ClientConfig.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1017" invocations="607" avgMicrosecondsPerInvocation="1675" maxMicrosecondsPerInvocation="44831" standardDeviationMircosecondsPerInvocation="4832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="828" invocations="84" avgMicrosecondsPerInvocation="9864" maxMicrosecondsPerInvocation="107866" standardDeviationMircosecondsPerInvocation="17128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="711" invocations="80" avgMicrosecondsPerInvocation="8893" maxMicrosecondsPerInvocation="100897" standardDeviationMircosecondsPerInvocation="16717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="673" invocations="88" avgMicrosecondsPerInvocation="7654" maxMicrosecondsPerInvocation="107060" standardDeviationMircosecondsPerInvocation="14979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="644" invocations="80" avgMicrosecondsPerInvocation="8054" maxMicrosecondsPerInvocation="158448" standardDeviationMircosecondsPerInvocation="19919"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="626" invocations="86" avgMicrosecondsPerInvocation="7279" maxMicrosecondsPerInvocation="74573" standardDeviationMircosecondsPerInvocation="12726"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="609" invocations="85" avgMicrosecondsPerInvocation="7166" maxMicrosecondsPerInvocation="118801" standardDeviationMircosecondsPerInvocation="15552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="510" invocations="86" avgMicrosecondsPerInvocation="5941" maxMicrosecondsPerInvocation="55421" standardDeviationMircosecondsPerInvocation="9924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="473" invocations="68" avgMicrosecondsPerInvocation="6968" maxMicrosecondsPerInvocation="65853" standardDeviationMircosecondsPerInvocation="11832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="405" invocations="80" avgMicrosecondsPerInvocation="5065" maxMicrosecondsPerInvocation="74523" standardDeviationMircosecondsPerInvocation="12441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="374" invocations="86" avgMicrosecondsPerInvocation="4360" maxMicrosecondsPerInvocation="28695" standardDeviationMircosecondsPerInvocation="6493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="293" invocations="367" avgMicrosecondsPerInvocation="800" maxMicrosecondsPerInvocation="20367" standardDeviationMircosecondsPerInvocation="1868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="266" invocations="86" avgMicrosecondsPerInvocation="3103" maxMicrosecondsPerInvocation="55394" standardDeviationMircosecondsPerInvocation="8410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="211" invocations="80" avgMicrosecondsPerInvocation="2647" maxMicrosecondsPerInvocation="29579" standardDeviationMircosecondsPerInvocation="5841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="198" invocations="531" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="17765" standardDeviationMircosecondsPerInvocation="1569"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="197" invocations="80" avgMicrosecondsPerInvocation="2464" maxMicrosecondsPerInvocation="61589" standardDeviationMircosecondsPerInvocation="7475"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="181" invocations="117" avgMicrosecondsPerInvocation="1547" maxMicrosecondsPerInvocation="47703" standardDeviationMircosecondsPerInvocation="6054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="174" invocations="611" avgMicrosecondsPerInvocation="286" maxMicrosecondsPerInvocation="68204" standardDeviationMircosecondsPerInvocation="2802"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="163" invocations="6" avgMicrosecondsPerInvocation="27203" maxMicrosecondsPerInvocation="82091" standardDeviationMircosecondsPerInvocation="36358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="145" invocations="80" avgMicrosecondsPerInvocation="1824" maxMicrosecondsPerInvocation="34398" standardDeviationMircosecondsPerInvocation="4602"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

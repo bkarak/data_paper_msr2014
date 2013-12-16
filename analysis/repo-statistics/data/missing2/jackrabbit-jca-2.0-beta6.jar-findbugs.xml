@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1263396436000" analysisTimestamp="1360875894784" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/apache/jackrabbit/jackrabbit-jca/2.0-beta6/jackrabbit-jca-2.0-beta6.jar</Jar>
+  </Project>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="org.apache.jackrabbit.jca.JCAConnectionRequestInfo">
+      <SourceLine classname="org.apache.jackrabbit.jca.JCAConnectionRequestInfo" start="45" end="200" sourcefile="JCAConnectionRequestInfo.java" sourcepath="org/apache/jackrabbit/jca/JCAConnectionRequestInfo.java"/>
+    </Class>
+    <Method classname="org.apache.jackrabbit.jca.JCAConnectionRequestInfo" name="computeSimpleCredsHashCode" signature="(Ljavax/jcr/SimpleCredentials;)I" isStatic="false">
+      <SourceLine classname="org.apache.jackrabbit.jca.JCAConnectionRequestInfo" start="190" end="200" startBytecode="0" endBytecode="248" sourcefile="JCAConnectionRequestInfo.java" sourcepath="org/apache/jackrabbit/jca/JCAConnectionRequestInfo.java"/>
+    </Method>
+    <LocalVariable name="m" register="4" pc="77" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.apache.jackrabbit.jca.JCAConnectionRequestInfo" name="getAttributeMap" signature="(Ljavax/jcr/SimpleCredentials;)Ljava/util/Map;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.apache.jackrabbit.jca.JCAConnectionRequestInfo" start="164" end="171" startBytecode="0" endBytecode="149" sourcefile="JCAConnectionRequestInfo.java" sourcepath="org/apache/jackrabbit/jca/JCAConnectionRequestInfo.java"/>
+    </Method>
+    <SourceLine classname="org.apache.jackrabbit.jca.JCAConnectionRequestInfo" start="199" end="199" startBytecode="79" endBytecode="79" sourcefile="JCAConnectionRequestInfo.java" sourcepath="org/apache/jackrabbit/jca/JCAConnectionRequestInfo.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="org.apache.jackrabbit.jca.JCARepositoryManager$Reference">
+      <SourceLine classname="org.apache.jackrabbit.jca.JCARepositoryManager$Reference" start="120" end="232" sourcefile="JCARepositoryManager.java" sourcepath="org/apache/jackrabbit/jca/JCARepositoryManager.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="16">
+    <MissingClass>javax.jcr.Credentials</MissingClass>
+    <MissingClass>javax.jcr.LoginException</MissingClass>
+    <MissingClass>javax.jcr.NoSuchWorkspaceException</MissingClass>
+    <MissingClass>javax.jcr.RepositoryException</MissingClass>
+    <MissingClass>javax.jcr.SimpleCredentials</MissingClass>
+    <MissingClass>javax.resource.ResourceException</MissingClass>
+    <MissingClass>javax.resource.spi.ConnectionEvent</MissingClass>
+    <MissingClass>javax.resource.spi.ConnectionEventListener</MissingClass>
+    <MissingClass>javax.resource.spi.ConnectionManager</MissingClass>
+    <MissingClass>javax.resource.spi.ConnectionRequestInfo</MissingClass>
+    <MissingClass>javax.resource.spi.ManagedConnection</MissingClass>
+    <MissingClass>javax.resource.spi.ManagedConnectionFactory</MissingClass>
+    <MissingClass>org.apache.jackrabbit.api.XASession</MissingClass>
+    <MissingClass>org.apache.jackrabbit.commons.repository.ProxyRepository</MissingClass>
+    <MissingClass>org.apache.jackrabbit.core.RepositoryImpl</MissingClass>
+    <MissingClass>org.apache.jackrabbit.core.config.RepositoryConfig</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 13 Jan 2010 17:27:16 +0200" total_classes="13" referenced_classes="47" total_bugs="2" total_size="709" num_packages="1" vm_version="20.4-b02-402" cpu_seconds="11.81" clock_seconds="11.81" peak_mbytes="61.31" alloc_mbytes="763.88" gc_seconds="0.16" priority_2="2">
+    <PackageStats package="org.apache.jackrabbit.jca" total_bugs="2" total_types="13" total_size="709" priority_2="2">
+      <ClassStats class="org.apache.jackrabbit.jca.AnonymousConnection" sourceFile="AnonymousConnection.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCAConnectionManager" sourceFile="JCAConnectionManager.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCAConnectionRequestInfo" sourceFile="JCAConnectionRequestInfo.java" interface="false" size="76" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCAManagedConnection" sourceFile="JCAManagedConnection.java" interface="false" size="158" bugs="0"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCAManagedConnectionFactory" sourceFile="JCAManagedConnectionFactory.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCARepositoryHandle" sourceFile="JCARepositoryHandle.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCARepositoryHandle$JCARepositoryFactory" sourceFile="JCARepositoryHandle.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCARepositoryManager" sourceFile="JCARepositoryManager.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCARepositoryManager$1" sourceFile="JCARepositoryManager.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCARepositoryManager$Reference" sourceFile="JCARepositoryManager.java" interface="false" size="52" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCAResourceAdapter" sourceFile="JCAResourceAdapter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.jackrabbit.jca.JCASessionHandle" sourceFile="JCASessionHandle.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="org.apache.jackrabbit.jca.TransactionBoundXAResource" sourceFile="TransactionBoundXAResource.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1048" invocations="438" avgMicrosecondsPerInvocation="2393" maxMicrosecondsPerInvocation="84340" standardDeviationMircosecondsPerInvocation="7960"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="607" invocations="47" avgMicrosecondsPerInvocation="12931" maxMicrosecondsPerInvocation="104725" standardDeviationMircosecondsPerInvocation="25798"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="597" invocations="47" avgMicrosecondsPerInvocation="12706" maxMicrosecondsPerInvocation="196612" standardDeviationMircosecondsPerInvocation="36141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="457" invocations="181" avgMicrosecondsPerInvocation="2525" maxMicrosecondsPerInvocation="121274" standardDeviationMircosecondsPerInvocation="11200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="455" invocations="181" avgMicrosecondsPerInvocation="2514" maxMicrosecondsPerInvocation="83622" standardDeviationMircosecondsPerInvocation="8573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="438" invocations="181" avgMicrosecondsPerInvocation="2421" maxMicrosecondsPerInvocation="101668" standardDeviationMircosecondsPerInvocation="8969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="384" invocations="13" avgMicrosecondsPerInvocation="29612" maxMicrosecondsPerInvocation="159682" standardDeviationMircosecondsPerInvocation="46396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="361" invocations="286" avgMicrosecondsPerInvocation="1265" maxMicrosecondsPerInvocation="120174" standardDeviationMircosecondsPerInvocation="8193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="344" invocations="47" avgMicrosecondsPerInvocation="7324" maxMicrosecondsPerInvocation="123225" standardDeviationMircosecondsPerInvocation="25433"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="306" invocations="354" avgMicrosecondsPerInvocation="866" maxMicrosecondsPerInvocation="127326" standardDeviationMircosecondsPerInvocation="7139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="281" invocations="181" avgMicrosecondsPerInvocation="1555" maxMicrosecondsPerInvocation="31492" standardDeviationMircosecondsPerInvocation="3881"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="273" invocations="181" avgMicrosecondsPerInvocation="1513" maxMicrosecondsPerInvocation="166710" standardDeviationMircosecondsPerInvocation="12946"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="226" invocations="182" avgMicrosecondsPerInvocation="1244" maxMicrosecondsPerInvocation="48631" standardDeviationMircosecondsPerInvocation="4326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="225" invocations="13" avgMicrosecondsPerInvocation="17358" maxMicrosecondsPerInvocation="131729" standardDeviationMircosecondsPerInvocation="36674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="212" invocations="47" avgMicrosecondsPerInvocation="4524" maxMicrosecondsPerInvocation="42477" standardDeviationMircosecondsPerInvocation="10049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="212" invocations="47" avgMicrosecondsPerInvocation="4512" maxMicrosecondsPerInvocation="55313" standardDeviationMircosecondsPerInvocation="9686"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="193" invocations="74" avgMicrosecondsPerInvocation="2608" maxMicrosecondsPerInvocation="61132" standardDeviationMircosecondsPerInvocation="9414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="187" invocations="13" avgMicrosecondsPerInvocation="14387" maxMicrosecondsPerInvocation="128680" standardDeviationMircosecondsPerInvocation="34335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="162" invocations="181" avgMicrosecondsPerInvocation="899" maxMicrosecondsPerInvocation="18632" standardDeviationMircosecondsPerInvocation="2324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="159" invocations="13" avgMicrosecondsPerInvocation="12235" maxMicrosecondsPerInvocation="141079" standardDeviationMircosecondsPerInvocation="37310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="153" invocations="441" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="39877" standardDeviationMircosecondsPerInvocation="2612"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1297950352000" analysisTimestamp="1360895367641" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/net/java/dev/activeobjects/activeobjects/0.9-m13/activeobjects-0.9-m13.jar</Jar>
+  </Project>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="net.java.ao.DatabaseProvider">
+      <SourceLine classname="net.java.ao.DatabaseProvider" start="96" end="2192" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java"/>
+    </Class>
+    <Field classname="net.java.ao.DatabaseProvider" name="quote" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="net.java.ao.DatabaseProvider" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java"/>
+    </Field>
+    <Int value="50" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="net.java.ao.DatabaseProvider" start="2109" end="2109" startBytecode="95" endBytecode="95" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="net.java.ao.DatabaseProvider" start="2109" end="2109" startBytecode="106" endBytecode="106" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="net.java.ao.DatabaseProvider" start="108" end="108" startBytecode="1" endBytecode="1" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="net.java.ao.DatabaseProvider" start="121" end="121" startBytecode="49" endBytecode="49" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.DatabaseProvider">
+      <SourceLine classname="net.java.ao.DatabaseProvider" start="96" end="2192" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.DatabaseProvider" name="executeInsertReturningKey" signature="(Lnet/java/ao/EntityManager;Ljava/sql/Connection;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Lnet/java/ao/DBParam;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.DatabaseProvider" start="1929" end="1972" startBytecode="0" endBytecode="491" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.DatabaseProvider" start="1931" end="1931" startBytecode="25" endBytecode="25" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.DatabaseProvider" start="1933" end="1933" startBytecode="32" endBytecode="32" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.DatabaseProvider" start="1958" end="1958" startBytecode="142" endBytecode="142" sourcefile="DatabaseProvider.java" sourcepath="net/java/ao/DatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityManager">
+      <SourceLine classname="net.java.ao.EntityManager" start="73" end="967" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager" name="count" signature="(Ljava/lang/Class;Lnet/java/ao/Query;)I" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager" start="806" end="829" startBytecode="0" endBytecode="348" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="819" end="819" startBytecode="79" endBytecode="79" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="820" end="820" startBytecode="86" endBytecode="86" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="826" end="826" startBytecode="129" endBytecode="129" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityManager">
+      <SourceLine classname="net.java.ao.EntityManager" start="73" end="967" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager" name="count" signature="(Ljava/lang/Class;Lnet/java/ao/Query;)I" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager" start="806" end="829" startBytecode="0" endBytecode="348" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="814" end="814" startBytecode="53" endBytecode="53" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="815" end="815" startBytecode="60" endBytecode="60" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="817" end="817" startBytecode="70" endBytecode="70" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="819" end="819" startBytecode="77" endBytecode="77" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="820" end="820" startBytecode="86" endBytecode="86" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="826" end="826" startBytecode="129" endBytecode="129" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityManager">
+      <SourceLine classname="net.java.ao.EntityManager" start="73" end="967" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager" name="find" signature="(Ljava/lang/Class;Ljava/lang/String;Lnet/java/ao/Query;)[Lnet/java/ao/RawEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager" start="635" end="705" startBytecode="0" endBytecode="1119" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="686" end="686" startBytecode="364" endBytecode="364" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="687" end="687" startBytecode="371" endBytecode="371" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="702" end="702" startBytecode="520" endBytecode="520" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityManager">
+      <SourceLine classname="net.java.ao.EntityManager" start="73" end="967" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager" name="find" signature="(Ljava/lang/Class;Ljava/lang/String;Lnet/java/ao/Query;)[Lnet/java/ao/RawEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager" start="635" end="705" startBytecode="0" endBytecode="1119" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="681" end="681" startBytecode="338" endBytecode="338" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="682" end="682" startBytecode="345" endBytecode="345" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="684" end="684" startBytecode="355" endBytecode="355" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="686" end="686" startBytecode="362" endBytecode="362" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="687" end="687" startBytecode="371" endBytecode="371" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="702" end="702" startBytecode="520" endBytecode="520" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityManager">
+      <SourceLine classname="net.java.ao.EntityManager" start="73" end="967" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager" name="findWithSQL" signature="(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)[Lnet/java/ao/RawEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager" start="735" end="764" startBytecode="0" endBytecode="507" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="754" end="754" startBytecode="127" endBytecode="127" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="755" end="755" startBytecode="134" endBytecode="134" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="761" end="761" startBytecode="196" endBytecode="196" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityManager">
+      <SourceLine classname="net.java.ao.EntityManager" start="73" end="967" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager" name="findWithSQL" signature="(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)[Lnet/java/ao/RawEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager" start="735" end="764" startBytecode="0" endBytecode="507" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="741" end="741" startBytecode="38" endBytecode="38" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="743" end="743" startBytecode="45" endBytecode="45" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="744" end="744" startBytecode="50" endBytecode="50" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="754" end="754" startBytecode="125" endBytecode="125" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="755" end="755" startBytecode="134" endBytecode="134" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager" start="761" end="761" startBytecode="196" endBytecode="196" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING" priority="2" abbrev="SQL" category="SECURITY">
+    <Class classname="net.java.ao.EntityManager">
+      <SourceLine classname="net.java.ao.EntityManager" start="73" end="967" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager" name="delete" signature="([Lnet/java/ao/RawEntity;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager" start="487" end="554" startBytecode="0" endBytecode="254" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.EntityManager" start="524" end="524" startBytecode="304" endBytecode="304" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="net.java.ao.EntityManager">
+      <SourceLine classname="net.java.ao.EntityManager" start="73" end="967" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager" name="create" signature="(Ljava/lang/Class;Ljava/util/Map;)Lnet/java/ao/RawEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager" start="453" end="460" startBytecode="0" endBytecode="227" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.EntityManager" start="457" end="457" startBytecode="63" endBytecode="63" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="net.java.ao.EntityManager">
+      <SourceLine classname="net.java.ao.EntityManager" start="73" end="967" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager" name="delete" signature="([Lnet/java/ao/RawEntity;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager" start="487" end="554" startBytecode="0" endBytecode="1257" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.EntityManager" start="510" end="510" startBytecode="168" endBytecode="168" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityManager$1">
+      <SourceLine classname="net.java.ao.EntityManager$1" start="229" end="265" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager$1" name="invoke" signature="(Ljava/lang/Object;)Lnet/java/ao/RawEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager$1" start="230" end="265" startBytecode="0" endBytecode="624" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="248" end="248" startBytecode="133" endBytecode="133" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="249" end="249" startBytecode="140" endBytecode="140" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="255" end="255" startBytecode="195" endBytecode="195" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="257" end="257" startBytecode="197" endBytecode="197" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="265" end="265" startBytecode="235" endBytecode="235" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityManager$1">
+      <SourceLine classname="net.java.ao.EntityManager$1" start="229" end="265" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityManager$1" name="invoke" signature="(Ljava/lang/Object;)Lnet/java/ao/RawEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityManager$1" start="230" end="265" startBytecode="0" endBytecode="624" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="243" end="243" startBytecode="99" endBytecode="99" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="245" end="245" startBytecode="106" endBytecode="106" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="246" end="246" startBytecode="118" endBytecode="118" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="248" end="248" startBytecode="131" endBytecode="131" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="249" end="249" startBytecode="140" endBytecode="140" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="255" end="255" startBytecode="195" endBytecode="195" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="257" end="257" startBytecode="197" endBytecode="197" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityManager$1" start="265" end="265" startBytecode="235" endBytecode="235" sourcefile="EntityManager.java" sourcepath="net/java/ao/EntityManager.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="DM_BOOLEAN_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="net.java.ao.EntityProxy">
+      <SourceLine classname="net.java.ao.EntityProxy" start="53" end="952" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityProxy" name="handleNullReturn" signature="(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityProxy" start="462" end="486" startBytecode="0" endBytecode="348" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.EntityProxy" start="468" end="468" startBytecode="28" endBytecode="28" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="net.java.ao.EntityProxy">
+      <SourceLine classname="net.java.ao.EntityProxy" start="53" end="952" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityProxy" name="handleNullReturn" signature="(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityProxy" start="462" end="486" startBytecode="0" endBytecode="348" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="&lt;init&gt;" signature="(C)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Character" start="2056" end="2058" startBytecode="0" endBytecode="41" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="valueOf" signature="(C)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Character" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.EntityProxy" start="470" end="470" startBytecode="48" endBytecode="48" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="net.java.ao.EntityProxy">
+      <SourceLine classname="net.java.ao.EntityProxy" start="53" end="952" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityProxy" name="handleNullReturn" signature="(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityProxy" start="462" end="486" startBytecode="0" endBytecode="348" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.EntityProxy" start="472" end="472" startBytecode="67" endBytecode="67" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityProxy">
+      <SourceLine classname="net.java.ao.EntityProxy" start="53" end="952" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityProxy" name="retrieveRelations" signature="(Lnet/java/ao/RawEntity;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)[Lnet/java/ao/RawEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityProxy" start="525" end="831" startBytecode="0" endBytecode="4716" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="787" end="787" startBytecode="2382" endBytecode="2382" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="788" end="788" startBytecode="2389" endBytecode="2389" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="822" end="822" startBytecode="2683" endBytecode="2683" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityProxy">
+      <SourceLine classname="net.java.ao.EntityProxy" start="53" end="952" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityProxy" name="retrieveRelations" signature="(Lnet/java/ao/RawEntity;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)[Lnet/java/ao/RawEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityProxy" start="525" end="831" startBytecode="0" endBytecode="4716" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="770" end="770" startBytecode="2248" endBytecode="2248" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="772" end="772" startBytecode="2255" endBytecode="2255" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="773" end="773" startBytecode="2270" endBytecode="2270" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="774" end="774" startBytecode="2273" endBytecode="2273" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="778" end="778" startBytecode="2305" endBytecode="2305" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="779" end="779" startBytecode="2322" endBytecode="2322" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="780" end="780" startBytecode="2340" endBytecode="2340" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="784" end="784" startBytecode="2366" endBytecode="2366" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="785" end="785" startBytecode="2373" endBytecode="2373" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="787" end="787" startBytecode="2380" endBytecode="2380" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="788" end="788" startBytecode="2389" endBytecode="2389" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="822" end="822" startBytecode="2683" endBytecode="2683" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.EntityProxy">
+      <SourceLine classname="net.java.ao.EntityProxy" start="53" end="952" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityProxy" name="save" signature="(Lnet/java/ao/RawEntity;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityProxy" start="210" end="292" startBytecode="0" endBytecode="1176" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="242" end="242" startBytecode="255" endBytecode="255" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="244" end="244" startBytecode="262" endBytecode="262" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="245" end="245" startBytecode="271" endBytecode="271" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="246" end="246" startBytecode="274" endBytecode="274" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="271" end="271" startBytecode="447" endBytecode="447" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.EntityProxy" start="290" end="290" startBytecode="619" endBytecode="619" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING" priority="2" abbrev="SQL" category="SECURITY">
+    <Class classname="net.java.ao.EntityProxy">
+      <SourceLine classname="net.java.ao.EntityProxy" start="53" end="952" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityProxy" name="retrieveRelations" signature="(Lnet/java/ao/RawEntity;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)[Lnet/java/ao/RawEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityProxy" start="525" end="831" startBytecode="0" endBytecode="1221" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.EntityProxy" start="770" end="770" startBytecode="2248" endBytecode="2248" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+  </BugInstance>
+  <BugInstance type="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING" priority="2" abbrev="SQL" category="SECURITY">
+    <Class classname="net.java.ao.EntityProxy">
+      <SourceLine classname="net.java.ao.EntityProxy" start="53" end="952" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityProxy" name="save" signature="(Lnet/java/ao/RawEntity;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityProxy" start="210" end="292" startBytecode="0" endBytecode="265" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.EntityProxy" start="242" end="242" startBytecode="255" endBytecode="255" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+  </BugInstance>
+  <BugInstance type="UL_UNRELEASED_LOCK_EXCEPTION_PATH" priority="2" abbrev="UL" category="MT_CORRECTNESS">
+    <Class classname="net.java.ao.EntityProxy">
+      <SourceLine classname="net.java.ao.EntityProxy" start="53" end="952" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Class>
+    <Method classname="net.java.ao.EntityProxy" name="invokeSetter" signature="(Lnet/java/ao/RawEntity;Ljava/lang/String;Ljava/lang/Object;ZLjava/lang/String;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.EntityProxy" start="490" end="515" startBytecode="0" endBytecode="63" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.EntityProxy" start="492" end="492" startBytecode="17" endBytecode="17" sourcefile="EntityProxy.java" sourcepath="net/java/ao/EntityProxy.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="net.java.ao.Query">
+      <SourceLine classname="net.java.ao.Query" start="45" end="314" sourcefile="Query.java" sourcepath="net/java/ao/Query.java"/>
+    </Class>
+    <Method classname="net.java.ao.Query" name="getWhereParams" signature="()[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.Query" start="200" end="200" startBytecode="0" endBytecode="46" sourcefile="Query.java" sourcepath="net/java/ao/Query.java"/>
+    </Method>
+    <Field classname="net.java.ao.Query" name="whereParams" signature="[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.Query" sourcefile="Query.java" sourcepath="net/java/ao/Query.java"/>
+    </Field>
+    <SourceLine classname="net.java.ao.Query" start="200" end="200" startBytecode="4" endBytecode="4" sourcefile="Query.java" sourcepath="net/java/ao/Query.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="net.java.ao.Query">
+      <SourceLine classname="net.java.ao.Query" start="45" end="314" sourcefile="Query.java" sourcepath="net/java/ao/Query.java"/>
+    </Class>
+    <Method classname="net.java.ao.Query" name="setWhereParams" signature="([Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.Query" start="204" end="213" startBytecode="0" endBytecode="130" sourcefile="Query.java" sourcepath="net/java/ao/Query.java"/>
+    </Method>
+    <Field classname="net.java.ao.Query" name="whereParams" signature="[Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.Query" sourcefile="Query.java" sourcepath="net/java/ao/Query.java"/>
+    </Field>
+    <LocalVariable name="whereParams" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="net.java.ao.Query" start="204" end="204" startBytecode="2" endBytecode="2" sourcefile="Query.java" sourcepath="net/java/ao/Query.java"/>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" abbrev="DE" category="BAD_PRACTICE">
+    <Class classname="net.java.ao.RelatedEntityImpl">
+      <SourceLine classname="net.java.ao.RelatedEntityImpl" start="37" end="94" sourcefile="RelatedEntityImpl.java" sourcepath="net/java/ao/RelatedEntityImpl.java"/>
+    </Class>
+    <Method classname="net.java.ao.RelatedEntityImpl" name="getRelated" signature="()[Lnet/java/ao/RelatedEntity;" isStatic="false">
+      <SourceLine classname="net.java.ao.RelatedEntityImpl" start="42" end="94" startBytecode="0" endBytecode="1020" sourcefile="RelatedEntityImpl.java" sourcepath="net/java/ao/RelatedEntityImpl.java"/>
+    </Method>
+    <Class classname="java.io.IOException" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.io.IOException" start="30" end="83" sourcefile="IOException.java" sourcepath="java/io/IOException.java"/>
+    </Class>
+    <SourceLine classname="net.java.ao.RelatedEntityImpl" start="94" end="94" startBytecode="320" endBytecode="320" sourcefile="RelatedEntityImpl.java" sourcepath="net/java/ao/RelatedEntityImpl.java"/>
+    <SourceLine classname="net.java.ao.RelatedEntityImpl" start="94" end="94" startBytecode="320" endBytecode="320" sourcefile="RelatedEntityImpl.java" sourcepath="net/java/ao/RelatedEntityImpl.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="2" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="net.java.ao.SoftHashMap">
+      <SourceLine classname="net.java.ao.SoftHashMap" start="55" end="586" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Class>
+    <Method classname="net.java.ao.SoftHashMap" name="clear" signature="()V" isStatic="false">
+      <SourceLine classname="net.java.ao.SoftHashMap" start="214" end="222" startBytecode="0" endBytecode="123" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Method>
+    <Field classname="net.java.ao.SoftHashMap" name="modCount" signature="I" isStatic="false">
+      <SourceLine classname="net.java.ao.SoftHashMap" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Field>
+    <SourceLine classname="net.java.ao.SoftHashMap" start="217" end="217" startBytecode="27" endBytecode="27" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="2" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="net.java.ao.SoftHashMap">
+      <SourceLine classname="net.java.ao.SoftHashMap" start="55" end="586" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Class>
+    <Method classname="net.java.ao.SoftHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.SoftHashMap" start="488" end="516" startBytecode="0" endBytecode="454" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Method>
+    <Field classname="net.java.ao.SoftHashMap" name="modCount" signature="I" isStatic="false">
+      <SourceLine classname="net.java.ao.SoftHashMap" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Field>
+    <SourceLine classname="net.java.ao.SoftHashMap" start="504" end="504" startBytecode="102" endBytecode="102" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="2" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="net.java.ao.SoftHashMap">
+      <SourceLine classname="net.java.ao.SoftHashMap" start="55" end="586" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Class>
+    <Method classname="net.java.ao.SoftHashMap" name="remove" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.SoftHashMap" start="546" end="573" startBytecode="0" endBytecode="366" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Method>
+    <Field classname="net.java.ao.SoftHashMap" name="modCount" signature="I" isStatic="false">
+      <SourceLine classname="net.java.ao.SoftHashMap" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Field>
+    <SourceLine classname="net.java.ao.SoftHashMap" start="564" end="564" startBytecode="100" endBytecode="100" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+  </BugInstance>
+  <BugInstance type="VO_VOLATILE_INCREMENT" priority="2" abbrev="VO" category="MT_CORRECTNESS">
+    <Class classname="net.java.ao.SoftHashMap">
+      <SourceLine classname="net.java.ao.SoftHashMap" start="55" end="586" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Class>
+    <Method classname="net.java.ao.SoftHashMap" name="removeEntry" signature="(Lnet/java/ao/SoftHashMap$Entry;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.SoftHashMap" start="465" end="484" startBytecode="0" endBytecode="275" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Method>
+    <Field classname="net.java.ao.SoftHashMap" name="modCount" signature="I" isStatic="false">
+      <SourceLine classname="net.java.ao.SoftHashMap" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Field>
+    <SourceLine classname="net.java.ao.SoftHashMap" start="472" end="472" startBytecode="41" endBytecode="41" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE">
+    <Class classname="net.java.ao.SoftHashMap$Entry">
+      <SourceLine classname="net.java.ao.SoftHashMap$Entry" start="69" end="106" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Class>
+    <Method classname="net.java.ao.SoftHashMap$Entry" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="net.java.ao.SoftHashMap$Entry" start="91" end="96" startBytecode="0" endBytecode="41" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.SoftHashMap$Entry" start="96" end="96" startBytecode="23" endBytecode="23" sourcefile="SoftHashMap.java" sourcepath="net/java/ao/SoftHashMap.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.db.DerbyDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.DerbyDatabaseProvider" start="44" end="317" sourcefile="DerbyDatabaseProvider.java" sourcepath="net/java/ao/db/DerbyDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.DerbyDatabaseProvider" name="setPostConnectionProperties" signature="(Ljava/sql/Connection;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.db.DerbyDatabaseProvider" start="142" end="145" startBytecode="0" endBytecode="96" sourcefile="DerbyDatabaseProvider.java" sourcepath="net/java/ao/db/DerbyDatabaseProvider.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.db.DerbyDatabaseProvider" start="142" end="142" startBytecode="1" endBytecode="1" sourcefile="DerbyDatabaseProvider.java" sourcepath="net/java/ao/db/DerbyDatabaseProvider.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.db.DerbyDatabaseProvider" start="143" end="143" startBytecode="7" endBytecode="7" sourcefile="DerbyDatabaseProvider.java" sourcepath="net/java/ao/db/DerbyDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="net.java.ao.db.DerbyDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.DerbyDatabaseProvider" start="44" end="317" sourcefile="DerbyDatabaseProvider.java" sourcepath="net/java/ao/db/DerbyDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.DerbyDatabaseProvider" name="considerPrecision" signature="(Lnet/java/ao/schema/ddl/DDLField;)Z" isStatic="false">
+      <SourceLine classname="net.java.ao.db.DerbyDatabaseProvider" start="240" end="283" startBytecode="0" endBytecode="294" sourcefile="DerbyDatabaseProvider.java" sourcepath="net/java/ao/db/DerbyDatabaseProvider.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.db.DerbyDatabaseProvider" start="241" end="279" startBytecode="9" endBytecode="146" sourcefile="DerbyDatabaseProvider.java" sourcepath="net/java/ao/db/DerbyDatabaseProvider.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="net.java.ao.db.DerbyDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.DerbyDatabaseProvider" start="44" end="317" sourcefile="DerbyDatabaseProvider.java" sourcepath="net/java/ao/db/DerbyDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.DerbyDatabaseProvider" name="parseValue" signature="(ILjava/lang/String;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.db.DerbyDatabaseProvider" start="110" end="137" startBytecode="0" endBytecode="253" sourcefile="DerbyDatabaseProvider.java" sourcepath="net/java/ao/db/DerbyDatabaseProvider.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.db.DerbyDatabaseProvider" start="114" end="132" startBytecode="25" endBytecode="126" sourcefile="DerbyDatabaseProvider.java" sourcepath="net/java/ao/db/DerbyDatabaseProvider.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.db.HSQLDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="50" end="394" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.HSQLDatabaseProvider" name="dispose" signature="()V" isStatic="false">
+      <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="208" end="225" startBytecode="0" endBytecode="332" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="211" end="211" startBytecode="8" endBytecode="8" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="213" end="213" startBytecode="14" endBytecode="14" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="215" end="215" startBytecode="46" endBytecode="46" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="217" end="217" startBytecode="47" endBytecode="47" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="224" end="224" startBytecode="82" endBytecode="82" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="225" end="225" startBytecode="86" endBytecode="86" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.db.HSQLDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="50" end="394" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.HSQLDatabaseProvider" name="executeInsertReturningKey" signature="(Lnet/java/ao/EntityManager;Ljava/sql/Connection;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Lnet/java/ao/DBParam;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="128" end="166" startBytecode="0" endBytecode="515" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="158" end="158" startBytecode="173" endBytecode="173" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="159" end="159" startBytecode="180" endBytecode="180" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.db.HSQLDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="50" end="394" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.HSQLDatabaseProvider" name="executeInsertReturningKey" signature="(Lnet/java/ao/EntityManager;Ljava/sql/Connection;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Lnet/java/ao/DBParam;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="128" end="166" startBytecode="0" endBytecode="515" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="156" end="156" startBytecode="164" endBytecode="164" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="158" end="158" startBytecode="171" endBytecode="171" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="159" end="159" startBytecode="180" endBytecode="180" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="net.java.ao.db.HSQLDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="50" end="394" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.HSQLDatabaseProvider" name="parseValue" signature="(ILjava/lang/String;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="171" end="198" startBytecode="0" endBytecode="253" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.db.HSQLDatabaseProvider" start="175" end="193" startBytecode="25" endBytecode="126" sourcefile="HSQLDatabaseProvider.java" sourcepath="net/java/ao/db/HSQLDatabaseProvider.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.db.PostgreSQLDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="51" end="524" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.PostgreSQLDatabaseProvider" name="executeInsertReturningKey" signature="(Lnet/java/ao/EntityManager;Ljava/sql/Connection;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Lnet/java/ao/DBParam;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="478" end="499" startBytecode="0" endBytecode="356" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="479" end="479" startBytecode="21" endBytecode="21" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="481" end="481" startBytecode="28" endBytecode="28" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="496" end="496" startBytecode="118" endBytecode="118" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.db.PostgreSQLDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="51" end="524" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.PostgreSQLDatabaseProvider" name="insertReturningKey" signature="(Lnet/java/ao/EntityManager;Ljava/sql/Connection;Ljava/lang/Class;Ljava/lang/String;ZLjava/lang/String;[Lnet/java/ao/DBParam;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="442" end="472" startBytecode="0" endBytecode="604" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="456" end="456" startBytecode="155" endBytecode="155" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="457" end="457" startBytecode="162" endBytecode="162" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.db.PostgreSQLDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="51" end="524" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.PostgreSQLDatabaseProvider" name="insertReturningKey" signature="(Lnet/java/ao/EntityManager;Ljava/sql/Connection;Ljava/lang/Class;Ljava/lang/String;ZLjava/lang/String;[Lnet/java/ao/DBParam;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="442" end="472" startBytecode="0" endBytecode="604" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="454" end="454" startBytecode="146" endBytecode="146" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="456" end="456" startBytecode="153" endBytecode="153" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="457" end="457" startBytecode="162" endBytecode="162" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING" priority="1" abbrev="SQL" category="SECURITY">
+    <Class classname="net.java.ao.db.PostgreSQLDatabaseProvider">
+      <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="51" end="524" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java"/>
+    </Class>
+    <Method classname="net.java.ao.db.PostgreSQLDatabaseProvider" name="insertReturningKey" signature="(Lnet/java/ao/EntityManager;Ljava/sql/Connection;Ljava/lang/Class;Ljava/lang/String;ZLjava/lang/String;[Lnet/java/ao/DBParam;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="442" end="472" startBytecode="0" endBytecode="119" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.db.PostgreSQLDatabaseProvider" start="454" end="454" startBytecode="146" endBytecode="146" sourcefile="PostgreSQLDatabaseProvider.java" sourcepath="net/java/ao/db/PostgreSQLDatabaseProvider.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="net.java.ao.schema.OrderedProperties">
+      <SourceLine classname="net.java.ao.schema.OrderedProperties" start="40" end="63" sourcefile="OrderedProperties.java" sourcepath="net/java/ao/schema/OrderedProperties.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.OrderedProperties" name="load" signature="(Ljava/io/InputStream;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.OrderedProperties" start="45" end="46" startBytecode="0" endBytecode="68" sourcefile="OrderedProperties.java" sourcepath="net/java/ao/schema/OrderedProperties.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="55" end="62" startBytecode="0" endBytecode="83" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.schema.OrderedProperties" start="45" end="45" startBytecode="6" endBytecode="6" sourcefile="OrderedProperties.java" sourcepath="net/java/ao/schema/OrderedProperties.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="net.java.ao.schema.SchemaGenerator">
+      <SourceLine classname="net.java.ao.schema.SchemaGenerator" start="37" end="389" sourcefile="SchemaGenerator.java" sourcepath="net/java/ao/schema/SchemaGenerator.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.SchemaGenerator" name="parseDDL" signature="(Lnet/java/ao/schema/TableNameConverter;Lnet/java/ao/schema/FieldNameConverter;Ljava/lang/ClassLoader;[Ljava/lang/Class;)[Lnet/java/ao/schema/ddl/DDLTable;" isStatic="true">
+      <SourceLine classname="net.java.ao.schema.SchemaGenerator" start="95" end="137" startBytecode="0" endBytecode="836" sourcefile="SchemaGenerator.java" sourcepath="net/java/ao/schema/SchemaGenerator.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.schema.SchemaGenerator" start="123" end="123" startBytecode="236" endBytecode="236" sourcefile="SchemaGenerator.java" sourcepath="net/java/ao/schema/SchemaGenerator.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="net.java.ao.schema.ddl.DDLAction">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLAction" start="47" end="159" sourcefile="DDLAction.java" sourcepath="net/java/ao/schema/ddl/DDLAction.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.ddl.DDLAction" name="getValues" signature="()[Lnet/java/ao/schema/ddl/DDLValue;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLAction" start="100" end="100" startBytecode="0" endBytecode="46" sourcefile="DDLAction.java" sourcepath="net/java/ao/schema/ddl/DDLAction.java"/>
+    </Method>
+    <Field classname="net.java.ao.schema.ddl.DDLAction" name="values" signature="[Lnet/java/ao/schema/ddl/DDLValue;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLAction" sourcefile="DDLAction.java" sourcepath="net/java/ao/schema/ddl/DDLAction.java"/>
+    </Field>
+    <SourceLine classname="net.java.ao.schema.ddl.DDLAction" start="100" end="100" startBytecode="4" endBytecode="4" sourcefile="DDLAction.java" sourcepath="net/java/ao/schema/ddl/DDLAction.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="net.java.ao.schema.ddl.DDLAction">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLAction" start="47" end="159" sourcefile="DDLAction.java" sourcepath="net/java/ao/schema/ddl/DDLAction.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.ddl.DDLAction" name="setValues" signature="([Lnet/java/ao/schema/ddl/DDLValue;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLAction" start="105" end="106" startBytecode="0" endBytecode="61" sourcefile="DDLAction.java" sourcepath="net/java/ao/schema/ddl/DDLAction.java"/>
+    </Method>
+    <Field classname="net.java.ao.schema.ddl.DDLAction" name="values" signature="[Lnet/java/ao/schema/ddl/DDLValue;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLAction" sourcefile="DDLAction.java" sourcepath="net/java/ao/schema/ddl/DDLAction.java"/>
+    </Field>
+    <LocalVariable name="values" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="net.java.ao.schema.ddl.DDLAction" start="105" end="105" startBytecode="2" endBytecode="2" sourcefile="DDLAction.java" sourcepath="net/java/ao/schema/ddl/DDLAction.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="net.java.ao.schema.ddl.DDLTable">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="29" end="103" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.ddl.DDLTable" name="getFields" signature="()[Lnet/java/ao/schema/ddl/DDLField;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="45" end="45" startBytecode="0" endBytecode="46" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Method>
+    <Field classname="net.java.ao.schema.ddl.DDLTable" name="fields" signature="[Lnet/java/ao/schema/ddl/DDLField;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Field>
+    <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="45" end="45" startBytecode="4" endBytecode="4" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="net.java.ao.schema.ddl.DDLTable">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="29" end="103" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.ddl.DDLTable" name="getForeignKeys" signature="()[Lnet/java/ao/schema/ddl/DDLForeignKey;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="54" end="54" startBytecode="0" endBytecode="46" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Method>
+    <Field classname="net.java.ao.schema.ddl.DDLTable" name="foreignKeys" signature="[Lnet/java/ao/schema/ddl/DDLForeignKey;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Field>
+    <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="54" end="54" startBytecode="4" endBytecode="4" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="net.java.ao.schema.ddl.DDLTable">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="29" end="103" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.ddl.DDLTable" name="getIndexes" signature="()[Lnet/java/ao/schema/ddl/DDLIndex;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="62" end="62" startBytecode="0" endBytecode="46" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Method>
+    <Field classname="net.java.ao.schema.ddl.DDLTable" name="indexes" signature="[Lnet/java/ao/schema/ddl/DDLIndex;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Field>
+    <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="62" end="62" startBytecode="4" endBytecode="4" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="net.java.ao.schema.ddl.DDLTable">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="29" end="103" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.ddl.DDLTable" name="setFields" signature="([Lnet/java/ao/schema/ddl/DDLField;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="49" end="51" startBytecode="0" endBytecode="77" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Method>
+    <Field classname="net.java.ao.schema.ddl.DDLTable" name="fields" signature="[Lnet/java/ao/schema/ddl/DDLField;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Field>
+    <LocalVariable name="fields" register="1" pc="14" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="50" end="50" startBytecode="14" endBytecode="14" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="net.java.ao.schema.ddl.DDLTable">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="29" end="103" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.ddl.DDLTable" name="setForeignKeys" signature="([Lnet/java/ao/schema/ddl/DDLForeignKey;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="58" end="59" startBytecode="0" endBytecode="61" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Method>
+    <Field classname="net.java.ao.schema.ddl.DDLTable" name="foreignKeys" signature="[Lnet/java/ao/schema/ddl/DDLForeignKey;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Field>
+    <LocalVariable name="foreignKeys" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="58" end="58" startBytecode="2" endBytecode="2" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="net.java.ao.schema.ddl.DDLTable">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="29" end="103" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.ddl.DDLTable" name="setIndexes" signature="([Lnet/java/ao/schema/ddl/DDLIndex;)V" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="66" end="67" startBytecode="0" endBytecode="61" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Method>
+    <Field classname="net.java.ao.schema.ddl.DDLTable" name="indexes" signature="[Lnet/java/ao/schema/ddl/DDLIndex;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Field>
+    <LocalVariable name="indexes" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="net.java.ao.schema.ddl.DDLTable" start="66" end="66" startBytecode="2" endBytecode="2" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="net.java.ao.schema.ddl.DDLTable$FieldComparator">
+      <SourceLine classname="net.java.ao.schema.ddl.DDLTable$FieldComparator" start="103" end="110" sourcefile="DDLTable.java" sourcepath="net/java/ao/schema/ddl/DDLTable.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="net.java.ao.schema.ddl.SchemaReader">
+      <SourceLine classname="net.java.ao.schema.ddl.SchemaReader" start="40" end="815" sourcefile="SchemaReader.java" sourcepath="net/java/ao/schema/ddl/SchemaReader.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.ddl.SchemaReader" name="performSort" signature="([Lnet/java/ao/schema/ddl/DDLAction;Ljava/util/Map;Ljava/util/List;)V" isStatic="true">
+      <SourceLine classname="net.java.ao.schema.ddl.SchemaReader" start="508" end="807" startBytecode="0" endBytecode="3823" sourcefile="SchemaReader.java" sourcepath="net/java/ao/schema/ddl/SchemaReader.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.schema.ddl.SchemaReader" start="520" end="555" startBytecode="117" endBytecode="280" sourcefile="SchemaReader.java" sourcepath="net/java/ao/schema/ddl/SchemaReader.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="net.java.ao.schema.ddl.SchemaReader">
+      <SourceLine classname="net.java.ao.schema.ddl.SchemaReader" start="40" end="815" sourcefile="SchemaReader.java" sourcepath="net/java/ao/schema/ddl/SchemaReader.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.ddl.SchemaReader" name="sortTopologically" signature="([Lnet/java/ao/schema/ddl/DDLAction;)[Lnet/java/ao/schema/ddl/DDLAction;" isStatic="true">
+      <SourceLine classname="net.java.ao.schema.ddl.SchemaReader" start="449" end="491" startBytecode="0" endBytecode="647" sourcefile="SchemaReader.java" sourcepath="net/java/ao/schema/ddl/SchemaReader.java"/>
+    </Method>
+    <SourceLine classname="net.java.ao.schema.ddl.SchemaReader" start="475" end="475" startBytecode="199" endBytecode="199" sourcefile="SchemaReader.java" sourcepath="net/java/ao/schema/ddl/SchemaReader.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl">
+      <SourceLine classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" start="30" end="248" sourcefile="DatabaseMetaDataReaderImpl.java" sourcepath="net/java/ao/schema/helper/DatabaseMetaDataReaderImpl.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" name="getResultSetMetaData" signature="(Ljava/sql/DatabaseMetaData;Ljava/lang/String;)Lnet/java/ao/it/config/java/sql/CloseableResultSetMetaData;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" start="198" end="204" startBytecode="0" endBytecode="183" sourcefile="DatabaseMetaDataReaderImpl.java" sourcepath="net/java/ao/schema/helper/DatabaseMetaDataReaderImpl.java"/>
+    </Method>
+    <Class classname="java.sql.ResultSet" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.ResultSet" sourcefile="ResultSet.java" sourcepath="java/sql/ResultSet.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" start="202" end="202" startBytecode="49" endBytecode="49" sourcefile="DatabaseMetaDataReaderImpl.java" sourcepath="net/java/ao/schema/helper/DatabaseMetaDataReaderImpl.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" start="204" end="204" startBytecode="56" endBytecode="56" sourcefile="DatabaseMetaDataReaderImpl.java" sourcepath="net/java/ao/schema/helper/DatabaseMetaDataReaderImpl.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" abbrev="OBL" category="EXPERIMENTAL">
+    <Class classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl">
+      <SourceLine classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" start="30" end="248" sourcefile="DatabaseMetaDataReaderImpl.java" sourcepath="net/java/ao/schema/helper/DatabaseMetaDataReaderImpl.java"/>
+    </Class>
+    <Method classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" name="getResultSetMetaData" signature="(Ljava/sql/DatabaseMetaData;Ljava/lang/String;)Lnet/java/ao/it/config/java/sql/CloseableResultSetMetaData;" isStatic="false">
+      <SourceLine classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" start="198" end="204" startBytecode="0" endBytecode="183" sourcefile="DatabaseMetaDataReaderImpl.java" sourcepath="net/java/ao/schema/helper/DatabaseMetaDataReaderImpl.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" start="199" end="199" startBytecode="30" endBytecode="30" sourcefile="DatabaseMetaDataReaderImpl.java" sourcepath="net/java/ao/schema/helper/DatabaseMetaDataReaderImpl.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" start="201" end="201" startBytecode="37" endBytecode="37" sourcefile="DatabaseMetaDataReaderImpl.java" sourcepath="net/java/ao/schema/helper/DatabaseMetaDataReaderImpl.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" start="202" end="202" startBytecode="47" endBytecode="47" sourcefile="DatabaseMetaDataReaderImpl.java" sourcepath="net/java/ao/schema/helper/DatabaseMetaDataReaderImpl.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" start="204" end="204" startBytecode="56" endBytecode="56" sourcefile="DatabaseMetaDataReaderImpl.java" sourcepath="net/java/ao/schema/helper/DatabaseMetaDataReaderImpl.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1,ResultSet x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="30">
+    <MissingClass>com.google.common.base.Preconditions</MissingClass>
+    <MissingClass>com.google.common.collect.Iterables</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.google.common.collect.MapMaker</MissingClass>
+    <MissingClass>com.google.common.collect.Maps</MissingClass>
+    <MissingClass>com.google.common.collect.Sets</MissingClass>
+    <MissingClass>com.mchange.v2.c3p0.ComboPooledDataSource</MissingClass>
+    <MissingClass>com.mchange.v2.c3p0.DataSources</MissingClass>
+    <MissingClass>oracle.jdbc.OraclePreparedStatement</MissingClass>
+    <MissingClass>org.apache.commons.dbcp.BasicDataSource</MissingClass>
+    <MissingClass>org.apache.lucene.analysis.StopAnalyzer</MissingClass>
+    <MissingClass>org.apache.lucene.document.Document</MissingClass>
+    <MissingClass>org.apache.lucene.document.Field</MissingClass>
+    <MissingClass>org.apache.lucene.document.Field$Index</MissingClass>
+    <MissingClass>org.apache.lucene.document.Field$Store</MissingClass>
+    <MissingClass>org.apache.lucene.index.CorruptIndexException</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexReader</MissingClass>
+    <MissingClass>org.apache.lucene.index.IndexWriter</MissingClass>
+    <MissingClass>org.apache.lucene.index.Term</MissingClass>
+    <MissingClass>org.apache.lucene.index.TermDocs</MissingClass>
+    <MissingClass>org.apache.lucene.queryParser.MultiFieldQueryParser</MissingClass>
+    <MissingClass>org.apache.lucene.queryParser.QueryParser</MissingClass>
+    <MissingClass>org.apache.lucene.search.Hits</MissingClass>
+    <MissingClass>org.apache.lucene.search.IndexSearcher</MissingClass>
+    <MissingClass>org.apache.lucene.search.similar.MoreLikeThis</MissingClass>
+    <MissingClass>org.apache.lucene.store.Directory</MissingClass>
+    <MissingClass>org.apache.lucene.store.FSDirectory</MissingClass>
+    <MissingClass>org.logicalcobwebs.proxool.ProxoolDataSource</MissingClass>
+    <MissingClass>org.logicalcobwebs.proxool.ProxoolFacade</MissingClass>
+    <MissingClass>snaq.db.DBPoolDataSource</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Thu, 17 Feb 2011 15:45:52 +0200" total_classes="209" referenced_classes="372" total_bugs="56" total_size="6700" num_packages="16" vm_version="20.4-b02-402" cpu_seconds="65.27" clock_seconds="33.40" peak_mbytes="119.70" alloc_mbytes="763.88" gc_seconds="1.12" priority_2="54" priority_1="2">
+    <PackageStats package="net.java.ao" total_bugs="30" total_types="63" total_size="2892" priority_2="30">
+      <ClassStats class="net.java.ao.Accessor" sourceFile="Accessor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.ActiveObjectsException" sourceFile="ActiveObjectsException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.ao.AnnotationDelegate" sourceFile="AnnotationDelegate.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.java.ao.Common" sourceFile="Common.java" interface="false" size="194" bugs="0"/>
+      <ClassStats class="net.java.ao.DBParam" sourceFile="DBParam.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.java.ao.DatabaseFunction" sourceFile="DatabaseFunction.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.java.ao.DatabaseProvider" sourceFile="DatabaseProvider.java" interface="false" size="531" bugs="2" priority_2="2"/>
+      <ClassStats class="net.java.ao.DatabaseProvider$1" sourceFile="DatabaseProvider.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.java.ao.DefaultPolymorphicTypeMapper" sourceFile="DefaultPolymorphicTypeMapper.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="net.java.ao.DefaultSchemaConfiguration" sourceFile="DefaultSchemaConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.DelegateConnection" sourceFile="DelegateConnection.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.java.ao.DelegateConnectionHandler" sourceFile="DelegateConnectionHandler.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.java.ao.DelegateConnectionImpl" sourceFile="DelegateConnectionImpl.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="net.java.ao.DisposableDataSource" sourceFile="DisposableDataSource.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.Entity" sourceFile="Entity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.EntityManager" sourceFile="EntityManager.java" interface="false" size="320" bugs="9" priority_2="9"/>
+      <ClassStats class="net.java.ao.EntityManager$1" sourceFile="EntityManager.java" interface="false" size="32" bugs="2" priority_2="2"/>
+      <ClassStats class="net.java.ao.EntityManager$2" sourceFile="EntityManager.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.java.ao.EntityManager$CacheKey" sourceFile="EntityManager.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.java.ao.EntityManager$Function" sourceFile="EntityManager.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.EntityManagerConfiguration" sourceFile="EntityManagerConfiguration.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.EntityProxy" sourceFile="EntityProxy.java" interface="false" size="528" bugs="9" priority_2="9"/>
+      <ClassStats class="net.java.ao.EntityProxyAccessor" sourceFile="EntityProxyAccessor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.Generator" sourceFile="Generator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.Implementation" sourceFile="Implementation.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.ImplementationWrapper" sourceFile="ImplementationWrapper.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="net.java.ao.LRUMap" sourceFile="LRUMap.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.java.ao.LuceneConfiguration" sourceFile="LuceneConfiguration.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.ManyToMany" sourceFile="ManyToMany.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.java.ao.MethodFinder" sourceFile="MethodFinder.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="net.java.ao.MethodFinder$AnnotationCacheKey" sourceFile="MethodFinder.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.java.ao.MethodFinder$CounterpartCacheKey" sourceFile="MethodFinder.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.java.ao.MethodImplWrapper" sourceFile="MethodImplWrapper.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.java.ao.Mutator" sourceFile="Mutator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.OneToMany" sourceFile="OneToMany.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.OneToOne" sourceFile="OneToOne.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.Polymorphic" sourceFile="Polymorphic.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.java.ao.PolymorphicTypeMapper" sourceFile="PolymorphicTypeMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.java.ao.Preload" sourceFile="Preload.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.Query" sourceFile="Query.java" interface="false" size="163" bugs="2" priority_2="2"/>
+      <ClassStats class="net.java.ao.Query$QueryType" sourceFile="Query.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.java.ao.RawEntity" sourceFile="RawEntity.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="net.java.ao.RelatedEntity" sourceFile="RelatedEntity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.RelatedEntityImpl" sourceFile="RelatedEntityImpl.java" interface="false" size="40" bugs="1" priority_2="1"/>
+      <ClassStats class="net.java.ao.SchemaConfiguration" sourceFile="SchemaConfiguration.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.Searchable" sourceFile="Searchable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.java.ao.SearchableEntityManager" sourceFile="SearchableEntityManager.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="net.java.ao.SearchableEntityManager$1" sourceFile="SearchableEntityManager.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="net.java.ao.SearchableEntityManager$IndexAppender" sourceFile="SearchableEntityManager.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.java.ao.SoftHashMap" sourceFile="SoftHashMap.java" interface="false" size="211" bugs="4" priority_2="4"/>
+      <ClassStats class="net.java.ao.SoftHashMap$1" sourceFile="SoftHashMap.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.java.ao.SoftHashMap$1$1" sourceFile="SoftHashMap.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.java.ao.SoftHashMap$2" sourceFile="SoftHashMap.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.java.ao.SoftHashMap$2$1" sourceFile="SoftHashMap.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.java.ao.SoftHashMap$3" sourceFile="SoftHashMap.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.ao.SoftHashMap$3$1" sourceFile="SoftHashMap.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.java.ao.SoftHashMap$Entry" sourceFile="SoftHashMap.java" interface="false" size="28" bugs="1" priority_2="1"/>
+      <ClassStats class="net.java.ao.SoftHashMap$Entry$Type" sourceFile="SoftHashMap.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.SoftHashMap$HashIterator" sourceFile="SoftHashMap.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="net.java.ao.Transaction" sourceFile="Transaction.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="net.java.ao.Transaction$TransactionState" sourceFile="Transaction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.ao.Transient" sourceFile="Transient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.java.ao.ValueGenerator" sourceFile="ValueGenerator.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.builder" total_bugs="0" total_types="29" total_size="392">
+      <ClassStats class="net.java.ao.builder.AbstractEntityManagerBuilderWithDatabaseProperties" sourceFile="AbstractEntityManagerBuilderWithDatabaseProperties.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.AbstractEntityManagerBuilderWithDatabaseProperties$BuilderEntityManagerConfiguration" sourceFile="AbstractEntityManagerBuilderWithDatabaseProperties.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.ClassUtils" sourceFile="ClassUtils.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.ConnectionPool" sourceFile="ConnectionPool.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.ConnectionPool$1" sourceFile="ConnectionPool.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.ConnectionPool$1$1" sourceFile="ConnectionPool.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.DataSourceFactory" sourceFile="DataSourceFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.DatabaseProperties" sourceFile="DatabaseProperties.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.DatabaseProviderFactory" sourceFile="DatabaseProviderFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.DelegatingDisposableDataSource" sourceFile="DelegatingDisposableDataSource.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.DriverManagerDataSource" sourceFile="DriverManagerDataSource.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.EntityManagerBuilder" sourceFile="EntityManagerBuilder.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.EntityManagerBuilderWithDatabaseProperties" sourceFile="EntityManagerBuilderWithDatabaseProperties.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.EntityManagerBuilderWithDatabaseProperties$1" sourceFile="EntityManagerBuilderWithDatabaseProperties.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.EntityManagerBuilderWithDatabasePropertiesAndLuceneConfiguration" sourceFile="EntityManagerBuilderWithDatabasePropertiesAndLuceneConfiguration.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.EntityManagerBuilderWithUrl" sourceFile="EntityManagerBuilderWithUrl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.EntityManagerBuilderWithUrlAndUsername" sourceFile="EntityManagerBuilderWithUrlAndUsername.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.EntityManagerBuilderWithUrlAndUsernameAndPassword" sourceFile="EntityManagerBuilderWithUrlAndUsernameAndPassword.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.EntityManagerBuilderWithUrlAndUsernameAndPassword$BuilderDatabaseProperties" sourceFile="EntityManagerBuilderWithUrlAndUsernameAndPassword.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.SupportedDatabase" sourceFile="SupportedDatabase.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.SupportedDatabase$1" sourceFile="SupportedDatabase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.SupportedDatabase$2" sourceFile="SupportedDatabase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.SupportedDatabase$3" sourceFile="SupportedDatabase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.SupportedDatabase$4" sourceFile="SupportedDatabase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.SupportedDatabase$5" sourceFile="SupportedDatabase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.SupportedDatabase$6" sourceFile="SupportedDatabase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.SupportedDatabase$7" sourceFile="SupportedDatabase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.SupportedDatabase$8" sourceFile="SupportedDatabase.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.UnloadableJdbcDriverException" sourceFile="UnloadableJdbcDriverException.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.builder.c3po" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="net.java.ao.builder.c3po.C3poDataSourceFactory" sourceFile="C3poDataSourceFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.c3po.C3poDataSourceFactory$1" sourceFile="C3poDataSourceFactory.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.builder.dbcp" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="net.java.ao.builder.dbcp.DbcpDataSourceFactory" sourceFile="DbcpDataSourceFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.dbcp.DbcpDataSourceFactory$1" sourceFile="DbcpDataSourceFactory.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.builder.dbpool" total_bugs="0" total_types="2" total_size="24">
+      <ClassStats class="net.java.ao.builder.dbpool.DbPoolDataSourceFactory" sourceFile="DbPoolDataSourceFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.dbpool.DbPoolDataSourceFactory$1" sourceFile="DbPoolDataSourceFactory.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.builder.proxool" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="net.java.ao.builder.proxool.ProxoolDataSourceFactory" sourceFile="ProxoolDataSourceFactory.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.java.ao.builder.proxool.ProxoolDataSourceFactory$1" sourceFile="ProxoolDataSourceFactory.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.cache" total_bugs="0" total_types="8" total_size="289">
+      <ClassStats class="net.java.ao.cache.Cache" sourceFile="Cache.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.java.ao.cache.CacheLayer" sourceFile="CacheLayer.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="net.java.ao.cache.RAMCache" sourceFile="RAMCache.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.java.ao.cache.RAMCacheLayer" sourceFile="RAMCacheLayer.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="net.java.ao.cache.RAMRelationsCache" sourceFile="RAMRelationsCache.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="net.java.ao.cache.RAMRelationsCache$CacheKey" sourceFile="RAMRelationsCache.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="net.java.ao.cache.RAMRelationsCache$MetaCacheKey" sourceFile="RAMRelationsCache.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="net.java.ao.cache.RelationsCache" sourceFile="RelationsCache.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.db" total_bugs="11" total_types="18" total_size="896" priority_2="10" priority_1="1">
+      <ClassStats class="net.java.ao.db.ClientDerbyDatabaseProvider" sourceFile="ClientDerbyDatabaseProvider.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.java.ao.db.DerbyDatabaseProvider" sourceFile="DerbyDatabaseProvider.java" interface="false" size="118" bugs="3" priority_2="3"/>
+      <ClassStats class="net.java.ao.db.DerbyDatabaseProvider$1" sourceFile="DerbyDatabaseProvider.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.db.EmbeddedDerbyDatabaseProvider" sourceFile="EmbeddedDerbyDatabaseProvider.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="net.java.ao.db.HSQLDatabaseProvider" sourceFile="HSQLDatabaseProvider.java" interface="false" size="153" bugs="4" priority_2="4"/>
+      <ClassStats class="net.java.ao.db.HSQLDatabaseProvider$1" sourceFile="HSQLDatabaseProvider.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.db.HSQLDatabaseProvider$2" sourceFile="HSQLDatabaseProvider.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.java.ao.db.MySQLDatabaseProvider" sourceFile="MySQLDatabaseProvider.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.java.ao.db.MySQLDatabaseProvider$1" sourceFile="MySQLDatabaseProvider.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.db.OracleDatabaseProvider" sourceFile="OracleDatabaseProvider.java" interface="false" size="148" bugs="0"/>
+      <ClassStats class="net.java.ao.db.OracleDatabaseProvider$1" sourceFile="OracleDatabaseProvider.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.db.OracleDatabaseProvider$2" sourceFile="OracleDatabaseProvider.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.java.ao.db.PostgreSQLDatabaseProvider" sourceFile="PostgreSQLDatabaseProvider.java" interface="false" size="222" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="net.java.ao.db.PostgreSQLDatabaseProvider$1" sourceFile="PostgreSQLDatabaseProvider.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.db.PostgreSQLDatabaseProvider$2" sourceFile="PostgreSQLDatabaseProvider.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.java.ao.db.SQLServerDatabaseProvider" sourceFile="SQLServerDatabaseProvider.java" interface="false" size="153" bugs="0"/>
+      <ClassStats class="net.java.ao.db.SQLServerDatabaseProvider$1" sourceFile="SQLServerDatabaseProvider.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.db.SQLServerDatabaseProvider$2" sourceFile="SQLServerDatabaseProvider.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.event" total_bugs="0" total_types="12" total_size="148">
+      <ClassStats class="net.java.ao.event.ClassUtils" sourceFile="ClassUtils.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.java.ao.event.EventListener" sourceFile="EventListener.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.java.ao.event.EventManager" sourceFile="EventManager.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.java.ao.event.EventManagerImpl" sourceFile="EventManagerImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.java.ao.event.Lisneters" sourceFile="Lisneters.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.java.ao.event.Lisneters$1" sourceFile="Lisneters.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.java.ao.event.Lisneters$Invokers" sourceFile="Lisneters.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.ao.event.ListenerInvoker" sourceFile="ListenerInvoker.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.java.ao.event.ListenerInvokerFactory" sourceFile="ListenerInvokerFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.event.SingleParameterAnnotatedMethodListenerInvokerFactory" sourceFile="SingleParameterAnnotatedMethodListenerInvokerFactory.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.java.ao.event.SingleParameterAnnotatedMethodListenerInvokerFactory$1" sourceFile="SingleParameterAnnotatedMethodListenerInvokerFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.java.ao.event.SingleParameterAnnotatedMethodListenerInvokerFactory$SingleParameterMethodListenerInvoker" sourceFile="SingleParameterAnnotatedMethodListenerInvokerFactory.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.event.sql" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="net.java.ao.event.sql.JulSqlEventListener" sourceFile="JulSqlEventListener.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.java.ao.event.sql.SqlEvent" sourceFile="SqlEvent.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.it.config.java.sql" total_bugs="0" total_types="2" total_size="50">
+      <ClassStats class="net.java.ao.it.config.java.sql.AbstractCloseableResultSetMetaData" sourceFile="AbstractCloseableResultSetMetaData.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="net.java.ao.it.config.java.sql.CloseableResultSetMetaData" sourceFile="CloseableResultSetMetaData.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.schema" total_bugs="2" total_types="21" total_size="430" priority_2="1" priority_1="1">
+      <ClassStats class="net.java.ao.schema.AbstractFieldNameConverter" sourceFile="AbstractFieldNameConverter.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.AbstractTableNameConverter" sourceFile="AbstractTableNameConverter.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.AutoIncrement" sourceFile="AutoIncrement.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.CamelCaseFieldNameConverter" sourceFile="CamelCaseFieldNameConverter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.CamelCaseTableNameConverter" sourceFile="CamelCaseTableNameConverter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.Default" sourceFile="Default.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.FieldNameConverter" sourceFile="FieldNameConverter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.Ignore" sourceFile="Ignore.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.Indexed" sourceFile="Indexed.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.NotNull" sourceFile="NotNull.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.OnUpdate" sourceFile="OnUpdate.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.OrderedProperties" sourceFile="OrderedProperties.java" interface="false" size="23" bugs="1" priority_1="1"/>
+      <ClassStats class="net.java.ao.schema.PluralizedNameConverter" sourceFile="PluralizedNameConverter.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.PrimaryKey" sourceFile="PrimaryKey.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.SQLType" sourceFile="SQLType.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.SchemaGenerator" sourceFile="SchemaGenerator.java" interface="false" size="201" bugs="1" priority_2="1"/>
+      <ClassStats class="net.java.ao.schema.Table" sourceFile="Table.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.TableNameConverter" sourceFile="TableNameConverter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.UnderscoreFieldNameConverter" sourceFile="UnderscoreFieldNameConverter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.UnderscoreTableNameConverter" sourceFile="UnderscoreTableNameConverter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.Unique" sourceFile="Unique.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.schema.ddl" total_bugs="11" total_types="15" total_size="719" priority_2="11">
+      <ClassStats class="net.java.ao.schema.ddl.DDLAction" sourceFile="DDLAction.java" interface="false" size="73" bugs="2" priority_2="2"/>
+      <ClassStats class="net.java.ao.schema.ddl.DDLActionType" sourceFile="DDLActionType.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.ddl.DDLActions" sourceFile="DDLActions.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.ddl.DDLField" sourceFile="DDLField.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.ddl.DDLForeignKey" sourceFile="DDLForeignKey.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.ddl.DDLIndex" sourceFile="DDLIndex.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.ddl.DDLTable" sourceFile="DDLTable.java" interface="false" size="48" bugs="6" priority_2="6"/>
+      <ClassStats class="net.java.ao.schema.ddl.DDLTable$1" sourceFile="DDLTable.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.ddl.DDLTable$FieldComparator" sourceFile="DDLTable.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="net.java.ao.schema.ddl.DDLValue" sourceFile="DDLValue.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.ddl.SchemaReader" sourceFile="SchemaReader.java" interface="false" size="311" bugs="2" priority_2="2"/>
+      <ClassStats class="net.java.ao.schema.ddl.SchemaReader$1" sourceFile="SchemaReader.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.ddl.SchemaReader$2" sourceFile="SchemaReader.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.ddl.SchemaReader$3" sourceFile="SchemaReader.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.ddl.SchemaReader$4" sourceFile="SchemaReader.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.schema.helper" total_bugs="2" total_types="7" total_size="197" priority_2="2">
+      <ClassStats class="net.java.ao.schema.helper.DatabaseMetaDataReader" sourceFile="DatabaseMetaDataReader.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl" sourceFile="DatabaseMetaDataReaderImpl.java" interface="false" size="106" bugs="2" priority_2="2"/>
+      <ClassStats class="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl$1" sourceFile="DatabaseMetaDataReaderImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl$FieldImpl" sourceFile="DatabaseMetaDataReaderImpl.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.helper.DatabaseMetaDataReaderImpl$ForeignKeyImpl" sourceFile="DatabaseMetaDataReaderImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.helper.Field" sourceFile="Field.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="net.java.ao.schema.helper.ForeignKey" sourceFile="ForeignKey.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.sql" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="net.java.ao.sql.ActiveObjectSqlException" sourceFile="ActiveObjectSqlException.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.java.ao.sql.SqlUtils" sourceFile="SqlUtils.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.ao.types" total_bugs="0" total_types="22" total_size="551">
+      <ClassStats class="net.java.ao.types.BigIntType" sourceFile="BigIntType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.ao.types.BlobType" sourceFile="BlobType.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="net.java.ao.types.BooleanType" sourceFile="BooleanType.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.java.ao.types.CharType" sourceFile="CharType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.ao.types.ClobType" sourceFile="ClobType.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.java.ao.types.DatabaseType" sourceFile="DatabaseType.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="net.java.ao.types.DateDateType" sourceFile="DateDateType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.java.ao.types.DateType" sourceFile="DateType.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.java.ao.types.DoubleType" sourceFile="DoubleType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.ao.types.EntityType" sourceFile="EntityType.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="net.java.ao.types.EnumType" sourceFile="EnumType.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.java.ao.types.FloatType" sourceFile="FloatType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.ao.types.GenericType" sourceFile="GenericType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.java.ao.types.IntegerType" sourceFile="IntegerType.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.java.ao.types.RealType" sourceFile="RealType.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.java.ao.types.TimestampDateType" sourceFile="TimestampDateType.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.java.ao.types.TimestampType" sourceFile="TimestampType.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.java.ao.types.TinyIntType" sourceFile="TinyIntType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.ao.types.TypeManager" sourceFile="TypeManager.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="net.java.ao.types.URIType" sourceFile="URIType.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.java.ao.types.URLType" sourceFile="URLType.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.java.ao.types.VarcharType" sourceFile="VarcharType.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="3084" invocations="1144" avgMicrosecondsPerInvocation="2696" maxMicrosecondsPerInvocation="231209" standardDeviationMircosecondsPerInvocation="12385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="2684" invocations="1091" avgMicrosecondsPerInvocation="2460" maxMicrosecondsPerInvocation="185145" standardDeviationMircosecondsPerInvocation="10906"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="2542" invocations="1143" avgMicrosecondsPerInvocation="2224" maxMicrosecondsPerInvocation="162516" standardDeviationMircosecondsPerInvocation="10030"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="2508" invocations="1187" avgMicrosecondsPerInvocation="2112" maxMicrosecondsPerInvocation="168242" standardDeviationMircosecondsPerInvocation="9981"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1989" invocations="1183" avgMicrosecondsPerInvocation="1681" maxMicrosecondsPerInvocation="121462" standardDeviationMircosecondsPerInvocation="6585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1566" invocations="891" avgMicrosecondsPerInvocation="1758" maxMicrosecondsPerInvocation="176341" standardDeviationMircosecondsPerInvocation="8041"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1411" invocations="372" avgMicrosecondsPerInvocation="3793" maxMicrosecondsPerInvocation="88469" standardDeviationMircosecondsPerInvocation="10138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1317" invocations="1004" avgMicrosecondsPerInvocation="1312" maxMicrosecondsPerInvocation="108146" standardDeviationMircosecondsPerInvocation="5402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1115" invocations="372" avgMicrosecondsPerInvocation="2998" maxMicrosecondsPerInvocation="91090" standardDeviationMircosecondsPerInvocation="8778"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="1050" invocations="1144" avgMicrosecondsPerInvocation="918" maxMicrosecondsPerInvocation="122576" standardDeviationMircosecondsPerInvocation="5418"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="964" invocations="1144" avgMicrosecondsPerInvocation="843" maxMicrosecondsPerInvocation="56988" standardDeviationMircosecondsPerInvocation="3357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="623" invocations="1651" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="46613" standardDeviationMircosecondsPerInvocation="1795"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="547" invocations="372" avgMicrosecondsPerInvocation="1472" maxMicrosecondsPerInvocation="46168" standardDeviationMircosecondsPerInvocation="4638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="404" invocations="1086" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="43846" standardDeviationMircosecondsPerInvocation="1962"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="383" invocations="372" avgMicrosecondsPerInvocation="1030" maxMicrosecondsPerInvocation="24441" standardDeviationMircosecondsPerInvocation="2384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="371" invocations="584" avgMicrosecondsPerInvocation="635" maxMicrosecondsPerInvocation="58900" standardDeviationMircosecondsPerInvocation="2785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="338" invocations="209" avgMicrosecondsPerInvocation="1617" maxMicrosecondsPerInvocation="41588" standardDeviationMircosecondsPerInvocation="4101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnreleasedLock$LockResourceTracker" totalMilliseconds="314" invocations="38" avgMicrosecondsPerInvocation="8285" maxMicrosecondsPerInvocation="44529" standardDeviationMircosecondsPerInvocation="11324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="264" invocations="209" avgMicrosecondsPerInvocation="1263" maxMicrosecondsPerInvocation="31181" standardDeviationMircosecondsPerInvocation="3921"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="252" invocations="209" avgMicrosecondsPerInvocation="1210" maxMicrosecondsPerInvocation="30627" standardDeviationMircosecondsPerInvocation="3293"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

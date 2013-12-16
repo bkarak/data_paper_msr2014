@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1250511524000" analysisTimestamp="1360510728479" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/fabric3/fabric3-jaxb/1.2/fabric3-jaxb-1.2.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="com.sun.istack.ByteArrayDataSource">
+      <SourceLine classname="com.sun.istack.ByteArrayDataSource" start="20" end="43" sourcefile="ByteArrayDataSource.java" sourcepath="com/sun/istack/ByteArrayDataSource.java"/>
+    </Class>
+    <Method classname="com.sun.istack.ByteArrayDataSource" name="&lt;init&gt;" signature="([BILjava/lang/String;)V" isStatic="false">
+      <SourceLine classname="com.sun.istack.ByteArrayDataSource" start="22" end="26" startBytecode="0" endBytecode="107" sourcefile="ByteArrayDataSource.java" sourcepath="com/sun/istack/ByteArrayDataSource.java"/>
+    </Method>
+    <Field classname="com.sun.istack.ByteArrayDataSource" name="buf" signature="[B" isStatic="false">
+      <SourceLine classname="com.sun.istack.ByteArrayDataSource" sourcefile="ByteArrayDataSource.java" sourcepath="com/sun/istack/ByteArrayDataSource.java"/>
+    </Field>
+    <LocalVariable name="buf" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.sun.istack.ByteArrayDataSource" start="23" end="23" startBytecode="6" endBytecode="6" sourcefile="ByteArrayDataSource.java" sourcepath="com/sun/istack/ByteArrayDataSource.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="com.sun.istack.XMLStreamReaderToContentHandler">
+      <SourceLine classname="com.sun.istack.XMLStreamReaderToContentHandler" start="23" end="362" sourcefile="XMLStreamReaderToContentHandler.java" sourcepath="com/sun/istack/XMLStreamReaderToContentHandler.java"/>
+    </Class>
+    <Method classname="com.sun.istack.XMLStreamReaderToContentHandler" name="&lt;init&gt;" signature="(Ljavax/xml/stream/XMLStreamReader;Lorg/xml/sax/ContentHandler;ZZ[Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="com.sun.istack.XMLStreamReaderToContentHandler" start="64" end="71" startBytecode="0" endBytecode="173" sourcefile="XMLStreamReaderToContentHandler.java" sourcepath="com/sun/istack/XMLStreamReaderToContentHandler.java"/>
+    </Method>
+    <Field classname="com.sun.istack.XMLStreamReaderToContentHandler" name="inscopeNamespaces" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.sun.istack.XMLStreamReaderToContentHandler" sourcefile="XMLStreamReaderToContentHandler.java" sourcepath="com/sun/istack/XMLStreamReaderToContentHandler.java"/>
+    </Field>
+    <LocalVariable name="inscopeNamespaces" register="5" pc="28" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.sun.istack.XMLStreamReaderToContentHandler" start="69" end="69" startBytecode="28" endBytecode="28" sourcefile="XMLStreamReaderToContentHandler.java" sourcepath="com/sun/istack/XMLStreamReaderToContentHandler.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="com.sun.xml.bind.marshaller.MinimumEscapeHandler">
+      <SourceLine classname="com.sun.xml.bind.marshaller.MinimumEscapeHandler" start="54" end="88" sourcefile="MinimumEscapeHandler.java" sourcepath="com/sun/xml/bind/marshaller/MinimumEscapeHandler.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.marshaller.MinimumEscapeHandler" name="escape" signature="([CIIZLjava/io/Writer;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.marshaller.MinimumEscapeHandler" start="62" end="88" startBytecode="0" endBytecode="378" sourcefile="MinimumEscapeHandler.java" sourcepath="com/sun/xml/bind/marshaller/MinimumEscapeHandler.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.marshaller.MinimumEscapeHandler" start="69" end="80" startBytecode="80" endBytecode="160" sourcefile="MinimumEscapeHandler.java" sourcepath="com/sun/xml/bind/marshaller/MinimumEscapeHandler.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.sun.xml.bind.marshaller.XMLWriter">
+      <SourceLine classname="com.sun.xml.bind.marshaller.XMLWriter" start="289" end="984" sourcefile="XMLWriter.java" sourcepath="com/sun/xml/bind/marshaller/XMLWriter.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.marshaller.XMLWriter" name="setOutput" signature="(Ljava/io/Writer;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.marshaller.XMLWriter" start="376" end="382" startBytecode="0" endBytecode="113" sourcefile="XMLWriter.java" sourcepath="com/sun/xml/bind/marshaller/XMLWriter.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.marshaller.XMLWriter" start="377" end="377" startBytecode="12" endBytecode="12" sourcefile="XMLWriter.java" sourcepath="com/sun/xml/bind/marshaller/XMLWriter.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="com.sun.xml.bind.unmarshaller.DOMScanner">
+      <SourceLine classname="com.sun.xml.bind.unmarshaller.DOMScanner" start="76" end="325" sourcefile="DOMScanner.java" sourcepath="com/sun/xml/bind/unmarshaller/DOMScanner.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.unmarshaller.DOMScanner" name="visit" signature="(Lorg/w3c/dom/Node;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.unmarshaller.DOMScanner" start="267" end="287" startBytecode="0" endBytecode="251" sourcefile="DOMScanner.java" sourcepath="com/sun/xml/bind/unmarshaller/DOMScanner.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.unmarshaller.DOMScanner" start="270" end="284" startBytecode="11" endBytecode="134" sourcefile="DOMScanner.java" sourcepath="com/sun/xml/bind/unmarshaller/DOMScanner.java"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.util.AttributesImpl">
+      <SourceLine classname="com.sun.xml.bind.util.AttributesImpl" start="95" end="652" sourcefile="AttributesImpl.java" sourcepath="com/sun/xml/bind/util/AttributesImpl.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.util.AttributesImpl" name="getIndexFast" signature="(Ljava/lang/String;Ljava/lang/String;)I" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.util.AttributesImpl" start="250" end="256" startBytecode="0" endBytecode="30" sourcefile="AttributesImpl.java" sourcepath="com/sun/xml/bind/util/AttributesImpl.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="localName" register="2" pc="21" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.util.AttributesImpl" start="252" end="252" startBytecode="22" endBytecode="22" sourcefile="AttributesImpl.java" sourcepath="com/sun/xml/bind/util/AttributesImpl.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.util.AttributesImpl">
+      <SourceLine classname="com.sun.xml.bind.util.AttributesImpl" start="95" end="652" sourcefile="AttributesImpl.java" sourcepath="com/sun/xml/bind/util/AttributesImpl.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.util.AttributesImpl" name="getIndexFast" signature="(Ljava/lang/String;Ljava/lang/String;)I" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.util.AttributesImpl" start="250" end="256" startBytecode="0" endBytecode="30" sourcefile="AttributesImpl.java" sourcepath="com/sun/xml/bind/util/AttributesImpl.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="uri" register="1" pc="31" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.util.AttributesImpl" start="252" end="252" startBytecode="32" endBytecode="32" sourcefile="AttributesImpl.java" sourcepath="com/sun/xml/bind/util/AttributesImpl.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.model.impl.BuiltinLeafInfoImpl">
+      <SourceLine classname="com.sun.xml.bind.v2.model.impl.BuiltinLeafInfoImpl" start="60" end="109" sourcefile="BuiltinLeafInfoImpl.java" sourcepath="com/sun/xml/bind/v2/model/impl/BuiltinLeafInfoImpl.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.model.impl.BuiltinLeafInfoImpl" name="getTypeNames" signature="()[Ljavax/xml/namespace/QName;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.model.impl.BuiltinLeafInfoImpl" start="71" end="71" startBytecode="0" endBytecode="64" sourcefile="BuiltinLeafInfoImpl.java" sourcepath="com/sun/xml/bind/v2/model/impl/BuiltinLeafInfoImpl.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.model.impl.BuiltinLeafInfoImpl" name="typeNames" signature="[Ljavax/xml/namespace/QName;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.model.impl.BuiltinLeafInfoImpl" sourcefile="BuiltinLeafInfoImpl.java" sourcepath="com/sun/xml/bind/v2/model/impl/BuiltinLeafInfoImpl.java"/>
+    </Field>
+    <SourceLine classname="com.sun.xml.bind.v2.model.impl.BuiltinLeafInfoImpl" start="71" end="71" startBytecode="4" endBytecode="4" sourcefile="BuiltinLeafInfoImpl.java" sourcepath="com/sun/xml/bind/v2/model/impl/BuiltinLeafInfoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="com.sun.xml.bind.v2.runtime.AnyTypeBeanInfo">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.AnyTypeBeanInfo" start="69" end="177" sourcefile="AnyTypeBeanInfo.java" sourcepath="com/sun/xml/bind/v2/runtime/AnyTypeBeanInfo.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.AnyTypeBeanInfo" name="serializeBody" signature="(Ljava/lang/Object;Lcom/sun/xml/bind/v2/runtime/XMLSerializer;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.AnyTypeBeanInfo" start="101" end="115" startBytecode="0" endBytecode="249" sourcefile="AnyTypeBeanInfo.java" sourcepath="com/sun/xml/bind/v2/runtime/AnyTypeBeanInfo.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.AnyTypeBeanInfo" start="105" end="111" startBytecode="45" endBytecode="104" sourcefile="AnyTypeBeanInfo.java" sourcepath="com/sun/xml/bind/v2/runtime/AnyTypeBeanInfo.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.Coordinator">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.Coordinator" start="76" end="226" sourcefile="Coordinator.java" sourcepath="com/sun/xml/bind/v2/runtime/Coordinator.java"/>
+    </Class>
+    <Field classname="com.sun.xml.bind.v2.runtime.Coordinator" name="debugTableNPE" signature="Z" isStatic="true">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.Coordinator" sourcefile="Coordinator.java" sourcepath="com/sun/xml/bind/v2/runtime/Coordinator.java"/>
+    </Field>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.Coordinator" start="223" end="223" startBytecode="54" endBytecode="54" sourcefile="Coordinator.java" sourcepath="com/sun/xml/bind/v2/runtime/Coordinator.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.JAXBContextImpl">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.JAXBContextImpl" start="138" end="994" sourcefile="JAXBContextImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/JAXBContextImpl.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.JAXBContextImpl" name="getUTF8NameTable" signature="()[Lcom/sun/xml/bind/v2/runtime/output/Encoded;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.JAXBContextImpl" start="660" end="669" startBytecode="0" endBytecode="171" sourcefile="JAXBContextImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/JAXBContextImpl.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.runtime.JAXBContextImpl" name="utf8nameTable" signature="[Lcom/sun/xml/bind/v2/runtime/output/Encoded;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.JAXBContextImpl" sourcefile="JAXBContextImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/JAXBContextImpl.java"/>
+    </Field>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.JAXBContextImpl" start="669" end="669" startBytecode="67" endBytecode="67" sourcefile="JAXBContextImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/JAXBContextImpl.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="com.sun.xml.bind.v2.runtime.JaxBeanInfo">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.JaxBeanInfo" start="93" end="532" sourcefile="JaxBeanInfo.java" sourcepath="com/sun/xml/bind/v2/runtime/JaxBeanInfo.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.JaxBeanInfo" name="cacheLifecycleMethod" signature="(Ljava/lang/reflect/Method;S)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.JaxBeanInfo" start="472" end="495" startBytecode="0" endBytecode="245" sourcefile="JaxBeanInfo.java" sourcepath="com/sun/xml/bind/v2/runtime/JaxBeanInfo.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.JaxBeanInfo" start="481" end="492" startBytecode="35" endBytecode="116" sourcefile="JaxBeanInfo.java" sourcepath="com/sun/xml/bind/v2/runtime/JaxBeanInfo.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.runtime.Name">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.Name" start="53" end="107" sourcefile="Name.java" sourcepath="com/sun/xml/bind/v2/runtime/Name.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.Name" name="compareTo" signature="(Lcom/sun/xml/bind/v2/runtime/Name;)I" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.Name" start="105" end="107" startBytecode="0" endBytecode="99" sourcefile="Name.java" sourcepath="com/sun/xml/bind/v2/runtime/Name.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.runtime.NameBuilder">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="59" end="152" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.NameBuilder" name="createAttributeName" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/xml/bind/v2/runtime/Name;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="79" end="92" startBytecode="0" endBytecode="54" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="localName" register="2" pc="32" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="java.lang.String" name="intern" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="80" end="80" startBytecode="33" endBytecode="33" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.runtime.NameBuilder">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="59" end="152" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.NameBuilder" name="createAttributeName" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/xml/bind/v2/runtime/Name;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="79" end="92" startBytecode="0" endBytecode="54" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="nsUri" register="1" pc="10" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="java.lang.String" name="intern" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="79" end="79" startBytecode="11" endBytecode="11" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="2" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.runtime.NameBuilder">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="59" end="152" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.NameBuilder" name="createName" signature="(Ljava/lang/String;Ljava/lang/String;ZLcom/sun/xml/bind/v2/util/QNameMap;)Lcom/sun/xml/bind/v2/runtime/Name;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="97" end="100" startBytecode="0" endBytecode="41" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="localName" register="2" pc="32" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="java.lang.String" name="intern" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="98" end="98" startBytecode="33" endBytecode="33" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="2" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.runtime.NameBuilder">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="59" end="152" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.NameBuilder" name="createName" signature="(Ljava/lang/String;Ljava/lang/String;ZLcom/sun/xml/bind/v2/util/QNameMap;)Lcom/sun/xml/bind/v2/runtime/Name;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="97" end="100" startBytecode="0" endBytecode="41" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="nsUri" register="1" pc="10" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="java.lang.String" name="intern" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.NameBuilder" start="97" end="97" startBytecode="11" endBytecode="11" sourcefile="NameBuilder.java" sourcepath="com/sun/xml/bind/v2/runtime/NameBuilder.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.NameList">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" start="77" end="83" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.NameList" name="&lt;init&gt;" signature="([Ljava/lang/String;[Z[Ljava/lang/String;II)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" start="77" end="83" startBytecode="0" endBytecode="147" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.runtime.NameList" name="localNames" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+    </Field>
+    <LocalVariable name="localNames" register="3" pc="16" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" start="80" end="80" startBytecode="16" endBytecode="16" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.NameList">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" start="77" end="83" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.NameList" name="&lt;init&gt;" signature="([Ljava/lang/String;[Z[Ljava/lang/String;II)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" start="77" end="83" startBytecode="0" endBytecode="147" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.runtime.NameList" name="namespaceURIs" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+    </Field>
+    <LocalVariable name="namespaceURIs" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" start="78" end="78" startBytecode="6" endBytecode="6" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.NameList">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" start="77" end="83" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.NameList" name="&lt;init&gt;" signature="([Ljava/lang/String;[Z[Ljava/lang/String;II)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" start="77" end="83" startBytecode="0" endBytecode="147" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.runtime.NameList" name="nsUriCannotBeDefaulted" signature="[Z" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+    </Field>
+    <LocalVariable name="nsUriCannotBeDefaulted" register="2" pc="11" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.NameList" start="79" end="79" startBytecode="11" endBytecode="11" sourcefile="NameList.java" sourcepath="com/sun/xml/bind/v2/runtime/NameList.java"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="com.sun.xml.bind.v2.runtime.XMLSerializer">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.XMLSerializer" start="129" end="1049" sourcefile="XMLSerializer.java" sourcepath="com/sun/xml/bind/v2/runtime/XMLSerializer.java"/>
+    </Class>
+    <Field classname="com.sun.xml.bind.v2.runtime.XMLSerializer" name="base64Data" signature="Lcom/sun/xml/bind/v2/runtime/unmarshaller/Base64Data;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.XMLSerializer" sourcefile="XMLSerializer.java" sourcepath="com/sun/xml/bind/v2/runtime/XMLSerializer.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput$DynamicAttribute">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput$DynamicAttribute" start="122" end="141" sourcefile="C14nXmlOutput.java" sourcepath="com/sun/xml/bind/v2/runtime/output/C14nXmlOutput.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput$DynamicAttribute" name="compareTo" signature="(Lcom/sun/xml/bind/v2/runtime/output/C14nXmlOutput$DynamicAttribute;)I" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput$DynamicAttribute" start="139" end="141" startBytecode="0" endBytecode="99" sourcefile="C14nXmlOutput.java" sourcepath="com/sun/xml/bind/v2/runtime/output/C14nXmlOutput.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput$StaticAttribute">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput$StaticAttribute" start="92" end="117" sourcefile="C14nXmlOutput.java" sourcepath="com/sun/xml/bind/v2/runtime/output/C14nXmlOutput.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput$StaticAttribute" name="compareTo" signature="(Lcom/sun/xml/bind/v2/runtime/output/C14nXmlOutput$StaticAttribute;)I" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput$StaticAttribute" start="117" end="117" startBytecode="0" endBytecode="63" sourcefile="C14nXmlOutput.java" sourcepath="com/sun/xml/bind/v2/runtime/output/C14nXmlOutput.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="com.sun.xml.bind.v2.runtime.output.NamespaceContextImpl">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.NamespaceContextImpl" start="65" end="550" sourcefile="NamespaceContextImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/output/NamespaceContextImpl.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.output.NamespaceContextImpl" name="makeUniquePrefix" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.NamespaceContextImpl" start="283" end="287" startBytecode="0" endBytecode="124" sourcefile="NamespaceContextImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/output/NamespaceContextImpl.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.output.NamespaceContextImpl" start="285" end="285" startBytecode="32" endBytecode="32" sourcefile="NamespaceContextImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/output/NamespaceContextImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.output.UTF8XmlOutput">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.UTF8XmlOutput" start="61" end="430" sourcefile="UTF8XmlOutput.java" sourcepath="com/sun/xml/bind/v2/runtime/output/UTF8XmlOutput.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.output.UTF8XmlOutput" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;[Lcom/sun/xml/bind/v2/runtime/output/Encoded;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.UTF8XmlOutput" start="106" end="111" startBytecode="0" endBytecode="292" sourcefile="UTF8XmlOutput.java" sourcepath="com/sun/xml/bind/v2/runtime/output/UTF8XmlOutput.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.runtime.output.UTF8XmlOutput" name="localNames" signature="[Lcom/sun/xml/bind/v2/runtime/output/Encoded;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.UTF8XmlOutput" sourcefile="UTF8XmlOutput.java" sourcepath="com/sun/xml/bind/v2/runtime/output/UTF8XmlOutput.java"/>
+    </Field>
+    <LocalVariable name="localNames" register="2" pc="123" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.output.UTF8XmlOutput" start="108" end="108" startBytecode="123" endBytecode="123" sourcefile="UTF8XmlOutput.java" sourcepath="com/sun/xml/bind/v2/runtime/output/UTF8XmlOutput.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.output.XmlOutputAbstractImpl">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.XmlOutputAbstractImpl" start="57" end="121" sourcefile="XmlOutputAbstractImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/output/XmlOutputAbstractImpl.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.output.XmlOutputAbstractImpl" name="startDocument" signature="(Lcom/sun/xml/bind/v2/runtime/XMLSerializer;Z[ILcom/sun/xml/bind/v2/runtime/output/NamespaceContextImpl;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.XmlOutputAbstractImpl" start="72" end="75" startBytecode="0" endBytecode="110" sourcefile="XmlOutputAbstractImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/output/XmlOutputAbstractImpl.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.runtime.output.XmlOutputAbstractImpl" name="nsUriIndex2prefixIndex" signature="[I" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.output.XmlOutputAbstractImpl" sourcefile="XmlOutputAbstractImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/output/XmlOutputAbstractImpl.java"/>
+    </Field>
+    <LocalVariable name="nsUriIndex2prefixIndex" register="3" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.output.XmlOutputAbstractImpl" start="72" end="72" startBytecode="2" endBytecode="2" sourcefile="XmlOutputAbstractImpl.java" sourcepath="com/sun/xml/bind/v2/runtime/output/XmlOutputAbstractImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.runtime.property.AttributeProperty">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.property.AttributeProperty" start="69" end="128" sourcefile="AttributeProperty.java" sourcepath="com/sun/xml/bind/v2/runtime/property/AttributeProperty.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.property.AttributeProperty" name="compareTo" signature="(Lcom/sun/xml/bind/v2/runtime/property/AttributeProperty;)I" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.property.AttributeProperty" start="128" end="128" startBytecode="0" endBytecode="81" sourcefile="AttributeProperty.java" sourcepath="com/sun/xml/bind/v2/runtime/property/AttributeProperty.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="com.sun.xml.bind.v2.runtime.reflect.AdaptedAccessor">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.reflect.AdaptedAccessor" start="57" end="111" sourcefile="AdaptedAccessor.java" sourcepath="com/sun/xml/bind/v2/runtime/reflect/AdaptedAccessor.java"/>
+    </Class>
+    <Field classname="com.sun.xml.bind.v2.runtime.reflect.AdaptedAccessor" name="staticAdapter" signature="Ljavax/xml/bind/annotation/adapters/XmlAdapter;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.reflect.AdaptedAccessor" sourcefile="AdaptedAccessor.java" sourcepath="com/sun/xml/bind/v2/runtime/reflect/AdaptedAccessor.java"/>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.reflect.AdaptedAccessor" start="111" end="111" startBytecode="53" endBytecode="53" sourcefile="AdaptedAccessor.java" sourcepath="com/sun/xml/bind/v2/runtime/reflect/AdaptedAccessor.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.reflect.AdaptedAccessor" start="108" end="108" startBytecode="22" endBytecode="22" sourcefile="AdaptedAccessor.java" sourcepath="com/sun/xml/bind/v2/runtime/reflect/AdaptedAccessor.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.reflect.AdaptedAccessor" start="109" end="109" startBytecode="39" endBytecode="39" sourcefile="AdaptedAccessor.java" sourcepath="com/sun/xml/bind/v2/runtime/reflect/AdaptedAccessor.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" start="72" end="300" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" name="get" signature="()[B" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" start="185" end="198" startBytecode="0" endBytecode="189" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" name="data" signature="[B" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+    </Field>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" start="198" end="198" startBytecode="69" endBytecode="69" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" start="72" end="300" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" name="getExact" signature="()[B" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" start="154" end="160" startBytecode="0" endBytecode="119" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" name="data" signature="[B" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+    </Field>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" start="160" end="160" startBytecode="47" endBytecode="47" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" start="72" end="300" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" name="set" signature="([BILjava/lang/String;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" start="98" end="102" startBytecode="0" endBytecode="108" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" name="data" signature="[B" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+    </Field>
+    <LocalVariable name="data" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" start="98" end="98" startBytecode="2" endBytecode="2" sourcefile="Base64Data.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/Base64Data.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.runtime.unmarshaller.IntArrayData">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.IntArrayData" start="70" end="132" sourcefile="IntArrayData.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/IntArrayData.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.unmarshaller.IntArrayData" name="set" signature="([III)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.IntArrayData" start="87" end="91" startBytecode="0" endBytecode="108" sourcefile="IntArrayData.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/IntArrayData.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.runtime.unmarshaller.IntArrayData" name="data" signature="[I" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.IntArrayData" sourcefile="IntArrayData.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/IntArrayData.java"/>
+    </Field>
+    <LocalVariable name="data" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.IntArrayData" start="87" end="87" startBytecode="2" endBytecode="2" sourcefile="IntArrayData.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/IntArrayData.java"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" start="89" end="143" sourcefile="TagName.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/TagName.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" name="matches" signature="(Ljava/lang/String;Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" start="96" end="96" startBytecode="0" endBytecode="11" sourcefile="TagName.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/TagName.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="local" register="2" pc="12" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Field classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" name="local" signature="Ljava/lang/String;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" sourcefile="TagName.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/TagName.java"/>
+    </Field>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" start="96" end="96" startBytecode="13" endBytecode="13" sourcefile="TagName.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/TagName.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" start="89" end="143" sourcefile="TagName.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/TagName.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" name="matches" signature="(Ljava/lang/String;Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" start="96" end="96" startBytecode="0" endBytecode="11" sourcefile="TagName.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/TagName.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="nsUri" register="1" pc="4" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Field classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" name="uri" signature="Ljava/lang/String;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" sourcefile="TagName.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/TagName.java"/>
+    </Field>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" start="96" end="96" startBytecode="5" endBytecode="5" sourcefile="TagName.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/TagName.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$State">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$State" start="188" end="265" sourcefile="UnmarshallingContext.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/UnmarshallingContext.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$State" name="push" signature="()V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$State" start="250" end="255" startBytecode="0" endBytecode="111" sourcefile="UnmarshallingContext.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/UnmarshallingContext.java"/>
+    </Method>
+    <LocalVariable name="n" register="1" pc="24" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$State" start="253" end="253" startBytecode="27" endBytecode="27" sourcefile="UnmarshallingContext.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/UnmarshallingContext.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$State" start="250" end="250" startBytecode="4" endBytecode="4" sourcefile="UnmarshallingContext.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/UnmarshallingContext.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$State" start="251" end="251" startBytecode="7" endBytecode="7" sourcefile="UnmarshallingContext.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/UnmarshallingContext.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE">
+    <Class classname="com.sun.xml.bind.v2.runtime.unmarshaller.XsiTypeLoader">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.XsiTypeLoader" start="62" end="120" sourcefile="XsiTypeLoader.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/XsiTypeLoader.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.runtime.unmarshaller.XsiTypeLoader" name="parseXsiType" signature="(Lcom/sun/xml/bind/v2/runtime/unmarshaller/UnmarshallingContext$State;Lcom/sun/xml/bind/v2/runtime/unmarshaller/TagName;Lcom/sun/xml/bind/v2/runtime/JaxBeanInfo;)Lcom/sun/xml/bind/v2/runtime/JaxBeanInfo;" isStatic="true">
+      <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.XsiTypeLoader" start="77" end="120" startBytecode="0" endBytecode="382" sourcefile="XsiTypeLoader.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/XsiTypeLoader.java"/>
+    </Method>
+    <LocalVariable name="type" register="8" pc="51" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="com.sun.xml.bind.DatatypeConverterImpl" name="_parseQName" signature="(Ljava/lang/CharSequence;Ljavax/xml/namespace/NamespaceContext;)Ljavax/xml/namespace/QName;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.sun.xml.bind.DatatypeConverterImpl" start="303" end="343" startBytecode="0" endBytecode="489" sourcefile="DatatypeConverterImpl.java" sourcepath="com/sun/xml/bind/DatatypeConverterImpl.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.v2.runtime.unmarshaller.XsiTypeLoader" start="90" end="90" startBytecode="53" endBytecode="53" sourcefile="XsiTypeLoader.java" sourcepath="com/sun/xml/bind/v2/runtime/unmarshaller/XsiTypeLoader.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.schemagen.Util">
+      <SourceLine classname="com.sun.xml.bind.v2.schemagen.Util" start="48" end="137" sourcefile="Util.java" sourcepath="com/sun/xml/bind/v2/schemagen/Util.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.schemagen.Util" name="equalsIgnoreCase" signature="(Ljava/lang/String;Ljava/lang/String;)Z" isStatic="true">
+      <SourceLine classname="com.sun.xml.bind.v2.schemagen.Util" start="117" end="121" startBytecode="0" endBytecode="14" sourcefile="Util.java" sourcepath="com/sun/xml/bind/v2/schemagen/Util.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="t" register="1" pc="1" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <LocalVariable name="s" register="0" pc="1" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.schemagen.Util" start="117" end="117" startBytecode="2" endBytecode="2" sourcefile="Util.java" sourcepath="com/sun/xml/bind/v2/schemagen/Util.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="RV_NEGATING_RESULT_OF_COMPARETO" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$1">
+      <SourceLine classname="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$1" start="1489" end="1490" sourcefile="XmlSchemaGenerator.java" sourcepath="com/sun/xml/bind/v2/schemagen/XmlSchemaGenerator.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$1" name="compare" signature="(Ljava/lang/String;Ljava/lang/String;)I" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$1" start="1490" end="1490" startBytecode="0" endBytecode="68" sourcefile="XmlSchemaGenerator.java" sourcepath="com/sun/xml/bind/v2/schemagen/XmlSchemaGenerator.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="compareTo" signature="(Ljava/lang/String;)I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1166" end="1194" startBytecode="0" endBytecode="269" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="compareTo" signature="(Ljava/lang/String;)I" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" start="1166" end="1194" startBytecode="0" endBytecode="269" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$1" start="1490" end="1490" startBytecode="5" endBytecode="5" sourcefile="XmlSchemaGenerator.java" sourcepath="com/sun/xml/bind/v2/schemagen/XmlSchemaGenerator.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.bind.v2.util.ByteArrayOutputStreamEx">
+      <SourceLine classname="com.sun.xml.bind.v2.util.ByteArrayOutputStreamEx" start="49" end="79" sourcefile="ByteArrayOutputStreamEx.java" sourcepath="com/sun/xml/bind/v2/util/ByteArrayOutputStreamEx.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.util.ByteArrayOutputStreamEx" name="getBuffer" signature="()[B" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.util.ByteArrayOutputStreamEx" start="61" end="61" startBytecode="0" endBytecode="46" sourcefile="ByteArrayOutputStreamEx.java" sourcepath="com/sun/xml/bind/v2/util/ByteArrayOutputStreamEx.java"/>
+    </Method>
+    <Field classname="com.sun.xml.bind.v2.util.ByteArrayOutputStreamEx" name="buf" signature="[B" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.util.ByteArrayOutputStreamEx" sourcefile="ByteArrayOutputStreamEx.java" sourcepath="com/sun/xml/bind/v2/util/ByteArrayOutputStreamEx.java"/>
+    </Field>
+    <SourceLine classname="com.sun.xml.bind.v2.util.ByteArrayOutputStreamEx" start="61" end="61" startBytecode="4" endBytecode="4" sourcefile="ByteArrayOutputStreamEx.java" sourcepath="com/sun/xml/bind/v2/util/ByteArrayOutputStreamEx.java"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.util.QNameMap">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="59" end="484" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.util.QNameMap" name="put" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="119" end="137" startBytecode="0" endBytecode="79" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Field classname="com.sun.xml.bind.v2.util.QNameMap$Entry" name="localName" signature="Ljava/lang/String;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap$Entry" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Field>
+    <LocalVariable name="localname" register="2" pc="125" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="129" end="129" startBytecode="128" endBytecode="128" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.util.QNameMap">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="59" end="484" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.util.QNameMap" name="put" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="119" end="137" startBytecode="0" endBytecode="79" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Field classname="com.sun.xml.bind.v2.util.QNameMap$Entry" name="nsUri" signature="Ljava/lang/String;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap$Entry" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Field>
+    <LocalVariable name="namespaceUri" register="1" pc="134" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="129" end="129" startBytecode="137" endBytecode="137" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.util.QNameMap">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="59" end="484" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.util.QNameMap" name="put" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="119" end="137" startBytecode="0" endBytecode="79" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Method classname="java.lang.String" name="intern" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <LocalVariable name="localname" register="2" pc="44" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="122" end="122" startBytecode="47" endBytecode="47" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.util.QNameMap">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="59" end="484" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.util.QNameMap" name="put" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="119" end="137" startBytecode="0" endBytecode="79" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Method classname="java.lang.String" name="intern" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <LocalVariable name="namespaceUri" register="1" pc="66" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="123" end="123" startBytecode="69" endBytecode="69" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="2" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.util.QNameMap">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="59" end="484" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.util.QNameMap" name="getEntry" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/xml/bind/v2/util/QNameMap$Entry;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="460" end="468" startBytecode="0" endBytecode="49" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Field classname="com.sun.xml.bind.v2.util.QNameMap$Entry" name="localName" signature="Ljava/lang/String;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap$Entry" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Field>
+    <LocalVariable name="localName" register="2" pc="77" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="466" end="466" startBytecode="80" endBytecode="80" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="2" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.util.QNameMap">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="59" end="484" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.util.QNameMap" name="getEntry" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/xml/bind/v2/util/QNameMap$Entry;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="460" end="468" startBytecode="0" endBytecode="49" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Field classname="com.sun.xml.bind.v2.util.QNameMap$Entry" name="nsUri" signature="Ljava/lang/String;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap$Entry" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Field>
+    <LocalVariable name="nsUri" register="1" pc="86" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="466" end="466" startBytecode="89" endBytecode="89" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="2" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.util.QNameMap">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="59" end="484" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.util.QNameMap" name="getEntry" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/xml/bind/v2/util/QNameMap$Entry;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="460" end="468" startBytecode="0" endBytecode="49" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Method classname="java.lang.String" name="intern" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <LocalVariable name="localName" register="2" pc="30" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="461" end="461" startBytecode="33" endBytecode="33" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="2" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="com.sun.xml.bind.v2.util.QNameMap">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="59" end="484" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Class>
+    <Method classname="com.sun.xml.bind.v2.util.QNameMap" name="getEntry" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/xml/bind/v2/util/QNameMap$Entry;" isStatic="false">
+      <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="460" end="468" startBytecode="0" endBytecode="49" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Method classname="java.lang.String" name="intern" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <LocalVariable name="nsUri" register="1" pc="8" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.sun.xml.bind.v2.util.QNameMap" start="460" end="460" startBytecode="11" endBytecode="11" sourcefile="QNameMap.java" sourcepath="com/sun/xml/bind/v2/util/QNameMap.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER" value="true"/>
+  </BugInstance>
+  <BugInstance type="MS_OOI_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.sun.xml.txw2.DatatypeWriter">
+      <SourceLine classname="com.sun.xml.txw2.DatatypeWriter" start="52" end="52" sourcefile="DatatypeWriter.java" sourcepath="com/sun/xml/txw2/DatatypeWriter.java"/>
+    </Class>
+    <Field classname="com.sun.xml.txw2.DatatypeWriter" name="BUILDIN" signature="[Lcom/sun/xml/txw2/DatatypeWriter;" isStatic="true">
+      <SourceLine classname="com.sun.xml.txw2.DatatypeWriter" sourcefile="DatatypeWriter.java" sourcepath="com/sun/xml/txw2/DatatypeWriter.java"/>
+    </Field>
+    <SourceLine classname="com.sun.xml.txw2.DatatypeWriter" start="52" end="52" startBytecode="54" endBytecode="54" sourcefile="DatatypeWriter.java" sourcepath="com/sun/xml/txw2/DatatypeWriter.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="com.sun.xml.txw2.NamespaceSupport">
+      <SourceLine classname="com.sun.xml.txw2.NamespaceSupport" start="92" end="523" sourcefile="NamespaceSupport.java" sourcepath="com/sun/xml/txw2/NamespaceSupport.java"/>
+    </Class>
+    <Method classname="com.sun.xml.txw2.NamespaceSupport" name="pushContext" signature="()V" isStatic="false">
+      <SourceLine classname="com.sun.xml.txw2.NamespaceSupport" start="219" end="241" startBytecode="0" endBytecode="68" sourcefile="NamespaceSupport.java" sourcepath="com/sun/xml/txw2/NamespaceSupport.java"/>
+    </Method>
+    <LocalVariable name="max" register="1" pc="46" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.sun.xml.txw2.NamespaceSupport" start="227" end="227" startBytecode="45" endBytecode="45" sourcefile="NamespaceSupport.java" sourcepath="com/sun/xml/txw2/NamespaceSupport.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="max"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="com.sun.xml.txw2.NamespaceSupport$Context">
+      <SourceLine classname="com.sun.xml.txw2.NamespaceSupport$Context" start="559" end="834" sourcefile="NamespaceSupport.java" sourcepath="com/sun/xml/txw2/NamespaceSupport.java"/>
+    </Class>
+    <Field classname="com.sun.xml.txw2.NamespaceSupport$Context" name="parent" signature="Lcom/sun/xml/txw2/NamespaceSupport$Context;" isStatic="false">
+      <SourceLine classname="com.sun.xml.txw2.NamespaceSupport$Context" sourcefile="NamespaceSupport.java" sourcepath="com/sun/xml/txw2/NamespaceSupport.java"/>
+    </Field>
+    <SourceLine classname="com.sun.xml.txw2.NamespaceSupport$Context" start="834" end="834" startBytecode="27" endBytecode="27" sourcefile="NamespaceSupport.java" sourcepath="com/sun/xml/txw2/NamespaceSupport.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.sun.xml.txw2.output.XMLWriter">
+      <SourceLine classname="com.sun.xml.txw2.output.XMLWriter" start="285" end="1067" sourcefile="XMLWriter.java" sourcepath="com/sun/xml/txw2/output/XMLWriter.java"/>
+    </Class>
+    <Method classname="com.sun.xml.txw2.output.XMLWriter" name="setOutput" signature="(Ljava/io/Writer;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="com.sun.xml.txw2.output.XMLWriter" start="372" end="378" startBytecode="0" endBytecode="113" sourcefile="XMLWriter.java" sourcepath="com/sun/xml/txw2/output/XMLWriter.java"/>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="92" end="98" startBytecode="0" endBytecode="83" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.txw2.output.XMLWriter" start="373" end="373" startBytecode="12" endBytecode="12" sourcefile="XMLWriter.java" sourcepath="com/sun/xml/txw2/output/XMLWriter.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" abbrev="RV" category="CORRECTNESS">
+    <Class classname="com.sun.xml.txw2.output.XMLWriter">
+      <SourceLine classname="com.sun.xml.txw2.output.XMLWriter" start="285" end="1067" sourcefile="XMLWriter.java" sourcepath="com/sun/xml/txw2/output/XMLWriter.java"/>
+    </Class>
+    <Method classname="com.sun.xml.txw2.output.XMLWriter" name="startCDATA" signature="()V" isStatic="false">
+      <SourceLine classname="com.sun.xml.txw2.output.XMLWriter" start="923" end="932" startBytecode="0" endBytecode="134" sourcefile="XMLWriter.java" sourcepath="com/sun/xml/txw2/output/XMLWriter.java"/>
+    </Method>
+    <Method classname="org.xml.sax.SAXException" name="&lt;init&gt;" signature="(Ljava/lang/Exception;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="org.xml.sax.SAXException" start="72" end="74" startBytecode="0" endBytecode="41" sourcefile="SAXException.java" sourcepath="org/xml/sax/SAXException.java"/>
+    </Method>
+    <SourceLine classname="com.sun.xml.txw2.output.XMLWriter" start="930" end="930" startBytecode="38" endBytecode="38" sourcefile="XMLWriter.java" sourcepath="com/sun/xml/txw2/output/XMLWriter.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="6">
+    <MissingClass>com.sun.xml.fastinfoset.stax.StAXDocumentParser</MissingClass>
+    <MissingClass>com.sun.xml.fastinfoset.stax.StAXDocumentSerializer</MissingClass>
+    <MissingClass>org.jvnet.fastinfoset.VocabularyApplicationData</MissingClass>
+    <MissingClass>org.jvnet.staxex.Base64Data</MissingClass>
+    <MissingClass>org.jvnet.staxex.XMLStreamReaderEx</MissingClass>
+    <MissingClass>org.jvnet.staxex.XMLStreamWriterEx</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 17 Aug 2009 15:18:44 +0300" total_classes="641" referenced_classes="1114" total_bugs="52" total_size="20560" num_packages="28" vm_version="20.4-b02-402" cpu_seconds="83.71" clock_seconds="57.23" peak_mbytes="148.20" alloc_mbytes="763.88" gc_seconds="3.00" priority_2="37" priority_1="15">
+    <PackageStats package="com.sun.istack" total_bugs="2" total_types="13" total_size="287" priority_2="2">
+      <ClassStats class="com.sun.istack.ByteArrayDataSource" sourceFile="ByteArrayDataSource.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.istack.FinalArrayList" sourceFile="FinalArrayList.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.istack.FragmentContentHandler" sourceFile="FragmentContentHandler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sun.istack.Interned" sourceFile="Interned.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.istack.NotNull" sourceFile="NotNull.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.istack.Nullable" sourceFile="Nullable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.istack.Pool" sourceFile="Pool.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.istack.Pool$Impl" sourceFile="Pool.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.istack.SAXException2" sourceFile="SAXException2.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.istack.SAXParseException2" sourceFile="SAXParseException2.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sun.istack.XMLStreamException2" sourceFile="XMLStreamException2.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.sun.istack.XMLStreamReaderToContentHandler" sourceFile="XMLStreamReaderToContentHandler.java" interface="false" size="164" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.istack.XMLStreamReaderToContentHandler$1" sourceFile="XMLStreamReaderToContentHandler.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind" total_bugs="0" total_types="13" total_size="566">
+      <ClassStats class="com.sun.xml.bind.AccessorFactory" sourceFile="AccessorFactory.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.AccessorFactoryImpl" sourceFile="AccessorFactoryImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.AnyTypeAdapter" sourceFile="AnyTypeAdapter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.CycleRecoverable" sourceFile="CycleRecoverable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.CycleRecoverable$Context" sourceFile="CycleRecoverable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.DatatypeConverterImpl" sourceFile="DatatypeConverterImpl.java" interface="false" size="352" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.DatatypeConverterImpl$CalendarFormatter" sourceFile="DatatypeConverterImpl.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.IDResolver" sourceFile="IDResolver.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.Locatable" sourceFile="Locatable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.Util" sourceFile="Util.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.ValidationEventLocatorEx" sourceFile="ValidationEventLocatorEx.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.WhiteSpaceProcessor" sourceFile="WhiteSpaceProcessor.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.XmlAccessorFactory" sourceFile="XmlAccessorFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.annotation" total_bugs="0" total_types="2" total_size="3">
+      <ClassStats class="com.sun.xml.bind.annotation.XmlIsSet" sourceFile="XmlIsSet.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.annotation.XmlLocation" sourceFile="XmlLocation.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.api" total_bugs="0" total_types="9" total_size="203">
+      <ClassStats class="com.sun.xml.bind.api.AccessorException" sourceFile="AccessorException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.Bridge" sourceFile="Bridge.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.BridgeContext" sourceFile="BridgeContext.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.ClassResolver" sourceFile="ClassResolver.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.CompositeStructure" sourceFile="CompositeStructure.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.ErrorListener" sourceFile="ErrorListener.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.JAXBRIContext" sourceFile="JAXBRIContext.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.RawAccessor" sourceFile="RawAccessor.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.TypeReference" sourceFile="TypeReference.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.api.impl" total_bugs="0" total_types="5" total_size="264">
+      <ClassStats class="com.sun.xml.bind.api.impl.NameConverter" sourceFile="NameConverter.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.impl.NameConverter$1" sourceFile="NameConverter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.impl.NameConverter$2" sourceFile="NameConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.impl.NameConverter$Standard" sourceFile="NameConverter.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.api.impl.NameUtil" sourceFile="NameUtil.java" interface="false" size="157" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.marshaller" total_bugs="2" total_types="9" total_size="483" priority_2="1" priority_1="1">
+      <ClassStats class="com.sun.xml.bind.marshaller.CharacterEscapeHandler" sourceFile="CharacterEscapeHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.marshaller.DataWriter" sourceFile="DataWriter.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.marshaller.DumbEscapeHandler" sourceFile="DumbEscapeHandler.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.marshaller.Messages" sourceFile="Messages.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.marshaller.MinimumEscapeHandler" sourceFile="MinimumEscapeHandler.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.marshaller.NamespacePrefixMapper" sourceFile="NamespacePrefixMapper.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.marshaller.NioEscapeHandler" sourceFile="NioEscapeHandler.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.marshaller.SAX2DOMEx" sourceFile="SAX2DOMEx.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.marshaller.XMLWriter" sourceFile="XMLWriter.java" interface="false" size="204" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.unmarshaller" total_bugs="1" total_types="4" total_size="182" priority_2="1">
+      <ClassStats class="com.sun.xml.bind.unmarshaller.DOMScanner" sourceFile="DOMScanner.java" interface="false" size="149" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.unmarshaller.InfosetScanner" sourceFile="InfosetScanner.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.unmarshaller.Messages" sourceFile="Messages.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.unmarshaller.Patcher" sourceFile="Patcher.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.util" total_bugs="2" total_types="3" total_size="213" priority_1="2">
+      <ClassStats class="com.sun.xml.bind.util.AttributesImpl" sourceFile="AttributesImpl.java" interface="false" size="176" bugs="2" priority_1="2"/>
+      <ClassStats class="com.sun.xml.bind.util.ValidationEventLocatorExImpl" sourceFile="ValidationEventLocatorExImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.util.Which" sourceFile="Which.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2" total_bugs="0" total_types="6" total_size="226">
+      <ClassStats class="com.sun.xml.bind.v2.ClassFactory" sourceFile="ClassFactory.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.ClassFactory$1" sourceFile="ClassFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.ContextFactory" sourceFile="ContextFactory.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.Messages" sourceFile="Messages.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.TODO" sourceFile="TODO.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.WellKnownNamespace" sourceFile="WellKnownNamespace.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.bytecode" total_bugs="0" total_types="1" total_size="71">
+      <ClassStats class="com.sun.xml.bind.v2.bytecode.ClassTailor" sourceFile="ClassTailor.java" interface="false" size="71" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.model.annotation" total_bugs="0" total_types="25" total_size="465">
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.AbstractInlineAnnotationReaderImpl" sourceFile="AbstractInlineAnnotationReaderImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.AnnotationReader" sourceFile="AnnotationReader.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.AnnotationSource" sourceFile="AnnotationSource.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.ClassLocatable" sourceFile="ClassLocatable.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.FieldLocatable" sourceFile="FieldLocatable.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.Init" sourceFile="Init.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.Locatable" sourceFile="Locatable.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.LocatableAnnotation" sourceFile="LocatableAnnotation.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.Messages" sourceFile="Messages.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.MethodLocatable" sourceFile="MethodLocatable.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.Quick" sourceFile="Quick.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.RuntimeAnnotationReader" sourceFile="RuntimeAnnotationReader.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.RuntimeInlineAnnotationReader" sourceFile="RuntimeInlineAnnotationReader.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlAttributeQuick" sourceFile="XmlAttributeQuick.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlElementDeclQuick" sourceFile="XmlElementDeclQuick.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlElementQuick" sourceFile="XmlElementQuick.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlElementRefQuick" sourceFile="XmlElementRefQuick.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlElementRefsQuick" sourceFile="XmlElementRefsQuick.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlEnumQuick" sourceFile="XmlEnumQuick.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlRootElementQuick" sourceFile="XmlRootElementQuick.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlSchemaQuick" sourceFile="XmlSchemaQuick.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlSchemaTypeQuick" sourceFile="XmlSchemaTypeQuick.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlTransientQuick" sourceFile="XmlTransientQuick.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlTypeQuick" sourceFile="XmlTypeQuick.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.annotation.XmlValueQuick" sourceFile="XmlValueQuick.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.model.core" total_bugs="0" total_types="29" total_size="226">
+      <ClassStats class="com.sun.xml.bind.v2.model.core.Adapter" sourceFile="Adapter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.ArrayInfo" sourceFile="ArrayInfo.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.AttributePropertyInfo" sourceFile="AttributePropertyInfo.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.BuiltinLeafInfo" sourceFile="BuiltinLeafInfo.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.ClassInfo" sourceFile="ClassInfo.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.Element" sourceFile="Element.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.ElementInfo" sourceFile="ElementInfo.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.ElementPropertyInfo" sourceFile="ElementPropertyInfo.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.EnumConstant" sourceFile="EnumConstant.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.EnumLeafInfo" sourceFile="EnumLeafInfo.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.ErrorHandler" sourceFile="ErrorHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.ID" sourceFile="ID.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.LeafInfo" sourceFile="LeafInfo.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.MapPropertyInfo" sourceFile="MapPropertyInfo.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.MaybeElement" sourceFile="MaybeElement.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.NonElement" sourceFile="NonElement.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.NonElementRef" sourceFile="NonElementRef.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.PropertyInfo" sourceFile="PropertyInfo.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.PropertyKind" sourceFile="PropertyKind.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.Ref" sourceFile="Ref.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.ReferencePropertyInfo" sourceFile="ReferencePropertyInfo.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.RegistryInfo" sourceFile="RegistryInfo.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.TypeInfo" sourceFile="TypeInfo.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.TypeInfoSet" sourceFile="TypeInfoSet.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.TypeRef" sourceFile="TypeRef.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.ValuePropertyInfo" sourceFile="ValuePropertyInfo.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.WildcardMode" sourceFile="WildcardMode.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.WildcardTypeInfo" sourceFile="WildcardTypeInfo.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.core.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.model.impl" total_bugs="1" total_types="89" total_size="3379" priority_2="1">
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.AnyTypeImpl" sourceFile="AnyTypeImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ArrayInfoImpl" sourceFile="ArrayInfoImpl.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.AttributePropertyInfoImpl" sourceFile="AttributePropertyInfoImpl.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.AttributePropertyInfoImpl$1" sourceFile="AttributePropertyInfoImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.BuiltinLeafInfoImpl" sourceFile="BuiltinLeafInfoImpl.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ClassInfoImpl" sourceFile="ClassInfoImpl.java" interface="false" size="502" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ClassInfoImpl$1" sourceFile="ClassInfoImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ClassInfoImpl$ConflictException" sourceFile="ClassInfoImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ClassInfoImpl$DupliateException" sourceFile="ClassInfoImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ClassInfoImpl$PropertyGroup" sourceFile="ClassInfoImpl.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ClassInfoImpl$PropertySorter" sourceFile="ClassInfoImpl.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ClassInfoImpl$PropertySorter$1" sourceFile="ClassInfoImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ClassInfoImpl$SecondaryAnnotation" sourceFile="ClassInfoImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ERPropertyInfoImpl" sourceFile="ERPropertyInfoImpl.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ElementInfoImpl" sourceFile="ElementInfoImpl.java" interface="false" size="136" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ElementInfoImpl$PropertyImpl" sourceFile="ElementInfoImpl.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ElementPropertyInfoImpl" sourceFile="ElementPropertyInfoImpl.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ElementPropertyInfoImpl$1" sourceFile="ElementPropertyInfoImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.EnumConstantImpl" sourceFile="EnumConstantImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.EnumLeafInfoImpl" sourceFile="EnumLeafInfoImpl.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.EnumLeafInfoImpl$1" sourceFile="EnumLeafInfoImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.FieldPropertySeed" sourceFile="FieldPropertySeed.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.GetterSetterPropertySeed" sourceFile="GetterSetterPropertySeed.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.LeafInfoImpl" sourceFile="LeafInfoImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.MapPropertyInfoImpl" sourceFile="MapPropertyInfoImpl.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.Messages" sourceFile="Messages.java" interface="false" size="133" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ModelBuilder" sourceFile="ModelBuilder.java" interface="false" size="146" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ModelBuilder$1" sourceFile="ModelBuilder.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.PropertyInfoImpl" sourceFile="PropertyInfoImpl.java" interface="false" size="164" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.PropertyInfoImpl$1" sourceFile="PropertyInfoImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.PropertySeed" sourceFile="PropertySeed.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ReferencePropertyInfoImpl" sourceFile="ReferencePropertyInfoImpl.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RegistryInfoImpl" sourceFile="RegistryInfoImpl.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeAnyTypeImpl" sourceFile="RuntimeAnyTypeImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeArrayInfoImpl" sourceFile="RuntimeArrayInfoImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeAttributePropertyInfoImpl" sourceFile="RuntimeAttributePropertyInfoImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$1" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$10" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$10$1" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$11" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$12" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$13" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$14" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$15" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$16" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$17" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$18" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$19" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$2" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$20" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$21" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$22" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$23" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$24" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$25" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$26" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$3" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$4" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$5" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$6" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$7" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$8" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$9" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$PcdataImpl" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$StringImpl" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$UUIDImpl" sourceFile="RuntimeBuiltinLeafInfoImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeClassInfoImpl" sourceFile="RuntimeClassInfoImpl.java" interface="false" size="115" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeClassInfoImpl$RuntimePropertySeed" sourceFile="RuntimeClassInfoImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeClassInfoImpl$TransducerImpl" sourceFile="RuntimeClassInfoImpl.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeElementInfoImpl" sourceFile="RuntimeElementInfoImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeElementInfoImpl$RuntimePropertyImpl" sourceFile="RuntimeElementInfoImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeElementPropertyInfoImpl" sourceFile="RuntimeElementPropertyInfoImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeEnumConstantImpl" sourceFile="RuntimeEnumConstantImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeEnumLeafInfoImpl" sourceFile="RuntimeEnumLeafInfoImpl.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeMapPropertyInfoImpl" sourceFile="RuntimeMapPropertyInfoImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeModelBuilder" sourceFile="RuntimeModelBuilder.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeModelBuilder$IDTransducerImpl" sourceFile="RuntimeModelBuilder.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeReferencePropertyInfoImpl" sourceFile="RuntimeReferencePropertyInfoImpl.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeTypeInfoSetImpl" sourceFile="RuntimeTypeInfoSetImpl.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeTypeRefImpl" sourceFile="RuntimeTypeRefImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.RuntimeValuePropertyInfoImpl" sourceFile="RuntimeValuePropertyInfoImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.SingleTypePropertyInfoImpl" sourceFile="SingleTypePropertyInfoImpl.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.TypeInfoImpl" sourceFile="TypeInfoImpl.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.TypeInfoSetImpl" sourceFile="TypeInfoSetImpl.java" interface="false" size="164" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.TypeInfoSetImpl$1" sourceFile="TypeInfoSetImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.TypeRefImpl" sourceFile="TypeRefImpl.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.Util" sourceFile="Util.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.impl.ValuePropertyInfoImpl" sourceFile="ValuePropertyInfoImpl.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.model.nav" total_bugs="0" total_types="13" total_size="554">
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.GenericArrayTypeImpl" sourceFile="GenericArrayTypeImpl.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.Navigator" sourceFile="Navigator.java" interface="true" size="52" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.ParameterizedTypeImpl" sourceFile="ParameterizedTypeImpl.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.ReflectionNavigator" sourceFile="ReflectionNavigator.java" interface="false" size="225" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.ReflectionNavigator$1" sourceFile="ReflectionNavigator.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.ReflectionNavigator$2" sourceFile="ReflectionNavigator.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.ReflectionNavigator$3" sourceFile="ReflectionNavigator.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.ReflectionNavigator$4" sourceFile="ReflectionNavigator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.ReflectionNavigator$5" sourceFile="ReflectionNavigator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.ReflectionNavigator$6" sourceFile="ReflectionNavigator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.ReflectionNavigator$BinderArg" sourceFile="ReflectionNavigator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.TypeVisitor" sourceFile="TypeVisitor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.nav.WildcardTypeImpl" sourceFile="WildcardTypeImpl.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.model.runtime" total_bugs="0" total_types="19" total_size="63">
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeArrayInfo" sourceFile="RuntimeArrayInfo.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeAttributePropertyInfo" sourceFile="RuntimeAttributePropertyInfo.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeBuiltinLeafInfo" sourceFile="RuntimeBuiltinLeafInfo.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeClassInfo" sourceFile="RuntimeClassInfo.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeElement" sourceFile="RuntimeElement.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeElementInfo" sourceFile="RuntimeElementInfo.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeElementPropertyInfo" sourceFile="RuntimeElementPropertyInfo.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeEnumLeafInfo" sourceFile="RuntimeEnumLeafInfo.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeLeafInfo" sourceFile="RuntimeLeafInfo.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeMapPropertyInfo" sourceFile="RuntimeMapPropertyInfo.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeNonElement" sourceFile="RuntimeNonElement.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeNonElementRef" sourceFile="RuntimeNonElementRef.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimePropertyInfo" sourceFile="RuntimePropertyInfo.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeReferencePropertyInfo" sourceFile="RuntimeReferencePropertyInfo.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeTypeInfo" sourceFile="RuntimeTypeInfo.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeTypeInfoSet" sourceFile="RuntimeTypeInfoSet.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeTypeRef" sourceFile="RuntimeTypeRef.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.RuntimeValuePropertyInfo" sourceFile="RuntimeValuePropertyInfo.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.model.runtime.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.runtime" total_bugs="13" total_types="55" total_size="3052" priority_2="11" priority_1="2">
+      <ClassStats class="com.sun.xml.bind.v2.runtime.AnyTypeBeanInfo" sourceFile="AnyTypeBeanInfo.java" interface="false" size="69" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.ArrayBeanInfoImpl" sourceFile="ArrayBeanInfoImpl.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.ArrayBeanInfoImpl$ArrayLoader" sourceFile="ArrayBeanInfoImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.AssociationMap" sourceFile="AssociationMap.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.AssociationMap$Entry" sourceFile="AssociationMap.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.BinderImpl" sourceFile="BinderImpl.java" interface="false" size="123" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.BridgeAdapter" sourceFile="BridgeAdapter.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.BridgeContextImpl" sourceFile="BridgeContextImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.BridgeImpl" sourceFile="BridgeImpl.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl" sourceFile="ClassBeanInfoImpl.java" interface="false" size="180" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.CompositeStructureBeanInfo" sourceFile="CompositeStructureBeanInfo.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.ContentHandlerAdaptor" sourceFile="ContentHandlerAdaptor.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.Coordinator" sourceFile="Coordinator.java" interface="false" size="70" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.Coordinator$1" sourceFile="Coordinator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.DomPostInitAction" sourceFile="DomPostInitAction.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.ElementBeanInfoImpl" sourceFile="ElementBeanInfoImpl.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.ElementBeanInfoImpl$1" sourceFile="ElementBeanInfoImpl.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.ElementBeanInfoImpl$IntercepterLoader" sourceFile="ElementBeanInfoImpl.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.FilterTransducer" sourceFile="FilterTransducer.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.IllegalAnnotationException" sourceFile="IllegalAnnotationException.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.IllegalAnnotationsException" sourceFile="IllegalAnnotationsException.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.IllegalAnnotationsException$Builder" sourceFile="IllegalAnnotationsException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.InlineBinaryTransducer" sourceFile="InlineBinaryTransducer.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.InternalBridge" sourceFile="InternalBridge.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.JAXBContextImpl" sourceFile="JAXBContextImpl.java" interface="false" size="418" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.JAXBContextImpl$1" sourceFile="JAXBContextImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.JAXBContextImpl$2" sourceFile="JAXBContextImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.JAXBContextImpl$3" sourceFile="JAXBContextImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.JAXBContextImpl$4" sourceFile="JAXBContextImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.JAXBContextImpl$5" sourceFile="JAXBContextImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.JAXBContextImpl$6" sourceFile="JAXBContextImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.JAXBContextImpl$7" sourceFile="JAXBContextImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.JaxBeanInfo" sourceFile="JaxBeanInfo.java" interface="false" size="137" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.LeafBeanInfoImpl" sourceFile="LeafBeanInfoImpl.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.LifecycleMethods" sourceFile="LifecycleMethods.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.Location" sourceFile="Location.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.MarshallerImpl" sourceFile="MarshallerImpl.java" interface="false" size="295" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.MarshallerImpl$1" sourceFile="MarshallerImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.MarshallerImpl$2" sourceFile="MarshallerImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.Messages" sourceFile="Messages.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.MimeTypedTransducer" sourceFile="MimeTypedTransducer.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.Name" sourceFile="Name.java" interface="false" size="28" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.NameBuilder" sourceFile="NameBuilder.java" interface="false" size="58" bugs="4" priority_2="2" priority_1="2"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.NameList" sourceFile="NameList.java" interface="false" size="14" bugs="3" priority_2="3"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.NamespaceContext2" sourceFile="NamespaceContext2.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.RuntimeUtil" sourceFile="RuntimeUtil.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.RuntimeUtil$ToStringAdapter" sourceFile="RuntimeUtil.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.SchemaTypeTransducer" sourceFile="SchemaTypeTransducer.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.StAXPostInitAction" sourceFile="StAXPostInitAction.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.SwaRefAdapter" sourceFile="SwaRefAdapter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.Transducer" sourceFile="Transducer.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.ValueListBeanInfoImpl" sourceFile="ValueListBeanInfoImpl.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.ValueListBeanInfoImpl$1" sourceFile="ValueListBeanInfoImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.XMLSerializer" sourceFile="XMLSerializer.java" interface="false" size="444" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.XMLSerializer$1" sourceFile="XMLSerializer.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.runtime.output" total_bugs="5" total_types="23" total_size="1437" priority_2="5">
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput" sourceFile="C14nXmlOutput.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput$DynamicAttribute" sourceFile="C14nXmlOutput.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.C14nXmlOutput$StaticAttribute" sourceFile="C14nXmlOutput.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.DOMOutput" sourceFile="DOMOutput.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.Encoded" sourceFile="Encoded.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.FastInfosetStreamWriterOutput" sourceFile="FastInfosetStreamWriterOutput.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.FastInfosetStreamWriterOutput$AppData" sourceFile="FastInfosetStreamWriterOutput.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.FastInfosetStreamWriterOutput$TablesPerJAXBContext" sourceFile="FastInfosetStreamWriterOutput.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.ForkXmlOutput" sourceFile="ForkXmlOutput.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.InPlaceDOMOutput" sourceFile="InPlaceDOMOutput.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.IndentingUTF8XmlOutput" sourceFile="IndentingUTF8XmlOutput.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.MTOMXmlOutput" sourceFile="MTOMXmlOutput.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.NamespaceContextImpl" sourceFile="NamespaceContextImpl.java" interface="false" size="139" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.NamespaceContextImpl$1" sourceFile="NamespaceContextImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.NamespaceContextImpl$Element" sourceFile="NamespaceContextImpl.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.Pcdata" sourceFile="Pcdata.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.SAXOutput" sourceFile="SAXOutput.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.StAXExStreamWriterOutput" sourceFile="StAXExStreamWriterOutput.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.UTF8XmlOutput" sourceFile="UTF8XmlOutput.java" interface="false" size="251" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.XMLEventWriterOutput" sourceFile="XMLEventWriterOutput.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.XMLStreamWriterOutput" sourceFile="XMLStreamWriterOutput.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.XmlOutput" sourceFile="XmlOutput.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.output.XmlOutputAbstractImpl" sourceFile="XmlOutputAbstractImpl.java" interface="false" size="30" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.runtime.property" total_bugs="1" total_types="28" total_size="852" priority_2="1">
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ArrayERProperty" sourceFile="ArrayERProperty.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ArrayERProperty$ItemsLoader" sourceFile="ArrayERProperty.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ArrayERProperty$ReceiverImpl" sourceFile="ArrayERProperty.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ArrayElementLeafProperty" sourceFile="ArrayElementLeafProperty.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty" sourceFile="ArrayElementNodeProperty.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ArrayElementProperty" sourceFile="ArrayElementProperty.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ArrayProperty" sourceFile="ArrayProperty.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ArrayReferenceNodeProperty" sourceFile="ArrayReferenceNodeProperty.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ArrayReferenceNodeProperty$MixedTextLoader" sourceFile="ArrayReferenceNodeProperty.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.AttributeProperty" sourceFile="AttributeProperty.java" interface="false" size="33" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ListElementProperty" sourceFile="ListElementProperty.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.Messages" sourceFile="Messages.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.Property" sourceFile="Property.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.PropertyFactory" sourceFile="PropertyFactory.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.PropertyFactory$1" sourceFile="PropertyFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.PropertyImpl" sourceFile="PropertyImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.SingleElementLeafProperty" sourceFile="SingleElementLeafProperty.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.SingleElementNodeProperty" sourceFile="SingleElementNodeProperty.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.SingleMapNodeProperty" sourceFile="SingleMapNodeProperty.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.SingleMapNodeProperty$1" sourceFile="SingleMapNodeProperty.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.SingleMapNodeProperty$2" sourceFile="SingleMapNodeProperty.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.SingleMapNodeProperty$ReceiverImpl" sourceFile="SingleMapNodeProperty.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.SingleReferenceNodeProperty" sourceFile="SingleReferenceNodeProperty.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.SingleReferenceNodeProperty$1" sourceFile="SingleReferenceNodeProperty.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.StructureLoaderBuilder" sourceFile="StructureLoaderBuilder.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.TagAndType" sourceFile="TagAndType.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.UnmarshallerChain" sourceFile="UnmarshallerChain.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.property.ValueProperty" sourceFile="ValueProperty.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.runtime.reflect" total_bugs="1" total_types="56" total_size="1250" priority_2="1">
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Accessor" sourceFile="Accessor.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Accessor$1" sourceFile="Accessor.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Accessor$2" sourceFile="Accessor.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection" sourceFile="Accessor.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Accessor$GetterOnlyReflection" sourceFile="Accessor.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Accessor$GetterSetterReflection" sourceFile="Accessor.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Accessor$ReadOnlyFieldReflection" sourceFile="Accessor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Accessor$SetterOnlyReflection" sourceFile="Accessor.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.AdaptedAccessor" sourceFile="AdaptedAccessor.java" interface="false" size="38" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.AdaptedLister" sourceFile="AdaptedLister.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.AdaptedLister$ListIteratorImpl" sourceFile="AdaptedLister.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.DefaultTransducedAccessor" sourceFile="DefaultTransducedAccessor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.ListIterator" sourceFile="ListIterator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.ListTransducedAccessorImpl" sourceFile="ListTransducedAccessorImpl.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister" sourceFile="Lister.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister$1" sourceFile="Lister.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister$2" sourceFile="Lister.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister$ArrayLister" sourceFile="Lister.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister$ArrayLister$1" sourceFile="Lister.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister$CollectionLister" sourceFile="Lister.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister$CollectionLister$1" sourceFile="Lister.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister$IDREFS" sourceFile="Lister.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister$IDREFS$Pack" sourceFile="Lister.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister$IDREFSIterator" sourceFile="Lister.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Lister$Pack" sourceFile="Lister.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.Messages" sourceFile="Messages.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.NullSafeAccessor" sourceFile="NullSafeAccessor.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerBoolean" sourceFile="PrimitiveArrayListerBoolean.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerBoolean$1" sourceFile="PrimitiveArrayListerBoolean.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerBoolean$BooleanArrayPack" sourceFile="PrimitiveArrayListerBoolean.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerByte" sourceFile="PrimitiveArrayListerByte.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerByte$1" sourceFile="PrimitiveArrayListerByte.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerByte$ByteArrayPack" sourceFile="PrimitiveArrayListerByte.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerCharacter" sourceFile="PrimitiveArrayListerCharacter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerCharacter$1" sourceFile="PrimitiveArrayListerCharacter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerCharacter$CharacterArrayPack" sourceFile="PrimitiveArrayListerCharacter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerDouble" sourceFile="PrimitiveArrayListerDouble.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerDouble$1" sourceFile="PrimitiveArrayListerDouble.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerDouble$DoubleArrayPack" sourceFile="PrimitiveArrayListerDouble.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerFloat" sourceFile="PrimitiveArrayListerFloat.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerFloat$1" sourceFile="PrimitiveArrayListerFloat.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerFloat$FloatArrayPack" sourceFile="PrimitiveArrayListerFloat.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerInteger" sourceFile="PrimitiveArrayListerInteger.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerInteger$1" sourceFile="PrimitiveArrayListerInteger.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerInteger$IntegerArrayPack" sourceFile="PrimitiveArrayListerInteger.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerLong" sourceFile="PrimitiveArrayListerLong.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerLong$1" sourceFile="PrimitiveArrayListerLong.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerLong$LongArrayPack" sourceFile="PrimitiveArrayListerLong.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerShort" sourceFile="PrimitiveArrayListerShort.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerShort$1" sourceFile="PrimitiveArrayListerShort.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.PrimitiveArrayListerShort$ShortArrayPack" sourceFile="PrimitiveArrayListerShort.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.TransducedAccessor" sourceFile="TransducedAccessor.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.TransducedAccessor$CompositeContextDependentTransducedAccessorImpl" sourceFile="TransducedAccessor.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.TransducedAccessor$CompositeTransducedAccessorImpl" sourceFile="TransducedAccessor.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.TransducedAccessor$IDREFTransducedAccessorImpl" sourceFile="TransducedAccessor.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.TransducedAccessor$IDREFTransducedAccessorImpl$1" sourceFile="TransducedAccessor.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.runtime.reflect.opt" total_bugs="0" total_types="40" total_size="637">
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector" sourceFile="AccessorInjector.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.Bean" sourceFile="Bean.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.Const" sourceFile="Const.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.FieldAccessor_Boolean" sourceFile="FieldAccessor_Boolean.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.FieldAccessor_Byte" sourceFile="FieldAccessor_Byte.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.FieldAccessor_Character" sourceFile="FieldAccessor_Character.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.FieldAccessor_Double" sourceFile="FieldAccessor_Double.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.FieldAccessor_Float" sourceFile="FieldAccessor_Float.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.FieldAccessor_Integer" sourceFile="FieldAccessor_Integer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.FieldAccessor_Long" sourceFile="FieldAccessor_Long.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.FieldAccessor_Ref" sourceFile="FieldAccessor_Ref.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.FieldAccessor_Short" sourceFile="FieldAccessor_Short.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.Injector" sourceFile="Injector.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1" sourceFile="Injector.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.MethodAccessor_Boolean" sourceFile="MethodAccessor_Boolean.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.MethodAccessor_Byte" sourceFile="MethodAccessor_Byte.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.MethodAccessor_Character" sourceFile="MethodAccessor_Character.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.MethodAccessor_Double" sourceFile="MethodAccessor_Double.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.MethodAccessor_Float" sourceFile="MethodAccessor_Float.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.MethodAccessor_Integer" sourceFile="MethodAccessor_Integer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.MethodAccessor_Long" sourceFile="MethodAccessor_Long.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.MethodAccessor_Ref" sourceFile="MethodAccessor_Ref.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.MethodAccessor_Short" sourceFile="MethodAccessor_Short.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory" sourceFile="OptimizedAccessorFactory.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedTransducedAccessorFactory" sourceFile="OptimizedTransducedAccessorFactory.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.Ref" sourceFile="Ref.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_field_Boolean" sourceFile="TransducedAccessor_field_Boolean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_field_Byte" sourceFile="TransducedAccessor_field_Byte.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_field_Double" sourceFile="TransducedAccessor_field_Double.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_field_Float" sourceFile="TransducedAccessor_field_Float.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_field_Integer" sourceFile="TransducedAccessor_field_Integer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_field_Long" sourceFile="TransducedAccessor_field_Long.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_field_Short" sourceFile="TransducedAccessor_field_Short.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_method_Boolean" sourceFile="TransducedAccessor_method_Boolean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_method_Byte" sourceFile="TransducedAccessor_method_Byte.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_method_Double" sourceFile="TransducedAccessor_method_Double.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_method_Float" sourceFile="TransducedAccessor_method_Float.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_method_Integer" sourceFile="TransducedAccessor_method_Integer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_method_Long" sourceFile="TransducedAccessor_method_Long.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.reflect.opt.TransducedAccessor_method_Short" sourceFile="TransducedAccessor_method_Short.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.runtime.unmarshaller" total_bugs="8" total_types="60" total_size="2326" priority_2="5" priority_1="3">
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.AttributesEx" sourceFile="AttributesEx.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.AttributesExImpl" sourceFile="AttributesExImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data" sourceFile="Base64Data.java" interface="false" size="100" bugs="3" priority_2="3"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data$1" sourceFile="Base64Data.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.ChildLoader" sourceFile="ChildLoader.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.DefaultIDResolver" sourceFile="DefaultIDResolver.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.DefaultIDResolver$1" sourceFile="DefaultIDResolver.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.DefaultValueLoaderDecorator" sourceFile="DefaultValueLoaderDecorator.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.Discarder" sourceFile="Discarder.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.DomLoader" sourceFile="DomLoader.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.DomLoader$State" sourceFile="DomLoader.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.FastInfosetConnector" sourceFile="FastInfosetConnector.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.FastInfosetConnector$CharSequenceImpl" sourceFile="FastInfosetConnector.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.IntArrayData" sourceFile="IntArrayData.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.IntData" sourceFile="IntData.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.Intercepter" sourceFile="Intercepter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.InterningXmlVisitor" sourceFile="InterningXmlVisitor.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.InterningXmlVisitor$1" sourceFile="InterningXmlVisitor.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.InterningXmlVisitor$AttributesImpl" sourceFile="InterningXmlVisitor.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.LeafPropertyLoader" sourceFile="LeafPropertyLoader.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.Loader" sourceFile="Loader.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.LocatorEx" sourceFile="LocatorEx.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.LocatorEx$Snapshot" sourceFile="LocatorEx.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.LocatorExWrapper" sourceFile="LocatorExWrapper.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.MTOMDecorator" sourceFile="MTOMDecorator.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.Messages" sourceFile="Messages.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.Patcher" sourceFile="Patcher.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.ProxyLoader" sourceFile="ProxyLoader.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.Receiver" sourceFile="Receiver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.SAXConnector" sourceFile="SAXConnector.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.SAXConnector$1" sourceFile="SAXConnector.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.SAXConnector$TagNameImpl" sourceFile="SAXConnector.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.Scope" sourceFile="Scope.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.StAXConnector" sourceFile="StAXConnector.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.StAXConnector$1" sourceFile="StAXConnector.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.StAXConnector$TagNameImpl" sourceFile="StAXConnector.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.StAXEventConnector" sourceFile="StAXEventConnector.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.StAXExConnector" sourceFile="StAXExConnector.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.StAXStreamConnector" sourceFile="StAXStreamConnector.java" interface="false" size="135" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.StAXStreamConnector$1" sourceFile="StAXStreamConnector.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.StructureLoader" sourceFile="StructureLoader.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.StructureLoader$1" sourceFile="StructureLoader.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.TagName" sourceFile="TagName.java" interface="false" size="21" bugs="2" priority_1="2"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.TextLoader" sourceFile="TextLoader.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl" sourceFile="UnmarshallerImpl.java" interface="false" size="221" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext" sourceFile="UnmarshallingContext.java" interface="false" size="371" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$1" sourceFile="UnmarshallingContext.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$DefaultRootLoader" sourceFile="UnmarshallingContext.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$ExpectedTypeRootLoader" sourceFile="UnmarshallingContext.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$Factory" sourceFile="UnmarshallingContext.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$State" sourceFile="UnmarshallingContext.java" interface="false" size="43" bugs="1" priority_1="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.ValidatingUnmarshaller" sourceFile="ValidatingUnmarshaller.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.ValuePropertyLoader" sourceFile="ValuePropertyLoader.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.WildcardLoader" sourceFile="WildcardLoader.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.XmlVisitor" sourceFile="XmlVisitor.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.XmlVisitor$TextPredictor" sourceFile="XmlVisitor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.XsiNilLoader" sourceFile="XsiNilLoader.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.XsiNilLoader$Array" sourceFile="XsiNilLoader.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.XsiNilLoader$Single" sourceFile="XsiNilLoader.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.runtime.unmarshaller.XsiTypeLoader" sourceFile="XsiTypeLoader.java" interface="false" size="34" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.schemagen" total_bugs="2" total_types="28" total_size="1045" priority_2="1" priority_1="1">
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.FoolProofResolver" sourceFile="FoolProofResolver.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Form" sourceFile="Form.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Form$1" sourceFile="Form.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Form$2" sourceFile="Form.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Form$3" sourceFile="Form.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.GroupKind" sourceFile="GroupKind.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Messages" sourceFile="Messages.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.MultiMap" sourceFile="MultiMap.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Tree" sourceFile="Tree.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Tree$1" sourceFile="Tree.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Tree$Group" sourceFile="Tree.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Tree$Optional" sourceFile="Tree.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Tree$Repeated" sourceFile="Tree.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Tree$Term" sourceFile="Tree.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.Util" sourceFile="Util.java" interface="false" size="33" bugs="1" priority_1="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator" sourceFile="XmlSchemaGenerator.java" interface="false" size="260" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$1" sourceFile="XmlSchemaGenerator.java" interface="false" size="6" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$2" sourceFile="XmlSchemaGenerator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$Namespace" sourceFile="XmlSchemaGenerator.java" interface="false" size="344" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$Namespace$1" sourceFile="XmlSchemaGenerator.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$Namespace$2" sourceFile="XmlSchemaGenerator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$Namespace$3" sourceFile="XmlSchemaGenerator.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$Namespace$4" sourceFile="XmlSchemaGenerator.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$Namespace$5" sourceFile="XmlSchemaGenerator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$Namespace$6" sourceFile="XmlSchemaGenerator.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$Namespace$7" sourceFile="XmlSchemaGenerator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$Namespace$ElementDeclaration" sourceFile="XmlSchemaGenerator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.XmlSchemaGenerator$Namespace$ElementWithType" sourceFile="XmlSchemaGenerator.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.schemagen.episode" total_bugs="0" total_types="4" total_size="11">
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.episode.Bindings" sourceFile="Bindings.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.episode.Klass" sourceFile="Klass.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.episode.SchemaBindings" sourceFile="SchemaBindings.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.episode.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.schemagen.xmlschema" total_bugs="0" total_types="43" total_size="136">
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Annotated" sourceFile="Annotated.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Annotation" sourceFile="Annotation.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Any" sourceFile="Any.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Appinfo" sourceFile="Appinfo.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.AttrDecls" sourceFile="AttrDecls.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.AttributeType" sourceFile="AttributeType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.ComplexContent" sourceFile="ComplexContent.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.ComplexExtension" sourceFile="ComplexExtension.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.ComplexRestriction" sourceFile="ComplexRestriction.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.ComplexType" sourceFile="ComplexType.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.ComplexTypeHost" sourceFile="ComplexTypeHost.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.ComplexTypeModel" sourceFile="ComplexTypeModel.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.ContentModelContainer" sourceFile="ContentModelContainer.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Documentation" sourceFile="Documentation.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Element" sourceFile="Element.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.ExplicitGroup" sourceFile="ExplicitGroup.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.ExtensionType" sourceFile="ExtensionType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.FixedOrDefault" sourceFile="FixedOrDefault.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Import" sourceFile="Import.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.List" sourceFile="List.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.LocalAttribute" sourceFile="LocalAttribute.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.LocalElement" sourceFile="LocalElement.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.NestedParticle" sourceFile="NestedParticle.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.NoFixedFacet" sourceFile="NoFixedFacet.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Occurs" sourceFile="Occurs.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Particle" sourceFile="Particle.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Redefinable" sourceFile="Redefinable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Schema" sourceFile="Schema.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.SchemaTop" sourceFile="SchemaTop.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.SimpleContent" sourceFile="SimpleContent.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.SimpleDerivation" sourceFile="SimpleDerivation.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.SimpleExtension" sourceFile="SimpleExtension.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.SimpleRestriction" sourceFile="SimpleRestriction.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.SimpleRestrictionModel" sourceFile="SimpleRestrictionModel.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.SimpleType" sourceFile="SimpleType.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.SimpleTypeHost" sourceFile="SimpleTypeHost.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.TopLevelAttribute" sourceFile="TopLevelAttribute.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.TopLevelElement" sourceFile="TopLevelElement.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.TypeDefParticle" sourceFile="TypeDefParticle.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.TypeHost" sourceFile="TypeHost.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Union" sourceFile="Union.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.Wildcard" sourceFile="Wildcard.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.schemagen.xmlschema.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.bind.v2.util" total_bugs="9" total_types="14" total_size="497" priority_2="5" priority_1="4">
+      <ClassStats class="com.sun.xml.bind.v2.util.ByteArrayOutputStreamEx" sourceFile="ByteArrayOutputStreamEx.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.CollisionCheckStack" sourceFile="CollisionCheckStack.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.DataSourceSource" sourceFile="DataSourceSource.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.EditDistance" sourceFile="EditDistance.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.FatalAdapter" sourceFile="FatalAdapter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.FlattenIterator" sourceFile="FlattenIterator.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.QNameMap" sourceFile="QNameMap.java" interface="false" size="144" bugs="8" priority_2="4" priority_1="4"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.QNameMap$1" sourceFile="QNameMap.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.QNameMap$Entry" sourceFile="QNameMap.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.QNameMap$EntryIterator" sourceFile="QNameMap.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.QNameMap$EntrySet" sourceFile="QNameMap.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.QNameMap$HashIterator" sourceFile="QNameMap.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.StackRecorder" sourceFile="StackRecorder.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.bind.v2.util.TypeCast" sourceFile="TypeCast.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.txw2" total_bugs="3" total_types="29" total_size="940" priority_2="3">
+      <ClassStats class="com.sun.xml.txw2.Attribute" sourceFile="Attribute.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.Cdata" sourceFile="Cdata.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.Comment" sourceFile="Comment.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.ContainerElement" sourceFile="ContainerElement.java" interface="false" size="192" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.Content" sourceFile="Content.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.ContentVisitor" sourceFile="ContentVisitor.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.DatatypeWriter" sourceFile="DatatypeWriter.java" interface="true" size="6" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.txw2.DatatypeWriter$1" sourceFile="DatatypeWriter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.DatatypeWriter$2" sourceFile="DatatypeWriter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.DatatypeWriter$3" sourceFile="DatatypeWriter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.DatatypeWriter$4" sourceFile="DatatypeWriter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.DatatypeWriter$5" sourceFile="DatatypeWriter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.Document" sourceFile="Document.java" interface="false" size="112" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.Document$1" sourceFile="Document.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.EndDocument" sourceFile="EndDocument.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.EndTag" sourceFile="EndTag.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.IllegalAnnotationException" sourceFile="IllegalAnnotationException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.IllegalSignatureException" sourceFile="IllegalSignatureException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.NamespaceDecl" sourceFile="NamespaceDecl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.NamespaceResolver" sourceFile="NamespaceResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.NamespaceSupport" sourceFile="NamespaceSupport.java" interface="false" size="88" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.txw2.NamespaceSupport$Context" sourceFile="NamespaceSupport.java" interface="false" size="113" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sun.xml.txw2.Pcdata" sourceFile="Pcdata.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.StartDocument" sourceFile="StartDocument.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.StartTag" sourceFile="StartTag.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.TXW" sourceFile="TXW.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.Text" sourceFile="Text.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.TxwException" sourceFile="TxwException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.TypedXmlWriter" sourceFile="TypedXmlWriter.java" interface="true" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.txw2.annotation" total_bugs="0" total_types="5" total_size="10">
+      <ClassStats class="com.sun.xml.txw2.annotation.XmlAttribute" sourceFile="XmlAttribute.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.annotation.XmlCDATA" sourceFile="XmlCDATA.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.annotation.XmlElement" sourceFile="XmlElement.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.annotation.XmlNamespace" sourceFile="XmlNamespace.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.annotation.XmlValue" sourceFile="XmlValue.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sun.xml.txw2.output" total_bugs="2" total_types="16" total_size="1182" priority_1="2">
+      <ClassStats class="com.sun.xml.txw2.output.CharacterEscapeHandler" sourceFile="CharacterEscapeHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.DataWriter" sourceFile="DataWriter.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.DelegatingXMLStreamWriter" sourceFile="DelegatingXMLStreamWriter.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.Dom2SaxAdapter" sourceFile="DomSerializer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.DomSerializer" sourceFile="DomSerializer.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.DumbEscapeHandler" sourceFile="DumbEscapeHandler.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.DumpSerializer" sourceFile="DumpSerializer.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.IndentingXMLFilter" sourceFile="IndentingXMLFilter.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.IndentingXMLStreamWriter" sourceFile="IndentingXMLStreamWriter.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.ResultFactory" sourceFile="ResultFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.SaxSerializer" sourceFile="SaxSerializer.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.StaxSerializer" sourceFile="StaxSerializer.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.StreamSerializer" sourceFile="StreamSerializer.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.StreamSerializer$1" sourceFile="StreamSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sun.xml.txw2.output.XMLWriter" sourceFile="XMLWriter.java" interface="false" size="255" bugs="2" priority_1="2"/>
+      <ClassStats class="com.sun.xml.txw2.output.XmlSerializer" sourceFile="XmlSerializer.java" interface="true" size="12" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="3485" invocations="4198" avgMicrosecondsPerInvocation="830" maxMicrosecondsPerInvocation="90347" standardDeviationMircosecondsPerInvocation="3999"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="3303" invocations="3588" avgMicrosecondsPerInvocation="920" maxMicrosecondsPerInvocation="167532" standardDeviationMircosecondsPerInvocation="4761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="3201" invocations="3877" avgMicrosecondsPerInvocation="825" maxMicrosecondsPerInvocation="151748" standardDeviationMircosecondsPerInvocation="4706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="3099" invocations="3951" avgMicrosecondsPerInvocation="784" maxMicrosecondsPerInvocation="79769" standardDeviationMircosecondsPerInvocation="3652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="3052" invocations="2312" avgMicrosecondsPerInvocation="1320" maxMicrosecondsPerInvocation="70474" standardDeviationMircosecondsPerInvocation="5359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="2463" invocations="4210" avgMicrosecondsPerInvocation="585" maxMicrosecondsPerInvocation="78574" standardDeviationMircosecondsPerInvocation="3016"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="2097" invocations="1114" avgMicrosecondsPerInvocation="1882" maxMicrosecondsPerInvocation="184054" standardDeviationMircosecondsPerInvocation="8311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="2068" invocations="1114" avgMicrosecondsPerInvocation="1856" maxMicrosecondsPerInvocation="86672" standardDeviationMircosecondsPerInvocation="6951"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1992" invocations="3279" avgMicrosecondsPerInvocation="607" maxMicrosecondsPerInvocation="177052" standardDeviationMircosecondsPerInvocation="4332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="1722" invocations="3951" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="63550" standardDeviationMircosecondsPerInvocation="2335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="1206" invocations="5094" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="41058" standardDeviationMircosecondsPerInvocation="1519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="1203" invocations="1114" avgMicrosecondsPerInvocation="1080" maxMicrosecondsPerInvocation="131107" standardDeviationMircosecondsPerInvocation="5475"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="936" invocations="1114" avgMicrosecondsPerInvocation="840" maxMicrosecondsPerInvocation="80653" standardDeviationMircosecondsPerInvocation="4357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="765" invocations="57436" avgMicrosecondsPerInvocation="13" maxMicrosecondsPerInvocation="31444" standardDeviationMircosecondsPerInvocation="345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="717" invocations="3951" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="58480" standardDeviationMircosecondsPerInvocation="1565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="653" invocations="3588" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="204672" standardDeviationMircosecondsPerInvocation="3556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="635" invocations="4463" avgMicrosecondsPerInvocation="142" maxMicrosecondsPerInvocation="59188" standardDeviationMircosecondsPerInvocation="1506"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="582" invocations="2316" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="39110" standardDeviationMircosecondsPerInvocation="1627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="557" invocations="1234" avgMicrosecondsPerInvocation="451" maxMicrosecondsPerInvocation="70441" standardDeviationMircosecondsPerInvocation="2553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="544" invocations="635" avgMicrosecondsPerInvocation="857" maxMicrosecondsPerInvocation="31049" standardDeviationMircosecondsPerInvocation="3107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="497" invocations="641" avgMicrosecondsPerInvocation="776" maxMicrosecondsPerInvocation="36584" standardDeviationMircosecondsPerInvocation="3131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="489" invocations="636" avgMicrosecondsPerInvocation="769" maxMicrosecondsPerInvocation="56418" standardDeviationMircosecondsPerInvocation="4081"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="480" invocations="638" avgMicrosecondsPerInvocation="753" maxMicrosecondsPerInvocation="42876" standardDeviationMircosecondsPerInvocation="2858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="459" invocations="641" avgMicrosecondsPerInvocation="716" maxMicrosecondsPerInvocation="55373" standardDeviationMircosecondsPerInvocation="3291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="458" invocations="1114" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="51597" standardDeviationMircosecondsPerInvocation="2496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="458" invocations="641" avgMicrosecondsPerInvocation="715" maxMicrosecondsPerInvocation="32714" standardDeviationMircosecondsPerInvocation="2375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="446" invocations="641" avgMicrosecondsPerInvocation="695" maxMicrosecondsPerInvocation="67800" standardDeviationMircosecondsPerInvocation="3700"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="430" invocations="641" avgMicrosecondsPerInvocation="672" maxMicrosecondsPerInvocation="40652" standardDeviationMircosecondsPerInvocation="2592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="427" invocations="3449" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="52807" standardDeviationMircosecondsPerInvocation="1419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="420" invocations="640" avgMicrosecondsPerInvocation="657" maxMicrosecondsPerInvocation="48579" standardDeviationMircosecondsPerInvocation="2797"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="419" invocations="1114" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="41553" standardDeviationMircosecondsPerInvocation="2005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="406" invocations="69320" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="26039" standardDeviationMircosecondsPerInvocation="236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="405" invocations="641" avgMicrosecondsPerInvocation="632" maxMicrosecondsPerInvocation="44306" standardDeviationMircosecondsPerInvocation="3040"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="342" invocations="1114" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="51188" standardDeviationMircosecondsPerInvocation="2229"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="340" invocations="639" avgMicrosecondsPerInvocation="532" maxMicrosecondsPerInvocation="24958" standardDeviationMircosecondsPerInvocation="2365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="329" invocations="640" avgMicrosecondsPerInvocation="515" maxMicrosecondsPerInvocation="62647" standardDeviationMircosecondsPerInvocation="3343"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

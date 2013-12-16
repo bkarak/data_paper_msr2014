@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1300716606000" analysisTimestamp="1360879704585" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/jonas/jonas-mail/5.2.0-RC1/jonas-mail-5.2.0-RC1.jar</Jar>
+  </Project>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.ow2.jonas.mail.internal.JOnASMailService">
+      <SourceLine classname="org.ow2.jonas.mail.internal.JOnASMailService" start="72" end="636" sourcefile="JOnASMailService.java" sourcepath="org/ow2/jonas/mail/internal/JOnASMailService.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.mail.internal.JOnASMailService" name="createMailFactory" signature="(Ljava/lang/String;Ljava/util/Properties;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.mail.internal.JOnASMailService" start="297" end="414" startBytecode="0" endBytecode="1155" sourcefile="JOnASMailService.java" sourcepath="org/ow2/jonas/mail/internal/JOnASMailService.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.mail.internal.JOnASMailService" start="370" end="406" startBytecode="494" endBytecode="716" sourcefile="JOnASMailService.java" sourcepath="org/ow2/jonas/mail/internal/JOnASMailService.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="org.ow2.jonas.mail.internal.JOnASMailService">
+      <SourceLine classname="org.ow2.jonas.mail.internal.JOnASMailService" start="72" end="636" sourcefile="JOnASMailService.java" sourcepath="org/ow2/jonas/mail/internal/JOnASMailService.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.mail.internal.JOnASMailService" name="unbindMailFactoryMBean" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.mail.internal.JOnASMailService" start="486" end="543" startBytecode="0" endBytecode="623" sourcefile="JOnASMailService.java" sourcepath="org/ow2/jonas/mail/internal/JOnASMailService.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.mail.internal.JOnASMailService" start="516" end="539" startBytecode="171" endBytecode="362" sourcefile="JOnASMailService.java" sourcepath="org/ow2/jonas/mail/internal/JOnASMailService.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" start="60" end="246" sourcefile="AbstractJavaMail.java" sourcepath="org/ow2/jonas/mail/internal/factory/AbstractJavaMail.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" name="setName" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" start="144" end="152" startBytecode="0" endBytecode="132" sourcefile="AbstractJavaMail.java" sourcepath="org/ow2/jonas/mail/internal/factory/AbstractJavaMail.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" start="145" end="145" startBytecode="11" endBytecode="11" sourcefile="AbstractJavaMail.java" sourcepath="org/ow2/jonas/mail/internal/factory/AbstractJavaMail.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" start="60" end="246" sourcefile="AbstractJavaMail.java" sourcepath="org/ow2/jonas/mail/internal/factory/AbstractJavaMail.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/util/Properties;Lorg/ow2/jonas/mail/MailService;)V" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" start="103" end="129" startBytecode="0" endBytecode="346" sourcefile="AbstractJavaMail.java" sourcepath="org/ow2/jonas/mail/internal/factory/AbstractJavaMail.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" sourcefile="AbstractJavaMail.java" sourcepath="org/ow2/jonas/mail/internal/factory/AbstractJavaMail.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" start="106" end="106" startBytecode="40" endBytecode="40" sourcefile="AbstractJavaMail.java" sourcepath="org/ow2/jonas/mail/internal/factory/AbstractJavaMail.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.jonas.mail.internal.factory.JavaMailMimePartDSFactory">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.JavaMailMimePartDSFactory" start="60" end="226" sourcefile="JavaMailMimePartDSFactory.java" sourcepath="org/ow2/jonas/mail/internal/factory/JavaMailMimePartDSFactory.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.mail.internal.factory.JavaMailMimePartDSFactory" name="getObjectInstance" signature="(Ljava/lang/Object;Ljavax/naming/Name;Ljavax/naming/Context;Ljava/util/Hashtable;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.JavaMailMimePartDSFactory" start="93" end="202" startBytecode="0" endBytecode="977" sourcefile="JavaMailMimePartDSFactory.java" sourcepath="org/ow2/jonas/mail/internal/factory/JavaMailMimePartDSFactory.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.mail.internal.factory.JavaMailMimePartDSFactory" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.JavaMailMimePartDSFactory" sourcefile="JavaMailMimePartDSFactory.java" sourcepath="org/ow2/jonas/mail/internal/factory/JavaMailMimePartDSFactory.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.mail.internal.factory.JavaMailMimePartDSFactory" start="94" end="94" startBytecode="11" endBytecode="11" sourcefile="JavaMailMimePartDSFactory.java" sourcepath="org/ow2/jonas/mail/internal/factory/JavaMailMimePartDSFactory.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.jonas.mail.internal.factory.JavaMailSessionFactory">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.JavaMailSessionFactory" start="53" end="139" sourcefile="JavaMailSessionFactory.java" sourcepath="org/ow2/jonas/mail/internal/factory/JavaMailSessionFactory.java"/>
+    </Class>
+    <Method classname="org.ow2.jonas.mail.internal.factory.JavaMailSessionFactory" name="getObjectInstance" signature="(Ljava/lang/Object;Ljavax/naming/Name;Ljavax/naming/Context;Ljava/util/Hashtable;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.JavaMailSessionFactory" start="87" end="139" startBytecode="0" endBytecode="550" sourcefile="JavaMailSessionFactory.java" sourcepath="org/ow2/jonas/mail/internal/factory/JavaMailSessionFactory.java"/>
+    </Method>
+    <Field classname="org.ow2.jonas.mail.internal.factory.JavaMailSessionFactory" name="logger" signature="Lorg/objectweb/util/monolog/api/Logger;" isStatic="true">
+      <SourceLine classname="org.ow2.jonas.mail.internal.factory.JavaMailSessionFactory" sourcefile="JavaMailSessionFactory.java" sourcepath="org/ow2/jonas/mail/internal/factory/JavaMailSessionFactory.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.jonas.mail.internal.factory.JavaMailSessionFactory" start="88" end="88" startBytecode="11" endBytecode="11" sourcefile="JavaMailSessionFactory.java" sourcepath="org/ow2/jonas/mail/internal/factory/JavaMailSessionFactory.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="28">
+    <MissingClass>javax.mail.Authenticator</MissingClass>
+    <MissingClass>javax.mail.Message$RecipientType</MissingClass>
+    <MissingClass>javax.mail.PasswordAuthentication</MissingClass>
+    <MissingClass>javax.mail.Session</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.mail.internet.MimePartDataSource</MissingClass>
+    <MissingClass>org.apache.commons.modeler.BaseModelMBean</MissingClass>
+    <MissingClass>org.objectweb.util.monolog.api.BasicLevel</MissingClass>
+    <MissingClass>org.objectweb.util.monolog.api.Logger</MissingClass>
+    <MissingClass>org.ow2.jonas.jmx.JmxService</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.bootstrap.JProp</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.execution.ExecutionResult</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.execution.RunnableHelper</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.management.javaee.J2EEResource</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.management.javaee.J2eeObjectName</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.management.reconfig.PropertiesConfigurationData</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.service.AbsServiceImpl</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.JModule</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.JNDIUtils</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.JonasObjectName</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.Log</MissingClass>
+    <MissingClass>org.ow2.jonas.lib.util.PropDump</MissingClass>
+    <MissingClass>org.ow2.jonas.mail.MailService</MissingClass>
+    <MissingClass>org.ow2.jonas.mail.MailServiceException</MissingClass>
+    <MissingClass>org.ow2.jonas.mail.factory.JavaMail</MissingClass>
+    <MissingClass>org.ow2.jonas.registry.RegistryService</MissingClass>
+    <MissingClass>org.ow2.jonas.service.ServiceException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 21 Mar 2011 16:10:06 +0200" total_classes="12" referenced_classes="43" total_bugs="6" total_size="576" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="21.43" clock_seconds="18.22" peak_mbytes="62.24" alloc_mbytes="763.88" gc_seconds="0.13" priority_2="6">
+    <PackageStats package="org.ow2.jonas.mail.internal" total_bugs="2" total_types="2" total_size="241" priority_2="2">
+      <ClassStats class="org.ow2.jonas.mail.internal.JOnASMailService" sourceFile="JOnASMailService.java" interface="false" size="234" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.jonas.mail.internal.JOnASMailService$1" sourceFile="JOnASMailService.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.mail.internal.factory" total_bugs="4" total_types="5" total_size="260" priority_2="4">
+      <ClassStats class="org.ow2.jonas.mail.internal.factory.AbstractJavaMail" sourceFile="AbstractJavaMail.java" interface="false" size="78" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ow2.jonas.mail.internal.factory.JavaMailMimePartDS" sourceFile="JavaMailMimePartDS.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.mail.internal.factory.JavaMailMimePartDSFactory" sourceFile="JavaMailMimePartDSFactory.java" interface="false" size="76" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ow2.jonas.mail.internal.factory.JavaMailSession" sourceFile="JavaMailSession.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.mail.internal.factory.JavaMailSessionFactory" sourceFile="JavaMailSessionFactory.java" interface="false" size="35" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.mail.internal.factory.lib" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="org.ow2.jonas.mail.internal.factory.lib.JAuthenticator" sourceFile="JAuthenticator.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.jonas.mail.internal.factory.mbean" total_bugs="0" total_types="4" total_size="63">
+      <ClassStats class="org.ow2.jonas.mail.internal.factory.mbean.JavaMailMimePartDSResource" sourceFile="JavaMailMimePartDSResource.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.mail.internal.factory.mbean.JavaMailResource" sourceFile="JavaMailResource.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.mail.internal.factory.mbean.JavaMailResourceMBean" sourceFile="JavaMailResourceMBean.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.ow2.jonas.mail.internal.factory.mbean.JavaMailSessionResource" sourceFile="JavaMailSessionResource.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1269" invocations="438" avgMicrosecondsPerInvocation="2899" maxMicrosecondsPerInvocation="57020" standardDeviationMircosecondsPerInvocation="7545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1104" invocations="43" avgMicrosecondsPerInvocation="25691" maxMicrosecondsPerInvocation="146043" standardDeviationMircosecondsPerInvocation="38564"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="971" invocations="43" avgMicrosecondsPerInvocation="22596" maxMicrosecondsPerInvocation="159484" standardDeviationMircosecondsPerInvocation="39266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="916" invocations="74" avgMicrosecondsPerInvocation="12391" maxMicrosecondsPerInvocation="197206" standardDeviationMircosecondsPerInvocation="30473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="863" invocations="75" avgMicrosecondsPerInvocation="11518" maxMicrosecondsPerInvocation="138387" standardDeviationMircosecondsPerInvocation="26141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="745" invocations="75" avgMicrosecondsPerInvocation="9939" maxMicrosecondsPerInvocation="149600" standardDeviationMircosecondsPerInvocation="25474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="724" invocations="43" avgMicrosecondsPerInvocation="16852" maxMicrosecondsPerInvocation="105887" standardDeviationMircosecondsPerInvocation="27110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="719" invocations="74" avgMicrosecondsPerInvocation="9718" maxMicrosecondsPerInvocation="124408" standardDeviationMircosecondsPerInvocation="23696"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="659" invocations="76" avgMicrosecondsPerInvocation="8672" maxMicrosecondsPerInvocation="91586" standardDeviationMircosecondsPerInvocation="18054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="474" invocations="75" avgMicrosecondsPerInvocation="6328" maxMicrosecondsPerInvocation="105369" standardDeviationMircosecondsPerInvocation="17020"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="455" invocations="200" avgMicrosecondsPerInvocation="2277" maxMicrosecondsPerInvocation="36024" standardDeviationMircosecondsPerInvocation="5094"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="356" invocations="55" avgMicrosecondsPerInvocation="6487" maxMicrosecondsPerInvocation="65756" standardDeviationMircosecondsPerInvocation="13300"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LazyInit" totalMilliseconds="313" invocations="12" avgMicrosecondsPerInvocation="26145" maxMicrosecondsPerInvocation="247898" standardDeviationMircosecondsPerInvocation="67950"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="304" invocations="43" avgMicrosecondsPerInvocation="7071" maxMicrosecondsPerInvocation="54291" standardDeviationMircosecondsPerInvocation="12625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="277" invocations="76" avgMicrosecondsPerInvocation="3645" maxMicrosecondsPerInvocation="219103" standardDeviationMircosecondsPerInvocation="25040"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="267" invocations="77" avgMicrosecondsPerInvocation="3476" maxMicrosecondsPerInvocation="101131" standardDeviationMircosecondsPerInvocation="14010"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="256" invocations="365" avgMicrosecondsPerInvocation="702" maxMicrosecondsPerInvocation="62716" standardDeviationMircosecondsPerInvocation="4447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="241" invocations="42" avgMicrosecondsPerInvocation="5759" maxMicrosecondsPerInvocation="41267" standardDeviationMircosecondsPerInvocation="8943"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="241" invocations="12" avgMicrosecondsPerInvocation="20088" maxMicrosecondsPerInvocation="121937" standardDeviationMircosecondsPerInvocation="34656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="211" invocations="75" avgMicrosecondsPerInvocation="2819" maxMicrosecondsPerInvocation="58641" standardDeviationMircosecondsPerInvocation="7876"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="202" invocations="43" avgMicrosecondsPerInvocation="4716" maxMicrosecondsPerInvocation="59954" standardDeviationMircosecondsPerInvocation="11986"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="190" invocations="12" avgMicrosecondsPerInvocation="15835" maxMicrosecondsPerInvocation="109340" standardDeviationMircosecondsPerInvocation="29600"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="167" invocations="12" avgMicrosecondsPerInvocation="13926" maxMicrosecondsPerInvocation="73582" standardDeviationMircosecondsPerInvocation="26609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReadOfInstanceFieldInMethodInvokedByConstructorInSuperclass" totalMilliseconds="154" invocations="12" avgMicrosecondsPerInvocation="12859" maxMicrosecondsPerInvocation="48181" standardDeviationMircosecondsPerInvocation="17730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="135" invocations="43" avgMicrosecondsPerInvocation="3151" maxMicrosecondsPerInvocation="26392" standardDeviationMircosecondsPerInvocation="6230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="134" invocations="12" avgMicrosecondsPerInvocation="11174" maxMicrosecondsPerInvocation="41746" standardDeviationMircosecondsPerInvocation="14913"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="134" invocations="12" avgMicrosecondsPerInvocation="11168" maxMicrosecondsPerInvocation="50015" standardDeviationMircosecondsPerInvocation="15487"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

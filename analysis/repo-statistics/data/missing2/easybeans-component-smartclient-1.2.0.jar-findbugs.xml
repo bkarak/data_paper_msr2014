@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1301907338000" analysisTimestamp="1360916593473" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/ow2/easybeans/easybeans-component-smartclient/1.2.0/easybeans-component-smartclient-1.2.0.jar</Jar>
+  </Project>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="55" end="497" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" name="&lt;init&gt;" signature="(Ljava/lang/String;ILjava/lang/ClassLoader;[Ljava/net/URL;)V" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="126" end="148" startBytecode="0" endBytecode="308" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdir" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1153" end="1157" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="132" end="132" startBytecode="101" endBytecode="101" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="55" end="497" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" name="findResource" signature="(Ljava/lang/String;)Ljava/net/URL;" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="385" end="455" startBytecode="0" endBytecode="827" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdir" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1153" end="1157" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="433" end="433" startBytecode="260" endBytecode="260" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE">
+    <Class classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="55" end="497" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" name="getProviderURL" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="316" end="343" startBytecode="0" endBytecode="318" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Method>
+    <Field classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" name="timeToDownload" signature="J" isStatic="true">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Field>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" start="328" end="328" startBytecode="45" endBytecode="45" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader$ShutdownHook">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader$ShutdownHook" start="511" end="551" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Class>
+    <Method classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader$ShutdownHook" name="delete" signature="(Ljava/io/File;)Z" isStatic="true">
+      <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader$ShutdownHook" start="539" end="551" startBytecode="0" endBytecode="193" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="900" end="904" startBytecode="0" endBytecode="59" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.ow2.easybeans.component.smartclient.client.AskingClassLoader$ShutdownHook" start="546" end="546" startBytecode="55" endBytecode="55" sourcefile="AskingClassLoader.java" sourcepath="org/ow2/easybeans/component/smartclient/client/AskingClassLoader.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 4 Apr 2011 11:55:38 +0300" total_classes="23" referenced_classes="161" total_bugs="4" total_size="921" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="29.06" clock_seconds="17.24" peak_mbytes="71.70" alloc_mbytes="763.88" gc_seconds="0.21" priority_2="4">
+    <PackageStats package="org.ow2.easybeans.component.smartclient.api" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="org.ow2.easybeans.component.smartclient.api.Message" sourceFile="Message.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.api.ProtocolConstants" sourceFile="ProtocolConstants.java" interface="true" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.easybeans.component.smartclient.client" total_bugs="4" total_types="2" total_size="221" priority_2="4">
+      <ClassStats class="org.ow2.easybeans.component.smartclient.client.AskingClassLoader" sourceFile="AskingClassLoader.java" interface="false" size="200" bugs="3" priority_2="3"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.client.AskingClassLoader$ShutdownHook" sourceFile="AskingClassLoader.java" interface="false" size="21" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.easybeans.component.smartclient.message" total_bugs="0" total_types="12" total_size="188">
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.AbsMessage" sourceFile="AbsMessage.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.AbsNameBytesMessage" sourceFile="AbsNameBytesMessage.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.AbsNameMessage" sourceFile="AbsNameMessage.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ChannelAttachment" sourceFile="ChannelAttachment.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ClassAnswer" sourceFile="ClassAnswer.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ClassNotFound" sourceFile="ClassNotFound.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ClassRequest" sourceFile="ClassRequest.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ProviderURLAnswer" sourceFile="ProviderURLAnswer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ProviderURLRequest" sourceFile="ProviderURLRequest.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ResourceAnswer" sourceFile="ResourceAnswer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ResourceNotFound" sourceFile="ResourceNotFound.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.message.ResourceRequest" sourceFile="ResourceRequest.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ow2.easybeans.component.smartclient.spi" total_bugs="0" total_types="7" total_size="496">
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.ProDelegate" sourceFile="ProDelegate.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap" sourceFile="SmartBootstrap.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.SmartBootstrap$1" sourceFile="SmartBootstrap.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.SmartContext" sourceFile="SmartContext.java" interface="false" size="175" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.SmartContextFactory" sourceFile="SmartContextFactory.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.SmartContextFactory$1" sourceFile="SmartContextFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ow2.easybeans.component.smartclient.spi.SmartContextFactoryInfo" sourceFile="SmartContextFactoryInfo.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1604" invocations="683" avgMicrosecondsPerInvocation="2348" maxMicrosecondsPerInvocation="62607" standardDeviationMircosecondsPerInvocation="6942"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1356" invocations="161" avgMicrosecondsPerInvocation="8427" maxMicrosecondsPerInvocation="158487" standardDeviationMircosecondsPerInvocation="19597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="926" invocations="161" avgMicrosecondsPerInvocation="5751" maxMicrosecondsPerInvocation="61626" standardDeviationMircosecondsPerInvocation="10416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="849" invocations="141" avgMicrosecondsPerInvocation="6027" maxMicrosecondsPerInvocation="70266" standardDeviationMircosecondsPerInvocation="12135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="751" invocations="131" avgMicrosecondsPerInvocation="5734" maxMicrosecondsPerInvocation="44149" standardDeviationMircosecondsPerInvocation="8969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="745" invocations="131" avgMicrosecondsPerInvocation="5690" maxMicrosecondsPerInvocation="80171" standardDeviationMircosecondsPerInvocation="11574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="741" invocations="141" avgMicrosecondsPerInvocation="5255" maxMicrosecondsPerInvocation="73207" standardDeviationMircosecondsPerInvocation="10241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="734" invocations="133" avgMicrosecondsPerInvocation="5520" maxMicrosecondsPerInvocation="75851" standardDeviationMircosecondsPerInvocation="9904"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="625" invocations="439" avgMicrosecondsPerInvocation="1424" maxMicrosecondsPerInvocation="49576" standardDeviationMircosecondsPerInvocation="4110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="592" invocations="110" avgMicrosecondsPerInvocation="5387" maxMicrosecondsPerInvocation="85653" standardDeviationMircosecondsPerInvocation="11847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="509" invocations="161" avgMicrosecondsPerInvocation="3162" maxMicrosecondsPerInvocation="42202" standardDeviationMircosecondsPerInvocation="6052"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="451" invocations="133" avgMicrosecondsPerInvocation="3396" maxMicrosecondsPerInvocation="28195" standardDeviationMircosecondsPerInvocation="5513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="259" invocations="161" avgMicrosecondsPerInvocation="1609" maxMicrosecondsPerInvocation="15312" standardDeviationMircosecondsPerInvocation="3020"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="243" invocations="133" avgMicrosecondsPerInvocation="1830" maxMicrosecondsPerInvocation="43580" standardDeviationMircosecondsPerInvocation="4708"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="240" invocations="686" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="61412" standardDeviationMircosecondsPerInvocation="2719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="237" invocations="635" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="31696" standardDeviationMircosecondsPerInvocation="1933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="226" invocations="161" avgMicrosecondsPerInvocation="1405" maxMicrosecondsPerInvocation="22963" standardDeviationMircosecondsPerInvocation="3594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="210" invocations="192" avgMicrosecondsPerInvocation="1098" maxMicrosecondsPerInvocation="41541" standardDeviationMircosecondsPerInvocation="3991"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="204" invocations="23" avgMicrosecondsPerInvocation="8875" maxMicrosecondsPerInvocation="106574" standardDeviationMircosecondsPerInvocation="23088"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

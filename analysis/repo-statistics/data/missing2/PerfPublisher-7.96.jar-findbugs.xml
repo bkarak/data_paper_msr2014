@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1267775342000" analysisTimestamp="1360916735617" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/jvnet/hudson/plugins/PerfPublisher/7.96/PerfPublisher-7.96.jar</Jar>
+  </Project>
+  <BugInstance type="SE_BAD_FIELD" priority="1" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="hudson.plugins.PerfPublisher.HealthReportBuilder">
+      <SourceLine classname="hudson.plugins.PerfPublisher.HealthReportBuilder" start="35" end="79" sourcefile="HealthReportBuilder.java" sourcepath="hudson/plugins/PerfPublisher/HealthReportBuilder.java"/>
+    </Class>
+    <Field classname="hudson.plugins.PerfPublisher.HealthReportBuilder" name="healthDescriptor" signature="Lhudson/plugins/PerfPublisher/HealthDescriptor;" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.HealthReportBuilder" sourcefile="HealthReportBuilder.java" sourcepath="hudson/plugins/PerfPublisher/HealthReportBuilder.java"/>
+    </Field>
+    <Type descriptor="Lhudson/plugins/PerfPublisher/HealthDescriptor;" role="TYPE_FOUND">
+      <SourceLine classname="hudson.plugins.PerfPublisher.HealthDescriptor" start="12" end="73" sourcefile="HealthDescriptor.java" sourcepath="hudson/plugins/PerfPublisher/HealthDescriptor.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="hudson.plugins.PerfPublisher.ParserXml">
+      <SourceLine classname="hudson.plugins.PerfPublisher.ParserXml" start="39" end="513" sourcefile="ParserXml.java" sourcepath="hudson/plugins/PerfPublisher/ParserXml.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.ParserXml" name="&lt;init&gt;" signature="(Ljava/net/URI;)V" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.ParserXml" start="489" end="492" startBytecode="0" endBytecode="82" sourcefile="ParserXml.java" sourcepath="hudson/plugins/PerfPublisher/ParserXml.java"/>
+    </Method>
+    <Field classname="hudson.plugins.PerfPublisher.ParserXml" name="resultat" signature="Lhudson/plugins/PerfPublisher/Report/Report;" isStatic="true">
+      <SourceLine classname="hudson.plugins.PerfPublisher.ParserXml" sourcefile="ParserXml.java" sourcepath="hudson/plugins/PerfPublisher/ParserXml.java"/>
+    </Field>
+    <SourceLine classname="hudson.plugins.PerfPublisher.ParserXml" start="490" end="490" startBytecode="11" endBytecode="11" sourcefile="ParserXml.java" sourcepath="hudson/plugins/PerfPublisher/ParserXml.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="hudson.plugins.PerfPublisher.ParserXml">
+      <SourceLine classname="hudson.plugins.PerfPublisher.ParserXml" start="39" end="513" sourcefile="ParserXml.java" sourcepath="hudson/plugins/PerfPublisher/ParserXml.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.ParserXml" name="&lt;init&gt;" signature="(Ljava/net/URI;)V" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.ParserXml" start="489" end="492" startBytecode="0" endBytecode="82" sourcefile="ParserXml.java" sourcepath="hudson/plugins/PerfPublisher/ParserXml.java"/>
+    </Method>
+    <Field classname="hudson.plugins.PerfPublisher.ParserXml" name="xml_path" signature="Ljava/net/URI;" isStatic="true">
+      <SourceLine classname="hudson.plugins.PerfPublisher.ParserXml" sourcefile="ParserXml.java" sourcepath="hudson/plugins/PerfPublisher/ParserXml.java"/>
+    </Field>
+    <SourceLine classname="hudson.plugins.PerfPublisher.ParserXml" start="491" end="491" startBytecode="15" endBytecode="15" sourcefile="ParserXml.java" sourcepath="hudson/plugins/PerfPublisher/ParserXml.java"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher">
+      <SourceLine classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" start="44" end="191" sourcefile="PerfPublisherPublisher.java" sourcepath="hudson/plugins/PerfPublisher/PerfPublisherPublisher.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" start="44" end="61" startBytecode="0" endBytecode="35" sourcefile="PerfPublisherPublisher.java" sourcepath="hudson/plugins/PerfPublisher/PerfPublisherPublisher.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <String value="" role="STRING_CONSTANT"/>
+    <LocalVariable name="healthy" register="3" pc="30" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" start="51" end="51" startBytecode="32" endBytecode="32" sourcefile="PerfPublisherPublisher.java" sourcepath="hudson/plugins/PerfPublisher/PerfPublisherPublisher.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher">
+      <SourceLine classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" start="44" end="191" sourcefile="PerfPublisherPublisher.java" sourcepath="hudson/plugins/PerfPublisher/PerfPublisherPublisher.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" start="44" end="61" startBytecode="0" endBytecode="35" sourcefile="PerfPublisherPublisher.java" sourcepath="hudson/plugins/PerfPublisher/PerfPublisherPublisher.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <String value="" role="STRING_CONSTANT"/>
+    <LocalVariable name="threshold" register="2" pc="10" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" start="46" end="46" startBytecode="12" endBytecode="12" sourcefile="PerfPublisherPublisher.java" sourcepath="hudson/plugins/PerfPublisher/PerfPublisherPublisher.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_PARAMETER_STRING_WITH_EQ" priority="1" abbrev="ES" category="BAD_PRACTICE">
+    <Class classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher">
+      <SourceLine classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" start="44" end="191" sourcefile="PerfPublisherPublisher.java" sourcepath="hudson/plugins/PerfPublisher/PerfPublisherPublisher.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" start="44" end="61" startBytecode="0" endBytecode="35" sourcefile="PerfPublisherPublisher.java" sourcepath="hudson/plugins/PerfPublisher/PerfPublisherPublisher.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <String value="" role="STRING_CONSTANT"/>
+    <LocalVariable name="unhealthy" register="4" pc="51" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="hudson.plugins.PerfPublisher.PerfPublisherPublisher" start="56" end="56" startBytecode="53" endBytecode="53" sourcefile="PerfPublisherPublisher.java" sourcepath="hudson/plugins/PerfPublisher/PerfPublisherPublisher.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_PARAMETER_IN_PUBLIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="hudson.plugins.PerfPublisher.Report.Report">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.Report" start="34" end="766" sourcefile="Report.java" sourcepath="hudson/plugins/PerfPublisher/Report/Report.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.Report.Report" name="toString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.Report" start="722" end="737" startBytecode="0" endBytecode="508" sourcefile="Report.java" sourcepath="hudson/plugins/PerfPublisher/Report/Report.java"/>
+    </Method>
+    <SourceLine classname="hudson.plugins.PerfPublisher.Report.Report" start="732" end="732" startBytecode="243" endBytecode="243" sourcefile="Report.java" sourcepath="hudson/plugins/PerfPublisher/Report/Report.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="hudson.plugins.PerfPublisher.Report.ReportContainer">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.ReportContainer" start="46" end="823" sourcefile="ReportContainer.java" sourcepath="hudson/plugins/PerfPublisher/Report/ReportContainer.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.Report.ReportContainer" name="getXmlForDiff" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.ReportContainer" start="149" end="171" startBytecode="0" endBytecode="73" sourcefile="ReportContainer.java" sourcepath="hudson/plugins/PerfPublisher/Report/ReportContainer.java"/>
+    </Method>
+    <LocalVariable name="date" register="1" pc="11" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="hudson.plugins.PerfPublisher.Report.ReportContainer" start="149" end="149" startBytecode="10" endBytecode="10" sourcefile="ReportContainer.java" sourcepath="hudson/plugins/PerfPublisher/Report/ReportContainer.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="date"/>
+  </BugInstance>
+  <BugInstance type="ICAST_IDIV_CAST_TO_DOUBLE" priority="2" abbrev="ICAST" category="STYLE">
+    <Class classname="hudson.plugins.PerfPublisher.Report.ReportContainer">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.ReportContainer" start="46" end="823" sourcefile="ReportContainer.java" sourcepath="hudson/plugins/PerfPublisher/Report/ReportContainer.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.Report.ReportContainer" name="getTargetsGraphic" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.ReportContainer" start="790" end="823" startBytecode="0" endBytecode="568" sourcefile="ReportContainer.java" sourcepath="hudson/plugins/PerfPublisher/Report/ReportContainer.java"/>
+    </Method>
+    <SourceLine classname="hudson.plugins.PerfPublisher.Report.ReportContainer" start="811" end="811" startBytecode="158" endBytecode="158" sourcefile="ReportContainer.java" sourcepath="hudson/plugins/PerfPublisher/Report/ReportContainer.java"/>
+    <SourceLine classname="hudson.plugins.PerfPublisher.Report.ReportContainer" start="812" end="812" startBytecode="176" endBytecode="176" sourcefile="ReportContainer.java" sourcepath="hudson/plugins/PerfPublisher/Report/ReportContainer.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="hudson.plugins.PerfPublisher.Report.ReportContainer">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.ReportContainer" start="46" end="823" sourcefile="ReportContainer.java" sourcepath="hudson/plugins/PerfPublisher/Report/ReportContainer.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.Report.ReportContainer" name="getTargetsGraphic" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.ReportContainer" start="790" end="823" startBytecode="0" endBytecode="568" sourcefile="ReportContainer.java" sourcepath="hudson/plugins/PerfPublisher/Report/ReportContainer.java"/>
+    </Method>
+    <SourceLine classname="hudson.plugins.PerfPublisher.Report.ReportContainer" start="817" end="817" startBytecode="219" endBytecode="219" sourcefile="ReportContainer.java" sourcepath="hudson/plugins/PerfPublisher/Report/ReportContainer.java"/>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="hudson.plugins.PerfPublisher.Report.Target">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.Target" start="7" end="57" sourcefile="Target.java" sourcepath="hudson/plugins/PerfPublisher/Report/Target.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.Report.Target" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.Target" start="50" end="57" startBytecode="0" endBytecode="113" sourcefile="Target.java" sourcepath="hudson/plugins/PerfPublisher/Report/Target.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" priority="2" abbrev="NP" category="BAD_PRACTICE">
+    <Class classname="hudson.plugins.PerfPublisher.Report.Target">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.Target" start="7" end="57" sourcefile="Target.java" sourcepath="hudson/plugins/PerfPublisher/Report/Target.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.Report.Target" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.Target" start="50" end="57" startBytecode="0" endBytecode="113" sourcefile="Target.java" sourcepath="hudson/plugins/PerfPublisher/Report/Target.java"/>
+    </Method>
+    <LocalVariable name="obj" register="1" pc="0" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="hudson.plugins.PerfPublisher.Report.Test">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.Test" start="13" end="487" sourcefile="Test.java" sourcepath="hudson/plugins/PerfPublisher/Report/Test.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.Report.Test" name="compareTo" signature="(Lhudson/plugins/PerfPublisher/Report/Test;)I" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.Test" start="487" end="487" startBytecode="0" endBytecode="63" sourcefile="Test.java" sourcepath="hudson/plugins/PerfPublisher/Report/Test.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE">
+    <Class classname="hudson.plugins.PerfPublisher.Report.Test">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.Test" start="13" end="487" sourcefile="Test.java" sourcepath="hudson/plugins/PerfPublisher/Report/Test.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.Report.Test" name="ResolveTestNameInUrl" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="hudson.plugins.PerfPublisher.Report.Test" start="150" end="151" startBytecode="0" endBytecode="66" sourcefile="Test.java" sourcepath="hudson/plugins/PerfPublisher/Report/Test.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="hudson.plugins.PerfPublisher.TestDetails">
+      <SourceLine classname="hudson.plugins.PerfPublisher.TestDetails" start="34" end="283" sourcefile="TestDetails.java" sourcepath="hudson/plugins/PerfPublisher/TestDetails.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.TestDetails" name="getSuccessGraph" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.TestDetails" start="53" end="100" startBytecode="0" endBytecode="634" sourcefile="TestDetails.java" sourcepath="hudson/plugins/PerfPublisher/TestDetails.java"/>
+    </Method>
+    <SourceLine classname="hudson.plugins.PerfPublisher.TestDetails" start="97" end="97" startBytecode="275" endBytecode="275" sourcefile="TestDetails.java" sourcepath="hudson/plugins/PerfPublisher/TestDetails.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixBuild">
+      <SourceLine classname="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixBuild" start="27" end="92" sourcefile="PerfPublisherMatrixBuild.java" sourcepath="hudson/plugins/PerfPublisher/matrixBuild/PerfPublisherMatrixBuild.java"/>
+    </Class>
+    <Field classname="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixBuild" name="nbBuild" signature="I" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixBuild" sourcefile="PerfPublisherMatrixBuild.java" sourcepath="hudson/plugins/PerfPublisher/matrixBuild/PerfPublisherMatrixBuild.java"/>
+    </Field>
+    <SourceLine classname="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixBuild" start="28" end="28" startBytecode="6" endBytecode="6" sourcefile="PerfPublisherMatrixBuild.java" sourcepath="hudson/plugins/PerfPublisher/matrixBuild/PerfPublisherMatrixBuild.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixSubBuild">
+      <SourceLine classname="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixSubBuild" start="12" end="88" sourcefile="PerfPublisherMatrixSubBuild.java" sourcepath="hudson/plugins/PerfPublisher/matrixBuild/PerfPublisherMatrixSubBuild.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixSubBuild" name="compareTo" signature="(Lhudson/plugins/PerfPublisher/matrixBuild/PerfPublisherMatrixSubBuild;)I" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixSubBuild" start="88" end="88" startBytecode="0" endBytecode="63" sourcefile="PerfPublisherMatrixSubBuild.java" sourcepath="hudson/plugins/PerfPublisher/matrixBuild/PerfPublisherMatrixSubBuild.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" abbrev="SS" category="PERFORMANCE">
+    <Class classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction">
+      <SourceLine classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" start="66" end="516" sourcefile="PerfPublisherMatrixProjectAction.java" sourcepath="hudson/plugins/PerfPublisher/projectsAction/PerfPublisherMatrixProjectAction.java"/>
+    </Class>
+    <Field classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" name="max_nb_build" signature="I" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" sourcefile="PerfPublisherMatrixProjectAction.java" sourcepath="hudson/plugins/PerfPublisher/projectsAction/PerfPublisherMatrixProjectAction.java"/>
+    </Field>
+    <SourceLine classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" start="66" end="66" startBytecode="7" endBytecode="7" sourcefile="PerfPublisherMatrixProjectAction.java" sourcepath="hudson/plugins/PerfPublisher/projectsAction/PerfPublisherMatrixProjectAction.java"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE">
+    <Class classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction">
+      <SourceLine classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" start="66" end="516" sourcefile="PerfPublisherMatrixProjectAction.java" sourcepath="hudson/plugins/PerfPublisher/projectsAction/PerfPublisherMatrixProjectAction.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" name="shouldReloadGraph" signature="(Lorg/kohsuke/stapler/StaplerRequest;Lorg/kohsuke/stapler/StaplerResponse;)Z" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" start="516" end="516" startBytecode="0" endBytecode="75" sourcefile="PerfPublisherMatrixProjectAction.java" sourcepath="hudson/plugins/PerfPublisher/projectsAction/PerfPublisherMatrixProjectAction.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction">
+      <SourceLine classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" start="66" end="516" sourcefile="PerfPublisherMatrixProjectAction.java" sourcepath="hudson/plugins/PerfPublisher/projectsAction/PerfPublisherMatrixProjectAction.java"/>
+    </Class>
+    <Method classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" name="generateHtmlArrayContent" signature="(Ljava/util/List;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" start="210" end="310" startBytecode="0" endBytecode="1518" sourcefile="PerfPublisherMatrixProjectAction.java" sourcepath="hudson/plugins/PerfPublisher/projectsAction/PerfPublisherMatrixProjectAction.java"/>
+    </Method>
+    <SourceLine classname="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" start="219" end="219" startBytecode="56" endBytecode="56" sourcefile="PerfPublisherMatrixProjectAction.java" sourcepath="hudson/plugins/PerfPublisher/projectsAction/PerfPublisherMatrixProjectAction.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="50">
+    <MissingClass>hudson.FilePath</MissingClass>
+    <MissingClass>hudson.Plugin</MissingClass>
+    <MissingClass>hudson.matrix.MatrixAggregatable</MissingClass>
+    <MissingClass>hudson.matrix.MatrixAggregator</MissingClass>
+    <MissingClass>hudson.matrix.MatrixBuild</MissingClass>
+    <MissingClass>hudson.matrix.MatrixConfiguration</MissingClass>
+    <MissingClass>hudson.matrix.MatrixProject</MissingClass>
+    <MissingClass>hudson.matrix.MatrixRun</MissingClass>
+    <MissingClass>hudson.model.AbstractBuild</MissingClass>
+    <MissingClass>hudson.model.AbstractProject</MissingClass>
+    <MissingClass>hudson.model.Action</MissingClass>
+    <MissingClass>hudson.model.BuildListener</MissingClass>
+    <MissingClass>hudson.model.FreeStyleProject</MissingClass>
+    <MissingClass>hudson.model.HealthReport</MissingClass>
+    <MissingClass>hudson.model.HealthReportingAction</MissingClass>
+    <MissingClass>hudson.model.Project</MissingClass>
+    <MissingClass>hudson.model.Result</MissingClass>
+    <MissingClass>hudson.model.Run</MissingClass>
+    <MissingClass>hudson.tasks.BuildStep</MissingClass>
+    <MissingClass>hudson.tasks.BuildStep$PublisherList</MissingClass>
+    <MissingClass>hudson.tasks.BuildStepDescriptor</MissingClass>
+    <MissingClass>hudson.tasks.BuildStepMonitor</MissingClass>
+    <MissingClass>hudson.tasks.Publisher</MissingClass>
+    <MissingClass>hudson.util.ChartUtil</MissingClass>
+    <MissingClass>hudson.util.ChartUtil$NumberOnlyBuildLabel</MissingClass>
+    <MissingClass>hudson.util.ColorPalette</MissingClass>
+    <MissingClass>hudson.util.DataSetBuilder</MissingClass>
+    <MissingClass>hudson.util.ShiftedCategoryAxis</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.tools.ant.DirectoryScanner</MissingClass>
+    <MissingClass>org.apache.tools.ant.Project</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.FileSet</MissingClass>
+    <MissingClass>org.jfree.chart.ChartFactory</MissingClass>
+    <MissingClass>org.jfree.chart.JFreeChart</MissingClass>
+    <MissingClass>org.jfree.chart.axis.CategoryAxis</MissingClass>
+    <MissingClass>org.jfree.chart.axis.CategoryLabelPositions</MissingClass>
+    <MissingClass>org.jfree.chart.axis.NumberAxis</MissingClass>
+    <MissingClass>org.jfree.chart.plot.CategoryPlot</MissingClass>
+    <MissingClass>org.jfree.chart.plot.PlotOrientation</MissingClass>
+    <MissingClass>org.jfree.chart.plot.PolarPlot</MissingClass>
+    <MissingClass>org.jfree.chart.renderer.DefaultPolarItemRenderer</MissingClass>
+    <MissingClass>org.jfree.chart.renderer.category.BarRenderer</MissingClass>
+    <MissingClass>org.jfree.chart.renderer.category.CategoryItemRenderer</MissingClass>
+    <MissingClass>org.jfree.chart.renderer.category.LineAndShapeRenderer</MissingClass>
+    <MissingClass>org.jfree.chart.renderer.category.StatisticalBarRenderer</MissingClass>
+    <MissingClass>org.jfree.data.statistics.DefaultStatisticalCategoryDataset</MissingClass>
+    <MissingClass>org.jfree.data.xy.XYSeries</MissingClass>
+    <MissingClass>org.jfree.data.xy.XYSeriesCollection</MissingClass>
+    <MissingClass>org.jfree.ui.RectangleInsets</MissingClass>
+    <MissingClass>org.kohsuke.stapler.StaplerRequest</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 5 Mar 2010 09:49:02 +0200" total_classes="57" referenced_classes="113" total_bugs="20" total_size="4584" num_packages="4" vm_version="20.4-b02-402" cpu_seconds="51.05" clock_seconds="30.56" peak_mbytes="108.04" alloc_mbytes="763.88" gc_seconds="0.80" priority_2="13" priority_1="7">
+    <PackageStats package="hudson.plugins.PerfPublisher" total_bugs="7" total_types="28" total_size="2224" priority_2="1" priority_1="6">
+      <ClassStats class="hudson.plugins.PerfPublisher.AbstractPerfPublisherAction" sourceFile="AbstractPerfPublisherAction.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.BrokenDetails" sourceFile="BrokenDetails.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.CategoryDetails" sourceFile="CategoryDetails.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.ChangedStatusTestsDetails" sourceFile="ChangedStatusTestsDetails.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.DeletedTestsDetails" sourceFile="DeletedTestsDetails.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.DownloadDiff" sourceFile="DownloadDiff.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.ErrorsDetails" sourceFile="ErrorsDetails.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.FilesDetails" sourceFile="FilesDetails.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.HealthDescriptor" sourceFile="HealthDescriptor.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.HealthPublisher" sourceFile="HealthPublisher.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.HealthReportBuilder" sourceFile="HealthReportBuilder.java" interface="false" size="21" bugs="1" priority_1="1"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.MatrixTestReportAction" sourceFile="MatrixTestReportAction.java" interface="false" size="219" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.NewTestsDetails" sourceFile="NewTestsDetails.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.ParserXml" sourceFile="ParserXml.java" interface="false" size="18" bugs="2" priority_1="2"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.ParserXml$Analyse" sourceFile="ParserXml.java" interface="false" size="405" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.PerfPublisherBuildAction" sourceFile="PerfPublisherBuildAction.java" interface="false" size="427" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.PerfPublisherParseException" sourceFile="PerfPublisherParseException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.PerfPublisherPlugin" sourceFile="PerfPublisherPlugin.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.PerfPublisherProjectAction" sourceFile="PerfPublisherProjectAction.java" interface="false" size="260" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.PerfPublisherPublisher" sourceFile="PerfPublisherPublisher.java" interface="false" size="81" bugs="3" priority_1="3"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.PerfPublisherPublisher$PerfPublisherDescriptor" sourceFile="PerfPublisherPublisher.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.PerfPublisherResultAggregator" sourceFile="PerfPublisherResultAggregator.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.ReportReader" sourceFile="ReportReader.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.ReportsDiff" sourceFile="ReportsDiff.java" interface="false" size="211" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.ResultSummary" sourceFile="ResultSummary.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.TestDetails" sourceFile="TestDetails.java" interface="false" size="145" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.TrendReport" sourceFile="TrendReport.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.ValidDetails" sourceFile="ValidDetails.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hudson.plugins.PerfPublisher.Report" total_bugs="8" total_types="24" total_size="1541" priority_2="7" priority_1="1">
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.CommandLine" sourceFile="CommandLine.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.CompileTime" sourceFile="CompileTime.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Compiler" sourceFile="Compiler.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Core" sourceFile="Core.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.DataSet" sourceFile="DataSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.ErrorMessage" sourceFile="ErrorMessage.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.ErrorMessageContainer" sourceFile="ErrorMessageContainer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.ExecutionTime" sourceFile="ExecutionTime.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.FileContainer" sourceFile="FileContainer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Hardware" sourceFile="Hardware.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Log" sourceFile="Log.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.MatrixTestReport" sourceFile="MatrixTestReport.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Param" sourceFile="Param.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.PerfPublisherAggregatedTestResultAction" sourceFile="PerfPublisherAggregatedTestResultAction.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Performance" sourceFile="Performance.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Platform" sourceFile="Platform.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Processor" sourceFile="Processor.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Report" sourceFile="Report.java" interface="false" size="364" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.ReportContainer" sourceFile="ReportContainer.java" interface="false" size="450" bugs="3" priority_2="3"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.ResultContainer" sourceFile="ResultContainer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Source" sourceFile="Source.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Success" sourceFile="Success.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Target" sourceFile="Target.java" interface="false" size="34" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.Report.Test" sourceFile="Test.java" interface="false" size="228" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="hudson.plugins.PerfPublisher.matrixBuild" total_bugs="2" total_types="2" total_size="88" priority_2="2">
+      <ClassStats class="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixBuild" sourceFile="PerfPublisherMatrixBuild.java" interface="false" size="37" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.matrixBuild.PerfPublisherMatrixSubBuild" sourceFile="PerfPublisherMatrixSubBuild.java" interface="false" size="51" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="hudson.plugins.PerfPublisher.projectsAction" total_bugs="3" total_types="3" total_size="731" priority_2="3">
+      <ClassStats class="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherFreestyleProjectAction" sourceFile="PerfPublisherFreestyleProjectAction.java" interface="false" size="260" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixConfigurationAction" sourceFile="PerfPublisherMatrixConfigurationAction.java" interface="false" size="260" bugs="0"/>
+      <ClassStats class="hudson.plugins.PerfPublisher.projectsAction.PerfPublisherMatrixProjectAction" sourceFile="PerfPublisherMatrixProjectAction.java" interface="false" size="211" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="2500" invocations="704" avgMicrosecondsPerInvocation="3551" maxMicrosecondsPerInvocation="186483" standardDeviationMircosecondsPerInvocation="13378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="2412" invocations="704" avgMicrosecondsPerInvocation="3426" maxMicrosecondsPerInvocation="251989" standardDeviationMircosecondsPerInvocation="16257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1905" invocations="702" avgMicrosecondsPerInvocation="2714" maxMicrosecondsPerInvocation="132583" standardDeviationMircosecondsPerInvocation="9468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1884" invocations="738" avgMicrosecondsPerInvocation="2552" maxMicrosecondsPerInvocation="213377" standardDeviationMircosecondsPerInvocation="12461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1867" invocations="707" avgMicrosecondsPerInvocation="2641" maxMicrosecondsPerInvocation="179756" standardDeviationMircosecondsPerInvocation="11341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1534" invocations="626" avgMicrosecondsPerInvocation="2451" maxMicrosecondsPerInvocation="87558" standardDeviationMircosecondsPerInvocation="7649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1252" invocations="113" avgMicrosecondsPerInvocation="11083" maxMicrosecondsPerInvocation="110702" standardDeviationMircosecondsPerInvocation="20485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="1075" invocations="444" avgMicrosecondsPerInvocation="2421" maxMicrosecondsPerInvocation="80092" standardDeviationMircosecondsPerInvocation="8334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1021" invocations="113" avgMicrosecondsPerInvocation="9043" maxMicrosecondsPerInvocation="112431" standardDeviationMircosecondsPerInvocation="17951"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="897" invocations="704" avgMicrosecondsPerInvocation="1275" maxMicrosecondsPerInvocation="48492" standardDeviationMircosecondsPerInvocation="4294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="796" invocations="704" avgMicrosecondsPerInvocation="1130" maxMicrosecondsPerInvocation="77502" standardDeviationMircosecondsPerInvocation="5829"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="579" invocations="985" avgMicrosecondsPerInvocation="588" maxMicrosecondsPerInvocation="71224" standardDeviationMircosecondsPerInvocation="3022"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="570" invocations="113" avgMicrosecondsPerInvocation="5052" maxMicrosecondsPerInvocation="83282" standardDeviationMircosecondsPerInvocation="10994"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="295" invocations="704" avgMicrosecondsPerInvocation="419" maxMicrosecondsPerInvocation="112435" standardDeviationMircosecondsPerInvocation="4410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="286" invocations="57" avgMicrosecondsPerInvocation="5027" maxMicrosecondsPerInvocation="49643" standardDeviationMircosecondsPerInvocation="8361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="277" invocations="701" avgMicrosecondsPerInvocation="395" maxMicrosecondsPerInvocation="44500" standardDeviationMircosecondsPerInvocation="2083"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="273" invocations="57" avgMicrosecondsPerInvocation="4798" maxMicrosecondsPerInvocation="77710" standardDeviationMircosecondsPerInvocation="11942"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="271" invocations="57" avgMicrosecondsPerInvocation="4768" maxMicrosecondsPerInvocation="66039" standardDeviationMircosecondsPerInvocation="10606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="269" invocations="57" avgMicrosecondsPerInvocation="4726" maxMicrosecondsPerInvocation="25035" standardDeviationMircosecondsPerInvocation="6505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="264" invocations="57" avgMicrosecondsPerInvocation="4635" maxMicrosecondsPerInvocation="45777" standardDeviationMircosecondsPerInvocation="11245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="262" invocations="702" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="24614" standardDeviationMircosecondsPerInvocation="1741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="262" invocations="169" avgMicrosecondsPerInvocation="1550" maxMicrosecondsPerInvocation="93185" standardDeviationMircosecondsPerInvocation="7657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="261" invocations="113" avgMicrosecondsPerInvocation="2316" maxMicrosecondsPerInvocation="29548" standardDeviationMircosecondsPerInvocation="5137"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="246" invocations="113" avgMicrosecondsPerInvocation="2184" maxMicrosecondsPerInvocation="35305" standardDeviationMircosecondsPerInvocation="5462"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="241" invocations="57" avgMicrosecondsPerInvocation="4230" maxMicrosecondsPerInvocation="34291" standardDeviationMircosecondsPerInvocation="7563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="232" invocations="113" avgMicrosecondsPerInvocation="2058" maxMicrosecondsPerInvocation="34113" standardDeviationMircosecondsPerInvocation="5400"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

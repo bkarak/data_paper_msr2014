@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2-rc2" sequence="0" timestamp="1282406081000" analysisTimestamp="1360902156345" release="">
+  <Project projectName="">
+    <Jar>/Users/bkarak/devel/repositories/maven/maven/org/codehaus/fabric3/fabric3-jpa-hibernate/1.6/fabric3-jpa-hibernate-1.6.jar</Jar>
+  </Project>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE">
+    <Class classname="org.fabric3.jpa.api.F3TransactionManagerLookup">
+      <SourceLine classname="org.fabric3.jpa.api.F3TransactionManagerLookup" start="55" end="72" sourcefile="F3TransactionManagerLookup.java" sourcepath="org/fabric3/jpa/api/F3TransactionManagerLookup.java"/>
+    </Class>
+    <Method classname="org.fabric3.jpa.api.F3TransactionManagerLookup" name="setTransactionManager" signature="(Ljavax/transaction/TransactionManager;)V" isStatic="false">
+      <SourceLine classname="org.fabric3.jpa.api.F3TransactionManagerLookup" start="60" end="61" startBytecode="0" endBytecode="60" sourcefile="F3TransactionManagerLookup.java" sourcepath="org/fabric3/jpa/api/F3TransactionManagerLookup.java"/>
+    </Method>
+    <Field classname="org.fabric3.jpa.api.F3TransactionManagerLookup" name="TM" signature="Ljavax/transaction/TransactionManager;" isStatic="true">
+      <SourceLine classname="org.fabric3.jpa.api.F3TransactionManagerLookup" sourcefile="F3TransactionManagerLookup.java" sourcepath="org/fabric3/jpa/api/F3TransactionManagerLookup.java"/>
+    </Field>
+    <SourceLine classname="org.fabric3.jpa.api.F3TransactionManagerLookup" start="60" end="60" startBytecode="1" endBytecode="1" sourcefile="F3TransactionManagerLookup.java" sourcepath="org/fabric3/jpa/api/F3TransactionManagerLookup.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="51">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.PersistenceContext</MissingClass>
+    <MissingClass>javax.persistence.PersistenceContextType</MissingClass>
+    <MissingClass>javax.persistence.PersistenceUnit</MissingClass>
+    <MissingClass>javax.persistence.SharedCacheMode</MissingClass>
+    <MissingClass>javax.persistence.ValidationMode</MissingClass>
+    <MissingClass>javax.persistence.spi.PersistenceUnitInfo</MissingClass>
+    <MissingClass>javax.persistence.spi.PersistenceUnitTransactionType</MissingClass>
+    <MissingClass>javax.transaction.SystemException</MissingClass>
+    <MissingClass>javax.transaction.Transaction</MissingClass>
+    <MissingClass>javax.transaction.TransactionManager</MissingClass>
+    <MissingClass>org.fabric3.api.annotation.monitor.MonitorLevel</MissingClass>
+    <MissingClass>org.fabric3.datasource.spi.DataSourceRegistry</MissingClass>
+    <MissingClass>org.fabric3.host.Fabric3Exception</MissingClass>
+    <MissingClass>org.fabric3.host.Names</MissingClass>
+    <MissingClass>org.fabric3.model.type.component.Implementation</MissingClass>
+    <MissingClass>org.fabric3.model.type.component.ResourceReferenceDefinition</MissingClass>
+    <MissingClass>org.fabric3.model.type.component.Scope</MissingClass>
+    <MissingClass>org.fabric3.spi.SingletonObjectFactory</MissingClass>
+    <MissingClass>org.fabric3.spi.builder.WiringException</MissingClass>
+    <MissingClass>org.fabric3.spi.classloader.ClassLoaderRegistry</MissingClass>
+    <MissingClass>org.fabric3.spi.classloader.MultiParentClassLoader</MissingClass>
+    <MissingClass>org.fabric3.spi.component.ScopeContainer</MissingClass>
+    <MissingClass>org.fabric3.spi.component.ScopeRegistry</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.Contribution</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.ContributionManifest</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.Import</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.manifest.JavaImport</MissingClass>
+    <MissingClass>org.fabric3.spi.contribution.manifest.PackageInfo</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.DefaultIntrospectionContext</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.IntrospectionContext</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.java.annotation.AbstractAnnotationProcessor</MissingClass>
+    <MissingClass>org.fabric3.spi.introspection.java.contract.JavaContractProcessor</MissingClass>
+    <MissingClass>org.fabric3.spi.invocation.CallFrame</MissingClass>
+    <MissingClass>org.fabric3.spi.invocation.F3Conversation</MissingClass>
+    <MissingClass>org.fabric3.spi.invocation.WorkContext</MissingClass>
+    <MissingClass>org.fabric3.spi.invocation.WorkContextTunnel</MissingClass>
+    <MissingClass>org.fabric3.spi.management.ManagementService</MissingClass>
+    <MissingClass>org.fabric3.spi.model.instance.LogicalResourceReference</MissingClass>
+    <MissingClass>org.fabric3.spi.model.physical.PhysicalTargetDefinition</MissingClass>
+    <MissingClass>org.fabric3.spi.model.type.java.FieldInjectionSite</MissingClass>
+    <MissingClass>org.fabric3.spi.model.type.java.InjectingComponentType</MissingClass>
+    <MissingClass>org.fabric3.spi.model.type.java.MethodInjectionSite</MissingClass>
+    <MissingClass>org.fabric3.spi.monitor.MonitorService</MissingClass>
+    <MissingClass>org.fabric3.spi.xml.XMLFactory</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.ejb.Ejb3Configuration</MissingClass>
+    <MissingClass>org.hibernate.ejb.HibernateEntityManagerFactory</MissingClass>
+    <MissingClass>org.hibernate.jmx.StatisticsService</MissingClass>
+    <MissingClass>org.oasisopen.sca.ServiceRuntimeException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 21 Aug 2010 18:54:41 +0300" total_classes="43" referenced_classes="87" total_bugs="1" total_size="1851" num_packages="9" vm_version="20.4-b02-402" cpu_seconds="17.80" clock_seconds="9.22" peak_mbytes="75.13" alloc_mbytes="763.88" gc_seconds="0.24" priority_1="1">
+    <PackageStats package="org.fabric3.jpa.api" total_bugs="1" total_types="3" total_size="26" priority_1="1">
+      <ClassStats class="org.fabric3.jpa.api.EntityManagerFactoryResolver" sourceFile="EntityManagerFactoryResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.api.F3TransactionManagerLookup" sourceFile="F3TransactionManagerLookup.java" interface="false" size="13" bugs="1" priority_1="1"/>
+      <ClassStats class="org.fabric3.jpa.api.JpaResolutionException" sourceFile="JpaResolutionException.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.jpa.contribution" total_bugs="0" total_types="1" total_size="52">
+      <ClassStats class="org.fabric3.jpa.contribution.HibernateContributionListener" sourceFile="HibernateContributionListener.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.jpa.generator" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="org.fabric3.jpa.generator.PersistenceContextResourceReferenceGenerator" sourceFile="PersistenceContextResourceReferenceGenerator.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.generator.PersistenceUnitResourceReferenceGenerator" sourceFile="PersistenceUnitResourceReferenceGenerator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.generator.SessionResourceReferenceGenerator" sourceFile="SessionResourceReferenceGenerator.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.jpa.introspection" total_bugs="0" total_types="2" total_size="78">
+      <ClassStats class="org.fabric3.jpa.introspection.PersistenceContextProcessor" sourceFile="PersistenceContextProcessor.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.introspection.PersistenceUnitProcessor" sourceFile="PersistenceUnitProcessor.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.jpa.model" total_bugs="0" total_types="3" total_size="43">
+      <ClassStats class="org.fabric3.jpa.model.HibernateSessionResourceReference" sourceFile="HibernateSessionResourceReference.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.model.PersistenceContextResourceReference" sourceFile="PersistenceContextResourceReference.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.model.PersistenceUnitResourceReference" sourceFile="PersistenceUnitResourceReference.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.jpa.provision" total_bugs="0" total_types="3" total_size="56">
+      <ClassStats class="org.fabric3.jpa.provision.PersistenceContextTargetDefinition" sourceFile="PersistenceContextTargetDefinition.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.provision.PersistenceUnitTargetDefinition" sourceFile="PersistenceUnitTargetDefinition.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.provision.SessionTargetDefinition" sourceFile="SessionTargetDefinition.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.jpa.runtime" total_bugs="0" total_types="4" total_size="112">
+      <ClassStats class="org.fabric3.jpa.runtime.JpaConstants" sourceFile="JpaConstants.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.PersistenceContextWireAttacher" sourceFile="PersistenceContextWireAttacher.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.PersistenceUnitWireAttacher" sourceFile="PersistenceUnitWireAttacher.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.SessionWireAttacher" sourceFile="SessionWireAttacher.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.jpa.runtime.emf" total_bugs="0" total_types="8" total_size="379">
+      <ClassStats class="org.fabric3.jpa.runtime.emf.CacheMonitor" sourceFile="CacheMonitor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.emf.CachingEntityManagerFactoryResolver" sourceFile="CachingEntityManagerFactoryResolver.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.emf.DefaultEntityManagerFactoryCache" sourceFile="DefaultEntityManagerFactoryCache.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.emf.EntityManagerFactoryCache" sourceFile="EntityManagerFactoryCache.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.emf.Fabric3PersistenceUnitInfo" sourceFile="Fabric3PersistenceUnitInfo.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.emf.PersistenceContextParser" sourceFile="PersistenceContextParser.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.emf.PersistenceContextParserImpl" sourceFile="PersistenceContextParserImpl.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.emf.PersistenceUnitException" sourceFile="PersistenceUnitException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.fabric3.jpa.runtime.proxy" total_bugs="0" total_types="16" total_size="1063">
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.EntityManagerCreationException" sourceFile="EntityManagerCreationException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.EntityManagerService" sourceFile="EntityManagerService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.EntityManagerServiceImpl" sourceFile="EntityManagerServiceImpl.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.EntityManagerServiceImpl$1" sourceFile="EntityManagerServiceImpl.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.EntityManagerServiceImpl$ConversationScopedSync" sourceFile="EntityManagerServiceImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.EntityManagerServiceImpl$JPACallback" sourceFile="EntityManagerServiceImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.EntityManagerServiceImpl$TransactionScopedSync" sourceFile="EntityManagerServiceImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.HibernateProxy" sourceFile="HibernateProxy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.MultiThreadedEntityManagerProxy" sourceFile="MultiThreadedEntityManagerProxy.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.MultiThreadedEntityManagerProxyFactory" sourceFile="MultiThreadedEntityManagerProxyFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.MultiThreadedSessionProxy" sourceFile="MultiThreadedSessionProxy.java" interface="false" size="220" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.MultiThreadedSessionProxyFactory" sourceFile="MultiThreadedSessionProxyFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.StatefulEntityManagerProxy" sourceFile="StatefulEntityManagerProxy.java" interface="false" size="174" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.StatefulEntityManagerProxyFactory" sourceFile="StatefulEntityManagerProxyFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.StatefulSessionProxy" sourceFile="StatefulSessionProxy.java" interface="false" size="306" bugs="0"/>
+      <ClassStats class="org.fabric3.jpa.runtime.proxy.StatefulSessionProxyFactory" sourceFile="StatefulSessionProxyFactory.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="619" invocations="643" avgMicrosecondsPerInvocation="963" maxMicrosecondsPerInvocation="89332" standardDeviationMircosecondsPerInvocation="4746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="612" invocations="407" avgMicrosecondsPerInvocation="1504" maxMicrosecondsPerInvocation="112436" standardDeviationMircosecondsPerInvocation="6096"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="524" invocations="427" avgMicrosecondsPerInvocation="1227" maxMicrosecondsPerInvocation="51194" standardDeviationMircosecondsPerInvocation="3730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="512" invocations="87" avgMicrosecondsPerInvocation="5891" maxMicrosecondsPerInvocation="136303" standardDeviationMircosecondsPerInvocation="17256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="427" invocations="434" avgMicrosecondsPerInvocation="984" maxMicrosecondsPerInvocation="33820" standardDeviationMircosecondsPerInvocation="2790"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="410" invocations="436" avgMicrosecondsPerInvocation="940" maxMicrosecondsPerInvocation="63942" standardDeviationMircosecondsPerInvocation="4070"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="402" invocations="423" avgMicrosecondsPerInvocation="951" maxMicrosecondsPerInvocation="50220" standardDeviationMircosecondsPerInvocation="2993"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="310" invocations="87" avgMicrosecondsPerInvocation="3568" maxMicrosecondsPerInvocation="43183" standardDeviationMircosecondsPerInvocation="6623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="291" invocations="360" avgMicrosecondsPerInvocation="810" maxMicrosecondsPerInvocation="42104" standardDeviationMircosecondsPerInvocation="2859"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="288" invocations="427" avgMicrosecondsPerInvocation="674" maxMicrosecondsPerInvocation="34162" standardDeviationMircosecondsPerInvocation="2428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="200" invocations="43" avgMicrosecondsPerInvocation="4669" maxMicrosecondsPerInvocation="154731" standardDeviationMircosecondsPerInvocation="23237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="178" invocations="87" avgMicrosecondsPerInvocation="2056" maxMicrosecondsPerInvocation="16998" standardDeviationMircosecondsPerInvocation="3486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="174" invocations="597" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="16732" standardDeviationMircosecondsPerInvocation="1064"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="151" invocations="87" avgMicrosecondsPerInvocation="1740" maxMicrosecondsPerInvocation="108273" standardDeviationMircosecondsPerInvocation="11515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="139" invocations="427" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="9630" standardDeviationMircosecondsPerInvocation="733"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="119" invocations="43" avgMicrosecondsPerInvocation="2781" maxMicrosecondsPerInvocation="56497" standardDeviationMircosecondsPerInvocation="9250"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="103" invocations="87" avgMicrosecondsPerInvocation="1188" maxMicrosecondsPerInvocation="22805" standardDeviationMircosecondsPerInvocation="2637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="99" invocations="500" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="20741" standardDeviationMircosecondsPerInvocation="1114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="95" invocations="43" avgMicrosecondsPerInvocation="2223" maxMicrosecondsPerInvocation="16511" standardDeviationMircosecondsPerInvocation="3533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="89" invocations="435" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="43098" standardDeviationMircosecondsPerInvocation="2065"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNonShortCircuit" totalMilliseconds="88" invocations="43" avgMicrosecondsPerInvocation="2048" maxMicrosecondsPerInvocation="72909" standardDeviationMircosecondsPerInvocation="10951"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="86" invocations="87" avgMicrosecondsPerInvocation="995" maxMicrosecondsPerInvocation="17566" standardDeviationMircosecondsPerInvocation="2368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="85" invocations="87" avgMicrosecondsPerInvocation="984" maxMicrosecondsPerInvocation="27024" standardDeviationMircosecondsPerInvocation="3053"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="82" invocations="403" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="7872" standardDeviationMircosecondsPerInvocation="493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="82" invocations="87" avgMicrosecondsPerInvocation="944" maxMicrosecondsPerInvocation="6288" standardDeviationMircosecondsPerInvocation="1390"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
