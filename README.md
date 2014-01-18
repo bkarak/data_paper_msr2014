@@ -1,7 +1,8 @@
-evol_security_publication_2012
+MSR data paper.
 ==============================
 
-Security Evolution Paper Publication (2012):
+http://2014.msrconf.org/
 
-Accepted in LASER Workshop: http://www.laser-workshop.org/
+Abstract: February 16, 2014.
 
+Paper: February 21, 2014.
