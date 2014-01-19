@@ -1,14 +1,14 @@
 pdf:
 	#cd data && make
-	pdflatex evol.tex
+	pdflatex msr.tex
 	bibtex evol
-	pdflatex evol.tex
-	pdflatex evol.tex
+	pdflatex msr.tex
+	pdflatex msr.tex
 
 clean:
 	-rm -f *.aux
 	-rm -f *.bbl *.ent *.blg *.log *.out *.dvi *~ *.spl
-	-rm -f evol.pdf
+	-rm -f msr.pdf
 
 count-words:
 	@echo "Counting Words"
