@@ -1,7 +1,7 @@
 pdf:
 	#cd data && make
 	pdflatex msr.tex
-	bibtex evol
+	bibtex msr
 	pdflatex msr.tex
 	pdflatex msr.tex
 
