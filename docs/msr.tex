@@ -47,7 +47,15 @@ Dimitris Mitropoulos\\
 
 \maketitle
 \begin{abstract}
-The abstract is coming
+Examining software ecosystems can provide the research community
+with useful information. To examine the Maven Central Repository
+(approximately 265{\sc gb} of data), we performed an experiment
+where we statically analyzed the repository to detect its software
+bugs. For our analysis we used FindBugs, a tool that
+examines Java bytecode to detect numerous types of bugs.
+In this paper, we present our data collection experiment
+and show how our dataset can be used to extract interesting
+findings on software evolution.
 \end{abstract}
 
 \category{D.2.4}{Software Engineering}{Software/Program Verification}[Statistical methods]
@@ -61,16 +69,22 @@ The abstract is coming
 \section{Introduction}
 \label{sec:intro}
 
-In this paper we present a dataset produced after
-analyzing a large software ecosystem to detect
-software bugs. For our research we used
-{\it FindBugs},\footnote{\url{http://findbugs.sourceforge.net/}}
-a static analysis tool that examines bytecode to detect software bugs and has already been used in
-research~\cite{AP10,SHP06}.
-Specifically, we ran FindBugs on all the project
-versions of all the projects that exist in the
-{\it Maven Central Repository}\footnote{\url{http://mvnrepository.com/}}
-(approximately 265{\sc gb} of data.
+A software ecosystem can be seen as a collection of software projects,
+which are developed and co-evolve in the same environment~\cite{LL10}.
+Components can and be interdependent and have multiple versions.
+Examples of such ecosystems, are Python's {\sc p}y{\sc py} (Python Package Index),
+Perl's {\sc cpan} (Comprehensive Perl Archive Network), Ruby's RubyGems and the
+Maven Central Repository.\footnote{\url{http://mvnrepository.com/}}
+
+Maven is a build automation tool used primarily for Java projects and it is
+hosted by the Apache Software Foundation.
+It uses {\sc xml} to describe the software project being built, its dependencies
+on other external modules, the build order, and required plug-ins.
+To build a software component, it dynamically downloads Java libraries
+and Maven plug-ins from the Maven central repository,
+and stores them in a local cache. The repository can be updated with
+new projects and also with new versions of existing projects
+that can depend on other versions.
 
 \section{Data Collection Experiment}
 \label{sec:exp}
@@ -97,6 +111,8 @@ Tools.
 
 \section{Related Work}
 \label{sec:rel}
+
+Cite~\cite{RDV13}.
 
 \section{Conclusions}
 \label{sec:conc}
