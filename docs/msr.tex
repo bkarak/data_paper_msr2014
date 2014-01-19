@@ -11,7 +11,7 @@
 
 \begin{document}
 
-\title{The Bug Catalog of the Maven Repository Ecosystem}
+\title{The Bug Catalog of the Maven Ecosystem}
 
 \numberofauthors{5} 
 
@@ -105,7 +105,45 @@ their research.
 
 \section{Data Collection Experiment}
 \label{sec:exp}
-Body.
+
+First, we scanned the Maven repository only
+for appropriate {\sc jar}s and created a list that included them.
+This is because FindBugs analyzes applications written in Java,
+and the Maven repository hosts projects from
+languages other than Java such as Scala, Groovy,
+Clojure, etc. Thus we filtered out such projects.
+In particular, we obtained a snapshot (January 2012) of
+the repository and handled it locally to retrieve a list of all
+the names of the project versions that existed in it.
+A project version can be uniquely identified by the triplet:
+{\it group id}, {\it artifact id} and {\it version}.
+
+With the {\sc jar} list at hand, we created a series of processing tasks
+and added them to the task queue. Then we executed twenty five (Unix-based)
+workers that checked out tasks from the queue, processed the data and stored the
+results to the data repository.
+
+A typical processing cycle of a worker included the following steps: after
+the worker spawned, it requested a task from the queue. This task contained
+the {\sc jar} name, which was typically a project version that was downloaded locally.
+First, specific {\sc jar} metadata were calculated and stored. Such metadata included
+its size, its dependencies, and a number that represented the chronological order of the
+release. This order was derived from an {\sc xml} file that
+accompanies every project in the Maven repository called {\it
+maven-metadata.xml}. Then, FindBugs was invoked by the worker and its results were
+also stored in the data repository. When the task was completed the queue
+was notified and the next task was requested. This process was executed for
+all the available {\sc jar}s in the task queue. A schematic representation of
+the data processing architecture can be seen in Figure~\ref{fig:arch}.
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[scale=0.73]{figures/arch.pdf}
+  \end{center}
+  \caption{The data processing architecture.}
+  \label{fig:arch}
+\end{figure}
+
 
 \section{Repository Statistics}
 \label{sec:repo}
@@ -122,10 +160,6 @@ Repo stats.
 \label{sec:find}
 Findings.
 
-\section{Tools}
-\label{sec:exp}
-Tools.
-
 \section{Related Work}
 \label{sec:rel}
 
@@ -133,9 +167,6 @@ Cite~\cite{RDV13}.
 
 \section{Conclusions}
 \label{sec:conc}
-
-\section{Acknowledgments}
-possible acks.
 
 \bibliographystyle{abbrv}
 \bibliography{msr}  
