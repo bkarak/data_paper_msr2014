@@ -71,10 +71,14 @@ findings on software evolution.
 
 A software ecosystem can be seen as a collection of software projects,
 which are developed and co-evolve in the same environment~\cite{LL10}.
-Components can and be interdependent and have multiple versions.
-Examples of such ecosystems, are Python's {\sc p}y{\sc py} (Python Package Index),
-Perl's {\sc cpan} (Comprehensive Perl Archive Network), Ruby's RubyGems and the
-Maven Central Repository.\footnote{\url{http://mvnrepository.com/}}
+Components can be interdependent and have multiple versions.
+Examples of such ecosystems include Python's
+{\sc p}y{\sc py}\footnote{\url{http://pypy.org/}}
+(Python Package Index), Perl's
+{\sc cpan}\footnote{\url{http://www.cpan.org/}}
+(Comprehensive Perl Archive Network), Ruby's
+RubyGems\footnote{\url{http://rubygems.org/}}
+and the Maven Central Repository.\footnote{\url{http://mvnrepository.com/}}
 
 Maven is a build automation tool used primarily for Java projects and it is
 hosted by the Apache Software Foundation.
@@ -85,6 +89,19 @@ and Maven plug-ins from the Maven central repository,
 and stores them in a local cache. The repository can be updated with
 new projects and also with new versions of existing projects
 that can depend on other versions.
+
+To statically analyze the Maven repository
+we used {\it FindBugs},\footnote{\url{http://findbugs.sourceforge.net/}}
+a static analysis tool that examines bytecode to detect software bugs
+and has already been used in research~\cite{AP10,SHP06}.
+Specifically, we ran FindBugs on all the project versions of all
+the projects that exist in the repository
+to identify all bugs contained in it.
+
+In this paper we present: a) the experiment performed to obtain the
+collection of the metric results that the FindBugs tool produces and
+b) how researchers can actually use the dataset and include it in
+their research.
 
 \section{Data Collection Experiment}
 \label{sec:exp}
