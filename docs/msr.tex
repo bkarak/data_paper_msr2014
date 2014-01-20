@@ -48,14 +48,14 @@ Dimitris Mitropoulos\\
 \maketitle
 \begin{abstract}
 Examining software ecosystems can provide the research community
-with useful information. To examine the Maven Central Repository
-(approximately 265{\sc gb} of data), we performed an experiment
-where we statically analyzed the repository to detect its software
-bugs. For our analysis we used FindBugs, a tool that
-examines Java bytecode to detect numerous types of bugs.
-In this paper, we present our data collection experiment
-and show how our dataset can be used to extract interesting
-findings on software evolution.
+with useful information. To examine the ecosystem of
+the Maven Central Repository (approximately 265{\sc gb} of data),
+we performed an experiment where we statically analyzed the
+repository to detect its software bugs. For our analysis we
+used FindBugs, a tool that examines Java bytecode to detect
+numerous types of bugs. In this paper, we present our data
+collection experiment and show how our dataset can be used
+to extract interesting findings on software evolution.
 \end{abstract}
 
 \category{D.2.4}{Software Engineering}{Software/Program Verification}[Statistical methods]
@@ -81,7 +81,7 @@ RubyGems\footnote{\url{http://rubygems.org/}}
 and the Maven Central Repository.\footnote{\url{http://mvnrepository.com/}}
 
 Maven is a build automation tool used primarily for Java projects and it is
-hosted by the Apache Software Foundation.
+hosted by the Apache Software Foundation.\footnote{\url{http://maven.apache.org/}}
 It uses {\sc xml} to describe the software project being built, its dependencies
 on other external modules, the build order, and required plug-ins.
 To build a software component, it dynamically downloads Java libraries
@@ -100,8 +100,28 @@ to identify all bugs contained in it.
 
 In this paper we present: a) the experiment performed to obtain the
 collection of the metric results that the FindBugs tool produces and
-b) how researchers can actually use the dataset and include it in
-their research.
+b) how researchers can use the dataset and include it in their research.
+
+\begin{table}
+\centering
+\begin{tabular}{l r}
+\hline
+Measurement & Value\\
+ \hline
+Projects & 17,505\\
+Versions (total) & 115,214\\
+Min (versions per project) & 1\\
+Max (versions per project) & 338\\
+Mean (versions per project) & 6.58\\
+Median (versions per project) & 3\\
+Range (over versions) & 337\\
+1$^{st}$ Quartile (over versions) & 1\\
+3$^{rd}$ Quartile (over versions) & 8\\
+\hline
+\end{tabular}
+\caption{Descriptive statistic measurements for the Maven repository.}
+\label{tbl:repository}
+\end{table}
 
 \section{Data Collection Experiment}
 \label{sec:exp}
@@ -115,13 +135,15 @@ Clojure, etc. Thus we filtered out such projects.
 In particular, we obtained a snapshot (January 2012) of
 the repository and handled it locally to retrieve a list of all
 the names of the project versions that existed in it.
-A project version can be uniquely identified by the triplet:
-{\it group id}, {\it artifact id} and {\it version}.
+The statistic measurements concerning the repository can be seen in 
+Table~\ref{tbl:repository}.
 
 With the {\sc jar} list at hand, we created a series of processing tasks
-and added them to the task queue. Then we executed twenty five (Unix-based)
-workers that checked out tasks from the queue, processed the data and stored the
-results to the data repository.
+and added them to task queue mechanism (a Rabbit{\sc mq} message
+broker). Then we executed twenty five (Unix-based)
+workers (custom Python scripts) that checked out tasks
+from the queue, processed the data and stored the
+results to the data repository (a Mongo{\sc db}).
 
 A typical processing cycle of a worker included the following steps: after
 the worker spawned, it requested a task from the queue. This task contained
@@ -131,12 +153,18 @@ its size, its dependencies, and a number that represented the chronological orde
 release. This order was derived from an {\sc xml} file that
 accompanies every project in the Maven repository called {\it
 maven-metadata.xml}. Then, FindBugs was invoked by the worker and its results were
-also stored in the data repository. When the task was completed the queue
-was notified and the next task was requested. This process was executed for
-all the available {\sc jar}s in the task queue. A schematic representation of
+also stored in the data repository. 
+FindBugs separates software bugs into nine
+categories\footnote{\url{http://findbugs.sourceforge.net/bugDescriptions.html}}
+(including Bad Practice, Security, Performance and others)
+and reports bug collections that include all the bugs discovered in a
+{\sc jar} file. For every registered bug, there are numerous accompanying features
+like the class, the method and the line that the bug was found.
+When the task was completed the queue
+was notified and the next task was requested. A schematic representation of
 the data processing architecture can be seen in Figure~\ref{fig:arch}.
 
-\begin{figure}[t]
+\begin{figure} [h]
   \begin{center}
     \includegraphics[scale=0.73]{figures/arch.pdf}
   \end{center}
@@ -144,10 +172,10 @@ the data processing architecture can be seen in Figure~\ref{fig:arch}.
   \label{fig:arch}
 \end{figure}
 
-
-\section{Repository Statistics}
-\label{sec:repo}
-Repo stats.
+\section{Tools and Findings}
+\label{sec:find}
+Figure~\ref{fig:bug-per} shows how software bugs are distributed among the
+repository.
 
 \begin{figure}[t]
 	\centering
@@ -155,10 +183,6 @@ Repo stats.
 	\caption{Bug percentage in Maven repository.}
 	\label{fig:bug-per} 
 \end{figure}
-
-\section{Initial Findings}
-\label{sec:find}
-Findings.
 
 \section{Related Work}
 \label{sec:rel}
