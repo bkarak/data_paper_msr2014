@@ -99,8 +99,9 @@ the projects that exist in the repository
 to identify all bugs contained in it.
 
 In this paper we present: a) the experiment performed to obtain the
-collection of the metric results that the FindBugs tool produces and
-b) how researchers can use the dataset and include it in their research.
+collection of the metric results that the FindBugs tool produces 
+for every project version of the repository (115,214 {\sc jar}s)
+and b) how researchers can use the dataset and include it in their research.
 
 \begin{table}
 \centering
@@ -139,11 +140,11 @@ The statistic measurements concerning the repository can be seen in
 Table~\ref{tbl:repository}.
 
 With the {\sc jar} list at hand, we created a series of processing tasks
-and added them to task queue mechanism (a Rabbit{\sc mq} message
-broker). Then we executed twenty five (Unix-based)
-workers (custom Python scripts) that checked out tasks
-from the queue, processed the data and stored the
-results to the data repository (a Mongo{\sc db}).
+and added them to a task queue mechanism (a Rabbit{\sc mq} message
+broker). Then we executed twenty five workers (custom Python scripts)
+that checked out tasks from the queue, processed each project version
+and stored the results to the data
+repository (a Mongo{\sc db} database system).
 
 A typical processing cycle of a worker included the following steps: after
 the worker spawned, it requested a task from the queue. This task contained
