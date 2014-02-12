@@ -13,6 +13,7 @@ from corrplot import corrplot
 bug_types = [
     'SECURITY_HIGH',
     'SECURITY_LOW',
+    'SECURITY',
     'MALICIOUS_CODE',
     'STYLE',
     'BAD_PRACTICE',
@@ -23,35 +24,42 @@ bug_types = [
     'EXPERIMENTAL'
     ]
 
-labels = []
-for bug_type in bug_types:
-    if bug_type == 'I18N':
-        labels.append(bug_type.lower())
-    elif bug_type == 'MT_CORRECTNESS':
-        labels.append('MT Correctness')
-    elif bug_type == 'MALICIOUS_CODE':
-        pass
-    else:
-        labels.append(bug_type.title().replace('_', ' '))
-
 with open("data/bug_correlation_counters.json") as infile:
     json_input = json.load(infile)
 
 data = pd.DataFrame(json_input).T
 
+print "Raw"
 for bug_type in bug_types:
-    print bug_type, data[bug_type].count()
+    if bug_type in data:
+        count = data[bug_type].count()
+    else:
+        count = 0
+    print bug_type, count
 
-print "MALICIUS_CODE & SECURITY_LOW ", len(data[data['MALICIOUS_CODE']
-                                                * data['SECURITY_LOW'] > 0])
-    
-data['SECURITY_LOW'] = (data['MALICIOUS_CODE'].fillna(0)
-                        + data['SECURITY_LOW'].fillna(0)).replace(0, np.nan)
-data['TOTAL_SECURITY_LOW'] = (data['TOTAL_MALICIOUS_CODE'].fillna(0)
-                              + data['TOTAL_SECURITY_LOW'].fillna(0)
-                              ).replace(0, np.nan)
-data = data.drop(['MALICIOUS_CODE', 'TOTAL_MALICIOUS_CODE'], axis=1)
-bug_types.remove('MALICIOUS_CODE')
+sec_high = np.where(data['SECURITY_HIGH'].notnull())[0]
+sec_low = np.where(data['SECURITY_LOW'].notnull())[0]
+intersection_sec = np.intersect1d(sec_high, sec_low)
+
+data['SECURITY'] = (data['SECURITY_HIGH'].fillna(0)
+                    + data['SECURITY_LOW'].fillna(0)).replace(0, np.nan)
+                                                
+data['TOTAL_SECURITY'] = (data['TOTAL_SECURITY_HIGH'].fillna(0)
+                          + data['TOTAL_SECURITY_LOW'].fillna(0)
+                      ).replace(0, np.nan)
+data = data.drop(['SECURITY_LOW', 'TOTAL_SECURITY_LOW',
+                  'SECURITY_HIGH', 'TOTAL_SECURITY_HIGH'], axis=1)
+bug_types.remove('SECURITY_LOW')
+bug_types.remove('SECURITY_HIGH')
+
+print "After handling SECURITY ({} common)".format(len(intersection_sec))
+
+for bug_type in bug_types:
+    if bug_type in data:
+        count = data[bug_type].count()
+    else:
+        count = 0
+    print bug_type, count
 
 num_bug_types = len(bug_types)
 corrmatrix = np.identity(num_bug_types)
@@ -69,7 +77,15 @@ for i in xrange(num_bug_types):
         corrmatrix[i, j] = corrmatrix[j, i] = corr
         pvalues[i, j] = pvalues[j, i] = pvalue
 
-
+labels = []
+for bug_type in bug_types:
+    if bug_type == 'I18N':
+        labels.append(bug_type.lower())
+    elif bug_type == 'MT_CORRECTNESS':
+        labels.append('MT Correctness')
+    else:
+        labels.append(bug_type.title().replace('_', ' '))
+      
 with open("corrmatrix.tex", "w") as corrmatrix_tex:
     start = r"""
 \begin{tabular}{lccccccccc}
