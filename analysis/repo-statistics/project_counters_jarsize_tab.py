@@ -1,14 +1,13 @@
 # Extracts the bug counters data from the JSON representation
 # and outputs them in CSV format so that it can be read by R.
 
-import ijson
 import json
 import sys
 import csv
 
 bug_types = [
-    'SECURITY_HIGH',
-    'SECURITY_LOW',
+    'SECURITY',
+    'MALICIOUS_CODE',
     'STYLE',
     'CORRECTNESS',
     'BAD_PRACTICE',
@@ -34,14 +33,16 @@ with open("data/project_counters_jarsize.csv", "w") as csv_output:
                 row = [project, meta_data['version_order'],
                        meta_data['jar_size']]
                 counters = version['Counters']
-                counters = version['Counters']
-                if 'MALICIOUS_CODE' in counters:
-                    malicious_code = counters.pop('MALICIOUS_CODE')
-                    if 'SECURITY_LOW' in counters:
-                        counters['SECURITY_LOW'] += malicious_code
-                    else:
-                        counters['SECURITY_LOW'] = malicious_code
-                security_low = 0
+                if 'SECURITY_LOW' in counters:
+                    security_low = counters.pop('SECURITY_LOW')
+                else:
+                    security_low = 0
+                if 'SECURITY_HIGH' in counters:
+                    security_high = counters.pop('SECURITY_HIGH')
+                else:
+                    security_high = 0
+                if security_low or security_high:
+                    counters['SECURITY'] = security_low + security_high
                 for bug_type in bug_types:
                     if bug_type in counters:
                         row.append(counters[bug_type])

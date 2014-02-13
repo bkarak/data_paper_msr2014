@@ -10,8 +10,8 @@ from collections import defaultdict, OrderedDict
 import itertools
 
 bug_types = (
-    'SECURITY_HIGH',
-    'SECURITY_LOW',
+    'SECURITY',
+    'MALICIOUS_CODE',
     'STYLE',
     'CORRECTNESS',
     'BAD_PRACTICE',
@@ -28,8 +28,8 @@ for bug_type in bug_types:
     bug_types_diffs[bug_type] = []
 
 bug_labels = {
-    'SECURITY_HIGH': 'Security High',
-    'SECURITY_LOW': 'Security Low',
+    'SECURITY': 'Security',
+    'MALICIOUS_CODE': 'Malicious Code',
     'STYLE': 'Style',
     'CORRECTNESS': 'Correctness',
     'BAD_PRACTICE': 'Bad Practice',
@@ -63,12 +63,16 @@ with open("data/project_counters.json", "r") as json_file:
                 continue
             counts[project].append({})
             counters = version['Counters']
-            if 'MALICIOUS_CODE' in counters:
-                malicious_code = counters.pop('MALICIOUS_CODE')
-                if 'SECURITY_LOW' in counters:
-                    counters['SECURITY_LOW'] += malicious_code
-                else:
-                    counters['SECURITY_LOW'] = malicious_code
+            if 'SECURITY_LOW' in counters:
+                security_low = counters.pop('SECURITY_LOW')
+            else:
+                security_low = 0
+            if 'SECURITY_HIGH' in counters:
+                security_high = counters.pop('SECURITY_HIGH')
+            else:
+                security_high = 0
+            if security_low or security_high:
+                counters['SECURITY'] = security_low + security_high
             for counter, value in counters.iteritems():
                 if version_order != len(counts[project]):
                     bad_project = True
@@ -112,7 +116,7 @@ for project, project_counts in counts.iteritems():
             (rho, p_value) = st.spearmanr(cc_arr, versions_arr)
             if p_value < 0.05:
                 counts_corrs.setdefault(counter, []).append(rho)
-                if counter == 'SECURITY_HIGH':
+                if counter == 'SECURITY':
                     print project, counter, len(cc_arr), cc_arr, rho, p_value
             else:
                 counts_corrs.setdefault(counter, []).append(0)

@@ -11,8 +11,8 @@ import math
 import collections
 
 bugs_per_version = collections.OrderedDict()
-bugs_per_version['SECURITY_HIGH'] = []
-bugs_per_version['SECURITY_LOW'] = []
+bugs_per_version['SECURITY'] = []
+bugs_per_version['MALICIOUS_CODE'] = []
 bugs_per_version['STYLE'] =  []
 bugs_per_version['CORRECTNESS'] = []
 bugs_per_version['BAD_PRACTICE'] = []
@@ -22,8 +22,8 @@ bugs_per_version['PERFORMANCE'] = []
 bugs_per_version['EXPERIMENTAL'] = []
 
 bugs_per_version_labels = [
-    'Security High',
-    'Security Low',
+    'Security',
+    'Malicious Code',
     'Style',
     'Correctness',
     'Bad Practice',
@@ -41,12 +41,16 @@ with open("data/project_counters.json", "r") as json_file:
             if version_order == 0:
                 continue
             counters = version['Counters']
-            if 'MALICIOUS_CODE' in counters:
-                malicious_code = counters.pop('MALICIOUS_CODE')
-                if 'SECURITY_LOW' in counters:
-                    counters['SECURITY_LOW'] += malicious_code
-                else:
-                    counters['SECURITY_LOW'] = malicious_code
+            if 'SECURITY_LOW' in counters:
+                security_low = counters.pop('SECURITY_LOW')
+            else:
+                security_low = 0
+            if 'SECURITY_HIGH' in counters:
+                security_high = counters.pop('SECURITY_HIGH')
+            else:
+                security_high = 0
+            if security_low or security_high:
+                counters['SECURITY'] = security_low + security_high
             for counter in bugs_per_version.keys():
                 if counter in counters:
                     value = counters[counter]
