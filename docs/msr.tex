@@ -192,21 +192,40 @@ the data processing architecture can be seen in Figure~\ref{fig:arch}.
 As we mentioned earlier our data was stored in a
 Mongo{\sc db} database, thus all the data stored 
 converted to the {\sc json} format. Originally, FindBugs output is in {\sc xml}, the conversion was a straight forward mapping
-of the {\sc xml} elements to {\sc json} objects. In addition, to the FindBugs data, we added a header metadata section, which contained
-several additional information regarding the jar file that has been processed. The following listing contains a sample document:
+of the {\sc xml} elements to {\sc json} objects. In addition, to the FindBugs data, we added a metadata section, which contained
+several additional information regarding the jar file that has been processed (Table~\ref{tbl:metadata-description}). The following listing contains a sample document:
 
 \begin{verbatim}
 {"JarMetadata": {"jar_filename": "",
-                 "jar_last_modification_date": "",
                  "jar_size": "",
                  "version": "",
                  "version_list": "",
                  "artifact_id": "",
                  "group_id": "",
-                 "version_order": "",
                  "dependencies": ""}, 
  "BugCollection": { /* FindBugs data */ }}
 \end{verbatim}
+
+
+
+\begin{table}
+\centering
+\caption{Jar metadata description}
+\label{tbl:metadata-description}
+\begin{tabular}{l p{5.0cm}}
+ \hline
+\textbf{Key} & \textbf{Value}\\
+ \hline
+\verb|jar_filename| & JAR's filename\\
+\verb|jar_size| & The size of the JAR file\\
+\verb|version| & The version of the project in Maven repository\\
+\verb|version_list| & A list of project's version numbers\\
+\verb|artifact_id| & The artifact id of the project in Maven repository\\
+\verb|group_id| & The group id of the project in Maven repository\\
+\verb|dependencies| & List of all dependencies for the project\\
+ \hline
+ \end{tabular}
+\end{table}
 
 Hence, it is easy to either create
 queries to find out basic information like:
