@@ -190,7 +190,10 @@ the data processing architecture can be seen in Figure~\ref{fig:arch}.
 \label{sec:find}
 
 As we mentioned earlier our data was stored in a
-Mongo{\sc db} database.
+Mongo{\sc db} database, thus all the data stored 
+converted to the {\sc json} format. Originally, FindBugs output is in {\sc xml}, the conversion was a straight forward mapping
+of the {\sc xml} elements to {\sc json} objects. In addition, to the FindBugs data, we added a header metadata section, which contained
+several additional information regarding the jar file that has been processed.
 % dimitro@bkarak: add content here.
 Hence, it is easy to either create
 queries to find out basic information like:
