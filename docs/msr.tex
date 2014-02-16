@@ -190,10 +190,10 @@ the data processing architecture can be seen in Figure~\ref{fig:arch}.
 \label{sec:find}
 
 As we mentioned earlier our data was stored in a
-Mongo{\sc db} database, thus all the data stored 
-converted to the {\sc json} format. Originally, FindBugs output is in {\sc xml}, the conversion was a straight forward mapping
+Mongo{\sc db} database, thus all the data were 
+converted to the {\sc json} format. Originally, FindBugs output data is in {\sc xml} format. The conversion was a straight forward mapping
 of the {\sc xml} elements to {\sc json} objects. In addition, to the FindBugs data, we added a metadata section, which contained
-several additional information regarding the jar file that has been processed (Table~\ref{tbl:metadata-description}). The following listing contains a sample document:
+several additional information regarding the jar file that has been processed (Table~\ref{tbl:metadata-description}). The following listing contains an excerpt:
 
 \begin{verbatim}
 {"JarMetadata": {"jar_filename": "",
@@ -206,15 +206,18 @@ several additional information regarding the jar file that has been processed (T
  "BugCollection": { /* FindBugs data */ }}
 \end{verbatim}
 
-
+Since Mongo{\sc db} provides a rich query interface, it was easy to either create
+queries to find out basic information like:
+``how many bad practice bugs exist in the repository", or
+create scripts that can help us capture correlations
+that could provide valuable findings. Figure~\ref{fig:bug-per} shows how software 
+bugs are distributed among the repository.
 
 \begin{table}
 \centering
 \caption{Jar metadata description}
 \label{tbl:metadata-description}
 \begin{tabular}{l p{5.0cm}}
- \hline
-\textbf{Key} & \textbf{Value}\\
  \hline
 \verb|jar_filename| & JAR's filename\\
 \verb|jar_size| & The size of the JAR file\\
@@ -226,14 +229,6 @@ several additional information regarding the jar file that has been processed (T
  \hline
  \end{tabular}
 \end{table}
-
-Hence, it is easy to either create
-queries to find out basic information like:
-``how many bad practice bugs exist in the repository", or
-create scripts that can help us capture correlations
-that could provide valuable findings.
-Figure~\ref{fig:bug-per} shows how software bugs are distributed among the
-repository.
 
 \begin{figure}[t]
 	\centering
