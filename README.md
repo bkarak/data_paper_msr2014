@@ -20,8 +20,9 @@ to identify all bugs contained in it.
 
 Download
 --------
+* *Dataset*: The raw dump of the [MongoDB](http://www.mongodb.org/) database can be downloaded from [here](http://istlab.dmst.aueb.gr/~bkarak/findbugs.tar.bz2). To restore it, you can use the *mongorestore* utility, which is shipped with a typical MongoDB installation package.
+* *Tools*: There is a number of tools and libraries, which were developed to process the data collected and produce the published results. Inside the [analysis](https://github.com/bkarak/data_paper_msr2014/tree/master/analysis) directory there are numerous python, R and ruby scripts with examples how to process the data.
 
-* *Tools*: 
 
 Publications
 ------------
@@ -33,8 +34,5 @@ Publications
 Contributors
 ------------
 
-* Dimitrios Mitropoulos
-* Vassilios Karakoidas
-* Panos Louridas
-* Georgios Gousios
-* Diomidis Spinellis
+[Dimitrios Mitropoulos](http://istlab.dmst.aueb.gr/content/members/m_dimitro.html), [Vassilios Karakoidas](http://bkarak.wizhut.com/),
+[Panos Louridas](http://istlab.dmst.aueb.gr/content/members/m_louridas.html),[Georgios Gousios](http://www.gousios.gr/), [Diomidis Spinellis](http://www.dmst.aueb.gr/dds)
