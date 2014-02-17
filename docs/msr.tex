@@ -174,60 +174,49 @@ and reports bug collections that include all the bugs discovered in a
 {\sc jar} file. For every registered bug, there are numerous accompanying features
 like the class, the method and the line that the bug was found.
 When the task was completed the queue
-was notified and the next task was requested. A schematic representation of
-the data processing architecture can be seen in Figure~\ref{fig:arch}.
+was notified and the next task was requested.
 
-\begin{figure} [h]
-  \begin{center}
-    \includegraphics[scale=0.73]{figures/arch.pdf}
-  \end{center}
-  \caption{The data processing architecture.}
-  \label{fig:arch}
-\end{figure}
+A threat to the internal validity of our experiment
+could be the false alarms of the
+FindBugs tool~\cite{AP10, HP04}.
+For instance, reported security bugs may not
+be applicable to an application's typical use context.
+For instance, FindBugs could report an {\sc sql}
+injection vulnerability~\cite{RL12}
+in an application that receives no external input.
+In this particular context, this would be a false positive alarm.
 
 \section{Data and Findings}
 \label{sec:find}
 
-As we mentioned earlier our data was stored in a
-Mongo{\sc db} database, thus all the data were 
-converted to the {\sc json} format. FindBugs output data is in {\sc xml} format. The conversion was a straight forward mapping
-of the {\sc xml} elements to {\sc json} objects. In addition, to the FindBugs data, we added a metadata section, which contained
-several additional information regarding the jar file that has been processed (Table~\ref{tbl:metadata-description}). The following listing contains an excerpt:
-
-\begin{verbatim}
-{"JarMetadata": {"jar_filename": "",
-                 "jar_size": "",
-                 "version": "",
-                 "version_list": "",
-                 "artifact_id": "",
-                 "group_id": "",
-                 "dependencies": ""}, 
- "BugCollection": { /* FindBugs data */ }}
-\end{verbatim}
-
-Since Mongo{\sc db} provides a rich query interface, it was easy to either create
-queries to find out basic information like:
-``how many bad practice bugs exist in the repository", or
-create scripts that can help us capture correlations
-that could provide valuable findings. Figure~\ref{fig:bug-per} shows how software 
-bugs are distributed among the repository.
-
 \begin{table}
 \centering
-\caption{Jar metadata description}
-\label{tbl:metadata-description}
 \begin{tabular}{l p{5.0cm}}
  \hline
-\verb|jar_filename| & JAR's filename\\
-\verb|jar_size| & The size of the JAR file\\
-\verb|version| & The version of the project in Maven repository\\
-\verb|version_list| & A list of project's version numbers\\
-\verb|artifact_id| & The artifact id of the project in Maven repository\\
-\verb|group_id| & The group id of the project in Maven repository\\
-\verb|dependencies| & List of all dependencies for the project\\
+\verb|jar_filename| & {\sc jar}'s filename. \\
+\verb|jar_size| & The size of the {\sc jar} file. \\
+\verb|version| & The version of the project in the repository. \\
+\verb|version_list| & A list of all available version's of this project. \\
+\verb|artifact_id| & The artifact {\sc id} of the project in Maven repository. \\
+\verb|group_id| & The group {\sc id} of the project in Maven repository. \\
+\verb|dependencies| & List of all dependencies for the project. \\
  \hline
  \end{tabular}
+\caption{Jar metadata description.}
+\label{tbl:metadata-description}
 \end{table}
+
+As we mentioned earlier our data was stored in a
+Mongo{\sc db} database, thus all the data were 
+converted to the {\sc json} format. FindBugs output
+data is in {\sc xml} format. The conversion was a
+straight forward mapping
+of the {\sc xml} elements to {\sc json} objects.
+In addition, to the FindBugs data, we added a metadata
+section, which contained
+several additional information regarding the {\sc jar}
+file that has been processed
+(see Table~\ref{tbl:metadata-description}).
 
 \begin{figure}[t]
 	\centering
@@ -235,6 +224,90 @@ bugs are distributed among the repository.
 	\caption{Bug percentage in Maven repository.}
 	\label{fig:bug-per} 
 \end{figure}
+
+Since Mongo{\sc db} provides a rich query interface,
+it was easy to either create
+queries to find out basic information like:
+``how many bad practice bugs exist in the repository", or
+create scripts that can help us capture correlations
+that could provide interesting findings. For instance,
+Figure~\ref{fig:bug-per} shows how software 
+bugs are distributed among the repository.
+
+Together with our dataset, we have created a series of
+scripts to exhibit how it can be used regarding
+the evolution of software bugs.
+Table~\ref{tbl:bugsperversion} shows the relation between
+bugs and time. This relation, can be traced from the number of
+bugs per category in each project version. We can then calculate the
+Spearman correlations between the defects count and the ordinal
+version number across all projects to see if bigger versions relate to
+higher or lower defect counts.
+The zero tendency though, applies to all versions of all projects together.
+Thus, we also performed Spearman correlations between bug counts and version
+ordinals in all projects we examined individually. These paint a different picture
+from the above table, shown in Figure~\ref{fig:bugsversionscorr}. The
+spike in point zero is explained by the large number of projects for
+which no correlation could be established---the scale is
+logarithmic.
+Figure~\ref{fig:bugdiffs}, presents a histogram of the changes
+of different bug counts in
+project versions. In most cases, a bug count does not change between
+versions; but when it does change, it may change upwards or downwards.
+
+\begin{table}[tphp]
+    \centering
+    \caption{Correlations between version and defects count.}
+    \label{tbl:bugsperversion}
+    \input{bugsperversion.tex}
+\end{table}
+
+\begin{figure*}[p]
+  \centering
+  \includegraphics[scale=0.30]{bugsversionscorr}
+  \caption{Histograms of correlations between bug counts and version
+    ordinals per project. In brackets the total population size and
+    the number of no correlation instances.}
+  \label{fig:bugsversionscorr}
+  \centering
+  \includegraphics[scale=0.35]{bugdiffs}
+  \caption{Changes in bug counts between versions.}
+  \label{fig:bugdiffs}
+\end{figure*}
+
+To examine the relation between the persistence of different kinds of
+bugs we used as a persistence
+indicator the number of versions a bug remains open in a project. To
+``tag" a bug we created a bug identifier by using the type of the bug,
+the method name and the class name in which the bug was found in. We
+chose not to use the line number of the location of the bug since it
+could change from version to version and after a possible code
+refactoring. We grouped the persistence numbers by bug categories and
+then performed a Mann-Whitney $U$~\cite{HM98} test among all bug
+category pairs. The results are presented in
+Table~\ref{tbl:bug_persistence} (at the end of this paper). Cells in
+brackets show pairs where no statistically significant difference was
+found.
+
+In addition, we explored the relation between defects with the size of a project
+version, measured by the size of its {\sc jar} file by carrying out
+correlation tests between the size and the defect counts for each
+project and version. The results can be seen in
+Table~\ref{tbl:jarsizecorr}.
+
+Finally, Figure~\ref{fig:corrplot} presents the pairwise correlations
+between all bug categories. To establish these correlations,
+we calculated the
+correlations between the number of distinct bugs that appeared in
+a project throughout its lifetime.
+
+\begin{table}[hbt]
+    \centering
+    \caption{Correlations between {\sc jar} size and defects count.}
+    \label{tbl:jarsizecorr}
+    \input{jarsizecorr.tex}
+\end{table}
+
 
 \begin{figure}
   \centering
@@ -253,9 +326,13 @@ Apart from basic information like individual methods, classes,
 packages and lines of code for every {\sc jar}, this dataset
 also includes a database with all the
 connections between the aforementioned elements.
+%Our work goes a step further and includes for every {\sc jar}
+%of the repository, all the software bug that it contains.
 
 \section{Conclusions}
 \label{sec:conc}
+
+
 
 \bibliographystyle{abbrv}
 \bibliography{msr}  
