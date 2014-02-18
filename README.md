@@ -20,14 +20,14 @@ to identify all bugs contained in it.
 
 Download
 --------
-* *Dataset*: The raw dump of the [MongoDB](http://www.mongodb.org/) database can be downloaded from [here](http://istlab.dmst.aueb.gr/~bkarak/findbugs.tar.bz2). To restore it, you can use the *mongorestore* utility, which is shipped with a typical MongoDB installation package.
+* *Dataset*: The raw dump of our [MongoDB](http://www.mongodb.org/) database can be downloaded from [here](http://istlab.dmst.aueb.gr/~bkarak/findbugs.tar.bz2). To restore it, you can use the *mongorestore* utility, which is shipped with a typical MongoDB installation package.
 * *Tools*: There is a number of tools and libraries, which were developed to process the data collected and produce the published results. Inside the [analysis](https://github.com/bkarak/data_paper_msr2014/tree/master/analysis) directory there are numerous python, R and ruby scripts with examples how to process the data.
 
 
 Publications
 ------------
 
-* Dimitris Mitropoulos, Vassilios Karakoidas, Panos Louridas, Georgios Gousios, and Diomidis Spinellis. Dismal code: Studying the evolution of security bugs. *In Proceedings of the LASER Workshop 2013, Learning from Authoritative Security Experiment Results*, pages 37-48. Usenix Association, October 2013. (See also [Github repository](https://github.com/bkarak/evol_security_publication_2012))
+* Dimitris Mitropoulos, Vassilios Karakoidas, Panos Louridas, Georgios Gousios, and Diomidis Spinellis. Dismal code: Studying the evolution of security bugs. *In Proceedings of the LASER Workshop 2013, Learning from Authoritative Security Experiment Results*, pages 37-48. Usenix Association, October 2013. (See also the corresponding [Github repository](https://github.com/bkarak/evol_security_publication_2012))
 
 
 Contributors
