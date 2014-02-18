@@ -28,7 +28,6 @@ Publications
 ------------
 
 * Dimitris Mitropoulos, Vassilios Karakoidas, Panos Louridas, Georgios Gousios, and Diomidis Spinellis. Dismal code: Studying the evolution of security bugs. *In Proceedings of the LASER Workshop 2013, Learning from Authoritative Security Experiment Results*, pages 37-48. Usenix Association, October 2013. (See also [Github repository](https://github.com/bkarak/evol_security_publication_2012))
-* Dimitris Mitropoulos, Vassilios Karakoidas, Panos Louridas, Georgios Gousios, and Diomidis Spinellis. The Bug Catalog of the Maven Ecosystem, MSR 2014.
 
 
 Contributors
