@@ -163,8 +163,11 @@ repository (a Mongo{\sc db} database system).
 A typical processing cycle of a worker included the following steps: after
 the worker spawned, it requested a task from the queue. This task contained
 the {\sc jar} name, which was typically a project version that was downloaded locally.
-First, specific {\sc jar} metadata were calculated and stored. Such metadata included
-its size, its dependencies, and a number that represented the ordinal version number
+First, specific {\sc jar} metadata were calculated and stored
+(see Table~\ref{tbl:metadata-description}).
+Such metadata included
+its size, its dependencies, and a number that
+represented the ordinal version number
 of the release. This number was derived from an {\sc xml} file that
 accompanies every project in the Maven repository called {\it
 maven-metadata.xml}. Then, FindBugs was invoked by the worker and its results were
@@ -175,18 +178,22 @@ categories\footnote{\url{http://findbugs.sourceforge.net/bugDescriptions.html}}
 and reports bug collections that include all the bugs discovered in a
 {\sc jar} file. For every registered bug, there are numerous accompanying features
 like the class, the method and the line that the bug was found.
+Its results, also include additional information like
+the number of classes included in the examined {\sc jar}
+and others.
 When the task was completed the queue
 was notified and the next task was requested.
 
-A threat to the internal validity of our experiment
-could be the false alarms of the
-FindBugs tool~\cite{AP10, HP04}.
+A threat to the internal
+validity of our experiment could be the false
+alarms of the FindBugs tool~\cite{AP10, HP04}.
 Specifically, reported security bugs may not
 be applicable to an application's typical use context.
 For instance, FindBugs could report an {\sc sql}
 injection vulnerability~\cite{RL12}
 in an application that receives no external input.
-In this particular context, this would be a false positive alarm.
+In this particular context, this would be a false
+positive alarm.
 
 \section{Data and Findings}
 \label{sec:find}
@@ -209,16 +216,22 @@ In this particular context, this would be a false positive alarm.
 \end{table}
 
 As we mentioned earlier our data was stored in a
-Mongo{\sc db} database. FindBugs though,
-outputs its' results in  {\sc xml} format.
+Mongo{\sc db} database.
+FindBugs incorporates a priori an ability to perform
+sophisticated queries on bug databases and
+track warnings across multiple versions of code being
+studied.\footnote{\url{http://findbugs.sourceforge.net/manual/datamining.html}}
+FindBugs though,
+outputs its results in  {\sc xml} format.
 Hence all the data were
 converted to the {\sc json} format
 by mapping all {\sc xml} elements to {\sc json} objects.
-In addition, to the FindBugs data, we also added a metadata
-section, which contained
-several additional information regarding the {\sc jar}
-file that has been processed
-(see Table~\ref{tbl:metadata-description}).
+Since Mongo{\sc db} provides a rich query interface,
+it was easy to either create
+simple scripts to find out
+how software bugs are distributed among the
+repository. Figure~\ref{fig:bug-per}
+actually, illustrates this distribution.
 
 \begin{figure}[t]
 	\centering
@@ -226,13 +239,6 @@ file that has been processed
 	\caption{Bug percentage in Maven repository.}
 	\label{fig:bug-per} 
 \end{figure}
-
-Since Mongo{\sc db} provides a rich query interface,
-it was easy to either create
-simple scripts to find out basic information like
-``how software bugs are distributed among the
-repository?". Figure~\ref{fig:bug-per}
-actually, illustrates this distribution.
 
 %But apart from such simple observations
 %create scripts that can help us capture correlations
@@ -242,7 +248,6 @@ Together with our dataset, we have also created a series of
 scripts to exhibit how the dataset can be used
 to capture correlations regarding
 the evolution of software bugs.
-
 Table~\ref{tbl:bugsperversion} shows the relation between
 bugs and time. This relation, can be traced from the number of
 bugs per category in each project version. Specifically, we
@@ -332,6 +337,10 @@ Apart from basic information like individual methods, classes,
 packages and lines of code for every {\sc jar}, this dataset
 also includes a database with all the
 connections between the aforementioned elements.
+Our work differs from this research because it
+reports all bugs coming from the output of a
+static analysis tool, for each {\sc jar}
+contained in the Maven repository.
 
 \section{Conclusions}
 \label{sec:conc}
