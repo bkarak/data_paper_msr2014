@@ -153,31 +153,13 @@ and the Maven repository hosts projects from languages other than Java such as S
 Clojure, etc. 
 
 The initial snapshot of the repository was obtained in January 2012 and those experinment took
-place in the end of 2012. In the meantime, several versions were released for some of the selected project.
+place in the end of 2012. The statistic measurements concerning the repository can be seen in 
+Table~\ref{tbl:repository}. In the meantime, several versions were released for some of the selected project.
 We added them in an incremental way, using the following methodology; we implemented a script that cross-checked 
 all the local versions of the project with those online;\footnote{\url{http://mirrors.ibiblio.org/maven2/}} and downloaded
 the missing ones.
 
-The whole process produced a file list with all the valid {\sc jar} files for our experinment. Each file on the list were uploaded as a separate task in the task queue (Figure~XXX). Concurent workers processed each task and submitted the results to the mongo database.
-
-When the processing was completed, we ran a series of sanity checks on the results, to check their validity. We discovered several issues, which we addressed with various approaches. The most common problem was Findbugs out-of-memory crashes, which demanded to repeat the process for those {\sc jar}s with the appropriate settings in the Java runtime environment.
-
-The sanitisation process was consisted of four iterations, until all our scripts indicate that our data was correct.
-
-In particular, we obtained a snapshot (January 2012) of
-the repository and handled it locally to retrieve a list of all
-the names of the Java project versions that existed in it.
-The statistic measurements concerning the repository can be seen in 
-Table~\ref{tbl:repository}.
-
-With the {\sc jar} list at hand, we created a series of processing tasks
-and added them to a task queue mechanism (a Rabbit{\sc mq} message
-broker). Then we executed twenty five workers (custom Python scripts)
-that checked out tasks from the queue, processed each project version
-and stored the results to the data
-repository (a Mongo{\sc db} database system).
-
-A typical processing cycle of a worker included the following steps: after
+The whole process produced a file list with all the valid {\sc jar} files for our experinment. Each file on the list were uploaded as a separate task in the task queue (Figure~XXX). Concurent workers processed each task and submitted the results to the mongo database. A typical processing cycle of a worker included the following steps: after
 the worker spawned, it requested a task from the queue. This task contained
 the {\sc jar} name, which was typically a project version that was downloaded locally.
 First, specific {\sc jar} metadata were calculated and stored
@@ -198,10 +180,10 @@ like the class, the method and the line that the bug was found.
 Its results, also include additional information like
 the number of classes included in the examined {\sc jar}
 and others.
-When the task was completed the queue
-was notified and the next task was requested.
 
-A threat to the internal
+When the processing was completed, we ran a series of sanity checks on the results, to check their validity. We discovered several issues, which we addressed with various approaches. The most common problem was Findbugs out-of-memory crashes, which demanded to repeat the process for those {\sc jar}s with the appropriate settings in the Java runtime environment.
+
+The sanitisation process was consisted of four iterations, until all our scripts indicate that our data was correct. A threat to the internal
 validity of our experiment could be the false
 alarms of the FindBugs tool~\cite{AP10, HP04}.
 Specifically, reported security bugs may not
