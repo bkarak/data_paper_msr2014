@@ -141,12 +141,25 @@ Range (over versions) & 337\\
 \section{Data Collection Experiment}
 \label{sec:exp}
 
-First, we scanned the Maven repository only
-for appropriate {\sc jar}s and created a list that included them.
-This is because FindBugs analyzes applications written in Java,
-and the Maven repository hosts projects from
-languages other than Java such as Scala, Groovy,
-Clojure, etc. Thus we filtered out such projects.
+The data collection process started with the mirroring of the Maven repository.
+The repository typically contains the {\sc jar} files with sources and binary distributions, 
+{\sc xml} metadata files that contain the version list for each project and its dependencies and one 
+metadata file, also in {\sc xml} format, with specific data for each version.
+
+We exported a list of all the {\sc jar} files in the repository and initially we excluded those
+that contained the source distribution for the projects. Then we kept all those {\sc jar}s that 
+referred to Java projects, because Findbugs analyzes only applications written in Java,
+and the Maven repository hosts projects from languages other than Java such as Scala, Groovy,
+Clojure, etc. 
+
+The initial snapshot of the repository was obtained in January 2012 and those experinment took
+place in the end of 2012. In the meantime, several versions were released for some of the selected project.
+We added them in an incremental way, using the following methodology; we implemented a script that cross-checked 
+all the local versions of the project with those online;\footnote{\url{http://mirrors.ibiblio.org/maven2/}} and downloaded
+the missing ones.
+
+The whole process produced a file list with all the valid {\sc jar} files for our experinment. 
+
 In particular, we obtained a snapshot (January 2012) of
 the repository and handled it locally to retrieve a list of all
 the names of the Java project versions that existed in it.
