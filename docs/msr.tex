@@ -161,25 +161,10 @@ the missing ones.
 
 The whole process produced a file list with all the valid {\sc jar} files for our experinment. Each file on the list were uploaded as a separate task in the task queue (Figure~XXX). Concurent workers processed each task and submitted the results to the mongo database. A typical processing cycle of a worker included the following steps: after
 the worker spawned, it requested a task from the queue. This task contained
-the {\sc jar} name, which was typically a project version that was downloaded locally.
-First, specific {\sc jar} metadata were calculated and stored
-(see Table~\ref{tbl:metadata-description}).
-Such metadata included
-its size, its dependencies, and a number that
-represented the ordinal version number
+the {\sc jar} name, which was typically a project version that was downloaded locally. First, specific {\sc jar} metadata were calculated and stored (see Table~\ref{tbl:metadata-description}). Such metadata included its size, its dependencies, and a number that represented the ordinal version number
 of the release. This number was derived from an {\sc xml} file that
-accompanies every project in the Maven repository called {\it
-maven-metadata.xml}. Then, FindBugs was invoked by the worker and its results were
-also stored in the data repository. 
-FindBugs separates software bugs into nine
-categories\footnote{\url{http://findbugs.sourceforge.net/bugDescriptions.html}}
-(including {\it Bad Practice}, {\it Security}, {\it Performance} and others)
-and reports bug collections that include all the bugs discovered in a
-{\sc jar} file. For every registered bug, there are numerous accompanying features
-like the class, the method and the line that the bug was found.
-Its results, also include additional information like
-the number of classes included in the examined {\sc jar}
-and others.
+accompanies every project in the Maven repository called {\it maven-metadata.xml}. Then, FindBugs was invoked by the worker and its results were also stored in the data repository. 
+FindBugs separates software bugs into nine categories\footnote{\url{http://findbugs.sourceforge.net/bugDescriptions.html}} (including {\it Bad Practice}, {\it Security}, {\it Performance} and others) and reports bug collections that include all the bugs discovered in a {\sc jar} file. For every registered bug, there are numerous accompanying features like the class, the method and the line that the bug was found. Its results, also include additional information like the number of classes included in the examined {\sc jar} and others.
 
 When the processing was completed, we ran a series of sanity checks on the results, to check their validity. We discovered several issues, which we addressed with various approaches. The most common problem was Findbugs out-of-memory crashes, which demanded to repeat the process for those {\sc jar}s with the appropriate settings in the Java runtime environment.
 
