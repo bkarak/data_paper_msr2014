@@ -158,7 +158,11 @@ We added them in an incremental way, using the following methodology; we impleme
 all the local versions of the project with those online;\footnote{\url{http://mirrors.ibiblio.org/maven2/}} and downloaded
 the missing ones.
 
-The whole process produced a file list with all the valid {\sc jar} files for our experinment. 
+The whole process produced a file list with all the valid {\sc jar} files for our experinment. Each file on the list were uploaded as a separate task in the task queue (Figure~XXX). Concurent workers processed each task and submitted the results to the mongo database.
+
+When the processing was completed, we ran a series of sanity checks on the results, to check their validity. We discovered several issues, which we addressed with various approaches. The most common problem was Findbugs out-of-memory crashes, which demanded to repeat the process for those {\sc jar}s with the appropriate settings in the Java runtime environment.
+
+The sanitisation process was consisted of four iterations, until all our scripts indicate that our data was correct.
 
 In particular, we obtained a snapshot (January 2012) of
 the repository and handled it locally to retrieve a list of all
