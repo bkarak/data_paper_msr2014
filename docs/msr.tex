@@ -66,7 +66,13 @@ the Maven central repository (approximately 265{\sc gb} of data),
 we performed an experiment where we statically analyzed the
 repository to detect its software bugs. For our analysis we
 used FindBugs, a tool that examines Java bytecode to detect
-numerous types of bugs. In this paper we present our dataset. 
+numerous types of bugs. In this paper we present the dataset
+that was produced from this experiment.
+The dataset contains the metric results that FindBugs reports for
+every project version included in the ecosystem. For every
+version we also stored specific metadata such as the {\sc jar}'s
+size, it's dependencies and others. Finally, we present
+how researchers can use our dataset to produce interesting results.
 \end{abstract}
 
 \category{D.2.4}{Software Engineering}{Software/Program Verification}[Statistical methods]
@@ -141,7 +147,7 @@ Range (over versions) & 337\\
 \label{sec:exp}
 
 The dataset construction consisted of two basic steps,
-namely: {\it data provenance} and {\it FindBugs results
+namely: {\it data cleaning} and {\it FindBugs results
 collection}. Table~\ref{tbl:tools-size} presents some
 metrics concerning the tools created for
 the process.
@@ -161,7 +167,7 @@ the dataset construction process.}
 \label{tbl:tools-size}
 \end{table}
 
-{\bf Data Provenance} Initially, we obtained a snapshot
+{\bf Data Cleaning} Initially, we obtained a snapshot
 (January 2012) of the Maven repository and handled it
 locally to retrieve a list
 of all the names of the project versions that existed in
@@ -172,7 +178,8 @@ Since our construction process took place at the end of 2012,
 several versions were released for some of the projects.
 Thus, we cross-checked
 the local versions with those online\footnote{\url{http://mirrors.ibiblio.org/maven2/}}
-and added the missing ones.
+and supplemented the missing {\sc jar}s that have been
+added to the repository during this period.
 The statistic measurements concerning
 the repository can be seen in Table~\ref{tbl:repository}
 and the distribution of version
@@ -231,7 +238,7 @@ results to the data repository (a Mongo{\sc db} database system).
 The collection process lasted for approximately four and
 a half days.
 
-\begin{figure}[h]
+\begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.73]{figures/arch.pdf}
   \end{center}
@@ -307,7 +314,7 @@ Table~\ref{tbl:bug-cat}) and reports {\it bug collections}
 that include all the bugs
 discovered in a {\sc jar} file. For every registered bug, there are
 numerous accompanying features like the class, the method
-and the line that the bug was found. Its results, also include
+and the line that the bug was found. FindBug's results, also include
 additional information like the number of classes included in
 the examined {\sc jar} and others.
 FindBugs though,
@@ -316,7 +323,7 @@ Hence, all the data were
 converted to the {\sc json} format
 by mapping all {\sc xml} elements to {\sc json} objects.
 
-\begin{table}
+\begin{table}[b]
 \centering
 \begin{tabular}{l p{5.0cm}}
  \hline
@@ -337,7 +344,7 @@ by mapping all {\sc xml} elements to {\sc json} objects.
 As we mentioned in Section~\ref{sec:exp}, our
 workers calculated and stored specific metadata together
 with the FindBugs results.
-Such metadata included its size (in terms of bytecode),
+Such metadata included the {\sc jar}'s size (in terms of bytecode),
 its dependencies
 (derived from the {\it pom.xml} file),
 and a number that represented the ordinal version
@@ -346,11 +353,11 @@ Table~\ref{tbl:metadata-description}).
 This number was derived from an {\sc xml}
 file that accompanies every project in the Maven repository
 called {\it maven-metadata.xml}.
-The following listing contains a sample document
-containing all the above information (note
+The following listing shows the format of the
+information we collected (note
 that the results of FindBugs are too large to
 show. To see a complete instance please visit our
-{\tt github} repository --- see Section~\ref{sec:conc}):
+GitHub repository --- see Section~\ref{sec:conc}):
  
 \begin{verbatim}
 {"JarMetadata": {
@@ -384,7 +391,7 @@ show. To see a complete instance please visit our
 %create scripts that can help us capture correlations
 %that could provide interesting findings. For instance,
 
-\section{Dataset Exploitation}
+\section{Harnessing Our Dataset}
 \label{sec:exploit}
 
 Since Mongo{\sc db} provides a rich query interface,
@@ -407,7 +414,7 @@ count and the ordinal version number across all projects.
 The zero tendency that can be seen on Table~\ref{tbl:bugsperversion}
 applies to all versions of all projects together.
 
-\begin{table}[tphp]
+\begin{table}[b]
     \centering
         \input{bugsperversion.tex}
 	\caption{Correlations between version and defects count.}
@@ -455,23 +462,23 @@ based on this dataset.
 
 Limitations concerning out dataset involve some
 {\sc jar}s that were in the initial {\sc jar} list
-created during data provenance but when the
+created during data cleaning but when the
 FindBugs result collection was performed, they
 were not online.
 
 A threat to the internal validity of our experiment could be the false
-alarms of the FindBugs tool~\cite{AP10, HP04}.
+alarms of the FindBugs tool~\cite{AP10}.
 Specifically, reported security bugs may not
 be applicable to an application's typical use context.
 For instance, FindBugs could report an {\sc sql}
-injection vulnerability~\cite{RL12}
+injection vulnerability
 in an application that receives no external input.
 In this particular context, this would be a false
 positive alarm.
 
 A disadvantage of our dataset is that as projects evolve
 the dataset gets older. Also, even if we checked for
-new versions before after data provenance and before
+new versions before data cleaning and before
 the results collection, we did not checked for new
 projects added during this time frame.
 
@@ -495,7 +502,7 @@ contained in the Maven repository.
 
 In this paper, we have presented a dataset that contains
 for every {\sc jar} of the Maven central repository,
-all the software bug that it contains among with some
+all the software bugs that it contains among with some
 other metadata mentioned in Section~\ref{sec:exploit}.
 We have also shown how our data can be
 used to extract results concerning software evolution.
