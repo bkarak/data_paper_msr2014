@@ -66,8 +66,7 @@ the Maven central repository (approximately 265{\sc gb} of data),
 we performed an experiment where we statically analyzed the
 repository to detect its software bugs. For our analysis we
 used FindBugs, a tool that examines Java bytecode to detect
-numerous types of bugs. In this paper we present our data collection
-experiment and show our findings regarding software evolution.
+numerous types of bugs. In this paper we present our dataset. 
 \end{abstract}
 
 \category{D.2.4}{Software Engineering}{Software/Program Verification}[Statistical methods]
@@ -111,7 +110,7 @@ Specifically, we ran FindBugs on all the project versions of all
 the projects that exist in the repository
 to identify all bugs contained in it.
 
-In this paper we present: a) the experiment performed to obtain the
+In this paper we present: a) the construction process to obtain the
 collection of the metric results that the FindBugs tool produces 
 for every project version of the repository (115,214 {\sc jar}s)
 and b) how researchers can use the dataset and produce
@@ -138,35 +137,144 @@ Range (over versions) & 337\\
 \label{tbl:repository}
 \end{table}
 
-\section{Data Collection Experiment}
+\section{Dataset Construction Process}
 \label{sec:exp}
 
-The data collection process started with the mirroring of the Maven repository.
-The repository typically contains the {\sc jar} files with sources and binary distributions, 
-{\sc xml} metadata files that contain the version list for each project and its dependencies and one 
-metadata file, also in {\sc xml} format, with specific data for each version.
+The dataset construction consisted of two basic steps,
+namely: {\it data provenance} and {\it FindBugs results
+collection}. Table~\ref{tbl:tools-size} presents some
+metrics concerning the tools created for
+the process.
 
-We exported a list of all the {\sc jar} files in the repository and initially we excluded those
-that contained the source distribution for the projects. Then we kept all those {\sc jar}s that 
-referred to Java projects, because Findbugs analyzes only applications written in Java,
-and the Maven repository hosts projects from languages other than Java such as Scala, Groovy,
-Clojure, etc. 
+\begin{table}
+\centering
+\begin{tabular}{l r}
+ \hline
+\verb|Python Scripts| & 14\\
+\verb|Lines of Code| & 1256\\
+\verb|Code Size (KB)| & 92\\
+\hline
+\end{tabular}
+\caption{Size metrics concerning
+the tools created for
+the dataset construction process.}
+\label{tbl:tools-size}
+\end{table}
 
-The initial snapshot of the repository was obtained in January 2012 and those experinment took
-place in the end of 2012. The statistic measurements concerning the repository can be seen in 
-Table~\ref{tbl:repository}. In the meantime, several versions were released for some of the selected project.
-We added them in an incremental way, using the following methodology; we implemented a script that cross-checked 
-all the local versions of the project with those online;\footnote{\url{http://mirrors.ibiblio.org/maven2/}} and downloaded
-the missing ones.
+{\bf Data Provenance} Initially, we obtained a snapshot
+(January 2012) of the Maven repository and handled it
+locally to retrieve a list
+of all the names of the project versions that existed in
+it. In addition, we filtered out projects written in programming
+languages other than Java (such as Scala, Groovy, Clojure, etc.)
+because FindBugs analyzes only Java bytecode.
+Since our construction process took place at the end of 2012,
+several versions were released for some of the projects.
+Thus, we cross-checked
+the local versions with those online\footnote{\url{http://mirrors.ibiblio.org/maven2/}}
+and added the missing ones.
+The statistic measurements concerning
+the repository can be seen in Table~\ref{tbl:repository}
+and the distribution of version
+count among the selected projects is
+presented in Figure~\ref{fig:version-count}.
 
-The whole process produced a file list with all the valid {\sc jar} files for our experinment. Each file on the list were uploaded as a separate task in the task queue (Figure~XXX). Concurent workers processed each task and submitted the results to the mongo database. A typical processing cycle of a worker included the following steps: after
-the worker spawned, it requested a task from the queue. This task contained
-the {\sc jar} name, which was typically a project version that was downloaded locally. First, specific {\sc jar} metadata were calculated and stored (see Table~\ref{tbl:metadata-description}). Such metadata included its size, its dependencies, and a number that represented the ordinal version number
-of the release. This number was derived from an {\sc xml} file that
-accompanies every project in the Maven repository called {\it maven-metadata.xml}. Then, FindBugs was invoked by the worker and its results were also stored in the data repository. 
-FindBugs separates software bugs into nine categories\footnote{\url{http://findbugs.sourceforge.net/bugDescriptions.html}} (including {\it Bad Practice}, {\it Security}, {\it Performance} and others) and reports bug collections that include all the bugs discovered in a {\sc jar} file. For every registered bug, there are numerous accompanying features like the class, the method and the line that the bug was found. Its results, also include additional information like the number of classes included in the examined {\sc jar} and others.
+\begin{figure}[t]
+	\centering
+	\includegraphics[scale=0.37]{version_count.pdf}
+	\caption{Distribution of version count among project population.}
+	\label{fig:version-count}
+\end{figure}
 
-When the processing was completed, we ran a series of sanity checks on the results, to check their validity. We discovered several issues, which we addressed with various approaches. The most common problem was Findbugs out-of-memory crashes, which demanded to repeat the process for those {\sc jar}s with the appropriate settings in the Java runtime environment. The sanitisation process was consisted of four iterations, until all our scripts indicate that our data was correct. 
+%The first is to filter out non-Java jars... for that we used the following heuristics: 
+
+%- heuristic 1
+%- heuristic 2 
+
+%The data collection process started with the mirroring of the Maven repository.
+%The repository typically contains the {\sc jar} files with sources and binary distributions, 
+%{\sc xml} metadata files that contain the version list for each project and its dependencies and one 
+%metadata file, also in {\sc xml} format, with specific data for each version.
+
+%We exported a list of all the {\sc jar} files in the repository and initially we excluded those
+%that contained the source distribution for the projects. Then we kept all those {\sc jar}s that 
+%referred to Java projects, because Findbugs analyzes only applications written in Java,
+%and the Maven repository hosts projects from languages other than Java such as Scala, Groovy,
+%Clojure, etc. 
+
+%The initial snapshot of the repository was obtained in January 2012 and those experinment took
+%place in the end of 2012. The statistic measurements concerning the repository can be seen in 
+%Table~\ref{tbl:repository}. In the meantime, several versions were released for some of the selected project.
+%We added them in an incremental way, using the following methodology; we implemented a script that cross-checked 
+%all the local versions of the project with those online;\footnote{\url{http://mirrors.ibiblio.org/maven2/}} and downloaded
+%the missing ones.
+
+{\bf FindBugs Results Collection} The dataset
+size prohibited the analysis
+on a single host. For this reason,
+we opted for distributed processing.
+A schematic representation of the collection of
+the FindBugs metric results can be seen in Figure~\ref{fig:arch}.
+
+%We created an architecture that can be seen in Fig (add figure).
+%Jobs were put into the queue, results in Mongo.... It took 29 (?)
+%hours, that many records were produced that many records failed
+%because of reasons 12,,3 etc
+
+In particular, we created a series of processing tasks
+based on the {\sc jar} list from the
+previous step, and added them to a task queue mechanism (a
+Rabbit{\sc mq} message broker). Then we executed twenty five
+workers (custom Python scripts) that checked out tasks from
+the queue, processed each project version and stored the
+results to the data repository (a Mongo{\sc db} database system).
+The collection process lasted for approximately four and
+a half days.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.73]{figures/arch.pdf}
+  \end{center}
+  \caption{The data processing architecture.}
+  \label{fig:arch}
+\end{figure}
+
+A typical processing cycle of a worker included the
+following steps: after the worker spawned, it requested a task
+from the queue. This task contained the {\sc jar} name, which
+was typically a project version that was downloaded locally.
+First, specific {\sc jar} metadata were calculated and stored (see
+Table~\ref{tbl:metadata-description}).
+Such metadata included its size, its dependencies,
+and a number that represented the ordinal version
+number of the release. This number was derived from an {\sc xml}
+file that accompanies every project in the Maven repository
+called {\it maven-metadata.xml}. Then, FindBugs was invoked
+by the worker and its results were also stored in the data
+repository.
+Note that before invoking FindBugs,
+the worker checked if the {\sc jar} is valid in terms of implementation.
+For instance, for every {\sc jar} the worker checked
+if there were any {\it .class} files before invoking FindBugs.
+FindBugs separates software bugs into nine
+categories\footnote{\url{http://findbugs.sourceforge.net/bugDescriptions.html}}
+(including {\it Bad Practice}, {\it Security}, {\it Performance} and
+others) and reports bug collections that include all the bugs
+discovered in a {\sc jar} file. For every registered bug, there are
+numerous accompanying features like the class, the method
+and the line that the bug was found. Its results, also include
+additional information like the number of classes included in
+the examined {\sc jar} and others. When the task was completed
+the queue was notified and the next task was requested.
+
+When the processing was completed, we ran some tests
+to check the validity of the results.
+A common issue that we discovered was the out-of-memory
+crashes of Findbugs, which demanded the repetition of the process
+for the corresponding {\sc jar}s, with the appropriate
+settings in the Java runtime environment.
+%The sanitisation process was consisted of four iterations,
+%until all our scripts indicate that our data was correct. 
 
 A threat to the internal validity of our experiment could be the false
 alarms of the FindBugs tool~\cite{AP10, HP04}.
@@ -178,19 +286,6 @@ in an application that receives no external input.
 In this particular context, this would be a false
 positive alarm.
 
-\begin{table}
-\centering
-\begin{tabular}{l r}
- \hline
-Python source files & 14\\
-Lines of Code & 1256\\
-Code size (kb) & 92\\
-\hline
-\end{tabular}
-\caption{Size metrics for the tools}
-\label{tbl:tools-size}
-\end{table}
-
 \section{Data and Findings}
 \label{sec:find}
 
@@ -201,6 +296,7 @@ Code size (kb) & 92\\
 \verb|jar_filename| & {\sc jar}'s filename. \\
 \verb|jar_size| & The size of the {\sc jar} file. \\
 \verb|version| & The version of the project in the repository. \\
+\verb|version_number| & The ordinal version number of the release. \\
 \verb|version_list| & A list of all available version's of this project. \\
 \verb|artifact_id| & The artifact {\sc id} of the project in Maven repository. \\
 \verb|group_id| & The group {\sc id} of the project in Maven repository. \\
