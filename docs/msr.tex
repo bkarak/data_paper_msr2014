@@ -61,13 +61,12 @@
 \maketitle
 \begin{abstract}
 Examining software ecosystems can provide the research community
-with useful information. To examine the ecosystem of
-the Maven central repository (approximately 265{\sc gb} of data),
-we performed an experiment where we statically analyzed the
-repository to detect its software bugs. For our analysis we
-used FindBugs, a tool that examines Java bytecode to detect
-numerous types of bugs. In this paper we present the dataset
-that was produced from this experiment.
+with data regarding artifacts, processes, and communities.
+We present a dataset obtained from the Maven central repository
+ecosystem (approximately 265{\sc gb} of data) by statically analyzing
+the repository to detect potential software bugs.
+For our analysis we used FindBugs, a tool that examines Java
+bytecode to detect numerous types of bugs.
 The dataset contains the metrics results that FindBugs reports for
 every project version (a {\sc jar}) included in the ecosystem. For every
 version we also stored specific metadata such as the {\sc jar}'s
@@ -466,7 +465,8 @@ created during data cleaning but when the
 FindBugs result collection was performed, they
 were not online.
 
-A threat to the internal validity of our experiment could be the false
+A threat to the internal validity of our dataset
+construction process could be the false
 alarms of the FindBugs tool~\cite{AP10}.
 Specifically, reported security bugs may not
 be applicable to an application's typical use context.
@@ -507,7 +507,7 @@ other metadata mentioned in Section~\ref{sec:exploit}.
 We have also shown how our data can be
 used to extract results concerning software evolution.
 
-Note that our experiment can be duplicated
+Note that our data collection process can be duplicated
 in order to collect metrics results from other tools that
 examine Java programs like
 {\sc cjkm}\footnote{\url{http://www.spinellis.gr/sw/ckjm/}}
