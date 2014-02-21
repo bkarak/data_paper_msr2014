@@ -65,7 +65,7 @@ with data regarding artifacts, processes, and communities.
 We present a dataset obtained from the Maven central repository
 ecosystem (approximately 265{\sc gb} of data) by statically analyzing
 the repository to detect potential software bugs.
-For our analysis we used FindBugs, a tool that examines Java
+For our analysis we used {\it FindBugs}, a tool that examines Java
 bytecode to detect numerous types of bugs.
 The dataset contains the metrics results that FindBugs reports for
 every project version (a {\sc jar}) included in the ecosystem. For every
@@ -78,9 +78,9 @@ interesting research results, as we show in specific examples.
 \category{D.2.5}{Software Engineering}{Testing and Debugging}[Code inspections and walk-throughs]
 \category{D.2.7}{Software Engineering}{Distribution, Maintenance, and Enhancement}[Version control]
 
-\terms{Static Analysis, Software Ecosystems}
+\terms{Static Analysis, Software Ecosystems.}
 
-\keywords{Maven Repository, FindBugs, Software Bugs}
+\keywords{Maven Repository, FindBugs, Software Bugs.}
 
 \section{Introduction}
 \label{sec:intro}
@@ -117,8 +117,9 @@ to identify all bugs contained in it.
 
 In this paper we present: a) the construction process to obtain the
 collection of the metrics results that the FindBugs tool produces 
-for every project version of the repository (115,214 {\sc jar}s)
-and b) how researchers can use the dataset and produce
+for every project version of the repository (115,214 {\sc jar}s),
+b) our dataset
+and c) how researchers can use the dataset and produce
 meaningful results.
 
 \begin{table}
@@ -261,7 +262,7 @@ if there were any {\it .class} files before invoking FindBugs.
 When the task was completed
 the queue was notified and the next task was requested.
 
-When the processing was completed, we ran some tests
+When the data collection was completed, we ran some tests
 to check the validity of the results.
 A common issue that we discovered was the out-of-memory
 crashes of Findbugs, which demanded the repetition of the process
@@ -275,7 +276,7 @@ settings in the Java Runtime Environment ({\sc jre}).
 
 \begin{table}[t]
 \centering
-\scalebox{0.80}{
+\scalebox{0.79}{
 \begin{tabular}{l p{16em}}
 \hline
 Category & Description\\
@@ -399,7 +400,7 @@ simple scripts to find out
 how software bugs are distributed among the
 repository (see Figure~\ref{fig:bug-per}).
 
-Together with our dataset, we have also created a series of
+Furthermore, we have created a series of
 scripts to exhibit how the dataset can be used
 to capture correlations regarding
 the evolution of software bugs.
@@ -427,7 +428,7 @@ correlation tests between the size and the defect counts for each
 project and version. The results can be seen in
 Table~\ref{tbl:jarsizecorr}.
 
-Finally, Figure~\ref{fig:corrplot} presents the pairwise correlations
+Figure~\ref{fig:corrplot} presents the pairwise correlations
 between all bug categories. To establish these correlations,
 we calculated the correlations between the number of
 distinct bugs that appeared in a project throughout its lifetime.
@@ -478,7 +479,8 @@ positive alarm.
 
 A disadvantage of our dataset is that as projects evolve
 the dataset gets older. Also, even if we checked for
-new versions before data cleaning and before
+new project versions that could have been added
+to the repository after the data cleaning and before
 the results collection, we did not checked for new
 projects added during this time frame.
 
@@ -519,8 +521,7 @@ model checking~\cite{CEES09} on Java bytecode programs,
 and others. To achieve this, instead of invoking
 FindBugs, our worker can invoke such tools.
 
-The complete set of our data and source code
-can be found at
+The complete set of our data and source code can be found at
 \url{https://github.com/bkarak/data_paper_msr2014}.
 
 \bibliographystyle{abbrv}
