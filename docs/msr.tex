@@ -243,28 +243,16 @@ A typical processing cycle of a worker included the
 following steps: after the worker spawned, it requested a task
 from the queue. This task contained the {\sc jar} name, which
 was typically a project version that was downloaded locally.
-First, specific {\sc jar} metadata were calculated and stored (see
-Table~\ref{tbl:metadata-description}).
-Such metadata included its size, its dependencies,
-and a number that represented the ordinal version
-number of the release. This number was derived from an {\sc xml}
-file that accompanies every project in the Maven repository
-called {\it maven-metadata.xml}. Then, FindBugs was invoked
+First, specific {\sc jar} metadata were calculated and stored
+(see Section~\ref{sec:data}).
+Then, FindBugs was invoked
 by the worker and its results were also stored in the data
 repository.
 Note that before invoking FindBugs,
 the worker checked if the {\sc jar} is valid in terms of implementation.
 For instance, for every {\sc jar} the worker checked
 if there were any {\it .class} files before invoking FindBugs.
-FindBugs separates software bugs into nine
-categories\footnote{\url{http://findbugs.sourceforge.net/bugDescriptions.html}}
-(including {\it Bad Practice}, {\it Security}, {\it Performance} and
-others) and reports bug collections that include all the bugs
-discovered in a {\sc jar} file. For every registered bug, there are
-numerous accompanying features like the class, the method
-and the line that the bug was found. Its results, also include
-additional information like the number of classes included in
-the examined {\sc jar} and others. When the task was completed
+When the task was completed
 the queue was notified and the next task was requested.
 
 When the processing was completed, we ran some tests
@@ -272,58 +260,118 @@ to check the validity of the results.
 A common issue that we discovered was the out-of-memory
 crashes of Findbugs, which demanded the repetition of the process
 for the corresponding {\sc jar}s, with the appropriate
-settings in the Java runtime environment.
+settings in the Java Runtime Environment ({\sc jre}).
 %The sanitisation process was consisted of four iterations,
 %until all our scripts indicate that our data was correct. 
 
-A threat to the internal validity of our experiment could be the false
-alarms of the FindBugs tool~\cite{AP10, HP04}.
-Specifically, reported security bugs may not
-be applicable to an application's typical use context.
-For instance, FindBugs could report an {\sc sql}
-injection vulnerability~\cite{RL12}
-in an application that receives no external input.
-In this particular context, this would be a false
-positive alarm.
+\section{Data}
+\label{sec:data}
 
-\section{Data and Findings}
-\label{sec:find}
+\begin{table}[t]
+\centering
+\scalebox{0.80}{
+\begin{tabular}{l p{16em}}
+\hline
+Category & Description\\
+\hline
+Bad Practice & Violations of recommended and essential
+coding practice. \\
+Correctness & Involves coding misting a way that is particularly different from the other bug sakes resulting in code
+that was probably not what the developer intended. \\
+Experimental & Includes unsatisfied obligations. For instance,
+forgetting to close a file. \\
+Internationalization (i18n) & Indicates the use of non-localized methods. \\
+Multi-Threaded ({\sc mt}) Correctness & Thread synchronization issues. \\
+Performance & Involves inefficient memory usage allocation, usage 
+of non-static classes. \\
+Style & Code that is confusing, or
+written in a way that leads to errors.\\
+Malicious Code & Involves variables or fields exposed to classes that should
+not be using them. \\
+Security & Involves input validation issues, unauthorized database connections
+and others. \\
+\hline
+\end{tabular}}
+\caption{Bug categorization according to FindBugs.}
+\label{tbl:bug-cat}
+\end{table}
+
+As we mentioned earlier our data was stored in a
+Mongo{\sc db} database.
+%FindBugs incorporates a priori an ability to perform
+%sophisticated queries on bug databases and
+%track warnings across multiple versions of code being
+%studied.\footnote{\url{http://findbugs.sourceforge.net/manual/datamining.html}}
+FindBugs separates software bugs into nine categories (see
+Table~\ref{tbl:bug-cat}) and reports {\it bug collections}
+that include all the bugs
+discovered in a {\sc jar} file. For every registered bug, there are
+numerous accompanying features like the class, the method
+and the line that the bug was found. Its results, also include
+additional information like the number of classes included in
+the examined {\sc jar} and others.
+FindBugs though,
+outputs its results in  {\sc xml} format.
+Hence, all the data were
+converted to the {\sc json} format
+by mapping all {\sc xml} elements to {\sc json} objects.
 
 \begin{table}
 \centering
 \begin{tabular}{l p{5.0cm}}
  \hline
-\verb|jar_filename| & {\sc jar}'s filename. \\
-\verb|jar_size| & The size of the {\sc jar} file. \\
 \verb|version| & The version of the project in the repository. \\
-\verb|version_number| & The ordinal version number of the release. \\
-\verb|version_list| & A list of all available version's of this project. \\
-\verb|artifact_id| & The artifact {\sc id} of the project in Maven repository. \\
-\verb|group_id| & The group {\sc id} of the project in Maven repository. \\
+\verb|version_order| & The ordinal version number of the release. \\
+\verb|jar_size| & The size of the {\sc jar} file. \\
 \verb|dependencies| & List of all dependencies for the project. \\
+%\verb|version_list| & A list of all available version's of this project. \\
+\verb|group_id| & The group {\sc id} of the project in Maven repository. \\
+\verb|jar_filename| & {\sc jar}'s filename. \\
+\verb|artifact_id| & The artifact {\sc id} of the project in Maven repository. \\
  \hline
  \end{tabular}
 \caption{{\sc jar} metadata description.}
 \label{tbl:metadata-description}
 \end{table}
 
-As we mentioned earlier our data was stored in a
-Mongo{\sc db} database.
-FindBugs incorporates a priori an ability to perform
-sophisticated queries on bug databases and
-track warnings across multiple versions of code being
-studied.\footnote{\url{http://findbugs.sourceforge.net/manual/datamining.html}}
-FindBugs though,
-outputs its results in  {\sc xml} format.
-Hence all the data were
-converted to the {\sc json} format
-by mapping all {\sc xml} elements to {\sc json} objects.
-Since Mongo{\sc db} provides a rich query interface,
-it was easy to either create
-simple scripts to find out
-how software bugs are distributed among the
-repository. Figure~\ref{fig:bug-per}
-actually, illustrates this distribution.
+As we mentioned in Section~\ref{sec:exp}, our
+workers calculated and stored specific metadata together
+with the FindBugs results.
+Such metadata included its size (in terms of bytecode),
+its dependencies
+(derived from the {\it pom.xml} file),
+and a number that represented the ordinal version
+number of the release (see also
+Table~\ref{tbl:metadata-description}).
+This number was derived from an {\sc xml}
+file that accompanies every project in the Maven repository
+called {\it maven-metadata.xml}.
+The following listing contains a sample document
+containing all the above information (note
+that the results of FindBugs are too large to
+show. To see a complete instance please visit our
+{\tt github} repository --- see Section~\ref{sec:conc}):
+ 
+\begin{verbatim}
+{"JarMetadata": {
+    "version": "1.0.0",
+    "version_order": "1",
+    "jar_size": "34768",
+    "dependencies": [
+        {
+            "version" : "2.0",
+            "groupId" : "org.apache.maven",
+            "artifactId" : "maven-project"
+        },
+        { /* other dependencies */ }
+    ],
+    "group_id": "org.apache.myfaces.buildtools",
+    "jar_filename": "myfaces-jdev-plugin-1.0.0.jar",
+    "artifact_id": "myfaces-jdev-plugin",
+    }, 
+ "BugCollection": { /* FindBugs data */ }
+}
+\end{verbatim}
 
 \begin{figure}[t]
 	\centering
@@ -336,27 +384,28 @@ actually, illustrates this distribution.
 %create scripts that can help us capture correlations
 %that could provide interesting findings. For instance,
 
+\section{Dataset Exploitation}
+\label{sec:exploit}
+
+Since Mongo{\sc db} provides a rich query interface,
+it was easy to create
+simple scripts to find out
+how software bugs are distributed among the
+repository (see Figure~\ref{fig:bug-per}).
+
 Together with our dataset, we have also created a series of
 scripts to exhibit how the dataset can be used
 to capture correlations regarding
 the evolution of software bugs.
-Table~\ref{tbl:bugsperversion} shows the relation between
-bugs and time. This relation, can be traced from the number of
-bugs per category in each project version. Specifically, we
-calculated the Spearman correlations between the defects
+First, based on the dataset we produced some metadata
+that contained the number of
+bugs per category in each project version. Based
+on these metadata we estimated the relation between
+bugs and time (see Table~\ref{tbl:bugsperversion}).
+Specifically, we calculated the Spearman correlations between the defects
 count and the ordinal version number across all projects.
 The zero tendency that can be seen on Table~\ref{tbl:bugsperversion}
-though, applies to all versions of all projects together.
-Thus, we also performed Spearman correlations between bug counts and version
-ordinals in all projects we examined individually. These paint a different picture
-from the above table, shown in Figure~\ref{fig:bugsversionscorr}. The
-spike in point zero is explained by the large number of projects for
-which no correlation could be established---the scale is
-logarithmic.
-Figure~\ref{fig:bugdiffs}, presents a histogram of the changes
-of different bug counts in
-project versions. In most cases, a bug count does not change between
-versions; but when it does change, it may change upwards or downwards.
+applies to all versions of all projects together.
 
 \begin{table}[tphp]
     \centering
@@ -365,34 +414,8 @@ versions; but when it does change, it may change upwards or downwards.
     \label{tbl:bugsperversion}
 \end{table}
 
-\begin{figure*}[p]
-  \centering
-  \includegraphics[scale=0.30]{bugsversionscorr}
-  \caption{Histograms of correlations between bug counts and version
-    ordinals per project. In brackets the total population size and
-    the number of no correlation instances.}
-  \label{fig:bugsversionscorr}
-  \centering
-  \includegraphics[scale=0.35]{bugdiffs}
-  \caption{Changes in bug counts between versions.}
-  \label{fig:bugdiffs}
-\end{figure*}
-
-To examine the relation between the persistence of different kinds of
-bugs we used as a persistence
-indicator the number of versions a bug remains open in a project. To
-``tag" a bug we created a bug identifier by using the type of the bug,
-the method name and the class name in which the bug was found in. We
-chose not to use the line number of the location of the bug since it
-could change from version to version and after a possible code
-refactoring. We grouped the persistence numbers by bug categories and
-then performed a Mann-Whitney $U$ test among all bug
-category pairs. The results are presented in
-Table~\ref{tbl:bug_persistence} (at the end of this paper). Cells in
-brackets show pairs where no statistically significant difference was
-found.
-
-In addition, we explored the relation between defects with the size of a project
+In addition, we explored the relation between defects
+with the size of a project
 version, measured by the size of its {\sc jar} file by carrying out
 correlation tests between the size and the defect counts for each
 project and version. The results can be seen in
@@ -400,9 +423,8 @@ Table~\ref{tbl:jarsizecorr}.
 
 Finally, Figure~\ref{fig:corrplot} presents the pairwise correlations
 between all bug categories. To establish these correlations,
-we calculated the
-correlations between the number of distinct bugs that appeared in
-a project throughout its lifetime.
+we calculated the correlations between the number of
+distinct bugs that appeared in a project throughout its lifetime.
 
 \begin{table}[hbt]
     \centering
@@ -415,9 +437,43 @@ a project throughout its lifetime.
 \begin{figure}
   \centering
   \includegraphics[scale=0.43]{corrplot.pdf}
-  \caption{Correlation matrix plot for bug categories.}
+  \caption{Correlation matrix plot for bug categories.
+Blue color indicates positive correlation.
+The darker the color (and the more acute the ellipsis slant),
+the stronger the correlation.}
   \label{fig:corrplot}
 \end{figure}
+
+Research concerning the examination of specific bugs
+can also be facilitated by our dataset. For instance,
+we have examined the characteristics of security
+bugs in a previous paper~\cite{MKLGS13}
+based on this dataset.
+
+\section{Limitations}
+\label{sec:limit}
+
+Limitations concerning out dataset involve some
+{\sc jar}s that were in the initial {\sc jar} list
+created during data provenance but when the
+FindBugs result collection was performed, they
+were not online.
+
+A threat to the internal validity of our experiment could be the false
+alarms of the FindBugs tool~\cite{AP10, HP04}.
+Specifically, reported security bugs may not
+be applicable to an application's typical use context.
+For instance, FindBugs could report an {\sc sql}
+injection vulnerability~\cite{RL12}
+in an application that receives no external input.
+In this particular context, this would be a false
+positive alarm.
+
+A disadvantage of our dataset is that as projects evolve
+the dataset gets older. Also, even if we checked for
+new versions before after data provenance and before
+the results collection, we did not checked for new
+projects added during this time frame.
 
 \section{Related Work}
 \label{sec:rel}
@@ -440,13 +496,21 @@ contained in the Maven repository.
 In this paper, we have presented a dataset that contains
 for every {\sc jar} of the Maven central repository,
 all the software bug that it contains among with some
-other metadata. We have also shown how our data can be
+other metadata mentioned in Section~\ref{sec:exploit}.
+We have also shown how our data can be
 used to extract results concerning software evolution.
-Research concerning the examination of specific bugs
-can also be facilitated by our dataset. For instance,
-we have examined the characteristics of security
-bugs in a previous paper~\cite{MKLGS13}
-based on this dataset.
+
+Note that our experiment can be duplicated
+in order to collect metric results from other tools that
+examine Java programs like
+{\sc cjkm}\footnote{\url{http://www.spinellis.gr/sw/ckjm/}}
+that calculates Chidamber and Kemerer
+object-oriented metrics~\cite{CK91},
+{\it Java Pathfinder}\footnote{\url{http://babelfish.arc.nasa.gov/trac/jpf/wiki}}
+that performs
+model checking~\cite{CEES09} on Java bytecode programs,
+and others. To achieve this, instead of invoking
+FindBugs, our worker can invoke such tools.
 
 The complete set of our data and source code
 can be found at
@@ -454,20 +518,5 @@ can be found at
 
 \bibliographystyle{abbrv}
 \bibliography{msr}  
-
-\begin{landscape}
-  \begin{table}
-    \setlength{\extrarowheight}{0.10cm}
-    \caption{Bug persistence comparison.}
-    \label{tbl:bug_persistence}
-    \resizebox{0.95\columnwidth}{!}{
-    \input{bug_persistence.tex}}\\
-    The matrix presents pairwise Mann-Whitney $U$ test results
-    between the different bug categories. Each cell contains the test
-    result (the value of $U$), the $p$-value, the average for each
-    category and the sample size for each category. Cells in brackets show
-    pairs where no statistically significant difference was found.
-  \end{table}
-\end{landscape}
 
 \end{document}
