@@ -89,26 +89,26 @@ A software ecosystem can be seen as a collection of software projects,
 which are developed and co-evolve in the same environment~\cite{LL10}.
 Components can be interdependent and have multiple versions.
 Examples of such ecosystems include Python's
-{\sc p}y{\sc py}\footnote{\url{http://pypy.org/}}
+{\sc p}y{\sc py}\footnote{\small \url{http://pypy.org/}}
 (Python Package Index), Perl's
-{\sc cpan}\footnote{\url{http://www.cpan.org/}}
+{\sc cpan}\footnote{\small \url{http://www.cpan.org/}}
 (Comprehensive Perl Archive Network), Ruby's
-RubyGems\footnote{\url{http://rubygems.org/}}
-and the Maven Central Repository.\footnote{\url{http://mvnrepository.com/}}
+RubyGems\footnote{\small \url{http://rubygems.org/}}
+and the Maven Central Repository.\footnote{\small \url{http://mvnrepository.com/}}
 
 Maven is a build automation tool used primarily for Java projects and it is
-hosted by the Apache Software Foundation.\footnote{\url{http://maven.apache.org/}}
+hosted by the Apache Software Foundation.\footnote{\small \url{http://maven.apache.org/}}
 It uses {\sc xml} to describe the software project being built, its dependencies
 on other external modules, the build order, and required plug-ins.
 To build a software component, it dynamically downloads Java libraries
 and Maven plug-ins from the {\it Maven central
-repository},\footnote{\url{http://mvnrepository.com/}}
+repository},\footnote{\small \url{http://mvnrepository.com/}}
 and stores them in a local cache. The repository can be updated with
 new projects and also with new versions of existing projects
 that can depend on other versions.
 
 To statically analyze the Maven repository
-we used {\it FindBugs},\footnote{\url{http://findbugs.sourceforge.net/}}
+we used {\it FindBugs},\footnote{\small \url{http://findbugs.sourceforge.net/}}
 a static analysis tool that examines bytecode to detect software bugs
 and has already been used in research~\cite{AP10,SHP06}.
 Specifically, we ran FindBugs on all the project versions of all
@@ -124,6 +124,7 @@ meaningful results.
 
 \begin{table}
 \centering
+\scalebox{0.94}{
 \begin{tabular}{l r}
 \hline
 Measurement & Value\\
@@ -139,6 +140,7 @@ Range (over versions) & 337\\
 3$^{rd}$ Quartile (over versions) & 8\\
 \hline
 \end{tabular}
+}
 \caption{Descriptive statistic measurements for the Maven repository.}
 \label{tbl:repository}
 \end{table}
@@ -177,7 +179,7 @@ because FindBugs analyzes only Java bytecode.
 Since our construction process took place at the end of 2012,
 several versions were released for some of the projects.
 Thus, we cross-checked
-the local versions with those online\footnote{\url{http://mirrors.ibiblio.org/maven2/}}
+the local versions with those online\footnote{\small \url{http://mirrors.ibiblio.org/maven2/}}
 and supplemented the missing {\sc jar}s that have been
 added to the repository during this period.
 The statistic measurements concerning
@@ -240,7 +242,7 @@ a half days.
 
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[scale=0.73]{figures/arch.pdf}
+    \includegraphics[scale=0.66]{figures/arch.pdf}
   \end{center}
   \caption{The data processing architecture.}
   \label{fig:arch}
@@ -276,7 +278,7 @@ settings in the Java Runtime Environment ({\sc jre}).
 
 \begin{table}[t]
 \centering
-\scalebox{0.79}{
+\scalebox{0.78}{
 \begin{tabular}{l p{16em}}
 \hline
 Category & Description\\
@@ -359,6 +361,7 @@ that the results of FindBugs are too large to
 show. To see a complete instance please visit our
 GitHub repository --- see Section~\ref{sec:conc}):
  
+\begin{small}
 \begin{verbatim}
 {"JarMetadata": {
     "version": "1.0.0",
@@ -379,6 +382,7 @@ GitHub repository --- see Section~\ref{sec:conc}):
  "BugCollection": { /* FindBugs data */ }
 }
 \end{verbatim}
+\end{small}
 
 \begin{figure}[t]
 	\centering
@@ -416,7 +420,9 @@ applies to all versions of all projects together.
 
 \begin{table}[b]
     \centering
+\scalebox{0.94}{
         \input{bugsperversion.tex}
+}
 	\caption{Correlations between version and defects count.}
     \label{tbl:bugsperversion}
 \end{table}
@@ -428,28 +434,38 @@ correlation tests between the size and the defect counts for each
 project and version. The results can be seen in
 Table~\ref{tbl:jarsizecorr}.
 
-Figure~\ref{fig:corrplot} presents the pairwise correlations
+Table~\ref{tbl:corrplot} presents the pairwise correlations
 between all bug categories. To establish these correlations,
 we calculated the correlations between the number of
 distinct bugs that appeared in a project throughout its lifetime.
 
 \begin{table}[hbt]
     \centering
+\scalebox{0.94}{
     \input{jarsizecorr.tex}
+}
     \caption{Correlations between {\sc jar} size and defects count.}
     \label{tbl:jarsizecorr}
 \end{table}
 
+\begin{table*}[hbt]
+    \centering
+\scalebox{0.86}{
+    \input{corrmatrix.tex}
+}
+    \caption{Correlations between bug categories.}
+    \label{tbl:corrplot}
+\end{table*}
 
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.43]{corrplot.pdf}
-  \caption{Correlation matrix plot for bug categories.
-Blue color indicates positive correlation.
-The darker the color (and the more acute the ellipsis slant),
-the stronger the correlation.}
-  \label{fig:corrplot}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[scale=0.43]{corrplot.pdf}
+%  \caption{Correlation matrix plot for bug categories.
+%Blue color indicates positive correlation.
+%The darker the color (and the more acute the ellipsis slant),
+%the stronger the correlation.}
+%  \label{fig:corrplot}
+%\end{figure}
 
 Research concerning the examination of specific bugs
 can also be facilitated by our dataset. For instance,
@@ -512,10 +528,10 @@ used to extract results concerning software evolution.
 Note that our data collection process can be duplicated
 in order to collect metrics results from other tools that
 examine Java programs like
-{\sc cjkm}\footnote{\url{http://www.spinellis.gr/sw/ckjm/}}
+{\sc cjkm}\footnote{\small \url{http://www.spinellis.gr/sw/ckjm/}}
 that calculates Chidamber and Kemerer
 object-oriented metrics~\cite{CK91},
-{\it Java Pathfinder}\footnote{\url{http://babelfish.arc.nasa.gov/trac/jpf/wiki}}
+{\it Java Pathfinder}\footnote{\small \url{http://babelfish.arc.nasa.gov/trac/jpf/wiki}}
 that performs
 model checking~\cite{CEES09} on Java bytecode programs,
 and others. To achieve this, instead of invoking
@@ -523,6 +539,16 @@ FindBugs, our worker can invoke such tools.
 
 The complete set of our data and source code can be found at
 \url{https://github.com/bkarak/data_paper_msr2014}.
+
+\section{Acknowledgments}
+This research has been co-financed by the
+European Union (European Social Fund---{\sc esf}) 
+and Greek national funds through the Operational
+Program ``Education and Lifelong Learning" of the
+National Strategic Reference Framework
+({\sc nsrf})---Research Funding Program: 
+Thalis---Athens University of Economics and
+Business---Software Engineering Research Platform.
 
 \bibliographystyle{abbrv}
 \bibliography{msr}  
