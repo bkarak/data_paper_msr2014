@@ -18,6 +18,10 @@
 
 \usepackage{flushend}
 
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+
 \begin{document}
 
 \conferenceinfo{MSR}{'14, May 31 – June 1, 2014, Hyderabad, India}
@@ -137,6 +141,7 @@ meaningful results.
 
 \begin{table}
 \centering
+\caption{Descriptive statistics measurements for the Maven repository.}
 \scalebox{0.94}{
 \begin{tabular}{l r}
 \hline
@@ -154,7 +159,6 @@ Range (over versions) & 337\\
 \hline
 \end{tabular}
 }
-\caption{Descriptive statistics measurements for the Maven repository.}
 \label{tbl:repository}
 \end{table}
 
@@ -169,6 +173,9 @@ the process.
 
 \begin{table}
 \centering
+\caption{Size metrics concerning
+the tools created for
+the dataset construction process.}
 \begin{tabular}{l r}
  \hline
 \verb|Python Scripts| & 14\\
@@ -176,9 +183,6 @@ the process.
 \verb|Code Size (KB)| & 92\\
 \hline
 \end{tabular}
-\caption{Size metrics concerning
-the tools created for
-the dataset construction process.}
 \label{tbl:tools-size}
 \end{table}
 
@@ -291,6 +295,7 @@ settings in the Java Runtime Environment ({\sc jre}).
 
 \begin{table}[t]
 \centering
+\caption{Bug categorization according to FindBugs.}
 \scalebox{0.78}{
 \begin{tabular}{l p{16em}}
 \hline
@@ -314,7 +319,6 @@ Security & Involves input validation issues, unauthorized database connections
 and others. \\
 \hline
 \end{tabular}}
-\caption{Bug categorization according to FindBugs.}
 \label{tbl:bug-cat}
 \end{table}
 
@@ -340,6 +344,7 @@ by mapping all {\sc xml} elements to {\sc json} objects.
 
 \begin{table}[b]
 \centering
+\caption{{\sc jar} metadata description.}
 \begin{tabular}{l p{5.0cm}}
  \hline
 \verb|version| & The version of the project in the repository. \\
@@ -352,7 +357,6 @@ by mapping all {\sc xml} elements to {\sc json} objects.
 \verb|artifact_id| & The artifact {\sc id} of the project in Maven repository. \\
  \hline
  \end{tabular}
-\caption{{\sc jar} metadata description.}
 \label{tbl:metadata-description}
 \end{table}
 
@@ -433,10 +437,10 @@ applies to all versions of all projects together.
 
 \begin{table}[b]
     \centering
+	\caption{Correlations between version and defects count.}
 \scalebox{0.94}{
         \input{bugsperversion.tex}
 }
-	\caption{Correlations between version and defects count.}
     \label{tbl:bugsperversion}
 \end{table}
 
@@ -454,19 +458,19 @@ distinct bugs that appeared in a project throughout its lifetime.
 
 \begin{table}[hbt]
     \centering
+    \caption{Correlations between {\sc jar} size and defects count.}
 \scalebox{0.94}{
     \input{jarsizecorr.tex}
 }
-    \caption{Correlations between {\sc jar} size and defects count.}
     \label{tbl:jarsizecorr}
 \end{table}
 
 \begin{table*}[hbt]
     \centering
+    \caption{Correlations between bug categories.}
 \scalebox{0.86}{
     \input{corrmatrix.tex}
 }
-    \caption{Correlations between bug categories.}
     \label{tbl:corrplot}
 \end{table*}
 
